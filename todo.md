@@ -4,3 +4,4 @@
 - Revérifier les sources LFI après la nouvelle édition de L'Avenir en commun (6-7 nov. 2026), et celles du RN dès la publication de son programme 2027.
 - Dons : valider l'inscription GitHub Sponsors (les liens Ko-fi et Buy Me a Coffee sont actifs).
 - Passe VoiceOver / TalkBack sur un vrai appareil.
+- test
