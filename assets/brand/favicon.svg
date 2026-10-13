@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 1024 1024"><rect width="1024" height="1024" fill="#F6F7F5"/><rect x="232" y="0" width="10" height="1024" fill="#5B6168"/><g transform="translate(0 0) scale(1)"><g id="mark" transform="translate(-20 45)">
+  <rect x="300" y="602" width="520" height="128" rx="22" transform="rotate(-3 560 666)" fill="#EADB3F"/>
+  <path fill="#1C1E21" d="M392 318h372v92H492v84h236v88H492v92h282v92H392z"/>
+  <path fill="#1C1E21" d="M560 168h112l-86 108h-86z"/>
+</g></g></svg>

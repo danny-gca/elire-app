@@ -1,0 +1,7 @@
+# Relecture obligatoire du mainteneur (activée par le ruleset « Require review from Code Owners »)
+*                @danny-gca
+
+# Zones sensibles : données éditoriales, CI, règles de sécurité
+/data/           @danny-gca
+/.github/        @danny-gca
+/SECURITY.md     @danny-gca

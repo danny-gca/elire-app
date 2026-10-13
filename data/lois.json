@@ -1,0 +1,1820 @@
+[
+  {
+    "id": "motion-censure-barnier-2024",
+    "thematiqueId": "institutions",
+    "nature": "motion_censure",
+    "titre": "Motion de censure contre le gouvernement Michel Barnier (PLFSS 2025)",
+    "resume": "Motion de censure transpartisane déposée après le recours à l'article 49.3 sur le budget de la Sécurité sociale 2025. Adoptée à la majorité absolue (331 voix), entraînant la démission du gouvernement et le rejet du texte budgétaire.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-12-04",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "La France Insoumise et le Nouveau Front Populaire ont été les initiateurs de la motion de censure face au coup de force budgétaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour la motion de censure aux côtés de son groupe RN après le refus du gouvernement d'indexer les retraites sur l'inflation.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Député de la Somme, a voté la censure pour stopper l'austérité budgétaire sur la santé et les hôpitaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés communistes ont voté la censure contre la politique économique de Michel Barnier.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont unanimement censuré le gouvernement pour son budget jugé climaticide et socialement injuste.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Place Publique et les socialistes ont voté la motion de censure transpartisane.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "nicolas-dupont-aignan": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté la censure pour sanctionner la dérive des finances publiques et le refus d'écouter les Français.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Président du groupe Ensemble pour la République, s'est opposé à la censure pour préserver la stabilité institutionnelle.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe Horizons a fait bloc contre la censure pour soutenir le Premier ministre issu de sa coalition.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Ministre de l'Intérieur du gouvernement Barnier, droite républicaine unie contre le vote conjoint RN-gauche.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      }
+    }
+  },
+  {
+    "id": "debat-accord-ue-mercosur-2024",
+    "thematiqueId": "agriculture",
+    "nature": "declaration_gouvernement",
+    "titre": "Rejet de l'accord commercial de libre-échange UE-Mercosur",
+    "resume": "Vote solennel de l'Assemblée nationale validant l'opposition de la France à l'accord de libre-échange entre l'Union européenne et les pays du Mercosur (485 voix pour le rejet, 69 contre).",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-11-26",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456",
+    "votes": {
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour le rejet du traité, dénonçant un modèle mondialiste assassinant l'agriculture française.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour la déclaration du gouvernement refusant la signature du Mercosur en l'état sans clauses miroirs.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a voté pour la motion de rejet afin de protéger les éleveurs de la concurrence déloyale sud-américaine.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Républicains ont voté pour le rejet de l'accord, réclamant un véto formel français à Bruxelles.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont voté pour le rejet de ce traité climaticide accélérant la déforestation de l'Amazonie.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "En pointe au Parlement européen contre le Mercosur, rejetant l'importation de produits dopés aux pesticides interdits.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les communistes ont voté pour afin de préserver la souveraineté alimentaire nationale.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés LFI ont voté contre la déclaration gouvernementale, dénonçant une posture d'affichage sans portée juridique réelle.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre la communication de l'exécutif, réclamant un véritable blocage douanier plutôt qu'un débat sans engagement.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456"
+      }
+    }
+  },
+  {
+    "id": "rejet-recettes-plf-2025",
+    "thematiqueId": "economie",
+    "nature": "projet_loi",
+    "titre": "Rejet de la partie recettes du Projet de Loi de Finances 2025",
+    "resume": "Vote solennel sur le volet recettes du budget de l'État pour 2025. Rejeté par 362 voix contre 192 après l'adoption d'amendements de la gauche rétablissant l'ISF et taxant les superprofits.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-11-12",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0438",
+    "votes": {
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Ensemble pour la République a rejeté un texte dénaturé par des hausses d'impôts massives.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a refusé un budget jugé fiscalement punitif pour les entreprises et les ménages.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre un budget porteur de surtaxes et de matraquage fiscal pour les Français.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0438"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté pour ce volet recettes réécrit intégrant justice fiscale et taxation des superprofits.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour rétablir la justice fiscale en faisant contribuer les plus hauts patrimoines.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0438"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont soutenu un budget réorienté vers la transition écologique et la solidarité.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le PCF a voté pour la taxation du capital et des dividendes records.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés socialistes ont voté pour ce volet de redistribution et de justice sociale.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "La Droite Républicaine a voté contre les hausses d'impôts généralisées.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      }
+    }
+  },
+  {
+    "id": "regulation-meubles-tourisme-airbnb-2024",
+    "thematiqueId": "logement",
+    "nature": "proposition_loi",
+    "titre": "Régulation des meublés de tourisme et locations Airbnb (Loi Le Meur)",
+    "resume": "Renforcement des pouvoirs des maires pour encadrer les meublés touristiques, abaissement des niches fiscales locatives et extension des obligations de performance énergétique (DPE).",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-11-07",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0289",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien aux maires pour lutter contre la crise du logement dans les zones tendues.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Favorable à l'octroi d'outils de régulation décentralisés aux élus locaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a soutenu l'encadrement de la spéculation locative pour redonner des toits aux habitants.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour réguler les plateformes et freiner la spéculation immobilière.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0289"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont activement soutenu la fin des privilèges fiscaux pour les meublés touristiques.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte co-porté par le député socialiste Iñaki Echaniz pour rééquilibrer le marché locatif.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Le RN s'est opposé au texte en dénonçant une nouvelle fiscalité punitive contre les petits propriétaires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0289"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien à la régulation locale et aux pouvoirs donnés aux maires de communes touristiques.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      }
+    }
+  },
+  {
+    "id": "abrogation-retraite-64-ans-2024",
+    "thematiqueId": "travail",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi d'abrogation de la retraite à 64 ans (Niche RN)",
+    "resume": "Texte déposé lors de la niche parlementaire du Rassemblement National visant à annuler le recul de l'âge légal de départ à la retraite à 64 ans. Rejeté par 197 voix contre 119.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-10-31",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0217",
+    "votes": {
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A défendu et voté pour l'abrogation de la réforme des retraites et le retour à 62 ans.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0217"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Opposition totale à l'abrogation pour préserver la viabilité financière du système par répartition.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Défense du recul de l'âge légal indispensable pour financer le modèle social.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Républicains ont rejeté l'abrogation, estimant qu'il faut travailler davantage.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A dénoncé la manœuvre du RN sur un texte vidé en commission tout en réaffirmant son combat pour la retraite à 60 ans.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0217"
+      }
+    }
+  },
+  {
+    "id": "loi-orientation-agricole-2024",
+    "thematiqueId": "agriculture",
+    "nature": "projet_loi",
+    "titre": "Loi d'orientation pour la souveraineté alimentaire et le renouvellement agricole",
+    "resume": "Texte érigeant l'agriculture et la production alimentaire au rang d'intérêt général majeur de la Nation, assouplissant les règles d'aménagement et créant un guichet unique pour l'installation des jeunes agriculteurs.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-05-28",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Projet de loi défendu par le gouvernement après la mobilisation nationale des agriculteurs pour simplifier les normes.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a soutenu le texte pour sécuriser juridiquement les projets de retenues d'eau et d'exploitations.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour en première lecture afin de lever des contraintes administratives pesant sur les éleveurs et céréaliers.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+      },
+      "bruno-retailleau": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre un texte cédant selon eux à l'agro-industrie sans instaurer de prix planchers garantis.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont combattu un texte détricotant le droit de l'environnement au profit des mégabassines.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre l'absence de régulation des marges des multinationales de la grande distribution face aux petits producteurs.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Opposition au recul sur les normes de transition agroécologique.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    }
+  },
+  {
+    "id": "degel-corps-electoral-nouvelle-caledonie-2024",
+    "thematiqueId": "institutions",
+    "nature": "projet_loi",
+    "titre": "Réforme constitutionnelle sur le dégel du corps électoral en Nouvelle-Calédonie",
+    "resume": "Projet de loi constitutionnelle ouvrant les élections provinciales calédoniennes aux résidents installés depuis au moins dix ans. Adopté par l'Assemblée par 351 voix contre 153 avant d'être suspendu.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-05-14",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Projet porté par le gouvernement pour rétablir les principes universels du suffrage démocratique.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien à la normalisation démocratique tout en appelant à poursuivre le dialogue institutionnel.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Le RN a soutenu le dégel pour mettre fin à la rupture d'égalité entre citoyens français.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LR a voté pour l'application des principes républicains et le droit de vote des résidents de longue durée.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre en alertant sur la rupture du consensus des accords de Nouméa et le risque d'insurrection.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont dénoncé un passage en force unilatéral rompant la paix civile dans l'archipel.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les socialistes ont voté contre pour préserver le processus historique de décolonisation et d'apaisement.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    }
+  },
+  {
+    "id": "pacte-asile-migration-ue-2024",
+    "thematiqueId": "international",
+    "nature": "texte_europeen",
+    "titre": "Pacte européen sur la migration et l'asile",
+    "resume": "Ensemble de règlements européens organisant la solidarité obligatoire entre États membres pour la répartition des demandeurs d'asile et le filtrage renforcé aux frontières extérieures.",
+    "chambre": "parlement_europeen",
+    "dateVote": "2024-04-10",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240408IPR20290",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés européens Renaissance ont massivement voté pour ce pacte négocié sous présidence française.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
+        "groupe": "RENEW",
+        "groupeNom": "Renew Europe"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons soutient le renforcement des contrôles aux frontières extérieures européennes.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
+        "groupe": "RENEW",
+        "groupeNom": "Renew Europe"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Député européen, a voté contre les textes principaux du pacte, dénonçant un recul sur l'accueil digne et le respect des droits humains.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les eurodéputés du Rassemblement National ont voté contre, dénonçant une submersion migratoire organisée par Bruxelles.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
+        "groupe": "ID",
+        "groupeNom": "Identité et démocratie"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les eurodéputés LFI ont voté contre l'enfermement aux frontières et l'externalisation de l'asile.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
+        "groupe": "GUE/NGL",
+        "groupeNom": "La Gauche au Parlement européen - GUE/NGL"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les eurodéputés écologistes ont rejeté un texte sécuritaire attentatoire aux conventions internationales.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
+        "groupe": "Verts/ALE",
+        "groupeNom": "Les Verts/Alliance libre européenne"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
+        "groupe": "PPE",
+        "groupeNom": "Parti populaire européen (Démocrates-Chrétiens)"
+      }
+    }
+  },
+  {
+    "id": "loi-sren-numerique-2024",
+    "thematiqueId": "numerique",
+    "nature": "projet_loi",
+    "titre": "Loi visant à sécuriser et réguler l'espace numérique (Loi SREN)",
+    "resume": "Création d'une peine de bannissement numérique des réseaux sociaux pour cyberharcèlement, vérification de la majorité sur les sites pour adultes et encadrement du marché du cloud.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-04-10",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte gouvernemental majeur pour protéger les enfants en ligne et sanctionner les cyberharceleurs.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a soutenu les mesures d'ordre public et de protection des mineurs dans l'espace virtuel.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LR a soutenu le renforcement des sanctions pénales contre les délinquants du net.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Le RN a voté contre en dénonçant le risque de censure étatique et d'atteinte à la liberté d'expression.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI s'est opposée au texte en dénonçant des dérives de surveillance généralisée et de blocage administratif.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont voté contre, estimant les libertés publiques menacées sans résoudre le modèle toxique des plateformes.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      }
+    }
+  },
+  {
+    "id": "ppl-interdiction-pfas-2024",
+    "thematiqueId": "environnement",
+    "nature": "proposition_loi",
+    "titre": "Interdiction des polluants éternels (PFAS) dans les biens de consommation",
+    "resume": "Proposition de loi interdisant à partir de 2026 la fabrication, l'importation et la mise sur le marché de cosmétiques, produits textiles et farts de ski contenant des substances perfluoroalkylées (PFAS) hautement persistantes.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-04-04",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+    "votes": {
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte majeur initié et porté par le député écologiste Nicolas Thierry pour protéger la santé publique.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "La majorité présidentielle a voté pour après exclusion des ustensiles de cuisine de cuisine du périmètre initial.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a soutenu l'interdiction ciblée sur les textiles et cosmétiques.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien sans réserve de LFI pour éradiquer les molécules toxiques dans l'eau et l'alimentation.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour le principe de précaution sanitaire face aux scandales de contamination de l'eau potable.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les communistes ont voté pour la protection des travailleurs et riverains d'usines chimiques.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "GDR-NUPES",
+        "groupeNom": "Gauche démocrate et républicaine - NUPES"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Alignement sur les normes européennes les plus strictes contre les perturbateurs endocriniens.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Le Rassemblement National s'est majoritairement abstenu, alertant sur les menaces de destructions d'emplois industriels.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "bruno-retailleau": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "La droite a exprimé des réserves sur l'impact économique pour les usines de la vallée de la chimie.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      }
+    }
+  },
+  {
+    "id": "rejet-ceta-senat-2024",
+    "thematiqueId": "agriculture",
+    "nature": "projet_loi",
+    "titre": "Rejet de la ratification du traité commercial UE-Canada (CETA)",
+    "resume": "Vote historique au Sénat rejetant par 211 voix contre 44 l'article 1er ratifiant l'accord commercial CETA, via une alliance transpartisane entre sénateurs de droite et de gauche protégeant l'élevage.",
+    "chambre": "senat",
+    "dateVote": "2024-03-21",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
+    "votes": {
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Président du groupe LR au Sénat, a voté contre pour protéger les éleveurs bovins français de distorsions de concurrence.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe communiste a initié l'examen du texte pour faire échec à un accord destructeur pour l'agriculture.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
+        "groupe": "CRCE-K",
+        "groupeNom": "Communiste Républicain Citoyen et Écologiste - Kanaky"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les sénateurs écologistes ont voté contre un accord climaticide stimulant le commerce transocéanique polluant.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
+        "groupe": "GEST",
+        "groupeNom": "Écologiste - Solidarité et Territoires"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le camp présidentiel a défendu un traité bénéfique pour les exportations industrielles, viticoles et agricoles françaises.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
+        "groupe": "RDPI",
+        "groupeNom": "Rassemblement des démocrates, progressistes et indépendants"
+      }
+    }
+  },
+  {
+    "id": "ppl-anti-fast-fashion-2024",
+    "thematiqueId": "environnement",
+    "nature": "proposition_loi",
+    "titre": "Régulation environnementale de l'industrie textile et de la Fast-Fashion",
+    "resume": "Proposition de loi adoptée à l'unanimité à l'Assemblée instaurant un malus écologique renforcé pouvant atteindre 10 euros par vêtement et interdisant la publicité pour les enseignes de mode ultra-éphémère (Shein, Temu).",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-03-14",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+    "votes": {
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte emblématique rédigé et porté par la députée Anne-Cécile Violland du groupe Horizons.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien plein et entier de la majorité présidentielle pour freiner la surconsommation textile.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont soutenu cette mesure pionnière contre le gaspillage et l'empreinte carbone textile.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le RN a voté pour le texte afin de défendre les créateurs et filières d'habillement françaises.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté pour tout en réclamant des clauses sociales contre le travail forcé dans les pays tiers.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour le malus pour contrer les cargos de fret aérien remplis de vêtements jetables.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien de la droite parlementaire pour rétablir une concurrence équitable pour les commerces locaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Mesure en parfaite adéquation avec son combat contre le travail forcé des Ouïghours dans le coton.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    }
+  },
+  {
+    "id": "reglement-europeen-ia-act-2024",
+    "thematiqueId": "numerique",
+    "nature": "texte_europeen",
+    "titre": "Règlement européen sur l'Intelligence Artificielle (AI Act)",
+    "resume": "Premier cadre mondial contraignant régulant les systèmes d'IA selon leurs niveaux de risque, interdisant la reconnaissance biométrique de masse et encadrant les IA génératives.",
+    "chambre": "parlement_europeen",
+    "dateVote": "2024-03-13",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+    "votes": {
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Député européen Place Publique, a voté pour une régulation éthique protégeant la démocratie et les créateurs.",
+        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "La délégation Renew Europe a soutenu ce compromis historique alliant innovation et protection citoyenne.",
+        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+        "groupe": "RENEW",
+        "groupeNom": "Renew Europe"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Verts européens ont soutenu l'encadrement strict de l'IA et l'interdiction de la biométrie intrusive.",
+        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+        "groupe": "Verts/ALE",
+        "groupeNom": "Les Verts/Alliance libre européenne"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+        "groupe": "ID",
+        "groupeNom": "Identité et démocratie"
+      }
+    }
+  },
+  {
+    "id": "accord-securite-ukraine-2024",
+    "thematiqueId": "international",
+    "nature": "declaration_gouvernement",
+    "titre": "Accord bilatéral de sécurité et soutien militaire à l'Ukraine",
+    "resume": "Déclaration du Gouvernement relative à l'accord de sécurité conclu avec l'Ukraine prévoyant 3 milliards d'euros de soutien militaire en 2024, des livraisons de canons et missiles, et l'appui à l'adhésion future à l'UE.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-03-12",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Premier ministre ayant présenté la stratégie de soutien à la souveraineté ukrainienne face à la Russie.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons défend un soutien militaire continu et sans faille pour garantir la sécurité du continent européen.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Fervent partisan d'un réarmement européen et d'une aide massive aux démocraties agressées.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés écologistes ont voté pour le soutien au peuple ukrainien face à l'impérialisme du Kremlin.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Républicains ont voté majoritairement pour l'accord de coopération de sécurité.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "marine-le-pen": {
+        "position": "abstention",
+        "typeVote": "individuel",
+        "explication": "A voté l'abstention avec son groupe, refusant l'entrée promise de l'Ukraine dans l'UE et l'OTAN.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre, dénonçant un risque d'escalade guerrière généralisée et de cobelligérance nucléaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Les députés communistes ont voté contre pour appeler à une solution diplomatique immédiate.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre l'accord par refus de toute possibilité d'envoi de troupes au sol.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+      },
+      "nicolas-dupont-aignan": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Opposé aux financements militaires à perte et partisan de la neutralité gaulliste de la France.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+      }
+    }
+  },
+  {
+    "id": "loi-constitutionnelle-ivg-2024",
+    "thematiqueId": "societe",
+    "nature": "projet_loi",
+    "titre": "Inscription de l'interruption volontaire de grossesse (IVG) dans la Constitution",
+    "resume": "Révision constitutionnelle inscrivant à l'article 34 de la Constitution la liberté garantie à la femme d'avoir recours à une interruption volontaire de grossesse.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2024-03-04",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049252033",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Premier ministre ayant ouvert le Congrès à Versailles pour sceller l'inscription dans la Constitution.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe Horizons a voté très massivement en faveur de la constitutionnalisation.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Initiative historique portée par Mathilde Panot et le groupe LFI à l'Assemblée.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les parlementaires écologistes ont voté à 100% pour la liberté garantie constitutionnelle.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Place Publique et les socialistes ont unanimement voté pour au Congrès.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour lors du vote solennel au Congrès, malgré la division de son groupe parlementaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour la protection constitutionnelle de l'avortement.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Les députés communistes ont voté pour à l'unanimité.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "S'est opposé à l'inscription dans la Constitution, estimant que la liberté d'avorter n'était pas menacée en France.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-138.html"
+      }
+    }
+  },
+  {
+    "id": "loi-immigration-2023",
+    "thematiqueId": "securite",
+    "nature": "projet_loi",
+    "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
+    "resume": "Texte durcissant les conditions de régularisation et d'accès aux prestations sociales, facilitant les expulsions d'étrangers condamnés et réformant le droit d'asile.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-12-19",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049040002",
+    "votes": {
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour le texte en saluant une victoire idéologique sur les principes de préférence nationale.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Majorité présidentielle ayant validé le texte de compromis issu de la commission mixte paritaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe Horizons a voté très largement pour le texte issu de la CMP.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Au Sénat, artisan principal du durcissement du texte négocié en commission mixte paritaire.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-085.html"
+      },
+      "nicolas-dupont-aignan": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour le texte tout en réclamant un référendum et des mesures encore plus restrictives.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "La France Insoumise a voté unanimement contre ce texte qualifié d'indigne et xénophobe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre le texte final après avoir soutenu la motion de rejet préalable.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre un texte cédant selon lui aux thèses de l'extrême droite.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe écologiste a rejeté en bloc un projet jugé contraire aux droits fondamentaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Place Publique et les socialistes ont voté contre la loi votée avec les voix du RN.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    }
+  },
+  {
+    "id": "loi-valletoux-acces-soins-2023",
+    "thematiqueId": "sante",
+    "nature": "proposition_loi",
+    "titre": "Loi pour l'amélioration de l'accès aux soins et la lutte contre les déserts médicaux",
+    "resume": "Encadrement strict de l'intérim médical à la sortie d'école, élargissement des compétences des soignants non médecins et responsabilisation territoriale des praticiens.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-12-12",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+    "votes": {
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Loi portée par Frédéric Valletoux du groupe Horizons pour réguler l'offre médicale dans les territoires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "La majorité a soutenu des mesures pragmatiques contre les abus de l'intérim à l'hôpital et pour l'accès aux soins.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le RN a voté pour en saluant le plafonnement de l'intérim médical mais en réclamant la suppression des ARS.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre un texte jugé inopérant qui refuse de contraindre l'installation dans les déserts médicaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A dénoncé un pansement sur une jambe de bois refusant d'investir massivement dans l'hôpital public.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+      }
+    }
+  },
+  {
+    "id": "loi-plein-emploi-france-travail-2023",
+    "thematiqueId": "travail",
+    "nature": "projet_loi",
+    "titre": "Loi pour le plein emploi : création de France Travail et conditionnement du RSA",
+    "resume": "Création de France Travail en remplacement de Pôle Emploi, inscription automatique des demandeurs d'emploi et mise en place d'un contrat d'engagement réciproque prévoyant 15 heures d'activité par semaine pour les allocataires du RSA.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-11-14",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Projet de loi porté par la majorité présidentielle pour accélérer le retour à l'activité.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a soutenu les mécanismes d'incitation forte et les devoirs réciproques des allocataires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Républicains ont conditionné leur soutien à l'obligation stricte d'activité hebdomadaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre un texte organisant selon eux la régression sociale et le travail gratuit.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre la création d'une nouvelle superstructure bureaucratique et la complexification des aides.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A dénoncé la suspicion systématique et les sanctions financières visant les précaires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Les députés communistes ont voté contre la casse des droits des allocataires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Opposition ferme des Écologistes au conditionnement des minima sociaux vitaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Rejet des socialistes et de Place Publique face au manque d'accompagnement humain réel.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    }
+  },
+  {
+    "id": "loi-programmation-militaire-2024-2030",
+    "thematiqueId": "international",
+    "nature": "projet_loi",
+    "titre": "Loi de programmation militaire 2024-2030 (413 milliards d'euros)",
+    "resume": "Enveloppe historique de 413,3 milliards d'euros pour moderniser la dissuasion nucléaire française, renouveler le matériel conventionnel et développer le spatial et la cyberdéfense.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-07-12",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte central du quinquennat pour transformer les armées face au retour des conflits de haute intensité.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons soutient l'effort de réarmement national indispensable dans le contexte géopolitique mondial.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien massif des Républicains pour doter les armées françaises des crédits nécessaires à leur supériorité opérationnelle.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour la modernisation des armées et la défense de la souveraineté nationale.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés socialistes ont soutenu l'effort de défense face aux menaces géopolitiques et à l'agression russe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre en dénonçant une dérive belliciste, l'alignement sur l'OTAN et le manque de contrôle démocratique.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "S'est opposé à des choix d'armement lourd déconnectés des priorités sociales du pays.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+      }
+    }
+  },
+  {
+    "id": "loi-majorite-numerique-2023",
+    "thematiqueId": "numerique",
+    "nature": "proposition_loi",
+    "titre": "Instauration de la majorité numérique à 15 ans et régulation des réseaux sociaux",
+    "resume": "Loi imposant aux plateformes de réseaux sociaux (TikTok, Snapchat, Instagram) de vérifier l'âge des internautes et d'exiger une autorisation parentale pour les mineurs de moins de 15 ans.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-06-28",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047799424",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte adopté à la quasi-unanimité avec soutien immédiat du ministère pour protéger les mineurs.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a voté pour la protection de la santé mentale des adolescents face aux algorithmes addictifs.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour la régulation des contenus et la protection des enfants contre le cyberharcèlement.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté pour l'encadrement des géants du numérique tout en veillant aux libertés d'information.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont soutenu la régulation face à la surexposition aux écrans dès le plus jeune âge.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien de la droite au rétablissement de l'autorité parentale dans l'espace numérique.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Bataille majeure au Parlement européen contre l'ingérence et les algorithmes prédateurs étrangers.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour poser des limites nettes au temps d'écran commercial des plus jeunes.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+      }
+    }
+  },
+  {
+    "id": "relance-nucleaire-epr-2023",
+    "thematiqueId": "environnement",
+    "nature": "projet_loi",
+    "titre": "Loi d'accélération des procédures pour la relance du nucléaire (6 EPR2)",
+    "resume": "Simplification des démarches d'urbanisme et de concertation environnementale pour lancer rapidement la construction de 6 nouveaux réacteurs nucléaires EPR2.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-05-16",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Choix stratégique de l'exécutif pour garantir la souveraineté électrique décarbonée du pays.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons soutient sans réserve la relance de la filière nucléaire française.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour la reconstruction du parc nucléaire, garant selon elle de prix bas et d'indépendance.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LR a massivement soutenu l'atome comme colonne vertébrale de l'industrie française.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le PCF défend historiquement le nucléaire civil public comme source d'énergie abondante et propre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "groupe": "GDR-NUPES",
+        "groupeNom": "Gauche démocrate et républicaine - NUPES"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes s'opposent à tout nouvel EPR et dénoncent une fuite en avant coûteuse et dangereuse.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre en rappelant son objectif de transition vers 100% d'énergies renouvelables.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      }
+    }
+  },
+  {
+    "id": "loi-anti-squat-kasbarian-2023",
+    "thematiqueId": "logement",
+    "nature": "proposition_loi",
+    "titre": "Loi visant à protéger les logements contre l'occupation illicite (Loi Kasbarian-Bergé)",
+    "resume": "Triplement des peines pour les squatteurs de résidences principales ou secondaires, accélération des procédures d'expulsion des locataires en impayé de loyer.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-04-04",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte porté par la majorité pour rétablir la protection des petits propriétaires victimes de squats.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Soutien à la fermeté judiciaire pour sanctionner l'occupation illégale des logements.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Républicains ont soutenu un durcissement indispensable de la loi pour faire respecter la propriété privée.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Le RN a voté pour l'expulsion immédiate des squatteurs et des peines de prison effectives.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a combattu un texte jugé antisocial qui facilite les expulsions des locataires précaires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A dénoncé une loi criminalisant les familles en difficulté financière plutôt que de construire des logements.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont voté contre une loi qui menace le droit fondamental à l'hébergement.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      }
+    }
+  },
+  {
+    "id": "videosurveillance-ia-jo-2024",
+    "thematiqueId": "securite",
+    "nature": "projet_loi",
+    "titre": "Expérimentation de la vidéosurveillance algorithmique et IA (Loi JO 2024)",
+    "resume": "Autorisation expérimentale de caméras intelligentes équipées d'intelligence artificielle pour détecter automatiquement des mouvements de foule ou des bagages abandonnés.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-03-23",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Vote pour doter les forces de l'ordre d'outils modernes pour sécuriser les grands événements internationaux.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Favorable à l'innovation technologique au service de la tranquillité publique et de la prévention d'attentats.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LR a soutenu sans détour le déploiement de technologies de pointe pour assister la police.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le RN a voté pour l'utilisation des caméras algorithmiques au nom de la sécurité des citoyens.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté contre en dénonçant une dérive vers la société de contrôle et la surveillance biométrique de masse.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "S'est opposé à une première brèche vers un modèle de société sécuritaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont dénoncé une violation des libertés individuelles dans l'espace public.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      }
+    }
+  },
+  {
+    "id": "loi-retraites-2023",
+    "thematiqueId": "economie",
+    "nature": "projet_loi",
+    "titre": "Réforme des retraites : recul de l'âge légal à 64 ans",
+    "resume": "Projet de loi de financement rectificative de la sécurité sociale pour 2023 prévoyant le relèvement progressif de l'âge légal de départ de 62 à 64 ans et l'accélération de l'allongement de la durée de cotisation.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-03-20",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047445248",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Ministre puis député de la majorité présidentielle, soutien indéfectible à l'équilibre financier du régime par répartition.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/dossiers/DLR5L16N46950"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe Horizons a voté pour la réforme, Édouard Philippe plaidant même pour un report à 65 ans.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Président du groupe Les Républicains au Sénat, a voté pour le compromis de la commission mixte paritaire.",
+        "sourceUrl": "https://www.senat.fr/scrutin-public/2022-2023/scr2022-146.html"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Le groupe La France Insoumise s'est opposé frontalement au texte avec dépôt de motions de censure et proposition de retraite à 60 ans.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre en tant que députée du Pas-de-Calais et a déposé une motion de censure contre le gouvernement.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Député de la Somme, a voté contre le texte et activement contesté l'usage de l'article 49.3.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre le report de l'âge légal et défendu le maintien de la retraite à 60 ans à taux plein.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont unanimement voté contre à l'Assemblée et au Sénat.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Place Publique et les députés socialistes alliés ont rejeté le recul de l'âge légal et soutenu les manifestations syndicales.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)"
+      },
+      "nicolas-dupont-aignan": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "Député de l'Essonne, a voté contre la réforme et cosigné la motion de censure transpartisane.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+      }
+    }
+  },
+  {
+    "id": "repas-etudiant-1-euro-2023",
+    "thematiqueId": "education",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi instaurant le repas CROUS à 1 euro pour tous les étudiants",
+    "resume": "Généralisation du repas à 1 euro dans les restaurants universitaires à l'ensemble des étudiants sans condition de bourse. Rejetée à une voix près (183 contre 184).",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-02-09",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/0931",
+    "votes": {
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Proposition de loi portée par le groupe socialiste pour enrayer la précarité étudiante et les files d'attente à l'aide alimentaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)"
+      },
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "LFI a voté pour garantir à chaque étudiant le droit fondamental à une alimentation saine à prix accessible.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A ardemment défendu ce texte pour que plus aucun jeune ne saute de repas par manque d'argent.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/0931"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes ont soutenu cette mesure d'urgence face à la hausse galopante du coût de la vie étudiante.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "Le RN a voté pour le repas à 1 euro afin de soulager le budget des étudiants français.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/0931"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés communistes ont voté pour ce bouclier vital contre la misère étudiante.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "GDR-NUPES",
+        "groupeNom": "Gauche démocrate et républicaine - NUPES"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "La majorité présidentielle a voté contre, préférant cibler l'aide financière sur les seuls étudiants boursiers et précaires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons s'est opposé à une mesure universelle non ciblée jugée coûteuse pour les finances publiques.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "LR a rejeté la gratuité quasi-totale déconnectée des revenus des familles.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      }
+    }
+  },
+  {
+    "id": "loi-energies-renouvelables-2023",
+    "thematiqueId": "environnement",
+    "nature": "projet_loi",
+    "titre": "Accélération de la production d'énergies renouvelables",
+    "resume": "Loi simplifiant les procédures administratives pour le déploiement du solaire et de l'éolien terrestre et marin, avec définition de zones d'accélération par les maires.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2023-01-10",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047281777",
+    "votes": {
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Texte porté par la majorité gouvernementale pour tenir les objectifs climatiques européens.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Horizons a soutenu le texte tout en veillant aux prérogatives des maires.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "groupe": "HOR",
+        "groupeNom": "Horizons et apparentés"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Les députés socialistes et Place Publique ont soutenu le texte après avoir obtenu des garanties de concertation locale.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)"
+      },
+      "marine-tondelier": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Les Écologistes se sont abstenus en jugeant le texte trop timide et sans moyens financiers suffisants.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre l'implantation massive d'éoliennes et pour un moratoire total sur l'éolien.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+      },
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "La France Insoumise a voté contre en dénonçant la marchandisation et l'absence d'un pôle public de l'énergie.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "groupe": "LFI-NUPES",
+        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Opposé au développement accéléré de l'éolien terrestre, favorable à une priorité absolue donnée au nucléaire.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
+        "groupe": "LR",
+        "groupeNom": "Les Républicains"
+      }
+    }
+  }
+]

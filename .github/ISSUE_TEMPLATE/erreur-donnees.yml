@@ -1,0 +1,31 @@
+name: Erreur dans les données
+description: Une proposition, une loi ou un vote est inexact, mal sourcé ou mal attribué.
+title: "Erreur "
+labels: ["données"]
+body:
+  - type: input
+    id: reference
+    attributes:
+      label: Référence
+      description: Numéro affiché dans l'app (P-531, L-28), laissé vide si l'erreur est ailleurs.
+      placeholder: P-531
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Ce qui est inexact
+      description: Citez le texte de l'app et dites ce qui ne va pas.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source correcte
+      description: Lien vers un document précis (programme, scrutin officiel, compte rendu). Pas une page d'accueil.
+      placeholder: https://
+  - type: checkboxes
+    id: neutralite
+    attributes:
+      label: Neutralité
+      options:
+        - label: Je signale un fait vérifiable, pas une opinion sur le candidat ou la mesure.
+          required: true

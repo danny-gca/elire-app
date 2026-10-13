@@ -1,0 +1,3291 @@
+{
+  "metadata": {
+    "generatedAt": "2026-10-13T10:29:15.017Z",
+    "partisCount": 17,
+    "candidatsCount": 17,
+    "thematiquesCount": 12,
+    "propositionsCount": 96,
+    "loisCount": 26
+  },
+  "partis": [
+    {
+      "id": "horizons",
+      "nom": "Horizons",
+      "sigle": "HOR",
+      "couleur": "#002B7F",
+      "nuance": "Centre-droit",
+      "siteWeb": "https://horizonsleparti.fr"
+    },
+    {
+      "id": "renaissance",
+      "nom": "Renaissance",
+      "sigle": "REN",
+      "couleur": "#7B1FA2",
+      "nuance": "Centre",
+      "siteWeb": "https://parti-renaissance.fr"
+    },
+    {
+      "id": "lfi",
+      "nom": "La France Insoumise",
+      "sigle": "LFI",
+      "couleur": "#C62828",
+      "nuance": "Gauche radicale",
+      "siteWeb": "https://lafranceinsoumise.fr"
+    },
+    {
+      "id": "rn",
+      "nom": "Rassemblement National",
+      "sigle": "RN",
+      "couleur": "#0D47A1",
+      "nuance": "Droite nationale",
+      "siteWeb": "https://rassemblementnational.fr"
+    },
+    {
+      "id": "place-publique",
+      "nom": "Place Publique / PS",
+      "sigle": "PP-PS",
+      "couleur": "#D81B60",
+      "nuance": "Social-démocratie",
+      "siteWeb": "https://placepublique.org"
+    },
+    {
+      "id": "les-ecologistes",
+      "nom": "Les Écologistes",
+      "sigle": "EELV",
+      "couleur": "#2E7D32",
+      "nuance": "Écologie politique",
+      "siteWeb": "https://lesecologistes.fr"
+    },
+    {
+      "id": "equinoxe",
+      "nom": "Équinoxe",
+      "sigle": "EQX",
+      "couleur": "#059669",
+      "nuance": "Écologie rationnelle & scientifique",
+      "siteWeb": "https://parti-equinoxe.fr"
+    },
+    {
+      "id": "lr",
+      "nom": "Les Républicains",
+      "sigle": "LR",
+      "couleur": "#0055A5",
+      "nuance": "Droite républicaine",
+      "siteWeb": "https://republicains.fr"
+    },
+    {
+      "id": "debout",
+      "nom": "Debout !",
+      "sigle": "DEBOUT",
+      "couleur": "#EF4444",
+      "nuance": "Gauche populaire",
+      "siteWeb": "https://francoisruffin.fr"
+    },
+    {
+      "id": "pcf",
+      "nom": "Parti Communiste Français",
+      "sigle": "PCF",
+      "couleur": "#DC2626",
+      "nuance": "Gauche communiste",
+      "siteWeb": "https://pcf.fr"
+    },
+    {
+      "id": "reconquete",
+      "nom": "Reconquête",
+      "sigle": "REC",
+      "couleur": "#1E1B4B",
+      "nuance": "Droite identitaire",
+      "siteWeb": "https://parti-reconquete.fr"
+    },
+    {
+      "id": "lutte-ouvriere",
+      "nom": "Lutte Ouvrière",
+      "sigle": "LO",
+      "couleur": "#B91C1C",
+      "nuance": "Extrême gauche",
+      "siteWeb": "https://lutte-ouvriere.org"
+    },
+    {
+      "id": "debout-la-france",
+      "nom": "Debout La France",
+      "sigle": "DLF",
+      "couleur": "#1E40AF",
+      "nuance": "Gaullisme souverainiste",
+      "siteWeb": "https://debout-la-france.fr"
+    },
+    {
+      "id": "upr",
+      "nom": "Union Populaire Républicaine",
+      "sigle": "UPR",
+      "couleur": "#1D4ED8",
+      "nuance": "Souverainisme & Frexit",
+      "siteWeb": "https://upr.fr"
+    },
+    {
+      "id": "nouvelle-energie",
+      "nom": "Nouvelle Énergie",
+      "sigle": "NE",
+      "couleur": "#2563EB",
+      "nuance": "Droite libérale",
+      "siteWeb": "https://nouvelleenergie.fr"
+    },
+    {
+      "id": "parti-animaliste",
+      "nom": "Parti Animaliste",
+      "sigle": "PA",
+      "couleur": "#9333EA",
+      "nuance": "Condition animale",
+      "siteWeb": "https://parti-animaliste.fr"
+    },
+    {
+      "id": "resistons",
+      "nom": "Résistons !",
+      "sigle": "RES",
+      "couleur": "#D97706",
+      "nuance": "Ruralité & Humanisme",
+      "siteWeb": "https://resistons-france.fr"
+    }
+  ],
+  "thematiques": [
+    {
+      "id": "environnement",
+      "titre": "Environnement",
+      "slug": "environnement",
+      "icone": "leaf",
+      "description": "Climat, transition écologique, énergies, biodiversité et transports"
+    },
+    {
+      "id": "economie",
+      "titre": "Économie",
+      "slug": "economie",
+      "icone": "cash",
+      "description": "Pouvoir d'achat, fiscalité, salaires, retraites et souveraineté industrielle"
+    },
+    {
+      "id": "securite",
+      "titre": "Sécurité",
+      "slug": "securite",
+      "icone": "shield",
+      "description": "Ordre public, justice, peines planchers, police et réformes judiciaires"
+    },
+    {
+      "id": "travail",
+      "titre": "Travail",
+      "slug": "travail",
+      "icone": "briefcase",
+      "description": "Emploi, temps de travail, conditions, formation et dialogue social"
+    },
+    {
+      "id": "education",
+      "titre": "Éducation",
+      "slug": "education",
+      "icone": "school",
+      "description": "École républicaine, jeunesse, universités, enseignants et apprentissage"
+    },
+    {
+      "id": "sante",
+      "titre": "Santé",
+      "slug": "sante",
+      "icone": "heart",
+      "description": "Hôpital public, déserts médicaux, solidarités, autonomie et sécurité sociale"
+    },
+    {
+      "id": "societe",
+      "titre": "Société",
+      "slug": "societe",
+      "icone": "people",
+      "description": "Libertés, laïcité, droits civiques, égalité et cohésion nationale"
+    },
+    {
+      "id": "international",
+      "titre": "International",
+      "slug": "international",
+      "icone": "globe",
+      "description": "Union européenne, diplomatie, défense, armées et alliances"
+    },
+    {
+      "id": "agriculture",
+      "titre": "Agriculture",
+      "slug": "agriculture",
+      "icone": "nutrition",
+      "description": "Revenus agricoles, souveraineté alimentaire et ruralité"
+    },
+    {
+      "id": "institutions",
+      "titre": "Institutions",
+      "slug": "institutions",
+      "icone": "flag",
+      "description": "Démocratie, 6e République, référendums citoyens, scrutin et décentralisation"
+    },
+    {
+      "id": "numerique",
+      "titre": "Numérique",
+      "slug": "numerique",
+      "icone": "hardware-chip",
+      "description": "Intelligence artificielle, protection des données et souveraineté tech"
+    },
+    {
+      "id": "logement",
+      "titre": "Logement",
+      "slug": "logement",
+      "icone": "home",
+      "description": "Accès au logement, HLM, rénovation thermique, urbanisme et cadre de vie"
+    }
+  ],
+  "candidats": [
+    {
+      "id": "antoine-mikolajczak",
+      "nom": "Antoine Mikolajczak",
+      "partiId": "equinoxe",
+      "avatar": "AM",
+      "biographie": "Ingénieur dans les énergies renouvelables, candidat officiel désigné par le parti Équinoxe.",
+      "parti": "Équinoxe",
+      "couleurParti": "#059669"
+    },
+    {
+      "id": "raphael-glucksmann",
+      "nom": "Raphaël Glucksmann",
+      "partiId": "place-publique",
+      "avatar": "RG",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg/330px-1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Député européen, essayiste et cofondateur de Place Publique.",
+      "parti": "Place Publique / PS",
+      "couleurParti": "#D81B60"
+    },
+    {
+      "id": "edouard-philippe",
+      "nom": "Édouard Philippe",
+      "partiId": "horizons",
+      "avatar": "EP",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Edouard_Philippe_3x4_crop.jpg/330px-Edouard_Philippe_3x4_crop.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Maire du Havre, ancien Premier ministre et fondateur d'Horizons.",
+      "parti": "Horizons",
+      "couleurParti": "#002B7F"
+    },
+    {
+      "id": "gabriel-attal",
+      "nom": "Gabriel Attal",
+      "partiId": "renaissance",
+      "avatar": "GA",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gabriel_Attal_2025_%28close_crop%29.jpg/330px-Gabriel_Attal_2025_%28close_crop%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Ancien Premier ministre et secrétaire général de Renaissance.",
+      "parti": "Renaissance",
+      "couleurParti": "#7B1FA2"
+    },
+    {
+      "id": "jean-luc-melenchon",
+      "nom": "Jean-Luc Mélenchon",
+      "partiId": "lfi",
+      "avatar": "JLM",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg/330px-Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Fondateur de La France Insoumise, ancien sénateur et ministre.",
+      "parti": "La France Insoumise",
+      "couleurParti": "#C62828"
+    },
+    {
+      "id": "marine-le-pen",
+      "nom": "Marine Le Pen",
+      "partiId": "rn",
+      "avatar": "MLP",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/330px-Marine_Le_Pen_2025_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale.",
+      "parti": "Rassemblement National",
+      "couleurParti": "#0D47A1"
+    },
+    {
+      "id": "marine-tondelier",
+      "nom": "Marine Tondelier",
+      "partiId": "les-ecologistes",
+      "avatar": "MT",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Secrétaire nationale des Écologistes et élue municipale d'Hénin-Beaumont.",
+      "parti": "Les Écologistes",
+      "couleurParti": "#2E7D32"
+    },
+    {
+      "id": "bruno-retailleau",
+      "nom": "Bruno Retailleau",
+      "partiId": "lr",
+      "avatar": "BR",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg/330px-Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Ministre de l'Intérieur, ancien président du groupe LR au Sénat.",
+      "parti": "Les Républicains",
+      "couleurParti": "#0055A5"
+    },
+    {
+      "id": "francois-ruffin",
+      "nom": "François Ruffin",
+      "partiId": "debout",
+      "avatar": "FR",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Fran%C3%A7ois_Ruffin_%28cropped%29.jpg/330px-Fran%C3%A7ois_Ruffin_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Député de la Somme, réalisateur et fondateur du mouvement Debout !",
+      "parti": "Debout !",
+      "couleurParti": "#EF4444"
+    },
+    {
+      "id": "fabien-roussel",
+      "nom": "Fabien Roussel",
+      "partiId": "pcf",
+      "avatar": "FRO",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Roussel_Fabien_1.jpg/330px-Roussel_Fabien_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Secrétaire national du Parti Communiste Français et ancien député du Nord.",
+      "parti": "Parti Communiste Français",
+      "couleurParti": "#DC2626"
+    },
+    {
+      "id": "eric-zemmour",
+      "nom": "Éric Zemmour",
+      "partiId": "reconquete",
+      "avatar": "EZ",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg/330px-Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Président de Reconquête, ancien journaliste et essayiste.",
+      "parti": "Reconquête",
+      "couleurParti": "#1E1B4B"
+    },
+    {
+      "id": "nathalie-arthaud",
+      "nom": "Nathalie Arthaud",
+      "partiId": "lutte-ouvriere",
+      "avatar": "NA",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Nathalie_Arthaud_%28LO%29_19-05-2024.jpg/330px-Nathalie_Arthaud_%28LO%29_19-05-2024.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion.",
+      "parti": "Lutte Ouvrière",
+      "couleurParti": "#B91C1C"
+    },
+    {
+      "id": "francois-asselineau",
+      "nom": "François Asselineau",
+      "partiId": "upr",
+      "avatar": "FA",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Fran%C3%A7ois_ASSELINEAU.jpg/330px-Fran%C3%A7ois_ASSELINEAU.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Président fondateur de l'Union Populaire Républicaine (UPR), haut fonctionnaire.",
+      "parti": "Union Populaire Républicaine",
+      "couleurParti": "#1D4ED8"
+    },
+    {
+      "id": "nicolas-dupont-aignan",
+      "nom": "Nicolas Dupont-Aignan",
+      "partiId": "debout-la-france",
+      "avatar": "NDA",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg/330px-Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Président de Debout La France et député de l'Essonne.",
+      "parti": "Debout La France",
+      "couleurParti": "#1E40AF"
+    },
+    {
+      "id": "david-lisnard",
+      "nom": "David Lisnard",
+      "partiId": "nouvelle-energie",
+      "avatar": "DL",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/330px-David_Lisnard_-_2013.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Maire de Cannes, président de l'Association des maires de France.",
+      "parti": "Nouvelle Énergie",
+      "couleurParti": "#2563EB"
+    },
+    {
+      "id": "helene-thouy",
+      "nom": "Hélène Thouy",
+      "partiId": "parti-animaliste",
+      "avatar": "HT",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Helene_Thouy_%28cropped_2%29.jpg/330px-Helene_Thouy_%28cropped_2%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Avocate au barreau de Bordeaux et cofondatrice du Parti Animaliste.",
+      "parti": "Parti Animaliste",
+      "couleurParti": "#9333EA"
+    },
+    {
+      "id": "jean-lassalle",
+      "nom": "Jean Lassalle",
+      "partiId": "resistons",
+      "avatar": "JL",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jean_Lassalle.jpg/330px-Jean_Lassalle.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "biographie": "Président de Résistons !, ancien député des Pyrénées-Atlantiques.",
+      "parti": "Résistons !",
+      "couleurParti": "#D97706"
+    }
+  ],
+  "propositions": [
+    {
+      "id": "prop-am-1",
+      "ref": "P-531",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "environnement",
+      "titre": "Financer à court terme de nouveaux réacteurs EPR/EPR2 en même temps que de l'éolien et du solaire, prolonger le parc existant et investir dans la R&D des SMR et des réacteurs de 4e génération",
+      "description": "« Financer le déploiement à court terme de nouveaux réacteurs nucléaires de troisième génération (EPR, EPR2) ainsi que de nouveaux moyens de production d'électricité renouvelable (éolien et solaire). »",
+      "sourceUrl": "https://parti-equinoxe.fr/elections-legislatives-2024/programme-legislatives-2024-energie/",
+      "dateDeclaration": "2024-06-23",
+      "contexte": "Programme législatives 2024 - Énergie (Équinoxe)"
+    },
+    {
+      "id": "prop-am-4",
+      "ref": "P-888",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "agriculture",
+      "titre": "Réformer la PAC pour soutenir la transition agroécologique et « valoriser les technologies et innovations permettant l'émergence de systèmes agricoles résilients »",
+      "description": "« Réformer la Politique agricole commune pour soutenir davantage les pratiques agroécologiques qui demandent un temps de transition et souvent plus de travail pour les agriculteurs. »",
+      "sourceUrl": "https://parti-equinoxe.fr/programme-europeennes-2024-agriculture/",
+      "dateDeclaration": "2024-02-26",
+      "contexte": "Programme européennes 2024 - Agriculture (Équinoxe)"
+    },
+    {
+      "id": "prop-am-6",
+      "ref": "P-526",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "logement",
+      "titre": "Plan national de rénovation des bâtiments anciens pour éliminer les passoires thermiques, financé par des subventions, des crédits d'impôt et des prêts à taux réduit",
+      "description": "« Lancer un plan national de rénovation des bâtiments anciens, visant à améliorer leur efficacité énergétique et à éliminer les passoires thermiques. »",
+      "sourceUrl": "https://parti-equinoxe.fr/elections-legislatives-2024/programme-legislatives-2024-energie/",
+      "dateDeclaration": "2024-06-23",
+      "contexte": "Programme législatives 2024 - Énergie (Équinoxe)"
+    },
+    {
+      "id": "prop-br-1",
+      "ref": "P-961",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "securite",
+      "titre": "Peine plancher pour les agresseurs de policiers",
+      "description": "« Bruno Retailleau « préconise pour sa part la mise en place de peine plancher pour les agresseurs de policiers »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/violences-contre-les-policiers-le-president-de-la-republique-est-incapable-de",
+      "dateDeclaration": "2021-05-19",
+      "contexte": "Public Sénat, « Violences contre les policiers : le président de la République est incapable de rétablir l'ordre », 19/05/2021"
+    },
+    {
+      "id": "prop-br-2",
+      "ref": "P-604",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "securite",
+      "titre": "Faire de l'excuse de minorité l'exception et non la règle",
+      "description": "« Aujourd'hui, l'excuse de minorité est la règle, demain elle doit devenir l'exception » ; « Il faut réformer profondément la justice des mineurs »",
+      "sourceUrl": "https://www.europe1.fr/node/669464",
+      "dateDeclaration": "2025-03-25",
+      "contexte": "Europe 1, « Rixe mortelle en Essonne : l'excuse de minorité doit devenir l'exception », 25/03/2025"
+    },
+    {
+      "id": "prop-br-3",
+      "ref": "P-423",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "travail",
+      "titre": "Supprimer les 35 heures en annualisant le temps de travail à 1623 h ; au-delà de 1607 h, zéro cotisation et zéro impôt (hors CSG-CRDS), heures supplémentaires renvoyées à la négociation collective",
+      "description": "« Il propose d'annualiser le temps de travail, en passant de 1607 heures (les 35 heures hebdomadaires) à 1623 heures »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/la-fete-est-finie-bruno-retailleau-veut-supprimer-les-35-heures-inciter-a-la-reprise-dactivite-et-plafonner-les-aides-sociales-pour-relancer-lemploi",
+      "dateDeclaration": "2026-01-07",
+      "contexte": "Public Sénat, « La fête est finie » : Bruno Retailleau veut supprimer les 35 heures, 07/01/2026"
+    },
+    {
+      "id": "prop-br-4",
+      "ref": "P-862",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "logement",
+      "titre": "Permettre au préfet d'enjoindre aux bailleurs de saisir le juge en résiliation du bail des locataires liés au trafic de drogue ou portant atteinte à la sécurité des personnes",
+      "description": "« Le préfet peut « enjoindre aux bailleurs sociaux et privés de saisir le juge judiciaire en résiliation du bail locatif »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/parlementaire/interdiction-de-paraitre-sur-des-points-de-deal-expulsion-locative-bruno-retailleau-transmet-une-nouvelle-circulaire-de-lutte-contre-le-narcotrafic-aux-prefets",
+      "dateDeclaration": "2025-07-24",
+      "contexte": "Public Sénat, circulaire Retailleau narcotrafic aux préfets, 24/07/2025"
+    },
+    {
+      "id": "prop-br-5",
+      "ref": "P-785",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "international",
+      "titre": "Conditionner la délivrance de visas aux pays d'origine à l'acceptation de leurs ressortissants sous OQTF",
+      "description": "« Il veut conditionner la « politique de visas à la délivrance des laissez-passer » consulaires »",
+      "sourceUrl": "https://telquel.ma/instant-t/2024/10/02/bruno-retailleau-en-2023-la-france-a-delivre-au-maroc-238-750-visas-mais-na-obtenu-que-725-laissez-passer_1896520/",
+      "dateDeclaration": "2024-10-02",
+      "contexte": "TelQuel (reprise de l'interview au Figaro Magazine), 02/10/2024"
+    },
+    {
+      "id": "prop-br-6",
+      "ref": "P-324",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "institutions",
+      "titre": "Réduire de 20 à 25 % le nombre de parlementaires et instaurer un conseiller territorial unique",
+      "description": "« Retailleau a avancé le chiffre de « 20/25% » de parlementaires en moins »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/reforme-constitutionnelle-il-faut-ecouter-le-senat-dit-retailleau-83384",
+      "dateDeclaration": "2018-03-06",
+      "contexte": "Public Sénat, « Réforme constitutionnelle : Il faut écouter le Sénat, dit Retailleau », 06/03/2018"
+    },
+    {
+      "id": "prop-dl-1",
+      "ref": "P-869",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "institutions",
+      "titre": "Transférer le pouvoir réglementaire (hors régalien) aux collectivités et faire de la subsidiarité une règle constitutionnelle",
+      "description": "« transférer le pouvoir règlementaire - sauf dans le champ régalien - aux collectivités territoriales »",
+      "sourceUrl": "https://www.maire-info.com/congr%C3%A8s-de-l'amf/david-lisnard--les-crises-ont-demontre-la-solidite-de-l'echelon-communal--article-30199",
+      "dateDeclaration": "2025-11-14",
+      "contexte": "Maire-info, interview avant le 107e Congrès de l'AMF"
+    },
+    {
+      "id": "prop-dl-2",
+      "ref": "P-512",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "economie",
+      "titre": "80 Md€ d'économies la première année puis au moins 200 Md€ sur la trajectoire, et « dégonfler le stock de normes »",
+      "description": "« 80 milliards d'euros dès la première année, puis une trajectoire d'au moins 200 milliards. »",
+      "sourceUrl": "https://www.unenouvelleenergie.fr/questions/quelles-economies-david-lisnard-propose-t-il-et-ou-exactement/",
+      "dateDeclaration": "2025-11-29",
+      "contexte": "Nouvelle Énergie, FAQ « Quelles économies propose David Lisnard ? »"
+    },
+    {
+      "id": "prop-dl-3",
+      "ref": "P-331",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "education",
+      "titre": "Autonomie des chefs d'établissement (recrutement des équipes, méthodes, budget) en contrepartie d'une évaluation publique ; l'éveil 1-6 ans est confié aux communes",
+      "description": "« la liberté donnée aux chefs d'établissement de recruter leurs équipes pédagogiques »",
+      "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/education/",
+      "contexte": "Nouvelle Énergie, programme Éducation"
+    },
+    {
+      "id": "prop-dl-4",
+      "ref": "P-874",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "securite",
+      "titre": "Armement de la police municipale au choix des communes volontaires, accès aux fichiers, verbalisation renforcée et amendes forfaitaires délictuelles",
+      "description": "« permettre aux communes volontaires d'armer leur police municipale »",
+      "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/securite/",
+      "contexte": "Nouvelle Énergie, programme Sécurité, section 2"
+    },
+    {
+      "id": "prop-dl-5",
+      "ref": "P-693",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "logement",
+      "titre": "Assouplir le ZAN et décentraliser les zonages des politiques de logement",
+      "description": "« on a créé, avec le ZAN, un dispositif si complexe qu'il est inapplicable localement, inéquitable »",
+      "sourceUrl": "https://www.ffbatiment.fr/revues-guides/bam/79-juin-2025/liberer-acte-construire-entretien-avec-david-lisnard-maire-cannes",
+      "dateDeclaration": "2025-06-02",
+      "contexte": "Bâtimétiers n° 79 (FFB), entretien « Libérer l'acte de construire »"
+    },
+    {
+      "id": "prop-ep-1",
+      "ref": "P-932",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "economie",
+      "titre": "Rétablir d'abord la réforme de 2023 (64 ans, 43 annuités), puis porter l'âge légal à 65 ans avec 45 annuités en moins de 10 ans, avec un pilier de capitalisation",
+      "description": "« Puis de poursuivre pour atteindre 65 ans et 45 annuités « en moins de 10 ans ». »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/retraites-edouard-philippe-sort-du-bois-et-propose-un-age-de-depart-a-65-ans",
+      "dateDeclaration": "2026-09-29",
+      "contexte": "Public Sénat - Retraites : Édouard Philippe propose un âge de départ à 65 ans"
+    },
+    {
+      "id": "prop-ep-2",
+      "ref": "P-389",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "environnement",
+      "titre": "Relancer le nucléaire en développant les renouvelables et en électrifiant massivement les usages",
+      "description": "« Assurer notre souveraineté énergétique en relançant le nucléaire, en développant les renouvelables et en électrifiant massivement nos usages. »",
+      "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+      "contexte": "Site de campagne Avec Édouard 2027 - Pour une France plus conquérante"
+    },
+    {
+      "id": "prop-ep-3",
+      "ref": "P-570",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "education",
+      "titre": "Faire des chefs d'établissement les « patrons » de l'école : ils choisissent et évaluent les enseignants, adaptent méthodes et horaires, imposent l'uniforme ; revalorisation générale des rémunérations",
+      "description": "« Faire des chefs d'établissements les véritables patrons de l'école : liberté d'adapter les méthodes et les horaires, d'imposer l'uniforme, de fixer les règles de discipline, de choisir et d'évaluer les enseignants. »",
+      "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+      "contexte": "Site de campagne Avec Édouard 2027 - Pour une France plus attentive à ses enfants"
+    },
+    {
+      "id": "prop-ep-4",
+      "ref": "P-575",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "travail",
+      "titre": "Les 35 heures sont « une erreur » : « donner le maximum de libertés dans l'entreprise »",
+      "description": "« Je pense que faire les 35 heures était une erreur. » ... « donner le maximum de libertés dans l'entreprise ». »",
+      "sourceUrl": "https://www.planet.fr/faut-il-mettre-fin-aux-35-heures-retailleau-pour-edouard-philippe-contre.2999403.817022.html",
+      "dateDeclaration": "2026-08-30",
+      "contexte": "Planet.fr - Faut-il mettre fin aux 35 heures ? (propos tenus sur BFMTV)"
+    },
+    {
+      "id": "prop-ep-6",
+      "ref": "P-213",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "international",
+      "titre": "Massifier les armées : 250 000 réservistes, 50 000 places de service militaire volontaire par an, drones, plan munitions, flotte navale, nouvelle « LPM de la massification »",
+      "description": "« Porter le nombre de réservistes de 45 000 à 250 000 et le service militaire volontaire de 3 000 à 50 000 places par an. »",
+      "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+      "contexte": "Site de campagne Avec Édouard 2027 - Pour une France plus sûre"
+    },
+    {
+      "id": "prop-ez-1",
+      "ref": "P-962",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "securite",
+      "titre": "Renvoyer tous les délinquants étrangers, y compris ceux non incarcérés (bracelet électronique, TIG), et tous les étrangers détenus",
+      "description": "« Il faut renvoyer tous les délinquants étrangers, même ceux qui ne sont pas en prison »",
+      "sourceUrl": "https://www.parismatch.be/actualites/monde/2026/09/18/eric-zemmour-confirme-sa-candidature-a-lelection-presidentielle-francaise-5CKEL6PZ4BDONOUKVHMMCG65NU/",
+      "dateDeclaration": "2026-09-17",
+      "contexte": "Paris Match Belgique (Belga), propos sur BFMTV"
+    },
+    {
+      "id": "prop-ez-2",
+      "ref": "P-243",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "education",
+      "titre": "Abolir le collège unique, rétablir l'examen d'entrée en 6e et instaurer l'uniforme républicain obligatoire",
+      "description": "« the return of the uniforms in state schools »",
+      "sourceUrl": "https://connexionfrance.com/article/French-news/Far-right-French-election-candidate-calls-for-state-school-uniforms",
+      "dateDeclaration": "2022-01-10",
+      "contexte": "Connexion France, 11/02/2022 (conférence de presse du 10/01/2022)"
+    },
+    {
+      "id": "prop-ez-3",
+      "ref": "P-424",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "economie",
+      "titre": "Baisser de 30 milliards d'euros les impôts de production et supprimer les droits de donation et de succession sur les transmissions d'entreprises familiales",
+      "description": "« une baisse des impôts de production sur les entreprises, à hauteur de 30 milliards d'euros »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
+      "dateDeclaration": "2022-03-23",
+      "contexte": "Public Sénat, programme présidentiel 2022 détaillé"
+    },
+    {
+      "id": "prop-ez-4",
+      "ref": "P-957",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "institutions",
+      "titre": "Réviser l'article 55 de la Constitution pour faire primer les lois nationales nouvelles sur tous les textes internationaux et européens",
+      "description": "« supériorité des nouvelles lois nationales sur tous les textes internationaux et européens »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
+      "dateDeclaration": "2022-03-23",
+      "contexte": "Public Sénat, programme présidentiel 2022 détaillé"
+    },
+    {
+      "id": "prop-ez-5",
+      "ref": "P-238",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "logement",
+      "titre": "Abroger définitivement l'article 55 de la loi SRU imposant un quota de 25% de logements sociaux aux communes",
+      "description": "« la loi SRU sera abrogée et les étrangers interdits d'accès aux logements sociaux »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
+      "dateDeclaration": "2022-03-23",
+      "contexte": "Public Sénat, programme présidentiel 2022 détaillé"
+    },
+    {
+      "id": "prop-ez-6",
+      "ref": "P-419",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "societe",
+      "titre": "Interdire le port du voile islamique et de tout signe religieux ostentatoire dans l'ensemble de l'espace public",
+      "description": "« In public spaces, yes. »",
+      "sourceUrl": "https://www.ynetnews.com/jewish-world/article/sjlbcentzx",
+      "dateDeclaration": "2026-09-17",
+      "contexte": "Ynet News, interview Face à BFM (septembre 2026)"
+    },
+    {
+      "id": "prop-fro-1",
+      "ref": "P-842",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "travail",
+      "titre": "SMIC à 1 500 euros net et hausse généralisée des grilles de rémunération",
+      "description": "« une hausse du Smic qui sera porté à 1500 euros net »",
+      "sourceUrl": "https://www.publicsenat.fr/article/politique/presidentielle-fabien-roussel-presente-180-propositions-pour-une-france-des-jours",
+      "dateDeclaration": "2022-01-24",
+      "contexte": "Public Sénat, 180 propositions « La France des Jours heureux »"
+    },
+    {
+      "id": "prop-fro-2",
+      "ref": "P-123",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "environnement",
+      "titre": "Construire 20 EPR",
+      "description": "« notre plan à nous prévoit la construction de 20 EPR et non pas 14 comme le prévoit le gouvernement »",
+      "sourceUrl": "https://www.pcf.fr/soiree_nucleaire_discours",
+      "dateDeclaration": "2025-06-24",
+      "contexte": "Discours « Energie nucléaire : une filière durable pour le XXIe siècle », pcf.fr"
+    },
+    {
+      "id": "prop-fro-3",
+      "ref": "P-304",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "sante",
+      "titre": "Rembourser à 100% l'ensemble des soins, lunettes et prothèses dentaires par la Sécurité sociale",
+      "description": "« il n'y aura plus besoin d'organismes complémentaires »",
+      "sourceUrl": "https://medecine-generale.lequotidiendumedecin.fr/actus-medicales/politique-de-sante/fabien-roussel-je-veux-creer-un-service-public-du-grand-age",
+      "dateDeclaration": "2022-04-08",
+      "contexte": "Le Quotidien du Médecin, interview de Fabien Roussel"
+    },
+    {
+      "id": "prop-fro-4",
+      "ref": "P-837",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "agriculture",
+      "titre": "Permettre à l'État de fixer des prix planchers en cas de prix trop bas, sur le modèle du coefficient multiplicateur, avec des négociations annuelles et publiques entre producteurs et grande distribution",
+      "description": "« sur le modèle du coefficient multiplicateur existant pour le secteur des fruits et légumes »",
+      "sourceUrl": "https://www.terre-net.fr/actualite-agricole/politique-syndicalisme/article/fabien-roussel-parti-communiste-presente-son-programme-agricole-205-202534.html",
+      "dateDeclaration": "2021-10-06",
+      "contexte": "Terre-net, programme agricole de Fabien Roussel"
+    },
+    {
+      "id": "prop-fro-5",
+      "ref": "P-118",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "logement",
+      "titre": "200 000 logements sociaux par an (dont 60 000 très sociaux) et 30 % de logements sociaux en zone urbaine",
+      "description": "« Son objectif ? Atteindre 200 000 logements sociaux par an, dont 60 000 très sociaux. »",
+      "sourceUrl": "https://edito.seloger.com/actualites/france/presidentielle-2027-propositions-de-fabien-roussel-logement-article-23785_2.html",
+      "dateDeclaration": "2026-09-28",
+      "contexte": "SeLoger, propositions logement de Fabien Roussel pour 2027"
+    },
+    {
+      "id": "prop-fa-1",
+      "ref": "P-788",
+      "candidatId": "francois-asselineau",
+      "thematiqueId": "international",
+      "titre": "Déclencher l'article 50 du TUE pour sortir unilatéralement et immédiatement de l'Union européenne et de l'euro",
+      "description": "« de sortir de l'UE par la mise en oeuvre de l'article 50 et de l'Otan par l'article 13 dès mon installation à l'Elysée »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-asselineau-s-estime-seul-candidat-du-frexit-58556",
+      "dateDeclaration": "2017-04-10",
+      "contexte": "Public Sénat, meeting de Lille"
+    },
+    {
+      "id": "prop-fa-2",
+      "ref": "P-245",
+      "candidatId": "francois-asselineau",
+      "thematiqueId": "international",
+      "titre": "Sortir totalement de l'OTAN (article 13 du traité de l'Atlantique Nord)",
+      "description": "« et de l'Otan par l'article 13 dès mon installation à l'Elysée »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-asselineau-s-estime-seul-candidat-du-frexit-58556",
+      "dateDeclaration": "2017-04-10",
+      "contexte": "Public Sénat, meeting de Lille"
+    },
+    {
+      "id": "prop-fa-3",
+      "ref": "P-426",
+      "candidatId": "francois-asselineau",
+      "thematiqueId": "institutions",
+      "titre": "Créer le RIC et imposer le référendum pour toute révision de la Constitution",
+      "description": "« Créer le Référendum d'initiative citoyenne (RIC) »",
+      "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
+      "contexte": "UPR, Programme 2022, mesure 13"
+    },
+    {
+      "id": "prop-fa-4",
+      "ref": "P-783",
+      "candidatId": "francois-asselineau",
+      "thematiqueId": "economie",
+      "titre": "Renationaliser ou stopper la privatisation du gaz (production et distribution), des réseaux d'eau, d'EDF (fin du projet Hercule), d'Enedis, de La Poste, des concessions autoroutières, de TDF, de la RATP et de la SNCF",
+      "description": "« Nous renationaliserons ou cesserons le processus de privatisation rampante et de dégradation de la qualité de service »",
+      "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
+      "contexte": "UPR, Programme 2022"
+    },
+    {
+      "id": "prop-fa-5",
+      "ref": "P-964",
+      "candidatId": "francois-asselineau",
+      "thematiqueId": "numerique",
+      "titre": "Interdire dans la Constitution toute surveillance généralisée (QR code, passe sanitaire, Digital ID Wallet)",
+      "description": "« l'interdiction constitutionnelle de toute surveillance généralisée de la population »",
+      "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
+      "contexte": "UPR, Programme 2022"
+    },
+    {
+      "id": "prop-fa-6",
+      "ref": "P-421",
+      "candidatId": "francois-asselineau",
+      "thematiqueId": "agriculture",
+      "titre": "Cesser immédiatement les négociations de type TAFTA et dénoncer les traités transcontinentaux déjà adoptés (CETA) ; contrôles à toutes les frontières",
+      "description": "« dénoncerons les traités transcontinentaux déjà adoptés tels que le CETA »",
+      "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
+      "contexte": "UPR, Programme 2022"
+    },
+    {
+      "id": "prop-fr-1",
+      "ref": "P-369",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "travail",
+      "titre": "Plafonner les écarts de rémunération de 1 à 20 au sein de chaque entreprise privée et publique",
+      "description": "« l'écart de rémunération [...] entre deux salariés ou entre un salarié et le dirigeant de la société ne peut excéder un rapport de un à vingt. »",
+      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1237/AN/2670.pdf",
+      "dateDeclaration": "2018-09-21",
+      "contexte": "Assemblée nationale, amendement n° 2670 (projet de loi PACTE) présenté par M. Ruffin, 21/09/2018"
+    },
+    {
+      "id": "prop-fr-2",
+      "ref": "P-912",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "sante",
+      "titre": "Statut des travailleurs essentiels (dont accompagnantes d'élèves en situation de handicap et aides à domicile) : mieux payer, fin des temps partiels subis, indexation des salaires",
+      "description": "« reconnaître un statut des travailleurs et travailleuses essentielles » ; « mettre fin aux temps partiels subis par les salariés essentiels »",
+      "sourceUrl": "https://nouspresident.fr/statut-travailleurs-essentiels/",
+      "contexte": "Nous Président !, cahier de campagne « Pour les travailleurs essentiels »"
+    },
+    {
+      "id": "prop-fr-3",
+      "ref": "P-731",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "logement",
+      "titre": "800 000 rénovations d'ampleur par an, budget de l'État pour la rénovation multiplié par 4 (15 Md€/an), financement public des restes à charge",
+      "description": "« atteindre progressivement 800 000 rénovations d'ampleur par an » ; mettre en place des « solutions de financement public pour les restes à charge »",
+      "sourceUrl": "https://nouspresident.fr/travaillisme-ecologique/",
+      "contexte": "Nous Président !, cahier de campagne « Pour un travaillisme écologique »"
+    },
+    {
+      "id": "prop-fr-4",
+      "ref": "P-726",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "agriculture",
+      "titre": "Imposer des quotas d'importation stricts pour protéger le maraîchage et l'élevage français de la concurrence déloyale",
+      "description": "« Des protections à nos frontières, des quotas d'importation, des barrières douanières. » ; « que des prix minimums soient fixés pour les denrées agricoles les plus représentatives »",
+      "sourceUrl": "https://nouspresident.fr/pour-une-exception-agriculturelle-francaise/",
+      "contexte": "Nous Président !, cahier de campagne « Pour une exception agriculturelle française »"
+    },
+    {
+      "id": "prop-fr-5",
+      "ref": "P-545",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "economie",
+      "titre": "Rétablir l'ISF et créer une taxe de 4 % sur les rachats d'actions",
+      "description": "« Rendez l'ISF d'abord, monsieur le Président ! Dès votre entrée à l'Élysée, vous en avez fait la priorité des priorités : enrichir les riches. »",
+      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QG1383.pdf",
+      "dateDeclaration": "2018-11-14",
+      "contexte": "Assemblée nationale, question au Gouvernement n° 1383 de F. Ruffin « ISF », JO du 14/11/2018"
+    },
+    {
+      "id": "prop-fr-6",
+      "ref": "P-188",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "education",
+      "titre": "Expérimenter sur 3 ans, dans certaines académies, 20 élèves maximum par classe en maternelle, élémentaire, lycées professionnels et technologiques, 25 en lycée général",
+      "description": "« le nombre total des élèves scolarisés au sein d'une classe des écoles préélémentaires et élémentaires [...] des lycées professionnels [...] ne peut être supérieur à vingt »",
+      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1481/CION-CEDU/AC370.pdf",
+      "dateDeclaration": "2019-01-25",
+      "contexte": "Assemblée nationale, amendement n° AC370 (projet de loi École de la confiance), groupe LFI dont M. Ruffin, 25/01/2019"
+    },
+    {
+      "id": "prop-ga-1",
+      "ref": "P-145",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "education",
+      "titre": "Expérimenter l'uniforme à l'école, puis le généraliser en France à la rentrée 2026 si l'expérimentation est concluante",
+      "description": "« nous déploierons l'expérimentation de l'uniforme à l'école, symbole d'égalité républicaine. [...] « Si cette expérimentation est concluante, nous généraliserons l'uniforme en France à la rentrée 2026. »",
+      "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
+      "dateDeclaration": "2024-01-30",
+      "contexte": "Déclaration de politique générale (transcription info.gouv.fr)"
+    },
+    {
+      "id": "prop-ga-2",
+      "ref": "P-688",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "travail",
+      "titre": "Expérimenter la « semaine en quatre jours » (temps de travail compressé, sans réduction du temps de travail) dans les administrations de tous les ministères",
+      "description": "« j'avais décidé d'expérimenter dans mon administration non pas la semaine de quatre jours, mais la semaine en quatre jours, sans réduction du temps de travail. »",
+      "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
+      "dateDeclaration": "2024-01-30",
+      "contexte": "Déclaration de politique générale (transcription info.gouv.fr)"
+    },
+    {
+      "id": "prop-ga-3",
+      "ref": "P-507",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "numerique",
+      "titre": "Interdire les réseaux sociaux aux moins de 15 ans, couvre-feu numérique de 22h à 8h pour les 15-18 ans, étendre aux lycées l'interdiction du portable",
+      "description": "« vise à interdire l'accès aux réseaux sociaux pour les moins de 15 ans et la suspension des comptes déjà existants, sous peine de sanctions financières. »",
+      "sourceUrl": "https://lcp.fr/actualites/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-a-l-offensive-gabriel-attal-devance",
+      "dateDeclaration": "2026-01-12",
+      "contexte": "LCP, « Interdiction des réseaux sociaux aux moins de 15 ans : à l'offensive, Gabriel Attal devance le gouvernement »"
+    },
+    {
+      "id": "prop-ga-4",
+      "ref": "P-502",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "sante",
+      "titre": "Instaurer une taxe lapin de 5 euros pour chaque consultation médicale non honorée sans préavis",
+      "description": "« la responsabilisation, avec la mise en place par la loi dès cette année d'un mécanisme sur les plateformes en ligne permettant une pénalité d'un montant de 5 euros pour rendez-vous non honoré. »",
+      "sourceUrl": "https://www.info.gouv.fr/actualite/des-actes-concrets-pour-la-sante",
+      "dateDeclaration": "2024-04-06",
+      "contexte": "info.gouv.fr, « Des actes concrets pour la santé »"
+    },
+    {
+      "id": "prop-ga-5",
+      "ref": "P-321",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "securite",
+      "titre": "Des travaux d'intérêt général pour les parents de jeunes délinquants « totalement et volontairement soustraits » à leurs obligations",
+      "description": "« Gabriel Attal annonce que « les parents défaillants », ceux qui ne la respecteraient pas, s'exposent à des mesures de travail d'intérêt général. »",
+      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/violence-des-mineurs-le-detail-des-propositions-de-gabriel-attal-pour-un-sursaut-dautorite",
+      "dateDeclaration": "2024-04-18",
+      "contexte": "Public Sénat, « Violence des mineurs : le détail des propositions de Gabriel Attal »"
+    },
+    {
+      "id": "prop-ga-6",
+      "ref": "P-864",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "agriculture",
+      "titre": "Lever les surtranspositions de normes européennes pour redonner de la compétitivité aux agriculteurs français",
+      "description": "« Lutter contre la surtransposition Pour agir contre la surtransposition, le Premier ministre souhaite reprogrammer le calendrier européen et le calendrier français concernant l'examen de ré-homologation des produits phytosanitaires. »",
+      "sourceUrl": "https://www.info.gouv.fr/actualite/produire-et-proteger-des-nouvelles-mesures-pour-lagriculture-francaise",
+      "dateDeclaration": "2024-02-01",
+      "contexte": "info.gouv.fr, « Produire et protéger : nouvelles mesures pour l'agriculture française »"
+    },
+    {
+      "id": "prop-ht-1",
+      "ref": "P-589",
+      "candidatId": "helene-thouy",
+      "thematiqueId": "societe",
+      "titre": "Inscrire la sensibilité et les droits fondamentaux des animaux non-humains directement dans la Constitution française",
+      "description": "« Adosser à la Constitution une Charte de la protection animale reconnaissant le caractère d’êtres sensibles des animaux, leurs intérêts inhérents à cette qualité »",
+      "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
+      "dateDeclaration": "2022-03-29",
+      "contexte": "Parti animaliste, Programme national 2022, p. 4"
+    },
+    {
+      "id": "prop-ht-2",
+      "ref": "P-232",
+      "candidatId": "helene-thouy",
+      "thematiqueId": "agriculture",
+      "titre": "Fin de tout élevage intensif (sans accès au plein air) et industriel d'ici 2027, accompagnement de la reconversion des éleveurs et réorientation des subventions aux productions animales vers l'agriculture végétale",
+      "description": "« Mettre fin à l’élevage intensif (sans accès au plein air) et industriel (ICPE soumis aux régimes d’enregistrement et d’autorisation) d’ici 2027 »",
+      "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
+      "dateDeclaration": "2022-03-29",
+      "contexte": "Parti animaliste, Programme national 2022, p. 17"
+    },
+    {
+      "id": "prop-ht-3",
+      "ref": "P-951",
+      "candidatId": "helene-thouy",
+      "thematiqueId": "sante",
+      "titre": "Instaurer une option végétarienne ou végane équilibrée quotidienne dans l'ensemble de la restauration collective",
+      "description": "« Instaurer une alternative végétale quotidienne à chaque repas, dans l’ensemble de la restauration collective publique et privée. »",
+      "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
+      "dateDeclaration": "2022-03-29",
+      "contexte": "Parti animaliste, Programme national 2022, p. 18"
+    },
+    {
+      "id": "prop-ht-4",
+      "ref": "P-946",
+      "candidatId": "helene-thouy",
+      "thematiqueId": "environnement",
+      "titre": "Interdire totalement la chasse et la détention d'armes à feu par les particuliers",
+      "description": "« Interdiction de la chasse. »",
+      "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
+      "dateDeclaration": "2022-03-29",
+      "contexte": "Parti animaliste, Programme national 2022, p. 24"
+    },
+    {
+      "id": "prop-ht-5",
+      "ref": "P-765",
+      "candidatId": "helene-thouy",
+      "thematiqueId": "securite",
+      "titre": "Unités de police et de gendarmerie dédiées dans chaque département, parquets spécialisés dans chaque tribunal, fichier des auteurs d'infractions, correctionnalisation des infractions et peines portées à 3 ans et 75 000 EUR pour les mauvais traitements par un professionnel",
+      "description": "« Créer dans chaque département des unités de police et de gendarmerie attachées à la protection animale. »",
+      "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
+      "dateDeclaration": "2022-03-29",
+      "contexte": "Parti animaliste, Programme national 2022, p. 4 et p. 6"
+    },
+    {
+      "id": "prop-ht-6",
+      "ref": "P-408",
+      "candidatId": "helene-thouy",
+      "thematiqueId": "education",
+      "titre": "Introduire un module obligatoire sur l'éthique animale et le respect du vivant dès l'école primaire",
+      "description": "« Réintégrer et développer dans tous les programmes scolaires et dans toutes les filières un enseignement au respect des animaux, ainsi qu’une initiation à l’éthologie. »",
+      "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
+      "dateDeclaration": "2022-03-29",
+      "contexte": "Parti animaliste, Programme national 2022, p. 10"
+    },
+    {
+      "id": "prop-jl-1",
+      "ref": "P-667",
+      "candidatId": "jean-lassalle",
+      "thematiqueId": "agriculture",
+      "titre": "Faire des coûts de production la base de la construction du prix agricole, via des indicateurs publics",
+      "description": "« Il vise, entre autres, à ce que les coûts de production des producteurs deviennent la base de la construction du prix »",
+      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1175/AN/967.pdf",
+      "dateDeclaration": "2018-09-10",
+      "contexte": "Amendement n° 967 de M. Lassalle au projet de loi EGALIM (n° 1175)"
+    },
+    {
+      "id": "prop-jl-2",
+      "ref": "P-486",
+      "candidatId": "jean-lassalle",
+      "thematiqueId": "sante",
+      "titre": "Financer les études des soignants qui s'engagent volontairement à exercer 6 ans dans les territoires déficitaires, et augmenter les places en faculté de médecine",
+      "description": "« Financer les études pour ceux qui s’engagent pour une durée de 6 ans dans les territoires déficitaires. »",
+      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
+      "dateDeclaration": "2022-02-25",
+      "contexte": "Jean Lassalle, La France authentique, programme présidentielle 2022, p. 4"
+    },
+    {
+      "id": "prop-jl-3",
+      "ref": "P-305",
+      "candidatId": "jean-lassalle",
+      "thematiqueId": "institutions",
+      "titre": "Reconnaître le vote blanc comme un suffrage exprimé et invalider l'élection si le vote blanc arrive en tête",
+      "description": "« Les bulletins blancs sont décomptés séparément et entrent en compte pour la détermination des suffrages exprimés lors du premier et du second tour. »",
+      "sourceUrl": "https://www.assemblee-nationale.fr/15/pdf/propositions/pion3896.pdf",
+      "dateDeclaration": "2021-02-17",
+      "contexte": "Proposition de loi constitutionnelle n° 3896 relative à la reconnaissance du vote blanc pour l'élection présidentielle"
+    },
+    {
+      "id": "prop-jl-4",
+      "ref": "P-672",
+      "candidatId": "jean-lassalle",
+      "thematiqueId": "societe",
+      "titre": "Maintenir ou créer écoles, transports, services de santé et réseaux dans les campagnes, avec un hôpital à moins de 40 minutes partout",
+      "description": "« Désenclaver les campagnes par le maintien ou la création d’écoles, transports, services de santé, téléphonie, fibre optique et 4G partout sur le territoire »",
+      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
+      "dateDeclaration": "2022-02-25",
+      "contexte": "Jean Lassalle, La France authentique, programme présidentielle 2022, p. 8"
+    },
+    {
+      "id": "prop-jl-5",
+      "ref": "P-491",
+      "candidatId": "jean-lassalle",
+      "thematiqueId": "education",
+      "titre": "Service national universel militaire ou civil d'environ 9 mois (du 15 septembre au 15 juin), ouvert aux jeunes majeurs, filles et garçons",
+      "description": "« Créer un Service national universel, militaire ou civil, du 15 septembre au 15 juin. »",
+      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
+      "dateDeclaration": "2022-02-25",
+      "contexte": "Jean Lassalle, La France authentique, programme présidentielle 2022, p. 2"
+    },
+    {
+      "id": "prop-jl-6",
+      "ref": "P-310",
+      "candidatId": "jean-lassalle",
+      "thematiqueId": "environnement",
+      "titre": "Interdire les projets éoliens non validés par les maires après consultation des habitants, et développer le solaire et les énergies de la mer",
+      "description": "« Stopper l’éolien. Il convient dès à présent d’interdire les projets éoliens non validés par les maires, après consultation des habitants. »",
+      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
+      "dateDeclaration": "2022-02-25",
+      "contexte": "Jean Lassalle, La France authentique, programme présidentielle 2022, p. 3"
+    },
+    {
+      "id": "prop-jlm-1",
+      "ref": "P-762",
+      "candidatId": "jean-luc-melenchon",
+      "thematiqueId": "institutions",
+      "titre": "Convoquer une Assemblée constituante pour fonder la 6e République et abolir la monarchie présidentielle",
+      "description": "« Convoquer une Constituante pour passer à la 6e République [...] Abolir les procédures de « votes forcés » du Parlement comme l'article 49.3 [...] RIC [...] peuvent révoquer des élus »",
+      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "dateDeclaration": "2025-02-18",
+      "contexte": "L'Avenir en commun, édition 2025, chap. 1, p. 20-23"
+    },
+    {
+      "id": "prop-jlm-2",
+      "ref": "P-943",
+      "candidatId": "jean-luc-melenchon",
+      "thematiqueId": "economie",
+      "titre": "Bloquer par décret les prix des denrées de première nécessité, du gaz, de l'électricité et du carburant",
+      "description": "« Bloquer les prix des produits de première nécessité (alimentation, énergie, carburant) et interdire la « réduflation »",
+      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "dateDeclaration": "2025-02-18",
+      "contexte": "L'Avenir en commun, édition 2025, chap. 9, p. 73"
+    },
+    {
+      "id": "prop-jlm-3",
+      "ref": "P-224",
+      "candidatId": "jean-luc-melenchon",
+      "thematiqueId": "travail",
+      "titre": "Rétablir la retraite à 60 ans à taux plein avec 40 annuités de cotisation et porter le SMIC à 1600 euros net",
+      "description": "« Abroger la réforme d'Emmanuel Macron [...] et restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations [...] Augmenter immédiatement le SMIC à 1600 € net mensuel »",
+      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "dateDeclaration": "2025-02-18",
+      "contexte": "L'Avenir en commun, édition 2025, p. 72-73"
+    },
+    {
+      "id": "prop-jlm-4",
+      "ref": "P-757",
+      "candidatId": "jean-luc-melenchon",
+      "thematiqueId": "agriculture",
+      "titre": "Garantir des prix planchers rémunérateurs aux agriculteurs et interdire les marges abusives de l'agroalimentaire",
+      "description": "« Garantir des prix rémunérateurs aux producteurs par des prix planchers pour les agriculteurs, interdire les ventes à perte [...] encadrant les marges des industries agro-alimentaires et de la grande distribution »",
+      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "dateDeclaration": "2025-02-18",
+      "contexte": "L'Avenir en commun, édition 2025, p. 98-101"
+    },
+    {
+      "id": "prop-jlm-5",
+      "ref": "P-938",
+      "candidatId": "jean-luc-melenchon",
+      "thematiqueId": "logement",
+      "titre": "Encadrer les loyers partout (à la baisse dans les grandes villes), 200 000 logements publics par an pendant 5 ans, interdire les expulsions sans relogement public, limiter les locations de type Airbnb à 60 jours par an",
+      "description": "« Construire 200 000 logements publics par an pendant cinq ans aux normes écologiques les plus ambitieuses [...] Encadrer les loyers partout sur le territoire et à la baisse dans les grandes villes »",
+      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "dateDeclaration": "2025-02-18",
+      "contexte": "L'Avenir en commun, édition 2025, p. 58"
+    },
+    {
+      "id": "prop-jlm-6",
+      "ref": "P-219",
+      "candidatId": "jean-luc-melenchon",
+      "thematiqueId": "international",
+      "titre": "Sortir du commandement intégré de l'OTAN et refuser tout alignement atlantiste pour une diplomatie altermondialiste",
+      "description": "« Se retirer immédiatement du commandement intégré de l'OTAN puis, par étapes, de l'organisation elle-même »",
+      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "dateDeclaration": "2025-02-18",
+      "contexte": "L'Avenir en commun, édition 2025, p. 116"
+    },
+    {
+      "id": "prop-mlp-1",
+      "ref": "P-409",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "securite",
+      "titre": "Rétablir les peines planchers, supprimer toute réduction et tout aménagement de peine (surtout pour les violences contre les personnes), atteindre 85 000 places de prison en 2027",
+      "description": "« Rétablir les peines planchers pour que tout criminel et délinquant aient une sanction. Supprimer toute possibilité de réduction et d'aménagements de peine, en particulier pour les violences contre les personnes. Atteindre 85 000 places de prison en 2027. »",
+      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
+      "dateDeclaration": "2022-02-04",
+      "contexte": "Marine Le Pen, 22 mesures pour 2022, p. 2"
+    },
+    {
+      "id": "prop-mlp-2",
+      "ref": "P-766",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "societe",
+      "titre": "Allocations familiales réservées aux familles dont au moins un parent est français ; priorité nationale inscrite dans la Constitution par référendum ; prestations de solidarité conditionnées à 5 ans de travail en France",
+      "description": "« en application du principe de priorité nationale évoqué plus haut, les allocations familiales seront réservées aux familles dont au moins un des deux parents est français. »",
+      "sourceUrl": "https://web.archive.org/web/20220325180640id_/https://mlafrance.fr/pdfs/manifeste-m-la-france-programme-presidentiel.pdf",
+      "dateDeclaration": "2022-03-25",
+      "contexte": "M la France, programme présidentiel 2022, p. 8-9 et 28-29"
+    },
+    {
+      "id": "prop-mlp-3",
+      "ref": "P-947",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "agriculture",
+      "titre": "Sortir l'agriculture des accords de libre-échange de l'Union européenne et imposer le patriotisme alimentaire",
+      "description": "« Exclure l'agriculture des traités multilatéraux de libre-échange [...] Interdire les importations de produits agricoles ne respectant pas les normes de production françaises »",
+      "sourceUrl": "https://web.archive.org/web/20220302095107id_/https://mlafrance.fr/pdfs/projet-l-agriculture.pdf",
+      "dateDeclaration": "2022-02-28",
+      "contexte": "Projet RN 2022, livret « L'agriculture », p. 10-12"
+    },
+    {
+      "id": "prop-mlp-4",
+      "ref": "P-952",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "economie",
+      "titre": "Abaisser la TVA de 20% à 5,5% sur tous les produits énergétiques : carburants, électricité et gaz",
+      "description": "« Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité. »",
+      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
+      "dateDeclaration": "2022-02-04",
+      "contexte": "Marine Le Pen, 22 mesures pour 2022, mesure 4, p. 3"
+    },
+    {
+      "id": "prop-mlp-5",
+      "ref": "P-233",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "institutions",
+      "titre": "Instaurer le référendum d'initiative citoyenne et la proportionnelle",
+      "description": "« Instaurer le Referendum d'Initiative Citoyenne et mettre en place la proportionnelle. »",
+      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
+      "dateDeclaration": "2022-02-04",
+      "contexte": "Marine Le Pen, 22 mesures pour 2022, mesure 11, p. 5"
+    },
+    {
+      "id": "prop-mlp-6",
+      "ref": "P-590",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "logement",
+      "titre": "Donner la priorité absolue d'attribution des logements sociaux HLM aux familles françaises",
+      "description": "« Assurer la priorité nationale d'accès au logement social et à l'emploi. »",
+      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
+      "dateDeclaration": "2022-02-04",
+      "contexte": "Marine Le Pen, 22 mesures pour 2022, mesure 1, p. 2"
+    },
+    {
+      "id": "prop-mt-1",
+      "ref": "P-908",
+      "candidatId": "marine-tondelier",
+      "thematiqueId": "environnement",
+      "titre": "Moratoire sur les grands projets inutiles (dont l'A69) et sur les capacités routières nouvelles ; loi de programmation ferroviaire à 10 ans et financement des RER métropolitains",
+      "description": "« Adopter un moratoire sur les grands projets inutiles et imposés comme le canal Seine-Nord Europe, l'autoroute A69, le TGV Lyon-Turin et les extensions d'aéroport. »",
+      "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "dateDeclaration": "2026-07-13",
+      "contexte": "Les Écologistes, Programme 2027, p. 24-25"
+    },
+    {
+      "id": "prop-mt-2",
+      "ref": "P-365",
+      "candidatId": "marine-tondelier",
+      "thematiqueId": "sante",
+      "titre": "Interdire les PFAS : tout de suite pour l'alimentation, le textile et les cosmétiques, sous 18 mois pour le reste, avec une exception de 5 à 10 ans au cas par cas pour les usages essentiels",
+      "description": "« Interdire l'ensemble des polluants éternels (PFAS) [...] interdiction immédiate pour la nourriture, le textile et les produits de beauté et sous 18 mois pour les autres. »",
+      "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "dateDeclaration": "2026-07-13",
+      "contexte": "Les Écologistes, Programme 2027, p. 107"
+    },
+    {
+      "id": "prop-mt-3",
+      "ref": "P-546",
+      "candidatId": "marine-tondelier",
+      "thematiqueId": "agriculture",
+      "titre": "Réformer la PAC vers l'agroécologie avec conditionnalités écologiques et sociales et aides calculées selon le nombre d'actifs ; sortie progressive des pesticides de synthèse d'ici 2050, interdiction immédiate des CMR, refus du retour des néonicotinoïdes",
+      "description": "« Appliquer des critères de conditionnalités écologiques et sociales dans l'attribution des soutiens publics. » ; « Empêcher toute tentative de réintroduction des néonicotinoïdes. »",
+      "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "dateDeclaration": "2026-07-13",
+      "contexte": "Les Écologistes, Programme 2027, p. 29 et p. 50"
+    },
+    {
+      "id": "prop-mt-4",
+      "ref": "P-903",
+      "candidatId": "marine-tondelier",
+      "thematiqueId": "travail",
+      "titre": "Sécurité sociale professionnelle pour les travailleurs touchés par la transition : salaire équivalent pendant deux ans en cas de perte d'emploi dans les secteurs les plus exposés (poids lourds, garages, raffineries)",
+      "description": "« Créer une Sécurité Sociale Professionnelle pour l'ensemble des travailleur·ses impactés par la transition écologique. Garantir un salaire équivalent en cas de perte d'emploi pendant deux ans »",
+      "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "dateDeclaration": "2026-07-13",
+      "contexte": "Les Écologistes, Programme 2027, p. 55"
+    },
+    {
+      "id": "prop-mt-5",
+      "ref": "P-184",
+      "candidatId": "marine-tondelier",
+      "thematiqueId": "logement",
+      "titre": "Obliger les propriétaires à rénover les passoires thermiques avec un reste à charge nul pour les plus modestes",
+      "description": "« Prendre en charge directement le coût des rénovations pour les propriétaires à faible revenu »",
+      "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "dateDeclaration": "2026-07-13",
+      "contexte": "Les Écologistes, Programme 2027, p. 21"
+    },
+    {
+      "id": "prop-mt-6",
+      "ref": "P-541",
+      "candidatId": "marine-tondelier",
+      "thematiqueId": "numerique",
+      "titre": "Encadrer l'implantation des data centers : fin du label PINM, planifier leur consommation électrique, identifier leur usage d'eau potable, seuils pour les permis de construire, retour dans le champ de la Commission nationale du débat public",
+      "description": "« Encadrer l'implantation des data centers. Supprimer la possibilité de labelliser des data centers « projet d'intérêt national majeur » (PINM) les exonérant d'études d'impact. »",
+      "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "dateDeclaration": "2026-07-13",
+      "contexte": "Les Écologistes, Programme 2027, p. 82"
+    },
+    {
+      "id": "prop-na-1",
+      "ref": "P-348",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "travail",
+      "titre": "Indexation des salaires, allocations et pensions sur la hausse réelle des prix, avec un minimum de 2 200 euros net par mois",
+      "description": "« Nous devons imposer une augmentation massive des salaires, des allocations et des pensions et leur indexation sur la hausse des prix »",
+      "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
+      "dateDeclaration": "2026-06-26",
+      "contexte": "Brochure LO « Nathalie Arthaud Présidentielle 2027 » (fête de LO, mai 2026), p. 8"
+    },
+    {
+      "id": "prop-na-2",
+      "ref": "P-705",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "economie",
+      "titre": "Interdire strictement les licenciements et suppressions d'emplois dans les entreprises dégageant des bénéfices",
+      "description": "« nous disons qu'il faut répartir le travail entre tous, sans diminution de salaire. »",
+      "sourceUrl": "https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html",
+      "dateDeclaration": "2026-09-26",
+      "contexte": "Discours de Nathalie Arthaud, meeting du 26 septembre 2026 à Paris"
+    },
+    {
+      "id": "prop-na-3",
+      "ref": "P-886",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "institutions",
+      "titre": "Abolir le secret des affaires et le secret bancaire pour imposer le contrôle ouvrier sur la comptabilité des entreprises",
+      "description": "« Levée du secret commercial et du secret des affaires pour rendre publics les comptes de ces grandes entreprises, y compris ceux qui sont cachés ! »",
+      "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
+      "dateDeclaration": "2026-06-26",
+      "contexte": "Brochure LO « Nathalie Arthaud Présidentielle 2027 » (fête de LO, mai 2026), p. 11"
+    },
+    {
+      "id": "prop-na-4",
+      "ref": "P-343",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "logement",
+      "titre": "Réquisitionner les logements et bureaux vacants pour loger sans-abri et mal-logés",
+      "description": "« Réquisition des logements et des bureaux vacants »",
+      "sourceUrl": "https://www.boursedescredits.com/actualite-election-presidentielle-programme-logement-nathalie-arthaud-2668.php",
+      "dateDeclaration": "2017-04-19",
+      "contexte": "Boursedescredits, programme logement de Nathalie Arthaud (présidentielle 2017)"
+    },
+    {
+      "id": "prop-na-5",
+      "ref": "P-524",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "sante",
+      "titre": "Bannir le profit de la santé, consacrer tous les moyens à l'hôpital public et à ses recrutements, briser le monopole et les brevets des trusts pharmaceutiques",
+      "description": "« les travailleurs au pouvoir auraient démoli le monopole des trusts pharmaceutiques. Ils auraient supprimé le secret commercial et la sacro-sainte propriété intellectuelle des laboratoires. »",
+      "sourceUrl": "https://journal.lutte-ouvriere.org/portail/brochures/publications-brochures-meeting-du-12-fevrier-paris-discours-de-nathalie-arthaud-207337.html",
+      "dateDeclaration": "2022-02-12",
+      "contexte": "Discours de Nathalie Arthaud, meeting du 12 février 2022 à Paris"
+    },
+    {
+      "id": "prop-na-6",
+      "ref": "P-881",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "societe",
+      "titre": "Régularisation de tous les sans-papiers et liberté de circulation et d'installation pour tous",
+      "description": "« Régularisation de tous les sans-papiers, liberté de circulation et d'installation pour chaque être humain de cette planète ! »",
+      "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
+      "dateDeclaration": "2026-06-26",
+      "contexte": "Brochure LO « Nathalie Arthaud Présidentielle 2027 » (fête de LO, mai 2026), p. 13"
+    },
+    {
+      "id": "prop-nda-1",
+      "ref": "P-382",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "securite",
+      "titre": "Rétablir le contrôle douanier et policier permanent aux frontières nationales françaises",
+      "description": "« Rétablir le contrôle aux frontières en sortant de Schengen, en recrutant 10 000 agents spécialisés »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/immigration-et-assimilation/",
+      "contexte": "Debout la France, projet Immigration et assimilation, mesure 1"
+    },
+    {
+      "id": "prop-nda-2",
+      "ref": "P-563",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "institutions",
+      "titre": "RIC pour modifier la loi ou la Constitution dès 1 million d'inscrits, et septennat avec référendum révocatoire d'initiative citoyenne à mi-mandat",
+      "description": "« dès qu'un million d'inscrits sur les listes électorales soutiendra leur pétition »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/refonder-et-moraliser-notre-democratie/",
+      "contexte": "Debout la France, projet Refonder et moraliser notre démocratie, mesures 1 et 3"
+    },
+    {
+      "id": "prop-nda-3",
+      "ref": "P-744",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "sante",
+      "titre": "Réintégrer les soignants exclus et rétablir leurs trimestres de retraite perdus",
+      "description": "« réintégration des soignants exclus et rétablissement de leurs trimestres de retraite perdus »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/sante/",
+      "contexte": "Debout la France, projet Santé, mesure 1"
+    },
+    {
+      "id": "prop-nda-4",
+      "ref": "P-377",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "agriculture",
+      "titre": "Réserver 80% des achats alimentaires de la restauration collective publique aux produits agricoles français",
+      "description": "« Réserver aux producteurs français 50% puis progressivement 80% des commandes publiques, notamment des cantines scolaires et de la restauration collective »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/agriculture/",
+      "contexte": "Debout la France, projet Agriculture, mesure 9"
+    },
+    {
+      "id": "prop-nda-5",
+      "ref": "P-558",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "numerique",
+      "titre": "Lancer un moteur de recherche francophone, « construire un véritable Cloud français souverain », sortir de GAIA-X et sécuriser les systèmes de l'État et de l'armée par le logiciel libre",
+      "description": "« Lancer notre propre moteur de recherche (un « google » francophone) et nos propres réseaux sociaux »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/sciences-souverainete-industrielle/",
+      "contexte": "Debout la France, projet Sciences, souveraineté industrielle et numérique, mesures 8 et 12"
+    },
+    {
+      "id": "prop-nda-6",
+      "ref": "P-739",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "economie",
+      "titre": "Rétablir un impôt sur les très grandes fortunes hors résidence principale, en permettant de déduire les investissements dans des entreprises produisant en France",
+      "description": "« Rétablir un impôt sur les très grandes fortunes en excluant la résidence principale »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/economie-travail/",
+      "contexte": "Debout la France, projet Économie, principales mesures"
+    },
+    {
+      "id": "prop-rg-1",
+      "ref": "P-130",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "international",
+      "titre": "Construire un pilier de défense européen autonome avec un fonds commun de réarmement de 100 milliards",
+      "description": "« En mettant en place un fonds européen de défense de 100 milliards d'euros financé par un emprunt commun pour investir dans nos industries de défense »",
+      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
+      "dateDeclaration": "2024-05-15",
+      "contexte": "Programme Réveiller l'Europe (européennes 2024), p. 4, mesures 4-5"
+    },
+    {
+      "id": "prop-rg-2",
+      "ref": "P-311",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "economie",
+      "titre": "Instaurer un ISF climatique européen pour financer la bifurcation écologique et taxer les ultra-riches",
+      "description": "« En instaurant une imposition minimale de 2% sur le patrimoine des centi-millionnaires et des milliardaires et en faisant passer la taxation des multinationales de 15% à 25 %. »",
+      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
+      "dateDeclaration": "2024-05-15",
+      "contexte": "Programme Réveiller l'Europe (européennes 2024), p. 40, mesure 315"
+    },
+    {
+      "id": "prop-rg-3",
+      "ref": "P-492",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "numerique",
+      "titre": "Interdire la publicité ciblée pour attaquer le modèle économique des plateformes",
+      "description": "« Nous nous attaquerons au cœur du business model de ces plateformes en interdisant la publicité ciblée »",
+      "sourceUrl": "https://ouragan.cd/2026/06/notre-ennemi-cest-elon-musk-sam-altman-zhang-yiming-affirme-glucksmann",
+      "dateDeclaration": "2026-06-13",
+      "contexte": "Dépêche AFP - Meeting d'Aubervilliers"
+    },
+    {
+      "id": "prop-rg-4",
+      "ref": "P-673",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "travail",
+      "titre": "Conditionnalité sociale de toutes les dépenses et subventions publiques (droit du travail, droits syndicaux) et éco-conditionnalité des aides d'État",
+      "description": "« Introduire une conditionnalité sociale forte dans toutes les dépenses et subventions publiques, y compris la révision des directives sur les marchés publics »",
+      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
+      "dateDeclaration": "2024-05-15",
+      "contexte": "Programme Réveiller l'Europe (européennes 2024), p. 22, mesure 184"
+    },
+    {
+      "id": "prop-rg-5",
+      "ref": "P-854",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "environnement",
+      "titre": "Imposer une taxe carbone aux frontières de l'Europe sur toutes les importations polluantes",
+      "description": "« En généralisant le mécanisme d'ajustement carbone (taxe carbone) aux frontières de l'Union européenne à tous les produits et services qui causent une concurrence déloyale »",
+      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
+      "dateDeclaration": "2024-05-15",
+      "contexte": "Programme Réveiller l'Europe (européennes 2024), p. 5-6, mesures 20, 21 et 23"
+    },
+    {
+      "id": "prop-rg-6",
+      "ref": "P-135",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "societe",
+      "titre": "Sanctionner financièrement les entreprises qui ne respectent pas « à travail égal, salaire égal » et interdire les écarts de salaire supérieurs à 20 dans une entreprise",
+      "description": "« Réaliser l'égalité salariale entre les femmes et les hommes en sanctionnant financièrement les entreprises qui ne respectent pas le principe : « à travail égal, salaire égal ». »",
+      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
+      "dateDeclaration": "2024-05-15",
+      "contexte": "Programme Réveiller l'Europe (européennes 2024), p. 22, mesures 174-175"
+    }
+  ],
+  "lois": [
+    {
+      "id": "motion-censure-barnier-2024",
+      "thematiqueId": "institutions",
+      "nature": "motion_censure",
+      "titre": "Motion de censure contre le gouvernement Michel Barnier (PLFSS 2025)",
+      "resume": "Motion de censure transpartisane déposée après le recours à l'article 49.3 sur le budget de la Sécurité sociale 2025. Adoptée à la majorité absolue (331 voix), entraînant la démission du gouvernement et le rejet du texte budgétaire.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-12-04",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "La France Insoumise et le Nouveau Front Populaire ont été les initiateurs de la motion de censure face au coup de force budgétaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour la motion de censure aux côtés de son groupe RN après le refus du gouvernement d'indexer les retraites sur l'inflation.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Député de la Somme, a voté la censure pour stopper l'austérité budgétaire sur la santé et les hôpitaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Les députés communistes ont voté la censure contre la politique économique de Michel Barnier.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Les Écologistes ont unanimement censuré le gouvernement pour son budget jugé climaticide et socialement injuste.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Place Publique et les socialistes ont voté la motion de censure transpartisane.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "nicolas-dupont-aignan": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté la censure pour sanctionner la dérive des finances publiques et le refus d'écouter les Français.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Président du groupe Ensemble pour la République, s'est opposé à la censure pour préserver la stabilité institutionnelle.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0519"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Le groupe Horizons a fait bloc contre la censure pour soutenir le Premier ministre issu de sa coalition.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Ministre de l'Intérieur du gouvernement Barnier, droite républicaine unie contre le vote conjoint RN-gauche.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        }
+      },
+      "ref": "L-28"
+    },
+    {
+      "id": "debat-accord-ue-mercosur-2024",
+      "thematiqueId": "agriculture",
+      "nature": "declaration_gouvernement",
+      "titre": "Rejet de l'accord commercial de libre-échange UE-Mercosur",
+      "resume": "Vote solennel de l'Assemblée nationale validant l'opposition de la France à l'accord de libre-échange entre l'Union européenne et les pays du Mercosur (485 voix pour le rejet, 69 contre).",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-11-26",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456",
+      "votes": {
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour le rejet du traité, dénonçant un modèle mondialiste assassinant l'agriculture française.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour la déclaration du gouvernement refusant la signature du Mercosur en l'état sans clauses miroirs.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Horizons a voté pour la motion de rejet afin de protéger les éleveurs de la concurrence déloyale sud-américaine.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Les Républicains ont voté pour le rejet de l'accord, réclamant un véto formel français à Bruxelles.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Les Écologistes ont voté pour le rejet de ce traité climaticide accélérant la déforestation de l'Amazonie.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "En pointe au Parlement européen contre le Mercosur, rejetant l'importation de produits dopés aux pesticides interdits.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Les communistes ont voté pour afin de préserver la souveraineté alimentaire nationale.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Les députés LFI ont voté contre la déclaration gouvernementale, dénonçant une posture d'affichage sans portée juridique réelle.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre la communication de l'exécutif, réclamant un véritable blocage douanier plutôt qu'un débat sans engagement.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0456"
+        }
+      },
+      "ref": "L-27"
+    },
+    {
+      "id": "rejet-recettes-plf-2025",
+      "thematiqueId": "economie",
+      "nature": "projet_loi",
+      "titre": "Rejet de la partie recettes du Projet de Loi de Finances 2025",
+      "resume": "Vote solennel sur le volet recettes du budget de l'État pour 2025. Rejeté par 362 voix contre 192 après l'adoption d'amendements de la gauche rétablissant l'ISF et taxant les superprofits.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-11-12",
+      "statut": "rejetee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0438",
+      "votes": {
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Ensemble pour la République a rejeté un texte dénaturé par des hausses d'impôts massives.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Horizons a refusé un budget jugé fiscalement punitif pour les entreprises et les ménages.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre un budget porteur de surtaxes et de matraquage fiscal pour les Français.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0438"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "LFI a voté pour ce volet recettes réécrit intégrant justice fiscale et taxation des superprofits.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour rétablir la justice fiscale en faisant contribuer les plus hauts patrimoines.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0438"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Les Écologistes ont soutenu un budget réorienté vers la transition écologique et la solidarité.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Le PCF a voté pour la taxation du capital et des dividendes records.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Les députés socialistes ont voté pour ce volet de redistribution et de justice sociale.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "La Droite Républicaine a voté contre les hausses d'impôts généralisées.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        }
+      },
+      "ref": "L-26"
+    },
+    {
+      "id": "regulation-meubles-tourisme-airbnb-2024",
+      "thematiqueId": "logement",
+      "nature": "proposition_loi",
+      "titre": "Régulation des meublés de tourisme et locations Airbnb (Loi Le Meur)",
+      "resume": "Renforcement des pouvoirs des maires pour encadrer les meublés touristiques, abaissement des niches fiscales locatives et extension des obligations de performance énergétique (DPE).",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-11-07",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0289",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Soutien aux maires pour lutter contre la crise du logement dans les zones tendues.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Favorable à l'octroi d'outils de régulation décentralisés aux élus locaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "LFI a soutenu l'encadrement de la spéculation locative pour redonner des toits aux habitants.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour réguler les plateformes et freiner la spéculation immobilière.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0289"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Les Écologistes ont activement soutenu la fin des privilèges fiscaux pour les meublés touristiques.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Texte co-porté par le député socialiste Iñaki Echaniz pour rééquilibrer le marché locatif.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Le RN s'est opposé au texte en dénonçant une nouvelle fiscalité punitive contre les petits propriétaires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0289"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Soutien à la régulation locale et aux pouvoirs donnés aux maires de communes touristiques.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        }
+      },
+      "ref": "L-25"
+    },
+    {
+      "id": "abrogation-retraite-64-ans-2024",
+      "thematiqueId": "travail",
+      "nature": "proposition_loi",
+      "titre": "Proposition de loi d'abrogation de la retraite à 64 ans (Niche RN)",
+      "resume": "Texte déposé lors de la niche parlementaire du Rassemblement National visant à annuler le recul de l'âge légal de départ à la retraite à 64 ans. Rejeté par 197 voix contre 119.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-10-31",
+      "statut": "rejetee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0217",
+      "votes": {
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A défendu et voté pour l'abrogation de la réforme des retraites et le retour à 62 ans.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0217"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Opposition totale à l'abrogation pour préserver la viabilité financière du système par répartition.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Défense du recul de l'âge légal indispensable pour financer le modèle social.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Les Républicains ont rejeté l'abrogation, estimant qu'il faut travailler davantage.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A dénoncé la manœuvre du RN sur un texte vidé en commission tout en réaffirmant son combat pour la retraite à 60 ans.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/0217"
+        }
+      },
+      "ref": "L-24"
+    },
+    {
+      "id": "loi-orientation-agricole-2024",
+      "thematiqueId": "agriculture",
+      "nature": "projet_loi",
+      "titre": "Loi d'orientation pour la souveraineté alimentaire et le renouvellement agricole",
+      "resume": "Texte érigeant l'agriculture et la production alimentaire au rang d'intérêt général majeur de la Nation, assouplissant les règles d'aménagement et créant un guichet unique pour l'installation des jeunes agriculteurs.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-05-28",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Projet de loi défendu par le gouvernement après la mobilisation nationale des agriculteurs pour simplifier les normes.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons a soutenu le texte pour sécuriser juridiquement les projets de retenues d'eau et d'exploitations.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour en première lecture afin de lever des contraintes administratives pesant sur les éleveurs et céréaliers.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "bruno-retailleau": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre un texte cédant selon eux à l'agro-industrie sans instaurer de prix planchers garantis.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont combattu un texte détricotant le droit de l'environnement au profit des mégabassines.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre l'absence de régulation des marges des multinationales de la grande distribution face aux petits producteurs.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Opposition au recul sur les normes de transition agroécologique.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        }
+      },
+      "ref": "L-23"
+    },
+    {
+      "id": "degel-corps-electoral-nouvelle-caledonie-2024",
+      "thematiqueId": "institutions",
+      "nature": "projet_loi",
+      "titre": "Réforme constitutionnelle sur le dégel du corps électoral en Nouvelle-Calédonie",
+      "resume": "Projet de loi constitutionnelle ouvrant les élections provinciales calédoniennes aux résidents installés depuis au moins dix ans. Adopté par l'Assemblée par 351 voix contre 153 avant d'être suspendu.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-05-14",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Projet porté par le gouvernement pour rétablir les principes universels du suffrage démocratique.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Soutien à la normalisation démocratique tout en appelant à poursuivre le dialogue institutionnel.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Le RN a soutenu le dégel pour mettre fin à la rupture d'égalité entre citoyens français.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "LR a voté pour l'application des principes républicains et le droit de vote des résidents de longue durée.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre en alertant sur la rupture du consensus des accords de Nouméa et le risque d'insurrection.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont dénoncé un passage en force unilatéral rompant la paix civile dans l'archipel.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Les socialistes ont voté contre pour préserver le processus historique de décolonisation et d'apaisement.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        }
+      },
+      "ref": "L-22"
+    },
+    {
+      "id": "loi-sren-numerique-2024",
+      "thematiqueId": "numerique",
+      "nature": "projet_loi",
+      "titre": "Loi visant à sécuriser et réguler l'espace numérique (Loi SREN)",
+      "resume": "Création d'une peine de bannissement numérique des réseaux sociaux pour cyberharcèlement, vérification de la majorité sur les sites pour adultes et encadrement du marché du cloud.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-04-10",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Texte gouvernemental majeur pour protéger les enfants en ligne et sanctionner les cyberharceleurs.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons a soutenu les mesures d'ordre public et de protection des mineurs dans l'espace virtuel.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "LR a soutenu le renforcement des sanctions pénales contre les délinquants du net.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Le RN a voté contre en dénonçant le risque de censure étatique et d'atteinte à la liberté d'expression.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI s'est opposée au texte en dénonçant des dérives de surveillance généralisée et de blocage administratif.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont voté contre, estimant les libertés publiques menacées sans résoudre le modèle toxique des plateformes.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        }
+      },
+      "ref": "L-20"
+    },
+    {
+      "id": "pacte-asile-migration-ue-2024",
+      "thematiqueId": "international",
+      "nature": "texte_europeen",
+      "titre": "Pacte européen sur la migration et l'asile",
+      "resume": "Ensemble de règlements européens organisant la solidarité obligatoire entre États membres pour la répartition des demandeurs d'asile et le filtrage renforcé aux frontières extérieures.",
+      "chambre": "parlement_europeen",
+      "dateVote": "2024-04-10",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240408IPR20290",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RENEW",
+          "groupeNom": "Renew Europe",
+          "explication": "Les députés européens Renaissance ont massivement voté pour ce pacte négocié sous présidence française.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RENEW",
+          "groupeNom": "Renew Europe",
+          "explication": "Horizons soutient le renforcement des contrôles aux frontières extérieures européennes.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Député européen, a voté contre les textes principaux du pacte, dénonçant un recul sur l'accueil digne et le respect des droits humains.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ID",
+          "groupeNom": "Identité et démocratie",
+          "explication": "Les eurodéputés du Rassemblement National ont voté contre, dénonçant une submersion migratoire organisée par Bruxelles.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "GUE/NGL",
+          "groupeNom": "La Gauche au Parlement européen - GUE/NGL",
+          "explication": "Les eurodéputés LFI ont voté contre l'enfermement aux frontières et l'externalisation de l'asile.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "Verts/ALE",
+          "groupeNom": "Les Verts/Alliance libre européenne",
+          "explication": "Les eurodéputés écologistes ont rejeté un texte sécuritaire attentatoire aux conventions internationales.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "PPE",
+          "groupeNom": "Parti populaire européen (Démocrates-Chrétiens)",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
+        }
+      },
+      "ref": "L-21"
+    },
+    {
+      "id": "ppl-interdiction-pfas-2024",
+      "thematiqueId": "environnement",
+      "nature": "proposition_loi",
+      "titre": "Interdiction des polluants éternels (PFAS) dans les biens de consommation",
+      "resume": "Proposition de loi interdisant à partir de 2026 la fabrication, l'importation et la mise sur le marché de cosmétiques, produits textiles et farts de ski contenant des substances perfluoroalkylées (PFAS) hautement persistantes.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-04-04",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+      "votes": {
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Texte majeur initié et porté par le député écologiste Nicolas Thierry pour protéger la santé publique.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "La majorité présidentielle a voté pour après exclusion des ustensiles de cuisine de cuisine du périmètre initial.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons a soutenu l'interdiction ciblée sur les textiles et cosmétiques.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "Soutien sans réserve de LFI pour éradiquer les molécules toxiques dans l'eau et l'alimentation.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour le principe de précaution sanitaire face aux scandales de contamination de l'eau potable.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR-NUPES",
+          "groupeNom": "Gauche démocrate et républicaine - NUPES",
+          "explication": "Les communistes ont voté pour la protection des travailleurs et riverains d'usines chimiques.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Alignement sur les normes européennes les plus strictes contre les perturbateurs endocriniens.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "marine-le-pen": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Le Rassemblement National s'est majoritairement abstenu, alertant sur les menaces de destructions d'emplois industriels.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "bruno-retailleau": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "La droite a exprimé des réserves sur l'impact économique pour les usines de la vallée de la chimie.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        }
+      },
+      "ref": "L-19"
+    },
+    {
+      "id": "rejet-ceta-senat-2024",
+      "thematiqueId": "agriculture",
+      "nature": "projet_loi",
+      "titre": "Rejet de la ratification du traité commercial UE-Canada (CETA)",
+      "resume": "Vote historique au Sénat rejetant par 211 voix contre 44 l'article 1er ratifiant l'accord commercial CETA, via une alliance transpartisane entre sénateurs de droite et de gauche protégeant l'élevage.",
+      "chambre": "senat",
+      "dateVote": "2024-03-21",
+      "statut": "rejetee",
+      "sourceOfficielleUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
+      "votes": {
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Président du groupe LR au Sénat, a voté contre pour protéger les éleveurs bovins français de distorsions de concurrence.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "CRCE-K",
+          "groupeNom": "Communiste Républicain Citoyen et Écologiste - Kanaky",
+          "explication": "Le groupe communiste a initié l'examen du texte pour faire échec à un accord destructeur pour l'agriculture.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "GEST",
+          "groupeNom": "Écologiste - Solidarité et Territoires",
+          "explication": "Les sénateurs écologistes ont voté contre un accord climaticide stimulant le commerce transocéanique polluant.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RDPI",
+          "groupeNom": "Rassemblement des démocrates, progressistes et indépendants",
+          "explication": "Le camp présidentiel a défendu un traité bénéfique pour les exportations industrielles, viticoles et agricoles françaises.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
+        }
+      },
+      "ref": "L-18"
+    },
+    {
+      "id": "ppl-anti-fast-fashion-2024",
+      "thematiqueId": "environnement",
+      "nature": "proposition_loi",
+      "titre": "Régulation environnementale de l'industrie textile et de la Fast-Fashion",
+      "resume": "Proposition de loi adoptée à l'unanimité à l'Assemblée instaurant un malus écologique renforcé pouvant atteindre 10 euros par vêtement et interdisant la publicité pour les enseignes de mode ultra-éphémère (Shein, Temu).",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-03-14",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+      "votes": {
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Texte emblématique rédigé et porté par la députée Anne-Cécile Violland du groupe Horizons.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Soutien plein et entier de la majorité présidentielle pour freiner la surconsommation textile.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont soutenu cette mesure pionnière contre le gaspillage et l'empreinte carbone textile.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Le RN a voté pour le texte afin de défendre les créateurs et filières d'habillement françaises.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté pour tout en réclamant des clauses sociales contre le travail forcé dans les pays tiers.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour le malus pour contrer les cargos de fret aérien remplis de vêtements jetables.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Soutien de la droite parlementaire pour rétablir une concurrence équitable pour les commerces locaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Mesure en parfaite adéquation avec son combat contre le travail forcé des Ouïghours dans le coton.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        }
+      },
+      "ref": "L-17"
+    },
+    {
+      "id": "reglement-europeen-ia-act-2024",
+      "thematiqueId": "numerique",
+      "nature": "texte_europeen",
+      "titre": "Règlement européen sur l'Intelligence Artificielle (AI Act)",
+      "resume": "Premier cadre mondial contraignant régulant les systèmes d'IA selon leurs niveaux de risque, interdisant la reconnaissance biométrique de masse et encadrant les IA génératives.",
+      "chambre": "parlement_europeen",
+      "dateVote": "2024-03-13",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+      "votes": {
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Député européen Place Publique, a voté pour une régulation éthique protégeant la démocratie et les créateurs.",
+          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RENEW",
+          "groupeNom": "Renew Europe",
+          "explication": "La délégation Renew Europe a soutenu ce compromis historique alliant innovation et protection citoyenne.",
+          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "Verts/ALE",
+          "groupeNom": "Les Verts/Alliance libre européenne",
+          "explication": "Les Verts européens ont soutenu l'encadrement strict de l'IA et l'interdiction de la biométrie intrusive.",
+          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ID",
+          "groupeNom": "Identité et démocratie",
+          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+        }
+      },
+      "ref": "L-16"
+    },
+    {
+      "id": "accord-securite-ukraine-2024",
+      "thematiqueId": "international",
+      "nature": "declaration_gouvernement",
+      "titre": "Accord bilatéral de sécurité et soutien militaire à l'Ukraine",
+      "resume": "Déclaration du Gouvernement relative à l'accord de sécurité conclu avec l'Ukraine prévoyant 3 milliards d'euros de soutien militaire en 2024, des livraisons de canons et missiles, et l'appui à l'adhésion future à l'UE.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-03-12",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Premier ministre ayant présenté la stratégie de soutien à la souveraineté ukrainienne face à la Russie.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons défend un soutien militaire continu et sans faille pour garantir la sécurité du continent européen.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Fervent partisan d'un réarmement européen et d'une aide massive aux démocraties agressées.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les députés écologistes ont voté pour le soutien au peuple ukrainien face à l'impérialisme du Kremlin.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Les Républicains ont voté majoritairement pour l'accord de coopération de sécurité.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "marine-le-pen": {
+          "position": "abstention",
+          "typeVote": "individuel",
+          "explication": "A voté l'abstention avec son groupe, refusant l'entrée promise de l'Ukraine dans l'UE et l'OTAN.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre, dénonçant un risque d'escalade guerrière généralisée et de cobelligérance nucléaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Les députés communistes ont voté contre pour appeler à une solution diplomatique immédiate.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre l'accord par refus de toute possibilité d'envoi de troupes au sol.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "nicolas-dupont-aignan": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Opposé aux financements militaires à perte et partisan de la neutralité gaulliste de la France.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        }
+      },
+      "ref": "L-15"
+    },
+    {
+      "id": "loi-constitutionnelle-ivg-2024",
+      "thematiqueId": "societe",
+      "nature": "projet_loi",
+      "titre": "Inscription de l'interruption volontaire de grossesse (IVG) dans la Constitution",
+      "resume": "Révision constitutionnelle inscrivant à l'article 34 de la Constitution la liberté garantie à la femme d'avoir recours à une interruption volontaire de grossesse.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2024-03-04",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049252033",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Premier ministre ayant ouvert le Congrès à Versailles pour sceller l'inscription dans la Constitution.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Le groupe Horizons a voté très massivement en faveur de la constitutionnalisation.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "Initiative historique portée par Mathilde Panot et le groupe LFI à l'Assemblée.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les parlementaires écologistes ont voté à 100% pour la liberté garantie constitutionnelle.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Place Publique et les socialistes ont unanimement voté pour au Congrès.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour lors du vote solennel au Congrès, malgré la division de son groupe parlementaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour la protection constitutionnelle de l'avortement.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Les députés communistes ont voté pour à l'unanimité.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "S'est opposé à l'inscription dans la Constitution, estimant que la liberté d'avorter n'était pas menacée en France.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-138.html"
+        }
+      },
+      "ref": "L-14"
+    },
+    {
+      "id": "loi-immigration-2023",
+      "thematiqueId": "securite",
+      "nature": "projet_loi",
+      "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
+      "resume": "Texte durcissant les conditions de régularisation et d'accès aux prestations sociales, facilitant les expulsions d'étrangers condamnés et réformant le droit d'asile.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-12-19",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049040002",
+      "votes": {
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour le texte en saluant une victoire idéologique sur les principes de préférence nationale.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Majorité présidentielle ayant validé le texte de compromis issu de la commission mixte paritaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Le groupe Horizons a voté très largement pour le texte issu de la CMP.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Au Sénat, artisan principal du durcissement du texte négocié en commission mixte paritaire.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-085.html"
+        },
+        "nicolas-dupont-aignan": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour le texte tout en réclamant un référendum et des mesures encore plus restrictives.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "La France Insoumise a voté unanimement contre ce texte qualifié d'indigne et xénophobe.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre le texte final après avoir soutenu la motion de rejet préalable.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre un texte cédant selon lui aux thèses de l'extrême droite.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Le groupe écologiste a rejeté en bloc un projet jugé contraire aux droits fondamentaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Place Publique et les socialistes ont voté contre la loi votée avec les voix du RN.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        }
+      },
+      "ref": "L-13"
+    },
+    {
+      "id": "loi-valletoux-acces-soins-2023",
+      "thematiqueId": "sante",
+      "nature": "proposition_loi",
+      "titre": "Loi pour l'amélioration de l'accès aux soins et la lutte contre les déserts médicaux",
+      "resume": "Encadrement strict de l'intérim médical à la sortie d'école, élargissement des compétences des soignants non médecins et responsabilisation territoriale des praticiens.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-12-12",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
+      "votes": {
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Loi portée par Frédéric Valletoux du groupe Horizons pour réguler l'offre médicale dans les territoires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        },
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "La majorité a soutenu des mesures pragmatiques contre les abus de l'intérim à l'hôpital et pour l'accès aux soins.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Le RN a voté pour en saluant le plafonnement de l'intérim médical mais en réclamant la suppression des ARS.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre un texte jugé inopérant qui refuse de contraindre l'installation dans les déserts médicaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A dénoncé un pansement sur une jambe de bois refusant d'investir massivement dans l'hôpital public.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        }
+      },
+      "ref": "L-12"
+    },
+    {
+      "id": "loi-plein-emploi-france-travail-2023",
+      "thematiqueId": "travail",
+      "nature": "projet_loi",
+      "titre": "Loi pour le plein emploi : création de France Travail et conditionnement du RSA",
+      "resume": "Création de France Travail en remplacement de Pôle Emploi, inscription automatique des demandeurs d'emploi et mise en place d'un contrat d'engagement réciproque prévoyant 15 heures d'activité par semaine pour les allocataires du RSA.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-11-14",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Projet de loi porté par la majorité présidentielle pour accélérer le retour à l'activité.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons a soutenu les mécanismes d'incitation forte et les devoirs réciproques des allocataires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Les Républicains ont conditionné leur soutien à l'obligation stricte d'activité hebdomadaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre un texte organisant selon eux la régression sociale et le travail gratuit.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre la création d'une nouvelle superstructure bureaucratique et la complexification des aides.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A dénoncé la suspicion systématique et les sanctions financières visant les précaires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Les députés communistes ont voté contre la casse des droits des allocataires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Opposition ferme des Écologistes au conditionnement des minima sociaux vitaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Rejet des socialistes et de Place Publique face au manque d'accompagnement humain réel.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        }
+      },
+      "ref": "L-10"
+    },
+    {
+      "id": "loi-programmation-militaire-2024-2030",
+      "thematiqueId": "international",
+      "nature": "projet_loi",
+      "titre": "Loi de programmation militaire 2024-2030 (413 milliards d'euros)",
+      "resume": "Enveloppe historique de 413,3 milliards d'euros pour moderniser la dissuasion nucléaire française, renouveler le matériel conventionnel et développer le spatial et la cyberdéfense.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-07-12",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Texte central du quinquennat pour transformer les armées face au retour des conflits de haute intensité.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons soutient l'effort de réarmement national indispensable dans le contexte géopolitique mondial.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Soutien massif des Républicains pour doter les armées françaises des crédits nécessaires à leur supériorité opérationnelle.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour la modernisation des armées et la défense de la souveraineté nationale.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)",
+          "explication": "Les députés socialistes ont soutenu l'effort de défense face aux menaces géopolitiques et à l'agression russe.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre en dénonçant une dérive belliciste, l'alignement sur l'OTAN et le manque de contrôle démocratique.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "S'est opposé à des choix d'armement lourd déconnectés des priorités sociales du pays.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        }
+      },
+      "ref": "L-09"
+    },
+    {
+      "id": "loi-majorite-numerique-2023",
+      "thematiqueId": "numerique",
+      "nature": "proposition_loi",
+      "titre": "Instauration de la majorité numérique à 15 ans et régulation des réseaux sociaux",
+      "resume": "Loi imposant aux plateformes de réseaux sociaux (TikTok, Snapchat, Instagram) de vérifier l'âge des internautes et d'exiger une autorisation parentale pour les mineurs de moins de 15 ans.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-06-28",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047799424",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Texte adopté à la quasi-unanimité avec soutien immédiat du ministère pour protéger les mineurs.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons a voté pour la protection de la santé mentale des adolescents face aux algorithmes addictifs.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour la régulation des contenus et la protection des enfants contre le cyberharcèlement.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté pour l'encadrement des géants du numérique tout en veillant aux libertés d'information.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont soutenu la régulation face à la surexposition aux écrans dès le plus jeune âge.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Soutien de la droite au rétablissement de l'autorité parentale dans l'espace numérique.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)",
+          "explication": "Bataille majeure au Parlement européen contre l'ingérence et les algorithmes prédateurs étrangers.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour poser des limites nettes au temps d'écran commercial des plus jeunes.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        }
+      },
+      "ref": "L-08"
+    },
+    {
+      "id": "relance-nucleaire-epr-2023",
+      "thematiqueId": "environnement",
+      "nature": "projet_loi",
+      "titre": "Loi d'accélération des procédures pour la relance du nucléaire (6 EPR2)",
+      "resume": "Simplification des démarches d'urbanisme et de concertation environnementale pour lancer rapidement la construction de 6 nouveaux réacteurs nucléaires EPR2.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-05-16",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Choix stratégique de l'exécutif pour garantir la souveraineté électrique décarbonée du pays.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons soutient sans réserve la relance de la filière nucléaire française.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour la reconstruction du parc nucléaire, garant selon elle de prix bas et d'indépendance.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "LR a massivement soutenu l'atome comme colonne vertébrale de l'industrie française.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR-NUPES",
+          "groupeNom": "Gauche démocrate et républicaine - NUPES",
+          "explication": "Le PCF défend historiquement le nucléaire civil public comme source d'énergie abondante et propre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes s'opposent à tout nouvel EPR et dénoncent une fuite en avant coûteuse et dangereuse.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre en rappelant son objectif de transition vers 100% d'énergies renouvelables.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        }
+      },
+      "ref": "L-07"
+    },
+    {
+      "id": "loi-anti-squat-kasbarian-2023",
+      "thematiqueId": "logement",
+      "nature": "proposition_loi",
+      "titre": "Loi visant à protéger les logements contre l'occupation illicite (Loi Kasbarian-Bergé)",
+      "resume": "Triplement des peines pour les squatteurs de résidences principales ou secondaires, accélération des procédures d'expulsion des locataires en impayé de loyer.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-04-04",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Texte porté par la majorité pour rétablir la protection des petits propriétaires victimes de squats.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Soutien à la fermeté judiciaire pour sanctionner l'occupation illégale des logements.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Les Républicains ont soutenu un durcissement indispensable de la loi pour faire respecter la propriété privée.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Le RN a voté pour l'expulsion immédiate des squatteurs et des peines de prison effectives.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a combattu un texte jugé antisocial qui facilite les expulsions des locataires précaires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A dénoncé une loi criminalisant les familles en difficulté financière plutôt que de construire des logements.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont voté contre une loi qui menace le droit fondamental à l'hébergement.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        }
+      },
+      "ref": "L-05"
+    },
+    {
+      "id": "videosurveillance-ia-jo-2024",
+      "thematiqueId": "securite",
+      "nature": "projet_loi",
+      "titre": "Expérimentation de la vidéosurveillance algorithmique et IA (Loi JO 2024)",
+      "resume": "Autorisation expérimentale de caméras intelligentes équipées d'intelligence artificielle pour détecter automatiquement des mouvements de foule ou des bagages abandonnés.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-03-23",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Vote pour doter les forces de l'ordre d'outils modernes pour sécuriser les grands événements internationaux.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Favorable à l'innovation technologique au service de la tranquillité publique et de la prévention d'attentats.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "LR a soutenu sans détour le déploiement de technologies de pointe pour assister la police.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Le RN a voté pour l'utilisation des caméras algorithmiques au nom de la sécurité des citoyens.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté contre en dénonçant une dérive vers la société de contrôle et la surveillance biométrique de masse.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "S'est opposé à une première brèche vers un modèle de société sécuritaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont dénoncé une violation des libertés individuelles dans l'espace public.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        }
+      },
+      "ref": "L-04"
+    },
+    {
+      "id": "loi-retraites-2023",
+      "thematiqueId": "economie",
+      "nature": "projet_loi",
+      "titre": "Réforme des retraites : recul de l'âge légal à 64 ans",
+      "resume": "Projet de loi de financement rectificative de la sécurité sociale pour 2023 prévoyant le relèvement progressif de l'âge légal de départ de 62 à 64 ans et l'accélération de l'allongement de la durée de cotisation.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-03-20",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047445248",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Ministre puis député de la majorité présidentielle, soutien indéfectible à l'équilibre financier du régime par répartition.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/dossiers/DLR5L16N46950"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Le groupe Horizons a voté pour la réforme, Édouard Philippe plaidant même pour un report à 65 ans.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Président du groupe Les Républicains au Sénat, a voté pour le compromis de la commission mixte paritaire.",
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2022-2023/scr2022-146.html"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "Le groupe La France Insoumise s'est opposé frontalement au texte avec dépôt de motions de censure et proposition de retraite à 60 ans.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre en tant que députée du Pas-de-Calais et a déposé une motion de censure contre le gouvernement.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Député de la Somme, a voté contre le texte et activement contesté l'usage de l'article 49.3.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre le report de l'âge légal et défendu le maintien de la retraite à 60 ans à taux plein.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont unanimement voté contre à l'Assemblée et au Sénat.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)",
+          "explication": "Place Publique et les députés socialistes alliés ont rejeté le recul de l'âge légal et soutenu les manifestations syndicales.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "nicolas-dupont-aignan": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "Député de l'Essonne, a voté contre la réforme et cosigné la motion de censure transpartisane.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        }
+      },
+      "ref": "L-03"
+    },
+    {
+      "id": "repas-etudiant-1-euro-2023",
+      "thematiqueId": "education",
+      "nature": "proposition_loi",
+      "titre": "Proposition de loi instaurant le repas CROUS à 1 euro pour tous les étudiants",
+      "resume": "Généralisation du repas à 1 euro dans les restaurants universitaires à l'ensemble des étudiants sans condition de bourse. Rejetée à une voix près (183 contre 184).",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-02-09",
+      "statut": "rejetee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/0931",
+      "votes": {
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)",
+          "explication": "Proposition de loi portée par le groupe socialiste pour enrayer la précarité étudiante et les files d'attente à l'aide alimentaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "LFI a voté pour garantir à chaque étudiant le droit fondamental à une alimentation saine à prix accessible.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A ardemment défendu ce texte pour que plus aucun jeune ne saute de repas par manque d'argent.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/0931"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes ont soutenu cette mesure d'urgence face à la hausse galopante du coût de la vie étudiante.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "Le RN a voté pour le repas à 1 euro afin de soulager le budget des étudiants français.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/0931"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR-NUPES",
+          "groupeNom": "Gauche démocrate et républicaine - NUPES",
+          "explication": "Les députés communistes ont voté pour ce bouclier vital contre la misère étudiante.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "La majorité présidentielle a voté contre, préférant cibler l'aide financière sur les seuls étudiants boursiers et précaires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons s'est opposé à une mesure universelle non ciblée jugée coûteuse pour les finances publiques.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "LR a rejeté la gratuité quasi-totale déconnectée des revenus des familles.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        }
+      },
+      "ref": "L-02"
+    },
+    {
+      "id": "loi-energies-renouvelables-2023",
+      "thematiqueId": "environnement",
+      "nature": "projet_loi",
+      "titre": "Accélération de la production d'énergies renouvelables",
+      "resume": "Loi simplifiant les procédures administratives pour le déploiement du solaire et de l'éolien terrestre et marin, avec définition de zones d'accélération par les maires.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2023-01-10",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047281777",
+      "votes": {
+        "gabriel-attal": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Texte porté par la majorité gouvernementale pour tenir les objectifs climatiques européens.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons et apparentés",
+          "explication": "Horizons a soutenu le texte tout en veillant aux prérogatives des maires.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)",
+          "explication": "Les députés socialistes et Place Publique ont soutenu le texte après avoir obtenu des garanties de concertation locale.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "marine-tondelier": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Les Écologistes se sont abstenus en jugeant le texte trop timide et sans moyens financiers suffisants.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre l'implantation massive d'éoliennes et pour un moratoire total sur l'éolien.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NUPES",
+          "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
+          "explication": "La France Insoumise a voté contre en dénonçant la marchandisation et l'absence d'un pôle public de l'énergie.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LR",
+          "groupeNom": "Les Républicains",
+          "explication": "Opposé au développement accéléré de l'éolien terrestre, favorable à une priorité absolue donnée au nucléaire.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        }
+      },
+      "ref": "L-01"
+    }
+  ]
+}

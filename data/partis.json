@@ -1,0 +1,138 @@
+[
+  {
+    "id": "horizons",
+    "nom": "Horizons",
+    "sigle": "HOR",
+    "couleur": "#002B7F",
+    "nuance": "Centre-droit",
+    "siteWeb": "https://horizonsleparti.fr"
+  },
+  {
+    "id": "renaissance",
+    "nom": "Renaissance",
+    "sigle": "REN",
+    "couleur": "#7B1FA2",
+    "nuance": "Centre",
+    "siteWeb": "https://parti-renaissance.fr"
+  },
+  {
+    "id": "lfi",
+    "nom": "La France Insoumise",
+    "sigle": "LFI",
+    "couleur": "#C62828",
+    "nuance": "Gauche radicale",
+    "siteWeb": "https://lafranceinsoumise.fr"
+  },
+  {
+    "id": "rn",
+    "nom": "Rassemblement National",
+    "sigle": "RN",
+    "couleur": "#0D47A1",
+    "nuance": "Droite nationale",
+    "siteWeb": "https://rassemblementnational.fr"
+  },
+  {
+    "id": "place-publique",
+    "nom": "Place Publique / PS",
+    "sigle": "PP-PS",
+    "couleur": "#D81B60",
+    "nuance": "Social-démocratie",
+    "siteWeb": "https://placepublique.org"
+  },
+  {
+    "id": "les-ecologistes",
+    "nom": "Les Écologistes",
+    "sigle": "EELV",
+    "couleur": "#2E7D32",
+    "nuance": "Écologie politique",
+    "siteWeb": "https://lesecologistes.fr"
+  },
+  {
+    "id": "equinoxe",
+    "nom": "Équinoxe",
+    "sigle": "EQX",
+    "couleur": "#059669",
+    "nuance": "Écologie rationnelle & scientifique",
+    "siteWeb": "https://parti-equinoxe.fr"
+  },
+  {
+    "id": "lr",
+    "nom": "Les Républicains",
+    "sigle": "LR",
+    "couleur": "#0055A5",
+    "nuance": "Droite républicaine",
+    "siteWeb": "https://republicains.fr"
+  },
+  {
+    "id": "debout",
+    "nom": "Debout !",
+    "sigle": "DEBOUT",
+    "couleur": "#EF4444",
+    "nuance": "Gauche populaire",
+    "siteWeb": "https://francoisruffin.fr"
+  },
+  {
+    "id": "pcf",
+    "nom": "Parti Communiste Français",
+    "sigle": "PCF",
+    "couleur": "#DC2626",
+    "nuance": "Gauche communiste",
+    "siteWeb": "https://pcf.fr"
+  },
+  {
+    "id": "reconquete",
+    "nom": "Reconquête",
+    "sigle": "REC",
+    "couleur": "#1E1B4B",
+    "nuance": "Droite identitaire",
+    "siteWeb": "https://parti-reconquete.fr"
+  },
+  {
+    "id": "lutte-ouvriere",
+    "nom": "Lutte Ouvrière",
+    "sigle": "LO",
+    "couleur": "#B91C1C",
+    "nuance": "Extrême gauche",
+    "siteWeb": "https://lutte-ouvriere.org"
+  },
+  {
+    "id": "debout-la-france",
+    "nom": "Debout La France",
+    "sigle": "DLF",
+    "couleur": "#1E40AF",
+    "nuance": "Gaullisme souverainiste",
+    "siteWeb": "https://debout-la-france.fr"
+  },
+  {
+    "id": "upr",
+    "nom": "Union Populaire Républicaine",
+    "sigle": "UPR",
+    "couleur": "#1D4ED8",
+    "nuance": "Souverainisme & Frexit",
+    "siteWeb": "https://upr.fr"
+  },
+  {
+    "id": "nouvelle-energie",
+    "nom": "Nouvelle Énergie",
+    "sigle": "NE",
+    "couleur": "#2563EB",
+    "nuance": "Droite libérale",
+    "siteWeb": "https://nouvelleenergie.fr"
+  },
+  {
+    "id": "parti-animaliste",
+    "nom": "Parti Animaliste",
+    "sigle": "PA",
+    "couleur": "#9333EA",
+    "nuance": "Condition animale",
+    "siteWeb": "https://parti-animaliste.fr"
+  },
+  {
+    "id": "resistons",
+    "nom": "Résistons !",
+    "sigle": "RES",
+    "couleur": "#D97706",
+    "nuance": "Ruralité & Humanisme",
+    "siteWeb": "https://resistons-france.fr"
+  }
+]

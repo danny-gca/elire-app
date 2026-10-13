@@ -1,0 +1,86 @@
+[
+  {
+    "id": "environnement",
+    "titre": "Environnement",
+    "slug": "environnement",
+    "icone": "leaf",
+    "description": "Climat, transition écologique, énergies, biodiversité et transports"
+  },
+  {
+    "id": "economie",
+    "titre": "Économie",
+    "slug": "economie",
+    "icone": "cash",
+    "description": "Pouvoir d'achat, fiscalité, salaires, retraites et souveraineté industrielle"
+  },
+  {
+    "id": "securite",
+    "titre": "Sécurité",
+    "slug": "securite",
+    "icone": "shield",
+    "description": "Ordre public, justice, peines planchers, police et réformes judiciaires"
+  },
+  {
+    "id": "travail",
+    "titre": "Travail",
+    "slug": "travail",
+    "icone": "briefcase",
+    "description": "Emploi, temps de travail, conditions, formation et dialogue social"
+  },
+  {
+    "id": "education",
+    "titre": "Éducation",
+    "slug": "education",
+    "icone": "school",
+    "description": "École républicaine, jeunesse, universités, enseignants et apprentissage"
+  },
+  {
+    "id": "sante",
+    "titre": "Santé",
+    "slug": "sante",
+    "icone": "heart",
+    "description": "Hôpital public, déserts médicaux, solidarités, autonomie et sécurité sociale"
+  },
+  {
+    "id": "societe",
+    "titre": "Société",
+    "slug": "societe",
+    "icone": "people",
+    "description": "Libertés, laïcité, droits civiques, égalité et cohésion nationale"
+  },
+  {
+    "id": "international",
+    "titre": "International",
+    "slug": "international",
+    "icone": "globe",
+    "description": "Union européenne, diplomatie, défense, armées et alliances"
+  },
+  {
+    "id": "agriculture",
+    "titre": "Agriculture",
+    "slug": "agriculture",
+    "icone": "nutrition",
+    "description": "Revenus agricoles, souveraineté alimentaire et ruralité"
+  },
+  {
+    "id": "institutions",
+    "titre": "Institutions",
+    "slug": "institutions",
+    "icone": "flag",
+    "description": "Démocratie, 6e République, référendums citoyens, scrutin et décentralisation"
+  },
+  {
+    "id": "numerique",
+    "titre": "Numérique",
+    "slug": "numerique",
+    "icone": "hardware-chip",
+    "description": "Intelligence artificielle, protection des données et souveraineté tech"
+  },
+  {
+    "id": "logement",
+    "titre": "Logement",
+    "slug": "logement",
+    "icone": "home",
+    "description": "Accès au logement, HLM, rénovation thermique, urbanisme et cadre de vie"
+  }
+]

@@ -1,0 +1,6 @@
+<!-- Marque ÉLIRE : É à l'encre, trait de surligneur, filet de marge. Dessin vectoriel original. -->
+<g id="mark" transform="translate(-20 45)">
+  <rect x="300" y="602" width="520" height="128" rx="22" transform="rotate(-3 560 666)" fill="#EADB3F"/>
+  <path fill="#1C1E21" d="M392 318h372v92H492v84h236v88H492v92h282v92H392z"/>
+  <path fill="#1C1E21" d="M560 168h112l-86 108h-86z"/>
+</g>

@@ -1,0 +1,866 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T09:07:24.256Z",
+  "title": "Design System: ÉLIRE",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papier froid",
+        "canonical": "oklch(97.5% 0.003 128.5)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262725",
+          "#444544",
+          "#656665",
+          "#888988",
+          "#ADAEAC",
+          "#D0D1CF",
+          "#EEEFED"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Feuille",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#AEAEAE",
+          "#D1D1D1",
+          "#EEEEEE"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Encre de cahier",
+        "canonical": "oklch(23.4% 0.007 258.4)",
+        "tonalRamp": [
+          "#090B0E",
+          "#24272A",
+          "#434549",
+          "#64666A",
+          "#87898D",
+          "#ABAEB2",
+          "#CED1D5",
+          "#ECEFF3"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Encre douce",
+        "canonical": "oklch(36.5% 0.012 253.0)",
+        "tonalRamp": [
+          "#080C10",
+          "#22272C",
+          "#40464C",
+          "#61676D",
+          "#848A91",
+          "#A9AFB6",
+          "#CBD2D9",
+          "#E9EFF7"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(49.0% 0.013 252.2)",
+        "tonalRamp": [
+          "#070C11",
+          "#22272D",
+          "#40464C",
+          "#61676E",
+          "#838A91",
+          "#A8AFB6",
+          "#CBD2DA",
+          "#E8EFF8"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Filet",
+        "canonical": "oklch(88.3% 0.007 247.9)",
+        "tonalRamp": [
+          "#090B0E",
+          "#24272A",
+          "#424549",
+          "#63666A",
+          "#868A8D",
+          "#ABAEB2",
+          "#CDD1D5",
+          "#EBEFF3"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Filet léger",
+        "canonical": "oklch(93.8% 0.004 236.5)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#252728",
+          "#434547",
+          "#646668",
+          "#87898B",
+          "#ABAEB0",
+          "#CED1D3",
+          "#ECEFF1"
+        ]
+      },
+      "board-edge": {
+        "role": "neutral",
+        "displayName": "Bord de tôle",
+        "canonical": "oklch(80.2% 0.011 248.0)",
+        "tonalRamp": [
+          "#080C10",
+          "#22272C",
+          "#41464B",
+          "#61676C",
+          "#848A8F",
+          "#A9AFB5",
+          "#CCD2D8",
+          "#E9EFF6"
+        ]
+      },
+      "pressed": {
+        "role": "neutral",
+        "displayName": "Appui",
+        "canonical": "oklch(95.4% 0.003 228.8)",
+        "tonalRamp": [
+          "#0A0B0C",
+          "#252727",
+          "#444546",
+          "#656667",
+          "#88898A",
+          "#ACAEAF",
+          "#CFD1D2",
+          "#EDEFF0"
+        ]
+      },
+      "mark": {
+        "role": "secondary",
+        "displayName": "Surligneur",
+        "canonical": "oklch(87.8% 0.167 103.7)",
+        "tonalRamp": [
+          "#0E0C00",
+          "#2B2700",
+          "#4C4706",
+          "#706812",
+          "#978C0D",
+          "#BFB118",
+          "#E4D537",
+          "#FFF37C"
+        ]
+      },
+      "negative": {
+        "role": "tertiary",
+        "displayName": "Terre d'alerte",
+        "canonical": "oklch(51.6% 0.130 38.3)",
+        "tonalRamp": [
+          "#1D0200",
+          "#471201",
+          "#772608",
+          "#A24628",
+          "#CA6A4C",
+          "#F38F70",
+          "#FCC1AF",
+          "#FEE9E3"
+        ]
+      },
+      "negative-soft": {
+        "role": "tertiary",
+        "displayName": "Terre d'alerte pâle",
+        "canonical": "oklch(93.7% 0.017 44.8)",
+        "tonalRamp": [
+          "#110906",
+          "#2E2420",
+          "#4D423D",
+          "#6F635E",
+          "#938681",
+          "#B8ABA5",
+          "#DBCEC8",
+          "#F9EBE5"
+        ]
+      },
+      "vote-impossible": {
+        "role": "tertiary",
+        "displayName": "Impossible −2",
+        "canonical": "oklch(45.9% 0.121 38.0)",
+        "tonalRamp": [
+          "#1D0100",
+          "#471101",
+          "#782507",
+          "#9F492E",
+          "#C66D51",
+          "#EF9275",
+          "#FDC1AF",
+          "#FEE9E3"
+        ]
+      },
+      "vote-contre": {
+        "role": "tertiary",
+        "displayName": "Contre −1",
+        "canonical": "oklch(52.6% 0.107 46.8)",
+        "tonalRamp": [
+          "#1B0300",
+          "#431700",
+          "#712E02",
+          "#97502B",
+          "#BE744E",
+          "#E69872",
+          "#FCC2A7",
+          "#FEEAE0"
+        ]
+      },
+      "vote-neutre": {
+        "role": "tertiary",
+        "displayName": "Neutre 0",
+        "canonical": "oklch(49.0% 0.013 252.2)",
+        "tonalRamp": [
+          "#070C11",
+          "#22272D",
+          "#40464C",
+          "#61676E",
+          "#838A91",
+          "#A8AFB6",
+          "#CBD2DA",
+          "#E8EFF8"
+        ]
+      },
+      "vote-pour": {
+        "role": "tertiary",
+        "displayName": "Pour +1",
+        "canonical": "oklch(53.7% 0.083 163.1)",
+        "tonalRamp": [
+          "#001007",
+          "#002F1E",
+          "#025238",
+          "#317558",
+          "#56997B",
+          "#7BBF9F",
+          "#9EE3C2",
+          "#C4FEE1"
+        ]
+      },
+      "vote-parfait": {
+        "role": "tertiary",
+        "displayName": "Parfait +2",
+        "canonical": "oklch(45.6% 0.081 163.2)",
+        "tonalRamp": [
+          "#001007",
+          "#002F1E",
+          "#075238",
+          "#337559",
+          "#58997B",
+          "#7DBE9F",
+          "#A0E2C2",
+          "#C1FFE0"
+        ]
+      },
+      "theme-environnement": {
+        "role": "tertiary",
+        "displayName": "Thématique Environnement",
+        "canonical": "oklch(53.3% 0.104 149.1)",
+        "tonalRamp": [
+          "#001002",
+          "#013010",
+          "#095423",
+          "#347644",
+          "#599B66",
+          "#7DC18A",
+          "#A0E5AC",
+          "#C9FED1"
+        ]
+      },
+      "theme-environnement-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Environnement (teinte)",
+        "canonical": "oklch(94.5% 0.015 151.8)",
+        "tonalRamp": [
+          "#070D08",
+          "#212923",
+          "#3F4741",
+          "#606962",
+          "#838C85",
+          "#A7B1A9",
+          "#CAD4CC",
+          "#E8F2EA"
+        ]
+      },
+      "theme-agriculture": {
+        "role": "tertiary",
+        "displayName": "Thématique Agriculture",
+        "canonical": "oklch(54.2% 0.108 117.1)",
+        "tonalRamp": [
+          "#0A0D00",
+          "#242A01",
+          "#424A09",
+          "#626E15",
+          "#84923F",
+          "#A9B765",
+          "#CCDB87",
+          "#E9F9A4"
+        ]
+      },
+      "theme-agriculture-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Agriculture (teinte)",
+        "canonical": "oklch(94.9% 0.024 112.0)",
+        "tonalRamp": [
+          "#0B0C02",
+          "#27281A",
+          "#454638",
+          "#666858",
+          "#898B7B",
+          "#AEB09F",
+          "#D1D3C1",
+          "#EEF0DE"
+        ]
+      },
+      "theme-economie": {
+        "role": "tertiary",
+        "displayName": "Thématique Economie",
+        "canonical": "oklch(54.5% 0.102 83.8)",
+        "tonalRamp": [
+          "#120900",
+          "#332300",
+          "#594101",
+          "#826008",
+          "#A68339",
+          "#CDA85F",
+          "#F1CC81",
+          "#FEECCB"
+        ]
+      },
+      "theme-economie-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Economie (teinte)",
+        "canonical": "oklch(94.6% 0.019 90.5)",
+        "tonalRamp": [
+          "#0E0B03",
+          "#2A261C",
+          "#494539",
+          "#6A665A",
+          "#8D897C",
+          "#B2AEA0",
+          "#D6D1C3",
+          "#F3EEE0"
+        ]
+      },
+      "theme-travail": {
+        "role": "tertiary",
+        "displayName": "Thématique Travail",
+        "canonical": "oklch(52.8% 0.115 45.8)",
+        "tonalRamp": [
+          "#1B0300",
+          "#431700",
+          "#712E05",
+          "#9A4E26",
+          "#C1714A",
+          "#EA966F",
+          "#FCC2A8",
+          "#FEEAE1"
+        ]
+      },
+      "theme-travail-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Travail (teinte)",
+        "canonical": "oklch(93.9% 0.016 52.6)",
+        "tonalRamp": [
+          "#110906",
+          "#2D241F",
+          "#4C433D",
+          "#6E645E",
+          "#928780",
+          "#B7ABA5",
+          "#DACEC7",
+          "#F8ECE5"
+        ]
+      },
+      "theme-logement": {
+        "role": "tertiary",
+        "displayName": "Thématique Logement",
+        "canonical": "oklch(48.8% 0.060 66.6)",
+        "tonalRamp": [
+          "#160700",
+          "#3A1F00",
+          "#5B3E20",
+          "#7E5F40",
+          "#A28262",
+          "#C8A786",
+          "#EDCAA8",
+          "#FFEBD7"
+        ]
+      },
+      "theme-logement-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Logement (teinte)",
+        "canonical": "oklch(93.7% 0.011 71.9)",
+        "tonalRamp": [
+          "#0E0A06",
+          "#2A2620",
+          "#49443E",
+          "#6A655F",
+          "#8E8882",
+          "#B3ADA6",
+          "#D6D0C9",
+          "#F3EDE6"
+        ]
+      },
+      "theme-sante": {
+        "role": "tertiary",
+        "displayName": "Thématique Sante",
+        "canonical": "oklch(52.0% 0.126 7.3)",
+        "tonalRamp": [
+          "#1F0007",
+          "#4D011D",
+          "#781D39",
+          "#A04259",
+          "#C8667C",
+          "#F18BA0",
+          "#FEBDC8",
+          "#FEE8EB"
+        ]
+      },
+      "theme-sante-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Sante (teinte)",
+        "canonical": "oklch(93.5% 0.017 3.7)",
+        "tonalRamp": [
+          "#11080A",
+          "#2E2325",
+          "#4D4144",
+          "#6F6265",
+          "#938588",
+          "#B8AAAD",
+          "#DBCDD0",
+          "#F9EAED"
+        ]
+      },
+      "theme-societe": {
+        "role": "tertiary",
+        "displayName": "Thématique Societe",
+        "canonical": "oklch(51.5% 0.054 212.5)",
+        "tonalRamp": [
+          "#000E13",
+          "#012C34",
+          "#1B4D56",
+          "#3F6F79",
+          "#62929D",
+          "#86B8C2",
+          "#A8DBE6",
+          "#D2F6FE"
+        ]
+      },
+      "theme-societe-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Societe (teinte)",
+        "canonical": "oklch(94.1% 0.012 203.5)",
+        "tonalRamp": [
+          "#060D0D",
+          "#202829",
+          "#3E4748",
+          "#5F6869",
+          "#818B8C",
+          "#A6B0B1",
+          "#C9D3D4",
+          "#E6F1F2"
+        ]
+      },
+      "theme-education": {
+        "role": "tertiary",
+        "displayName": "Thématique Education",
+        "canonical": "oklch(52.5% 0.084 184.2)",
+        "tonalRamp": [
+          "#000F0C",
+          "#012E29",
+          "#0A5049",
+          "#18756C",
+          "#459A8F",
+          "#6CC0B4",
+          "#90E3D7",
+          "#B9FFF4"
+        ]
+      },
+      "theme-education-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Education (teinte)",
+        "canonical": "oklch(94.0% 0.016 187.3)",
+        "tonalRamp": [
+          "#040D0C",
+          "#1E2928",
+          "#3C4846",
+          "#5C6968",
+          "#7F8C8B",
+          "#A3B1B0",
+          "#C6D5D3",
+          "#E3F2F0"
+        ]
+      },
+      "theme-numerique": {
+        "role": "tertiary",
+        "displayName": "Thématique Numerique",
+        "canonical": "oklch(50.1% 0.087 237.9)",
+        "tonalRamp": [
+          "#000D19",
+          "#022A3F",
+          "#004A6E",
+          "#2E6D92",
+          "#5391B8",
+          "#78B6DF",
+          "#A4D9FC",
+          "#DFF2FF"
+        ]
+      },
+      "theme-numerique-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Numerique (teinte)",
+        "canonical": "oklch(93.7% 0.014 231.2)",
+        "tonalRamp": [
+          "#060C10",
+          "#20282C",
+          "#3E474B",
+          "#5E686D",
+          "#818B90",
+          "#A5B0B5",
+          "#C8D3D9",
+          "#E5F0F6"
+        ]
+      },
+      "theme-international": {
+        "role": "tertiary",
+        "displayName": "Thématique International",
+        "canonical": "oklch(47.6% 0.079 255.0)",
+        "tonalRamp": [
+          "#000A22",
+          "#06264C",
+          "#26466E",
+          "#466893",
+          "#698BB8",
+          "#8CB1DF",
+          "#B4D4FD",
+          "#E5F0FE"
+        ]
+      },
+      "theme-international-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique International (teinte)",
+        "canonical": "oklch(93.2% 0.013 255.5)",
+        "tonalRamp": [
+          "#080B10",
+          "#22272D",
+          "#41454C",
+          "#61676D",
+          "#848A91",
+          "#A9AEB6",
+          "#CCD1D9",
+          "#E9EFF7"
+        ]
+      },
+      "theme-institutions": {
+        "role": "tertiary",
+        "displayName": "Thématique Institutions",
+        "canonical": "oklch(48.1% 0.031 264.2)",
+        "tonalRamp": [
+          "#050B18",
+          "#1F2636",
+          "#3D4556",
+          "#5D6678",
+          "#80899D",
+          "#A4AEC2",
+          "#C7D1E6",
+          "#E7EFFE"
+        ]
+      },
+      "theme-institutions-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Institutions (teinte)",
+        "canonical": "oklch(93.7% 0.006 264.5)",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#252629",
+          "#434548",
+          "#646669",
+          "#87898D",
+          "#ACAEB2",
+          "#CFD1D5",
+          "#ECEEF2"
+        ]
+      },
+      "theme-securite": {
+        "role": "tertiary",
+        "displayName": "Thématique Securite",
+        "canonical": "oklch(44.0% 0.022 59.0)",
+        "tonalRamp": [
+          "#120904",
+          "#2F241C",
+          "#4E423A",
+          "#70635A",
+          "#93867D",
+          "#B9ABA1",
+          "#DCCEC3",
+          "#FAEBE1"
+        ]
+      },
+      "theme-securite-tint": {
+        "role": "tertiary",
+        "displayName": "Thématique Securite (teinte)",
+        "canonical": "oklch(93.6% 0.005 67.8)",
+        "tonalRamp": [
+          "#0D0B09",
+          "#282624",
+          "#474442",
+          "#686563",
+          "#8B8986",
+          "#B0ADAA",
+          "#D3D0CD",
+          "#F1EEEB"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Titre d'écran",
+        "purpose": "Titre d'écran seulement (Voter, Classement, Lois, Explorer)."
+      },
+      "headline": {
+        "displayName": "Titre de proposition",
+        "purpose": "Titre de la proposition sur la feuille Voter."
+      },
+      "title": {
+        "displayName": "Corps fort",
+        "purpose": "Titres de cartes et lignes, boutons, intertitres, score de panneau."
+      },
+      "body": {
+        "displayName": "Corps",
+        "purpose": "Descriptions, résumés, champ de recherche."
+      },
+      "label": {
+        "displayName": "Étiquette",
+        "purpose": "Lignes meta, notes, compteurs, onglets, libellés de l'échelle."
+      },
+      "label-strong": {
+        "displayName": "Étiquette forte",
+        "purpose": "Badges, valeur de vote, statut, liens secondaires."
+      },
+      "caps": {
+        "displayName": "Capitales",
+        "purpose": "Libellé vertical de marge et en-têtes de section de Lois uniquement.",
+        "textTransform": "uppercase"
+      }
+    },
+    "shadows": [
+      {
+        "name": "segment-contact",
+        "value": "0 1px 3px rgba(0, 0, 0, 0.08)",
+        "purpose": "Segment sélectionné du contrôle segmenté uniquement (elevation 1 sur Android)."
+      },
+      {
+        "name": "board-edge",
+        "value": "inset 0 -5px 0 #B9BFC5",
+        "purpose": "Épaisseur basse de la tôle du Classement (bordure basse de 5px en natif)."
+      },
+      {
+        "name": "scrim",
+        "value": "rgba(28, 30, 33, 0.32)",
+        "purpose": "Voile sous les feuilles modales hors iOS."
+      }
+    ],
+    "motion": [
+      {
+        "name": "mark-sweep",
+        "value": "220ms, scaleX 0 → 1 depuis la gauche",
+        "purpose": "Balayage du trait de surligneur sur le dernier vote (Voter). Suit Réduire les animations."
+      },
+      {
+        "name": "sheet-fade-in",
+        "value": "220ms fade",
+        "purpose": "Apparition de la feuille de proposition suivante."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "vote-narrow",
+        "value": "380px",
+        "purpose": "Sous ce seuil, libellés de l'échelle en 12."
+      },
+      {
+        "name": "board-4-columns",
+        "value": "560px",
+        "purpose": "Largeur utile à partir de laquelle le Classement passe de 3 à 4 colonnes."
+      },
+      {
+        "name": "web-top-bar",
+        "value": "900px",
+        "purpose": "Barre d'onglets web en haut à partir de ce seuil, en bas en dessous."
+      },
+      {
+        "name": "content-max",
+        "value": "720px",
+        "purpose": "Largeur max de la colonne de lecture."
+      }
+    ],
+    "highlighter": {
+      "web": "background-image: linear-gradient(transparent 38%, rgba(234, 219, 63, 0.85) 38%, rgba(234, 219, 63, 0.85) 94%, transparent 94%); box-decoration-break: clone; padding: 0 2px; margin: 0 -2px; border-radius: 2px;",
+      "native": "backgroundColor: rgba(234, 219, 63, 0.7)",
+      "selection": "rgba(234, 219, 63, 0.55)"
+    },
+    "focusRing": "outline: 2px solid #1C1E21; outline-offset: 2px;"
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Action unique d'un état, encre pleine.",
+      "html": "<button class=\"ds-btn-primary\">Continuer à voter</button>",
+      "css": ".ds-btn-primary{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #1C1E21;background:#1C1E21;color:#FFFFFF;cursor:pointer}.ds-btn-primary:active{background:#3A3F45}.ds-btn-primary:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}.ds-btn-primary:disabled{opacity:.45}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Bouton par défaut, feuille blanche à filet.",
+      "html": "<button class=\"ds-btn-secondary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M20 11a8 8 0 1 0-2.3 5.7\"/><path d=\"M20 4v7h-7\"/></svg>Réinitialiser mes votes</button>",
+      "css": ".ds-btn-secondary{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #D5D9DD;background:#FFFFFF;color:#1C1E21;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.ds-btn-secondary:active{background:#EEF0F1}.ds-btn-secondary:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Second appui de la réinitialisation, sans modale.",
+      "html": "<button class=\"ds-btn-danger\">Confirmer : effacer 12 votes</button>",
+      "css": ".ds-btn-danger{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #A4482A;background:#F5E7E1;color:#A4482A;cursor:pointer}.ds-btn-danger:active{background:#EFD9CF}.ds-btn-danger:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Recherche d'Explorer sur filet léger.",
+      "html": "<label class=\"ds-search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5B6168\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-4-4\"/></svg><input placeholder=\"Rechercher une proposition\"></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:12px;background:#E8EBED}.ds-search input{flex:1;border:0;background:transparent;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;color:#1C1E21;caret-color:#1C1E21;outline:none;padding:10px 0}.ds-search input::placeholder{color:#5B6168}.ds-search:focus-within{outline:2px solid #1C1E21;outline-offset:2px}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented-track",
+      "description": "Filtre Lois : Toutes, Adoptées, Rejetées.",
+      "html": "<div class=\"ds-seg\" role=\"tablist\"><button class=\"ds-seg-item is-on\">Toutes 28</button><button class=\"ds-seg-item\">Adoptées 17</button><button class=\"ds-seg-item\">Rejetées 11</button></div>",
+      "css": ".ds-seg{display:flex;background:#E8EBED;border-radius:12px;padding:3px;min-height:44px}.ds-seg-item{flex:1;border:0;background:transparent;border-radius:9px;padding:0 6px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums;cursor:pointer}.ds-seg-item.is-on{background:#FFFFFF;color:#1C1E21;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}.ds-seg-item:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+    },
+    {
+      "name": "Navigation (web)",
+      "kind": "nav",
+      "refersTo": "tab-bar-web",
+      "description": "Barre d'onglets web, en haut à partir de 900px, wordmark texte seul.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">ÉLIRE</span><a class=\"ds-nav-tab is-on\">Voter</a><a class=\"ds-nav-tab\">Classement</a><a class=\"ds-nav-tab\">Lois</a><a class=\"ds-nav-tab\">Explorer</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:stretch;background:#FFFFFF;border-bottom:1px solid #D5D9DD;min-height:56px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif}.ds-nav-brand{margin-right:auto;padding:0 16px;display:flex;align-items:center;font-size:17px;font-weight:600;color:#1C1E21}.ds-nav-tab{position:relative;display:flex;align-items:center;padding:0 14px;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;cursor:pointer;text-decoration:none}.ds-nav-tab:hover,.ds-nav-tab:active{background:#EEF0F1}.ds-nav-tab.is-on{color:#1C1E21;font-weight:600}.ds-nav-tab.is-on::after{content:\"\";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#1C1E21}.ds-nav-tab:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+    },
+    {
+      "name": "Feuille de proposition",
+      "kind": "card",
+      "refersTo": "proposition-sheet",
+      "description": "Page du cahier Voter : marge de 48px, filet graphite, corps.",
+      "html": "<article class=\"ds-sheet\"><div class=\"ds-sheet-margin\"><span class=\"ds-sheet-ref\">P-024</span><span class=\"ds-sheet-tile\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#3B7D4A\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z\"/><path d=\"M5 19 13 11\"/></svg></span></div><div class=\"ds-sheet-body\"><h2>Rénover cinq millions de logements d'ici 2032</h2><p>Un prêt à taux zéro couvre l'isolation et le chauffage des ménages modestes.</p><a>Voir la source et le contexte</a></div></article>",
+      "css": ".ds-sheet{display:flex;background:#FFFFFF;border:1px solid #D5D9DD;border-radius:14px;overflow:hidden;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:560px}.ds-sheet-margin{width:48px;flex:none;border-right:1px solid #5B6168;display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 2px 0}.ds-sheet-ref{font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums}.ds-sheet-tile{width:32px;height:32px;border-radius:8px;background:#E6F0E8;display:flex;align-items:center;justify-content:center}.ds-sheet-body{flex:1;padding:24px 24px 0 16px;display:flex;flex-direction:column;gap:16px}.ds-sheet-body h2{margin:0;font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.2px;color:#1C1E21}.ds-sheet-body p{margin:0;font-size:17px;line-height:24px;color:#3A3F45}.ds-sheet-body a{border-top:1px solid #D5D9DD;min-height:44px;display:flex;align-items:center;font-size:13px;font-weight:600;color:#1C1E21;text-decoration:underline;text-decoration-color:#5B6168;cursor:pointer}"
+    },
+    {
+      "name": "Rangée de vote",
+      "kind": "custom",
+      "refersTo": "vote-option",
+      "description": "Cinq niveaux égaux, signe en couleur d'échelle, choix en bordure 2px.",
+      "html": "<div class=\"ds-vote\" role=\"radiogroup\"><button class=\"ds-vote-opt\" style=\"--c:#8E3A1F\"><b>−2</b>Impossible</button><button class=\"ds-vote-opt\" style=\"--c:#9C5530\"><b>−1</b>Contre</button><button class=\"ds-vote-opt\" style=\"--c:#5B6168\"><b>0</b>Neutre</button><button class=\"ds-vote-opt is-on\" style=\"--c:#3A7D60\"><b>+1</b>Pour</button><button class=\"ds-vote-opt\" style=\"--c:#22654A\"><b>+2</b>Parfait</button></div>",
+      "css": ".ds-vote{display:flex;gap:4px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:480px}.ds-vote-opt{flex:1;min-width:0;min-height:60px;padding:8px 0;border:1px solid #D5D9DD;border-radius:12px;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:13px;line-height:18px;font-weight:500;color:#1C1E21;cursor:pointer}.ds-vote-opt b{font-size:17px;line-height:24px;font-weight:600;color:var(--c);font-variant-numeric:tabular-nums}.ds-vote-opt:active{background:#EEF0F1}.ds-vote-opt.is-on{border:2px solid var(--c)}.ds-vote-opt:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+    },
+    {
+      "name": "Trait de surligneur",
+      "kind": "custom",
+      "refersTo": "list-card",
+      "description": "Ligne de proposition votée : titre surligné, ligne meta graphite, note en couleur d'échelle.",
+      "html": "<div class=\"ds-row\"><p class=\"ds-row-title\"><span class=\"ds-mark\">Rénover cinq millions de logements d'ici 2032</span></p><p class=\"ds-row-meta\">P-024 · <b>Pour +1</b></p></div>",
+      "css": ".ds-row{background:#FFFFFF;border:1px solid #D5D9DD;border-radius:14px;padding:12px 12px 12px 16px;min-height:64px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:480px;cursor:pointer}.ds-row:active{background:#EEF0F1}.ds-row-title{margin:0 0 4px;font-size:17px;line-height:24px;color:#1C1E21}.ds-mark{background-image:linear-gradient(transparent 38%,rgba(234,219,63,.85) 38%,rgba(234,219,63,.85) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px;margin:0 -2px;border-radius:2px}.ds-row-meta{margin:0;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums}.ds-row-meta b{font-weight:600;color:#3A7D60}"
+    },
+    {
+      "name": "Panneau électoral",
+      "kind": "card",
+      "refersTo": "candidate-panel",
+      "description": "Panneaux identiques numérotés sur la tôle du Classement, rangs ex æquo partagés.",
+      "html": "<div class=\"ds-board\"><a class=\"ds-panel\"><span class=\"ds-panel-rank\">1</span><span class=\"ds-panel-avatar\">AB</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>72 %</strong><span class=\"ds-panel-muted\">ex æquo, sur 14 votes</span></a><a class=\"ds-panel\"><span class=\"ds-panel-rank\">1</span><span class=\"ds-panel-avatar\">CD</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>72 %</strong><span class=\"ds-panel-muted\">ex æquo, sur 12 votes</span></a><a class=\"ds-panel\"><span class=\"ds-panel-rank\">3</span><span class=\"ds-panel-avatar\">EF</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>58 %</strong><span class=\"ds-panel-muted\">sur 11 votes</span></a></div>",
+      "css": ".ds-board{display:flex;gap:8px;padding:8px;background:#D5D9DD;border-radius:6px;border-bottom:5px solid #B9BFC5;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:480px}.ds-panel{position:relative;flex:1;min-width:0;min-height:196px;background:#FFFFFF;border-radius:2px;padding:32px 8px 16px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-size:13px;line-height:18px;color:#1C1E21;cursor:pointer}.ds-panel:active{background:#EEF0F1}.ds-panel:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}.ds-panel-rank{position:absolute;top:0;left:0;width:28px;height:28px;background:#1C1E21;color:#FFFFFF;font-weight:600;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}.ds-panel-avatar{width:56px;height:56px;border-radius:50%;background:#E8EBED;color:#5B6168;font-weight:600;font-size:20px;display:flex;align-items:center;justify-content:center}.ds-panel b{font-weight:600;margin-top:4px}.ds-panel strong{margin-top:auto;padding-top:8px;font-size:17px;line-height:24px;font-weight:600;font-variant-numeric:tabular-nums}.ds-panel-muted{color:#5B6168;font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le cahier annoté",
+    "overview": "Chaque proposition se lit comme un texte qu'on annote. Le papier est blanc froid, l'encre presque noire, le secondaire au graphite, les séparations au filet fin. L'avis de l'utilisateur est la seule chose qui se voit en couleur vive : un trait de surligneur jaune derrière ce qu'il a noté, et la valeur de sa note écrite en toutes lettres dans sa couleur d'échelle. Tout le reste reste en encre neutre, parce que l'application ne doit pas prendre parti.\n\nLa densité est celle d'un cahier de cours : une colonne de lecture (720px max), un rythme invisible de 8pt, deux tailles de lecture, une hiérarchie portée par la graisse, la casse et les filets plutôt que par la couleur. Les surfaces sont plates ; la profondeur vient du contraste papier / feuille et des filets hairline. Le Classement change de matière : une tôle grise de panneaux électoraux identiques et numérotés, pour rendre l'égalité de traitement visible.\n\nRejets confirmés : l'air de site gouvernemental, l'appli gadget ou gamifiée, la pile de cartes à swiper et le dégradé violet des applis à cartes à swiper, la carte centrée à puce colorée du standard civique. Thème clair uniquement, par décision produit.",
+    "keyCharacteristics": [
+      "Papier blanc froid, jamais crème ; encre, graphite, filets.",
+      "Jaune surligneur réservé aux marques de l'utilisateur.",
+      "Valeur de vote écrite en toutes lettres, avec son signe, dans sa couleur d'échelle.",
+      "Numéros stables (P-531, L-28) en chiffres tabulaires partout.",
+      "Police système, deux tailles de lecture (17 et 13).",
+      "Classement en panneaux électoraux identiques sur une tôle grise."
+    ],
+    "rules": [
+      {
+        "name": "The Reader's Highlighter Rule",
+        "body": "Le jaune ne marque que ce que l'utilisateur a noté. Le wordmark, les états, les issues parlementaires, les illustrations : jamais jaunes.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scale Is Yours Rule",
+        "body": "Les couleurs d'échelle n'expriment que les votes de l'utilisateur. Les issues parlementaires (Adoptée / Rejetée) et les positions des candidats (Pour / Contre / Abstention) s'écrivent en encre neutre sur filet léger.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cold Paper Rule",
+        "body": "Le fond reste blanc froid (paper) et les cartes blanches (sheet). Pas de crème, pas de violet, pas de dégradé décoratif ; le seul `linear-gradient` du système est la technique du trait de surligneur web.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Sizes Rule",
+        "body": "On lit en 17 et en 13. Le 34 est réservé au titre d'écran et le 24 au titre de la proposition.",
+        "section": "typography"
+      },
+      {
+        "name": "The Written Value Rule",
+        "body": "Une note s'écrit en toutes lettres avec son signe : Impossible −2, Contre −1, Neutre 0, Pour +1, Parfait +2, avec le vrai signe moins (U+2212). Chiffres, numéros et compteurs en chiffres tabulaires.",
+        "section": "typography"
+      },
+      {
+        "name": "The Margin Belongs to the Sheet Rule",
+        "body": "La marge large n'existe que sur la feuille Voter (48px). Ailleurs, la référence passe dans la ligne meta graphite sous le titre.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Notebook Rule",
+        "body": "Les cartes, feuilles et panneaux n'ont pas d'ombre. On sépare au filet, pas à l'ombre.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Identical Furniture Rule",
+        "body": "Tous les candidats ont le même panneau, la même taille et la même place. Deux scores égaux partagent le même rang (« ex æquo ») et leur ordre est tiré au hasard à chaque lancement.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do réserver le surligneur (mark) aux propositions que l'utilisateur a notées, sur toutes les surfaces qui les citent.",
+      "Do écrire chaque note en toutes lettres avec son signe (Impossible −2 à Parfait +2), dans sa couleur d'échelle.",
+      "Do écrire les positions des candidats et les issues parlementaires en encre neutre, sur filet léger pour les badges.",
+      "Do mettre le numéro stable (P-xxx, L-xx), le statut et la thématique dans une ligne meta graphite sous le titre des cartes de liste.",
+      "Do garder la lecture en 17 et 13, et réserver 34 au titre d'écran et 24 au titre de la proposition.",
+      "Do séparer au filet hairline et garder les cartes sans ombre.",
+      "Do donner 44pt minimum à chaque cible (48 sur Android)."
+    ],
+    "donts": [
+      "Don't mettre du jaune ailleurs que sur une marque de l'utilisateur, wordmark compris.",
+      "Don't colorer un résultat parlementaire ou une position de candidat avec l'échelle de vote ou en vert / rouge.",
+      "Don't ajouter une colonne de marge aux cartes de liste : la marge de 48px appartient à la feuille Voter.",
+      "Don't différencier les panneaux du Classement (taille, couleur, mise en avant du premier).",
+      "Don't utiliser de crème, de violet ou de dégradé décoratif.",
+      "Don't poser de capitales en surtitre au-dessus d'un titre ; les capitales servent au libellé vertical de marge et aux en-têtes de section de Lois.",
+      "Don't évoquer un site gouvernemental, une appli gamifiée ou des cartes à swiper."
+    ]
+  }
+}

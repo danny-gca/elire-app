@@ -1,0 +1,23 @@
+name: Bug de l'application
+description: Un écran, un bouton ou un calcul ne fonctionne pas comme prévu.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Ce qui se passe
+      description: Ce que vous faisiez, ce que vous attendiez, ce qui s'est passé.
+    validations:
+      required: true
+  - type: dropdown
+    id: plateforme
+    attributes:
+      label: Plateforme
+      options: [iOS, Android, Web]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Appareil, système ou navigateur
+      placeholder: iPhone 13, iOS 19 / Firefox 140

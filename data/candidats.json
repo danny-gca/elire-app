@@ -1,0 +1,137 @@
+[
+  {
+    "id": "antoine-mikolajczak",
+    "nom": "Antoine Mikolajczak",
+    "partiId": "equinoxe",
+    "avatar": "AM",
+    "biographie": "Ingénieur dans les énergies renouvelables, candidat officiel désigné par le parti Équinoxe."
+  },
+  {
+    "id": "raphael-glucksmann",
+    "nom": "Raphaël Glucksmann",
+    "partiId": "place-publique",
+    "avatar": "RG",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg/330px-1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Député européen, essayiste et cofondateur de Place Publique."
+  },
+  {
+    "id": "edouard-philippe",
+    "nom": "Édouard Philippe",
+    "partiId": "horizons",
+    "avatar": "EP",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Edouard_Philippe_3x4_crop.jpg/330px-Edouard_Philippe_3x4_crop.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Maire du Havre, ancien Premier ministre et fondateur d'Horizons."
+  },
+  {
+    "id": "gabriel-attal",
+    "nom": "Gabriel Attal",
+    "partiId": "renaissance",
+    "avatar": "GA",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gabriel_Attal_2025_%28close_crop%29.jpg/330px-Gabriel_Attal_2025_%28close_crop%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Ancien Premier ministre et secrétaire général de Renaissance."
+  },
+  {
+    "id": "jean-luc-melenchon",
+    "nom": "Jean-Luc Mélenchon",
+    "partiId": "lfi",
+    "avatar": "JLM",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg/330px-Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Fondateur de La France Insoumise, ancien sénateur et ministre."
+  },
+  {
+    "id": "marine-le-pen",
+    "nom": "Marine Le Pen",
+    "partiId": "rn",
+    "avatar": "MLP",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/330px-Marine_Le_Pen_2025_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale."
+  },
+  {
+    "id": "marine-tondelier",
+    "nom": "Marine Tondelier",
+    "partiId": "les-ecologistes",
+    "avatar": "MT",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Secrétaire nationale des Écologistes et élue municipale d'Hénin-Beaumont."
+  },
+  {
+    "id": "bruno-retailleau",
+    "nom": "Bruno Retailleau",
+    "partiId": "lr",
+    "avatar": "BR",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg/330px-Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Ministre de l'Intérieur, ancien président du groupe LR au Sénat."
+  },
+  {
+    "id": "francois-ruffin",
+    "nom": "François Ruffin",
+    "partiId": "debout",
+    "avatar": "FR",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Fran%C3%A7ois_Ruffin_%28cropped%29.jpg/330px-Fran%C3%A7ois_Ruffin_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Député de la Somme, réalisateur et fondateur du mouvement Debout !"
+  },
+  {
+    "id": "fabien-roussel",
+    "nom": "Fabien Roussel",
+    "partiId": "pcf",
+    "avatar": "FRO",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Roussel_Fabien_1.jpg/330px-Roussel_Fabien_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Secrétaire national du Parti Communiste Français et ancien député du Nord."
+  },
+  {
+    "id": "eric-zemmour",
+    "nom": "Éric Zemmour",
+    "partiId": "reconquete",
+    "avatar": "EZ",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg/330px-Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Président de Reconquête, ancien journaliste et essayiste."
+  },
+  {
+    "id": "nathalie-arthaud",
+    "nom": "Nathalie Arthaud",
+    "partiId": "lutte-ouvriere",
+    "avatar": "NA",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Nathalie_Arthaud_%28LO%29_19-05-2024.jpg/330px-Nathalie_Arthaud_%28LO%29_19-05-2024.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion."
+  },
+  {
+    "id": "francois-asselineau",
+    "nom": "François Asselineau",
+    "partiId": "upr",
+    "avatar": "FA",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Fran%C3%A7ois_ASSELINEAU.jpg/330px-Fran%C3%A7ois_ASSELINEAU.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Président fondateur de l'Union Populaire Républicaine (UPR), haut fonctionnaire."
+  },
+  {
+    "id": "nicolas-dupont-aignan",
+    "nom": "Nicolas Dupont-Aignan",
+    "partiId": "debout-la-france",
+    "avatar": "NDA",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg/330px-Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Président de Debout La France et député de l'Essonne."
+  },
+  {
+    "id": "david-lisnard",
+    "nom": "David Lisnard",
+    "partiId": "nouvelle-energie",
+    "avatar": "DL",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/330px-David_Lisnard_-_2013.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Maire de Cannes, président de l'Association des maires de France."
+  },
+  {
+    "id": "helene-thouy",
+    "nom": "Hélène Thouy",
+    "partiId": "parti-animaliste",
+    "avatar": "HT",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Helene_Thouy_%28cropped_2%29.jpg/330px-Helene_Thouy_%28cropped_2%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Avocate au barreau de Bordeaux et cofondatrice du Parti Animaliste."
+  },
+  {
+    "id": "jean-lassalle",
+    "nom": "Jean Lassalle",
+    "partiId": "resistons",
+    "avatar": "JL",
+    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jean_Lassalle.jpg/330px-Jean_Lassalle.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "biographie": "Président de Résistons !, ancien député des Pyrénées-Atlantiques."
+  }
+]
