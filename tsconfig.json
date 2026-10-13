@@ -12,7 +12,8 @@
     },
     "allowImportingTsExtensions": true,
     "types": [
-      "jest"
+      "jest",
+      "expo/types"
     ]
   },
   "include": [
