@@ -22,7 +22,7 @@ export function AppTabs() {
 
       <NativeTabs.Trigger name="lois">
         <NativeTabs.Trigger.Label>Lois</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon sf="scalemass" md="scale" />
+        <NativeTabs.Trigger.Icon sf="scale.3d" md="balance" />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="explore">
