@@ -1,4 +1,4 @@
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { TabList, TabSlot, TabTrigger, Tabs, type TabListProps, type TabTriggerSlotProps } from 'expo-router/ui';
 import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
@@ -19,7 +19,7 @@ export function AppTabs() {
           <TabButton icon="list-outline" wide={wide}>Classement</TabButton>
         </TabTrigger>
         <TabTrigger name="lois" href="/lois" asChild>
-          <TabButton icon="scale-outline" wide={wide}>Lois</TabButton>
+          <TabButton icon={{ mci: 'scale-balance' }} wide={wide}>Lois</TabButton>
         </TabTrigger>
         <TabTrigger name="explore" href="/explore" asChild>
           <TabButton icon="library-outline" wide={wide}>Explorer</TabButton>
@@ -40,7 +40,8 @@ export function AppTabs() {
 export default AppTabs;
 
 interface TabButtonProps extends TabTriggerSlotProps {
-  icon: keyof typeof Ionicons.glyphMap;
+  /** Ionicons par défaut ; Material Community quand Ionicons n'a pas le pictogramme (balance de justice). */
+  icon: keyof typeof Ionicons.glyphMap | { mci: keyof typeof MaterialCommunityIcons.glyphMap };
   wide: boolean;
   children: React.ReactNode;
 }
@@ -54,7 +55,11 @@ function TabButton({ children, icon, wide, isFocused, ...props }: TabButtonProps
       accessibilityState={{ selected: !!isFocused }}
       style={({ pressed }) => [wide ? styles.buttonWide : styles.button, pressed && { backgroundColor: Colors.pressed }]}>
       <View style={[wide ? styles.indicatorWide : styles.indicator, isFocused && { backgroundColor: Colors.ink }]} />
-      <Ionicons name={icon} size={wide ? 18 : 22} color={color} />
+      {typeof icon === 'string' ? (
+        <Ionicons name={icon} size={wide ? 18 : 22} color={color} />
+      ) : (
+        <MaterialCommunityIcons name={icon.mci} size={wide ? 18 : 22} color={color} />
+      )}
       <Text style={[isFocused ? Type.labelStrong : Type.label, { color }]}>{children}</Text>
     </Pressable>
   );
