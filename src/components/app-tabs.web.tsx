@@ -1,8 +1,15 @@
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { TabList, TabSlot, TabTrigger, Tabs, type TabListProps, type TabTriggerSlotProps } from 'expo-router/ui';
-import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 import { Colors, MaxContentWidth, Spacing, Type } from '@/constants/theme';
+
+// Sur le web, les sources SVG du jeu commun : nettes à toute densité d'écran.
+const TAB_ICONS = {
+  index: require('@/assets/icons/tabs/voter.svg'),
+  results: require('@/assets/icons/tabs/classement.svg'),
+  lois: require('@/assets/icons/tabs/lois.svg'),
+  explore: require('@/assets/icons/tabs/explorer.svg'),
+};
 
 // Barre du bas sur mobile, barre du haut sur grand écran.
 const WIDE = 900;
@@ -13,16 +20,16 @@ export function AppTabs() {
     <TabList asChild>
       <TabBar wide={wide}>
         <TabTrigger name="index" href="/" asChild>
-          <TabButton icon="create-outline" wide={wide}>Voter</TabButton>
+          <TabButton icon={TAB_ICONS.index} wide={wide}>Voter</TabButton>
         </TabTrigger>
         <TabTrigger name="results" href="/results" asChild>
-          <TabButton icon="list-outline" wide={wide}>Classement</TabButton>
+          <TabButton icon={TAB_ICONS.results} wide={wide}>Classement</TabButton>
         </TabTrigger>
         <TabTrigger name="lois" href="/lois" asChild>
-          <TabButton icon={{ mci: 'scale-balance' }} wide={wide}>Lois</TabButton>
+          <TabButton icon={TAB_ICONS.lois} wide={wide}>Lois</TabButton>
         </TabTrigger>
         <TabTrigger name="explore" href="/explore" asChild>
-          <TabButton icon="library-outline" wide={wide}>Explorer</TabButton>
+          <TabButton icon={TAB_ICONS.explore} wide={wide}>Explorer</TabButton>
         </TabTrigger>
       </TabBar>
     </TabList>
@@ -40,8 +47,8 @@ export function AppTabs() {
 export default AppTabs;
 
 interface TabButtonProps extends TabTriggerSlotProps {
-  /** Ionicons par défaut ; Material Community quand Ionicons n'a pas le pictogramme (balance de justice). */
-  icon: keyof typeof Ionicons.glyphMap | { mci: keyof typeof MaterialCommunityIcons.glyphMap };
+  /** Icône du jeu commun (PNG teinté selon l'état). */
+  icon: number;
   wide: boolean;
   children: React.ReactNode;
 }
@@ -55,11 +62,7 @@ function TabButton({ children, icon, wide, isFocused, ...props }: TabButtonProps
       accessibilityState={{ selected: !!isFocused }}
       style={({ pressed }) => [wide ? styles.buttonWide : styles.button, pressed && { backgroundColor: Colors.pressed }]}>
       <View style={[wide ? styles.indicatorWide : styles.indicator, isFocused && { backgroundColor: Colors.ink }]} />
-      {typeof icon === 'string' ? (
-        <Ionicons name={icon} size={wide ? 18 : 22} color={color} />
-      ) : (
-        <MaterialCommunityIcons name={icon.mci} size={wide ? 18 : 22} color={color} />
-      )}
+      <Image source={icon} style={{ width: wide ? 18 : 22, height: wide ? 18 : 22, tintColor: color }} accessibilityIgnoresInvertColors />
       <Text style={[isFocused ? Type.labelStrong : Type.label, { color }]}>{children}</Text>
     </Pressable>
   );

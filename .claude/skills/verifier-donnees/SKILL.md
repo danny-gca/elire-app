@@ -29,7 +29,11 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - La source est le document qui contient la mesure (programme, discours, entretien), pas une page d'accueil ni un article qui la commente.
 - `description` = citation exacte entre « », coupures notées `[...]`, plusieurs extraits séparés par ` ; `.
 - `titre` = la mesure réelle, reformulée court et neutre : pas d'adjectif qui juge, pas de comparaison, pas de commentaire.
-- `contexte` = titre du document (et page) ; programme 2022 indiqué comme tel tant que le 2027 n'est pas publié.
+- Titre fidèle : il ne dit rien que la citation ne dit pas (ni chiffre, ni portée, ni condition en plus ou en moins) ; relire titre et citation côte à côte. Sinon : **reformulée**.
+- `contexte` = type de document et circonstance (et page), puis les précisions de la mesure ; chaque précision doit figurer dans la source. Programme 2022 indiqué comme tel tant que le 2027 n'est pas publié.
+- Anonymat (vote à l'aveugle) : aucun nom de candidat, de parti ou de slogan de campagne dans `titre`, `description` ou `contexte`.
+- Sigles : titre et question en clair (sigle seulement du quotidien, TVA, SMIC, RSA, SNCF, RATP, EDF, IVG, ou entre parenthèses après sa forme claire) ; chaque sigle des textes lus à l'aveugle est dans `data/glossaire.json` (le build bloque sinon).
+- Lisibilité : titre d'une idée (environ 90 caractères), mots simples, sigles expliqués ; citation courte.
 - `thematique_id` cohérent, auteur bien le candidat (pas un cadre du parti).
 - Verdict : **confirmée**, **reformulée** (titre ou citation corrigés selon la source) ou **retirée** (introuvable).
 

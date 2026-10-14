@@ -5,8 +5,10 @@ import path from 'node:path';
 import Papa from 'papaparse';
 import { z } from 'zod';
 
+import { acronymsIn, unexplainedInTitle } from '../src/lib/glossary.ts';
 import {
   CandidatSourceSchema,
+  GlossaireEntrySchema,
   LoiSourceSchema,
   PartiSchema,
   PropositionCsvSchema,
@@ -57,6 +59,43 @@ function checkUniqueIds(items: { id: string }[], label: string) {
 function checkText(text: string | undefined, where: string) {
   if (text && MISSING_APOSTROPHE.test(text)) {
     errors.push(`${where} : apostrophe manquante ("${text.match(MISSING_APOSTROPHE)?.[0]}...")`);
+  }
+}
+
+// Vote à l'aveugle : aucun nom de candidat ni de parti (sigles et noms comparés à la casse près).
+function anonymityTerms(candidats: { nom: string }[], partis: { nom: string; sigle: string }[]): RegExp[] {
+  const terms = new Set<string>();
+  for (const c of candidats) {
+    terms.add(c.nom);
+    terms.add(c.nom.split(' ').slice(1).join(' '));
+  }
+  for (const p of partis) {
+    terms.add(p.nom);
+    terms.add(p.sigle);
+  }
+  return [...terms]
+    .filter((t) => t.length > 1)
+    .map((t) => new RegExp(`(?<![\\p{L}])${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'u'));
+}
+
+function checkAnonymous(text: string, terms: RegExp[], where: string) {
+  const hit = terms.find((t) => t.test(text));
+  if (hit) {
+    errors.push(`${where} : nom de candidat ou de parti visible en vote à l'aveugle ("${text.match(hit)?.[0]}")`);
+  }
+}
+
+// Lecture à l'aveugle : chaque sigle est au glossaire, et un titre ne garde que les sigles du quotidien ou développés.
+function checkAcronyms(title: string, texts: string[], glossary: Set<string>, used: Set<string>, where: string) {
+  for (const sigle of acronymsIn(title, ...texts)) {
+    used.add(sigle);
+    if (!glossary.has(sigle)) {
+      errors.push(`${where} : sigle "${sigle}" absent de glossaire.json`);
+    }
+  }
+  const unexplained = unexplainedInTitle(title);
+  if (unexplained.length > 0) {
+    errors.push(`${where} : sigle à écrire en clair dans le titre ou la question (${unexplained.join(', ')})`);
   }
 }
 
@@ -112,8 +151,8 @@ function previousGeneratedAt(content: object): string | undefined {
     return undefined;
   }
   const { metadata, ...previous } = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
-  const { partis, thematiques, candidats, propositions, lois } = previous;
-  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois }) === JSON.stringify(content);
+  const { partis, thematiques, candidats, propositions, lois, glossaire } = previous;
+  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, glossaire }) === JSON.stringify(content);
   return same ? metadata?.generatedAt : undefined;
 }
 
@@ -122,6 +161,9 @@ function main() {
   const thematiques = parseArray(ThematiqueSchema, readJson('thematiques.json'), 'thematiques.json');
   const rawCandidats = parseArray(CandidatSourceSchema, readJson('candidats.json'), 'candidats.json');
   const sourceLois = parseArray(LoiSourceSchema, readJson('lois.json'), 'lois.json');
+  const glossaire = parseArray(GlossaireEntrySchema, readJson('glossaire.json'), 'glossaire.json');
+  const glossarySigles = new Set(glossaire.map((g) => g.sigle));
+  const usedSigles = new Set<string>();
   const refs = loadRefs();
 
   checkUniqueIds(partis, 'partis.json');
@@ -144,6 +186,7 @@ function main() {
     return { ...c, parti: parti ? parti.nom : 'Indépendant', couleurParti: parti ? parti.couleur : '#6B7280' };
   });
 
+  const anonymity = anonymityTerms(rawCandidats, partis);
   const propositions: Proposition[] = [];
   const csvFiles = fs.readdirSync(CSV_DIR).filter((f) => f.endsWith('.csv'));
 
@@ -169,6 +212,8 @@ function main() {
         errors.push(`${where} : thématique inconnue "${row.thematique_id}"`);
       }
       checkText(`${row.titre} ${row.description} ${row.contexte}`, where);
+      checkAnonymous(`${row.titre} ${row.description} ${row.contexte}`, anonymity, where);
+      checkAcronyms(row.titre, [row.description, row.contexte], glossarySigles, usedSigles, where);
       checkPreciseUrl(row.source_url, where);
       propositions.push({
         id: row.id,
@@ -194,7 +239,9 @@ function main() {
     if (!thematiqueIds.has(loi.thematiqueId)) {
       errors.push(`lois.json ${loi.id} : thématique inconnue "${loi.thematiqueId}"`);
     }
-    checkText(`${loi.titre} ${loi.resume}`, `lois.json ${loi.id}`);
+    checkText(`${loi.titre} ${loi.question} ${loi.enjeu} ${loi.resume}`, `lois.json ${loi.id}`);
+    checkAnonymous(`${loi.question} ${loi.enjeu}`, anonymity, `lois.json ${loi.id}`);
+    checkAcronyms(loi.question, [loi.enjeu], glossarySigles, usedSigles, `lois.json ${loi.id}`);
     for (const [candidatId, vote] of Object.entries(loi.votes)) {
       if (!candidatIds.has(candidatId)) {
         errors.push(`lois.json ${loi.id} : candidat inconnu "${candidatId}"`);
@@ -202,6 +249,13 @@ function main() {
       checkText(vote.explication, `lois.json ${loi.id} / ${candidatId}`);
     }
   }
+
+  glossaire.forEach((g) => {
+    checkText(`${g.forme} ${g.definition ?? ''}`, `glossaire.json ${g.sigle}`);
+    if (!usedSigles.has(g.sigle)) {
+      warnings.push(`glossaire.json ${g.sigle} : sigle employé nulle part`);
+    }
+  });
 
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
   if (warnings.length > 0) {
@@ -213,7 +267,7 @@ function main() {
     process.exit(1);
   }
 
-  const content = { partis, thematiques, candidats, propositions, lois };
+  const content = { partis, thematiques, candidats, propositions, lois, glossaire };
   const dataset = {
     metadata: {
       generatedAt: previousGeneratedAt(content) ?? new Date().toISOString(),
@@ -228,6 +282,7 @@ function main() {
     candidats,
     propositions,
     lois,
+    glossaire,
   };
 
   fs.writeFileSync(REFS_FILE, JSON.stringify(refs, null, 2) + '\n', 'utf-8');
@@ -236,7 +291,7 @@ function main() {
 
   console.log(
     `✅ ${partis.length} partis, ${candidats.length} candidats, ${thematiques.length} thématiques, ` +
-      `${propositions.length} propositions, ${lois.length} lois -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
+      `${propositions.length} propositions, ${lois.length} lois, ${glossaire.length} sigles -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
   );
 }
 

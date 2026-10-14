@@ -1,5 +1,6 @@
 import { NativeTabs } from 'expo-router/unstable-native-tabs';
 
+import { TAB_ICONS } from '@/constants/tab-icons';
 import { Colors } from '@/constants/theme';
 
 export function AppTabs() {
@@ -12,22 +13,22 @@ export function AppTabs() {
       labelStyle={{ default: { color: Colors.graphite }, selected: { color: Colors.ink } }}>
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>Voter</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon sf="square.and.pencil" md="edit_note" />
+        <NativeTabs.Trigger.Icon src={TAB_ICONS.index} />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="results">
         <NativeTabs.Trigger.Label>Classement</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon sf="list.number" md="format_list_numbered" />
+        <NativeTabs.Trigger.Icon src={TAB_ICONS.results} />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="lois">
         <NativeTabs.Trigger.Label>Lois</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon sf="scale.3d" md="balance" />
+        <NativeTabs.Trigger.Icon src={TAB_ICONS.lois} />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="explore">
         <NativeTabs.Trigger.Label>Explorer</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon sf="books.vertical" md="library_books" />
+        <NativeTabs.Trigger.Icon src={TAB_ICONS.explore} />
       </NativeTabs.Trigger>
     </NativeTabs>
   );
