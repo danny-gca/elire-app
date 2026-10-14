@@ -4,7 +4,7 @@ import type { Dataset, Loi, VoteCandidatLoi } from '@/schemas/dataset';
 // Données publiques embarquées dans le bundle : accès synchrone, déjà validées par build:data.
 const dataset = raw as unknown as Dataset;
 
-export const { metadata, partis, thematiques, candidats, propositions, lois } = dataset;
+export const { metadata, partis, thematiques, candidats, propositions, lois, glossaire } = dataset;
 
 const candidatsById = new Map(candidats.map((c) => [c.id, c]));
 const thematiquesById = new Map(thematiques.map((t) => [t.id, t]));

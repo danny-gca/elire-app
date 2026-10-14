@@ -1,0 +1,240 @@
+[
+  {
+    "sigle": "AFP",
+    "forme": "Agence France-Presse",
+    "definition": "Agence de presse française."
+  },
+  {
+    "sigle": "ANSSI",
+    "forme": "Agence nationale de la sécurité des systèmes d'information",
+    "definition": "Service de l'État chargé de la cybersécurité et de la protection des systèmes informatiques sensibles."
+  },
+  {
+    "sigle": "BFM",
+    "forme": "BFMTV",
+    "definition": "Chaîne de télévision d'information en continu."
+  },
+  {
+    "sigle": "BFMTV",
+    "forme": "BFMTV",
+    "definition": "Chaîne de télévision d'information en continu."
+  },
+  {
+    "sigle": "CDI",
+    "forme": "Contrat à durée indéterminée",
+    "definition": "Contrat de travail sans date de fin, forme normale de l'emploi salarié."
+  },
+  {
+    "sigle": "CEDH",
+    "forme": "Cour européenne des droits de l'homme",
+    "definition": "Juridiction du Conseil de l'Europe qui veille au respect de la Convention européenne des droits de l'homme."
+  },
+  {
+    "sigle": "CETA",
+    "forme": "Accord économique et commercial global",
+    "definition": "Accord de libre-échange entre l'Union européenne et le Canada, appliqué en partie depuis 2017."
+  },
+  {
+    "sigle": "CMR",
+    "forme": "Cancérogènes, mutagènes ou toxiques pour la reproduction",
+    "definition": "Classement des substances chimiques les plus dangereuses pour la santé."
+  },
+  {
+    "sigle": "CO2",
+    "forme": "Dioxyde de carbone",
+    "definition": "Principal gaz à effet de serre émis par les activités humaines."
+  },
+  {
+    "sigle": "CRDS",
+    "forme": "Contribution au remboursement de la dette sociale",
+    "definition": "Prélèvement sur les revenus qui rembourse la dette de la Sécurité sociale."
+  },
+  {
+    "sigle": "CSG",
+    "forme": "Contribution sociale généralisée",
+    "definition": "Prélèvement sur les revenus qui finance la Sécurité sociale."
+  },
+  {
+    "sigle": "DPE",
+    "forme": "Diagnostic de performance énergétique",
+    "definition": "Note de A à G de la consommation d'énergie d'un logement."
+  },
+  {
+    "sigle": "EDF",
+    "forme": "Électricité de France",
+    "definition": "Principal producteur d'électricité en France, entreprise publique."
+  },
+  {
+    "sigle": "EGALIM",
+    "forme": "États généraux de l'alimentation",
+    "definition": "Nom de la loi de 2018 sur le prix payé aux agriculteurs et les relations commerciales agricoles."
+  },
+  {
+    "sigle": "EPR",
+    "forme": "Réacteur pressurisé européen",
+    "definition": "Modèle récent de réacteur nucléaire de grande puissance."
+  },
+  {
+    "sigle": "EPR2",
+    "forme": "Nouvelle version de l'EPR",
+    "definition": "Réacteur nucléaire simplifié, prévu pour les nouveaux chantiers en France."
+  },
+  {
+    "sigle": "FAQ",
+    "forme": "Foire aux questions",
+    "definition": "Page de questions et de réponses."
+  },
+  {
+    "sigle": "GAFAM",
+    "forme": "Google, Apple, Facebook (Meta), Amazon, Microsoft",
+    "definition": "Désigne les cinq géants américains du numérique."
+  },
+  {
+    "sigle": "GAIA",
+    "forme": "GAIA-X",
+    "definition": "Projet européen d'infrastructure de données et de cloud."
+  },
+  {
+    "sigle": "IA",
+    "forme": "Intelligence artificielle",
+    "definition": "Programmes informatiques capables de produire du texte, des images ou des décisions à partir de données."
+  },
+  {
+    "sigle": "ID",
+    "forme": "Identité (en anglais)",
+    "definition": "« Digital ID Wallet » : portefeuille européen d'identité numérique."
+  },
+  {
+    "sigle": "ISF",
+    "forme": "Impôt de solidarité sur la fortune",
+    "definition": "Impôt sur le patrimoine des plus fortunés, remplacé en 2018 par un impôt sur la fortune immobilière."
+  },
+  {
+    "sigle": "IVG",
+    "forme": "Interruption volontaire de grossesse",
+    "definition": "Avortement."
+  },
+  {
+    "sigle": "LCP",
+    "forme": "La Chaîne parlementaire",
+    "definition": "Chaîne de télévision de l'Assemblée nationale."
+  },
+  {
+    "sigle": "OMS",
+    "forme": "Organisation mondiale de la santé",
+    "definition": "Agence des Nations unies chargée de la santé publique mondiale."
+  },
+  {
+    "sigle": "OQTF",
+    "forme": "Obligation de quitter le territoire français",
+    "definition": "Décision qui ordonne à un étranger en situation irrégulière de quitter la France."
+  },
+  {
+    "sigle": "ORSEC",
+    "forme": "Organisation de la réponse de sécurité civile",
+    "definition": "Dispositif qui organise les secours en cas de catastrophe ou d'accident majeur."
+  },
+  {
+    "sigle": "OTAN",
+    "forme": "Organisation du traité de l'Atlantique nord",
+    "definition": "Alliance militaire entre des pays d'Europe et d'Amérique du Nord."
+  },
+  {
+    "sigle": "PAC",
+    "forme": "Politique agricole commune",
+    "definition": "Politique européenne d'aides aux agriculteurs."
+  },
+  {
+    "sigle": "PACTE",
+    "forme": "Plan d'action pour la croissance et la transformation des entreprises",
+    "definition": "Nom d'une loi de 2019 sur les entreprises."
+  },
+  {
+    "sigle": "PFAS",
+    "forme": "Substances per- et polyfluoroalkylées",
+    "definition": "Composés chimiques surnommés « polluants éternels », car ils se dégradent très peu."
+  },
+  {
+    "sigle": "PINM",
+    "forme": "Projet d'intérêt national majeur",
+    "definition": "Label qui accélère les procédures pour un grand projet industriel."
+  },
+  {
+    "sigle": "PMA",
+    "forme": "Procréation médicalement assistée",
+    "definition": "Techniques médicales pour aider à avoir un enfant."
+  },
+  {
+    "sigle": "PME",
+    "forme": "Petites et moyennes entreprises",
+    "definition": "Entreprises de moins de 250 salariés, dont le chiffre d'affaires ou le bilan reste sous un plafond fixé par la loi."
+  },
+  {
+    "sigle": "QR",
+    "forme": "QR code",
+    "definition": "Code-barres carré lisible avec un téléphone."
+  },
+  {
+    "sigle": "RATP",
+    "forme": "Régie autonome des transports parisiens",
+    "definition": "Entreprise publique de transports en Île-de-France."
+  },
+  {
+    "sigle": "RIC",
+    "forme": "Référendum d'initiative citoyenne",
+    "definition": "Référendum déclenché par une pétition de citoyens."
+  },
+  {
+    "sigle": "RSA",
+    "forme": "Revenu de solidarité active",
+    "definition": "Aide versée aux personnes sans ressources ou à faibles revenus."
+  },
+  {
+    "sigle": "SMIC",
+    "forme": "Salaire minimum interprofessionnel de croissance",
+    "definition": "Salaire minimum légal."
+  },
+  {
+    "sigle": "SMR",
+    "forme": "Petit réacteur modulaire",
+    "definition": "Petit réacteur nucléaire conçu pour être fabriqué en série."
+  },
+  {
+    "sigle": "SNCF",
+    "forme": "Société nationale des chemins de fer français",
+    "definition": "Entreprise publique du train."
+  },
+  {
+    "sigle": "SRU",
+    "forme": "Solidarité et renouvellement urbains",
+    "definition": "Nom de la loi de 2000 qui impose un minimum de logements sociaux à certaines communes."
+  },
+  {
+    "sigle": "TAFTA",
+    "forme": "Accord de libre-échange transatlantique",
+    "definition": "Projet d'accord entre l'Union européenne et les États-Unis, négocié de 2013 à 2016 sans aboutir."
+  },
+  {
+    "sigle": "TDF",
+    "forme": "TéléDiffusion de France",
+    "definition": "Entreprise qui gère les émetteurs de télévision et de radio."
+  },
+  {
+    "sigle": "TGV",
+    "forme": "Train à grande vitesse"
+  },
+  {
+    "sigle": "TVA",
+    "forme": "Taxe sur la valeur ajoutée",
+    "definition": "Impôt payé sur la plupart des achats."
+  },
+  {
+    "sigle": "UE",
+    "forme": "Union européenne"
+  },
+  {
+    "sigle": "ZAN",
+    "forme": "Zéro artificialisation nette",
+    "definition": "Objectif de ne plus réduire les espaces naturels et agricoles d'ici 2050."
+  }
+]

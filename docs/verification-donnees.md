@@ -4,11 +4,11 @@ Vérification de chaque proposition et de chaque vote de groupe par recherche we
 
 ## Propositions
 
-| Statut | Nombre |
-|---|---|
-| Confirmée telle quelle | 34 |
-| Reformulée selon la source (mesure réelle différente) | 68 |
-| Retirée (introuvable) | 6 |
+| Statut                                                | Nombre |
+| ----------------------------------------------------- | ------ |
+| Confirmée telle quelle                                | 34     |
+| Reformulée selon la source (mesure réelle différente) | 68     |
+| Retirée (introuvable)                                 | 6      |
 
 Les titres reformulés ne gardent que la mesure réelle (sans commentaire de comparaison). Toutes les descriptions sont désormais la citation exacte de la source ; le contexte donne le document (titre, page). 18 sources ne sont pas datées : la date n'est plus affichée.
 
@@ -23,7 +23,7 @@ Les titres reformulés ne gardent que la mesure réelle (sans commentaire de com
 
 ### Sources à surveiller
 
-- prop-ep-4 (Édouard Philippe) : www.planet.fr, Planet.fr - Faut-il mettre fin aux 35 heures ? (propos tenus sur BFMTV)
+- prop-ep-4 (Édouard Philippe) : <www.planet.fr>, Planet.fr - Faut-il mettre fin aux 35 heures ? (propos tenus sur BFMTV)
 - prop-rg-1 (Raphaël Glucksmann) : patrickbayeux.com, Programme Réveiller l'Europe (européennes 2024), p. 4, mesures 4-5
 - prop-rg-2 (Raphaël Glucksmann) : patrickbayeux.com, Programme Réveiller l'Europe (européennes 2024), p. 40, mesure 315
 - prop-rg-3 (Raphaël Glucksmann) : ouragan.cd, Dépêche AFP - Meeting d'Aubervilliers
@@ -43,11 +43,11 @@ Les titres reformulés ne gardent que la mesure réelle (sans commentaire de com
 - prop-mlp-5 (Marine Le Pen) : web.archive.org, Marine Le Pen, 22 mesures pour 2022, mesure 11, p. 5
 - prop-mlp-6 (Marine Le Pen) : web.archive.org, Marine Le Pen, 22 mesures pour 2022, mesure 1, p. 2
 - prop-br-5 (Bruno Retailleau) : telquel.ma, TelQuel (reprise de l'interview au Figaro Magazine), 02/10/2024
-- prop-ez-1 (Éric Zemmour) : www.parismatch.be, Paris Match Belgique (Belga), propos sur BFMTV
+- prop-ez-1 (Éric Zemmour) : <www.parismatch.be>, Paris Match Belgique (Belga), propos sur BFMTV
 - prop-ez-2 (Éric Zemmour) : connexionfrance.com, Connexion France, 11/02/2022 (conférence de presse du 10/01/2022)
-- prop-ez-6 (Éric Zemmour) : www.ynetnews.com, Ynet News, interview Face à BFM (septembre 2026)
+- prop-ez-6 (Éric Zemmour) : <www.ynetnews.com>, Ynet News, interview Face à BFM (septembre 2026)
 - prop-fro-5 (Fabien Roussel) : edito.seloger.com, SeLoger, propositions logement de Fabien Roussel pour 2027
-- prop-na-4 (Nathalie Arthaud) : www.boursedescredits.com, Boursedescredits, programme logement de Nathalie Arthaud (présidentielle 2017)
+- prop-na-4 (Nathalie Arthaud) : <www.boursedescredits.com>, Boursedescredits, programme logement de Nathalie Arthaud (présidentielle 2017)
 
 ### Reformulées (avant -> après)
 
@@ -287,6 +287,188 @@ Points restants : loi retraites 2023 (adoptée par 49.3, positions déduites de 
 
 ## Programmes 2027 (état au 2026-10-13)
 
-- LFI : *L'Avenir en commun*, édition 2025, sert de source ; nouvelle édition (1 069 mesures) présentée les 6 et 7 novembre 2026 : à revérifier ensuite.
+- LFI : _L'Avenir en commun_, édition 2025, sert de source ; nouvelle édition (1 069 mesures) présentée les 6 et 7 novembre 2026 : à revérifier ensuite.
 - RN : programme « rédigé à 95 % » (franceinfo, 19/05/2026) mais aucune publication officielle trouvée ; les mesures restent sourcées sur le programme 2022, à mettre à jour dès publication.
 - Les programmes 2022 sont conservés comme sources tant qu'aucun programme 2027 n'est publié.
+
+# Anonymat et lisibilité des propositions - 2026-10-14
+
+Les propositions sont lues pendant le vote à l'aveugle (titre et citation sur la carte, contexte dans la feuille). Règle ajoutée à `CONTRIBUTING.md` : ni nom de candidat, ni parti, ni slogan de campagne ; titre d'une idée, mots simples, citation courte.
+
+- 95 propositions retouchées : 90 titres, 23 citations, 78 contextes.
+- Citations : uniquement raccourcies (coupures `[...]`) ou débarrassées de paraphrases de journaliste ; 3 nouvelles relues dans la source (prop-br-1, prop-br-6, prop-ga-5) pour retirer le nom du candidat.
+- Titres ramenés à ce que dit la citation : « conseiller territorial unique » retiré de prop-br-6 (absent de la source), « détention d'armes » retiré de prop-ht-4, « 2 200 euros » retiré de prop-na-1, « obliger » remplacé par « prendre en charge » en prop-mt-5, « inutiles » (mot du candidat) retiré de prop-mt-1, « taxe lapin » et « ultra-riches » remplacés par une formulation neutre.
+- `check-sources.mjs` : 0 erreur ; 15 « à lire » avant, 10 après (tous déjà présents avant).
+
+Contextes : les 96 réécrits au format « type de document et circonstance, puis précisions de la mesure » (chiffres, modalités, exceptions), chaque précision relue dans la source téléchargée ; les détails retirés des titres y sont repris quand la source les confirme.
+
+Titres corrigés à la relecture des sources :
+
+- prop-ep-4 : la source précise qu'il ne propose pas de supprimer les 35 heures (indiqué dans le contexte).
+- prop-ez-2 : seul l'uniforme est dans la citation ; « abolir le collège unique » absent de la source, l'examen de fin de primaire passe en contexte.
+- prop-ez-6 : l'interdiction vise tous les signes religieux (kippa comprise), le voile étant la priorité.
+- prop-fro-3 : « lunettes et prothèses dentaires » absents de la source, remplacé par « tous les soins prescrits ».
+- prop-fr-5 : taxe de 4 % sur les rachats d'actions absente de la question au Gouvernement, retirée.
+- prop-fa-1 : « et de l'euro » absent de la source, retiré.
+- prop-na-2 : reformulé selon le discours (« on ne licencie personne »).
+
+Points restants : citations en anglais (prop-ez-2, prop-ez-6), à remplacer par une source française ; le domaine du lien source (« Ouvrir la source · … ») reste visible pendant le vote et peut révéler l'auteur.
+
+Changements :
+
+- prop-am-1 : titre, citation, contexte
+- prop-am-4 : titre, citation, contexte
+- prop-am-6 : titre, contexte
+- prop-br-1 : citation
+- prop-br-3 : titre, contexte
+- prop-br-4 : titre, citation, contexte
+- prop-br-5 : titre, citation
+- prop-br-6 : titre, citation, contexte
+- prop-dl-1 : titre
+- prop-dl-2 : titre, contexte
+- prop-dl-3 : titre, contexte
+- prop-dl-4 : titre, contexte
+- prop-dl-5 : titre
+- prop-ep-1 : titre, citation, contexte
+- prop-ep-2 : titre, contexte
+- prop-ep-3 : titre, citation, contexte
+- prop-ep-4 : titre, citation, contexte
+- prop-ep-6 : titre, contexte
+- prop-ez-1 : titre
+- prop-ez-2 : titre
+- prop-ez-3 : titre
+- prop-ez-4 : titre
+- prop-ez-5 : titre
+- prop-ez-6 : titre
+- prop-fro-1 : titre, contexte
+- prop-fro-2 : titre, contexte
+- prop-fro-3 : titre, contexte
+- prop-fro-4 : titre, contexte
+- prop-fro-5 : titre, citation, contexte
+- prop-fa-1 : titre, citation
+- prop-fa-2 : titre
+- prop-fa-3 : titre, contexte
+- prop-fa-4 : titre, contexte
+- prop-fa-5 : titre, contexte
+- prop-fa-6 : titre, contexte
+- prop-fr-1 : titre, contexte
+- prop-fr-2 : titre, contexte
+- prop-fr-3 : titre, citation, contexte
+- prop-fr-4 : titre, contexte
+- prop-fr-5 : titre, citation, contexte
+- prop-fr-6 : titre, contexte
+- prop-ga-1 : titre, citation
+- prop-ga-2 : titre
+- prop-ga-3 : titre, contexte
+- prop-ga-4 : titre, citation
+- prop-ga-5 : titre, citation, contexte
+- prop-ga-6 : titre, citation
+- prop-ht-1 : titre, contexte
+- prop-ht-2 : titre, citation, contexte
+- prop-ht-3 : titre, contexte
+- prop-ht-4 : titre, contexte
+- prop-ht-5 : titre, contexte
+- prop-ht-6 : titre, contexte
+- prop-jl-1 : titre, citation, contexte
+- prop-jl-2 : titre, contexte
+- prop-jl-3 : titre
+- prop-jl-4 : titre, contexte
+- prop-jl-5 : titre, contexte
+- prop-jl-6 : titre, contexte
+- prop-jlm-1 : titre, citation, contexte
+- prop-jlm-2 : titre, citation, contexte
+- prop-jlm-3 : titre, citation, contexte
+- prop-jlm-4 : titre, contexte
+- prop-jlm-5 : titre, contexte
+- prop-jlm-6 : titre, contexte
+- prop-mlp-1 : titre, citation, contexte
+- prop-mlp-2 : titre, contexte
+- prop-mlp-3 : titre, contexte
+- prop-mlp-4 : titre, contexte
+- prop-mlp-5 : contexte
+- prop-mlp-6 : titre, contexte
+- prop-mt-1 : titre, contexte
+- prop-mt-2 : titre, contexte
+- prop-mt-3 : titre, contexte
+- prop-mt-4 : titre, contexte
+- prop-mt-5 : titre, contexte
+- prop-mt-6 : titre, contexte
+- prop-na-1 : titre, contexte
+- prop-na-2 : titre, contexte
+- prop-na-3 : titre, contexte
+- prop-na-4 : contexte
+- prop-na-5 : titre, contexte
+- prop-na-6 : contexte
+- prop-nda-1 : titre, contexte
+- prop-nda-2 : titre, contexte
+- prop-nda-3 : contexte
+- prop-nda-4 : titre, contexte
+- prop-nda-5 : titre, contexte
+- prop-nda-6 : titre, contexte
+- prop-rg-1 : titre, contexte
+- prop-rg-2 : titre, contexte
+- prop-rg-3 : titre, contexte
+- prop-rg-4 : titre, contexte
+- prop-rg-5 : titre, contexte
+- prop-rg-6 : titre, contexte
+
+# Scrutins : ajouts et contrôle par l'open data de l'Assemblée - 2026-10-14
+
+Méthode : votes extraits des fichiers officiels de l'Assemblée nationale (data.assemblee-nationale.fr, scrutins des 15e, 16e et 17e législatures, et registre des acteurs et organes). Vote personnel si le candidat figure dans l'analyse nominative ; sinon position majoritaire du groupe de son parti à cette date ; rien si son parti n'a pas de groupe ou si le groupe n'a exprimé aucun vote. Motion de censure : seuls les « pour » sont décomptés, un groupe est « pour » si plus de la moitié de ses membres l'ont votée. Explications réécrites en faits (vote ou décompte du groupe), sans commentaire. Le site de l'Assemblée bloque la lecture automatique (503) : `check-sources.mjs` marque ces scrutins « à lire », la vérification repose sur l'open data officiel.
+
+## 16 scrutins ajoutés (26 -> 42)
+
+- L-43 aide-a-mourir-2026 (2026-07-15) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/8280>
+- L-44 mineurs-reseaux-sociaux-2026 (2026-07-21) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/8431>
+- L-42 plfss-2026 (2025-12-16) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/4758>
+- L-41 confiance-gouvernement-2025 (2025-09-08) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/3054>
+- L-39 antisemitisme-enseignement-superieur-2025 (2025-07-02) : 8 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/2880>
+- L-40 loi-contraintes-agriculteurs-2025 (2025-07-08) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/2957>
+- L-38 programmation-energie-climat-2025 (2025-06-24) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/2653>
+- L-37 loi-narcotrafic-2025 (2025-04-29) : 9 candidats, <https://www.assemblee-nationale.fr/dyn/17/scrutins/1473>
+- L-36 climat-resilience-2021 (2021-05-04) : 7 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/3738>
+- L-35 principes-republique-2021 (2021-02-16) : 8 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/3421>
+- L-34 securite-globale-2020 (2020-11-24) : 8 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/3254>
+- L-33 bioethique-pma-2019 (2019-10-15) : 7 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/2146>
+- L-32 ratification-ceta-an-2019 (2019-07-23) : 8 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/2059>
+- L-31 ecole-de-la-confiance-2019 (2019-02-19) : 7 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/1709>
+- L-30 loi-asile-immigration-2018 (2018-04-22) : 7 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/578>
+- L-29 ordonnances-travail-2017 (2017-11-28) : 7 candidats, <https://www.assemblee-nationale.fr/dyn/15/scrutins/314>
+
+Couverture : Jean Lassalle passe de 0 à 5 votes personnels, Jean-Luc Mélenchon de 0 à 8. Restent sans aucun vote (pas d'élu ni de groupe) : Antoine Mikolajczak, Éric Zemmour, Nathalie Arthaud, François Asselineau, David Lisnard, Hélène Thouy.
+
+## Votes existants corrigés (16e et 17e législatures)
+
+- motion-censure-barnier-2024 / nicolas-dupont-aignan : vote retiré, pour individuel (plus député depuis le 9 juin 2024)
+- debat-accord-ue-mercosur-2024 / francois-ruffin : contre individuel -> pour individuel (analyse nominative du scrutin 456 : pour)
+- regulation-meubles-tourisme-airbnb-2024 / gabriel-attal : pour groupe_parti -> pour individuel (a voté lui-même)
+- regulation-meubles-tourisme-airbnb-2024 / marine-le-pen : contre individuel -> contre groupe_parti (absente de l'analyse nominative : position du groupe RN)
+- regulation-meubles-tourisme-airbnb-2024 / francois-ruffin : vote retiré, pour individuel (absent de l'analyse nominative du scrutin 289, sans groupe de parti)
+- abrogation-retraite-64-ans-2024 / gabriel-attal : contre groupe_parti -> contre individuel (a voté lui-même)
+- abrogation-retraite-64-ans-2024 / francois-ruffin : vote retiré, contre individuel (absent de l'analyse nominative du scrutin 217, sans groupe de parti)
+- motion-censure-barnier-2024 (scrutin 17/519) : gabriel-attal contre/individuel -> contre/groupe_parti
+- rejet-recettes-plf-2025 (scrutin 17/438) : gabriel-attal contre/groupe_parti -> contre/individuel
+- regulation-meubles-tourisme-airbnb-2024 (scrutin 17/289) : fabien-roussel absent -> pour/groupe_parti
+- abrogation-retraite-64-ans-2024 (scrutin 17/217) : fabien-roussel absent -> contre/groupe_parti ; jean-luc-melenchon absent -> pour/groupe_parti ; marine-tondelier absent -> contre/groupe_parti ; raphael-glucksmann absent -> contre/groupe_parti
+- loi-orientation-agricole-2024 (scrutin 16/3966) : fabien-roussel absent -> abstention/individuel ; marine-le-pen pour/individuel -> contre/individuel ; nicolas-dupont-aignan absent -> contre/individuel
+- degel-corps-electoral-nouvelle-caledonie-2024 (scrutin 16/3725) : fabien-roussel absent -> contre/individuel ; francois-ruffin absent -> contre/individuel
+- loi-sren-numerique-2024 (scrutin 16/3668) : fabien-roussel absent -> contre/groupe_parti ; marine-le-pen contre/individuel -> contre/groupe_parti ; nicolas-dupont-aignan absent -> contre/individuel ; raphael-glucksmann absent -> contre/groupe_parti
+- ppl-interdiction-pfas-2024 (scrutin 16/3643) : francois-ruffin pour/individuel -> retiré
+- ppl-anti-fast-fashion-2024 (scrutin 16/3508) : fabien-roussel absent -> pour/groupe_parti ; francois-ruffin pour/individuel -> retiré
+- accord-securite-ukraine-2024 (scrutin 16/3461) : gabriel-attal pour/individuel -> pour/groupe_parti
+- loi-immigration-2023 : source officielle <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049040002> -> scrutin 16/3213
+- loi-immigration-2023 (scrutin 16/3213) : bruno-retailleau pour/individuel -> pour/groupe_parti ; nicolas-dupont-aignan pour/individuel -> abstention/individuel
+- loi-valletoux-acces-soins-2023 (scrutin 16/3206) : fabien-roussel absent -> contre/groupe_parti ; francois-ruffin contre/individuel -> retiré ; marine-tondelier absent -> abstention/groupe_parti ; raphael-glucksmann absent -> abstention/groupe_parti
+- loi-plein-emploi-france-travail-2023 (scrutin 16/2965) : fabien-roussel contre/individuel -> contre/groupe_parti ; marine-le-pen contre/individuel -> contre/groupe_parti
+- loi-programmation-militaire-2024-2030 (scrutin 16/2256) : fabien-roussel absent -> contre/individuel ; francois-ruffin contre/individuel -> retiré ; marine-tondelier absent -> abstention/groupe_parti ; nicolas-dupont-aignan absent -> contre/individuel
+- loi-majorite-numerique-2023 : source officielle <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047799424> -> scrutin 16/2075
+- loi-majorite-numerique-2023 (scrutin 16/2075) : fabien-roussel absent -> pour/groupe_parti ; francois-ruffin pour/individuel -> retiré ; marine-le-pen pour/individuel -> pour/groupe_parti
+- relance-nucleaire-epr-2023 (scrutin 16/1533) : fabien-roussel pour/groupe_parti -> pour/individuel ; francois-ruffin absent -> contre/individuel ; nicolas-dupont-aignan absent -> pour/individuel ; raphael-glucksmann absent -> abstention/groupe_parti
+- loi-anti-squat-kasbarian-2023 (scrutin 16/1361) : fabien-roussel absent -> contre/individuel ; nicolas-dupont-aignan absent -> pour/individuel ; raphael-glucksmann absent -> contre/groupe_parti
+- videosurveillance-ia-jo-2024 (scrutin 16/1274) : fabien-roussel absent -> contre/groupe_parti ; francois-ruffin contre/individuel -> retiré ; raphael-glucksmann absent -> contre/groupe_parti
+- repas-etudiant-1-euro-2023 (scrutin 16/931) : marine-le-pen pour/individuel -> pour/groupe_parti
+- loi-energies-renouvelables-2023 : source officielle <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047281777> -> scrutin 16/823
+- loi-energies-renouvelables-2023 (scrutin 16/823) : fabien-roussel absent -> contre/groupe_parti ; francois-ruffin absent -> contre/individuel ; nicolas-dupont-aignan absent -> contre/individuel
+- abrogation-retraite-64-ans-2024 : position de groupe retirée pour jean-luc-melenchon (LFI-NFP n'a exprimé aucun vote, conforme à l'audit du 2026-10-13)
+
+Non contrôlés par cette méthode : loi-retraites-2023 (adoptée par 49.3, positions déduites de la motion 1240), loi-constitutionnelle-ivg-2024 (Congrès), scrutins du Sénat et du Parlement européen.

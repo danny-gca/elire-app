@@ -13,8 +13,9 @@ import { ThemeMark } from '@/components/theme-mark';
 import { Button } from '@/components/ui/button';
 import { SegmentedControl } from '@/components/ui/segmented-control';
 import { Sheet } from '@/components/ui/sheet';
+import { ReliabilityMark, reliabilityHint } from '@/components/reliability-mark';
 import { Colors, MinTarget, Numeric, Radius, Spacing, Type } from '@/constants/theme';
-import { plural } from '@/lib/format';
+import { candidatureText, plural } from '@/lib/format';
 import { MIN_VOTES_PER_CANDIDAT, scoreCandidat } from '@/lib/scoring';
 import type { Proposition } from '@/schemas/dataset';
 import { getCandidat, getLoisByCandidat, getPropositionsByCandidat, lois, partis, propositions, thematiques } from '@/services/dataset';
@@ -26,6 +27,7 @@ export default function CandidateScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const votes = useVotesStore((s) => s.votes);
+  const loiVotes = useVotesStore((s) => s.loiVotes);
   const [onglet, setOnglet] = useState<Onglet>('programme');
   const [selected, setSelected] = useState<Proposition | null>(null);
 
@@ -58,7 +60,7 @@ export default function CandidateScreen() {
     );
   }
 
-  const score = scoreCandidat(candidat, propositions, votes);
+  const score = scoreCandidat(candidat, propositions, votes, { lois, votes: loiVotes });
 
   return (
     <Screen>
@@ -78,6 +80,14 @@ export default function CandidateScreen() {
       </View>
 
       <Text style={[Type.body, styles.soft]}>{candidat.biographie}</Text>
+      <Pressable
+        onPress={() => Linking.openURL(candidat.candidature.sourceUrl)}
+        accessibilityRole="link"
+        accessibilityHint="Ouvre la source de la candidature"
+        hitSlop={8}
+        style={styles.link}>
+        <Text style={[Type.labelStrong, styles.underline]}>{candidatureText(candidat.candidature)}</Text>
+      </Pressable>
       {parti && (
         <Pressable onPress={() => Linking.openURL(parti.siteWeb)} accessibilityRole="link" hitSlop={8} style={styles.link}>
           <Text style={[Type.labelStrong, styles.underline]}>Site du parti · {new URL(parti.siteWeb).hostname.replace(/^www\./, '')}</Text>
@@ -90,13 +100,32 @@ export default function CandidateScreen() {
           <Text style={[Type.bodyStrong, styles.ink]}>Pas encore évalué : votez sur ses propositions à l’aveugle.</Text>
         ) : (
           <>
-            <Text style={[Type.bodyStrong, Numeric, styles.ink]}>
-              {score.score} %{' '}
-              <Text style={[Type.label, styles.muted]}>
-                · {score.totalVotes} proposition{score.totalVotes > 1 ? 's' : ''} votée{score.totalVotes > 1 ? 's' : ''} sur {props.length}
-              </Text>
+            <Text style={[Type.bodyStrong, Numeric, styles.ink]}>{score.score} %</Text>
+            <Text style={[Type.label, Numeric, styles.muted]}>
+              Programme :{' '}
+              {score.programme.score === null
+                ? 'aucune proposition votée'
+                : `${score.programme.score} % (${score.programme.count} sur ${plural(props.length, 'proposition')})`}
             </Text>
-            {!score.ranked && (
+            <Text style={[Type.label, Numeric, styles.muted]}>
+              Votes au Parlement :{' '}
+              {!score.seated
+                ? 'n’a pas siégé, score calculé sur le programme seul'
+                : score.parlement.score === null
+                  ? 'aucun de ses scrutins voté'
+                  : `${score.parlement.score} % (${plural(score.parlement.count, 'scrutin')}${
+                      score.parlement.groupCount > 0 ? `, dont ${score.parlement.groupCount} de groupe, comptés à moitié` : ''
+                    })`}
+            </Text>
+            {score.reliability ? (
+              <View style={styles.reliability}>
+                <ReliabilityMark level={score.reliability} />
+                <Text style={[Type.label, Numeric, styles.muted]}>
+                  sur {plural(score.programme.count, 'proposition')}
+                  {score.parlement.count > 0 ? ` et ${plural(score.parlement.count, 'scrutin')}` : ''} : {reliabilityHint(score.reliability)}.
+                </Text>
+              </View>
+            ) : (
               <Text style={[Type.label, styles.muted]}>Score indicatif : il faut {MIN_VOTES_PER_CANDIDAT} votes pour le classer.</Text>
             )}
           </>
@@ -145,7 +174,7 @@ export default function CandidateScreen() {
       ) : (
         <View style={styles.section}>
           {loisVotes.map(({ loi }) => (
-            <LoiCard key={loi.id} loi={loi} candidatId={candidat.id} />
+            <LoiCard key={loi.id} loi={loi} candidatId={candidat.id} userVote={loiVotes[loi.id]} />
           ))}
         </View>
       )}
@@ -179,6 +208,9 @@ const styles = StyleSheet.create({
     minHeight: 32,
     justifyContent: 'center',
     alignSelf: 'flex-start',
+  },
+  reliability: {
+    gap: Spacing.half,
   },
   accord: {
     marginVertical: Spacing.three,

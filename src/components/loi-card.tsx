@@ -2,12 +2,16 @@ import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { Marked } from '@/components/marked';
 import { VoteRow } from '@/components/vote-row';
+import { LoiVoteTag } from '@/components/vote-tag';
 import { reportIssueUrl } from '@/constants/app';
 import { Colors, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { CHAMBRE_LABELS, NATURE_LABELS, POSITION_LABELS, STATUT_LABELS, formatDate } from '@/lib/format';
+import { loiPoints, type LoiVoteValue } from '@/lib/scoring';
 import type { Loi, PositionVote } from '@/schemas/dataset';
 import { getCandidat, getThematique } from '@/services/dataset';
+import { useMarkOf } from '@/store/votes-store';
 
 const ORDER: Record<PositionVote, number> = { pour: 0, abstention: 1, contre: 2 };
 
@@ -15,10 +19,15 @@ interface LoiCardProps {
   loi: Loi;
   /** Sur une fiche candidat : n'affiche que sa position, toujours visible. */
   candidatId?: string;
+  /** Vote de l'utilisateur sur ce scrutin. */
+  userVote?: LoiVoteValue;
 }
 
-export function LoiCard({ loi, candidatId }: LoiCardProps) {
+const RELATION = { 2: 'comme vous', [-2]: 'à l’inverse de vous', 0: 'sans effet sur le score (abstention)' } as const;
+
+export function LoiCard({ loi, candidatId, userVote }: LoiCardProps) {
   const [open, setOpen] = useState(false);
+  const marker = useMarkOf(loi.id);
   const theme = getThematique(loi.thematiqueId);
 
   const entries = Object.entries(loi.votes).sort(([, a], [, b]) => ORDER[a.position] - ORDER[b.position]);
@@ -32,9 +41,9 @@ export function LoiCard({ loi, candidatId }: LoiCardProps) {
 
   return (
     <View style={styles.card}>
-      <Text style={[Type.bodyStrong, styles.ink]} accessibilityRole="header">
+      <Marked active={!!userVote} marker={marker} style={[Type.bodyStrong, styles.ink]}>
         {loi.titre}
-      </Text>
+      </Marked>
       <Text style={[Type.label, Numeric, styles.muted]}>
         {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text>
         {theme ? ` · ${theme.titre}` : ''}
@@ -47,6 +56,13 @@ export function LoiCard({ loi, candidatId }: LoiCardProps) {
       </Text>
 
       {focusVote && <VoteRow vote={focusVote} />}
+
+      {userVote && (
+        <Text style={[Type.label, styles.muted]}>
+          Votre vote : <LoiVoteTag value={userVote} />
+          {focusVote ? ` · ${RELATION[loiPoints(userVote, focusVote.position)]}` : ''}
+        </Text>
+      )}
 
       {!candidatId && (
         <Pressable

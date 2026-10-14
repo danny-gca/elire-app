@@ -4,8 +4,9 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Marked } from '@/components/marked';
 import { VoteTag } from '@/components/vote-tag';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
-import type { VoteValue } from '@/lib/scoring';
+import { UNSURE, type VoteValue } from '@/lib/scoring';
 import type { Proposition } from '@/schemas/dataset';
+import { useMarkOf } from '@/store/votes-store';
 
 interface PropositionRowProps {
   proposition: Proposition;
@@ -19,6 +20,7 @@ interface PropositionRowProps {
 // Titre surligné si voté, puis numéro, votre note et l'auteur sur une ligne.
 export function PropositionRow({ proposition, vote, author, onPress, actionHint = 'Voir le détail et la source' }: PropositionRowProps) {
   const voted = vote !== undefined;
+  const marker = useMarkOf(proposition.id);
   return (
     <Pressable
       onPress={onPress}
@@ -26,7 +28,7 @@ export function PropositionRow({ proposition, vote, author, onPress, actionHint 
       accessibilityHint={actionHint}
       style={({ pressed }) => [styles.row, pressed && { backgroundColor: Colors.pressed }]}>
       <View style={styles.body}>
-        <Marked active={voted} style={[Type.body, styles.title]}>
+        <Marked active={voted && vote !== UNSURE} marker={marker} style={[Type.body, styles.title]}>
           {proposition.titre}
         </Marked>
         <View style={styles.meta}>

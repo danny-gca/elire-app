@@ -134,5 +134,69 @@
     "couleur": "#D97706",
     "nuance": "Ruralité & Humanisme",
     "siteWeb": "https://resistons-france.fr"
+  },
+  {
+    "id": "revolution-permanente",
+    "nom": "Révolution permanente",
+    "sigle": "RP",
+    "couleur": "#E11D48",
+    "nuance": "Extrême gauche",
+    "siteWeb": "https://www.revolutionpermanente.fr"
+  },
+  {
+    "id": "les-patriotes",
+    "nom": "Les Patriotes",
+    "sigle": "LP",
+    "couleur": "#3949AB",
+    "nuance": "Souverainisme",
+    "siteWeb": "https://les-patriotes.fr"
+  },
+  {
+    "id": "npa-revolutionnaires",
+    "nom": "NPA-Révolutionnaires",
+    "sigle": "NPA-R",
+    "couleur": "#931914",
+    "nuance": "Extrême gauche",
+    "siteWeb": "https://npa-revolutionnaires.org"
+  },
+  {
+    "id": "la-france-humaine-et-forte",
+    "nom": "La France Humaine et Forte",
+    "sigle": "FHuF",
+    "couleur": "#B5179E",
+    "nuance": "Social-démocratie",
+    "siteWeb": "https://www.lafrancehumaineetforte.fr"
+  },
+  {
+    "id": "generation-ecologie",
+    "nom": "Génération écologie",
+    "sigle": "GE",
+    "couleur": "#5ABB48",
+    "nuance": "Écologie et décroissance",
+    "siteWeb": "https://www.generationecologie.fr"
+  },
+  {
+    "id": "projet-france",
+    "nom": "Projet France",
+    "sigle": "PF",
+    "couleur": "#F37021",
+    "nuance": "Centre",
+    "siteWeb": "https://becht2027.fr"
+  },
+  {
+    "id": "nous-sommes-la-france",
+    "nom": "Nous sommes la France",
+    "sigle": "NSLF",
+    "couleur": "#0F766E",
+    "nuance": "Gaullisme social et souveraineté",
+    "siteWeb": "https://www.npolony.fr"
+  },
+  {
+    "id": "nous-france",
+    "nom": "Nous France",
+    "sigle": "NF",
+    "couleur": "#46B7FF",
+    "nuance": "Droite sociale",
+    "siteWeb": "https://www.nousfrance.fr"
   }
 ]

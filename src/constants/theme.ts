@@ -1,8 +1,10 @@
 /**
  * Univers « cahier annoté » : papier blanc froid, encre, marge graphite,
- * surligneur jaune réservé aux marques de l'utilisateur. Thème clair uniquement.
+ * surligneur (choisi par l'utilisateur) réservé à ses marques. Thème clair uniquement.
  */
 import { Platform, type TextStyle } from 'react-native';
+
+import type { FontName } from '@/constants/fonts';
 
 export const Colors = {
   paper: '#F6F7F5',
@@ -14,9 +16,6 @@ export const Colors = {
   ruleSoft: '#E8EBED',
   boardEdge: '#B9BFC5',
   pressed: '#EEF0F1',
-  // Réservé aux marques de l'utilisateur (votes) : ne jamais l'utiliser ailleurs.
-  mark: '#EADB3F',
-  markSoft: 'rgba(234, 219, 63, 0.7)',
   positive: '#2F7D5B',
   positiveSoft: '#E4F0EA',
   negative: '#A4482A',
@@ -26,6 +25,29 @@ export const Colors = {
   cautionSoft: '#F3EEDF',
   focus: '#1C1E21',
 } as const;
+
+export type MarkerId = 'jaune' | 'rose' | 'vert' | 'bleu';
+
+export interface Marker {
+  label: string;
+  /** Pastille, points pleins de l'hémicycle. */
+  solid: string;
+  /** Trait derrière le texte (fond de ligne en natif). */
+  soft: string;
+  /** Bande basse du trait sur le web. */
+  band: string;
+}
+
+// Les surligneurs du lecteur, réservés à ses marques : ils ne signifient rien et ne rappellent aucun parti.
+export const Markers: Record<MarkerId, Marker> = {
+  jaune: { label: 'Jaune', solid: '#EADB3F', soft: 'rgba(234, 219, 63, 0.7)', band: 'rgba(234, 219, 63, 0.85)' },
+  rose: { label: 'Rose', solid: '#F2A7C3', soft: 'rgba(242, 167, 195, 0.7)', band: 'rgba(242, 167, 195, 0.85)' },
+  vert: { label: 'Vert', solid: '#A8E0A1', soft: 'rgba(168, 224, 161, 0.7)', band: 'rgba(168, 224, 161, 0.85)' },
+  bleu: { label: 'Bleu', solid: '#A9D3F5', soft: 'rgba(169, 211, 245, 0.7)', band: 'rgba(169, 211, 245, 0.85)' },
+};
+
+export const MARKER_IDS = Object.keys(Markers) as MarkerId[];
+export const DEFAULT_MARKER: MarkerId = 'jaune';
 
 // Échelle de vote : terre cuite (négatif), graphite (neutre), vert correcteur (positif).
 export const VoteColors = {
@@ -61,20 +83,24 @@ export function themeAccent(thematiqueId: string | undefined): ThemeAccent {
   return (thematiqueId && ThematicColors[thematiqueId]) || { accent: Colors.graphite, tint: Colors.ruleSoft };
 }
 
-const family = Platform.select({
-  web: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-  default: undefined,
-});
+// Une famille par graisse (fichiers statiques, SDK 57) ; sur le web, une police de secours le temps du chargement.
+function font(name: FontName, fallback: 'serif' | 'sans' | 'hand'): string {
+  const web = { serif: 'Georgia, serif', sans: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif', hand: 'cursive' };
+  return Platform.OS === 'web' ? `"${name}", ${web[fallback]}` : name;
+}
 
+// Literata pour les titres, Atkinson Hyperlegible Next pour la lecture, Caveat pour les annotations du lecteur.
 // Deux tailles de lecture (17 et 13) ; 34 et 24 seulement pour le titre d'écran et le titre de proposition.
 export const Type = {
-  screenTitle: { fontFamily: family, fontSize: 34, lineHeight: 40, fontWeight: '700', letterSpacing: -0.4 },
-  display: { fontFamily: family, fontSize: 24, lineHeight: 32, fontWeight: '600', letterSpacing: -0.2 },
-  body: { fontFamily: family, fontSize: 17, lineHeight: 24, fontWeight: '400' },
-  bodyStrong: { fontFamily: family, fontSize: 17, lineHeight: 24, fontWeight: '600' },
-  label: { fontFamily: family, fontSize: 13, lineHeight: 18, fontWeight: '500' },
-  labelStrong: { fontFamily: family, fontSize: 13, lineHeight: 18, fontWeight: '600' },
-  caps: { fontFamily: family, fontSize: 13, lineHeight: 18, fontWeight: '600', letterSpacing: 0.4, textTransform: 'uppercase' },
+  screenTitle: { fontFamily: font('Literata-Bold', 'serif'), fontSize: 34, lineHeight: 40, letterSpacing: -0.3 },
+  display: { fontFamily: font('Literata-SemiBold', 'serif'), fontSize: 24, lineHeight: 32, letterSpacing: -0.2 },
+  body: { fontFamily: font('AtkinsonHyperlegibleNext-Regular', 'sans'), fontSize: 17, lineHeight: 24 },
+  bodyStrong: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 17, lineHeight: 24 },
+  label: { fontFamily: font('AtkinsonHyperlegibleNext-Medium', 'sans'), fontSize: 13, lineHeight: 18 },
+  labelStrong: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 13, lineHeight: 18 },
+  caps: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 13, lineHeight: 18, letterSpacing: 0.4, textTransform: 'uppercase' },
+  /** Écriture du lecteur (« Votre avis », « Dernier vote ») : jamais sous 20, en peu de mots. */
+  note: { fontFamily: font('Caveat-Bold', 'hand'), fontSize: 22, lineHeight: 26 },
 } satisfies Record<string, TextStyle>;
 
 export const Numeric: TextStyle = { fontVariant: ['tabular-nums'] };

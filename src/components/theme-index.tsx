@@ -7,12 +7,14 @@ import { ThemeMark } from '@/components/theme-mark';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import type { VoteValue } from '@/lib/scoring';
 import { propositions, thematiques } from '@/services/dataset';
+import { useVotesStore } from '@/store/votes-store';
 
 const LEADER = ' .'.repeat(80);
 
 // Sommaire du cahier : un thème par ligne, points de conduite, votes / total.
 export function ThemeIndex({ votes }: { votes: Record<string, VoteValue> }) {
   const router = useRouter();
+  const marker = useVotesStore((s) => s.marker);
   return (
     <View style={styles.root} accessibilityRole="list">
       {thematiques.map((t, i) => {
@@ -35,7 +37,7 @@ export function ThemeIndex({ votes }: { votes: Record<string, VoteValue> }) {
                 <View style={styles.leader} importantForAccessibility="no-hide-descendants">
                   <Text style={[Type.label, styles.leaderText]}>{LEADER}</Text>
                 </View>
-                <Marked active={done && voted > 0} style={[Type.labelStrong, Numeric, done ? styles.ink : styles.muted]}>
+                <Marked active={done && voted > 0} marker={marker} style={[Type.labelStrong, Numeric, done ? styles.ink : styles.muted]}>
                   {voted}/{items.length}
                 </Marked>
               </View>

@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 import { CandidatePanel } from '@/components/candidate-panel';
+import { MarkerPicker } from '@/components/marker-picker';
 import { DataFooter } from '@/components/data-footer';
 import { Screen } from '@/components/screen';
 import { ScreenHeader } from '@/components/screen-header';
@@ -11,12 +12,13 @@ import { ProgressCounter } from '@/components/ui/progress-counter';
 import { ResetButton } from '@/components/ui/reset-button';
 import { Colors, MaxContentWidth, Radius, Spacing, Type } from '@/constants/theme';
 import { plural } from '@/lib/format';
-import { competitionRanks, computeScores, MIN_VOTES_PER_CANDIDAT, type CandidateScore } from '@/lib/scoring';
+import { CLASSEMENT_THRESHOLD, opinionCount } from '@/lib/progress';
+import { competitionRanks, computeScores, MIN_VOTES_PER_CANDIDAT, UNSURE, type CandidateScore } from '@/lib/scoring';
 import { fisherYates } from '@/lib/shuffle';
-import { candidats, propositions } from '@/services/dataset';
+import { candidats, lois, propositions } from '@/services/dataset';
 import { useVotesStore } from '@/store/votes-store';
 
-const MIN_VOTES_REQUIRED = 10;
+const MIN_VOTES_REQUIRED = CLASSEMENT_THRESHOLD;
 // Départage des égalités tiré au hasard à chaque lancement : aucun candidat n'est favorisé par son nom.
 const TIE_ORDER = new Map(fisherYates(candidats).map((c, i) => [c.id, i]));
 const GAP = 8;
@@ -24,18 +26,25 @@ const GAP = 8;
 export default function ClassementScreen() {
   const router = useRouter();
   const votes = useVotesStore((s) => s.votes);
+  const loiVotes = useVotesStore((s) => s.loiVotes);
   const resetVotes = useVotesStore((s) => s.resetVotes);
   const { width } = useWindowDimensions();
 
-  const votedCount = Object.keys(votes).length;
-  const scores = useMemo(() => computeScores(candidats, propositions, votes, TIE_ORDER), [votes]);
+  // « Je ne sais pas » n'ouvre pas le classement : seuls les avis comptent.
+  const unsureCount = Object.values(votes).filter((v) => v === UNSURE).length;
+  const votedCount = opinionCount(votes, loiVotes);
+  const loiCount = Object.keys(loiVotes).length;
+  const scores = useMemo(
+    () => computeScores(candidats, propositions, votes, TIE_ORDER, { lois, votes: loiVotes }),
+    [votes, loiVotes]
+  );
   const ranked = scores.filter((s) => s.ranked);
   const others = scores.filter((s) => !s.ranked);
   const columns = Math.min(width, MaxContentWidth) < 560 ? 3 : 4;
 
   return (
     <Screen>
-      <ScreenHeader title="Classement" note="Proximité entre vos votes et les propositions de chaque candidat." />
+      <ScreenHeader title="Classement" note="Proximité entre vos votes, les propositions et les votes au Parlement de chaque candidat." />
 
       {votedCount < MIN_VOTES_REQUIRED ? (
         <View style={styles.locked}>
@@ -54,9 +63,16 @@ export default function ClassementScreen() {
             Candidats les plus proches de vos votes
           </Text>
           <Text style={[Type.label, styles.muted]}>
-            Basé sur {plural(votedCount, 'vote')}. Un candidat est classé à partir de {MIN_VOTES_PER_CANDIDAT} de ses
+            Basé sur {plural(votedCount, 'vote')}
+            {unsureCount > 0 ? `, sans compter ${plural(unsureCount, 'question')} sans avis (« Je ne sais pas »)` : ''}. Un candidat est classé à partir de {MIN_VOTES_PER_CANDIDAT} de ses
             propositions votées. À égalité, même rang, dans un ordre tiré au hasard.
           </Text>
+          {loiCount > 0 && (
+            <Text style={[Type.label, styles.muted]}>
+              Scrutins : +2 si le candidat a voté comme vous, −2 à l’inverse, à moitié pour un vote de
+              groupe. Un candidat qui n’a pas siégé n’est ni avantagé ni pénalisé : son score repose sur son programme.
+            </Text>
+          )}
           {ranked.length > 0 ? (
             <Board entries={ranked} columns={columns} ranked />
           ) : (
@@ -80,6 +96,14 @@ export default function ClassementScreen() {
           )}
         </>
       )}
+
+      <View style={styles.marker}>
+        <Text style={[Type.bodyStrong, styles.ink]} accessibilityRole="header">
+          Votre surligneur
+        </Text>
+        <Text style={[Type.label, styles.muted]}>Il marque vos prochains votes ; les marques déjà posées gardent leur couleur.</Text>
+        <MarkerPicker />
+      </View>
 
       <View style={styles.reset}>
         <ResetButton count={votedCount} onConfirm={resetVotes} />
@@ -156,6 +180,10 @@ const styles = StyleSheet.create({
   boardRow: {
     flexDirection: 'row',
     gap: GAP,
+  },
+  marker: {
+    marginTop: Spacing.four,
+    gap: Spacing.one,
   },
   reset: {
     marginTop: Spacing.four,

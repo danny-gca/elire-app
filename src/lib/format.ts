@@ -1,4 +1,4 @@
-import type { Chambre, NatureLoi, PositionVote, StatutLoi, TypeVote } from '@/schemas/dataset';
+import type { Candidature, Chambre, NatureLoi, PositionVote, StatutLoi, TypeVote } from '@/schemas/dataset';
 
 const MOIS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
 
@@ -8,6 +8,21 @@ export function formatDate(isoDate: string): string {
     return isoDate;
   }
   return `${day}\u00a0${MOIS[month - 1]}\u00a0${year}`;
+}
+
+/** Statut de candidature et sa date, pour le lien vers la source (fiche candidat). */
+export function candidatureText({ statut, date }: Candidature): string {
+  const jour = formatDate(date);
+  switch (statut) {
+    case 'designee':
+      return `Candidature désignée par son parti le ${jour}`;
+    case 'sous_condition':
+      return `Candidature annoncée sous condition le ${jour}`;
+    case 'pressentie':
+      return `Candidature pressentie, pas encore déclarée (source du ${jour})`;
+    default:
+      return `Candidature déclarée le ${jour}`;
+  }
 }
 
 export const CHAMBRE_LABELS: Record<Chambre, string> = {

@@ -37,7 +37,9 @@ id,thematique_id,titre,description,source_url,date_declaration,contexte
 - `titre` : la mesure, courte et neutre.
 - `description` : citation exacte « … », coupures `[...]`.
 - `source_url` : le document précis ; `date_declaration` : `AAAA-MM-JJ` ou vide si la source n'est pas datée.
-- `contexte` : titre du document (et page).
+- `contexte` : type de document et circonstance (et page), puis les précisions utiles de la mesure (chiffres, modalités, exceptions), tirées de la source ; 250 caractères environ.
+- Anonymat : ni nom du candidat ou du parti, ni slogan de campagne dans `titre`, `description` et `contexte` (lus pendant le vote à l'aveugle). Couper le nom de la citation avec `[...]`.
+- Sigles : titre et question en clair (sigle seulement du quotidien, TVA, SMIC, RSA, SNCF, RATP, EDF, IVG, ou entre parenthèses après sa forme claire) ; chaque sigle des textes lus à l'aveugle est dans `data/glossaire.json` (le build bloque sinon).
 - Viser le même nombre de propositions par candidat (6 aujourd'hui), réparties sur plusieurs thèmes, en choisissant des mesures centrales du programme plutôt que des marginales.
 - Les numéros `P-xxx` sont attribués par le build : ne pas les écrire.
 
@@ -45,7 +47,7 @@ id,thematique_id,titre,description,source_url,date_declaration,contexte
 
 `data/lois.json`, un objet :
 
-- `id` : `<sujet>-<annee>` ; `thematiqueId` ; `nature` (`projet_loi`, `proposition_loi`, `motion_censure`, `declaration_gouvernement`, `resolution`, `texte_europeen`) ; `chambre` (`assemblee_nationale`, `senat`, `parlement_europeen`) ; `dateVote` ; `statut` (`adoptee`, `rejetee`, `en_cours`) ; `titre` ; `resume` factuel ; `sourceOfficielleUrl` = la page du scrutin.
+- `id` : `<sujet>-<annee>` ; `thematiqueId` ; `nature` (`projet_loi`, `proposition_loi`, `motion_censure`, `declaration_gouvernement`, `resolution`, `texte_europeen`) ; `chambre` (`assemblee_nationale`, `senat`, `parlement_europeen`) ; `dateVote` ; `statut` (`adoptee`, `rejetee`, `en_cours`) ; `titre` ; `question` (posée à l'aveugle, sans nom de candidat, de parti ni de loi éponyme, sans résultat ; répondre « Pour » doit correspondre à la position « pour » du scrutin) ; `enjeu` (ce que fait le texte, sans nom ni résultat) ; `resume` factuel ; `sourceOfficielleUrl` = la page du scrutin.
 - `votes` : une entrée par candidat concerné, `position` (`pour`, `contre`, `abstention`), `typeVote` (`individuel` si le candidat a voté lui-même, sinon `groupe_parti` avec `groupe` et `groupeNom` à la date), `explication` factuelle, `sourceUrl` du même scrutin.
 - Choisir des scrutins publics à résultats nominatifs, sur des sujets des thèmes de l'app, qui concernent plusieurs candidats.
 

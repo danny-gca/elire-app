@@ -20,9 +20,19 @@ export function DataFooter() {
           <Text style={[Type.labelStrong, styles.link]}>Signaler une erreur</Text>
         </Pressable>
       )}
+      <Link href="/corrections" asChild>
+        <Pressable accessibilityRole="link" hitSlop={8}>
+          <Text style={[Type.labelStrong, styles.link]}>Méthode et corrections</Text>
+        </Pressable>
+      </Link>
+      <Link href="/mentions-legales" asChild>
+        <Pressable accessibilityRole="link" hitSlop={8}>
+          <Text style={[Type.labelStrong, styles.link]}>Mentions légales</Text>
+        </Pressable>
+      </Link>
       <Link href="/credits" asChild>
         <Pressable accessibilityRole="link" hitSlop={8}>
-          <Text style={[Type.labelStrong, styles.link]}>Crédits photos</Text>
+          <Text style={[Type.labelStrong, styles.link]}>Crédits</Text>
         </Pressable>
       </Link>
       <Link href="/onboarding" asChild>

@@ -2,6 +2,7 @@ import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
 
 import { CandidateAvatar } from '@/components/candidate-avatar';
+import { RELIABILITY_LABELS, ReliabilityMark } from '@/components/reliability-mark';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { plural } from '@/lib/format';
 import type { CandidateScore } from '@/lib/scoring';
@@ -18,7 +19,7 @@ interface CandidatePanelProps {
 // Panneau électoral : le même mobilier pour chaque candidat, seul le score change.
 export function CandidatePanel({ entry, rank, tied = false, style }: CandidatePanelProps) {
   const router = useRouter();
-  const { candidat, score, totalVotes } = entry;
+  const { candidat, score, totalVotes, reliability } = entry;
   const scoreText = score === null ? 'Pas encore évalué' : `${score} %`;
   const basis = `${tied ? 'ex æquo, ' : ''}${totalVotes > 0 ? `sur ${plural(totalVotes, 'vote')}` : 'aucun vote'}`;
 
@@ -26,7 +27,7 @@ export function CandidatePanel({ entry, rank, tied = false, style }: CandidatePa
     <Pressable
         onPress={() => router.push(`/candidate/${candidat.id}`)}
         accessibilityRole="link"
-        accessibilityLabel={`${rank ? `Rang ${rank}, ` : ''}${candidat.nom}, ${candidat.parti}, ${scoreText}, ${basis}`}
+        accessibilityLabel={`${rank ? `Rang ${rank}, ` : ''}${candidat.nom}, ${candidat.parti}, ${scoreText}, ${basis}${reliability ? `, score ${RELIABILITY_LABELS[reliability]}` : ''}`}
         style={({ pressed }) => [styles.panel, style, pressed && { backgroundColor: Colors.pressed }]}>
         <View style={[styles.number, !rank && styles.numberEmpty]}>
           <Text style={[Type.labelStrong, Numeric, { color: rank ? Colors.sheet : Colors.graphite }]}>{rank ?? '–'}</Text>
@@ -43,6 +44,7 @@ export function CandidatePanel({ entry, rank, tied = false, style }: CandidatePa
             {scoreText}
           </Text>
           {score !== null && <Text style={[Type.label, Numeric, styles.muted]}>{basis}</Text>}
+          {reliability && <ReliabilityMark level={reliability} />}
         </View>
     </Pressable>
   );
@@ -88,6 +90,7 @@ const styles = StyleSheet.create({
   scoreBlock: {
     marginTop: 'auto',
     alignItems: 'center',
+    gap: Spacing.half,
     paddingTop: Spacing.one,
   },
 });
