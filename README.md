@@ -61,7 +61,7 @@ Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à part
 - **UI** : `expo-image`, `react-native-reanimated`, `@expo/vector-icons`.
 - **Données** : Zod 4 + papaparse (outils de build).
 - **Tests** : Jest (`jest-expo`).
-- **Plateformes** : iOS, Android, Web (export statique). Déploiement mobile documenté dans [docs/deploy-apps.md](docs/deploy-apps.md).
+- **Plateformes** : iOS, Android, Web (export statique). Déploiement mobile documenté dans [docs/feature-20261014-deploy.md](docs/feature-20261014-deploy.md).
 
 ## 5. Commandes Développeur
 
@@ -74,6 +74,7 @@ Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à part
 - **Compiler les données** : `npm run build:data` (ou `build:data:strict`)
 - **Diagnostic Expo** : `npx expo-doctor`
 - **Installer un package compatible Expo** : `npx expo install <package>`
+- **Build de production EAS Workflow** : `npx eas-cli@latest workflow:run create-production-builds.yml`
 
 ## 6. Contribuer, licences, soutien
 
