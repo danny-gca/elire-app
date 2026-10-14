@@ -2,7 +2,7 @@ import { Image } from 'expo-image';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { CandidateImages } from '@/constants/candidate-images';
-import { Colors } from '@/constants/theme';
+import { Colors, Type } from '@/constants/theme';
 import type { Candidat } from '@/schemas/dataset';
 
 // Photo locale, sinon initiales : jamais de visage tiers en repli.
@@ -15,7 +15,7 @@ export function CandidateAvatar({ candidat, size = 40 }: { candidat: Candidat; s
   }
   return (
     <View style={[shape, styles.initials]}>
-      <Text style={{ color: Colors.graphite, fontWeight: '600', fontSize: size * 0.36 }}>{candidat.avatar}</Text>
+      <Text style={{ color: Colors.graphite, fontFamily: Type.labelStrong.fontFamily, fontSize: size * 0.36 }}>{candidat.avatar}</Text>
     </View>
   );
 }
