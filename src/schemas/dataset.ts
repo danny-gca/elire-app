@@ -24,6 +24,13 @@ export const ThematiqueSchema = z.object({
   description: z.string().min(1),
 });
 
+// Critère d'entrée (CONTRIBUTING.md) : candidature déclarée ou désignée, avec une source datée.
+export const CandidatureSchema = z.object({
+  statut: z.enum(['declaree', 'designee', 'sous_condition', 'pressentie']),
+  date: isoDate,
+  sourceUrl: url,
+});
+
 export const CandidatSourceSchema = z.object({
   id,
   nom: z.string().min(1),
@@ -31,6 +38,7 @@ export const CandidatSourceSchema = z.object({
   avatar: z.string().min(1).max(3),
   photoUrl: url.optional(),
   biographie: z.string().min(1),
+  candidature: CandidatureSchema,
 });
 
 export const CandidatSchema = CandidatSourceSchema.extend({
@@ -93,6 +101,10 @@ export const LoiSourceSchema = z.object({
   thematiqueId: id,
   nature: NatureLoiSchema,
   titre: z.string().min(1),
+  /** Posée en vote à l'aveugle : ni nom, ni parti, ni résultat ; « pour » = la position « pour » du scrutin. */
+  question: z.string().min(1).max(130),
+  /** Ce que fait le texte, sans nom ni résultat. */
+  enjeu: z.string().min(1).max(220),
   resume: z.string().min(1),
   chambre: ChambreSchema,
   dateVote: isoDate,
@@ -102,6 +114,13 @@ export const LoiSourceSchema = z.object({
 });
 
 export const LoiSchema = LoiSourceSchema.extend({ ref });
+
+// Glossaire des sigles, affiché dans « En savoir plus ».
+export const GlossaireEntrySchema = z.object({
+  sigle: z.string().regex(/^\p{Lu}{2,}\p{N}*$/u, 'sigle en capitales attendu'),
+  forme: z.string().min(1),
+  definition: z.string().min(1).max(160).optional(),
+});
 
 export const DatasetSchema = z.object({
   metadata: z.object({
@@ -117,11 +136,13 @@ export const DatasetSchema = z.object({
   candidats: z.array(CandidatSchema),
   propositions: z.array(PropositionSchema),
   lois: z.array(LoiSchema),
+  glossaire: z.array(GlossaireEntrySchema),
 });
 
 export type Parti = z.infer<typeof PartiSchema>;
 export type Thematique = z.infer<typeof ThematiqueSchema>;
 export type Candidat = z.infer<typeof CandidatSchema>;
+export type Candidature = z.infer<typeof CandidatureSchema>;
 export type Proposition = z.infer<typeof PropositionSchema>;
 export type NatureLoi = z.infer<typeof NatureLoiSchema>;
 export type Chambre = z.infer<typeof ChambreSchema>;
@@ -130,4 +151,5 @@ export type PositionVote = z.infer<typeof PositionVoteSchema>;
 export type TypeVote = z.infer<typeof TypeVoteSchema>;
 export type VoteCandidatLoi = z.infer<typeof VoteCandidatLoiSchema>;
 export type Loi = z.infer<typeof LoiSchema>;
+export type GlossaireEntry = z.infer<typeof GlossaireEntrySchema>;
 export type Dataset = z.infer<typeof DatasetSchema>;

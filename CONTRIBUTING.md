@@ -20,7 +20,8 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 | Fichier | Contenu |
 |---|---|
 | `data/candidats/<candidat-id>.csv` | Propositions d'un candidat : `id, thematique_id, titre, description, source_url, date_declaration, contexte` |
-| `data/lois.json` | Scrutins et position de chaque candidat |
+| `data/lois.json` | Scrutins et position de chaque candidat ; `question` et `enjeu` sont lus pendant le vote à l'aveugle (sans nom ni résultat, « Pour » = la position « pour » du scrutin) |
+| `data/glossaire.json` | Sigles des textes lus à l'aveugle : `sigle`, `forme` développée, `definition` d'une phrase (affichés dans « En savoir plus ») |
 | `data/candidats.json`, `partis.json`, `thematiques.json` | Référentiels |
 | `data/refs.json` | Numéros stables, géré par le build : ne pas éditer |
 
@@ -31,8 +32,16 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 3. **Titre = reformulation neutre et courte** de la mesure, sans commentaire, sans adjectif qui juge.
 4. **Contexte** = type de document et circonstance, puis les précisions de la mesure absentes du titre (chiffres, modalités, exceptions). Uniquement des faits tirés de la source, 250 caractères environ, sans répéter la date.
 5. **Anonymat** : titre, description et contexte sont lus pendant le vote à l'aveugle. Aucun nom de candidat, de parti ou de slogan de campagne : on coupe le nom de la citation avec `[...]` et on décrit le document sans le nommer par son auteur (« Programme 2027, p. 24 », « Interview rapportée par Public Sénat »).
-6. **Simple et court** : un titre d'une idée (environ 90 caractères), sans sigle non expliqué ; une citation de moins de 200 caractères environ.
-7. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
+6. **Titre fidèle** : le titre résume la citation sans la déformer, sans rien ajouter ni retirer (chiffre, portée, condition). La page « Méthode et corrections » le promet.
+7. **Simple et court** : un titre d'une idée (environ 90 caractères) ; une citation de moins de 200 caractères environ.
+8. **Sigles** : un titre ou une question s'écrit en clair ; un sigle n'y reste que s'il est du quotidien (TVA, SMIC, RSA, SNCF, RATP, EDF, IVG) ou entre parenthèses après sa forme claire (« l'Alliance atlantique (OTAN) »). Tout sigle des textes lus à l'aveugle (titre, description, contexte, question, enjeu) doit figurer dans `data/glossaire.json` (sigle, forme développée, une phrase) : il s'affiche dans « En savoir plus ». Le build bloque sinon.
+9. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
+
+### Entrée d'un candidat
+
+- Un candidat entre quand sa candidature est **déclarée** (annonce publique par la personne) ou **désignée** (vote ou décision officielle de son parti), avec une source datée. « Pressenti » ou « envisage » ne suffit pas.
+- Il sort s'il se retire ou s'il est remplacé ; ses propositions restent dans l'historique du dépôt.
+- Chaque nouveau candidat arrive avec le même nombre de propositions que les autres.
 
 ### Neutralité
 
