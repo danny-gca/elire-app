@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T09:07:24.256Z",
+  "generatedAt": "2026-10-14T13:00:34.000Z",
   "title": "Design System: ÉLIRE",
   "extensions": {
     "colorMeta": {
@@ -141,7 +141,7 @@
       },
       "mark": {
         "role": "secondary",
-        "displayName": "Surligneur",
+        "displayName": "Surligneur jaune",
         "canonical": "oklch(87.8% 0.167 103.7)",
         "tonalRamp": [
           "#0E0C00",
@@ -152,6 +152,51 @@
           "#BFB118",
           "#E4D537",
           "#FFF37C"
+        ]
+      },
+      "marker-rose": {
+        "role": "secondary",
+        "displayName": "Surligneur rose",
+        "canonical": "oklch(80.8% 0.095 355.3)",
+        "tonalRamp": [
+          "#24000D",
+          "#450827",
+          "#672944",
+          "#8B4964",
+          "#AF6A85",
+          "#D58CA8",
+          "#FBB0CC",
+          "#FFD5F1"
+        ]
+      },
+      "marker-vert": {
+        "role": "secondary",
+        "displayName": "Surligneur vert",
+        "canonical": "oklch(85.2% 0.103 141.8)",
+        "tonalRamp": [
+          "#001300",
+          "#003000",
+          "#1B4F16",
+          "#3C7036",
+          "#5D9257",
+          "#7FB679",
+          "#A3DB9C",
+          "#C7FFC0"
+        ]
+      },
+      "marker-bleu": {
+        "role": "secondary",
+        "displayName": "Surligneur bleu",
+        "canonical": "oklch(84.8% 0.065 243.0)",
+        "tonalRamp": [
+          "#000C24",
+          "#002842",
+          "#1F4662",
+          "#3F6683",
+          "#6087A7",
+          "#82AACB",
+          "#A5CFF1",
+          "#CAF5FF"
         ]
       },
       "negative": {
@@ -182,6 +227,21 @@
           "#B8ABA5",
           "#DBCEC8",
           "#F9EBE5"
+        ]
+      },
+      "negative-pressed": {
+        "role": "tertiary",
+        "displayName": "Terre d'alerte appuyée",
+        "canonical": "oklch(90.1% 0.028 46.1)",
+        "tonalRamp": [
+          "#150703",
+          "#312119",
+          "#4F3E36",
+          "#6F5D54",
+          "#917E74",
+          "#B5A097",
+          "#DAC4BA",
+          "#FFE9DF"
         ]
       },
       "vote-impossible": {
@@ -627,10 +687,10 @@
       },
       "headline": {
         "displayName": "Titre de proposition",
-        "purpose": "Titre de la proposition sur la feuille Voter."
+        "purpose": "Titre de la proposition ou question du scrutin sur la feuille Voter, titre du bilan."
       },
       "title": {
-        "displayName": "Corps fort",
+        "displayName": "Titre",
         "purpose": "Titres de cartes et lignes, boutons, intertitres, score de panneau."
       },
       "body": {
@@ -649,6 +709,10 @@
         "displayName": "Capitales",
         "purpose": "Libellé vertical de marge et en-têtes de section de Lois uniquement.",
         "textTransform": "uppercase"
+      },
+      "note": {
+        "displayName": "Annotation",
+        "purpose": "Écriture du lecteur (« Votre avis », « Votre vote », « Dernier vote ») : jamais sous 20, jamais plus de trois mots, jamais pour une donnée."
       }
     },
     "shadows": [
@@ -670,14 +734,49 @@
     ],
     "motion": [
       {
+        "name": "button-stroke",
+        "value": "220ms, trait en diagonale de gauche à droite, angle entre −14° et −4°",
+        "purpose": "Étape 1 du geste du vote : le trait traverse le bouton choisi (ButtonStroke)."
+      },
+      {
+        "name": "title-sweep",
+        "value": "260ms cubic-bezier(0.16, 1, 0.3, 1), ligne après ligne",
+        "purpose": "Étape 2 : le trait balaie le titre de la feuille (SweepText, [data-sweep] sur le web)."
+      },
+      {
+        "name": "sheet-leave",
+        "value": "320ms, translation de −56px et fondu",
+        "purpose": "Étape 3 : la feuille remonte vers « Dernier vote »."
+      },
+      {
         "name": "mark-sweep",
         "value": "220ms, scaleX 0 → 1 depuis la gauche",
-        "purpose": "Balayage du trait de surligneur sur le dernier vote (Voter). Suit Réduire les animations."
+        "purpose": "Balayage du trait de surligneur sur le dernier vote (Voter)."
       },
       {
         "name": "sheet-fade-in",
         "value": "220ms fade",
-        "purpose": "Apparition de la feuille de proposition suivante."
+        "purpose": "Étape 4 : apparition de la feuille suivante ; aussi l'apparition du bilan."
+      },
+      {
+        "name": "hemicycle-travel",
+        "value": "420ms Easing.out(Easing.exp), 45ms d'écart par point, échelle 0.6 → 1",
+        "purpose": "Les points de l'hémicycle partent de la place du lecteur."
+      },
+      {
+        "name": "hemicycle-fill",
+        "value": "180ms Easing.out(Easing.exp)",
+        "purpose": "Le surligneur remplit les points « comme vous »."
+      },
+      {
+        "name": "more-info-fade",
+        "value": "180ms fade",
+        "purpose": "Ouverture de « En savoir plus »."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "aucune animation",
+        "purpose": "Avec « Réduire les animations », état final direct pour toutes les séquences ci-dessus."
       }
     ],
     "breakpoints": [
@@ -705,7 +804,30 @@
     "highlighter": {
       "web": "background-image: linear-gradient(transparent 38%, rgba(234, 219, 63, 0.85) 38%, rgba(234, 219, 63, 0.85) 94%, transparent 94%); box-decoration-break: clone; padding: 0 2px; margin: 0 -2px; border-radius: 2px;",
       "native": "backgroundColor: rgba(234, 219, 63, 0.7)",
-      "selection": "rgba(234, 219, 63, 0.55)"
+      "selection": "rgba(234, 219, 63, 0.55)",
+      "markers": {
+        "jaune": {
+          "solid": "#EADB3F",
+          "native": "rgba(234, 219, 63, 0.7)",
+          "web": "rgba(234, 219, 63, 0.85)"
+        },
+        "rose": {
+          "solid": "#F2A7C3",
+          "native": "rgba(242, 167, 195, 0.7)",
+          "web": "rgba(242, 167, 195, 0.85)"
+        },
+        "vert": {
+          "solid": "#A8E0A1",
+          "native": "rgba(168, 224, 161, 0.7)",
+          "web": "rgba(168, 224, 161, 0.85)"
+        },
+        "bleu": {
+          "solid": "#A9D3F5",
+          "native": "rgba(169, 211, 245, 0.7)",
+          "web": "rgba(169, 211, 245, 0.85)"
+        }
+      },
+      "note": "Le web choisit la bande via [data-marked='rose'|'vert'|'bleu'] (variable --marker, jaune par défaut). Une marque garde la couleur avec laquelle elle a été posée."
     },
     "focusRing": "outline: 2px solid #1C1E21; outline-offset: 2px;"
   },
@@ -716,7 +838,7 @@
       "refersTo": "button-primary",
       "description": "Action unique d'un état, encre pleine.",
       "html": "<button class=\"ds-btn-primary\">Continuer à voter</button>",
-      "css": ".ds-btn-primary{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #1C1E21;background:#1C1E21;color:#FFFFFF;cursor:pointer}.ds-btn-primary:active{background:#3A3F45}.ds-btn-primary:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}.ds-btn-primary:disabled{opacity:.45}"
+      "css": ".ds-btn-primary{font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #1C1E21;background:#1C1E21;color:#FFFFFF;cursor:pointer}.ds-btn-primary:active{background:#3A3F45}.ds-btn-primary:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}.ds-btn-primary:disabled{opacity:.45}"
     },
     {
       "name": "Secondary Button",
@@ -724,7 +846,7 @@
       "refersTo": "button-secondary",
       "description": "Bouton par défaut, feuille blanche à filet.",
       "html": "<button class=\"ds-btn-secondary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M20 11a8 8 0 1 0-2.3 5.7\"/><path d=\"M20 4v7h-7\"/></svg>Réinitialiser mes votes</button>",
-      "css": ".ds-btn-secondary{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #D5D9DD;background:#FFFFFF;color:#1C1E21;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.ds-btn-secondary:active{background:#EEF0F1}.ds-btn-secondary:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+      "css": ".ds-btn-secondary{font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #D5D9DD;background:#FFFFFF;color:#1C1E21;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.ds-btn-secondary:active{background:#EEF0F1}.ds-btn-secondary:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
       "name": "Danger Button",
@@ -732,7 +854,7 @@
       "refersTo": "button-danger",
       "description": "Second appui de la réinitialisation, sans modale.",
       "html": "<button class=\"ds-btn-danger\">Confirmer : effacer 12 votes</button>",
-      "css": ".ds-btn-danger{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #A4482A;background:#F5E7E1;color:#A4482A;cursor:pointer}.ds-btn-danger:active{background:#EFD9CF}.ds-btn-danger:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+      "css": ".ds-btn-danger{font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;font-size:17px;line-height:24px;font-weight:600;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #A4482A;background:#F5E7E1;color:#A4482A;cursor:pointer}.ds-btn-danger:active{background:#EFD9CF}.ds-btn-danger:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
       "name": "Search Field",
@@ -740,7 +862,7 @@
       "refersTo": "search-field",
       "description": "Recherche d'Explorer sur filet léger.",
       "html": "<label class=\"ds-search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5B6168\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-4-4\"/></svg><input placeholder=\"Rechercher une proposition\"></label>",
-      "css": ".ds-search{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:12px;background:#E8EBED}.ds-search input{flex:1;border:0;background:transparent;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:17px;line-height:24px;color:#1C1E21;caret-color:#1C1E21;outline:none;padding:10px 0}.ds-search input::placeholder{color:#5B6168}.ds-search:focus-within{outline:2px solid #1C1E21;outline-offset:2px}"
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:12px;background:#E8EBED}.ds-search input{flex:1;border:0;background:transparent;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;font-size:17px;line-height:24px;color:#1C1E21;caret-color:#1C1E21;outline:none;padding:10px 0}.ds-search input::placeholder{color:#5B6168}.ds-search:focus-within{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
       "name": "Segmented Control",
@@ -748,7 +870,7 @@
       "refersTo": "segmented-track",
       "description": "Filtre Lois : Toutes, Adoptées, Rejetées.",
       "html": "<div class=\"ds-seg\" role=\"tablist\"><button class=\"ds-seg-item is-on\">Toutes 28</button><button class=\"ds-seg-item\">Adoptées 17</button><button class=\"ds-seg-item\">Rejetées 11</button></div>",
-      "css": ".ds-seg{display:flex;background:#E8EBED;border-radius:12px;padding:3px;min-height:44px}.ds-seg-item{flex:1;border:0;background:transparent;border-radius:9px;padding:0 6px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums;cursor:pointer}.ds-seg-item.is-on{background:#FFFFFF;color:#1C1E21;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}.ds-seg-item:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+      "css": ".ds-seg{display:flex;background:#E8EBED;border-radius:12px;padding:3px;min-height:44px}.ds-seg-item{flex:1;border:0;background:transparent;border-radius:9px;padding:0 6px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums;cursor:pointer}.ds-seg-item.is-on{background:#FFFFFF;color:#1C1E21;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}.ds-seg-item:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
       "name": "Navigation (web)",
@@ -756,23 +878,23 @@
       "refersTo": "tab-bar-web",
       "description": "Barre d'onglets web, en haut à partir de 900px, wordmark texte seul.",
       "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">ÉLIRE</span><a class=\"ds-nav-tab is-on\">Voter</a><a class=\"ds-nav-tab\">Classement</a><a class=\"ds-nav-tab\">Lois</a><a class=\"ds-nav-tab\">Explorer</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:stretch;background:#FFFFFF;border-bottom:1px solid #D5D9DD;min-height:56px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif}.ds-nav-brand{margin-right:auto;padding:0 16px;display:flex;align-items:center;font-size:17px;font-weight:600;color:#1C1E21}.ds-nav-tab{position:relative;display:flex;align-items:center;padding:0 14px;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;cursor:pointer;text-decoration:none}.ds-nav-tab:hover,.ds-nav-tab:active{background:#EEF0F1}.ds-nav-tab.is-on{color:#1C1E21;font-weight:600}.ds-nav-tab.is-on::after{content:\"\";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#1C1E21}.ds-nav-tab:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+      "css": ".ds-nav{display:flex;align-items:stretch;background:#FFFFFF;border-bottom:1px solid #D5D9DD;min-height:56px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif}.ds-nav-brand{margin-right:auto;padding:0 16px;display:flex;align-items:center;font-size:17px;font-weight:600;color:#1C1E21}.ds-nav-tab{position:relative;display:flex;align-items:center;padding:0 14px;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;cursor:pointer;text-decoration:none}.ds-nav-tab:hover,.ds-nav-tab:active{background:#EEF0F1}.ds-nav-tab.is-on{color:#1C1E21;font-weight:600}.ds-nav-tab.is-on::after{content:\"\";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#1C1E21}.ds-nav-tab:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
       "name": "Feuille de proposition",
       "kind": "card",
       "refersTo": "proposition-sheet",
-      "description": "Page du cahier Voter : marge de 48px, filet graphite, corps.",
-      "html": "<article class=\"ds-sheet\"><div class=\"ds-sheet-margin\"><span class=\"ds-sheet-ref\">P-024</span><span class=\"ds-sheet-tile\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#3B7D4A\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z\"/><path d=\"M5 19 13 11\"/></svg></span></div><div class=\"ds-sheet-body\"><h2>Rénover cinq millions de logements d'ici 2032</h2><p>Un prêt à taux zéro couvre l'isolation et le chauffage des ménages modestes.</p><a>Voir la source et le contexte</a></div></article>",
-      "css": ".ds-sheet{display:flex;background:#FFFFFF;border:1px solid #D5D9DD;border-radius:14px;overflow:hidden;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:560px}.ds-sheet-margin{width:48px;flex:none;border-right:1px solid #5B6168;display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 2px 0}.ds-sheet-ref{font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums}.ds-sheet-tile{width:32px;height:32px;border-radius:8px;background:#E6F0E8;display:flex;align-items:center;justify-content:center}.ds-sheet-body{flex:1;padding:24px 24px 0 16px;display:flex;flex-direction:column;gap:16px}.ds-sheet-body h2{margin:0;font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.2px;color:#1C1E21}.ds-sheet-body p{margin:0;font-size:17px;line-height:24px;color:#3A3F45}.ds-sheet-body a{border-top:1px solid #D5D9DD;min-height:44px;display:flex;align-items:center;font-size:13px;font-weight:600;color:#1C1E21;text-decoration:underline;text-decoration-color:#5B6168;cursor:pointer}"
+      "description": "Page du cahier Voter : marge de 48px, filet graphite, corps, « En savoir plus » fermé (glossaire puis contexte, aucune source).",
+      "html": "<article class=\"ds-sheet\"><div class=\"ds-sheet-margin\"><span class=\"ds-sheet-ref\">P-024</span><span class=\"ds-sheet-tile\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#3B7D4A\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z\"/><path d=\"M5 19 13 11\"/></svg></span></div><div class=\"ds-sheet-body\"><h2>Rénover cinq millions de logements d'ici 2032</h2><p>Un prêt à taux zéro couvre l'isolation et le chauffage des ménages modestes.</p><a>En savoir plus</a></div></article>",
+      "css": ".ds-sheet{display:flex;background:#FFFFFF;border:1px solid #D5D9DD;border-radius:14px;overflow:hidden;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;max-width:560px}.ds-sheet-margin{width:48px;flex:none;border-right:1px solid #5B6168;display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 2px 0}.ds-sheet-ref{font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums}.ds-sheet-tile{width:32px;height:32px;border-radius:8px;background:#E6F0E8;display:flex;align-items:center;justify-content:center}.ds-sheet-body{flex:1;padding:24px 24px 0 16px;display:flex;flex-direction:column;gap:16px}.ds-sheet-body h2{margin:0;font-family:\"Literata\", Georgia, serif;font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.2px;color:#1C1E21}.ds-sheet-body p{margin:0;font-size:17px;line-height:24px;color:#3A3F45}.ds-sheet-body a{border-top:1px solid #D5D9DD;min-height:44px;display:flex;align-items:center;font-size:13px;font-weight:600;color:#1C1E21;text-decoration:underline;text-decoration-color:#5B6168;cursor:pointer}"
     },
     {
       "name": "Rangée de vote",
       "kind": "custom",
       "refersTo": "vote-option",
-      "description": "Cinq niveaux égaux, signe en couleur d'échelle, choix en bordure 2px.",
-      "html": "<div class=\"ds-vote\" role=\"radiogroup\"><button class=\"ds-vote-opt\" style=\"--c:#8E3A1F\"><b>−2</b>Impossible</button><button class=\"ds-vote-opt\" style=\"--c:#9C5530\"><b>−1</b>Contre</button><button class=\"ds-vote-opt\" style=\"--c:#5B6168\"><b>0</b>Neutre</button><button class=\"ds-vote-opt is-on\" style=\"--c:#3A7D60\"><b>+1</b>Pour</button><button class=\"ds-vote-opt\" style=\"--c:#22654A\"><b>+2</b>Parfait</button></div>",
-      "css": ".ds-vote{display:flex;gap:4px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:480px}.ds-vote-opt{flex:1;min-width:0;min-height:60px;padding:8px 0;border:1px solid #D5D9DD;border-radius:12px;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:13px;line-height:18px;font-weight:500;color:#1C1E21;cursor:pointer}.ds-vote-opt b{font-size:17px;line-height:24px;font-weight:600;color:var(--c);font-variant-numeric:tabular-nums}.ds-vote-opt:active{background:#EEF0F1}.ds-vote-opt.is-on{border:2px solid var(--c)}.ds-vote-opt:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
+      "description": "Quatre niveaux égaux, signe en couleur d'échelle, choix en bordure 2px ; « Je ne sais pas » à part, pleine largeur.",
+      "html": "<div class=\"ds-vote\" role=\"radiogroup\"><div class=\"ds-vote-row\"><button class=\"ds-vote-opt\" style=\"--c:#8E3A1F\"><b>−2</b>Impossible</button><button class=\"ds-vote-opt\" style=\"--c:#9C5530\"><b>−1</b>Contre</button><button class=\"ds-vote-opt is-on\" style=\"--c:#3A7D60\"><b>+1</b>Pour</button><button class=\"ds-vote-opt\" style=\"--c:#22654A\"><b>+2</b>Parfait</button></div><button class=\"ds-vote-opt ds-vote-unsure\" style=\"--c:#1C1E21\">Je ne sais pas</button></div>",
+      "css": ".ds-vote{display:flex;flex-direction:column;gap:8px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;max-width:480px}.ds-vote-row{display:flex;gap:4px}.ds-vote-opt{flex:1;min-width:0;min-height:60px;padding:8px 0;border:1px solid #D5D9DD;border-radius:12px;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:13px;line-height:18px;font-weight:500;color:#1C1E21;cursor:pointer}.ds-vote-opt b{font-size:17px;line-height:24px;font-weight:600;color:var(--c);font-variant-numeric:tabular-nums}.ds-vote-opt:active{background:#EEF0F1}.ds-vote-opt.is-on{border:2px solid var(--c)}.ds-vote-unsure{flex:none;min-height:44px;font-weight:600}.ds-vote-opt:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
       "name": "Trait de surligneur",
@@ -780,32 +902,40 @@
       "refersTo": "list-card",
       "description": "Ligne de proposition votée : titre surligné, ligne meta graphite, note en couleur d'échelle.",
       "html": "<div class=\"ds-row\"><p class=\"ds-row-title\"><span class=\"ds-mark\">Rénover cinq millions de logements d'ici 2032</span></p><p class=\"ds-row-meta\">P-024 · <b>Pour +1</b></p></div>",
-      "css": ".ds-row{background:#FFFFFF;border:1px solid #D5D9DD;border-radius:14px;padding:12px 12px 12px 16px;min-height:64px;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:480px;cursor:pointer}.ds-row:active{background:#EEF0F1}.ds-row-title{margin:0 0 4px;font-size:17px;line-height:24px;color:#1C1E21}.ds-mark{background-image:linear-gradient(transparent 38%,rgba(234,219,63,.85) 38%,rgba(234,219,63,.85) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px;margin:0 -2px;border-radius:2px}.ds-row-meta{margin:0;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums}.ds-row-meta b{font-weight:600;color:#3A7D60}"
+      "css": ".ds-row{background:#FFFFFF;border:1px solid #D5D9DD;border-radius:14px;padding:12px 12px 12px 16px;min-height:64px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;max-width:480px;cursor:pointer}.ds-row:active{background:#EEF0F1}.ds-row-title{margin:0 0 4px;font-size:17px;line-height:24px;color:#1C1E21}.ds-mark{background-image:linear-gradient(transparent 38%,rgba(234,219,63,.85) 38%,rgba(234,219,63,.85) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px;margin:0 -2px;border-radius:2px}.ds-row-meta{margin:0;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;font-variant-numeric:tabular-nums}.ds-row-meta b{font-weight:600;color:#3A7D60}"
     },
     {
       "name": "Panneau électoral",
       "kind": "card",
       "refersTo": "candidate-panel",
-      "description": "Panneaux identiques numérotés sur la tôle du Classement, rangs ex æquo partagés.",
-      "html": "<div class=\"ds-board\"><a class=\"ds-panel\"><span class=\"ds-panel-rank\">1</span><span class=\"ds-panel-avatar\">AB</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>72 %</strong><span class=\"ds-panel-muted\">ex æquo, sur 14 votes</span></a><a class=\"ds-panel\"><span class=\"ds-panel-rank\">1</span><span class=\"ds-panel-avatar\">CD</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>72 %</strong><span class=\"ds-panel-muted\">ex æquo, sur 12 votes</span></a><a class=\"ds-panel\"><span class=\"ds-panel-rank\">3</span><span class=\"ds-panel-avatar\">EF</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>58 %</strong><span class=\"ds-panel-muted\">sur 11 votes</span></a></div>",
-      "css": ".ds-board{display:flex;gap:8px;padding:8px;background:#D5D9DD;border-radius:6px;border-bottom:5px solid #B9BFC5;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;max-width:480px}.ds-panel{position:relative;flex:1;min-width:0;min-height:196px;background:#FFFFFF;border-radius:2px;padding:32px 8px 16px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-size:13px;line-height:18px;color:#1C1E21;cursor:pointer}.ds-panel:active{background:#EEF0F1}.ds-panel:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}.ds-panel-rank{position:absolute;top:0;left:0;width:28px;height:28px;background:#1C1E21;color:#FFFFFF;font-weight:600;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}.ds-panel-avatar{width:56px;height:56px;border-radius:50%;background:#E8EBED;color:#5B6168;font-weight:600;font-size:20px;display:flex;align-items:center;justify-content:center}.ds-panel b{font-weight:600;margin-top:4px}.ds-panel strong{margin-top:auto;padding-top:8px;font-size:17px;line-height:24px;font-weight:600;font-variant-numeric:tabular-nums}.ds-panel-muted{color:#5B6168;font-variant-numeric:tabular-nums}"
+      "description": "Panneaux identiques numérotés sur la tôle du Classement, rangs ex æquo partagés, jauge de fiabilité à trois traits.",
+      "html": "<div class=\"ds-board\"><a class=\"ds-panel\"><span class=\"ds-panel-rank\">1</span><span class=\"ds-panel-avatar\">AB</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>72 %</strong><span class=\"ds-panel-muted\">ex æquo, sur 14 votes</span><span class=\"ds-rel\"><span class=\"ds-rel-bars\"><i class=\"on\" style=\"height:6px\"></i><i class=\"on\" style=\"height:9px\"></i><i style=\"height:12px\"></i></span>assez sûr</span></a><a class=\"ds-panel\"><span class=\"ds-panel-rank\">1</span><span class=\"ds-panel-avatar\">CD</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>72 %</strong><span class=\"ds-panel-muted\">ex æquo, sur 12 votes</span></a><a class=\"ds-panel\"><span class=\"ds-panel-rank\">3</span><span class=\"ds-panel-avatar\">EF</span><b>Nom Prénom</b><span class=\"ds-panel-muted\">Parti</span><strong>58 %</strong><span class=\"ds-panel-muted\">sur 11 votes</span></a></div>",
+      "css": ".ds-board{display:flex;gap:8px;padding:8px;background:#D5D9DD;border-radius:6px;border-bottom:5px solid #B9BFC5;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;max-width:480px}.ds-panel{position:relative;flex:1;min-width:0;min-height:196px;background:#FFFFFF;border-radius:2px;padding:32px 8px 16px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-size:13px;line-height:18px;color:#1C1E21;cursor:pointer}.ds-panel:active{background:#EEF0F1}.ds-panel:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}.ds-panel-rank{position:absolute;top:0;left:0;width:28px;height:28px;background:#1C1E21;color:#FFFFFF;font-weight:600;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}.ds-panel-avatar{width:56px;height:56px;border-radius:50%;background:#E8EBED;color:#5B6168;font-weight:600;font-size:20px;display:flex;align-items:center;justify-content:center}.ds-panel b{font-weight:600;margin-top:4px}.ds-panel strong{margin-top:auto;padding-top:8px;font-size:17px;line-height:24px;font-weight:600;font-variant-numeric:tabular-nums}.ds-panel-muted{color:#5B6168;font-variant-numeric:tabular-nums}.ds-rel{display:flex;align-items:center;gap:6px;color:#5B6168}.ds-rel-bars{display:flex;align-items:flex-end;gap:2px}.ds-rel-bars i{width:4px;border-radius:1px;background:#D5D9DD}.ds-rel-bars i.on{background:#1C1E21}"
+    },
+    {
+      "name": "Sélecteur de surligneur",
+      "kind": "custom",
+      "refersTo": "marker-option",
+      "description": "Les quatre surligneurs du lecteur en grille 2 × 2 : un trait de biais, son nom ; choix en bordure encre 2px.",
+      "html": "<div class=\"ds-markers\" role=\"radiogroup\"><button class=\"ds-marker is-on\"><i style=\"background:rgba(234,219,63,.7)\"></i>Jaune</button><button class=\"ds-marker\"><i style=\"background:rgba(242,167,195,.7)\"></i>Rose</button><button class=\"ds-marker\"><i style=\"background:rgba(168,224,161,.7)\"></i>Vert</button><button class=\"ds-marker\"><i style=\"background:rgba(169,211,245,.7)\"></i>Bleu</button></div>",
+      "css": ".ds-markers{display:flex;flex-wrap:wrap;gap:8px;max-width:480px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif}.ds-marker{flex:1 1 45%;min-height:56px;display:flex;align-items:center;gap:12px;padding:0 16px;border:1px solid #D5D9DD;border-radius:12px;background:#FFFFFF;font-size:17px;line-height:24px;color:#1C1E21;cursor:pointer}.ds-marker i{width:40px;height:14px;border-radius:3px;transform:rotate(-6deg)}.ds-marker:active{background:#EEF0F1}.ds-marker.is-on{border:2px solid #1C1E21;font-weight:600}.ds-marker:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     }
   ],
   "narrative": {
     "northStar": "Le cahier annoté",
-    "overview": "Chaque proposition se lit comme un texte qu'on annote. Le papier est blanc froid, l'encre presque noire, le secondaire au graphite, les séparations au filet fin. L'avis de l'utilisateur est la seule chose qui se voit en couleur vive : un trait de surligneur jaune derrière ce qu'il a noté, et la valeur de sa note écrite en toutes lettres dans sa couleur d'échelle. Tout le reste reste en encre neutre, parce que l'application ne doit pas prendre parti.\n\nLa densité est celle d'un cahier de cours : une colonne de lecture (720px max), un rythme invisible de 8pt, deux tailles de lecture, une hiérarchie portée par la graisse, la casse et les filets plutôt que par la couleur. Les surfaces sont plates ; la profondeur vient du contraste papier / feuille et des filets hairline. Le Classement change de matière : une tôle grise de panneaux électoraux identiques et numérotés, pour rendre l'égalité de traitement visible.\n\nRejets confirmés : l'air de site gouvernemental, l'appli gadget ou gamifiée, la pile de cartes à swiper et le dégradé violet des applis à cartes à swiper, la carte centrée à puce colorée du standard civique. Thème clair uniquement, par décision produit.",
+    "overview": "Chaque proposition se lit comme un texte qu'on annote. Le papier est blanc froid, l'encre presque noire, le secondaire au graphite, les séparations au filet fin. L'avis de l'utilisateur est la seule chose qui se voit en couleur vive : un trait de surligneur (jaune par défaut, ou rose, vert, bleu) derrière ce qu'il a noté, et la valeur de sa note écrite en toutes lettres dans sa couleur d'échelle. Tout le reste reste en encre neutre, parce que l'application ne doit pas prendre parti.\n\nLa densité est celle d'un cahier de cours : une colonne de lecture (720px max), un rythme invisible de 8pt, deux tailles de lecture, une hiérarchie portée par la graisse, la casse et les filets plutôt que par la couleur. Les surfaces sont plates ; la profondeur vient du contraste papier / feuille et des filets hairline. Le Classement change de matière : une tôle grise de panneaux électoraux identiques et numérotés, pour rendre l'égalité de traitement visible.\n\nRejets confirmés : l'air de site gouvernemental, l'appli gadget ou gamifiée, la pile de cartes à swiper et le dégradé violet des applis à cartes à swiper, la carte centrée à puce colorée du standard civique. Thème clair uniquement, par décision produit.",
     "keyCharacteristics": [
       "Papier blanc froid, jamais crème ; encre, graphite, filets.",
-      "Jaune surligneur réservé aux marques de l'utilisateur.",
+      "Surligneur du lecteur (jaune, rose, vert ou bleu, à son choix) réservé à ses marques.",
       "Valeur de vote écrite en toutes lettres, avec son signe, dans sa couleur d'échelle.",
       "Numéros stables (P-531, L-28) en chiffres tabulaires partout.",
-      "Police système, deux tailles de lecture (17 et 13).",
+      "Literata pour les titres, Atkinson Hyperlegible Next pour lire, Caveat pour l'écriture du lecteur ; deux tailles de lecture (17 et 13).",
       "Classement en panneaux électoraux identiques sur une tôle grise."
     ],
     "rules": [
       {
         "name": "The Reader's Highlighter Rule",
-        "body": "Le jaune ne marque que ce que l'utilisateur a noté. Le wordmark, les états, les issues parlementaires, les illustrations : jamais jaunes.",
+        "body": "Le surligneur ne marque que ce que l'utilisateur a noté, dans la couleur qu'il a choisie. Le wordmark, les états, les issues parlementaires, les illustrations : jamais surlignés. Une marque posée ne change jamais de couleur.",
         "section": "colors"
       },
       {
@@ -825,7 +955,7 @@
       },
       {
         "name": "The Written Value Rule",
-        "body": "Une note s'écrit en toutes lettres avec son signe : Impossible −2, Contre −1, Neutre 0, Pour +1, Parfait +2, avec le vrai signe moins (U+2212). Chiffres, numéros et compteurs en chiffres tabulaires.",
+        "body": "Une note s'écrit en toutes lettres avec son signe : Impossible −2, Contre −1, Pour +1, Parfait +2, avec le vrai signe moins (U+2212) ; « Je ne sais pas » s'écrit sans signe, en graphite. Chiffres, numéros et compteurs en chiffres tabulaires.",
         "section": "typography"
       },
       {
@@ -845,7 +975,7 @@
       }
     ],
     "dos": [
-      "Do réserver le surligneur (mark) aux propositions que l'utilisateur a notées, sur toutes les surfaces qui les citent.",
+      "Do réserver le surligneur aux propositions et scrutins que l'utilisateur a votés, dans la couleur de chaque marque, sur toutes les surfaces qui les citent.",
       "Do écrire chaque note en toutes lettres avec son signe (Impossible −2 à Parfait +2), dans sa couleur d'échelle.",
       "Do écrire les positions des candidats et les issues parlementaires en encre neutre, sur filet léger pour les badges.",
       "Do mettre le numéro stable (P-xxx, L-xx), le statut et la thématique dans une ligne meta graphite sous le titre des cartes de liste.",
@@ -854,7 +984,7 @@
       "Do donner 44pt minimum à chaque cible (48 sur Android)."
     ],
     "donts": [
-      "Don't mettre du jaune ailleurs que sur une marque de l'utilisateur, wordmark compris.",
+      "Don't utiliser une couleur de surligneur ailleurs que sur une marque de l'utilisateur, wordmark compris ; ne jamais recolorer une marque déjà posée.",
       "Don't colorer un résultat parlementaire ou une position de candidat avec l'échelle de vote ou en vert / rouge.",
       "Don't ajouter une colonne de marge aux cartes de liste : la marge de 48px appartient à la feuille Voter.",
       "Don't différencier les panneaux du Classement (taille, couleur, mise en avant du premier).",
