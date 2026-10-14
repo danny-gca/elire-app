@@ -29,7 +29,9 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - La source est le document qui contient la mesure (programme, discours, entretien), pas une page d'accueil ni un article qui la commente.
 - `description` = citation exacte entre « », coupures notées `[...]`, plusieurs extraits séparés par ` ; `.
 - `titre` = la mesure réelle, reformulée court et neutre : pas d'adjectif qui juge, pas de comparaison, pas de commentaire.
-- `contexte` = titre du document (et page) ; programme 2022 indiqué comme tel tant que le 2027 n'est pas publié.
+- `contexte` = type de document et circonstance (et page), puis les précisions de la mesure ; chaque précision doit figurer dans la source. Programme 2022 indiqué comme tel tant que le 2027 n'est pas publié.
+- Anonymat (vote à l'aveugle) : aucun nom de candidat, de parti ou de slogan de campagne dans `titre`, `description` ou `contexte`.
+- Lisibilité : titre d'une idée (environ 90 caractères), mots simples, sigles expliqués ; citation courte.
 - `thematique_id` cohérent, auteur bien le candidat (pas un cadre du parti).
 - Verdict : **confirmée**, **reformulée** (titre ou citation corrigés selon la source) ou **retirée** (introuvable).
 

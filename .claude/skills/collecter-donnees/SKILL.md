@@ -37,7 +37,8 @@ id,thematique_id,titre,description,source_url,date_declaration,contexte
 - `titre` : la mesure, courte et neutre.
 - `description` : citation exacte « … », coupures `[...]`.
 - `source_url` : le document précis ; `date_declaration` : `AAAA-MM-JJ` ou vide si la source n'est pas datée.
-- `contexte` : titre du document (et page).
+- `contexte` : type de document et circonstance (et page), puis les précisions utiles de la mesure (chiffres, modalités, exceptions), tirées de la source ; 250 caractères environ.
+- Anonymat : ni nom du candidat ou du parti, ni slogan de campagne dans `titre`, `description` et `contexte` (lus pendant le vote à l'aveugle). Couper le nom de la citation avec `[...]`.
 - Viser le même nombre de propositions par candidat (6 aujourd'hui), réparties sur plusieurs thèmes, en choisissant des mesures centrales du programme plutôt que des marginales.
 - Les numéros `P-xxx` sont attribués par le build : ne pas les écrire.
 

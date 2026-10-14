@@ -29,8 +29,10 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 1. **Une source précise** : le programme, le discours ou le scrutin qui contient la mesure. Une page d'accueil est refusée.
 2. **Description = citation exacte** entre « », copiée de la source.
 3. **Titre = reformulation neutre et courte** de la mesure, sans commentaire, sans adjectif qui juge.
-4. **Contexte** = titre du document source.
-5. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
+4. **Contexte** = type de document et circonstance, puis les précisions de la mesure absentes du titre (chiffres, modalités, exceptions). Uniquement des faits tirés de la source, 250 caractères environ, sans répéter la date.
+5. **Anonymat** : titre, description et contexte sont lus pendant le vote à l'aveugle. Aucun nom de candidat, de parti ou de slogan de campagne : on coupe le nom de la citation avec `[...]` et on décrit le document sans le nommer par son auteur (« Programme 2027, p. 24 », « Interview rapportée par Public Sénat »).
+6. **Simple et court** : un titre d'une idée (environ 90 caractères), sans sigle non expliqué ; une citation de moins de 200 caractères environ.
+7. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
 
 ### Neutralité
 

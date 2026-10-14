@@ -290,3 +290,123 @@ Points restants : loi retraites 2023 (adoptée par 49.3, positions déduites de 
 - LFI : *L'Avenir en commun*, édition 2025, sert de source ; nouvelle édition (1 069 mesures) présentée les 6 et 7 novembre 2026 : à revérifier ensuite.
 - RN : programme « rédigé à 95 % » (franceinfo, 19/05/2026) mais aucune publication officielle trouvée ; les mesures restent sourcées sur le programme 2022, à mettre à jour dès publication.
 - Les programmes 2022 sont conservés comme sources tant qu'aucun programme 2027 n'est publié.
+
+# Anonymat et lisibilité des propositions - 2026-10-14
+
+Les propositions sont lues pendant le vote à l'aveugle (titre et citation sur la carte, contexte dans la feuille). Règle ajoutée à `CONTRIBUTING.md` : ni nom de candidat, ni parti, ni slogan de campagne ; titre d'une idée, mots simples, citation courte.
+
+- 95 propositions retouchées : 90 titres, 23 citations, 78 contextes.
+- Citations : uniquement raccourcies (coupures `[...]`) ou débarrassées de paraphrases de journaliste ; 3 nouvelles relues dans la source (prop-br-1, prop-br-6, prop-ga-5) pour retirer le nom du candidat.
+- Titres ramenés à ce que dit la citation : « conseiller territorial unique » retiré de prop-br-6 (absent de la source), « détention d'armes » retiré de prop-ht-4, « 2 200 euros » retiré de prop-na-1, « obliger » remplacé par « prendre en charge » en prop-mt-5, « inutiles » (mot du candidat) retiré de prop-mt-1, « taxe lapin » et « ultra-riches » remplacés par une formulation neutre.
+- `check-sources.mjs` : 0 erreur ; 15 « à lire » avant, 10 après (tous déjà présents avant).
+
+Contextes : les 96 réécrits au format « type de document et circonstance, puis précisions de la mesure » (chiffres, modalités, exceptions), chaque précision relue dans la source téléchargée ; les détails retirés des titres y sont repris quand la source les confirme.
+
+Titres corrigés à la relecture des sources :
+- prop-ep-4 : la source précise qu'il ne propose pas de supprimer les 35 heures (indiqué dans le contexte).
+- prop-ez-2 : seul l'uniforme est dans la citation ; « abolir le collège unique » absent de la source, l'examen de fin de primaire passe en contexte.
+- prop-ez-6 : l'interdiction vise tous les signes religieux (kippa comprise), le voile étant la priorité.
+- prop-fro-3 : « lunettes et prothèses dentaires » absents de la source, remplacé par « tous les soins prescrits ».
+- prop-fr-5 : taxe de 4 % sur les rachats d'actions absente de la question au Gouvernement, retirée.
+- prop-fa-1 : « et de l'euro » absent de la source, retiré.
+- prop-na-2 : reformulé selon le discours (« on ne licencie personne »).
+
+Points restants : citations en anglais (prop-ez-2, prop-ez-6), à remplacer par une source française ; le domaine du lien source (« Ouvrir la source · … ») reste visible pendant le vote et peut révéler l'auteur.
+
+Changements :
+
+- prop-am-1 : titre, citation, contexte
+- prop-am-4 : titre, citation, contexte
+- prop-am-6 : titre, contexte
+- prop-br-1 : citation
+- prop-br-3 : titre, contexte
+- prop-br-4 : titre, citation, contexte
+- prop-br-5 : titre, citation
+- prop-br-6 : titre, citation, contexte
+- prop-dl-1 : titre
+- prop-dl-2 : titre, contexte
+- prop-dl-3 : titre, contexte
+- prop-dl-4 : titre, contexte
+- prop-dl-5 : titre
+- prop-ep-1 : titre, citation, contexte
+- prop-ep-2 : titre, contexte
+- prop-ep-3 : titre, citation, contexte
+- prop-ep-4 : titre, citation, contexte
+- prop-ep-6 : titre, contexte
+- prop-ez-1 : titre
+- prop-ez-2 : titre
+- prop-ez-3 : titre
+- prop-ez-4 : titre
+- prop-ez-5 : titre
+- prop-ez-6 : titre
+- prop-fro-1 : titre, contexte
+- prop-fro-2 : titre, contexte
+- prop-fro-3 : titre, contexte
+- prop-fro-4 : titre, contexte
+- prop-fro-5 : titre, citation, contexte
+- prop-fa-1 : titre, citation
+- prop-fa-2 : titre
+- prop-fa-3 : titre, contexte
+- prop-fa-4 : titre, contexte
+- prop-fa-5 : titre, contexte
+- prop-fa-6 : titre, contexte
+- prop-fr-1 : titre, contexte
+- prop-fr-2 : titre, contexte
+- prop-fr-3 : titre, citation, contexte
+- prop-fr-4 : titre, contexte
+- prop-fr-5 : titre, citation, contexte
+- prop-fr-6 : titre, contexte
+- prop-ga-1 : titre, citation
+- prop-ga-2 : titre
+- prop-ga-3 : titre, contexte
+- prop-ga-4 : titre, citation
+- prop-ga-5 : titre, citation, contexte
+- prop-ga-6 : titre, citation
+- prop-ht-1 : titre, contexte
+- prop-ht-2 : titre, citation, contexte
+- prop-ht-3 : titre, contexte
+- prop-ht-4 : titre, contexte
+- prop-ht-5 : titre, contexte
+- prop-ht-6 : titre, contexte
+- prop-jl-1 : titre, citation, contexte
+- prop-jl-2 : titre, contexte
+- prop-jl-3 : titre
+- prop-jl-4 : titre, contexte
+- prop-jl-5 : titre, contexte
+- prop-jl-6 : titre, contexte
+- prop-jlm-1 : titre, citation, contexte
+- prop-jlm-2 : titre, citation, contexte
+- prop-jlm-3 : titre, citation, contexte
+- prop-jlm-4 : titre, contexte
+- prop-jlm-5 : titre, contexte
+- prop-jlm-6 : titre, contexte
+- prop-mlp-1 : titre, citation, contexte
+- prop-mlp-2 : titre, contexte
+- prop-mlp-3 : titre, contexte
+- prop-mlp-4 : titre, contexte
+- prop-mlp-5 : contexte
+- prop-mlp-6 : titre, contexte
+- prop-mt-1 : titre, contexte
+- prop-mt-2 : titre, contexte
+- prop-mt-3 : titre, contexte
+- prop-mt-4 : titre, contexte
+- prop-mt-5 : titre, contexte
+- prop-mt-6 : titre, contexte
+- prop-na-1 : titre, contexte
+- prop-na-2 : titre, contexte
+- prop-na-3 : titre, contexte
+- prop-na-4 : contexte
+- prop-na-5 : titre, contexte
+- prop-na-6 : contexte
+- prop-nda-1 : titre, contexte
+- prop-nda-2 : titre, contexte
+- prop-nda-3 : contexte
+- prop-nda-4 : titre, contexte
+- prop-nda-5 : titre, contexte
+- prop-nda-6 : titre, contexte
+- prop-rg-1 : titre, contexte
+- prop-rg-2 : titre, contexte
+- prop-rg-3 : titre, contexte
+- prop-rg-4 : titre, contexte
+- prop-rg-5 : titre, contexte
+- prop-rg-6 : titre, contexte
