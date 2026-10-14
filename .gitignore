@@ -58,3 +58,4 @@ dist-test/
 .claude/skills/impeccable/
 .claude/agents/
 .claude/settings.local.json
+.env
