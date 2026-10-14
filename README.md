@@ -61,7 +61,7 @@ Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à part
 - **UI** : `expo-image`, `react-native-reanimated`, `@expo/vector-icons`.
 - **Données** : Zod 4 + papaparse (outils de build).
 - **Tests** : Jest (`jest-expo`).
-- **Plateformes** : iOS, Android, Web (export statique).
+- **Plateformes** : iOS, Android, Web (export statique). Déploiement mobile documenté dans [docs/deploy-apps.md](docs/deploy-apps.md).
 
 ## 5. Commandes Développeur
 
