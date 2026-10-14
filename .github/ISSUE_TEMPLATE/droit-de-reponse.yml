@@ -1,0 +1,31 @@
+name: Droit de réponse
+description: Un candidat ou un parti demande une correction ou exerce son droit de réponse.
+title: "Droit de réponse : "
+labels: ["droit de réponse"]
+body:
+  - type: input
+    id: demandeur
+    attributes:
+      label: Candidat ou parti concerné
+      description: Et votre rôle (candidat, équipe de campagne, parti).
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Référence
+      description: Numéro affiché dans l'app (P-531, L-28), s'il y en a un.
+      placeholder: P-531
+  - type: textarea
+    id: demande
+    attributes:
+      label: Votre demande
+      description: Ce qui doit être corrigé, ou le texte de votre réponse.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Lien vers un document précis qui appuie la demande.
+      placeholder: https://
