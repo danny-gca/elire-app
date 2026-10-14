@@ -19,6 +19,7 @@ import Animated, {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { Marked } from "@/components/marked";
+import { MarkerPicker } from "@/components/marker-picker";
 import { Button } from "@/components/ui/button";
 import {
   Colors,
@@ -36,17 +37,19 @@ interface Story {
   /** Mot surligné (démonstration du geste) ou souligné dans le titre. */
   key?: { word: string; style: "mark" | "underline" };
   body: string;
+  /** Dernière étape : choix du surligneur. */
+  picker?: boolean;
 }
 
 const STORIES: Story[] = [
   {
     title: "ÉLIRE",
-    body: "Présidentielle 2027. Un cahier pour se faire son avis sur les propositions des candidats, seul et au calme.",
+    body: "Présidentielle 2027. Un cahier pour se faire son avis sur les propositions des candidats, seul et au calme. Environ 20 secondes par question : un premier classement en 3 à 5 minutes, et vous arrêtez quand vous voulez.",
   },
   {
     title: "Neutralité : vous jugez la mesure, pas la personne.",
     key: { word: "la mesure", style: "mark" },
-    body: "Les propositions arrivent sans nom ni parti, dans un ordre mélangé. Vous les notez d’Impossible à Parfait, et vos notes se marquent au surligneur.",
+    body: "Les propositions arrivent sans nom ni parti, dans un ordre mélangé. Vous les notez d’Impossible à Parfait, ou « Je ne sais pas », et vos notes se marquent au surligneur.",
   },
   {
     title: "Transparence : chaque fait a sa source.",
@@ -62,6 +65,12 @@ const STORIES: Story[] = [
     title: "Confidentialité : vos avis restent chez vous.",
     key: { word: "chez vous", style: "underline" },
     body: "Aucun compte, aucune statistique envoyée. Vos votes sont enregistrés sur cet appareil seulement, et vous pouvez les effacer à tout moment.",
+  },
+  {
+    title: "Votre surligneur : vos avis, votre couleur.",
+    key: { word: "votre couleur", style: "mark" },
+    body: "Choisissez la couleur de vos marques. Vous pourrez en changer dans Classement ; ce que vous avez déjà surligné garde sa couleur.",
+    picker: true,
   },
 ];
 
@@ -173,6 +182,11 @@ export default function OnboardingScreen() {
         </View>
 
         <View style={styles.bottom}>
+          {story.picker && (
+            <View style={styles.picker}>
+              <MarkerPicker />
+            </View>
+          )}
           <Text
             style={[Type.label, styles.muted]}
             accessibilityLiveRegion="polite"
@@ -196,6 +210,7 @@ export default function OnboardingScreen() {
 }
 
 function KeyedTitle({ story }: { story: Story }) {
+  const marker = useVotesStore((s) => s.marker);
   if (!story.key) {
     return story.title;
   }
@@ -204,7 +219,7 @@ function KeyedTitle({ story }: { story: Story }) {
     <>
       {before}
       {story.key.style === "mark" ? (
-        <Marked active>{story.key.word}</Marked>
+        <Marked active marker={marker}>{story.key.word}</Marked>
       ) : (
         <Text
           style={{
@@ -316,6 +331,9 @@ const styles = StyleSheet.create({
   bottom: {
     gap: Spacing.one,
     paddingBottom: Spacing.two,
+  },
+  picker: {
+    marginBottom: Spacing.two,
   },
   cta: {
     alignSelf: "stretch",

@@ -13,12 +13,14 @@ import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { normalize, plural } from '@/lib/format';
 import type { Loi, StatutLoi } from '@/schemas/dataset';
 import { lois } from '@/services/dataset';
+import { useVotesStore } from '@/store/votes-store';
 
 type Filtre = 'tous' | StatutLoi;
 
 const count = (statut: StatutLoi) => lois.filter((l) => l.statut === statut).length;
 
 export default function LoisScreen() {
+  const loiVotes = useVotesStore((s) => s.loiVotes);
   const [query, setQuery] = useState('');
   const [filtre, setFiltre] = useState<Filtre>('tous');
 
@@ -75,7 +77,7 @@ export default function LoisScreen() {
         )}
         renderItem={({ item }) => (
           <View style={[screenStyles.column, styles.item]}>
-            <LoiCard loi={item} />
+            <LoiCard loi={item} userVote={loiVotes[item.id]} />
           </View>
         )}
         ListEmptyComponent={

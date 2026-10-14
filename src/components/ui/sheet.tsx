@@ -1,4 +1,6 @@
-import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Colors, MaxContentWidth, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
@@ -10,10 +12,36 @@ interface SheetProps {
   children: React.ReactNode;
 }
 
-// Feuille modale : pageSheet natif sur iOS, panneau du bas ailleurs.
+const OPEN_MS = 260;
+const CLOSE_MS = 200;
+
+// Feuille modale : pageSheet natif sur iOS, panneau du bas ailleurs (voile en fondu sur place, seul le panneau glisse).
 export function Sheet({ visible, title, onClose, children }: SheetProps) {
   const insets = useSafeAreaInsets();
   const ios = Platform.OS === 'ios';
+  const { height } = useWindowDimensions();
+  const reducedMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(visible);
+  const progress = useSharedValue(0);
+  if (visible && !mounted) {
+    setMounted(true);
+  }
+
+  useEffect(() => {
+    if (ios) {
+      return;
+    }
+    if (visible) {
+      progress.value = withTiming(1, { duration: reducedMotion ? 0 : OPEN_MS, easing: Easing.out(Easing.exp) });
+      return;
+    }
+    progress.value = withTiming(0, { duration: reducedMotion ? 0 : CLOSE_MS, easing: Easing.in(Easing.quad) });
+    const timer = setTimeout(() => setMounted(false), reducedMotion ? 0 : CLOSE_MS);
+    return () => clearTimeout(timer);
+  }, [visible, ios, reducedMotion, progress]);
+
+  const backdropStyle = useAnimatedStyle(() => ({ opacity: progress.value }));
+  const panelStyle = useAnimatedStyle(() => ({ transform: [{ translateY: (1 - progress.value) * height }] }));
 
   const header = (
     <View style={styles.header}>
@@ -44,13 +72,15 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
   }
 
   return (
-    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
-      <View style={styles.backdrop}>
-        <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessibilityLabel="Fermer" />
-        <View style={[styles.panel, { maxHeight: '88%' }]}>
+    <Modal visible={mounted} animationType="none" transparent onRequestClose={onClose}>
+      <View style={styles.root}>
+        <Animated.View style={[StyleSheet.absoluteFill, styles.backdrop, backdropStyle]}>
+          <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessibilityLabel="Fermer" />
+        </Animated.View>
+        <Animated.View style={[styles.panel, { maxHeight: '88%' }, panelStyle]}>
           {header}
           {content}
-        </View>
+        </Animated.View>
       </View>
     </Modal>
   );
@@ -61,10 +91,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.paper,
   },
-  backdrop: {
+  root: {
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
+  },
+  backdrop: {
     backgroundColor: 'rgba(28, 30, 33, 0.32)',
   },
   panel: {
