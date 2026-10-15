@@ -1,6 +1,6 @@
-# Contribuer à ÉLIRE
+# Contribuer à élire
 
-Merci de votre aide. ÉLIRE vit de deux choses : des données exactes et une neutralité stricte. Toute contribution est relue sur ces deux points.
+Merci de votre aide. élire vit de deux choses : des données exactes et une neutralité stricte. Toute contribution est relue sur ces deux points.
 
 En participant, vous acceptez le [code de conduite](CODE_OF_CONDUCT.md).
 
@@ -46,7 +46,7 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 ### Neutralité
 
 - Même traitement pour chaque candidat : même nombre de propositions visé, mêmes exigences de source.
-- Pas de couleur, d'ordre ou de mise en avant propre à un candidat ou un parti.
+- Pas d'ordre ni de mise en avant propre à un candidat ou un parti. Chaque parti a sa couleur (celle de son logo, dans `data/partis.json`), posée de la même façon pour tous et seulement sur son identité (anneau du portrait ; sur la fiche, bandeau et nom du parti) : jamais sur un score, un vote, ni pendant le vote à l'aveugle.
 - Un fait vérifiable, jamais une opinion.
 
 Après modification :
@@ -67,13 +67,19 @@ npm run check        # données + typecheck + lint + tests, à passer avant tout
 ```
 
 - Expo SDK 57 : avant de toucher une API Expo, lisez la doc de cette version (voir `AGENTS.md`).
-- Ajoutez une dépendance avec `npx expo install <package>`.
+- Ajoutez une dépendance avec `npx expo install <package>` (version compatible avec le SDK), jamais `npm install <package>`.
+- Mettez le SDK Expo à jour d'un bloc : `npx expo upgrade` pour changer de SDK, puis `npx expo install --fix` pour réaligner `expo-*`, `@expo/*`, React et React Native, et `npx expo-doctor` pour vérifier. Dependabot ne propose que les correctifs de ces paquets.
 - La direction visuelle est décrite dans `DESIGN.md` : le jaune est réservé aux votes de l'utilisateur.
 - Si le comportement change, mettez à jour `README.md` et `PRODUCT.md`.
 
 ## Commits et pull requests
 
-- Messages au format `type(zone): description`, en français : `feat(explorer): …`, `fix(data): …`, `docs: …`.
+- Messages au format [Conventional Commits](https://www.conventionalcommits.org/fr/v1.0.0/) : `type(zone): description`, en français, à l'impératif et sans point final.
+  - `feat` : nouvelle fonction (`feat(classement): partager l'image`)
+  - `fix` : correction (`fix(data): citation de P-412`)
+  - `docs`, `style`, `refactor`, `perf`, `test`, `ci`, `chore` (outillage, dépendances : `chore(deps): …`)
+  - zone facultative : `data`, `voter`, `classement`, `lois`, `explorer`, `fiche`, `site`, `deps`...
+  - changement cassant : `!` après le type (`feat(data)!: …`) et une ligne `BREAKING CHANGE:` dans le corps.
 - Une PR = un sujet. Décrivez quoi et pourquoi en quelques phrases.
 - Les données et le code peuvent être dans des PR séparées : c'est plus simple à relire.
 

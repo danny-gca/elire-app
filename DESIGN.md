@@ -1,5 +1,5 @@
 ---
-name: ÉLIRE
+name: élire
 description: Comparateur citoyen local-first pour la présidentielle 2027, sous la forme d'un cahier annoté.
 colors:
   paper: "#F6F7F5"
@@ -287,7 +287,7 @@ components:
     height: "64px"
 ---
 
-# Design System: ÉLIRE
+# Design System: élire
 
 ## Overview
 
@@ -306,7 +306,7 @@ Rejets confirmés : l'air de site gouvernemental, l'appli gadget ou gamifiée, l
 - Valeur de vote écrite en toutes lettres, avec son signe, dans sa couleur d'échelle.
 - Numéros stables (P-531, L-28) en chiffres tabulaires partout.
 - Literata pour les titres, Atkinson Hyperlegible Next pour lire, Caveat pour l'écriture du lecteur ; deux tailles de lecture (17 et 13).
-- Classement en panneaux électoraux identiques sur une tôle grise.
+- Classement en panneaux électoraux identiques sur une tôle grise ; seul l'anneau du portrait prend la couleur du parti, jamais le score.
 
 ## Colors
 
@@ -318,7 +318,7 @@ Une palette d'encre sur papier froid, sans couleur institutionnelle ni partisane
 
 ### Secondary
 
-- **Surligneurs** (mark, marker-rose, marker-vert, marker-bleu): le trait derrière ce que l'utilisateur a voté, et rien d'autre. Il choisit le sien à la fin de l'onboarding (jaune par défaut) et peut en changer dans Classement ; chaque marque garde la couleur du surligneur avec lequel elle a été posée (`marks` dans le store). Les couleurs ne signifient rien et ne rappellent aucun parti. En natif le trait s'applique en fond de ligne à 70% d'opacité ; sur le web en bande basse sur chaque ligne (de 38% à 94% de la hauteur, 85% d'opacité), coupée proprement aux retours à la ligne, droite sur une portion puis légèrement ondulée (tuiles SVG de 240px, 3 variantes stables par texte, `data-wave`). Tokens : `Markers` dans `theme.ts`, variables `--marker` dans `global.css`. La sélection de texte web reste jaune à 55%.
+- **Surligneurs** (mark, marker-rose, marker-vert, marker-bleu): le trait derrière ce que l'utilisateur a voté, et rien d'autre. Il choisit le sien à la fin de l'onboarding (jaune par défaut) et peut en changer en haut de Voter (quatre traits compacts) ; chaque marque garde la couleur du surligneur avec lequel elle a été posée (`marks` dans le store). Les couleurs ne signifient rien et ne rappellent aucun parti. En natif le trait s'applique en fond de ligne à 70% d'opacité ; sur le web en bande basse sur chaque ligne (de 38% à 94% de la hauteur, 85% d'opacité), coupée proprement aux retours à la ligne, droite sur une portion puis légèrement ondulée (tuiles SVG de 240px, 3 variantes stables par texte, `data-wave`). Tokens : `Markers` dans `theme.ts`, variables `--marker` dans `global.css`. La sélection de texte web reste jaune à 55%.
 
 ### Tertiary
 
@@ -343,7 +343,7 @@ Une palette d'encre sur papier froid, sans couleur institutionnelle ni partisane
 
 ### Named Rules
 
-**The Reader's Highlighter Rule.** Le surligneur ne marque que ce que l'utilisateur a noté, dans la couleur qu'il a choisie. Le wordmark, les états, les issues parlementaires, les illustrations : jamais surlignés. Une marque posée ne change jamais de couleur.
+**The Reader's Highlighter Rule.** Le surligneur ne marque que ce que l'utilisateur a noté, dans la couleur qu'il a choisie. Le wordmark, les états, les issues parlementaires, les illustrations : jamais surlignés. Seule exception d'interface : la pastille du compteur de l'onglet actif (contrôle segmenté), demandée pour la lisibilité. Une marque posée ne change jamais de couleur.
 
 **The Scale Is Yours Rule.** Les couleurs d'échelle n'expriment que les votes de l'utilisateur. Les issues parlementaires (Adoptée / Rejetée) et les positions des candidats (Pour / Contre / Abstention) s'écrivent en encre neutre sur filet léger.
 
@@ -430,19 +430,26 @@ Sobres et nets, comme un bouton de formulaire bien fait.
 - **Shadow Strategy:** aucune (voir Elevation & Depth).
 - **Border:** hairline au filet.
 - **Internal Padding:** 16px ; la feuille de proposition prend 24px (16px côté marge).
-- **Carte de loi:** titre en 17 semi-gras, ligne meta « L-28 · Adoptée · Thématique » en graphite avec le statut en encre semi-gras, seconde ligne nature · chambre · date, résumé sur deux lignes, bascule « Positions » sur fond papier qui déroule les positions des candidats.
+- **En-tête de la fiche candidat:** bandeau de 6px pleine largeur à la couleur du parti sous la flèche retour, avatar de 72px cerclé de la couleur du parti, nom en Literata 24, puis le nom du parti en 13 semi-gras dans sa couleur (`readableOn` : même teinte, foncée jusqu'au contraste AA sur le papier ; pas de sigle à côté, il ferait doublon). Dessous, en 13 graphite, « Nuance du ministère de l'Intérieur (européennes 2024) : » suivi du libellé officiel en semi-gras souligné, qui ouvre la source ; sans classement officiel, « Pas de nuance du ministère de l'Intérieur : le parti n'a pas été classé. ». Jamais dans le Classement.
+- **Accord de la fiche candidat:** carte blanche : « Accord avec vos votes » et le score en Literata 34 à gauche, la jauge de fiabilité dans l'angle haut droit ; sous un filet, deux colonnes séparées par un filet (Programme, Votes au Parlement : libellé 13, pourcentage 17 semi-gras, détail 13), puis une ligne sur ce qui fonde le score.
+- **Carte de loi:** carte de liste allégée, entièrement touchable, en trois lignes. 1) Le titre officiel en 17 semi-gras (surligné dans la couleur de sa marque si voté, 3 lignes au plus) et, dans l'angle, votre vote (`YourVoteMark` : le vote seul, en 17 semi-gras couleur d'échelle sur une bande de son surligneur inclinée de -1,5°). 2) Sur une fiche, l'icône personne ou groupe, le nom du candidat et « vote personnel » / « vote de son groupe », puis sa position marquée de la même façon mais en neutre (`PositionMark` : encre sur filet léger) ; ailleurs, le nombre de candidats qui l'ont voté. 3) « L-28 · Adoptée · date » et le chevron. Votre vote est aussi dans l'angle des lignes de proposition (`PropositionRow`). Le détail s'ouvre dans une feuille (`LoiDetail`) : titre, meta, résumé, « La question posée » et votre vote (modifiable à la gomme), positions des candidats (`VoteRow` : étiquette de position neutre à droite, alignée sur celle de « Moi » ; sous le nom, décalé de 48pt, « Vote personnel » ou « Vote de son groupe GDR » en 13 semi-gras encre avec une icône personne ou groupe, l'explication en 13, « Voir le scrutin officiel »), scrutin officiel.
+- **Gomme:** icône au trait (`eraser-icon.tsx`, même dessin que les onglets), cible de 44pt, sur « Dernier vote » et dans les feuilles de détail seulement (pas dans les listes) ; elle déplie la même échelle que dans Voter.
+- **Ligne « Moi »:** dans la feuille d'une proposition (sous l'auteur) et d'un scrutin (en tête des votes), présentée comme un candidat : pastille de 36pt au surligneur avec une icône personne, « Moi » en 17 semi-gras, « Votre vote » en 13 graphite, le vote en couleur d'échelle sur une bande du surligneur à droite (mêmes dimensions que l'étiquette des candidats), puis sous le nom « Modifier mon vote » avec la gomme. Sans vote : « Pas encore voté : elle arrivera dans Voter ».
+- **Classement:** sous l'intertitre, « Sur 15 votes. » (les « Je ne sais pas » ne sont ni comptés ni cités), puis une carte blanche repliée « Comment le score est calculé » (icône aide, 17 semi-gras, chevron) qui déplie 4 étapes numérotées dans des pastilles de 24pt : vos notes sur son programme (l'échelle en couleurs, puis la moyenne de 0 à 100 %), ses votes au Parlement, quand il est classé (et la jauge), en cas d'égalité. Sous le tableau des classés, 16pt d'écart puis « Partager mon classement » en bouton primaire encre.
+- **Feuille du bas (Android, web):** poignée de 36 × 4 au filet en haut ; l'en-tête se glisse vers le bas pour fermer (au-delà du quart de la feuille ou d'un geste vif), sinon la feuille revient en place. Voile en fondu sur place, seul le panneau glisse.
+- **Image de partage:** carte 4:5 (320 × 400, exportée en 1080 × 1350) sur le papier, filet de marge graphite et une seule marge de texte à 40 : « Présidentielle 2027 » en capitales graphite, titre Literata 24 (« Mon classement » ou « Je me fais mon avis »), puis les 8 premiers (liseré de 3px à la couleur du parti, rang, nom, jauge, score, filets hairline) ou, en discret, le nombre de questions en Literata 96 sur une bande du surligneur, la phrase en 17 semi-gras et les candidats classés en 13, aucun nom. En pied, sous un filet, le « é » du logo aligné sur la marge, l'adresse du site et « Sans compte, sans traceur, neutre. ». Dans la feuille, l'aperçu est posé sur une table gris filet (coins 16, ombre douce).
 
 ### Inputs / Fields
 
 - **Style:** fond filet léger, sans bordure, 12px, hauteur 44pt, loupe graphite 18px, texte encre en 17.
 - **Focus:** pas d'anneau propre au champ ; curseur encre.
-- **Contrôle segmenté:** piste filet léger à 3px de marge, segment choisi sur feuille blanche avec l'ombre de contact, libellé 13 encre semi-gras ; les autres en graphite. Compteurs en chiffres tabulaires.
+- **Contrôle segmenté:** piste filet léger à 3px de marge, segment choisi sur feuille blanche avec l'ombre de contact, libellé 13 encre semi-gras ; les autres en graphite. Compteurs en pastille (22pt au moins, 13 semi-gras tabulaire encre) : fond blanc, surlignée de la couleur du lecteur sur l'onglet actif.
 
 ### Navigation
 
 - **Icônes:** un seul jeu au trait dans le style Ionicons outline (grille 512, trait 32, bouts et angles arrondis, coins de 16, aucun aplat) : Voter, un surligneur à pointe biseautée qui signe une vague (le geste de l'app ; l'urne ressemblait au podium de Classement) ; Classement, le podium d'Ionicons ; Lois, une balance ; Explorer, la bibliothèque d'Ionicons. Sources SVG dans `assets/icons/tabs/`, PNG 1x à 3x générés par `scripts/build-tab-icons.mjs` pour les onglets natifs, SVG sur le web ; toujours teintés (encre actif, graphite inactif).
 - **Natif:** onglets système sur feuille blanche avec les icônes du jeu commun (image modèle teintée), teinte encre, icônes et libellés inactifs graphite, indicateur Android au filet léger.
-- **Web:** barre blanche de 56pt séparée par un filet hairline, en bas sous 900px (icône 22px au-dessus du libellé), en haut à partir de 900px (icône 18px à côté du libellé). L'onglet actif passe en encre semi-gras avec un trait de 2px (au-dessus en bas d'écran, en dessous en haut d'écran). Sur grand écran, le wordmark « ÉLIRE » est du texte seul en 17 semi-gras encre, sans jaune.
+- **Web:** barre blanche de 56pt séparée par un filet hairline, en bas sous 900px (icône 22px au-dessus du libellé), en haut à partir de 900px (icône 18px à côté du libellé). L'onglet actif passe en encre semi-gras avec un trait de 2px (au-dessus en bas d'écran, en dessous en haut d'écran). Sur grand écran, la marque (`Brand` : le « é » du logo recadré sur sa lettre, puis « élire » en 17 semi-gras encre) ouvre la barre à gauche. La même marque ouvre le pied de page (`DataFooter`).
 
 ### Feuille de proposition (signature)
 
@@ -460,11 +467,15 @@ Quatre niveaux égaux en ligne, 4px d'écart, 60pt de haut, feuille blanche à b
 
 ### Feuille de scrutin
 
-La même feuille que la proposition : marge avec le numéro (L-12) et la thématique, la `question` en titre 24, une ligne meta graphite « Scrutin réel · chambre · année », puis « En savoir plus » (glossaire et `enjeu`). Le titre officiel et le résultat n'apparaissent qu'après le vote. Sous la feuille, « Votre vote » et le nombre de candidats qui ont voté ce texte.
+La même page que la proposition, sur fond blanc, mais qui se distingue : en-tête avec un petit hémicycle (3 rangs, 21 sièges, 30x17), « Scrutin réel » en capitales encre et « chambre · année » en 13 graphite à droite, filet hairline dessous ; contour graphite de 1px tracé une fois à l'arrivée (700ms, coupé par « Réduire les animations ») puis gardé. Dans la marge, le numéro (L-12) et la thématique ; la `question` en titre 24, puis « En savoir plus » (glossaire et `enjeu`). Le titre officiel et le résultat n'apparaissent qu'après le vote. Sous la feuille, « Votre vote » et le nombre de candidats qui ont voté ce texte.
+
+**La salle (`CrowdBackdrop`).** Pendant un scrutin, le fond fixe de Voter (il ne défile pas) montre le plan de l'hémicycle vu de dessus, au trait de cahier : pupitres en arcs au léger tremblé de plume, 5 allées rayonnantes, et sur chaque siège une tête (cercle) et des épaules (ellipse) tournées vers la tribune, en haut de l'écran ; quelques places vides tirées d'une graine fixe. Encre en dégradé, de 0 à 15 % de la hauteur jusqu'à 20 % en bas : l'en-tête reste net. Fondu de 600ms à l'arrivée ; vote posé, la salle descend à 35 % derrière le résultat. Le résultat (hémicycle, titre officiel, statut) est posé sur une feuille blanche, et les boutons non choisis restent opaques (seul leur libellé passe à 45 %) : rien ne flotte sur la salle.
+
+**Fêtes (`CelebrationLayer`).** Des traits des 4 surligneurs jaillissent du bas de l'écran, se tracent puis s'effacent (1 à 2 s), au-dessus de tout et sans bloquer le toucher. Grandes, à un cap : bilan tous les 10 votes, dernière question, fin de l'onboarding (bienvenue) ; tirées parmi gerbe, fusées, surlignage (toujours de gauche à droite) et boucles. Petites, à un geste confirmé : vote modifié, image partagée ; étincelles ou traits, qui partent du bouton touché (du bas au clavier). Chaque trait prend un surligneur : les 4 à chaque fois dès 4 traits, en proportions et dans un ordre tirés au hasard, jamais deux voisins de la même couleur. Jamais deux fois la même d'affilée ; coupées par « Réduire les animations ». Une feuille ouverte a sa propre couche (une Modal cache la racine).
 
 ### Rangée de scrutin
 
-Trois choix égaux (Contre, Abstention, Pour), 8px d'écart, 60pt de haut, feuille blanche à bordure filet, coins de 12, libellé en 17 semi-gras dans sa couleur d'échelle (terre cuite, graphite, vert correcteur). Après le vote, le choix garde sa bordure de 2px et les deux autres passent à 45%.
+Trois choix égaux (Contre, Abstention, Pour), 8px d'écart, 60pt de haut, feuille blanche à bordure filet, coins de 12, libellé en 17 semi-gras dans sa couleur d'échelle (terre cuite, graphite, vert correcteur). Après le vote, le choix garde sa bordure de 2px et le libellé des deux autres passe à 45% (bouton opaque).
 
 ### Hémicycle (signature)
 
@@ -478,11 +489,11 @@ Le geste du vote, en environ 1 s : (1) un trait de surligneur traverse le bouton
 
 ### Sélecteur de surligneur
 
-Quatre options (Jaune, Rose, Vert, Bleu) en grille 2 × 2 avec 8px d'écart, feuille blanche à bordure filet, coins de 12, 56pt de haut (60 sur Android), 16px de marge interne : un trait de 40 × 14px aux coins de 3, posé de biais (−6°) dans la teinte native du surligneur (70%), puis le nom en 17. L'option choisie prend une bordure encre de 2px et son nom en semi-gras. Il apparaît à la fin de l'onboarding et sous « Votre surligneur » dans Classement.
+Quatre options (Jaune, Rose, Vert, Bleu) en grille 2 × 2 avec 8px d'écart, feuille blanche à bordure filet, coins de 12, 56pt de haut (60 sur Android), 16px de marge interne : un trait de 40 × 14px aux coins de 3, posé de biais (−6°) dans la teinte native du surligneur (70%), puis le nom en 17. L'option choisie prend une bordure encre de 2px et son nom en semi-gras. Il apparaît à la fin de l'onboarding et sous « Votre surligneur » dans Classement. Grille à la fin de l'onboarding ; en haut de Voter, version compacte : quatre traits de 24 × 10 dans des cibles de 40 × 44, le choisi cerclé d'encre (2px).
 
 ### Panneau électoral (signature)
 
-Le même mobilier pour chaque candidat, seul le score change : panneau blanc presque carré, carré de rang encre de 28px dans l'angle (filet léger avec « – » hors classement), avatar de 56px, nom en 13 semi-gras, parti en graphite, score en 17 semi-gras tabulaire en bas, base « ex æquo, sur N votes » en graphite ; sans score, « Pas encore évalué » en 13 graphite. Les panneaux sont posés sur une tôle au filet (8px de marge, 6px, épaisseur basse 5px).
+Le même mobilier pour chaque candidat, seul le score change ; une seule touche de couleur, à la même place pour tous : un anneau de 2px à la couleur du parti autour de l'avatar (2px de feuille entre les deux). Pas de sigle ni de bandeau : 25 couleurs de plus feraient carnaval. Panneau blanc presque carré, carré de rang encre de 28px dans l'angle (filet léger avec « – » hors classement), avatar de 56px, nom en 13 semi-gras, parti en graphite, score en 17 semi-gras tabulaire en bas, base « ex æquo, sur N votes » en graphite ; sans score, « Pas encore évalué » en 13 graphite. Les panneaux sont posés sur une tôle au filet (8px de marge, 6px, épaisseur basse 5px).
 
 **Jauge de fiabilité :** sous la base du score, trois traits de 4px (6, 9 et 12px de haut, 2px d'écart, coins de 1), vides au filet et remplis d'encre selon le niveau (fragile 1, assez sûr 2, fiable 3), puis le niveau en 13 graphite à 6px. Lisible sans la couleur, la même sur chaque panneau ; absente tant que le candidat n'est pas classé. Sur la fiche, la même jauge suivie de son détail (« sur 5 propositions et 1 scrutin : assez de votes pour comparer »).
 
@@ -494,7 +505,7 @@ Le même mobilier pour chaque candidat, seul le score change : panneau blanc pre
 
 ### Named Rules
 
-**The Identical Furniture Rule.** Tous les candidats ont le même panneau, la même taille et la même place. Deux scores égaux partagent le même rang (« ex æquo ») et leur ordre est tiré au hasard à chaque lancement.
+**The Identical Furniture Rule.** Tous les candidats ont le même panneau, la même taille et la même place. Deux scores égaux partagent le même rang (« ex æquo »), dans un ordre tiré au hasard à chaque lancement.
 
 ## Do's and Don'ts
 

@@ -7,7 +7,7 @@ related_targets: ["src/app/(tabs)/results.tsx","src/app/(tabs)/lois.tsx","src/ap
 
 ## Scope
 
-App ÉLIRE complète (4 onglets, fiche candidat, onboarding). Mode : Operate. Plateformes : iOS, Android, Web. Thème clair unique.
+App élire complète (4 onglets, fiche candidat, onboarding). Mode : Operate. Plateformes : iOS, Android, Web. Thème clair unique.
 
 ## Audience et tâche
 
