@@ -10,6 +10,8 @@ export type LoiVoteValue = PositionVote;
 export const MIN_VOTES_PER_CANDIDAT = 2;
 // Un vote de groupe pèse moitié moins qu'un vote personnel.
 export const GROUP_VOTE_WEIGHT = 0.5;
+// La partie Parlement pèse au nombre de ses votes, mais jamais plus que le programme (docs/simulations).
+export const MAX_PARLEMENT_SHARE = 0.5;
 
 /** Fiabilité d'un score classé, selon le nombre d'éléments qui le fondent. */
 export type Reliability = 'fragile' | 'moyen' | 'fiable';
@@ -55,7 +57,20 @@ export function loiPoints(user: LoiVoteValue, candidat: PositionVote): -2 | 0 | 
   return user === candidat ? 2 : -2;
 }
 
-const toPercent = (sum: number, max: number) => Math.round(((sum + max) / (max * 2)) * 100);
+const ratio = (sum: number, max: number) => (sum + max) / (max * 2);
+const toPercent = (sum: number, max: number) => Math.round(ratio(sum, max) * 100);
+
+/** Programme et Parlement au prorata de leurs votes, la part Parlement plafonnée à `MAX_PARLEMENT_SHARE`. */
+function combined(propSum: number, propMax: number, loiSum: number, loiMax: number): number | null {
+  if (propMax === 0) {
+    return loiMax > 0 ? toPercent(loiSum, loiMax) : null;
+  }
+  if (loiMax === 0) {
+    return toPercent(propSum, propMax);
+  }
+  const share = Math.min(MAX_PARLEMENT_SHARE, loiMax / (propMax + loiMax));
+  return Math.round(((1 - share) * ratio(propSum, propMax) + share * ratio(loiSum, loiMax)) * 100);
+}
 
 export function scoreCandidat(
   candidat: Candidat,
@@ -88,12 +103,11 @@ export function scoreCandidat(
     }
   }
 
-  const max = propMax + loiMax;
   const ranked = voted.length >= MIN_VOTES_PER_CANDIDAT;
   const evidence = voted.length + loiMax / 2;
   return {
     candidat,
-    score: max > 0 ? toPercent(propSum + loiSum, max) : null,
+    score: combined(propSum, propMax, loiSum, loiMax),
     totalVotes: voted.length + loiCount,
     ranked,
     programme: { score: propMax > 0 ? toPercent(propSum, propMax) : null, count: voted.length },
@@ -106,7 +120,7 @@ export function scoreCandidat(
 
 /**
  * Classés d'abord (score décroissant), puis non classés, puis non évalués.
- * Les égalités suivent `tieOrder` (ordre tiré au hasard), jamais l'alphabet.
+ * À score égal, `tieOrder` (ordre tiré au hasard) décide seul : ni l'alphabet, ni le nombre de votes, qui avantagerait les élus sortants.
  */
 export function computeScores(
   candidats: readonly Candidat[],

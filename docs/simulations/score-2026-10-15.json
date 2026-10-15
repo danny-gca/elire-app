@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-15",
+  "donnees": "2026-10-15",
+  "graine": 2027,
+  "lecteurs": 25000,
+  "lecteur": {
+    "propositions": 45,
+    "scrutins": 15
+  },
+  "candidats": {
+    "total": 25,
+    "ontSiege": 13,
+    "nontJamaisSiege": 12
+  },
+  "test1_lecteurAccordAvecX_XSortNumero1": {
+    "avant: au nombre, égalité par fiabilité": {
+      "xASiege": 44.4,
+      "xNaJamaisSiege": 37.7
+    },
+    "option 1: au nombre, égalité au hasard": {
+      "xASiege": 42.7,
+      "xNaJamaisSiege": 37.3
+    },
+    "option 2: moitié programme, moitié Parlement": {
+      "xASiege": 40.8,
+      "xNaJamaisSiege": 36.9
+    },
+    "retenue": {
+      "xASiege": 40.8,
+      "xNaJamaisSiege": 37.1
+    }
+  },
+  "test2_lecteurAuHasard_partDeNumero1ParCandidat": {
+    "avant: au nombre, égalité par fiabilité": {
+      "aSiege": 1.5,
+      "naJamaisSiege": 6.7
+    },
+    "option 1: au nombre, égalité au hasard": {
+      "aSiege": 1.4,
+      "naJamaisSiege": 6.8
+    },
+    "option 2: moitié programme, moitié Parlement": {
+      "aSiege": 1.8,
+      "naJamaisSiege": 6.3
+    },
+    "retenue": {
+      "aSiege": 1.8,
+      "naJamaisSiege": 6.4
+    }
+  }
+}
