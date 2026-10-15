@@ -11,7 +11,17 @@ const IMAGES = path.join(ROOT, 'assets', 'images');
 const PAPER = '#F6F7F5';
 const PORT = 9341;
 
-const mark = fs.readFileSync(path.join(BRAND, 'mark.svg'), 'utf8').replace(/<!--[\s\S]*?-->\s*/, '');
+// Retire les commentaires jusqu'à stabilité (un retrait peut en recomposer un).
+const stripComments = (input) => {
+  let prev;
+  let out = input;
+  do {
+    prev = out;
+    out = out.replace(/<!--[\s\S]*?-->\s*/g, '');
+  } while (out !== prev);
+  return out;
+};
+const mark = stripComments(fs.readFileSync(path.join(BRAND, 'mark.svg'), 'utf8'));
 // Monochrome : la lettre seule, la bande blanche la noierait.
 const white = mark.replace(/<rect[^>]*\/>\s*/, '').replace(/fill="#[0-9A-Fa-f]{6}"/g, 'fill="#FFFFFF"');
 const paper = `<rect width="1024" height="1024" fill="${PAPER}"/>`;
