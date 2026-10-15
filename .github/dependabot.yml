@@ -1,33 +1,56 @@
 version: 2
 updates:
-  # Le SDK Expo se met à jour avec `npx expo install --fix`, pas un par un.
+  # Le SDK Expo (expo, expo-*, @expo/*, react, react-native et leurs outils) se met à jour d'un bloc avec
+  # `npx expo upgrade` puis `npx expo install --fix`, jamais paquet par paquet : Dependabot n'y propose que les correctifs.
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
     ignore:
-      - dependency-name: "expo*"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "react-native*"
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "expo"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "expo-*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@expo/*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "jest-expo"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "eslint-config-expo"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
       - dependency-name: "react"
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
       - dependency-name: "react-dom"
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@types/react"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "react-native"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "react-native-*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+    # Deux PR au plus par semaine : les versions majeures ensemble, le reste ensemble.
     groups:
-      dev:
-        dependency-type: development
+      majeures:
+        patterns: ["*"]
+        update-types: ["major"]
+      mineures-et-correctifs:
+        patterns: ["*"]
         update-types: ["minor", "patch"]
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    commit-message:
+      prefix: chore
+      include: scope
     groups:
-      actions:
-        patterns:
-          - "*"
+      majeures:
+        patterns: ["*"]
+        update-types: ["major"]
+      mineures-et-correctifs:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
