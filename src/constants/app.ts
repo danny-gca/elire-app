@@ -1,3 +1,5 @@
+import Constants from 'expo-constants';
+
 // Dépôt public du projet : sert aux liens « Signaler une erreur » (tickets GitHub pré-remplis).
 export const REPO_URL = 'https://github.com/danny-gca/elire-app';
 
@@ -16,3 +18,6 @@ export function reportIssueUrl(ref?: string, titre?: string): string | null {
 
 // Site public : lien des images partagées.
 export const SITE_URL = 'https://danny-gca.github.io/elire-website/';
+
+// Version affichée (app.json, tenue à jour par release-please).
+export const APP_VERSION = Constants.expoConfig?.version ?? '';
