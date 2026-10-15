@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ÉLIRE",
+    "name": "élire",
     "slug": "elire-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -38,7 +38,8 @@
           "imageWidth": 160
         }
       ],
-      "expo-sqlite"
+      "expo-sqlite",
+      "expo-sharing"
     ],
     "experiments": {
       "typedRoutes": true,

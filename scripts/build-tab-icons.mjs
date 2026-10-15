@@ -51,4 +51,8 @@ ws.close();
 const exited = new Promise((resolve) => chrome.once('exit', resolve));
 chrome.kill();
 await exited;
-fs.rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 });
+// Les sous-processus de Chrome écrivent encore un instant : on laisse le profil temporaire au système s'il résiste.
+await sleep(500);
+try {
+  fs.rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 });
+} catch {}
