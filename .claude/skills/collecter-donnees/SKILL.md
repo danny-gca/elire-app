@@ -40,7 +40,7 @@ id,thematique_id,titre,description,source_url,date_declaration,contexte
 - `contexte` : type de document et circonstance (et page), puis les précisions utiles de la mesure (chiffres, modalités, exceptions), tirées de la source ; 250 caractères environ.
 - Anonymat : ni nom du candidat ou du parti, ni slogan de campagne dans `titre`, `description` et `contexte` (lus pendant le vote à l'aveugle). Couper le nom de la citation avec `[...]`.
 - Sigles : titre et question en clair (sigle seulement du quotidien, TVA, SMIC, RSA, SNCF, RATP, EDF, IVG, ou entre parenthèses après sa forme claire) ; chaque sigle des textes lus à l'aveugle est dans `data/glossaire.json` (le build bloque sinon).
-- Viser le même nombre de propositions par candidat (6 aujourd'hui), réparties sur plusieurs thèmes, en choisissant des mesures centrales du programme plutôt que des marginales.
+- Viser le même nombre de propositions par candidat (8 aujourd'hui, un thème différent par proposition autant que possible), en choisissant des mesures centrales du programme plutôt que des marginales.
 - Les numéros `P-xxx` sont attribués par le build : ne pas les écrire.
 
 ## Ajouter une loi ou un scrutin
