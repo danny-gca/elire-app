@@ -1,7 +1,19 @@
+# Lancé par le tag vX.Y.Z que crée la fusion de la PR de release : build Android puis envoi en test interne.
 name: Create Production Builds
+
+on:
+  push:
+    tags: ['v*']
 
 jobs:
   build_android:
     type: build
     params:
       platform: android
+      profile: production
+  submit_android:
+    needs: [build_android]
+    type: submit
+    params:
+      build_id: ${{ needs.build_android.outputs.build_id }}
+      profile: production

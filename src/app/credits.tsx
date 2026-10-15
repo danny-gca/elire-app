@@ -5,10 +5,10 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { CandidateAvatar } from '@/components/candidate-avatar';
 import { Screen } from '@/components/screen';
 import { ScreenHeader } from '@/components/screen-header';
-import { REPO_URL, SITE_URL } from '@/constants/app';
+import { APP_VERSION, REPO_URL, SITE_URL } from '@/constants/app';
 import { FONT_CREDITS, ICON_CREDIT, PHOTO_CREDITS } from '@/constants/credits';
 import { EDITEUR } from '@/constants/legal';
-import { Colors, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
+import { Colors, MinTarget, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { getCandidat } from '@/services/dataset';
 
 const host = (url: string) => url.replace(/^https:\/\//, '').replace(/\/$/, '');
@@ -34,10 +34,11 @@ export default function CreditsScreen() {
       </Pressable>
       <ScreenHeader title="Crédits" note="Qui a fait élire, et ce qu'elle réutilise selon leur licence : portraits de Wikimedia Commons, polices et icônes libres." />
       <View style={styles.list}>
-        <View style={styles.row} accessible accessibilityLabel={`élire, conçue et développée par ${EDITEUR.nom}, à titre personnel`}>
+        <View style={styles.row} accessible accessibilityLabel={`élire ${APP_VERSION}, conçue et développée par ${EDITEUR.nom}, à titre personnel`}>
           <View style={styles.text}>
             <Text style={[Type.bodyStrong, styles.ink]}>Conçue et développée par {EDITEUR.nom}</Text>
             <Text style={[Type.label, styles.muted]}>À titre personnel, sans lien avec un parti ni un candidat</Text>
+            {APP_VERSION !== '' && <Text style={[Type.label, Numeric, styles.muted]}>Version {APP_VERSION}</Text>}
           </View>
         </View>
         {APP_LINKS.map((link) => (

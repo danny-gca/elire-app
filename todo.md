@@ -18,7 +18,7 @@ EAS construit l'app et peut l'envoyer au store, mais la Play Console doit d'abor
    - sécurité des données : aucune donnée collectée ni partagée (tout reste sur l'appareil) ;
    - fiche du Play Store : description courte et longue, icône 512 × 512, image de présentation 1024 × 500, au moins 2 captures d'écran de téléphone.
 5. **Compte développeur personnel récent** : Google demande un test fermé avec au moins 12 testeurs pendant 14 jours avant d'ouvrir la production. Vérifier dans la Play Console si cela s'applique au compte.
-6. **Ensuite, automatiser** : ajouter un job `submit` après `build_android` dans `.eas/workflows/create-production-builds.yml` (il construit sans envoyer pour l'instant), et la piste dans `eas.json` (`submit.production.android.track`).
+6. **Automatisation (prête)** : la fusion de la PR de release crée un tag `vX.Y.Z`, qui lance `.eas/workflows/create-production-builds.yml` (build puis envoi en test interne). À faire : la clé de compte de service sur expo.dev (étape 3, « Par EAS ») ; un fine-grained PAT (Contents et Pull requests en écriture, dépôt elire-app seul) dans le secret `RELEASE_PLEASE_TOKEN`, sinon la CI ne se lance pas sur la PR de release ; cocher Settings > Actions > General > « Allow GitHub Actions to create and approve pull requests » ; vérifier qu'EAS démarre bien sur le tag.
 
 Doc : <https://docs.expo.dev/submit/android/>
 
