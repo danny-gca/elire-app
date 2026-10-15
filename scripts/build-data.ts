@@ -63,7 +63,7 @@ function checkText(text: string | undefined, where: string) {
 }
 
 // Vote à l'aveugle : aucun nom de candidat ni de parti (sigles et noms comparés à la casse près).
-function anonymityTerms(candidats: { nom: string }[], partis: { nom: string; sigle: string }[]): RegExp[] {
+function anonymityTerms(candidats: { nom: string }[], partis: { nom: string; sigle?: string }[]): RegExp[] {
   const terms = new Set<string>();
   for (const c of candidats) {
     terms.add(c.nom);
@@ -71,7 +71,9 @@ function anonymityTerms(candidats: { nom: string }[], partis: { nom: string; sig
   }
   for (const p of partis) {
     terms.add(p.nom);
-    terms.add(p.sigle);
+    if (p.sigle) {
+      terms.add(p.sigle);
+    }
   }
   return [...terms]
     .filter((t) => t.length > 1)
@@ -183,7 +185,7 @@ function main() {
       errors.push(`candidats.json ${c.id} : parti inconnu "${c.partiId}"`);
     }
     checkText(c.biographie, `candidats.json ${c.id}`);
-    return { ...c, parti: parti ? parti.nom : 'Indépendant', couleurParti: parti ? parti.couleur : '#6B7280' };
+    return { ...c, parti: parti ? parti.nom : 'Indépendant', couleurParti: parti ? parti.couleur : '#6B7280', sigleParti: parti?.sigle };
   });
 
   const anonymity = anonymityTerms(rawCandidats, partis);
@@ -252,6 +254,10 @@ function main() {
 
   glossaire.forEach((g) => {
     checkText(`${g.forme} ${g.definition ?? ''}`, `glossaire.json ${g.sigle}`);
+    // « BFMTV : BFMTV » n'explique rien.
+    if (g.forme.replace(/[^\p{L}\p{N}]/gu, '').toUpperCase() === g.sigle) {
+      errors.push(`glossaire.json ${g.sigle} : la forme répète le sigle`);
+    }
     if (!usedSigles.has(g.sigle)) {
       warnings.push(`glossaire.json ${g.sigle} : sigle employé nulle part`);
     }

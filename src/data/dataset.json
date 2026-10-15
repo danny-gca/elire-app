@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-14T14:16:17.090Z",
+    "generatedAt": "2026-10-15T13:43:02.777Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
@@ -13,7 +13,12 @@
       "nom": "Horizons",
       "sigle": "HOR",
       "couleur": "#002B7F",
-      "nuance": "Centre-droit",
+      "nuanceOfficielle": {
+        "code": "LENS",
+        "libelle": "Liste Ensemble",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://horizonsleparti.fr"
     },
     {
@@ -21,7 +26,12 @@
       "nom": "Renaissance",
       "sigle": "REN",
       "couleur": "#7B1FA2",
-      "nuance": "Centre",
+      "nuanceOfficielle": {
+        "code": "LENS",
+        "libelle": "Liste Ensemble",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://parti-renaissance.fr"
     },
     {
@@ -29,7 +39,12 @@
       "nom": "La France Insoumise",
       "sigle": "LFI",
       "couleur": "#C62828",
-      "nuance": "Gauche radicale",
+      "nuanceOfficielle": {
+        "code": "LFI",
+        "libelle": "Liste de La France insoumise",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://lafranceinsoumise.fr"
     },
     {
@@ -37,7 +52,12 @@
       "nom": "Rassemblement National",
       "sigle": "RN",
       "couleur": "#0D47A1",
-      "nuance": "Droite nationale",
+      "nuanceOfficielle": {
+        "code": "LRN",
+        "libelle": "Liste du Rassemblement National",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://rassemblementnational.fr"
     },
     {
@@ -45,7 +65,12 @@
       "nom": "Place Publique / PS",
       "sigle": "PP-PS",
       "couleur": "#D81B60",
-      "nuance": "Social-démocratie",
+      "nuanceOfficielle": {
+        "code": "LUG",
+        "libelle": "Liste d'union à gauche",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://placepublique.org"
     },
     {
@@ -53,15 +78,25 @@
       "nom": "Les Écologistes",
       "sigle": "EELV",
       "couleur": "#2E7D32",
-      "nuance": "Écologie politique",
+      "nuanceOfficielle": {
+        "code": "LVEC",
+        "libelle": "Liste Les Écologistes",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://lesecologistes.fr"
     },
     {
       "id": "equinoxe",
       "nom": "Équinoxe",
       "sigle": "EQX",
-      "couleur": "#059669",
-      "nuance": "Écologie rationnelle & scientifique",
+      "couleur": "#FFD412",
+      "nuanceOfficielle": {
+        "code": "LECO",
+        "libelle": "Liste écologiste",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://parti-equinoxe.fr"
     },
     {
@@ -69,7 +104,12 @@
       "nom": "Les Républicains",
       "sigle": "LR",
       "couleur": "#0055A5",
-      "nuance": "Droite républicaine",
+      "nuanceOfficielle": {
+        "code": "LLR",
+        "libelle": "Liste des Républicains",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://republicains.fr"
     },
     {
@@ -77,7 +117,12 @@
       "nom": "Debout !",
       "sigle": "DEBOUT",
       "couleur": "#EF4444",
-      "nuance": "Gauche populaire",
+      "nuanceOfficielle": {
+        "code": "LDVG",
+        "libelle": "Liste divers gauche",
+        "election": "municipales 2026",
+        "sourceUrl": "https://www.legifrance.gouv.fr/circulaire/id/45645"
+      },
       "siteWeb": "https://francoisruffin.fr"
     },
     {
@@ -85,7 +130,12 @@
       "nom": "Parti Communiste Français",
       "sigle": "PCF",
       "couleur": "#DC2626",
-      "nuance": "Gauche communiste",
+      "nuanceOfficielle": {
+        "code": "LCOM",
+        "libelle": "Liste du Parti communiste français",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://pcf.fr"
     },
     {
@@ -93,7 +143,12 @@
       "nom": "Reconquête",
       "sigle": "REC",
       "couleur": "#1E1B4B",
-      "nuance": "Droite identitaire",
+      "nuanceOfficielle": {
+        "code": "LREC",
+        "libelle": "Liste Reconquête !",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://parti-reconquete.fr"
     },
     {
@@ -101,7 +156,12 @@
       "nom": "Lutte Ouvrière",
       "sigle": "LO",
       "couleur": "#B91C1C",
-      "nuance": "Extrême gauche",
+      "nuanceOfficielle": {
+        "code": "LEXG",
+        "libelle": "Liste d'extrême-gauche",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://lutte-ouvriere.org"
     },
     {
@@ -109,7 +169,12 @@
       "nom": "Debout La France",
       "sigle": "DLF",
       "couleur": "#1E40AF",
-      "nuance": "Gaullisme souverainiste",
+      "nuanceOfficielle": {
+        "code": "DSV",
+        "libelle": "Droite souverainiste",
+        "election": "législatives 2024",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+      },
       "siteWeb": "https://debout-la-france.fr"
     },
     {
@@ -117,7 +182,12 @@
       "nom": "Union Populaire Républicaine",
       "sigle": "UPR",
       "couleur": "#1D4ED8",
-      "nuance": "Souverainisme & Frexit",
+      "nuanceOfficielle": {
+        "code": "LDIV",
+        "libelle": "Liste Divers",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://upr.fr"
     },
     {
@@ -125,15 +195,19 @@
       "nom": "Nouvelle Énergie",
       "sigle": "NE",
       "couleur": "#2563EB",
-      "nuance": "Droite libérale",
       "siteWeb": "https://nouvelleenergie.fr"
     },
     {
       "id": "parti-animaliste",
-      "nom": "Parti Animaliste",
+      "nom": "Parti animaliste",
       "sigle": "PA",
-      "couleur": "#9333EA",
-      "nuance": "Condition animale",
+      "couleur": "#912993",
+      "nuanceOfficielle": {
+        "code": "LDIV",
+        "libelle": "Liste Divers",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://parti-animaliste.fr"
     },
     {
@@ -141,39 +215,52 @@
       "nom": "Résistons !",
       "sigle": "RES",
       "couleur": "#D97706",
-      "nuance": "Ruralité & Humanisme",
       "siteWeb": "https://resistons-france.fr"
     },
     {
       "id": "revolution-permanente",
       "nom": "Révolution permanente",
       "sigle": "RP",
-      "couleur": "#E11D48",
-      "nuance": "Extrême gauche",
+      "couleur": "#C12527",
+      "nuanceOfficielle": {
+        "code": "EXG",
+        "libelle": "Extrême gauche",
+        "election": "législatives 2024",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+      },
       "siteWeb": "https://www.revolutionpermanente.fr"
     },
     {
       "id": "les-patriotes",
       "nom": "Les Patriotes",
       "sigle": "LP",
-      "couleur": "#3949AB",
-      "nuance": "Souverainisme",
+      "couleur": "#E88A28",
+      "nuanceOfficielle": {
+        "code": "LEXD",
+        "libelle": "Liste d'extrême droite",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://les-patriotes.fr"
     },
     {
       "id": "npa-revolutionnaires",
       "nom": "NPA-Révolutionnaires",
       "sigle": "NPA-R",
-      "couleur": "#931914",
-      "nuance": "Extrême gauche",
+      "couleur": "#CD071E",
+      "nuanceOfficielle": {
+        "code": "LEXG",
+        "libelle": "Liste d'extrême-gauche",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      },
       "siteWeb": "https://npa-revolutionnaires.org"
     },
     {
       "id": "la-france-humaine-et-forte",
       "nom": "La France Humaine et Forte",
       "sigle": "FHuF",
-      "couleur": "#B5179E",
-      "nuance": "Social-démocratie",
+      "couleur": "#1B4F72",
       "siteWeb": "https://www.lafrancehumaineetforte.fr"
     },
     {
@@ -181,23 +268,24 @@
       "nom": "Génération écologie",
       "sigle": "GE",
       "couleur": "#5ABB48",
-      "nuance": "Écologie et décroissance",
+      "nuanceOfficielle": {
+        "code": "ECO",
+        "libelle": "Écologistes",
+        "election": "législatives 2024",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+      },
       "siteWeb": "https://www.generationecologie.fr"
     },
     {
       "id": "projet-france",
       "nom": "Projet France",
-      "sigle": "PF",
-      "couleur": "#F37021",
-      "nuance": "Centre",
+      "couleur": "#0546A5",
       "siteWeb": "https://becht2027.fr"
     },
     {
       "id": "nous-sommes-la-france",
       "nom": "Nous sommes la France",
-      "sigle": "NSLF",
-      "couleur": "#0F766E",
-      "nuance": "Gaullisme social et souveraineté",
+      "couleur": "#00A2B0",
       "siteWeb": "https://www.npolony.fr"
     },
     {
@@ -205,7 +293,6 @@
       "nom": "Nous France",
       "sigle": "NF",
       "couleur": "#46B7FF",
-      "nuance": "Droite sociale",
       "siteWeb": "https://www.nousfrance.fr"
     }
   ],
@@ -308,7 +395,8 @@
         "sourceUrl": "https://www.sudradio.fr/sud-radio/presidentielle-2027-qui-sont-les-candidats-declares"
       },
       "parti": "Équinoxe",
-      "couleurParti": "#059669"
+      "couleurParti": "#FFD412",
+      "sigleParti": "EQX"
     },
     {
       "id": "raphael-glucksmann",
@@ -323,7 +411,8 @@
         "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
       },
       "parti": "Place Publique / PS",
-      "couleurParti": "#D81B60"
+      "couleurParti": "#D81B60",
+      "sigleParti": "PP-PS"
     },
     {
       "id": "edouard-philippe",
@@ -338,7 +427,8 @@
         "sourceUrl": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/havre/je-serai-candidat-a-la-prochaine-election-presidentielle-edouard-philippe-l-ancien-premier-ministre-et-maire-du-havre-officialise-sa-candidature-3026366.html"
       },
       "parti": "Horizons",
-      "couleurParti": "#002B7F"
+      "couleurParti": "#002B7F",
+      "sigleParti": "HOR"
     },
     {
       "id": "gabriel-attal",
@@ -353,7 +443,8 @@
         "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-officialise-sa-candidature-436721"
       },
       "parti": "Renaissance",
-      "couleurParti": "#7B1FA2"
+      "couleurParti": "#7B1FA2",
+      "sigleParti": "REN"
     },
     {
       "id": "jean-luc-melenchon",
@@ -368,7 +459,8 @@
         "sourceUrl": "https://lcp.fr/actualites/presidentielle-jean-luc-melenchon-officialise-sa-candidature-pour-2027-435851"
       },
       "parti": "La France Insoumise",
-      "couleurParti": "#C62828"
+      "couleurParti": "#C62828",
+      "sigleParti": "LFI"
     },
     {
       "id": "marine-le-pen",
@@ -383,7 +475,8 @@
         "sourceUrl": "https://fr.euronews.com/my-europe/2026/07/07/je-suis-candidate-a-lelection-presidentielle-annonce-marine-le-pen-sur-tf1"
       },
       "parti": "Rassemblement National",
-      "couleurParti": "#0D47A1"
+      "couleurParti": "#0D47A1",
+      "sigleParti": "RN"
     },
     {
       "id": "marine-tondelier",
@@ -398,7 +491,8 @@
         "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
       },
       "parti": "Les Écologistes",
-      "couleurParti": "#2E7D32"
+      "couleurParti": "#2E7D32",
+      "sigleParti": "EELV"
     },
     {
       "id": "bruno-retailleau",
@@ -413,7 +507,8 @@
         "sourceUrl": "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-bruno-retailleau-largement-designe-candidat-par-les-adherents-du-parti-les-republicains_7949957.html"
       },
       "parti": "Les Républicains",
-      "couleurParti": "#0055A5"
+      "couleurParti": "#0055A5",
+      "sigleParti": "LR"
     },
     {
       "id": "francois-ruffin",
@@ -428,7 +523,8 @@
         "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart"
       },
       "parti": "Debout !",
-      "couleurParti": "#EF4444"
+      "couleurParti": "#EF4444",
+      "sigleParti": "DEBOUT"
     },
     {
       "id": "fabien-roussel",
@@ -443,7 +539,8 @@
         "sourceUrl": "https://lcp.fr/actualites/fabien-roussel-officiellement-candidat-du-pcf-a-l-election-presidentielle-de-2027-441389"
       },
       "parti": "Parti Communiste Français",
-      "couleurParti": "#DC2626"
+      "couleurParti": "#DC2626",
+      "sigleParti": "PCF"
     },
     {
       "id": "eric-zemmour",
@@ -458,7 +555,8 @@
         "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
       },
       "parti": "Reconquête",
-      "couleurParti": "#1E1B4B"
+      "couleurParti": "#1E1B4B",
+      "sigleParti": "REC"
     },
     {
       "id": "nathalie-arthaud",
@@ -473,7 +571,8 @@
         "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
       },
       "parti": "Lutte Ouvrière",
-      "couleurParti": "#B91C1C"
+      "couleurParti": "#B91C1C",
+      "sigleParti": "LO"
     },
     {
       "id": "francois-asselineau",
@@ -488,7 +587,8 @@
         "sourceUrl": "https://upr.fr/militantisme/19-ans-de-lupr-francois-asselineau-lance-sa-campagne-presidentielle-2027-et-nomme-marc-parigot-directeur-de-campagne/"
       },
       "parti": "Union Populaire Républicaine",
-      "couleurParti": "#1D4ED8"
+      "couleurParti": "#1D4ED8",
+      "sigleParti": "UPR"
     },
     {
       "id": "nicolas-dupont-aignan",
@@ -503,7 +603,8 @@
         "sourceUrl": "https://www.lejdd.fr/politique/cette-presidentielle-sera-peut-etre-la-derniere-dun-peuple-libre-dupont-aignan-annonce-sa-candidature-pour-2027-155797"
       },
       "parti": "Debout La France",
-      "couleurParti": "#1E40AF"
+      "couleurParti": "#1E40AF",
+      "sigleParti": "DLF"
     },
     {
       "id": "david-lisnard",
@@ -518,7 +619,8 @@
         "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/le-maire-de-cannes-david-lisnard-annonce-sa-candidature-a-l-election-presidentielle-et-officialise-son-depart-des-republicains_7907063.html"
       },
       "parti": "Nouvelle Énergie",
-      "couleurParti": "#2563EB"
+      "couleurParti": "#2563EB",
+      "sigleParti": "NE"
     },
     {
       "id": "jean-lassalle",
@@ -533,21 +635,23 @@
         "sourceUrl": "https://www.europe1.fr/politique/presidentielle-jean-lassalle-lance-une-cagnotte-pour-financer-sa-candidature-970134"
       },
       "parti": "Résistons !",
-      "couleurParti": "#D97706"
+      "couleurParti": "#D97706",
+      "sigleParti": "RES"
     },
     {
       "id": "mira-markovic",
       "nom": "Mira Markovic",
       "partiId": "parti-animaliste",
       "avatar": "MM",
-      "biographie": "Psychologue de formation, cofondatrice du Parti Animaliste et ancienne conseillère de Paris (2014-2020).",
+      "biographie": "Psychologue de formation, cofondatrice du Parti animaliste et ancienne conseillère de Paris (2014-2020).",
       "candidature": {
         "statut": "designee",
         "date": "2026-10-02",
         "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle"
       },
-      "parti": "Parti Animaliste",
-      "couleurParti": "#9333EA"
+      "parti": "Parti animaliste",
+      "couleurParti": "#912993",
+      "sigleParti": "PA"
     },
     {
       "id": "anasse-kazib",
@@ -561,7 +665,8 @@
         "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-cheminot-anasse-kazib-annonce-sa-candidature_8040020.html"
       },
       "parti": "Révolution permanente",
-      "couleurParti": "#E11D48"
+      "couleurParti": "#C12527",
+      "sigleParti": "RP"
     },
     {
       "id": "florian-philippot",
@@ -575,7 +680,8 @@
         "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
       },
       "parti": "Les Patriotes",
-      "couleurParti": "#3949AB"
+      "couleurParti": "#E88A28",
+      "sigleParti": "LP"
     },
     {
       "id": "selma-labib",
@@ -589,7 +695,8 @@
         "sourceUrl": "https://npa-revolutionnaires.org/articles/communique-presidentielle-2027-selma-labib-une-candidature-ouvriere-et-revolutionnaire-soutenue-par-gael-quirante"
       },
       "parti": "NPA-Révolutionnaires",
-      "couleurParti": "#931914"
+      "couleurParti": "#CD071E",
+      "sigleParti": "NPA-R"
     },
     {
       "id": "karim-bouamrane",
@@ -603,7 +710,8 @@
         "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-qui-est-karim-bouamrane-le-maire-socialiste-de-saint-ouen-et-nouveau"
       },
       "parti": "La France Humaine et Forte",
-      "couleurParti": "#B5179E"
+      "couleurParti": "#1B4F72",
+      "sigleParti": "FHuF"
     },
     {
       "id": "delphine-batho",
@@ -617,7 +725,8 @@
         "sourceUrl": "https://www.generationecologie.fr/app/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
       },
       "parti": "Génération écologie",
-      "couleurParti": "#5ABB48"
+      "couleurParti": "#5ABB48",
+      "sigleParti": "GE"
     },
     {
       "id": "olivier-becht",
@@ -631,7 +740,7 @@
         "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
       },
       "parti": "Projet France",
-      "couleurParti": "#F37021"
+      "couleurParti": "#0546A5"
     },
     {
       "id": "natacha-polony",
@@ -645,7 +754,7 @@
         "sourceUrl": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-mercredi-14-octobre-2026-3340206"
       },
       "parti": "Nous sommes la France",
-      "couleurParti": "#0F766E"
+      "couleurParti": "#00A2B0"
     },
     {
       "id": "xavier-bertrand",
@@ -659,7 +768,8 @@
         "sourceUrl": "https://lcp.fr/actualites/2027-figure-de-la-droite-xavier-bertrand-confirme-qu-il-sera-candidat-a-l-election"
       },
       "parti": "Nous France",
-      "couleurParti": "#46B7FF"
+      "couleurParti": "#46B7FF",
+      "sigleParti": "NF"
     }
   ],
   "propositions": [
@@ -1055,10 +1165,10 @@
       "candidatId": "eric-zemmour",
       "thematiqueId": "societe",
       "titre": "Interdire les signes religieux dans l'espace public, dont le voile islamique",
-      "description": "« In public spaces, yes. »",
-      "sourceUrl": "https://www.ynetnews.com/jewish-world/article/sjlbcentzx",
+      "description": "« Dans l'espace public oui »",
+      "sourceUrl": "https://www.bfmtv.com/politique/elections/presidentielle/video-interdiction-du-voile-et-de-la-kippa-dans-l-espace-public-oui-repond-eric-zemmour-president-de-reconquete_VN-202609170912.html",
       "dateDeclaration": "2026-09-17",
-      "contexte": "Interview télévisée « Face à BFM », rapportée par Ynet News (en anglais). Réponse à la question : l'interdiction s'appliquerait-elle aussi à la kippa ? Elle est présentée comme une « priorité absolue », surtout pour le voile."
+      "contexte": "Entretien télévisé « Face à BFM » (BFMTV, extrait vidéo). Réponse à la question : l'interdiction du voile dans l'espace public vaudrait-elle aussi pour la kippa ?"
     },
     {
       "id": "prop-fro-1",
@@ -2292,6 +2402,18 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 30 pour, 0 contre, 28 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
         }
       },
       "ref": "L-44"
@@ -2373,6 +2495,18 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 57 pour, 4 contre, 6 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
         }
       },
@@ -2456,6 +2590,18 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 64 pour, 0 contre, 5 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
         }
       },
       "ref": "L-42"
@@ -2537,6 +2683,18 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 66 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
         }
       },
@@ -2620,6 +2778,18 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 65 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
         }
       },
       "ref": "L-40"
@@ -2695,6 +2865,18 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 35 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
         }
       },
@@ -2778,6 +2960,18 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 66 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653"
+        },
+        "olivier-becht": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653"
         }
       },
       "ref": "L-38"
@@ -2859,6 +3053,20 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 63 pour, 0 contre, 1 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
+        },
+        "delphine-batho": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 0 pour, 4 contre, 25 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
         }
       },
@@ -2944,6 +3152,20 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 65 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+        },
+        "olivier-becht": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
         }
       },
       "ref": "L-28"
@@ -3025,6 +3247,18 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 66 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
         }
       },
@@ -3108,6 +3342,18 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 66 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "delphine-batho": {
+          "position": "abstention",
+          "typeVote": "individuel",
+          "explication": "S'est abstenue.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+        },
+        "olivier-becht": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
         }
       },
       "ref": "L-26"
@@ -3186,6 +3432,22 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 37 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Position majoritaire du groupe : 38 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
         }
       },
       "ref": "L-25"
@@ -3253,6 +3515,20 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 1 pour, 51 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
+        },
+        "olivier-becht": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Position majoritaire du groupe : 0 pour, 58 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
         }
       },
@@ -3342,6 +3618,18 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 31 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
         }
       },
       "ref": "L-23"
@@ -3423,6 +3711,20 @@
           "groupe": "SOC-A",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 0 pour, 18 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
         }
       },
@@ -3509,6 +3811,22 @@
           "groupe": "SOC-A",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 7 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Position majoritaire du groupe : 72 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
         }
       },
@@ -3659,6 +3977,22 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 14 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Position majoritaire du groupe : 56 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
         }
       },
       "ref": "L-19"
@@ -3784,6 +4118,22 @@
           "groupe": "SOC-A",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 3 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RE",
+          "groupeNom": "Renaissance",
+          "explication": "Position majoritaire du groupe : 34 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
         }
       },
@@ -3918,6 +4268,18 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 31 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
         }
       },
       "ref": "L-15"
@@ -3996,6 +4358,18 @@
           "typeVote": "individuel",
           "explication": "S'est opposé à l'inscription dans la Constitution, estimant que la liberté d'avorter n'était pas menacée en France.",
           "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-138.html"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour au Congrès.",
+          "sourceUrl": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour au Congrès.",
+          "sourceUrl": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip"
         }
       },
       "ref": "L-14"
@@ -4084,6 +4458,12 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 0 pour, 31 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
         }
       },
       "ref": "L-13"
@@ -4163,6 +4543,12 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 8 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
+        },
+        "delphine-batho": {
+          "position": "abstention",
+          "typeVote": "individuel",
+          "explication": "S'est abstenue.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
         }
       },
@@ -4250,6 +4636,12 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 0 pour, 20 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
         }
       },
       "ref": "L-10"
@@ -4332,6 +4724,14 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
+        },
+        "delphine-batho": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 4 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
         }
       },
       "ref": "L-09"
@@ -4411,6 +4811,14 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 4 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 5 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075"
         }
       },
@@ -4500,6 +4908,12 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 30 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
         }
       },
       "ref": "L-07"
@@ -4588,6 +5002,12 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 0 pour, 29 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
         }
       },
       "ref": "L-05"
@@ -4666,6 +5086,14 @@
           "typeVote": "groupe_parti",
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
+          "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
           "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
         }
@@ -4752,6 +5180,12 @@
           "typeVote": "individuel",
           "explication": "Député de l'Essonne, a voté contre la réforme et cosigné la motion de censure transpartisane.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté pour la motion de censure déposée après le recours au 49.3 sur la réforme.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         }
       },
       "ref": "L-03"
@@ -4837,6 +5271,14 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 28 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOLO",
+          "groupeNom": "Écologiste - NUPES",
+          "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
         }
       },
@@ -4928,6 +5370,12 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 28 pour, 0 contre, 2 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
+        },
+        "delphine-batho": {
+          "position": "abstention",
+          "typeVote": "individuel",
+          "explication": "S'est abstenue.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
         }
       },
       "ref": "L-01"
@@ -4989,6 +5437,18 @@
           "groupe": "LR",
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 1 pour, 3 contre, 99 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738"
         }
       },
@@ -5058,6 +5518,18 @@
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 0 pour, 97 contre, 5 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
+        },
+        "delphine-batho": {
+          "position": "abstention",
+          "typeVote": "individuel",
+          "explication": "S'est abstenue.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
         }
       },
       "ref": "L-35"
@@ -5126,6 +5598,18 @@
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 99 pour, 0 contre, 4 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
         }
       },
       "ref": "L-34"
@@ -5187,6 +5671,18 @@
           "groupe": "LR",
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 12 pour, 75 contre, 15 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
         }
       },
@@ -5256,6 +5752,18 @@
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 1 pour, 96 contre, 5 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
+        },
+        "olivier-becht": {
+          "position": "abstention",
+          "typeVote": "individuel",
+          "explication": "S'est abstenu.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
         }
       },
       "ref": "L-32"
@@ -5317,6 +5825,12 @@
           "groupe": "LR",
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 1 pour, 96 contre, 6 abstentions.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
         }
       },
@@ -5380,6 +5894,18 @@
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 0 pour, 68 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578"
         }
       },
       "ref": "L-30"
@@ -5440,6 +5966,18 @@
           "groupeNom": "Les Républicains",
           "explication": "Position majoritaire du groupe : 82 pour, 0 contre, 15 abstentions.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
+        },
+        "delphine-batho": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
+        },
+        "olivier-becht": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
         }
       },
       "ref": "L-29"
@@ -5458,13 +5996,12 @@
     },
     {
       "sigle": "BFM",
-      "forme": "BFMTV",
-      "definition": "Chaîne de télévision d'information en continu."
+      "forme": "Groupe de médias de BFMTV",
+      "definition": "« Face à BFM » est l'une de ses émissions."
     },
     {
       "sigle": "BFMTV",
-      "forme": "BFMTV",
-      "definition": "Chaîne de télévision d'information en continu."
+      "forme": "Chaîne de télévision d'information en continu"
     },
     {
       "sigle": "CDI",
@@ -5538,8 +6075,8 @@
     },
     {
       "sigle": "GAIA",
-      "forme": "GAIA-X",
-      "definition": "Projet européen d'infrastructure de données et de cloud."
+      "forme": "Projet européen GAIA-X",
+      "definition": "Infrastructure européenne de données et de cloud."
     },
     {
       "sigle": "IA",
@@ -5618,7 +6155,7 @@
     },
     {
       "sigle": "QR",
-      "forme": "QR code",
+      "forme": "Code QR (de l'anglais Quick Response)",
       "definition": "Code-barres carré lisible avec un téléphone."
     },
     {
@@ -5643,7 +6180,7 @@
     },
     {
       "sigle": "SMR",
-      "forme": "Petit réacteur modulaire",
+      "forme": "Petit réacteur modulaire (en anglais Small Modular Reactor)",
       "definition": "Petit réacteur nucléaire conçu pour être fabriqué en série."
     },
     {
@@ -5668,7 +6205,8 @@
     },
     {
       "sigle": "TGV",
-      "forme": "Train à grande vitesse"
+      "forme": "Train à grande vitesse",
+      "definition": "Train rapide de la SNCF, sur lignes dédiées."
     },
     {
       "sigle": "TVA",
@@ -5677,7 +6215,8 @@
     },
     {
       "sigle": "UE",
-      "forme": "Union européenne"
+      "forme": "Union européenne",
+      "definition": "Union politique et économique de 27 pays européens."
     },
     {
       "sigle": "ZAN",
