@@ -46,7 +46,7 @@ Pour chaque candidat, un seul score combiné, ramené sur 0-100 % :
 
 Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à partir de 2 propositions votées (les scrutins seuls ne suffisent pas) ; à score égal, même rang, dans un ordre tiré au hasard à chaque lancement (le nombre de votes ne départage pas : il avantagerait les élus sortants). Pourquoi : [docs/simulations](docs/simulations/README.md), à relancer avec `npm run simulate:scoring`. La fiche candidat détaille la part programme et la part votes au Parlement.
 
-**Fiabilité** d'un score classé, selon ses éléments (proposition notée ou vote personnel : 1, vote de groupe : ½) : fragile sous 3, assez sûr de 3 à 4,5, fiable à partir de 5. Chaque candidat a 6 propositions : tous peuvent devenir fiables avec leur seul programme. Affichée en jauge de 3 traits dans le Classement, détaillée sur la fiche, et dans le bilan de Voter (panneaux remplis au tiers, aux deux tiers ou en entier).
+**Fiabilité** d'un score classé, selon ses éléments (proposition notée ou vote personnel : 1, vote de groupe : ½) : fragile sous 3, assez sûr de 3 à 4,5, fiable à partir de 5. Chaque candidat a jusqu'à 8 propositions, chacune dans un thème différent : tous peuvent devenir fiables avec leur seul programme. Affichée en jauge de 3 traits dans le Classement, détaillée sur la fiche, et dans le bilan de Voter (panneaux remplis au tiers, aux deux tiers ou en entier).
 
 ### Interface
 

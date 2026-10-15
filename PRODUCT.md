@@ -38,7 +38,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 
 ## Evidence on Hand
 
-- Données éditoriales : data/candidats/\*.csv (144 propositions vérifiées, 25 candidats, chacun avec la source datée de sa candidature), data/lois.json (42 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen).
+- Données éditoriales : data/candidats/\*.csv (194 propositions vérifiées, 8 par candidat pour 21 d'entre eux, 25 candidats, chacun avec la source datée de sa candidature), data/lois.json (42 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen).
 - Qualité des sources : chaque proposition renvoie à un document précis qui la contient (vérification du 2026-10-13, docs/verification-donnees.md). Plusieurs mesures viennent de programmes 2022, faute de programme 2027 publié.
 - Charte graphique : src/constants/theme.ts, logo vectoriel assets/brand/mark.svg, contrat de direction .impeccable/surfaces/src-app-tabs-index-tsx.md.
 

@@ -23,26 +23,26 @@ Rappel du calcul : chaque vote rapporte de −2 à +2 ; le score ramène le tota
 - **Test 1, lecteur d'accord avec un candidat X** : il note les propositions de X à +2 ou +1, vote comme X sur ses scrutins, et au hasard ailleurs. On compte combien de fois X sort n°1.
 - **Test 2, lecteur au hasard** : tout au hasard. Dans une méthode neutre, chaque candidat sortirait n°1 une fois sur 25 (4 %).
 
-## Résultats (données du 2026-10-15, 25 candidats dont 13 ont siégé)
+## Résultats (données du 2026-10-15 : 25 candidats dont 13 ont siégé, 194 propositions)
 
 Test 1, X sort n°1 :
 
 | Méthode | X a siégé | X n'a jamais siégé | Écart |
 | --- | --- | --- | --- |
-| Avant : au nombre, égalité par fiabilité | 44,4 % | 37,7 % | 6,7 |
-| Option 1 : égalité au hasard | 42,7 % | 37,3 % | 5,4 |
-| Option 2 : moitié programme, moitié Parlement | 40,8 % | 36,9 % | 3,9 |
-| **Retenue : option 1 + Parlement plafonné à moitié** | **40,8 %** | **37,1 %** | **3,7** |
+| Avant : au nombre, égalité par fiabilité | 44,0 % | 38,1 % | 5,9 |
+| Option 1 : égalité au hasard | 42,3 % | 37,9 % | 4,4 |
+| Option 2 : moitié programme, moitié Parlement | 40,4 % | 37,3 % | 3,1 |
+| **Retenue : option 1 + Parlement plafonné à moitié** | **40,4 %** | **37,5 %** | **2,9** |
 
 Test 2, part de n°1 par candidat : environ 1,5 à 1,8 % pour ceux qui ont siégé, 6,4 à 6,8 % pour les autres, quelle que soit la méthode. Avec peu de votes, un score monte facilement très haut par hasard (2 notes « Parfait » font 100 %), alors que les scores des sortants, appuyés sur plus de votes, restent près de 50 %. Ce biais-là avantage les nouveaux venus ; la jauge « fragile » le signale au lecteur.
 
-Une première simulation à 4 000 lecteurs donnait un écart nul pour la méthode retenue : c'était du bruit. À 25 000 lecteurs, sur deux graines (2027 et 1789), l'écart retenu est de 3 à 4 points. Les chiffres ci-dessus incluent les votes de Delphine Batho et d'Olivier Becht, ajoutés le même jour (13 candidats ont siégé au lieu de 11).
+Une première simulation à 4 000 lecteurs donnait un écart nul pour la méthode retenue : c'était du bruit. À 25 000 lecteurs, sur deux graines (2027 et 1789), l'écart retenu est de 3 à 4 points. Les chiffres ci-dessus incluent les votes de Delphine Batho et d'Olivier Becht et les 50 propositions ajoutées le même jour (13 candidats ont siégé au lieu de 11, 194 propositions au lieu de 144).
 
 ## Décision
 
 - **Option 1** : à score égal, l'ordre est tiré au hasard, sans regarder le nombre de votes.
 - **Option 2 plafonnée** (`MAX_PARLEMENT_SHARE = 0.5`) : programme et Parlement pèsent au nombre de leurs votes, mais le Parlement jamais plus de la moitié. Avec 1 scrutin pour 4 propositions, il pèse 1/5 ; avec 20 scrutins, la moitié, au lieu de 83 %. Le programme reste la base commune à tous les candidats.
 
-Ensemble, elles réduisent l'écart de près de moitié (de 6,7 à 3,7 points). L'écart restant vient du test lui-même : le lecteur simulé est d'accord avec tous les votes réels de X, ce qui est un vrai accord, pas un bonus de méthode.
+Ensemble, elles réduisent l'écart de près de moitié (de 5,9 à 2,9 points). L'écart restant vient du test lui-même : le lecteur simulé est d'accord avec tous les votes réels de X, ce qui est un vrai accord, pas un bonus de méthode.
 
 Option écartée : afficher « programme seul » sur les candidats qui n'ont jamais siégé, qui reviendrait à les marquer.
