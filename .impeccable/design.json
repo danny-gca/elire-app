@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-10-14T13:00:34.000Z",
-  "title": "Design System: ÉLIRE",
+  "title": "Design System: élire",
   "extensions": {
     "colorMeta": {
       "paper": {
@@ -877,7 +877,7 @@
       "kind": "nav",
       "refersTo": "tab-bar-web",
       "description": "Barre d'onglets web, en haut à partir de 900px, wordmark texte seul.",
-      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">ÉLIRE</span><a class=\"ds-nav-tab is-on\">Voter</a><a class=\"ds-nav-tab\">Classement</a><a class=\"ds-nav-tab\">Lois</a><a class=\"ds-nav-tab\">Explorer</a></nav>",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">élire</span><a class=\"ds-nav-tab is-on\">Voter</a><a class=\"ds-nav-tab\">Classement</a><a class=\"ds-nav-tab\">Lois</a><a class=\"ds-nav-tab\">Explorer</a></nav>",
       "css": ".ds-nav{display:flex;align-items:stretch;background:#FFFFFF;border-bottom:1px solid #D5D9DD;min-height:56px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif}.ds-nav-brand{margin-right:auto;padding:0 16px;display:flex;align-items:center;font-size:17px;font-weight:600;color:#1C1E21}.ds-nav-tab{position:relative;display:flex;align-items:center;padding:0 14px;font-size:13px;line-height:18px;font-weight:500;color:#5B6168;cursor:pointer;text-decoration:none}.ds-nav-tab:hover,.ds-nav-tab:active{background:#EEF0F1}.ds-nav-tab.is-on{color:#1C1E21;font-weight:600}.ds-nav-tab.is-on::after{content:\"\";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#1C1E21}.ds-nav-tab:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {

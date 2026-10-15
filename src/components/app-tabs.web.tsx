@@ -1,6 +1,7 @@
 import { TabList, TabSlot, TabTrigger, Tabs, type TabListProps, type TabTriggerSlotProps } from 'expo-router/ui';
 import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
+import { Brand } from '@/components/brand';
 import { Colors, MaxContentWidth, Spacing, Type } from '@/constants/theme';
 
 // Sur le web, les sources SVG du jeu commun : nettes à toute densité d'écran.
@@ -73,8 +74,8 @@ function TabBar({ wide, ...props }: TabListProps & { wide: boolean }) {
     <View {...props} style={wide ? styles.barWide : styles.bar}>
       <View style={styles.inner}>
         {wide && (
-          <View style={styles.brand} accessibilityRole="header">
-            <Text style={[Type.bodyStrong, { color: Colors.ink }]}>ÉLIRE</Text>
+          <View style={styles.brand}>
+            <Brand height={26} />
           </View>
         )}
         {props.children}

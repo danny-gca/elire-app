@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Pressable, StyleSheet, Text, type StyleProp, type ViewStyle } from 'react-native';
+import { Pressable, StyleSheet, Text, type GestureResponderEvent, type StyleProp, type ViewStyle } from 'react-native';
 
 import { Colors, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
 
@@ -7,7 +7,7 @@ type Variant = 'primary' | 'secondary' | 'quiet' | 'danger';
 
 interface ButtonProps {
   label: string;
-  onPress: () => void;
+  onPress: (e: GestureResponderEvent) => void;
   variant?: Variant;
   icon?: keyof typeof Ionicons.glyphMap;
   disabled?: boolean;

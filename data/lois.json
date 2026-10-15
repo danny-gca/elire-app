@@ -79,6 +79,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
       }
     }
   },
@@ -160,6 +172,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
       }
     }
   },
@@ -241,6 +265,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
       }
     }
   },
@@ -322,6 +358,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
       }
     }
   },
@@ -403,6 +451,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
       }
     }
   },
@@ -478,6 +538,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
       }
     }
   },
@@ -559,6 +631,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653"
       }
     }
   },
@@ -640,6 +724,20 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 4 contre, 25 abstentions.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
       }
     }
   },
@@ -723,6 +821,20 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
       }
     }
   },
@@ -804,6 +916,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
       }
     }
   },
@@ -885,6 +1009,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "abstention",
+        "typeVote": "individuel",
+        "explication": "S'est abstenue.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
       }
     }
   },
@@ -962,6 +1098,22 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 38 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
       }
     }
   },
@@ -1029,6 +1181,20 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 58 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
       }
     }
   },
@@ -1116,6 +1282,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
       }
     }
   },
@@ -1197,6 +1375,20 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 18 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
       }
     }
   },
@@ -1350,6 +1542,22 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 72 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
       }
     }
   },
@@ -1429,6 +1637,22 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 56 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
       }
     }
   },
@@ -1553,6 +1777,22 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 3 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 34 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
+        "groupe": "RE",
+        "groupeNom": "Renaissance"
       }
     }
   },
@@ -1684,6 +1924,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
       }
     }
   },
@@ -1761,6 +2013,18 @@
         "typeVote": "individuel",
         "explication": "S'est opposé à l'inscription dans la Constitution, estimant que la liberté d'avorter n'était pas menacée en France.",
         "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-138.html"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour au Congrès.",
+        "sourceUrl": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour au Congrès.",
+        "sourceUrl": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip"
       }
     }
   },
@@ -1848,6 +2112,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
       }
     }
   },
@@ -1927,6 +2197,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "abstention",
+        "typeVote": "individuel",
+        "explication": "S'est abstenue.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
       }
     }
   },
@@ -2012,6 +2288,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
       }
     }
   },
@@ -2093,6 +2375,14 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 4 abstentions.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
       }
     }
   },
@@ -2172,6 +2462,14 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 5 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
       }
     }
   },
@@ -2259,6 +2557,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
       }
     }
   },
@@ -2346,6 +2650,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
       }
     }
   },
@@ -2425,6 +2735,14 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
       }
     }
   },
@@ -2507,6 +2825,12 @@
         "position": "contre",
         "typeVote": "individuel",
         "explication": "Député de l'Essonne, a voté contre la réforme et cosigné la motion de censure transpartisane.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté pour la motion de censure déposée après le recours au 49.3 sur la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       }
     }
@@ -2593,6 +2917,14 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
+        "groupe": "ECOLO",
+        "groupeNom": "Écologiste - NUPES"
       }
     }
   },
@@ -2682,6 +3014,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
+      },
+      "delphine-batho": {
+        "position": "abstention",
+        "typeVote": "individuel",
+        "explication": "S'est abstenue.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
       }
     }
   },
@@ -2743,6 +3081,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738"
       }
     }
   },
@@ -2810,6 +3160,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "abstention",
+        "typeVote": "individuel",
+        "explication": "S'est abstenue.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
       }
     }
   },
@@ -2877,6 +3239,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
       }
     }
   },
@@ -2938,6 +3312,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
       }
     }
   },
@@ -3005,6 +3391,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
+      },
+      "olivier-becht": {
+        "position": "abstention",
+        "typeVote": "individuel",
+        "explication": "S'est abstenu.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
       }
     }
   },
@@ -3066,6 +3464,12 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
       }
     }
   },
@@ -3127,6 +3531,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578"
       }
     }
   },
@@ -3186,6 +3602,18 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314",
         "groupe": "LR",
         "groupeNom": "Les Républicains"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
       }
     }
   }

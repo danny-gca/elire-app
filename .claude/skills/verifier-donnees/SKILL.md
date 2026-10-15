@@ -1,6 +1,6 @@
 ---
 name: verifier-donnees
-description: Vérifier les données d'ÉLIRE (candidats, partis, propositions, lois et votes au Parlement) contre leurs sources, corriger ou retirer ce qui ne tient pas, et consigner le résultat. À utiliser pour un audit complet, un candidat, une loi, une référence (P-531, L-28), un ticket « Erreur dans les données », ou après tout ajout de données.
+description: Vérifier les données d'élire (candidats, partis, propositions, lois et votes au Parlement) contre leurs sources, corriger ou retirer ce qui ne tient pas, et consigner le résultat. À utiliser pour un audit complet, un candidat, une loi, une référence (P-531, L-28), un ticket « Erreur dans les données », ou après tout ajout de données.
 ---
 
 # Vérifier les données
@@ -42,7 +42,7 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - Parti et biographie factuels et neutres.
 - Photo : fichier exact sur Wikimedia Commons sous CC0, CC BY ou CC BY-SA, crédité dans `src/constants/credits.ts`. « Tous droits réservés » : pas de photo, initiales.
 
-**Parti** (`data/partis.json`) : nom et sigle officiels, site officiel joignable, nuance descriptive (pas d'étiquette péjorative).
+**Parti** (`data/partis.json`) : nom et sigle officiels, site officiel joignable, nuance officielle du ministère de l'Intérieur retrouvée dans sa source (résultats ou circulaire), ou absente.
 
 **Loi et votes** (`data/lois.json`)
 - `sourceOfficielleUrl` : la page du scrutin (Assemblée `assemblee-nationale.fr/dyn/<législature>/scrutins/<n>`, Sénat, Parlement européen), pas un article.

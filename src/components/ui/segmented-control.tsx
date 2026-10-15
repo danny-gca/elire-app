@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { Colors, MinTarget, Numeric, Radius, Type } from '@/constants/theme';
+import { Colors, Markers, MinTarget, Numeric, Radius, Type } from '@/constants/theme';
+import { useVotesStore } from '@/store/votes-store';
 
 export interface Segment<T extends string> {
   value: T;
@@ -21,6 +22,7 @@ export function SegmentedControl<T extends string>({
   onChange,
   accessibilityLabel,
 }: SegmentedControlProps<T>) {
+  const marker = useVotesStore((s) => s.marker);
   return (
     <View style={styles.track} accessibilityRole="tablist" accessibilityLabel={accessibilityLabel}>
       {segments.map((s) => {
@@ -33,10 +35,17 @@ export function SegmentedControl<T extends string>({
             accessibilityState={{ selected }}
             accessibilityLabel={s.count === undefined ? s.label : `${s.label}, ${s.count}`}
             style={[styles.segment, selected && styles.selected]}>
-            <Text style={[selected ? Type.labelStrong : Type.label, Numeric, { color: selected ? Colors.ink : Colors.graphite }]} numberOfLines={1}>
-              {s.label}
-              {s.count !== undefined && ` ${s.count}`}
-            </Text>
+            <View style={styles.content}>
+              <Text style={[selected ? Type.labelStrong : Type.label, styles.label, { color: selected ? Colors.ink : Colors.graphite }]} numberOfLines={1}>
+                {s.label}
+              </Text>
+              {/* Le nombre en pastille, surlignée sur l'onglet actif. */}
+              {s.count !== undefined && (
+                <View style={[styles.badge, { backgroundColor: selected ? Markers[marker].soft : Colors.sheet }]}>
+                  <Text style={[Type.labelStrong, Numeric, styles.badgeText]}>{s.count}</Text>
+                </View>
+              )}
+            </View>
           </Pressable>
         );
       })}
@@ -58,6 +67,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: Radius.medium - 3,
     paddingHorizontal: 6,
+  },
+  content: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    minWidth: 0,
+  },
+  label: {
+    flexShrink: 1,
+  },
+  badge: {
+    minWidth: 22,
+    paddingHorizontal: 6,
+    paddingVertical: 1,
+    borderRadius: 999,
+    alignItems: 'center',
+  },
+  badgeText: {
+    color: Colors.ink,
   },
   selected: {
     backgroundColor: Colors.sheet,

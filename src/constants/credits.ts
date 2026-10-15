@@ -43,7 +43,7 @@ export interface FontCredit {
 export const FONT_CREDITS: FontCredit[] = [
   { nom: 'Literata', role: 'Titres', auteur: 'The Literata Project Authors', url: 'https://github.com/googlefonts/literata' },
   { nom: 'Atkinson Hyperlegible Next', role: 'Texte', auteur: 'The Atkinson Hyperlegible Next Project Authors', url: 'https://github.com/googlefonts/atkinson-hyperlegible-next' },
-  { nom: 'Caveat', role: 'Annotations', auteur: 'The Caveat Project Authors', url: 'https://github.com/googlefonts/caveat' },
+  { nom: 'Caveat', role: 'Annotations et logo', auteur: 'The Caveat Project Authors', url: 'https://github.com/googlefonts/caveat' },
 ];
 
 // Icônes d'onglets Explorer et Classement reprises d'Ionicons (MIT, licence dans assets/icons/tabs/).

@@ -7,12 +7,22 @@ const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date AAAA-MM-JJ attendu
 const hexColor = z.string().regex(/^#[0-9A-Fa-f]{6}$/, 'couleur #RRGGBB attendue');
 const url = z.url({ protocol: /^https$/ });
 
+// Nuance attribuée par le ministère de l'Intérieur à la dernière élection du parti : un classement officiel, pas le nôtre.
+export const NuanceOfficielleSchema = z.object({
+  code: z.string().min(1),
+  libelle: z.string().min(1),
+  election: z.string().min(1),
+  sourceUrl: url,
+});
+
 export const PartiSchema = z.object({
   id,
   nom: z.string().min(1),
-  sigle: z.string().min(1),
+  /** Absent quand le parti n'en utilise aucun : on n'en invente pas. */
+  sigle: z.string().min(1).optional(),
   couleur: hexColor,
-  nuance: z.string().min(1),
+  /** Absente quand le ministère n'a jamais classé le parti : on n'en invente pas. */
+  nuanceOfficielle: NuanceOfficielleSchema.optional(),
   siteWeb: url,
 });
 
@@ -44,6 +54,8 @@ export const CandidatSourceSchema = z.object({
 export const CandidatSchema = CandidatSourceSchema.extend({
   parti: z.string().min(1),
   couleurParti: hexColor,
+  /** Sigle du parti s'il en a un ; sinon l'app écrit son nom. */
+  sigleParti: z.string().min(1).optional(),
 });
 
 // Une ligne de data/candidats/<candidat-id>.csv

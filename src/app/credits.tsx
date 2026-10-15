@@ -5,9 +5,19 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { CandidateAvatar } from '@/components/candidate-avatar';
 import { Screen } from '@/components/screen';
 import { ScreenHeader } from '@/components/screen-header';
+import { REPO_URL, SITE_URL } from '@/constants/app';
 import { FONT_CREDITS, ICON_CREDIT, PHOTO_CREDITS } from '@/constants/credits';
+import { EDITEUR } from '@/constants/legal';
 import { Colors, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
 import { getCandidat } from '@/services/dataset';
+
+const host = (url: string) => url.replace(/^https:\/\//, '').replace(/\/$/, '');
+
+// Qui a fait l'app, et où la retrouver.
+const APP_LINKS = [
+  { titre: 'Site web', detail: host(SITE_URL), url: SITE_URL },
+  { titre: 'Code source et données', detail: `${host(REPO_URL)} · MIT, CC BY-SA 4.0`, url: REPO_URL },
+];
 
 export default function CreditsScreen() {
   const router = useRouter();
@@ -22,7 +32,32 @@ export default function CreditsScreen() {
         style={styles.back}>
         <Ionicons name="chevron-back" size={26} color={Colors.ink} />
       </Pressable>
-      <ScreenHeader title="Crédits" note="Portraits issus de Wikimedia Commons et polices libres, réutilisés selon leur licence." />
+      <ScreenHeader title="Crédits" note="Qui a fait élire, et ce qu'elle réutilise selon leur licence : portraits de Wikimedia Commons, polices et icônes libres." />
+      <View style={styles.list}>
+        <View style={styles.row} accessible accessibilityLabel={`élire, conçue et développée par ${EDITEUR.nom}, à titre personnel`}>
+          <View style={styles.text}>
+            <Text style={[Type.bodyStrong, styles.ink]}>Conçue et développée par {EDITEUR.nom}</Text>
+            <Text style={[Type.label, styles.muted]}>À titre personnel, sans lien avec un parti ni un candidat</Text>
+          </View>
+        </View>
+        {APP_LINKS.map((link) => (
+          <Pressable
+            key={link.url}
+            onPress={() => Linking.openURL(link.url)}
+            accessibilityRole="link"
+            accessibilityLabel={`${link.titre}, ${link.detail}`}
+            style={({ pressed }) => [styles.row, styles.separator, pressed && { backgroundColor: Colors.pressed }]}>
+            <View style={styles.text}>
+              <Text style={[Type.bodyStrong, styles.ink]}>{link.titre}</Text>
+              <Text style={[Type.label, styles.muted]}>{link.detail}</Text>
+            </View>
+            <Ionicons name="open-outline" size={16} color={Colors.graphite} />
+          </Pressable>
+        ))}
+      </View>
+      <Text style={[Type.bodyStrong, styles.ink, styles.heading]} accessibilityRole="header">
+        Portraits
+      </Text>
       <View style={styles.list}>
         {PHOTO_CREDITS.map((credit, i) => {
           const candidat = getCandidat(credit.candidatId);

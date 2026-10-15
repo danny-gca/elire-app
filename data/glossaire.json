@@ -11,13 +11,12 @@
   },
   {
     "sigle": "BFM",
-    "forme": "BFMTV",
-    "definition": "Chaîne de télévision d'information en continu."
+    "forme": "Groupe de médias de BFMTV",
+    "definition": "« Face à BFM » est l'une de ses émissions."
   },
   {
     "sigle": "BFMTV",
-    "forme": "BFMTV",
-    "definition": "Chaîne de télévision d'information en continu."
+    "forme": "Chaîne de télévision d'information en continu"
   },
   {
     "sigle": "CDI",
@@ -91,8 +90,8 @@
   },
   {
     "sigle": "GAIA",
-    "forme": "GAIA-X",
-    "definition": "Projet européen d'infrastructure de données et de cloud."
+    "forme": "Projet européen GAIA-X",
+    "definition": "Infrastructure européenne de données et de cloud."
   },
   {
     "sigle": "IA",
@@ -171,7 +170,7 @@
   },
   {
     "sigle": "QR",
-    "forme": "QR code",
+    "forme": "Code QR (de l'anglais Quick Response)",
     "definition": "Code-barres carré lisible avec un téléphone."
   },
   {
@@ -196,7 +195,7 @@
   },
   {
     "sigle": "SMR",
-    "forme": "Petit réacteur modulaire",
+    "forme": "Petit réacteur modulaire (en anglais Small Modular Reactor)",
     "definition": "Petit réacteur nucléaire conçu pour être fabriqué en série."
   },
   {
@@ -221,7 +220,8 @@
   },
   {
     "sigle": "TGV",
-    "forme": "Train à grande vitesse"
+    "forme": "Train à grande vitesse",
+    "definition": "Train rapide de la SNCF, sur lignes dédiées."
   },
   {
     "sigle": "TVA",
@@ -230,7 +230,8 @@
   },
   {
     "sigle": "UE",
-    "forme": "Union européenne"
+    "forme": "Union européenne",
+    "definition": "Union politique et économique de 27 pays européens."
   },
   {
     "sigle": "ZAN",

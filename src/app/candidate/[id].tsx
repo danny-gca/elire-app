@@ -6,6 +6,7 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { CandidateAvatar } from '@/components/candidate-avatar';
 import { DataFooter } from '@/components/data-footer';
 import { LoiCard } from '@/components/loi-card';
+import { LoiDetail } from '@/components/loi-detail';
 import { PropositionDetail } from '@/components/proposition-detail';
 import { PropositionRow } from '@/components/proposition-row';
 import { Screen } from '@/components/screen';
@@ -15,9 +16,10 @@ import { SegmentedControl } from '@/components/ui/segmented-control';
 import { Sheet } from '@/components/ui/sheet';
 import { ReliabilityMark, reliabilityHint } from '@/components/reliability-mark';
 import { Colors, MinTarget, Numeric, Radius, Spacing, Type } from '@/constants/theme';
+import { readableOn } from '@/lib/color';
 import { candidatureText, plural } from '@/lib/format';
 import { MIN_VOTES_PER_CANDIDAT, scoreCandidat } from '@/lib/scoring';
-import type { Proposition } from '@/schemas/dataset';
+import type { Loi, Proposition } from '@/schemas/dataset';
 import { getCandidat, getLoisByCandidat, getPropositionsByCandidat, lois, partis, propositions, thematiques } from '@/services/dataset';
 import { useVotesStore } from '@/store/votes-store';
 
@@ -30,6 +32,7 @@ export default function CandidateScreen() {
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const [onglet, setOnglet] = useState<Onglet>('programme');
   const [selected, setSelected] = useState<Proposition | null>(null);
+  const [selectedLoi, setSelectedLoi] = useState<Loi | null>(null);
 
   const candidat = getCandidat(id);
   const parti = partis.find((p) => p.id === candidat?.partiId);
@@ -66,16 +69,27 @@ export default function CandidateScreen() {
     <Screen>
       {back}
 
+      {/* L'affiche du candidat : bandeau, anneau et sigle aux couleurs de son parti, comme sur son panneau du Classement. */}
+      <View style={[styles.band, { backgroundColor: candidat.couleurParti }]} />
       <View style={styles.identity}>
-        <CandidateAvatar candidat={candidat} size={72} />
-        <View style={styles.flex}>
+        <CandidateAvatar candidat={candidat} size={72} ring={candidat.couleurParti} />
+        <View style={[styles.flex, styles.identityText]}>
           <Text style={[Type.display, styles.ink]} accessibilityRole="header">
             {candidat.nom}
           </Text>
-          <Text style={[Type.label, styles.muted]}>
-            {candidat.parti}
-            {parti ? ` · ${parti.nuance}` : ''}
-          </Text>
+          {/* Le nom du parti dans sa couleur, foncée si besoin pour rester lisible. */}
+          <Text style={[Type.labelStrong, { color: readableOn(candidat.couleurParti, Colors.paper) }]}>{candidat.parti}</Text>
+          {/* Le classement du ministère, sourcé ; jamais le nôtre. */}
+          {parti?.nuanceOfficielle ? (
+            <Pressable onPress={() => Linking.openURL(parti.nuanceOfficielle!.sourceUrl)} accessibilityRole="link" hitSlop={4}>
+              <Text style={[Type.label, styles.muted]}>
+                Nuance du ministère de l’Intérieur ({parti.nuanceOfficielle.election}) :{' '}
+                <Text style={[Type.labelStrong, styles.ink, styles.underline]}>{parti.nuanceOfficielle.libelle}</Text>
+              </Text>
+            </Pressable>
+          ) : (
+            <Text style={[Type.label, styles.muted]}>Pas de nuance du ministère de l’Intérieur : le parti n’a pas été classé.</Text>
+          )}
         </View>
       </View>
 
@@ -95,39 +109,48 @@ export default function CandidateScreen() {
       )}
 
       <View style={styles.accord} accessible accessibilityLabel={score.score === null ? 'Accord : pas encore évalué' : `Accord avec vos votes : ${score.score} %, sur ${plural(score.totalVotes, 'vote')}`}>
-        <Text style={[Type.label, styles.muted]}>Accord avec vos votes</Text>
-        {score.score === null ? (
-          <Text style={[Type.bodyStrong, styles.ink]}>Pas encore évalué : votez sur ses propositions à l’aveugle.</Text>
-        ) : (
+        {/* En-tête : le score en grand à gauche, sa fiabilité dans l'angle. */}
+        <View style={styles.accordHead}>
+          <View style={styles.accordScore}>
+            <Text style={[Type.label, styles.muted]}>Accord avec vos votes</Text>
+            {score.score === null ? (
+              <Text style={[Type.bodyStrong, styles.ink]}>Pas encore évalué : votez sur ses propositions à l’aveugle.</Text>
+            ) : (
+              <Text style={[Type.screenTitle, Numeric, styles.ink]}>{score.score} %</Text>
+            )}
+          </View>
+          {score.score !== null && score.reliability && <ReliabilityMark level={score.reliability} />}
+        </View>
+        {score.score !== null && (
           <>
-            <Text style={[Type.bodyStrong, Numeric, styles.ink]}>{score.score} %</Text>
-            <Text style={[Type.label, Numeric, styles.muted]}>
-              Programme :{' '}
-              {score.programme.score === null
-                ? 'aucune proposition votée'
-                : `${score.programme.score} % (${score.programme.count} sur ${plural(props.length, 'proposition')})`}
-            </Text>
-            <Text style={[Type.label, Numeric, styles.muted]}>
-              Votes au Parlement :{' '}
-              {!score.seated
-                ? 'n’a pas siégé, score calculé sur le programme seul'
-                : score.parlement.score === null
-                  ? 'aucun de ses scrutins voté'
-                  : `${score.parlement.score} % (${plural(score.parlement.count, 'scrutin')}${
-                      score.parlement.groupCount > 0 ? `, dont ${score.parlement.groupCount} de groupe, comptés à moitié` : ''
-                    })`}
-            </Text>
-            {score.reliability ? (
-              <View style={styles.reliability}>
-                <ReliabilityMark level={score.reliability} />
+            {/* Les deux sources du score, côte à côte. */}
+            <View style={styles.accordCols}>
+              <View style={styles.accordCol}>
+                <Text style={[Type.label, styles.muted]}>Programme</Text>
+                <Text style={[Type.bodyStrong, Numeric, styles.ink]}>{score.programme.score === null ? '-' : `${score.programme.score} %`}</Text>
                 <Text style={[Type.label, Numeric, styles.muted]}>
-                  sur {plural(score.programme.count, 'proposition')}
-                  {score.parlement.count > 0 ? ` et ${plural(score.parlement.count, 'scrutin')}` : ''} : {reliabilityHint(score.reliability)}.
+                  {score.programme.score === null ? 'aucune proposition votée' : `${score.programme.count} sur ${plural(props.length, 'proposition')}`}
                 </Text>
               </View>
-            ) : (
-              <Text style={[Type.label, styles.muted]}>Score indicatif : il faut {MIN_VOTES_PER_CANDIDAT} votes pour le classer.</Text>
-            )}
+              <View style={[styles.accordCol, styles.accordColRule]}>
+                <Text style={[Type.label, styles.muted]}>Votes au Parlement</Text>
+                <Text style={[Type.bodyStrong, Numeric, styles.ink]}>
+                  {!score.seated || score.parlement.score === null ? '-' : `${score.parlement.score} %`}
+                </Text>
+                <Text style={[Type.label, Numeric, styles.muted]}>
+                  {!score.seated
+                    ? 'n’a pas siégé : programme seul'
+                    : score.parlement.score === null
+                      ? 'aucun de ses scrutins voté'
+                      : `${plural(score.parlement.count, 'scrutin')}${score.parlement.groupCount > 0 ? `, dont ${score.parlement.groupCount} de groupe (½)` : ''}`}
+                </Text>
+              </View>
+            </View>
+            <Text style={[Type.label, Numeric, styles.muted, styles.accordFoot]}>
+              {score.reliability
+                ? `Sur ${plural(score.programme.count, 'proposition')}${score.parlement.count > 0 ? ` et ${plural(score.parlement.count, 'scrutin')}` : ''} : ${reliabilityHint(score.reliability)}.`
+                : `Score indicatif : il faut ${MIN_VOTES_PER_CANDIDAT} votes pour le classer.`}
+            </Text>
           </>
         )}
       </View>
@@ -174,7 +197,7 @@ export default function CandidateScreen() {
       ) : (
         <View style={styles.section}>
           {loisVotes.map(({ loi }) => (
-            <LoiCard key={loi.id} loi={loi} candidatId={candidat.id} userVote={loiVotes[loi.id]} />
+            <LoiCard key={loi.id} loi={loi} candidatId={candidat.id} userVote={loiVotes[loi.id]} onPress={() => setSelectedLoi(loi)} />
           ))}
         </View>
       )}
@@ -183,6 +206,9 @@ export default function CandidateScreen() {
 
       <Sheet visible={!!selected} title={selected?.ref ?? ''} onClose={() => setSelected(null)}>
         {selected && <PropositionDetail proposition={selected} anonymous={false} />}
+      </Sheet>
+      <Sheet visible={!!selectedLoi} title={selectedLoi?.ref ?? ''} onClose={() => setSelectedLoi(null)}>
+        {selectedLoi && <LoiDetail loi={selectedLoi} candidatId={candidat.id} />}
       </Sheet>
     </Screen>
   );
@@ -196,11 +222,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  // Pleine largeur : déborde de la gouttière de la colonne.
+  band: {
+    height: 6,
+    marginHorizontal: -Spacing.two,
+    marginTop: Spacing.one,
+  },
+  identityText: {
+    gap: 4,
+  },
   identity: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
-    marginTop: Spacing.one,
+    marginTop: Spacing.two,
     marginBottom: Spacing.two,
   },
   link: {
@@ -209,8 +244,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'flex-start',
   },
-  reliability: {
-    gap: Spacing.half,
+  accordHead: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: Spacing.two,
+  },
+  accordScore: {
+    flex: 1,
+  },
+  accordCols: {
+    flexDirection: 'row',
+    marginTop: Spacing.two,
+    paddingTop: 12,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: Colors.rule,
+  },
+  accordCol: {
+    flex: 1,
+    gap: 2,
+    paddingRight: 12,
+  },
+  // Filet entre les deux colonnes.
+  accordColRule: {
+    paddingLeft: 12,
+    paddingRight: 0,
+    borderLeftWidth: StyleSheet.hairlineWidth,
+    borderLeftColor: Colors.rule,
+  },
+  accordFoot: {
+    marginTop: 12,
   },
   accord: {
     marginVertical: Spacing.three,

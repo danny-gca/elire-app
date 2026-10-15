@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
-import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
+import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
+import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
+import { scheduleOnRN } from 'react-native-worklets';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { CelebrationLayer } from '@/components/celebration';
 import { Colors, MaxContentWidth, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
 
 interface SheetProps {
@@ -23,6 +26,22 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
   const reducedMotion = useReducedMotion();
   const [mounted, setMounted] = useState(visible);
   const progress = useSharedValue(0);
+  const drag = useSharedValue(0);
+  const [panelHeight, setPanelHeight] = useState(0);
+  // Glisser l'en-tête vers le bas : au-delà du quart de la feuille ou d'un geste vif, elle se ferme ; sinon elle revient.
+  const pan = Gesture.Pan()
+    .activeOffsetY(8)
+    .failOffsetX([-20, 20])
+    .onUpdate((e) => {
+      drag.value = Math.max(0, e.translationY);
+    })
+    .onEnd((e) => {
+      if (e.translationY > Math.max(80, panelHeight * 0.25) || e.velocityY > 900) {
+        scheduleOnRN(onClose);
+      } else {
+        drag.value = withSpring(0, { damping: 20, stiffness: 220 });
+      }
+    });
   if (visible && !mounted) {
     setMounted(true);
   }
@@ -32,25 +51,34 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
       return;
     }
     if (visible) {
+      drag.value = 0;
       progress.value = withTiming(1, { duration: reducedMotion ? 0 : OPEN_MS, easing: Easing.out(Easing.exp) });
       return;
     }
     progress.value = withTiming(0, { duration: reducedMotion ? 0 : CLOSE_MS, easing: Easing.in(Easing.quad) });
     const timer = setTimeout(() => setMounted(false), reducedMotion ? 0 : CLOSE_MS);
     return () => clearTimeout(timer);
-  }, [visible, ios, reducedMotion, progress]);
+  }, [visible, ios, reducedMotion, progress, drag]);
 
   const backdropStyle = useAnimatedStyle(() => ({ opacity: progress.value }));
-  const panelStyle = useAnimatedStyle(() => ({ transform: [{ translateY: (1 - progress.value) * height }] }));
+  const panelStyle = useAnimatedStyle(() => ({ transform: [{ translateY: (1 - progress.value) * height + drag.value }] }));
 
   const header = (
-    <View style={styles.header}>
-      <Text style={[Type.bodyStrong, styles.title]} accessibilityRole="header" numberOfLines={1}>
-        {title}
-      </Text>
-      <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel="Fermer" style={styles.close} hitSlop={8}>
-        <Text style={[Type.bodyStrong, { color: Colors.ink }]}>Fermer</Text>
-      </Pressable>
+    <View>
+      {/* Poignée : signale qu'on peut glisser la feuille vers le bas pour la fermer. */}
+      {!ios && (
+        <View style={styles.handleZone}>
+          <View style={styles.handle} />
+        </View>
+      )}
+      <View style={styles.header}>
+        <Text style={[Type.bodyStrong, styles.title]} accessibilityRole="header" numberOfLines={1}>
+          {title}
+        </Text>
+        <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel="Fermer" style={styles.close} hitSlop={8}>
+          <Text style={[Type.bodyStrong, { color: Colors.ink }]}>Fermer</Text>
+        </Pressable>
+      </View>
     </View>
   );
 
@@ -66,6 +94,7 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
         <View style={styles.iosRoot}>
           {header}
           {content}
+          <CelebrationLayer host="sheet" />
         </View>
       </Modal>
     );
@@ -73,15 +102,17 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
 
   return (
     <Modal visible={mounted} animationType="none" transparent onRequestClose={onClose}>
-      <View style={styles.root}>
+      {/* Android : une Modal est hors de l'arbre racine, les gestes y demandent leur propre racine. */}
+      <GestureHandlerRootView style={styles.root}>
         <Animated.View style={[StyleSheet.absoluteFill, styles.backdrop, backdropStyle]}>
           <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessibilityLabel="Fermer" />
         </Animated.View>
-        <Animated.View style={[styles.panel, { maxHeight: '88%' }, panelStyle]}>
-          {header}
+        <Animated.View style={[styles.panel, { maxHeight: '88%' }, panelStyle]} onLayout={(e) => setPanelHeight(e.nativeEvent.layout.height)}>
+          <GestureDetector gesture={pan}>{header}</GestureDetector>
           {content}
         </Animated.View>
-      </View>
+        <CelebrationLayer host="sheet" />
+      </GestureHandlerRootView>
     </Modal>
   );
 }
@@ -105,6 +136,16 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.paper,
     borderTopLeftRadius: Radius.large,
     borderTopRightRadius: Radius.large,
+  },
+  handleZone: {
+    alignItems: 'center',
+    paddingTop: Spacing.one,
+  },
+  handle: {
+    width: 36,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: Colors.rule,
   },
   header: {
     flexDirection: 'row',

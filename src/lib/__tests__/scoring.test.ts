@@ -77,6 +77,15 @@ describe('computeScores', () => {
     expect(computeScores([candidat('a', 'Alpha'), candidat('b', 'Beta')], props, votes, tie).map((s) => s.candidat.id)).toEqual(['b', 'a']);
   });
 
+  it('à score égal, laisse le hasard décider, même face à un score plus fiable', () => {
+    const more = [...props, prop('b3', 'b')];
+    const votes = { a1: 2, a2: 2, b1: 2, b2: 2, b3: 2 } as const;
+    const tie = new Map([['a', 0], ['b', 1]]);
+    const scores = computeScores([candidat('a'), candidat('b')], more, votes, tie);
+    expect(scores.map((s) => s.candidat.id)).toEqual(['a', 'b']);
+    expect(competitionRanks(scores)).toEqual([1, 1]);
+  });
+
   it('donne le même rang aux scores égaux', () => {
     const scores = computeScores([candidat('a'), candidat('b'), candidat('c')], props, { a1: 2, a2: 2, b1: 2, b2: 2, c1: -2 });
     expect(competitionRanks(scores)).toEqual([1, 1, 3]);
@@ -139,6 +148,14 @@ describe('votes sur les lois', () => {
     expect(s.score).toBe(100);
     expect(s.parlement.count).toBe(0);
     expect(s.evidence).toBe(2);
+  });
+
+  it('plafonne la part du Parlement à la moitié du score', () => {
+    const many = Array.from({ length: 6 }, (_, i) => loi(`m${i}`, { a: { position: 'pour', typeVote: 'individuel' } }));
+    const votes = Object.fromEntries(many.map((l) => [l.id, 'pour' as const]));
+    const s = scoreCandidat(candidat('a'), props, { a1: -2, a2: -2 }, { lois: many, votes });
+    // Programme 0 %, Parlement 100 % : au nombre, le Parlement pèserait 12 sur 16 (75 %) ; plafonné, moitié chacun.
+    expect(s.score).toBe(50);
   });
 
   it('ne classe pas un candidat sur ses seuls votes au Parlement', () => {
