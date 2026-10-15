@@ -4,10 +4,12 @@ import { ButtonStroke } from '@/components/button-stroke';
 import { Colors, Radius, Spacing, Type } from '@/constants/theme';
 import { LOI_CHOICES } from '@/constants/votes';
 import type { LoiVoteValue } from '@/lib/scoring';
+import { pointOf, type CelebrationPoint } from '@/store/celebration-store';
 
 interface LoiVoteScaleProps {
   value?: LoiVoteValue;
-  onVote: (value: LoiVoteValue) => void;
+  /** `point` : où le doigt a touché, pour y faire partir une fête. */
+  onVote: (value: LoiVoteValue, point?: CelebrationPoint) => void;
   disabled?: boolean;
   /** Geste du vote : trait de surligneur sur le choix. */
   stroke?: { value: LoiVoteValue; color: string };
@@ -22,7 +24,7 @@ export function LoiVoteScale({ value, onVote, disabled, stroke }: LoiVoteScalePr
         return (
           <Pressable
             key={choice.value}
-            onPress={() => onVote(choice.value)}
+            onPress={(e) => onVote(choice.value, pointOf(e))}
             disabled={disabled}
             accessibilityRole="radio"
             accessibilityLabel={choice.label}
@@ -32,10 +34,9 @@ export function LoiVoteScale({ value, onVote, disabled, stroke }: LoiVoteScalePr
               selected && { borderColor: choice.color, borderWidth: 2 },
               pressed && { backgroundColor: Colors.pressed },
               stroke?.value === choice.value && styles.stroked,
-              disabled && !selected && styles.dimmed,
             ]}>
             {stroke?.value === choice.value && <ButtonStroke color={stroke.color} />}
-            <Text style={[Type.bodyStrong, { color: choice.color }]} numberOfLines={1}>
+            <Text style={[Type.bodyStrong, { color: choice.color }, disabled && !selected && styles.dimmed]} numberOfLines={1}>
               {choice.label}
             </Text>
           </Pressable>
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
     overflow: 'visible',
     zIndex: 1,
   },
+  // Seul le libellé s'estompe : le bouton reste opaque sur le fond de Voter.
   dimmed: {
     opacity: 0.45,
   },

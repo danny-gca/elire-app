@@ -28,6 +28,7 @@ import {
   Spacing,
   Type,
 } from "@/constants/theme";
+import { celebrate } from "@/store/celebration-store";
 import { useVotesStore } from "@/store/votes-store";
 
 const STORY_MS = 8000;
@@ -43,7 +44,7 @@ interface Story {
 
 const STORIES: Story[] = [
   {
-    title: "ÉLIRE",
+    title: "élire",
     body: "Présidentielle 2027. Un cahier pour se faire son avis sur les propositions des candidats, seul et au calme. Environ 20 secondes par question : un premier classement en 3 à 5 minutes, et vous arrêtez quand vous voulez.",
   },
   {
@@ -69,7 +70,7 @@ const STORIES: Story[] = [
   {
     title: "Votre surligneur : vos avis, votre couleur.",
     key: { word: "votre couleur", style: "mark" },
-    body: "Choisissez la couleur de vos marques. Vous pourrez en changer dans Classement ; ce que vous avez déjà surligné garde sa couleur.",
+    body: "Choisissez la couleur de vos marques. Vous pourrez en changer en haut de Voter ; ce que vous avez déjà surligné garde sa couleur.",
     picker: true,
   },
 ];
@@ -90,6 +91,7 @@ export default function OnboardingScreen() {
 
   const finish = () => {
     completeOnboarding();
+    celebrate("big");
     if (router.canGoBack()) {
       router.back();
     } else {

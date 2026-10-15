@@ -4,11 +4,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { DataFooter } from '@/components/data-footer';
 import { LoiCard } from '@/components/loi-card';
+import { LoiDetail } from '@/components/loi-detail';
 import { screenStyles } from '@/components/screen';
 import { ScreenHeader } from '@/components/screen-header';
 import { Button } from '@/components/ui/button';
 import { SearchField } from '@/components/ui/search-field';
 import { SegmentedControl } from '@/components/ui/segmented-control';
+import { Sheet } from '@/components/ui/sheet';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { normalize, plural } from '@/lib/format';
 import type { Loi, StatutLoi } from '@/schemas/dataset';
@@ -23,6 +25,7 @@ export default function LoisScreen() {
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const [query, setQuery] = useState('');
   const [filtre, setFiltre] = useState<Filtre>('tous');
+  const [selected, setSelected] = useState<Loi | null>(null);
 
   const sections = useMemo(() => {
     const q = normalize(query.trim());
@@ -77,7 +80,7 @@ export default function LoisScreen() {
         )}
         renderItem={({ item }) => (
           <View style={[screenStyles.column, styles.item]}>
-            <LoiCard loi={item} userVote={loiVotes[item.id]} />
+            <LoiCard loi={item} userVote={loiVotes[item.id]} onPress={() => setSelected(item)} />
           </View>
         )}
         ListEmptyComponent={
@@ -98,6 +101,9 @@ export default function LoisScreen() {
           </View>
         }
       />
+      <Sheet visible={!!selected} title={selected?.ref ?? ''} onClose={() => setSelected(null)}>
+        {selected && <LoiDetail loi={selected} />}
+      </Sheet>
     </SafeAreaView>
   );
 }

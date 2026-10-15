@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { CandidateAvatar } from '@/components/candidate-avatar';
+import { MyVoteRow } from '@/components/my-vote-row';
 import { Button } from '@/components/ui/button';
 import { reportIssueUrl } from '@/constants/app';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
@@ -50,6 +51,8 @@ export function PropositionDetail({ proposition, anonymous = false, onOpenCandid
           </Pressable>
         </Link>
       )}
+
+      {!anonymous && <MyVoteRow id={proposition.id} kind="proposition" pendingNote="Pas encore voté : elle arrivera dans Voter" />}
 
       {anonymous && (
         <Text style={[Type.label, styles.muted]}>L’auteur reste masqué tant que vous votez.</Text>

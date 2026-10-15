@@ -6,6 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 
+import { CelebrationLayer } from '@/components/celebration';
 import { FONT_FILES } from '@/constants/fonts';
 import { Colors } from '@/constants/theme';
 
@@ -40,6 +41,7 @@ export default function RootLayout() {
         <Stack.Screen name="corrections" />
         <Stack.Screen name="onboarding" options={{ presentation: 'fullScreenModal', gestureEnabled: false, animation: 'fade' }} />
       </Stack>
+      <CelebrationLayer host="app" />
     </ThemeProvider>
   );
 }

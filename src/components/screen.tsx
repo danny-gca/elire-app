@@ -8,13 +8,17 @@ export function Screen({
   children,
   scroll = true,
   scrollRef,
+  backdrop,
 }: {
   children: React.ReactNode;
   scroll?: boolean;
   scrollRef?: React.Ref<ScrollView>;
+  /** Décor fixe derrière le contenu (ne défile pas). */
+  backdrop?: React.ReactNode;
 }) {
   return (
     <SafeAreaView edges={['top']} style={styles.safe}>
+      {backdrop}
       {scroll ? (
         <ScrollView ref={scrollRef} contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled">
           <View style={styles.column}>{children}</View>

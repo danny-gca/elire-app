@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Marked } from '@/components/marked';
-import { VoteTag } from '@/components/vote-tag';
+import { YourVoteMark } from '@/components/your-vote-mark';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { UNSURE, type VoteValue } from '@/lib/scoring';
 import type { Proposition } from '@/schemas/dataset';
@@ -17,7 +17,7 @@ interface PropositionRowProps {
   actionHint?: string;
 }
 
-// Titre surligné si voté, puis numéro, votre note et l'auteur sur une ligne.
+// Titre surligné si voté, numéro et auteur dessous ; votre note dans l'angle, au surligneur.
 export function PropositionRow({ proposition, vote, author, onPress, actionHint = 'Voir le détail et la source' }: PropositionRowProps) {
   const voted = vote !== undefined;
   const marker = useMarkOf(proposition.id);
@@ -31,13 +31,16 @@ export function PropositionRow({ proposition, vote, author, onPress, actionHint 
         <Marked active={voted && vote !== UNSURE} marker={marker} style={[Type.body, styles.title]}>
           {proposition.titre}
         </Marked>
-        <View style={styles.meta}>
-          <Text style={[Type.label, Numeric, styles.muted]}>{proposition.ref} ·</Text>
-          {voted ? <VoteTag value={vote} /> : <Text style={[Type.label, styles.muted]}>Pas encore voté</Text>}
-          {author && <Text style={[Type.label, styles.muted]}>· {author}</Text>}
-        </View>
+        <Text style={[Type.label, Numeric, styles.muted]}>
+          {proposition.ref}
+          {voted ? '' : ' · Pas encore voté'}
+          {author ? ` · ${author}` : ''}
+        </Text>
       </View>
-      <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
+      <View style={[styles.side, voted && styles.sideVoted]}>
+        {voted && <YourVoteMark id={proposition.id} vote={vote} />}
+        <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
+      </View>
     </Pressable>
   );
 }
@@ -60,11 +63,15 @@ const styles = StyleSheet.create({
   title: {
     color: Colors.ink,
   },
-  meta: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  // Colonne de droite : votre vote dans l'angle haut, le chevron en bas.
+  side: {
+    alignSelf: 'stretch',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
     gap: Spacing.half,
-    flexWrap: 'wrap',
+  },
+  sideVoted: {
+    justifyContent: 'space-between',
   },
   muted: {
     color: Colors.graphite,

@@ -1,150 +1,98 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
-import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Marked } from '@/components/marked';
-import { VoteRow } from '@/components/vote-row';
-import { LoiVoteTag } from '@/components/vote-tag';
-import { reportIssueUrl } from '@/constants/app';
+import { PositionMark, YourVoteMark } from '@/components/your-vote-mark';
 import { Colors, Numeric, Radius, Spacing, Type } from '@/constants/theme';
-import { CHAMBRE_LABELS, NATURE_LABELS, POSITION_LABELS, STATUT_LABELS, formatDate } from '@/lib/format';
-import { loiPoints, type LoiVoteValue } from '@/lib/scoring';
-import type { Loi, PositionVote } from '@/schemas/dataset';
-import { getCandidat, getThematique } from '@/services/dataset';
+import { POSITION_LABELS, STATUT_LABELS, formatDate } from '@/lib/format';
+import type { LoiVoteValue } from '@/lib/scoring';
+import type { Loi } from '@/schemas/dataset';
+import { getCandidat } from '@/services/dataset';
 import { useMarkOf } from '@/store/votes-store';
-
-const ORDER: Record<PositionVote, number> = { pour: 0, abstention: 1, contre: 2 };
 
 interface LoiCardProps {
   loi: Loi;
-  /** Sur une fiche candidat : n'affiche que sa position, toujours visible. */
+  /** Sur une fiche candidat : sa position, en une étiquette courte. */
   candidatId?: string;
   /** Vote de l'utilisateur sur ce scrutin. */
   userVote?: LoiVoteValue;
+  /** Ouvre la feuille du scrutin (positions, source, modification du vote). */
+  onPress: () => void;
 }
 
-const RELATION = { 2: 'comme vous', [-2]: 'à l’inverse de vous', 0: 'sans effet sur le score (abstention)' } as const;
-
-export function LoiCard({ loi, candidatId, userVote }: LoiCardProps) {
-  const [open, setOpen] = useState(false);
+// Carte de liste allégée : le détail s'ouvre dans une feuille, comme une proposition.
+export function LoiCard({ loi, candidatId, userVote, onPress }: LoiCardProps) {
   const marker = useMarkOf(loi.id);
-  const theme = getThematique(loi.thematiqueId);
-
-  const entries = Object.entries(loi.votes).sort(([, a], [, b]) => ORDER[a.position] - ORDER[b.position]);
-  const counts = (['pour', 'contre', 'abstention'] as const)
-    .map((p) => ({ p, n: entries.filter(([, v]) => v.position === p).length }))
-    .filter((c) => c.n > 0)
-    .map((c) => `${c.n} ${POSITION_LABELS[c.p].toLowerCase()}`)
-    .join(' · ');
   const focusVote = candidatId ? loi.votes[candidatId] : undefined;
-  const report = reportIssueUrl(loi.ref, loi.titre);
+  const voters = Object.keys(loi.votes).length;
+
+  const candidat = candidatId ? getCandidat(candidatId) : undefined;
 
   return (
-    <View style={styles.card}>
-      <Marked active={!!userVote} marker={marker} style={[Type.bodyStrong, styles.ink]}>
-        {loi.titre}
-      </Marked>
-      <Text style={[Type.label, Numeric, styles.muted]}>
-        {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text>
-        {theme ? ` · ${theme.titre}` : ''}
-      </Text>
-      <Text style={[Type.label, Numeric, styles.muted]}>
-        {NATURE_LABELS[loi.nature]} · {CHAMBRE_LABELS[loi.chambre]} · {formatDate(loi.dateVote)}
-      </Text>
-      <Text style={[Type.body, styles.soft]} numberOfLines={open ? undefined : 2}>
-        {loi.resume}
-      </Text>
-
-      {focusVote && <VoteRow vote={focusVote} />}
-
-      {userVote && (
-        <Text style={[Type.label, styles.muted]}>
-          Votre vote : <LoiVoteTag value={userVote} />
-          {focusVote ? ` · ${RELATION[loiPoints(userVote, focusVote.position)]}` : ''}
-        </Text>
-      )}
-
-      {!candidatId && (
-        <Pressable
-          onPress={() => setOpen((v) => !v)}
-          accessibilityRole="button"
-          accessibilityState={{ expanded: open }}
-          accessibilityLabel={`${open ? 'Masquer' : 'Afficher'} les positions des candidats : ${counts}`}
-          style={({ pressed }) => [styles.toggle, pressed && { backgroundColor: Colors.pressed }]}>
-          <Text style={[Type.labelStrong, Numeric, styles.ink]}>{counts}</Text>
-          <View style={styles.toggleRight}>
-            <Text style={[Type.label, styles.muted]}>{open ? 'Masquer' : 'Positions'}</Text>
-            <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={16} color={Colors.graphite} />
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityHint="Voir les positions, votre vote et la source"
+      style={({ pressed }) => [styles.card, pressed && { backgroundColor: Colors.pressed }]}>
+      {/* Titre, et votre vote dans l'angle. */}
+      <View style={styles.line}>
+        <Marked active={!!userVote} marker={marker} style={[Type.bodyStrong, styles.ink, styles.grow]} numberOfLines={3}>
+          {loi.titre}
+        </Marked>
+        {userVote && <YourVoteMark id={loi.id} loiVote={userVote} />}
+      </View>
+      {/* Sur une fiche : le candidat, comment il a voté, et sa position marquée comme la vôtre (en neutre). */}
+      {focusVote ? (
+        <View style={styles.line}>
+          <View style={[styles.focus, styles.grow]}>
+            <Ionicons name={focusVote.typeVote === 'groupe_parti' ? 'people' : 'person'} size={14} color={Colors.ink} />
+            <Text style={[Type.labelStrong, styles.ink, styles.grow]} numberOfLines={2}>
+              {candidat?.nom ?? ''} · <Text style={styles.muted}>{focusVote.typeVote === 'groupe_parti' ? 'vote de son groupe' : 'vote personnel'}</Text>
+            </Text>
           </View>
-        </Pressable>
-      )}
-
-      {open && !candidatId && (
-        <View>
-          {entries.map(([id, vote]) => (
-            <VoteRow key={id} vote={vote} candidat={getCandidat(id)} />
-          ))}
+          <PositionMark label={POSITION_LABELS[focusVote.position]} />
         </View>
+      ) : (
+        <Text style={[Type.label, Numeric, styles.muted]}>{voters > 1 ? `${voters} candidats ont voté` : 'Un candidat a voté'}</Text>
       )}
-
-      {(open || candidatId) && (
-        <View style={styles.links}>
-          <Pressable onPress={() => Linking.openURL(loi.sourceOfficielleUrl)} accessibilityRole="link" hitSlop={8}>
-            <Text style={[Type.labelStrong, styles.ink, styles.underline]}>Dossier officiel</Text>
-          </Pressable>
-          {report && (
-            <Pressable onPress={() => Linking.openURL(report)} accessibilityRole="link" hitSlop={8}>
-              <Text style={[Type.label, styles.muted, styles.underline]}>Signaler une erreur</Text>
-            </Pressable>
-          )}
-        </View>
-      )}
-    </View>
+      <View style={styles.line}>
+        <Text style={[Type.label, Numeric, styles.muted, styles.grow]}>
+          {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text> · {formatDate(loi.dateVote)}
+        </Text>
+        <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
+      </View>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
+    gap: Spacing.one,
     backgroundColor: Colors.sheet,
     borderRadius: Radius.large,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.rule,
-    padding: Spacing.two,
-    gap: Spacing.half,
+    paddingVertical: 12,
+    paddingLeft: Spacing.two,
+    paddingRight: 12,
   },
-  toggle: {
-    marginTop: Spacing.one,
-    minHeight: 44,
+  line: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: Spacing.one,
-    paddingHorizontal: 12,
-    borderRadius: Radius.medium,
-    backgroundColor: Colors.paper,
+    gap: Spacing.two,
   },
-  toggleRight: {
+  grow: {
+    flex: 1,
+  },
+  focus: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.half,
-  },
-  links: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: Spacing.three,
-    paddingTop: Spacing.one,
+    gap: 6,
   },
   ink: {
     color: Colors.ink,
   },
-  soft: {
-    color: Colors.inkSoft,
-  },
   muted: {
     color: Colors.graphite,
-  },
-  underline: {
-    textDecorationLine: 'underline',
-    textDecorationColor: Colors.graphite,
   },
 });

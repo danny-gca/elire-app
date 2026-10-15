@@ -4,10 +4,12 @@ import { ButtonStroke } from '@/components/button-stroke';
 import { Colors, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { UNSURE_CHOICE, VOTE_CHOICES, type VoteChoice } from '@/constants/votes';
 import type { VoteValue } from '@/lib/scoring';
+import { pointOf, type CelebrationPoint } from '@/store/celebration-store';
 
 interface VoteScaleProps {
   value?: VoteValue;
-  onVote: (value: VoteValue) => void;
+  /** `point` : où le doigt a touché, pour y faire partir une fête. */
+  onVote: (value: VoteValue, point?: CelebrationPoint) => void;
   disabled?: boolean;
   /** Geste du vote : trait de surligneur sur le niveau choisi. */
   stroke?: { value: VoteValue; color: string };
@@ -22,7 +24,7 @@ export function VoteScale({ value, onVote, disabled, stroke }: VoteScaleProps) {
     return (
       <Pressable
         key={choice.value}
-        onPress={() => onVote(choice.value)}
+        onPress={(e) => onVote(choice.value, pointOf(e))}
         disabled={disabled}
         accessibilityRole="radio"
         accessibilityLabel={choice.sign ? `${choice.label}, ${choice.sign}` : choice.label}

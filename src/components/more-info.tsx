@@ -14,11 +14,16 @@ interface MoreInfoProps {
   text: string;
   /** Textes affichés sur la feuille : leurs sigles passent au glossaire. */
   terms: string[];
+  /** Ouverture pilotée par la feuille (qui déplie alors la citation). */
+  open?: boolean;
+  onToggle?: (open: boolean) => void;
 }
 
 // « En savoir plus » : le glossaire des sigles de la feuille, puis le contexte. Aucune source : elle trahirait l'auteur.
-export function MoreInfo({ text, terms }: MoreInfoProps) {
-  const [open, setOpen] = useState(false);
+export function MoreInfo({ text, terms, open: controlled, onToggle }: MoreInfoProps) {
+  const [own, setOwn] = useState(false);
+  const open = controlled ?? own;
+  const setOpen = (next: boolean) => (onToggle ? onToggle(next) : setOwn(next));
   const entries = acronymsIn(...terms).flatMap((s) => bySigle.get(s) ?? []);
   return (
     <View style={styles.root}>
@@ -26,7 +31,7 @@ export function MoreInfo({ text, terms }: MoreInfoProps) {
         onPress={() => setOpen(!open)}
         accessibilityRole="button"
         accessibilityState={{ expanded: open }}
-        accessibilityHint={entries.length > 0 ? 'Affiche les sigles expliqués et le contexte' : 'Affiche le contexte'}
+        accessibilityHint={`${onToggle ? 'Déplie la citation, affiche ' : 'Affiche '}${entries.length > 0 ? 'les sigles expliqués et le contexte' : 'le contexte'}`}
         style={styles.toggle}>
         <Text style={[Type.labelStrong, styles.underline]}>En savoir plus</Text>
         <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={16} color={Colors.graphite} />

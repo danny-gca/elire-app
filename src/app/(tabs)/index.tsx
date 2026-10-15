@@ -2,12 +2,16 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { AccessibilityInfo, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import Animated, { Easing, FadeIn, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
+import Animated, { cancelAnimation, Easing, FadeIn, FadeOut, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
 
 import { BUTTON_STROKE_MS } from '@/components/button-stroke';
+import { CrowdBackdrop } from '@/components/crowd-backdrop';
+import { EditVoteSheet } from '@/components/edit-vote-sheet';
+import { EraserIcon } from '@/components/eraser-icon';
 import { Hemicycle } from '@/components/hemicycle';
 import { LoiVoteScale } from '@/components/loi-vote-scale';
 import { Marked } from '@/components/marked';
+import { MarkerPicker } from '@/components/marker-picker';
 import { MoreInfo } from '@/components/more-info';
 import { PropositionRow } from '@/components/proposition-row';
 import { PropositionSheet } from '@/components/proposition-sheet';
@@ -16,7 +20,6 @@ import { Screen } from '@/components/screen';
 import { ScreenHeader } from '@/components/screen-header';
 import { Button } from '@/components/ui/button';
 import { ProgressCounter } from '@/components/ui/progress-counter';
-import { Sheet } from '@/components/ui/sheet';
 import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Numeric, Radius, Spacing, Type } from '@/constants/theme';
@@ -26,6 +29,7 @@ import { averageText, CLASSEMENT_THRESHOLD, isPause, nextMilestone, opinionCount
 import { scoreCandidat, UNSURE, type LoiVoteValue, type VoteValue } from '@/lib/scoring';
 import type { Loi } from '@/schemas/dataset';
 import { candidats, getThematique, lois, propositions } from '@/services/dataset';
+import { celebrate } from '@/store/celebration-store';
 import { selectNextId, useMarkOf, useVotesStore } from '@/store/votes-store';
 
 const byId = new Map(propositions.map((p) => [p.id, p]));
@@ -33,6 +37,8 @@ const loisById = new Map(lois.map((l) => [l.id, l]));
 const TOTAL = propositions.length + lois.length;
 // La feuille votée remonte se ranger en « Dernier vote ».
 const LEAVE_MS = 320;
+// « Dernier vote » reste le temps de corriger d'un geste, puis s'efface (la gomme reste partout ailleurs).
+const LAST_VOTE_MS = 10000;
 // Après un scrutin, le temps de lire l'hémicycle et le résultat, puis la suite part seule comme pour une proposition.
 const AUTO_NEXT_MS = 5000;
 
@@ -48,6 +54,8 @@ export default function VoterScreen() {
 
   const [lastId, setLastId] = useState<string | null>(null);
   const [editing, setEditing] = useState<string | null>(null);
+  // « En savoir plus » ouvert sur cette proposition : la citation se déplie aussi.
+  const [infoFor, setInfoFor] = useState<string | null>(null);
   // Scrutin tout juste voté : reste affiché le temps de lire l'hémicycle.
   const [revealId, setRevealId] = useState<string | null>(null);
   // Geste du vote sur une proposition : trait sur le bouton, trait sur le titre, puis la feuille remonte.
@@ -92,6 +100,15 @@ export default function VoterScreen() {
   const ranked = rankedCount(propositions, votes);
   const milestone = nextMilestone(opinions, ranked, candidats.length);
   const pause = !hold && !revealId && isPause(opinions) && pausedAt !== opinions;
+  const finished = !current && !currentLoi;
+  // Un bilan qui s'ouvre ou la dernière question : on fête, une fois, au moment où ça arrive.
+  const reached = useRef({ pause, finished });
+  useEffect(() => {
+    if ((pause && !reached.current.pause) || (finished && !reached.current.finished)) {
+      celebrate('big');
+    }
+    reached.current = { pause, finished };
+  }, [pause, finished]);
 
   const handleVote = (value: VoteValue) => {
     if (!current) {
@@ -131,7 +148,7 @@ export default function VoterScreen() {
 
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
 
-  if (!current && !currentLoi) {
+  if (finished) {
     return (
       <>
         <FinishedView onEdit={setEditing} onSeeRanking={() => router.navigate('/results')} counter={counter} />
@@ -141,8 +158,8 @@ export default function VoterScreen() {
   }
 
   return (
-    <Screen scrollRef={scrollRef}>
-      <ScreenHeader title="Voter" />
+    <Screen scrollRef={scrollRef} backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id} /> : null}>
+      <ScreenHeader title="Voter" accessory={<MarkerPicker compact />} />
       <MilestoneLine milestone={milestone} />
 
       {votedCount === 0 && (
@@ -152,7 +169,7 @@ export default function VoterScreen() {
         </Text>
       )}
 
-      {lastId && !revealId && <LastVote key={lastId} id={lastId} onPress={() => setEditing(lastId)} />}
+      {lastId && !revealId && <LastVote key={lastId} id={lastId} paused={editing === lastId} onPress={() => setEditing(lastId)} />}
 
       {pause ? (
         <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/results')} onContinue={() => setPausedAt(opinions)} />
@@ -174,9 +191,15 @@ export default function VoterScreen() {
             <Leaving key={current.id} leaving={hold?.phase === 'leaving'} style={styles.sheetWrap}>
               <PropositionSheet
                 proposition={current}
+                quoteOpen={infoFor === current.id}
                 sweep={hold && hold.phase !== 'button' && hold.value !== UNSURE ? marker : undefined}
                 thematique={getThematique(current.thematiqueId)}>
-                <MoreInfo text={current.contexte} terms={[current.titre, current.description, current.contexte]} />
+                <MoreInfo
+                  text={current.contexte}
+                  terms={[current.titre, current.description, current.contexte]}
+                  open={infoFor === current.id}
+                  onToggle={(open) => setInfoFor(open ? current.id : null)}
+                />
               </PropositionSheet>
             </Leaving>
 
@@ -247,7 +270,11 @@ function LoiBallot({
   // Après le vote : trait sur le bouton, puis sur la question, puis l'hémicycle.
   const [step, setStep] = useState<'button' | 'title' | 'hemicycle'>(animate ? 'button' : 'hemicycle');
   const screenReader = useScreenReader();
-  const autoNext = revealed && step === 'hemicycle' && !leaving && !screenReader;
+  // Un toucher, un clic ou un défilement : la personne lit, la suite ne part plus seule.
+  const [held, setHeld] = useState(false);
+  const autoNext = revealed && step === 'hemicycle' && !leaving && !screenReader && !held;
+  const hold = () => autoNext && setHeld(true);
+  const holdProps = { onTouchStart: hold, onPointerDown: hold, onWheel: hold } as object;
   const countdown = useSharedValue(0);
   const nextRef = useRef(onNext);
   useEffect(() => {
@@ -273,56 +300,59 @@ function LoiBallot({
 
   return (
     <Leaving leaving={leaving}>
-      <View style={styles.sheetWrap}>
-        <PropositionSheet
-          kind="Scrutin"
-          sweep={revealed && step !== 'button' ? marker : undefined}
-          proposition={{ ref: loi.ref, thematiqueId: loi.thematiqueId, titre: loi.question }}
-          thematique={getThematique(loi.thematiqueId)}>
-          <Text style={[Type.label, Numeric, styles.muted]}>
-            Scrutin réel · {CHAMBRE_LABELS[loi.chambre]} · {loi.dateVote.slice(0, 4)}
-          </Text>
-          <MoreInfo text={loi.enjeu} terms={[loi.question, loi.enjeu]} />
-        </PropositionSheet>
-      </View>
-
-      <View style={styles.avis}>
-        <Text style={[Type.note, styles.ink]} accessibilityRole="header">
-          Votre vote
-        </Text>
-        <Text style={[Type.label, styles.muted]}>
-          {voters > 1 ? `${voters} candidats ont voté ce texte` : 'Un candidat a voté ce texte'} : votre choix les rapproche ou
-          les éloigne de vous.
-        </Text>
-        <LoiVoteScale
-          value={value}
-          onVote={onVote}
-          disabled={revealed}
-          stroke={revealed && value ? { value, color: Markers[marker].soft } : undefined}
-        />
-      </View>
-
-      {revealed && value && step === 'hemicycle' && (
-        <View style={styles.reveal} onLayout={onRevealLayout}>
-          <Hemicycle loi={loi} user={value} markColor={Markers[marker].solid} />
-          <View style={styles.outcome}>
-            <Text style={[Type.bodyStrong, styles.ink]}>{loi.titre}</Text>
-            <Text style={[Type.label, Numeric, styles.muted]}>
-              {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text> ·{' '}
-              {formatDate(loi.dateVote)}
-            </Text>
-          </View>
-          <View style={styles.next}>
-            <Button label="Question suivante" variant="primary" onPress={onNext} disabled={leaving} />
-            {/* Sans lecteur d'écran, la suite part seule : le filet montre le temps restant. */}
-            {!screenReader && (
-              <View style={styles.track} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-                <Animated.View style={[styles.trackFill, countdownStyle]} />
-              </View>
-            )}
-          </View>
+      <View {...holdProps}>
+        <View style={styles.sheetWrap}>
+          <PropositionSheet
+            kind="Scrutin"
+            banner={`${CHAMBRE_LABELS[loi.chambre]} · ${loi.dateVote.slice(0, 4)}`}
+            sweep={revealed && step !== 'button' ? marker : undefined}
+            proposition={{ ref: loi.ref, thematiqueId: loi.thematiqueId, titre: loi.question }}
+            thematique={getThematique(loi.thematiqueId)}>
+            <MoreInfo text={loi.enjeu} terms={[loi.question, loi.enjeu]} />
+          </PropositionSheet>
         </View>
-      )}
+
+        <View style={styles.avis}>
+          <Text style={[Type.note, styles.ink]} accessibilityRole="header">
+            Votre vote
+          </Text>
+          <Text style={[Type.label, styles.muted]}>
+            {voters > 1 ? `${voters} candidats ont voté ce texte` : 'Un candidat a voté ce texte'} : votre choix les rapproche ou
+            les éloigne de vous.
+          </Text>
+          <LoiVoteScale
+            value={value}
+            onVote={onVote}
+            disabled={revealed}
+            stroke={revealed && value ? { value, color: Markers[marker].soft } : undefined}
+          />
+        </View>
+
+        {revealed && value && step === 'hemicycle' && (
+          <View style={styles.reveal} onLayout={onRevealLayout}>
+            {/* Le résultat sur sa feuille : rien ne flotte sur la salle. */}
+            <View style={styles.result}>
+              <Hemicycle loi={loi} user={value} markColor={Markers[marker].solid} />
+              <View style={styles.outcome}>
+                <Text style={[Type.bodyStrong, styles.ink]}>{loi.titre}</Text>
+                <Text style={[Type.label, Numeric, styles.muted]}>
+                  {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text> ·{' '}
+                  {formatDate(loi.dateVote)}
+                </Text>
+              </View>
+            </View>
+            <View style={styles.next}>
+              <Button label="Question suivante" variant="primary" onPress={onNext} disabled={leaving} />
+              {/* Sans lecteur d'écran, la suite part seule : le filet montre le temps restant. */}
+              {autoNext && (
+                <View style={styles.track} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+                  <Animated.View style={[styles.trackFill, countdownStyle]} />
+                </View>
+              )}
+            </View>
+          </View>
+        )}
+      </View>
     </Leaving>
   );
 }
@@ -423,14 +453,29 @@ function PauseCard({
 }
 
 // Signature : le trait de surligneur balaie le dernier titre voté de gauche à droite.
-function LastVote({ id, onPress }: { id: string; onPress: () => void }) {
+function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPress: () => void }) {
   const votes = useVotesStore((s) => s.votes);
   const loiVotes = useVotesStore((s) => s.loiVotes);
+  const reducedMotion = useReducedMotion();
+  const [shown, setShown] = useState(true);
   const progress = useSharedValue(0);
+  const remaining = useSharedValue(1);
   useEffect(() => {
     progress.value = withTiming(1, { duration: 220 });
   }, [progress]);
+  // Pendant la modification, le filet reste plein ; feuille fermée, 10 s de plus avec le vote corrigé.
+  useEffect(() => {
+    cancelAnimation(remaining);
+    remaining.value = 1;
+    if (paused) {
+      return;
+    }
+    remaining.value = withTiming(0, { duration: LAST_VOTE_MS, easing: Easing.linear });
+    const timer = setTimeout(() => setShown(false), LAST_VOTE_MS);
+    return () => clearTimeout(timer);
+  }, [paused, remaining]);
   const stroke = useAnimatedStyle(() => ({ transform: [{ scaleX: progress.value }] }));
+  const countdown = useAnimatedStyle(() => ({ width: `${remaining.value * 100}%` }));
   const marker = useMarkOf(id);
 
   const loi = loisById.get(id);
@@ -440,29 +485,32 @@ function LastVote({ id, onPress }: { id: string; onPress: () => void }) {
   ) : (
     votes[id] !== undefined && <VoteTag value={votes[id]} />
   );
-  if (!title || !tag) {
+  if (!title || !tag || !shown) {
     return null;
   }
 
   return (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={`Dernier vote : ${title}`}
-      accessibilityHint="Modifier ce vote"
-      style={styles.last}>
-      <Text style={[Type.note, styles.ink]}>Dernier vote</Text>
-      <View style={styles.lastRow}>
-        {tag}
+    <Animated.View exiting={reducedMotion ? undefined : FadeOut.duration(220)} style={styles.last}>
+      <Pressable
+        onPress={onPress}
+        accessibilityRole="button"
+        accessibilityLabel={`Dernier vote : ${title}`}
+        accessibilityHint="Modifier ce vote"
+        style={({ pressed }) => [styles.lastRow, pressed && { backgroundColor: Colors.pressed }]}>
+        <Text style={[Type.note, styles.lastNote, styles.ink]}>Dernier vote</Text>
         <View style={styles.lastTitle}>
           {!(votes[id] === UNSURE && !loi) && <Animated.View style={[styles.stroke, { backgroundColor: Markers[marker].soft }, stroke]} />}
           <Text style={[Type.label, styles.ink]} numberOfLines={1}>
             {title}
           </Text>
         </View>
-        <Text style={[Type.label, styles.muted]}>Modifier</Text>
+        {tag}
+        <EraserIcon size={20} color={Colors.ink} />
+      </Pressable>
+      <View style={styles.track} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+        <Animated.View style={[styles.trackFill, countdown]} />
       </View>
-    </Pressable>
+    </Animated.View>
   );
 }
 
@@ -525,46 +573,6 @@ function LoiRow({ loi, vote, onPress }: { loi: Loi; vote?: LoiVoteValue; onPress
   );
 }
 
-function EditVoteSheet({ id, onClose }: { id: string | null; onClose: () => void }) {
-  const votes = useVotesStore((s) => s.votes);
-  const loiVotes = useVotesStore((s) => s.loiVotes);
-  const castVote = useVotesStore((s) => s.castVote);
-  const castLoiVote = useVotesStore((s) => s.castLoiVote);
-  const proposition = id ? byId.get(id) : undefined;
-  const loi = id ? loisById.get(id) : undefined;
-
-  return (
-    <Sheet visible={!!(proposition || loi)} title="Modifier votre vote" onClose={onClose}>
-      {proposition && (
-        <>
-          <Text style={[Type.bodyStrong, styles.ink]}>{proposition.titre}</Text>
-          <Text style={[Type.body, styles.soft]}>{proposition.description}</Text>
-          <VoteScale
-            value={votes[proposition.id]}
-            onVote={(value) => {
-              castVote(proposition.id, value);
-              onClose();
-            }}
-          />
-        </>
-      )}
-      {loi && (
-        <>
-          <Text style={[Type.bodyStrong, styles.ink]}>{loi.question}</Text>
-          <Text style={[Type.body, styles.soft]}>{loi.enjeu}</Text>
-          <LoiVoteScale
-            value={loiVotes[loi.id]}
-            onVote={(value) => {
-              castLoiVote(loi.id, value);
-              onClose();
-            }}
-          />
-        </>
-      )}
-    </Sheet>
-  );
-}
-
 const styles = StyleSheet.create({
   track: {
     height: 2,
@@ -582,6 +590,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.one,
     minHeight: 44,
+  },
+  lastNote: {
+    fontSize: 20,
+    lineHeight: 24,
   },
   lastTitle: {
     flex: 1,
@@ -642,6 +654,13 @@ const styles = StyleSheet.create({
   reveal: {
     marginTop: Spacing.two,
     gap: Spacing.two,
+  },
+  result: {
+    backgroundColor: Colors.sheet,
+    borderRadius: Radius.large,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.rule,
+    padding: Spacing.two,
   },
   next: {
     gap: Spacing.one,

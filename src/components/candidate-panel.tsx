@@ -16,7 +16,7 @@ interface CandidatePanelProps {
   style?: StyleProp<ViewStyle>;
 }
 
-// Panneau électoral : le même mobilier pour chaque candidat, seul le score change.
+// Panneau électoral : le même mobilier pour chaque candidat ; seul l'anneau du portrait prend la couleur du parti, jamais le score.
 export function CandidatePanel({ entry, rank, tied = false, style }: CandidatePanelProps) {
   const router = useRouter();
   const { candidat, score, totalVotes, reliability } = entry;
@@ -32,7 +32,7 @@ export function CandidatePanel({ entry, rank, tied = false, style }: CandidatePa
         <View style={[styles.number, !rank && styles.numberEmpty]}>
           <Text style={[Type.labelStrong, Numeric, { color: rank ? Colors.sheet : Colors.graphite }]}>{rank ?? '–'}</Text>
         </View>
-        <CandidateAvatar candidat={candidat} size={56} />
+        <CandidateAvatar candidat={candidat} size={56} ring={candidat.couleurParti} />
         <Text style={[Type.labelStrong, styles.name]}>
           {candidat.nom}
         </Text>

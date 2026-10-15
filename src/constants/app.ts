@@ -13,3 +13,6 @@ export function reportIssueUrl(ref?: string, titre?: string): string | null {
   });
   return `${REPO_URL}/issues/new?${params.toString()}`;
 }
+
+// Site public : lien des images partagées.
+export const SITE_URL = 'https://danny-gca.github.io/elire-website/';

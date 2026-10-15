@@ -1,19 +1,23 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 import { CandidatePanel } from '@/components/candidate-panel';
-import { MarkerPicker } from '@/components/marker-picker';
 import { DataFooter } from '@/components/data-footer';
 import { Screen } from '@/components/screen';
+import { ShareSheet } from '@/components/share-sheet';
 import { ScreenHeader } from '@/components/screen-header';
 import { Button } from '@/components/ui/button';
 import { ProgressCounter } from '@/components/ui/progress-counter';
+import { ReliabilityMark } from '@/components/reliability-mark';
 import { ResetButton } from '@/components/ui/reset-button';
-import { Colors, MaxContentWidth, Radius, Spacing, Type } from '@/constants/theme';
+import { VoteTag } from '@/components/vote-tag';
+import { Colors, MaxContentWidth, Numeric, Radius, Spacing, Type, VoteColors } from '@/constants/theme';
+import { VOTE_CHOICES } from '@/constants/votes';
 import { plural } from '@/lib/format';
 import { CLASSEMENT_THRESHOLD, opinionCount } from '@/lib/progress';
-import { competitionRanks, computeScores, MIN_VOTES_PER_CANDIDAT, UNSURE, type CandidateScore } from '@/lib/scoring';
+import { competitionRanks, computeScores, GROUP_VOTE_WEIGHT, MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, type CandidateScore, type Reliability } from '@/lib/scoring';
 import { fisherYates } from '@/lib/shuffle';
 import { candidats, lois, propositions } from '@/services/dataset';
 import { useVotesStore } from '@/store/votes-store';
@@ -29,9 +33,9 @@ export default function ClassementScreen() {
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const resetVotes = useVotesStore((s) => s.resetVotes);
   const { width } = useWindowDimensions();
+  const [sharing, setSharing] = useState(false);
 
   // « Je ne sais pas » n'ouvre pas le classement : seuls les avis comptent.
-  const unsureCount = Object.values(votes).filter((v) => v === UNSURE).length;
   const votedCount = opinionCount(votes, loiVotes);
   const loiCount = Object.keys(loiVotes).length;
   const scores = useMemo(
@@ -44,7 +48,7 @@ export default function ClassementScreen() {
 
   return (
     <Screen>
-      <ScreenHeader title="Classement" note="Proximité entre vos votes, les propositions et les votes au Parlement de chaque candidat." />
+      <ScreenHeader title="Classement" note="Vos votes comparés au programme et aux votes au Parlement de chaque candidat." />
 
       {votedCount < MIN_VOTES_REQUIRED ? (
         <View style={styles.locked}>
@@ -63,18 +67,14 @@ export default function ClassementScreen() {
             Candidats les plus proches de vos votes
           </Text>
           <Text style={[Type.label, styles.muted]}>
-            Basé sur {plural(votedCount, 'vote')}
-            {unsureCount > 0 ? `, sans compter ${plural(unsureCount, 'question')} sans avis (« Je ne sais pas »)` : ''}. Un candidat est classé à partir de {MIN_VOTES_PER_CANDIDAT} de ses
-            propositions votées. À égalité, même rang, dans un ordre tiré au hasard.
+            Sur {plural(votedCount, 'vote')}.
           </Text>
-          {loiCount > 0 && (
-            <Text style={[Type.label, styles.muted]}>
-              Scrutins : +2 si le candidat a voté comme vous, −2 à l’inverse, à moitié pour un vote de
-              groupe. Un candidat qui n’a pas siégé n’est ni avantagé ni pénalisé : son score repose sur son programme.
-            </Text>
-          )}
+          <HowItWorks showLois={loiCount > 0} />
           {ranked.length > 0 ? (
-            <Board entries={ranked} columns={columns} ranked />
+            <>
+              <Board entries={ranked} columns={columns} ranked />
+              <Button label="Partager mon classement" icon="share-outline" variant="primary" onPress={() => setSharing(true)} style={styles.share} />
+            </>
           ) : (
             <View style={styles.emptyBoard}>
               <Text style={[Type.body, styles.soft]}>
@@ -97,19 +97,112 @@ export default function ClassementScreen() {
         </>
       )}
 
-      <View style={styles.marker}>
-        <Text style={[Type.bodyStrong, styles.ink]} accessibilityRole="header">
-          Votre surligneur
-        </Text>
-        <Text style={[Type.label, styles.muted]}>Il marque vos prochains votes ; les marques déjà posées gardent leur couleur.</Text>
-        <MarkerPicker />
-      </View>
-
       <View style={styles.reset}>
         <ResetButton count={votedCount} onConfirm={resetVotes} />
       </View>
       <DataFooter />
+      <ShareSheet visible={sharing} onClose={() => setSharing(false)} scores={scores} answered={votedCount} />
     </Screen>
+  );
+}
+
+// Paliers de la jauge, en votes qui comptent pour ce candidat.
+const RELIABILITY_LEVELS: { level: Reliability; range: string }[] = [
+  { level: 'fragile', range: `${MIN_VOTES_PER_CANDIDAT} votes` },
+  { level: 'moyen', range: `${RELIABILITY_FROM.moyen} à ${RELIABILITY_FROM.fiable - 1} votes` },
+  { level: 'fiable', range: `${RELIABILITY_FROM.fiable} votes et plus` },
+];
+
+const LOI_POINTS = [
+  { label: 'À l’inverse de vous', sign: '−2', color: VoteColors['-2'] },
+  { label: 'Abstention', sign: '0', color: VoteColors['0'] },
+  { label: 'Comme vous', sign: '+2', color: VoteColors['2'] },
+];
+
+// Le calcul en quatre questions simples, replié pour laisser le Classement en premier.
+function HowItWorks({ showLois }: { showLois: boolean }) {
+  const [open, setOpen] = useState(false);
+  const half = GROUP_VOTE_WEIGHT === 0.5 ? 'moitié' : `${GROUP_VOTE_WEIGHT * 100} %`;
+  return (
+    <View style={styles.how}>
+      <Pressable
+        onPress={() => setOpen((v) => !v)}
+        accessibilityRole="button"
+        accessibilityState={{ expanded: open }}
+        style={({ pressed }) => [styles.howToggle, pressed && { backgroundColor: Colors.pressed }]}>
+        <Ionicons name="help-circle-outline" size={20} color={Colors.ink} />
+        <Text style={[Type.bodyStrong, styles.ink, styles.grow]}>Comment le score est calculé</Text>
+        <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={18} color={Colors.graphite} />
+      </Pressable>
+      {open && (
+        <View style={styles.howBody}>
+          <HowStep n={1} title="Vos notes sur son programme">
+            <View style={styles.scale}>
+              {VOTE_CHOICES.map((c) => (
+                <VoteTag key={c.value} value={c.value} />
+              ))}
+            </View>
+            <Text style={[Type.label, styles.soft]}>
+              Le score est la moyenne de vos notes sur ses propositions, de 0 à 100 % : que des « Parfait », 100 % ; que des
+              « Impossible », 0 %. « Je ne sais pas » ne compte pas.
+            </Text>
+          </HowStep>
+          {showLois && (
+            <HowStep n={2} title="Ses votes au Parlement">
+              {/* Même lecture que l'échelle des notes : chaque scrutin rapporte +2, 0 ou −2. */}
+              <View style={styles.scale}>
+                {LOI_POINTS.map((p) => (
+                  <Text key={p.label} style={[Type.labelStrong, Numeric, { color: p.color }]}>
+                    {p.label} {p.sign}
+                  </Text>
+                ))}
+              </View>
+              <Text style={[Type.label, styles.soft]}>
+                Pour chaque scrutin auquel vous avez répondu, votre choix est comparé au vote du candidat, s’il était député,
+                sénateur ou eurodéputé à ce moment-là. Sinon, on prend le vote de son groupe, qui compte {half}. Un candidat qui
+                n’a jamais siégé n’a ni bonus ni malus : son score repose sur son programme seul. Les scrutins ne font jamais plus
+                de la moitié du score : le programme reste la base, pour tous.
+              </Text>
+            </HowStep>
+          )}
+          <HowStep n={showLois ? 3 : 2} title="Quand il entre au classement">
+            <Text style={[Type.label, Numeric, styles.soft]}>
+              Il faut avoir noté au moins {MIN_VOTES_PER_CANDIDAT} de ses propositions. Avant, il reste dans « Pas encore classés ».
+              Ensuite, la jauge dit sur combien de vos votes repose son score :
+            </Text>
+            <View style={styles.levels}>
+              {RELIABILITY_LEVELS.map((l) => (
+                <View key={l.level} style={styles.level}>
+                  <ReliabilityMark level={l.level} />
+                  <Text style={[Type.label, Numeric, styles.soft]}>{l.range}</Text>
+                </View>
+              ))}
+            </View>
+            {showLois && <Text style={[Type.label, styles.soft]}>Un vote de groupe compte pour ½.</Text>}
+          </HowStep>
+          <HowStep n={showLois ? 4 : 3} title="En cas d’égalité">
+            <Text style={[Type.label, styles.soft]}>
+              Même score, même rang (« ex æquo »), dans un ordre tiré au hasard à chaque ouverture : ni par nom, ni par nombre de
+              votes.
+            </Text>
+          </HowStep>
+        </View>
+      )}
+    </View>
+  );
+}
+
+function HowStep({ n, title, children }: { n: number; title: string; children: React.ReactNode }) {
+  return (
+    <View style={styles.step}>
+      <View style={styles.stepNumber}>
+        <Text style={[Type.labelStrong, Numeric, styles.ink]}>{n}</Text>
+      </View>
+      <View style={[styles.grow, styles.stepText]}>
+        <Text style={[Type.labelStrong, styles.ink]}>{title}</Text>
+        {children}
+      </View>
+    </View>
   );
 }
 
@@ -147,6 +240,61 @@ function Board({ entries, columns, ranked = false }: { entries: CandidateScore[]
 }
 
 const styles = StyleSheet.create({
+  how: {
+    marginTop: Spacing.one,
+    backgroundColor: Colors.sheet,
+    borderRadius: Radius.large,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.rule,
+    overflow: 'hidden',
+  },
+  howToggle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    minHeight: 52,
+    paddingHorizontal: Spacing.two,
+  },
+  howBody: {
+    gap: Spacing.two,
+    paddingHorizontal: Spacing.two,
+    paddingTop: 12,
+    paddingBottom: Spacing.two,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: Colors.rule,
+  },
+  step: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  stepNumber: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: Colors.ruleSoft,
+  },
+  stepText: {
+    gap: 4,
+  },
+  levels: {
+    gap: 4,
+  },
+  level: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  scale: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    columnGap: 12,
+    rowGap: 2,
+  },
+  grow: {
+    flex: 1,
+  },
   locked: {
     gap: Spacing.two,
     padding: Spacing.two,
@@ -154,6 +302,9 @@ const styles = StyleSheet.create({
     borderRadius: Radius.large,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.rule,
+  },
+  share: {
+    marginTop: Spacing.two,
   },
   emptyBoard: {
     marginTop: Spacing.two,
@@ -180,10 +331,6 @@ const styles = StyleSheet.create({
   boardRow: {
     flexDirection: 'row',
     gap: GAP,
-  },
-  marker: {
-    marginTop: Spacing.four,
-    gap: Spacing.one,
   },
   reset: {
     marginTop: Spacing.four,
