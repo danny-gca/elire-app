@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "02c042b10605c36f3d9d0edbb53666c5a1047c4b",
+  "include-component-in-tag": false,
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        { "type": "json", "path": "app.json", "jsonpath": "$.expo.version" }
+      ],
+      "changelog-sections": [
+        { "type": "feat", "section": "Nouveautés" },
+        { "type": "fix", "section": "Corrections" },
+        { "type": "perf", "section": "Performances" },
+        { "type": "revert", "section": "Retours en arrière" },
+        { "type": "docs", "section": "Documentation", "hidden": true },
+        { "type": "chore", "section": "Divers", "hidden": true }
+      ]
+    }
+  }
+}
