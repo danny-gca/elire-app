@@ -10,6 +10,7 @@ import { CrowdBackdrop } from '@/components/crowd-backdrop';
 import { EditVoteSheet } from '@/components/edit-vote-sheet';
 import { EraserIcon } from '@/components/eraser-icon';
 import { Hemicycle } from '@/components/hemicycle';
+import { LoiDetail } from '@/components/loi-detail';
 import { LoiVoteScale } from '@/components/loi-vote-scale';
 import { Marked } from '@/components/marked';
 import { MarkerPicker } from '@/components/marker-picker';
@@ -20,6 +21,7 @@ import { SWEEP_MS } from '@/components/sweep-text';
 import { Screen } from '@/components/screen';
 import { ScreenHeader } from '@/components/screen-header';
 import { Button } from '@/components/ui/button';
+import { Sheet } from '@/components/ui/sheet';
 import { ProgressCounter } from '@/components/ui/progress-counter';
 import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
@@ -36,9 +38,9 @@ import { selectNextId, useMarkOf, useVotesStore } from '@/store/votes-store';
 const byId = new Map(propositions.map((p) => [p.id, p]));
 const loisById = new Map(lois.map((l) => [l.id, l]));
 const TOTAL = propositions.length + lois.length;
-// La feuille votée remonte se ranger en « Dernier vote ».
+// La feuille votée remonte se ranger en « A voté ! ».
 const LEAVE_MS = 320;
-// « Dernier vote » reste le temps de corriger d'un geste, puis s'efface (la gomme reste partout ailleurs).
+// « A voté ! » reste le temps de corriger d'un geste, puis s'efface (la gomme reste partout ailleurs).
 const LAST_VOTE_MS = 10000;
 // Après un scrutin, le temps de lire l'hémicycle et le résultat, puis la suite part seule comme pour une proposition.
 const AUTO_NEXT_MS = 5000;
@@ -250,7 +252,7 @@ export default function VoterScreen() {
   );
 }
 
-// Entre en fondu ; quand le vote est posé, remonte vers « Dernier vote » en s'effaçant.
+// Entre en fondu ; quand le vote est posé, remonte vers « A voté ! » en s'effaçant.
 function Leaving({ leaving, style, children }: { leaving: boolean; style?: object; children: React.ReactNode }) {
   const progress = useSharedValue(0);
   useEffect(() => {
@@ -345,6 +347,7 @@ function LoiBallot({
 }) {
   const voters = Object.keys(loi.votes).length;
   const marker = useMarkOf(loi.id);
+  const [detail, setDetail] = useState(false);
 
   return (
     <Leaving leaving={leaving}>
@@ -367,20 +370,31 @@ function LoiBallot({
 
         {revealed && value && step === 'hemicycle' && (
           <View style={styles.reveal} onLayout={onRevealLayout}>
-            {/* Le résultat sur sa feuille : rien ne flotte sur la salle. */}
-            <View style={styles.result}>
+            {/* Le résultat sur sa feuille : rien ne flotte sur la salle ; la toucher ouvre la fiche du scrutin. */}
+            <Pressable
+              onPress={() => setDetail(true)}
+              accessibilityRole="button"
+              accessibilityLabel={`${loi.titre}, ${loi.ref}`}
+              accessibilityHint="Ouvre le détail du scrutin"
+              style={({ pressed }) => [styles.result, pressed && { backgroundColor: Colors.pressed }]}>
               <Hemicycle loi={loi} user={value} markColor={Markers[marker].solid} />
               <View style={styles.outcome}>
-                <Text style={[Type.bodyStrong, styles.ink]}>{loi.titre}</Text>
-                <Text style={[Type.label, Numeric, styles.muted]}>
-                  {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text> ·{' '}
-                  {formatDate(loi.dateVote)}
-                </Text>
+                <View style={styles.outcomeText}>
+                  <Text style={[Type.bodyStrong, styles.ink]}>{loi.titre}</Text>
+                  <Text style={[Type.label, Numeric, styles.muted]}>
+                    {loi.ref} · <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text> ·{' '}
+                    {formatDate(loi.dateVote)}
+                  </Text>
+                </View>
+                <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
               </View>
-            </View>
+            </Pressable>
           </View>
         )}
       </View>
+      <Sheet visible={detail} title={loi.ref} onClose={() => setDetail(false)}>
+        {detail && <LoiDetail loi={loi} />}
+      </Sheet>
     </Leaving>
   );
 }
@@ -405,12 +419,15 @@ function MilestoneLine({ milestone }: { milestone: Milestone }) {
     <View
       accessible
       accessibilityRole="progressbar"
-      accessibilityLabel={`${milestone.value} ${milestone.text}`}
+      accessibilityLabel={`${milestone.value} ${milestone.text}${milestone.side ? `, ${milestone.side}` : ''}`}
       accessibilityValue={{ min: 0, max: 100, now: Math.round(milestone.ratio * 100) }}
       style={styles.milestone}>
-      <Text style={[Type.label, Numeric, styles.muted]}>
-        <Text style={[Type.labelStrong, Numeric, styles.ink]}>{milestone.value}</Text> {milestone.text}
-      </Text>
+      <View style={styles.milestoneRow}>
+        <Text style={[Type.label, Numeric, styles.muted]}>
+          <Text style={[Type.labelStrong, Numeric, styles.ink]}>{milestone.value}</Text> {milestone.text}
+        </Text>
+        {milestone.side && <Text style={[Type.label, Numeric, styles.muted]}>{milestone.side}</Text>}
+      </View>
       <View style={styles.track}>
         <View style={[styles.trackFill, { width: `${Math.min(1, milestone.ratio) * 100}%` }]} />
       </View>
@@ -521,12 +538,12 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
       <Pressable
         onPress={onPress}
         accessibilityRole="button"
-        accessibilityLabel={`Dernier vote : ${title}`}
+        accessibilityLabel={`A voté : ${title}`}
         accessibilityHint="Modifier ce vote"
         style={({ pressed }) => [styles.lastRow, pressed && { backgroundColor: Colors.pressed }]}>
         {/* Le fond se retire : le temps qui reste pour corriger d'un geste. */}
         <CountdownFill remaining={remaining} color={Colors.ruleSoft} />
-        <Text style={[Type.note, styles.lastNote, styles.ink]}>Dernier vote</Text>
+        <Text style={[Type.note, styles.lastNote, styles.ink]}>A voté !</Text>
         <View style={styles.lastTitle}>
           {!(votes[id] === UNSURE && !loi) && <Animated.View style={[styles.stroke, { backgroundColor: Markers[marker].soft }, stroke]} />}
           <Text style={[Type.label, styles.ink]} numberOfLines={1}>
@@ -643,6 +660,13 @@ const styles = StyleSheet.create({
   milestone: {
     gap: Spacing.half,
   },
+  // Le palier à gauche, les candidats classés à droite ; sur un écran étroit, la seconde passe à la ligne.
+  milestoneRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    columnGap: Spacing.two,
+  },
   intro: {
     marginTop: Spacing.two,
   },
@@ -691,10 +715,16 @@ const styles = StyleSheet.create({
     padding: Spacing.two,
   },
   outcome: {
-    gap: Spacing.half,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
     paddingTop: Spacing.two,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: Colors.rule,
+  },
+  outcomeText: {
+    flex: 1,
+    gap: Spacing.half,
   },
   row: {
     flexDirection: 'row',

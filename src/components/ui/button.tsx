@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Pressable, StyleSheet, Text, type GestureResponderEvent, type StyleProp, type ViewStyle } from 'react-native';
-import type { SharedValue } from 'react-native-reanimated';
+import type { DerivedValue, SharedValue } from 'react-native-reanimated';
 
 import { CountdownFill } from '@/components/countdown-fill';
 import { Colors, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
@@ -16,7 +16,7 @@ interface ButtonProps {
   accessibilityHint?: string;
   style?: StyleProp<ViewStyle>;
   /** Temps restant avant que l'action parte seule (de 1 à 0), montré par un fond qui se retire. */
-  countdown?: SharedValue<number>;
+  countdown?: SharedValue<number> | DerivedValue<number>;
 }
 
 const VARIANTS: Record<Variant, { bg: string; pressedBg: string; fg: string; border: string; countdown: string }> = {

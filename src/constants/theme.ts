@@ -99,7 +99,7 @@ export const Type = {
   label: { fontFamily: font('AtkinsonHyperlegibleNext-Medium', 'sans'), fontSize: 13, lineHeight: 18 },
   labelStrong: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 13, lineHeight: 18 },
   caps: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 13, lineHeight: 18, letterSpacing: 0.4, textTransform: 'uppercase' },
-  /** Écriture du lecteur (« Votre avis », « Dernier vote ») : jamais sous 20, en peu de mots. */
+  /** Écriture du lecteur (« Votre avis », « A voté ! ») : jamais sous 20, en peu de mots. */
   note: { fontFamily: font('Caveat-Bold', 'hand'), fontSize: 22, lineHeight: 26 },
 } satisfies Record<string, TextStyle>;
 

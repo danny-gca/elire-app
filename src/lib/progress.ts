@@ -37,6 +37,8 @@ export interface Milestone {
   /** Chiffre mis en avant, puis le reste de la phrase. */
   value: number;
   text: string;
+  /** Info d'appoint, à droite de la ligne (candidats classés). */
+  side?: string;
   ratio: number;
 }
 
@@ -49,7 +51,7 @@ export function nextMilestone(opinions: number, ranked: number, candidats: numbe
   const done = opinions % PAUSE_EVERY;
   const left = PAUSE_EVERY - done;
   const classes = `${ranked} ${ranked > 1 ? 'candidats classés' : 'candidat classé'} sur ${candidats}`;
-  return { value: left, text: `${left > 1 ? 'votes' : 'vote'} avant le prochain bilan · ${classes}`, ratio: done / PAUSE_EVERY };
+  return { value: left, text: `${left > 1 ? 'votes' : 'vote'} avant le prochain bilan`, side: classes, ratio: done / PAUSE_EVERY };
 }
 
 /** Une pause courte à chaque dizaine d'avis, dès l'ouverture du Classement. */

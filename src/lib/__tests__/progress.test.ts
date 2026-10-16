@@ -23,8 +23,8 @@ describe('progress', () => {
   it('annonce le Classement, puis le prochain bilan de dix votes', () => {
     expect(nextMilestone(6, 0, 17)).toEqual({ value: 4, text: 'votes avant votre Classement', ratio: 0.6 });
     expect(nextMilestone(9, 0, 17).text).toBe('vote avant votre Classement');
-    expect(nextMilestone(13, 9, 17)).toEqual({ value: 7, text: 'votes avant le prochain bilan · 9 candidats classés sur 17', ratio: 0.3 });
-    expect(nextMilestone(20, 1, 17)).toMatchObject({ value: 10, text: 'votes avant le prochain bilan · 1 candidat classé sur 17', ratio: 0 });
+    expect(nextMilestone(13, 9, 17)).toEqual({ value: 7, text: 'votes avant le prochain bilan', side: '9 candidats classés sur 17', ratio: 0.3 });
+    expect(nextMilestone(20, 1, 17)).toMatchObject({ value: 10, text: 'votes avant le prochain bilan', side: '1 candidat classé sur 17', ratio: 0 });
   });
 
   it('marque une pause à chaque dizaine dès 10 avis', () => {
