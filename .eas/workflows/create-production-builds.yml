@@ -1,4 +1,4 @@
-# Lancé par le tag vX.Y.Z que crée la fusion de la PR de release : build Android puis envoi en test interne.
+# Lancé par le tag vX.Y.Z que crée la fusion de la PR de release : build Android puis envoi en test fermé (piste alpha).
 name: Create Production Builds
 
 on:
