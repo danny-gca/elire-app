@@ -1,6 +1,8 @@
 # À faire
 
-## Google Play
+- faire des festivités quand on termine tous les votes
+- afficher le bandeau tips dans Lois et Explorer quand on a tout voter en mode "bravo"
+
 
 1. **Attendre l'examen de Google** (quelques jours) : l'app sort du brouillon et prend le nom « élire ».
 2. **Test fermé** : au moins 12 testeurs inscrits (Tests fermés > Testeurs, chacun ouvre le lien et accepte), pendant 14 jours d'affilée. Compte développeur personnel récent : obligatoire avant la production.
