@@ -5,6 +5,7 @@ import { AccessibilityInfo, Platform, Pressable, ScrollView, StyleSheet, Text, V
 import Animated, { cancelAnimation, Easing, FadeIn, FadeOut, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
 
 import { BUTTON_STROKE_MS } from '@/components/button-stroke';
+import { CountdownFill } from '@/components/countdown-fill';
 import { CrowdBackdrop } from '@/components/crowd-backdrop';
 import { EditVoteSheet } from '@/components/edit-vote-sheet';
 import { EraserIcon } from '@/components/eraser-icon';
@@ -146,6 +147,38 @@ export default function VoterScreen() {
     setTimeout(done, LEAVE_MS);
   };
 
+  const loiRevealed = !!currentLoi && revealId === currentLoi.id;
+  const loiFlow = useLoiFlow({ id: currentLoi?.id, revealed: loiRevealed, leaving: loiLeaving, animate: !reducedMotion, onNext: handleNext });
+  const loiMarker = useMarkOf(currentLoi?.id ?? '');
+  const loiValue = currentLoi ? loiVotes[currentLoi.id] : undefined;
+
+  // Les boutons restent au bas de l'écran, au-dessus des onglets : on vote sans faire défiler.
+  const dock = pause ? null : currentLoi ? (
+    loiRevealed && loiFlow.step === 'hemicycle' ? (
+      <Button
+        label="Question suivante"
+        variant="primary"
+        onPress={handleNext}
+        disabled={loiLeaving}
+        countdown={loiFlow.autoNext ? loiFlow.remaining : undefined}
+      />
+    ) : (
+      <LoiVoteScale
+        value={loiValue}
+        onVote={handleLoiVote}
+        disabled={loiRevealed}
+        stroke={loiRevealed && loiValue ? { value: loiValue, color: Markers[loiMarker].soft } : undefined}
+      />
+    )
+  ) : current ? (
+    <VoteScale
+      value={hold?.value}
+      onVote={handleVote}
+      disabled={!!hold}
+      stroke={hold ? { value: hold.value, color: Markers[marker].soft } : undefined}
+    />
+  ) : null;
+
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
 
   if (finished) {
@@ -158,7 +191,10 @@ export default function VoterScreen() {
   }
 
   return (
-    <Screen scrollRef={scrollRef} backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id} /> : null}>
+    <Screen
+      scrollRef={scrollRef}
+      backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id} /> : null}
+      footer={dock}>
       <ScreenHeader title="Voter" accessory={<MarkerPicker compact />} />
       <MilestoneLine milestone={milestone} />
 
@@ -177,12 +213,11 @@ export default function VoterScreen() {
         <LoiBallot
           key={currentLoi.id}
           loi={currentLoi}
-          value={loiVotes[currentLoi.id]}
-          revealed={revealId === currentLoi.id}
+          value={loiValue}
+          revealed={loiRevealed}
           leaving={loiLeaving}
-          animate={!reducedMotion}
-          onVote={handleLoiVote}
-          onNext={handleNext}
+          step={loiFlow.step}
+          holdProps={loiFlow.holdProps}
           onRevealLayout={() => scrollRef.current?.scrollToEnd({ animated: true })}
         />
       ) : (
@@ -203,18 +238,9 @@ export default function VoterScreen() {
               </PropositionSheet>
             </Leaving>
 
-            <View style={styles.avis}>
-              <Text style={[Type.note, styles.ink]} accessibilityRole="header">
-                Votre avis
-              </Text>
-              <Text style={[Type.label, styles.muted]}>L’auteur reste masqué : vous jugez la mesure, pas la personne.</Text>
-              <VoteScale
-                value={hold?.value}
-                onVote={handleVote}
-                disabled={!!hold}
-                stroke={hold ? { value: hold.value, color: Markers[marker].soft } : undefined}
-              />
-            </View>
+            <Text style={[Type.label, styles.muted, styles.hint]}>
+              L’auteur reste masqué : vous jugez la mesure, pas la personne.
+            </Text>
           </>
         )
       )}
@@ -243,39 +269,35 @@ function Leaving({ leaving, style, children }: { leaving: boolean; style?: objec
   );
 }
 
-// Un scrutin réel : la question anonyme, trois choix, puis l'hémicycle de ceux qui l'ont voté.
-function LoiBallot({
-  loi,
-  value,
+type LoiStep = 'button' | 'title' | 'hemicycle';
+
+// Après le vote d'un scrutin : trait sur le bouton, puis sur la question, puis l'hémicycle ; la suite part seule si personne ne lit.
+function useLoiFlow({
+  id,
   revealed,
   leaving,
   animate,
-  onVote,
   onNext,
-  onRevealLayout,
 }: {
-  loi: Loi;
-  value?: LoiVoteValue;
+  id?: string;
   revealed: boolean;
   leaving: boolean;
   /** Faux si « Réduire les animations » : l'hémicycle apparaît tout de suite. */
   animate: boolean;
-  onVote: (value: LoiVoteValue) => void;
   onNext: () => void;
-  /** L'hémicycle s'ouvre sous la rangée de vote : l'écran défile jusqu'à lui une fois posé. */
-  onRevealLayout: () => void;
 }) {
-  const voters = Object.keys(loi.votes).length;
-  const marker = useMarkOf(loi.id);
-  // Après le vote : trait sur le bouton, puis sur la question, puis l'hémicycle.
-  const [step, setStep] = useState<'button' | 'title' | 'hemicycle'>(animate ? 'button' : 'hemicycle');
+  const initial: LoiStep = animate ? 'button' : 'hemicycle';
+  const [state, setState] = useState<{ id?: string; step: LoiStep; held: boolean }>({ id, step: initial, held: false });
+  // Nouveau scrutin : on repart du début.
+  if (state.id !== id) {
+    setState({ id, step: initial, held: false });
+  }
+  const { step, held } = state.id === id ? state : { step: initial, held: false };
   const screenReader = useScreenReader();
+  const autoNext = !!id && revealed && step === 'hemicycle' && !leaving && !screenReader && !held;
   // Un toucher, un clic ou un défilement : la personne lit, la suite ne part plus seule.
-  const [held, setHeld] = useState(false);
-  const autoNext = revealed && step === 'hemicycle' && !leaving && !screenReader && !held;
-  const hold = () => autoNext && setHeld(true);
-  const holdProps = { onTouchStart: hold, onPointerDown: hold, onWheel: hold } as object;
-  const countdown = useSharedValue(0);
+  const hold = () => autoNext && setState((s) => ({ ...s, held: true }));
+  const remaining = useSharedValue(1);
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
@@ -284,19 +306,45 @@ function LoiBallot({
     if (!autoNext) {
       return;
     }
-    countdown.value = 0;
-    countdown.value = withTiming(1, { duration: AUTO_NEXT_MS, easing: Easing.linear });
+    remaining.value = 1;
+    remaining.value = withTiming(0, { duration: AUTO_NEXT_MS, easing: Easing.linear });
     const timer = setTimeout(() => nextRef.current(), AUTO_NEXT_MS);
     return () => clearTimeout(timer);
-  }, [autoNext, countdown]);
-  const countdownStyle = useAnimatedStyle(() => ({ width: `${countdown.value * 100}%` }));
+  }, [autoNext, remaining]);
   useEffect(() => {
     if (!revealed || step === 'hemicycle') {
       return;
     }
-    const timer = setTimeout(() => setStep(step === 'button' ? 'title' : 'hemicycle'), step === 'button' ? BUTTON_STROKE_MS : SWEEP_MS);
+    const timer = setTimeout(
+      () => setState((s) => ({ ...s, step: step === 'button' ? 'title' : 'hemicycle' })),
+      step === 'button' ? BUTTON_STROKE_MS : SWEEP_MS,
+    );
     return () => clearTimeout(timer);
   }, [revealed, step]);
+  return { step, autoNext, remaining, holdProps: { onTouchStart: hold, onPointerDown: hold, onWheel: hold } as object };
+}
+
+// Un scrutin réel : la question anonyme, puis l'hémicycle de ceux qui l'ont voté (les trois choix sont dans le bandeau du bas).
+function LoiBallot({
+  loi,
+  value,
+  revealed,
+  leaving,
+  step,
+  holdProps,
+  onRevealLayout,
+}: {
+  loi: Loi;
+  value?: LoiVoteValue;
+  revealed: boolean;
+  leaving: boolean;
+  step: LoiStep;
+  holdProps: object;
+  /** L'hémicycle s'ouvre sous la question : l'écran défile jusqu'à lui une fois posé. */
+  onRevealLayout: () => void;
+}) {
+  const voters = Object.keys(loi.votes).length;
+  const marker = useMarkOf(loi.id);
 
   return (
     <Leaving leaving={leaving}>
@@ -312,21 +360,10 @@ function LoiBallot({
           </PropositionSheet>
         </View>
 
-        <View style={styles.avis}>
-          <Text style={[Type.note, styles.ink]} accessibilityRole="header">
-            Votre vote
-          </Text>
-          <Text style={[Type.label, styles.muted]}>
-            {voters > 1 ? `${voters} candidats ont voté ce texte` : 'Un candidat a voté ce texte'} : votre choix les rapproche ou
-            les éloigne de vous.
-          </Text>
-          <LoiVoteScale
-            value={value}
-            onVote={onVote}
-            disabled={revealed}
-            stroke={revealed && value ? { value, color: Markers[marker].soft } : undefined}
-          />
-        </View>
+        <Text style={[Type.label, styles.muted, styles.hint]}>
+          {voters > 1 ? `${voters} candidats ont voté ce texte` : 'Un candidat a voté ce texte'} : votre choix les rapproche ou
+          les éloigne de vous.
+        </Text>
 
         {revealed && value && step === 'hemicycle' && (
           <View style={styles.reveal} onLayout={onRevealLayout}>
@@ -340,15 +377,6 @@ function LoiBallot({
                   {formatDate(loi.dateVote)}
                 </Text>
               </View>
-            </View>
-            <View style={styles.next}>
-              <Button label="Question suivante" variant="primary" onPress={onNext} disabled={leaving} />
-              {/* Sans lecteur d'écran, la suite part seule : le filet montre le temps restant. */}
-              {autoNext && (
-                <View style={styles.track} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-                  <Animated.View style={[styles.trackFill, countdownStyle]} />
-                </View>
-              )}
             </View>
           </View>
         )}
@@ -475,7 +503,6 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
     return () => clearTimeout(timer);
   }, [paused, remaining]);
   const stroke = useAnimatedStyle(() => ({ transform: [{ scaleX: progress.value }] }));
-  const countdown = useAnimatedStyle(() => ({ width: `${remaining.value * 100}%` }));
   const marker = useMarkOf(id);
 
   const loi = loisById.get(id);
@@ -497,6 +524,8 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
         accessibilityLabel={`Dernier vote : ${title}`}
         accessibilityHint="Modifier ce vote"
         style={({ pressed }) => [styles.lastRow, pressed && { backgroundColor: Colors.pressed }]}>
+        {/* Le fond se retire : le temps qui reste pour corriger d'un geste. */}
+        <CountdownFill remaining={remaining} color={Colors.ruleSoft} />
         <Text style={[Type.note, styles.lastNote, styles.ink]}>Dernier vote</Text>
         <View style={styles.lastTitle}>
           {!(votes[id] === UNSURE && !loi) && <Animated.View style={[styles.stroke, { backgroundColor: Markers[marker].soft }, stroke]} />}
@@ -507,9 +536,6 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
         {tag}
         <EraserIcon size={20} color={Colors.ink} />
       </Pressable>
-      <View style={styles.track} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-        <Animated.View style={[styles.trackFill, countdown]} />
-      </View>
     </Animated.View>
   );
 }
@@ -590,6 +616,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.one,
     minHeight: 44,
+    paddingHorizontal: Spacing.one,
+    borderRadius: Radius.medium,
+    overflow: 'hidden',
   },
   lastNote: {
     fontSize: 20,
@@ -647,9 +676,8 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.rule,
   },
-  avis: {
-    marginTop: Spacing.three,
-    gap: Spacing.one,
+  hint: {
+    marginTop: Spacing.two,
   },
   reveal: {
     marginTop: Spacing.two,
@@ -661,9 +689,6 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.rule,
     padding: Spacing.two,
-  },
-  next: {
-    gap: Spacing.one,
   },
   outcome: {
     gap: Spacing.half,
