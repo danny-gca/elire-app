@@ -318,7 +318,7 @@ Une palette d'encre sur papier froid, sans couleur institutionnelle ni partisane
 
 ### Secondary
 
-- **Surligneurs** (mark, marker-rose, marker-vert, marker-bleu): le trait derrière ce que l'utilisateur a voté, et rien d'autre. Il choisit le sien à la fin de l'onboarding (jaune par défaut) et peut en changer en haut de Voter (quatre traits compacts) ; chaque marque garde la couleur du surligneur avec lequel elle a été posée (`marks` dans le store). Les couleurs ne signifient rien et ne rappellent aucun parti. En natif le trait s'applique en fond de ligne à 70% d'opacité ; sur le web en bande basse sur chaque ligne (de 38% à 94% de la hauteur, 85% d'opacité), coupée proprement aux retours à la ligne, droite sur une portion puis légèrement ondulée (tuiles SVG de 240px, 3 variantes stables par texte, `data-wave`). Tokens : `Markers` dans `theme.ts`, variables `--marker` dans `global.css`. La sélection de texte web reste jaune à 55%.
+- **Surligneurs** (mark, marker-rose, marker-vert, marker-bleu): le trait derrière ce que l'utilisateur a voté, et rien d'autre. Il choisit le sien au début de l'onboarding (jaune par défaut) et peut en changer en haut de Voter (quatre traits compacts) ; chaque marque garde la couleur du surligneur avec lequel elle a été posée (`marks` dans le store). Les couleurs ne signifient rien et ne rappellent aucun parti. En natif le trait s'applique en fond de ligne à 70% d'opacité ; sur le web en bande basse sur chaque ligne (de 38% à 94% de la hauteur, 85% d'opacité), coupée proprement aux retours à la ligne, droite sur une portion puis légèrement ondulée (tuiles SVG de 240px, 3 variantes stables par texte, `data-wave`). Tokens : `Markers` dans `theme.ts`, variables `--marker` dans `global.css`. La sélection de texte web reste jaune à 55%.
 
 ### Tertiary
 
@@ -377,7 +377,7 @@ Une palette d'encre sur papier froid, sans couleur institutionnelle ni partisane
 
 Une colonne centrée de 720px max avec 16px de marge latérale, sur fond papier. Le rythme suit une grille de 8pt (4, 8, 16, 24, 32) ; les intertitres de section prennent 24px au-dessus. Les cibles tactiles font 44pt au minimum (48 sur Android) ; les boutons de l'échelle de vote 60pt de haut.
 
-L'en-tête d'écran aligne le grand titre à gauche et un accessoire à droite (sur Voter, le compteur « 23 sur 108 » en chiffres tabulaires), suivi d'une piste de progression de 2px (filet, remplissage encre).
+L'en-tête d'écran aligne le grand titre à gauche et un accessoire à droite, suivi d'une piste de progression de 2px (filet, remplissage encre). Exception, Voter : pas de grand titre (l'onglet le dit), une barre compacte fixe en haut, le palier sur deux lignes en 13 à gauche, les quatre surligneurs compacts à droite, la piste de 2px dessous, puis « A voté ! » tant qu'on peut corriger ; les boutons de vote dans un bandeau fixe en bas ; entre les deux, la feuille centrée dans l'espace libre (une question longue défile).
 
 Seule la feuille de proposition de Voter porte une marge : une colonne de 48px séparée du corps par un filet graphite de 1px, avec le numéro (P-024), le pictogramme de thématique et le libellé vertical de la thématique. Toutes les autres cartes (Lois, Explorer, récapitulatif, fiche candidat) n'ont pas de colonne de marge : le numéro, le statut et la thématique tiennent sur une ligne meta graphite sous le titre, séparés par « · ».
 
@@ -457,7 +457,7 @@ La page du cahier : marge de 48px (numéro en 13 graphite tabulaire, pictogramme
 
 ### Palier et bilan
 
-Sous le titre d'écran de Voter, le prochain palier, jamais le total, en 13 graphite avec le chiffre en encre, sur un filet de 2px qui se remplit d'encre : « **4** votes avant votre Classement », puis, Classement ouvert, « **7** votes avant le prochain bilan · 9 candidats classés sur 17 » (le filet repart à zéro après chaque bilan). Avant le premier vote, une phrase en 13 encre douce donne la durée (environ 20 secondes par question, Classement en 3 à 5 minutes) et rappelle qu'on peut s'arrêter.
+Dans la barre fixe de Voter, le prochain palier, jamais le total, en 13 graphite avec le chiffre en encre, sur un filet de 2px qui se remplit d'encre : « Classement dans **4** votes », puis, Classement ouvert, « Bilan dans **7** votes » et dessous « 9 candidats classés sur 17 » sur une pastille neutre (filet clair, coins de 6) (le filet repart à zéro après chaque bilan). Avant le premier vote, une phrase en 13 encre douce donne la durée (environ 20 secondes par question, Classement en 3 à 5 minutes) et rappelle qu'on peut s'arrêter.
 
 À chaque dizaine d'avis (« Je ne sais pas » ne compte pas), la feuille laisse place au bilan, feuille blanche à filet : 24px de marge, coins de 14, apparition en fondu de 220ms. Dans l'ordre : le titre 24 Literata (« Votre Classement est ouvert, mais encore fragile. », puis « 20 votes : votre Classement s'affine. », ou « N votes : les N candidats sont classés. ») ; la moyenne de propositions notées par candidat en 17 encre douce, le chiffre en semi-gras encre (« il en faut 2 pour le classer, et 5 éléments pour un score fiable ») ; une rangée de petits panneaux anonymes, un par candidat (sur deux lignes à 25) (16 × 22, coins de 2, cerclés de graphite 1px, 4px d'écart), remplis d'encre par le bas selon la fiabilité (un tiers fragile, deux tiers assez sûr, plein fiable ; un tiers en filet pour une seule note ; vide sans note), triés du plus au moins rempli ; la légende « 10 candidats classés sur 25 · 5 scores fiables » en 13 graphite tabulaire ; la promesse en 17 (« Dix questions de plus, environ 3 minutes, et votre score devient plus fiable. ») ; « 10 questions de plus » en primaire, « Voir le Classement » en secondaire ; la phrase de pause en 13 graphite.
 
@@ -489,7 +489,7 @@ Le geste du vote, en environ 1 s : (1) un trait de surligneur traverse le bouton
 
 ### Sélecteur de surligneur
 
-Quatre options (Jaune, Rose, Vert, Bleu) en grille 2 × 2 avec 8px d'écart, feuille blanche à bordure filet, coins de 12, 56pt de haut (60 sur Android), 16px de marge interne : un trait de 40 × 14px aux coins de 3, posé de biais (−6°) dans la teinte native du surligneur (70%), puis le nom en 17. L'option choisie prend une bordure encre de 2px et son nom en semi-gras. Il apparaît à la fin de l'onboarding et sous « Votre surligneur » dans Classement. Grille à la fin de l'onboarding ; en haut de Voter, version compacte : quatre traits de 24 × 10 dans des cibles de 40 × 44, le choisi cerclé d'encre (2px).
+Quatre options (Jaune, Rose, Vert, Bleu) en grille 2 × 2 avec 8px d'écart, feuille blanche à bordure filet, coins de 12, 56pt de haut (60 sur Android), 16px de marge interne : un trait de 40 × 14px aux coins de 3, posé de biais (−6°) dans la teinte native du surligneur (70%), puis le nom en 17. L'option choisie prend une bordure encre de 2px et son nom en semi-gras. Il apparaît en deuxième page de l'onboarding (aucun choix affiché au départ) et sous « Votre surligneur » dans Classement. Grille dans l'onboarding ; en haut de Voter, version compacte : quatre traits de 24 × 10 dans des cibles de 40 × 44, le choisi cerclé d'encre (2px).
 
 ### Panneau électoral (signature)
 

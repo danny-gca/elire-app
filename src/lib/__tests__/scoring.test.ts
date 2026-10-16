@@ -1,4 +1,4 @@
-import { competitionRanks, computeScores, loiPoints, reliabilityOf, scoreCandidat } from '@/lib/scoring';
+import { competitionRanks, computeScores, loiPoints, reliabilityOf, scoreCandidat, scoreDetail, type LoiBallot, type VoteValue } from '@/lib/scoring';
 import type { Candidat, Loi, Proposition, VoteCandidatLoi } from '@/schemas/dataset';
 
 const candidat = (id: string, nom = id): Candidat => ({
@@ -162,5 +162,31 @@ describe('votes sur les lois', () => {
     const s = scoreCandidat(candidat('a'), props, {}, { lois, votes: { l1: 'pour', l2: 'pour' } });
     expect(s.score).toBe(75);
     expect(s.ranked).toBe(false);
+  });
+});
+
+describe('scoreDetail', () => {
+  it('détaille le même score que scoreCandidat', () => {
+    const cases: { c: string; votes: Record<string, VoteValue>; ballot?: LoiBallot }[] = [
+      { c: 'a', votes: { a1: 1, a2: -1 }, ballot: { lois, votes: { l1: 'pour' as const, l2: 'pour' as const } } },
+      { c: 'b', votes: { b1: 2, b2: 2 }, ballot: { lois, votes: { l1: 'pour' as const } } },
+      { c: 'a', votes: {}, ballot: { lois, votes: { l1: 'contre' as const } } },
+      { c: 'c', votes: { c1: 2 } },
+    ];
+    for (const { c, votes, ballot } of cases) {
+      expect(scoreDetail(candidat(c), props, votes, ballot).score).toBe(scoreCandidat(candidat(c), props, votes, ballot).score);
+    }
+  });
+
+  it('regroupe les notes et les scrutins par points', () => {
+    const d = scoreDetail(candidat('a'), props, { a1: 2, a2: 2 }, { lois, votes: { l1: 'pour', l2: 'pour' } });
+    expect(d.programme).toEqual({ rows: [{ value: 2, count: 2 }], sum: 4, max: 4 });
+    expect(d.parlement).toEqual({ rows: [{ points: 2, weight: 1, count: 1 }, { points: 0, weight: 1, count: 1 }], sum: 2, max: 4 });
+    expect(d.share).toBe(0.5);
+  });
+
+  it('compte un vote de groupe à moitié', () => {
+    const d = scoreDetail(candidat('b'), props, { b1: 2 }, { lois, votes: { l1: 'pour' } });
+    expect(d.parlement).toEqual({ rows: [{ points: -2, weight: 0.5, count: 1 }], sum: -1, max: 1 });
   });
 });

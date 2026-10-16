@@ -1,4 +1,4 @@
-import { strokePath, strokeShape } from '@/lib/stroke';
+import { SCRIBBLE_WIDTH, scribblePath, strokePath, strokeShape } from '@/lib/stroke';
 
 describe('strokeShape', () => {
   it('trace toujours de gauche à droite, à travers tout le bouton, sans sortir loin en hauteur', () => {
@@ -24,5 +24,20 @@ describe('strokeShape', () => {
     const { d, length } = strokePath(strokeShape(), 100, 60);
     expect(d.startsWith('M')).toBe(true);
     expect(length).toBeGreaterThan(90);
+  });
+});
+
+describe('scribblePath', () => {
+  it("zigzague jusqu'à droite sans toucher les bords de l'encart", () => {
+    const { d, length } = scribblePath(320, 80);
+    const pts = [...d.matchAll(/[ML](-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
+    pts.forEach(([x, y]) => {
+      expect(x).toBeGreaterThanOrEqual(SCRIBBLE_WIDTH);
+      expect(x).toBeLessThan(320 - SCRIBBLE_WIDTH);
+      expect(y).toBeGreaterThan(0);
+      expect(y).toBeLessThan(80);
+    });
+    expect(pts[pts.length - 1][0]).toBeGreaterThan(320 - SCRIBBLE_WIDTH - 16);
+    expect(length).toBeGreaterThan(320);
   });
 });

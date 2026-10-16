@@ -11,28 +11,32 @@ interface SweepTextProps {
   /** Surligneur qui balaie le texte ; sans valeur, texte simple. */
   marker?: MarkerId;
   style?: StyleProp<TextStyle>;
+  /** Faux quand le texte n'est qu'une partie d'un titre déjà annoncé. */
+  header?: boolean;
 }
 
 // Le trait balaie le texte de gauche à droite, ligne après ligne (web : global.css [data-sweep]).
-export function SweepText({ children, marker, style }: SweepTextProps) {
+export function SweepText({ children, marker, style, header = true }: SweepTextProps) {
+  const role = header ? 'header' : undefined;
   if (!marker) {
     return (
-      <Text style={style} accessibilityRole="header">
+      <Text style={style} accessibilityRole={role}>
         {children}
       </Text>
     );
   }
   if (Platform.OS === 'web') {
     return (
-      <Text style={style} accessibilityRole="header">
+      <Text style={style} accessibilityRole={role}>
         <Text {...({ dataSet: { sweep: marker } } as object)}>{children}</Text>
       </Text>
     );
   }
-  return <NativeSweep marker={marker} style={style}>{children}</NativeSweep>;
+  return <NativeSweep marker={marker} style={style} header={header}>{children}</NativeSweep>;
 }
 
-function NativeSweep({ children, marker, style }: Required<Pick<SweepTextProps, 'marker'>> & SweepTextProps) {
+function NativeSweep({ children, marker, style, header }: Required<Pick<SweepTextProps, 'marker'>> & SweepTextProps) {
+  const role = header ? 'header' : undefined;
   const [lines, setLines] = useState<TextLayoutLine[]>([]);
   const progress = useSharedValue(0);
   const total = lines.reduce((acc, l) => acc + l.width, 0);
@@ -57,7 +61,7 @@ function NativeSweep({ children, marker, style }: Required<Pick<SweepTextProps, 
           color={Markers[marker].soft}
         />
       ))}
-      <Text style={style} accessibilityRole="header" onTextLayout={(e) => setLines(e.nativeEvent.lines)}>
+      <Text style={style} accessibilityRole={role} onTextLayout={(e) => setLines(e.nativeEvent.lines)}>
         {children}
       </Text>
     </View>

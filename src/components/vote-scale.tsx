@@ -33,7 +33,7 @@ export function VoteScale({ value, onVote, disabled, stroke }: VoteScaleProps) {
         style={({ pressed }) => [
           styles.option,
           wide && styles.unsure,
-          selected && { borderColor: wide ? Colors.ink : choice.color, borderWidth: 2, backgroundColor: Colors.sheet },
+          selected && [styles.selected, { borderColor: wide ? Colors.ink : choice.color }],
           pressed && { backgroundColor: Colors.pressed },
           stroke?.value === choice.value && styles.stroked,
         ]}>
@@ -74,6 +74,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 2,
     overflow: 'hidden',
+  },
+  // Bordure de 2 pt sans changer la taille : la marge interne perd ce que la bordure gagne.
+  selected: {
+    borderWidth: 2,
+    paddingVertical: Spacing.one - 1,
+    backgroundColor: Colors.sheet,
   },
   // Le geste peut dépasser du bouton et passer au-dessus des voisins.
   stroked: {

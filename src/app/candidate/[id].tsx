@@ -15,10 +15,11 @@ import { Button } from '@/components/ui/button';
 import { SegmentedControl } from '@/components/ui/segmented-control';
 import { Sheet } from '@/components/ui/sheet';
 import { ReliabilityMark, reliabilityHint } from '@/components/reliability-mark';
+import { ScoreCalcul } from '@/components/score-calcul';
 import { Colors, MinTarget, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { readableOn } from '@/lib/color';
 import { candidatureText, plural } from '@/lib/format';
-import { MIN_VOTES_PER_CANDIDAT, scoreCandidat } from '@/lib/scoring';
+import { MIN_VOTES_PER_CANDIDAT, scoreCandidat, scoreDetail } from '@/lib/scoring';
 import type { Loi, Proposition } from '@/schemas/dataset';
 import { getCandidat, getLoisByCandidat, getPropositionsByCandidat, lois, partis, propositions, thematiques } from '@/services/dataset';
 import { useVotesStore } from '@/store/votes-store';
@@ -33,6 +34,7 @@ export default function CandidateScreen() {
   const [onglet, setOnglet] = useState<Onglet>('programme');
   const [selected, setSelected] = useState<Proposition | null>(null);
   const [selectedLoi, setSelectedLoi] = useState<Loi | null>(null);
+  const [calcul, setCalcul] = useState(false);
 
   const candidat = getCandidat(id);
   const parti = partis.find((p) => p.id === candidat?.partiId);
@@ -108,7 +110,14 @@ export default function CandidateScreen() {
         </Pressable>
       )}
 
-      <View style={styles.accord} accessible accessibilityLabel={score.score === null ? 'Accord : pas encore évalué' : `Accord avec vos votes : ${score.score} %, sur ${plural(score.totalVotes, 'vote')}`}>
+      {/* Touchée, la carte pose le calcul : de quoi vérifier le pourcentage à la main. */}
+      <Pressable
+        disabled={score.score === null}
+        onPress={() => setCalcul(true)}
+        accessibilityRole={score.score === null ? undefined : 'button'}
+        accessibilityHint="Montre le détail du calcul"
+        accessibilityLabel={score.score === null ? 'Accord : pas encore évalué' : `Accord avec vos votes : ${score.score} %, sur ${plural(score.totalVotes, 'vote')}`}
+        style={({ pressed }) => [styles.accord, pressed && { backgroundColor: Colors.pressed }]}>
         {/* En-tête : le score en grand à gauche, sa fiabilité dans l'angle. */}
         <View style={styles.accordHead}>
           <View style={styles.accordScore}>
@@ -151,9 +160,13 @@ export default function CandidateScreen() {
                 ? `Sur ${plural(score.programme.count, 'proposition')}${score.parlement.count > 0 ? ` et ${plural(score.parlement.count, 'scrutin')}` : ''} : ${reliabilityHint(score.reliability)}.`
                 : `Score indicatif : il faut ${MIN_VOTES_PER_CANDIDAT} votes pour le classer.`}
             </Text>
+            <View style={styles.accordLink}>
+              <Text style={[Type.labelStrong, styles.underline]}>Voir le calcul</Text>
+              <Ionicons name="chevron-forward" size={16} color={Colors.ink} />
+            </View>
           </>
         )}
-      </View>
+      </Pressable>
 
       <SegmentedControl<Onglet>
         accessibilityLabel="Contenu de la fiche"
@@ -206,6 +219,9 @@ export default function CandidateScreen() {
 
       <Sheet visible={!!selected} title={selected?.ref ?? ''} onClose={() => setSelected(null)}>
         {selected && <PropositionDetail proposition={selected} anonymous={false} />}
+      </Sheet>
+      <Sheet visible={calcul} title="Le calcul" onClose={() => setCalcul(false)}>
+        {calcul && <ScoreCalcul detail={scoreDetail(candidat, propositions, votes, { lois, votes: loiVotes })} />}
       </Sheet>
       <Sheet visible={!!selectedLoi} title={selectedLoi?.ref ?? ''} onClose={() => setSelectedLoi(null)}>
         {selectedLoi && <LoiDetail loi={selectedLoi} candidatId={candidat.id} />}
@@ -273,6 +289,12 @@ const styles = StyleSheet.create({
   },
   accordFoot: {
     marginTop: 12,
+  },
+  accordLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 2,
+    marginTop: Spacing.one,
   },
   accord: {
     marginVertical: Spacing.three,

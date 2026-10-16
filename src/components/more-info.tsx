@@ -17,10 +17,12 @@ interface MoreInfoProps {
   /** Ouverture pilotée par la feuille (qui déplie alors la citation). */
   open?: boolean;
   onToggle?: (open: boolean) => void;
+  /** Le texte vient de s'afficher (mis en page) : l'écran peut défiler jusqu'à lui. */
+  onOpen?: () => void;
 }
 
 // « En savoir plus » : le glossaire des sigles de la feuille, puis le contexte. Aucune source : elle trahirait l'auteur.
-export function MoreInfo({ text, terms, open: controlled, onToggle }: MoreInfoProps) {
+export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen }: MoreInfoProps) {
   const [own, setOwn] = useState(false);
   const open = controlled ?? own;
   const setOpen = (next: boolean) => (onToggle ? onToggle(next) : setOwn(next));
@@ -37,7 +39,7 @@ export function MoreInfo({ text, terms, open: controlled, onToggle }: MoreInfoPr
         <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={16} color={Colors.graphite} />
       </Pressable>
       {open && (
-        <Animated.View entering={FadeIn.duration(180)} style={styles.body}>
+        <Animated.View entering={FadeIn.duration(180)} style={styles.body} onLayout={onOpen}>
           {entries.length > 0 && (
             <View style={styles.glossary}>
               <Text style={[Type.labelStrong, styles.muted]} accessibilityRole="header">

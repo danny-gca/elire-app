@@ -23,6 +23,7 @@ import { ScreenHeader } from '@/components/screen-header';
 import { Button } from '@/components/ui/button';
 import { Sheet } from '@/components/ui/sheet';
 import { ProgressCounter } from '@/components/ui/progress-counter';
+import { Tip } from '@/components/ui/tip';
 import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Numeric, Radius, Spacing, Type } from '@/constants/theme';
@@ -44,6 +45,9 @@ const LEAVE_MS = 320;
 const LAST_VOTE_MS = 10000;
 // Après un scrutin, le temps de lire l'hémicycle et le résultat, puis la suite part seule comme pour une proposition.
 const AUTO_NEXT_MS = 5000;
+// Les astuces, le temps des premières questions et des premiers scrutins.
+const TIP_VOTES = 10;
+const TIP_SCRUTINS = 3;
 
 type Phase = 'button' | 'title' | 'leaving';
 
@@ -155,8 +159,9 @@ export default function VoterScreen() {
   const loiValue = currentLoi ? loiVotes[currentLoi.id] : undefined;
 
   // Les boutons restent au bas de l'écran, au-dessus des onglets : on vote sans faire défiler.
+  const nextStep = !!currentLoi && loiRevealed && loiFlow.step === 'hemicycle';
   const dock = pause ? null : currentLoi ? (
-    loiRevealed && loiFlow.step === 'hemicycle' ? (
+    nextStep ? (
       <Button
         label="Question suivante"
         variant="primary"
@@ -181,7 +186,36 @@ export default function VoterScreen() {
     />
   ) : null;
 
+  // « En savoir plus » ouvert : l'écran descend jusqu'au texte.
+  const showInfo = () => scrollRef.current?.scrollToEnd({ animated: true });
+
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
+
+  // Une astuce en haut des premières questions : ce qu'on y fait et comment, puis elle se retire.
+  const scrutinsVoted = Object.keys(loiVotes).length;
+  const voters = currentLoi ? Object.keys(currentLoi.votes).length : 0;
+  const tip = currentLoi
+    ? scrutinsVoted < TIP_SCRUTINS
+      ? [
+          'Un vrai scrutin du Parlement : votez comme si vous y siégiez.',
+          `${voters > 1 ? `${voters} candidats l’ont voté` : 'Un candidat l’a voté'} : votre choix vous rapproche ou vous éloigne d’eux.`,
+        ]
+      : null
+    : votedCount === 0
+      ? [
+          `Environ 20 secondes par question : votre Classement s’ouvre après ${CLASSEMENT_THRESHOLD} votes, soit 3 à 5 minutes.`,
+          'L’auteur reste masqué : vous jugez la mesure, pas la personne.',
+        ]
+      : votedCount < TIP_VOTES
+        ? ['L’auteur reste masqué : vous jugez la mesure, pas la personne.', 'Arrêtez quand vous voulez, vos votes restent sur votre appareil.']
+        : null;
+  // Une nouvelle astuce : on remonte pour qu'elle se voie.
+  const tipKey = tip?.join(' ') ?? '';
+  useEffect(() => {
+    if (tipKey) {
+      scrollRef.current?.scrollTo({ y: 0, animated: true });
+    }
+  }, [tipKey]);
 
   if (finished) {
     return (
@@ -196,56 +230,68 @@ export default function VoterScreen() {
     <Screen
       scrollRef={scrollRef}
       backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id} /> : null}
-      footer={dock}>
-      <ScreenHeader title="Voter" accessory={<MarkerPicker compact />} />
-      <MilestoneLine milestone={milestone} />
+      header={
+        // Barre fixe : le palier, les candidats classés et les surligneurs, sur une seule piste de progression.
+        <View style={styles.bar}>
+          <View style={styles.barRow}>
+            <MilestoneLine milestone={milestone} />
+            <MarkerPicker compact />
+          </View>
+          <View style={styles.track}>
+            <View style={[styles.trackFill, { width: `${Math.min(1, milestone.ratio) * 100}%` }]} />
+          </View>
+        </View>
+      }
+      // « A voté ! » flotte au-dessus des boutons, là où on vient de voter : son départ ne fait rien bouger.
+      overlay={lastId && !revealId ? <LastVote key={lastId} id={lastId} paused={editing === lastId} onPress={() => setEditing(lastId)} /> : null}
+      footer={dock && <View style={!nextStep && styles.dock}>{dock}</View>}>
 
-      {votedCount === 0 && (
-        <Text style={[Type.label, styles.soft, styles.intro]}>
-          Comptez environ 20 secondes par question : votre Classement s’ouvre après {CLASSEMENT_THRESHOLD} votes, soit 3 à 5
-          minutes. Arrêtez quand vous voulez, vos votes restent sur votre appareil.
-        </Text>
+      {tip && !pause && (
+        <View style={styles.tip}>
+          <Tip key={tip.join()} lines={tip} marker={marker} />
+        </View>
       )}
 
-      {lastId && !revealId && <LastVote key={lastId} id={lastId} paused={editing === lastId} onPress={() => setEditing(lastId)} />}
+      {/* La feuille au milieu de l'espace libre : une question courte reste près des boutons. */}
+      <View style={styles.stage}>
+        {pause ? (
+          <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/results')} onContinue={() => setPausedAt(opinions)} />
+        ) : currentLoi ? (
+          <LoiBallot
+            key={currentLoi.id}
+            loi={currentLoi}
+            value={loiValue}
+            revealed={loiRevealed}
+            leaving={loiLeaving}
+            step={loiFlow.step}
+            holdProps={loiFlow.holdProps}
+            onInfoOpen={showInfo}
+            onRevealLayout={() => scrollRef.current?.scrollToEnd({ animated: true })}
+          />
+        ) : (
+          current && (
+            <>
+              <Leaving key={current.id} leaving={hold?.phase === 'leaving'} style={styles.sheetWrap}>
+                <PropositionSheet
+                  proposition={current}
+                  quoteOpen={infoFor === current.id}
+                  sweep={hold && hold.phase !== 'button' && hold.value !== UNSURE ? marker : undefined}
+                  thematique={getThematique(current.thematiqueId)}>
+                  <MoreInfo
+                    text={current.contexte}
+                    terms={[current.titre, current.description, current.contexte]}
+                    open={infoFor === current.id}
+                    onToggle={(open) => setInfoFor(open ? current.id : null)}
+                    onOpen={showInfo}
+                  />
+                </PropositionSheet>
+              </Leaving>
 
-      {pause ? (
-        <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/results')} onContinue={() => setPausedAt(opinions)} />
-      ) : currentLoi ? (
-        <LoiBallot
-          key={currentLoi.id}
-          loi={currentLoi}
-          value={loiValue}
-          revealed={loiRevealed}
-          leaving={loiLeaving}
-          step={loiFlow.step}
-          holdProps={loiFlow.holdProps}
-          onRevealLayout={() => scrollRef.current?.scrollToEnd({ animated: true })}
-        />
-      ) : (
-        current && (
-          <>
-            <Leaving key={current.id} leaving={hold?.phase === 'leaving'} style={styles.sheetWrap}>
-              <PropositionSheet
-                proposition={current}
-                quoteOpen={infoFor === current.id}
-                sweep={hold && hold.phase !== 'button' && hold.value !== UNSURE ? marker : undefined}
-                thematique={getThematique(current.thematiqueId)}>
-                <MoreInfo
-                  text={current.contexte}
-                  terms={[current.titre, current.description, current.contexte]}
-                  open={infoFor === current.id}
-                  onToggle={(open) => setInfoFor(open ? current.id : null)}
-                />
-              </PropositionSheet>
-            </Leaving>
+            </>
+          )
+        )}
 
-            <Text style={[Type.label, styles.muted, styles.hint]}>
-              L’auteur reste masqué : vous jugez la mesure, pas la personne.
-            </Text>
-          </>
-        )
-      )}
+      </View>
 
       <EditVoteSheet id={editing} onClose={() => setEditing(null)} />
     </Screen>
@@ -334,6 +380,7 @@ function LoiBallot({
   leaving,
   step,
   holdProps,
+  onInfoOpen,
   onRevealLayout,
 }: {
   loi: Loi;
@@ -342,10 +389,10 @@ function LoiBallot({
   leaving: boolean;
   step: LoiStep;
   holdProps: object;
+  onInfoOpen: () => void;
   /** L'hémicycle s'ouvre sous la question : l'écran défile jusqu'à lui une fois posé. */
   onRevealLayout: () => void;
 }) {
-  const voters = Object.keys(loi.votes).length;
   const marker = useMarkOf(loi.id);
   const [detail, setDetail] = useState(false);
 
@@ -359,14 +406,9 @@ function LoiBallot({
             sweep={revealed && step !== 'button' ? marker : undefined}
             proposition={{ ref: loi.ref, thematiqueId: loi.thematiqueId, titre: loi.question }}
             thematique={getThematique(loi.thematiqueId)}>
-            <MoreInfo text={loi.enjeu} terms={[loi.question, loi.enjeu]} />
+            <MoreInfo text={loi.enjeu} terms={[loi.question, loi.enjeu]} onOpen={onInfoOpen} />
           </PropositionSheet>
         </View>
-
-        <Text style={[Type.label, styles.muted, styles.hint]}>
-          {voters > 1 ? `${voters} candidats ont voté ce texte` : 'Un candidat a voté ce texte'} : votre choix les rapproche ou
-          les éloigne de vous.
-        </Text>
 
         {revealed && value && step === 'hemicycle' && (
           <View style={styles.reveal} onLayout={onRevealLayout}>
@@ -413,24 +455,25 @@ function useScreenReader() {
   return enabled;
 }
 
-// Le prochain palier, pas le total : « 4 votes avant votre Classement », puis « 9 candidats classés sur 17 ».
+// Le prochain palier, pas le total : « Classement dans 4 votes », puis « Bilan dans 7 votes » et les candidats classés.
 function MilestoneLine({ milestone }: { milestone: Milestone }) {
   return (
     <View
       accessible
       accessibilityRole="progressbar"
-      accessibilityLabel={`${milestone.value} ${milestone.text}${milestone.side ? `, ${milestone.side}` : ''}`}
+      accessibilityLabel={`${milestone.lead} ${milestone.value} ${milestone.text}${milestone.side ? `, ${milestone.side}` : ''}`}
       accessibilityValue={{ min: 0, max: 100, now: Math.round(milestone.ratio * 100) }}
       style={styles.milestone}>
-      <View style={styles.milestoneRow}>
-        <Text style={[Type.label, Numeric, styles.muted]}>
-          <Text style={[Type.labelStrong, Numeric, styles.ink]}>{milestone.value}</Text> {milestone.text}
-        </Text>
-        {milestone.side && <Text style={[Type.label, Numeric, styles.muted]}>{milestone.side}</Text>}
-      </View>
-      <View style={styles.track}>
-        <View style={[styles.trackFill, { width: `${Math.min(1, milestone.ratio) * 100}%` }]} />
-      </View>
+      <Text style={[Type.label, Numeric, styles.muted]} numberOfLines={2}>
+        {milestone.lead} <Text style={[Type.labelStrong, Numeric, styles.ink]}>{milestone.value}</Text> {milestone.text}
+      </Text>
+      {milestone.side && (
+        <View style={styles.side}>
+          <Text style={[Type.label, Numeric, styles.ink]} numberOfLines={1}>
+            {milestone.side}
+          </Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -534,7 +577,10 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
   }
 
   return (
-    <Animated.View exiting={reducedMotion ? undefined : FadeOut.duration(220)} style={styles.last}>
+    <Animated.View
+      entering={reducedMotion ? undefined : FadeIn.duration(220)}
+      exiting={reducedMotion ? undefined : FadeOut.duration(220)}
+      style={styles.last}>
       <Pressable
         onPress={onPress}
         accessibilityRole="button"
@@ -625,8 +671,16 @@ const styles = StyleSheet.create({
     height: 2,
     backgroundColor: Colors.ink,
   },
+  // Scrutins à la hauteur des propositions (2 rangées) : « A voté ! » et les boutons ne bougent pas ; « Question suivante » rend la place.
+  dock: {
+    minHeight: 60 + Spacing.one + 44,
+  },
+  // Posé sur la feuille : papier presque opaque, filet, et ce qui est dessous transparaît.
   last: {
-    marginTop: Spacing.one,
+    borderRadius: Radius.medium,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.rule,
+    backgroundColor: `${Colors.paper}EB`,
   },
   lastRow: {
     flexDirection: 'row',
@@ -657,18 +711,31 @@ const styles = StyleSheet.create({
   sheetWrap: {
     marginTop: Spacing.one,
   },
+  // Le palier sur deux lignes à gauche, les surligneurs à droite.
   milestone: {
+    flex: 1,
+    minWidth: 0,
+    justifyContent: 'center',
+  },
+  bar: {
     gap: Spacing.half,
   },
-  // Le palier à gauche, les candidats classés à droite ; sur un écran étroit, la seconde passe à la ligne.
-  milestoneRow: {
+  barRow: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    columnGap: Spacing.two,
+    alignItems: 'center',
+    gap: Spacing.one,
   },
-  intro: {
-    marginTop: Spacing.two,
+  stage: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  // Les candidats classés, sur une pastille neutre : un autre chiffre que le palier.
+  side: {
+    alignSelf: 'flex-start',
+    marginTop: 2,
+    paddingHorizontal: 6,
+    borderRadius: Radius.small,
+    backgroundColor: Colors.ruleSoft,
   },
   panels: {
     flexDirection: 'row',
@@ -700,8 +767,8 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.rule,
   },
-  hint: {
-    marginTop: Spacing.two,
+  tip: {
+    marginBottom: Spacing.two,
   },
   reveal: {
     marginTop: Spacing.two,
