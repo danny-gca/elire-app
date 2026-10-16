@@ -7,22 +7,27 @@ import { plural } from '@/lib/format';
 interface ResetButtonProps {
   count: number;
   onConfirm: () => void;
+  /** Piloté de l'extérieur (démonstration de l'onboarding) ; sinon, par les appuis. */
+  armed?: boolean;
+  onArmedChange?: (armed: boolean) => void;
 }
 
 const CONFIRM_DELAY_MS = 4000;
 
 // Confirmation en deux appuis, sans modale : le second appui efface.
-export function ResetButton({ count, onConfirm }: ResetButtonProps) {
-  const [armed, setArmed] = useState(false);
+export function ResetButton({ count, onConfirm, armed: controlled, onArmedChange }: ResetButtonProps) {
+  const [own, setOwn] = useState(false);
+  const armed = controlled ?? own;
+  const setArmed = (next: boolean) => (onArmedChange ? onArmedChange(next) : setOwn(next));
 
   useEffect(() => {
     if (!armed) {
       return;
     }
     AccessibilityInfo.announceForAccessibility('Appuyez de nouveau pour confirmer.');
-    const timer = setTimeout(() => setArmed(false), CONFIRM_DELAY_MS);
+    const timer = setTimeout(() => (onArmedChange ? onArmedChange(false) : setOwn(false)), CONFIRM_DELAY_MS);
     return () => clearTimeout(timer);
-  }, [armed]);
+  }, [armed, onArmedChange]);
 
   const handlePress = () => {
     if (armed) {

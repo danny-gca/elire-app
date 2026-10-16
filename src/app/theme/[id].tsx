@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { DataFooter } from '@/components/data-footer';
@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { SegmentedControl } from '@/components/ui/segmented-control';
 import { Sheet } from '@/components/ui/sheet';
 import { Colors, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
+import { fisherYates } from '@/lib/shuffle';
 import type { Proposition } from '@/schemas/dataset';
 import { getCandidat, propositions, thematiques } from '@/services/dataset';
 import { useVotesStore } from '@/store/votes-store';
@@ -28,7 +29,8 @@ export default function ThemeScreen() {
   const index = thematiques.findIndex((t) => t.id === id);
   const theme = thematiques[index];
   const next = thematiques[(index + 1) % thematiques.length];
-  const items = propositions.filter((p) => p.thematiqueId === id);
+  // Ordre tiré au hasard à chaque ouverture du thème : aucun candidat n'est toujours en tête.
+  const items = useMemo(() => fisherYates(propositions.filter((p) => p.thematiqueId === id)), [id]);
   const pending = items.filter((p) => votes[p.id] === undefined);
   const shown = filtre === 'a-voter' ? pending : items;
 

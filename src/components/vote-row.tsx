@@ -18,6 +18,9 @@ interface VoteRowProps {
 }
 
 // Position d'un candidat sur un scrutin, en distinguant vote personnel et position de son groupe.
+// « A voté pour. » redit l'étiquette à droite : seule une explication qui apporte quelque chose s'affiche.
+const REPEATS_TAG = /^(a voté (pour|contre)( au congrès)?|s'est abstenue?)\.?$/i;
+
 export function VoteRow({ vote, candidat }: VoteRowProps) {
   const groupe = vote.typeVote === 'groupe_parti';
   const typeLabel = groupe ? `Vote de son groupe${vote.groupe ? ` ${vote.groupe}` : ''}` : 'Vote personnel';
@@ -47,7 +50,7 @@ export function VoteRow({ vote, candidat }: VoteRowProps) {
           <Ionicons name={groupe ? 'people' : 'person'} size={14} color={Colors.ink} />
           <Text style={[Type.labelStrong, styles.ink]}>{typeLabel}</Text>
         </View>
-        {vote.explication && <Text style={[Type.label, styles.soft]}>{vote.explication}</Text>}
+        {vote.explication && !REPEATS_TAG.test(vote.explication) && <Text style={[Type.label, styles.soft]}>{vote.explication}</Text>}
         <Pressable onPress={() => Linking.openURL(vote.sourceUrl)} accessibilityRole="link" hitSlop={8} style={styles.link}>
           <Text style={[Type.label, styles.muted, styles.underline]}>Voir le scrutin officiel</Text>
         </Pressable>

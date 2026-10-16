@@ -81,7 +81,7 @@ npm run check        # données + typecheck + lint + tests, à passer avant tout
   - zone facultative : `data`, `voter`, `classement`, `lois`, `explorer`, `fiche`, `site`, `deps`...
   - changement cassant : `!` après le type (`feat(data)!: …`) et une ligne `BREAKING CHANGE:` dans le corps.
 - Une PR = un sujet. Décrivez quoi et pourquoi en quelques phrases. Son titre suit le même format : il devient le commit de `main` à la fusion.
-- Versions : [release-please](https://github.com/googleapis/release-please) en déduit la prochaine (`fix` : 1.0.**1**, `feat` : 1.**1**.0, `!` : **2**.0.0) et tient à jour une PR de release (`CHANGELOG.md`, `package.json`, `app.json`). La fusionner crée le tag `vX.Y.Z`, qui lance le build Android et son envoi en test interne sur EAS.
+- Versions : [release-please](https://github.com/googleapis/release-please) en déduit la prochaine (`fix` : 1.0.**1**, `feat` : 1.**1**.0, `!` : **2**.0.0) et tient à jour une PR de release (`CHANGELOG.md`, `package.json`, `app.json`). La fusionner crée le tag `vX.Y.Z`, qui lance le build Android et son envoi en test fermé sur EAS.
 - Les données et le code peuvent être dans des PR séparées : c'est plus simple à relire.
 
 ## Licences

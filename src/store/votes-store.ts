@@ -9,13 +9,17 @@ import { lois, propositions } from '@/services/dataset';
 
 export type { LoiVoteValue, VoteValue } from '@/lib/scoring';
 
+// À monter quand la présentation change vraiment (pas à chaque version de l'app) : chacun la revoit une fois.
+export const ONBOARDING_VERSION = 2;
+
 interface PersistedState {
   votes: Record<string, VoteValue>;
   loiVotes: Record<string, LoiVoteValue>;
   /** Ordre de passage figé (propositions et scrutins), régénéré seulement au reset. */
   order: string[];
-  onboardingSeen: boolean;
-  /** Surligneur actif, choisi à la fin de l'onboarding. */
+  /** Dernière version de la présentation vue (0 : jamais). */
+  onboardingVersion: number;
+  /** Surligneur actif, choisi dans l'onboarding. */
   marker: MarkerId;
   /** Surligneur avec lequel chaque vote a été posé : changer de surligneur ne recolore pas le passé. */
   marks: Record<string, MarkerId>;
@@ -66,7 +70,7 @@ export const useVotesStore = create<VotesState>()(
       votes: {},
       loiVotes: {},
       order: freshOrder(),
-      onboardingSeen: false,
+      onboardingVersion: 0,
       marker: DEFAULT_MARKER,
       marks: {},
 
@@ -93,25 +97,26 @@ export const useVotesStore = create<VotesState>()(
       },
 
       completeOnboarding: () => {
-        set({ onboardingSeen: true });
+        set({ onboardingVersion: ONBOARDING_VERSION });
       },
     }),
     {
       name: 'elire-votes',
       // v2 : votes sur les scrutins (loiVotes), scrutins dans l'ordre de passage, surligneurs (marker, marks).
-      version: 2,
+      // v3 : onboardingVersion remplace onboardingSeen.
+      version: 3,
       storage: createJSONStorage(() => appStorage),
-      partialize: ({ votes, loiVotes, order, onboardingSeen, marker, marks }): PersistedState => ({
+      partialize: ({ votes, loiVotes, order, onboardingVersion, marker, marks }): PersistedState => ({
         votes,
         loiVotes,
         order,
-        onboardingSeen,
+        onboardingVersion,
         marker,
         marks,
       }),
       migrate: (persisted) => persisted as PersistedState,
       merge: (persisted, current) => {
-        const stored = (persisted ?? {}) as Partial<PersistedState>;
+        const stored = (persisted ?? {}) as Partial<PersistedState> & { onboardingSeen?: boolean };
         const votes = pick(stored.votes, knownPropIds);
         const loiVotes = pick(stored.loiVotes, knownLoiIds);
         const voted = new Set([...Object.keys(votes), ...Object.keys(loiVotes)]);
@@ -120,7 +125,8 @@ export const useVotesStore = create<VotesState>()(
           votes,
           loiVotes,
           order: reconcileOrder(stored.order, voted),
-          onboardingSeen: stored.onboardingSeen ?? false,
+          // Avant la v3, « déjà vue » valait la version 1.
+          onboardingVersion: stored.onboardingVersion ?? (stored.onboardingSeen ? 1 : 0),
           marker: stored.marker && stored.marker in Markers ? stored.marker : DEFAULT_MARKER,
           marks: Object.fromEntries(
             Object.entries(pick(stored.marks, new Set([...knownPropIds, ...knownLoiIds]))).filter(([, m]) => m in Markers)

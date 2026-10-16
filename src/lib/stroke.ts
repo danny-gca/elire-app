@@ -52,3 +52,28 @@ export function strokePath({ points }: StrokeShape, width: number, height: numbe
   const d = px.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
   return { d, length };
 }
+
+/** Épaisseur du gribouillis, en pixels. */
+export const SCRIBBLE_WIDTH = 10;
+
+/** Gribouillis d'un seul geste sur un encart : zigzag serré et irrégulier de gauche à droite, sans toucher les bords. */
+export function scribblePath(width: number, height: number, random: () => number = Math.random): { d: string; length: number } {
+  const inset = SCRIBBLE_WIDTH;
+  const points: [number, number][] = [];
+  let x = inset + between(random, 0, 8);
+  for (let i = 0; x < width - inset; i++) {
+    // Pointes en haut et en bas à hauteur variable : le geste de la main, pas une règle.
+    const y = i % 2 === 0 ? between(random, 0.5, 0.94) * height : between(random, 0.06, 0.48) * height;
+    points.push([x, Math.min(height - inset / 2, Math.max(inset / 2, y))]);
+    // Pas serrés, parfois un retour en arrière : le trait se recroise.
+    x = Math.max(inset, x + between(random, -6, 16));
+  }
+  let length = 0;
+  points.forEach(([px, py], i) => {
+    if (i > 0) {
+      length += Math.hypot(px - points[i - 1][0], py - points[i - 1][1]);
+    }
+  });
+  const d = points.map(([px, py], i) => `${i === 0 ? 'M' : 'L'}${px.toFixed(1)} ${py.toFixed(1)}`).join(' ');
+  return { d, length };
+}

@@ -1,24 +1,14 @@
 # À faire
 
-## Ce soir : publier sur Google Play
+- faire des festivités quand on termine tous les votes
+- afficher le bandeau tips dans Lois et Explorer quand on a tout voter en mode "bravo"
 
-EAS construit l'app et peut l'envoyer au store, mais la Play Console doit d'abord connaître l'app. Ordre :
 
-1. **Créer l'app dans la Play Console** (play.google.com/console) : « Créer une application », nom « élire », langue français, type Application, gratuite, accepter les déclarations.
-2. **Refaire un build de production** (les nouvelles briques natives : SVG, gestes, capture d'image, partage ; nom et icône « élire ») : `npx eas-cli build -p android --profile production`. Le profil `production` produit un `.aab`, seul format accepté par le Play Store (un `.apk` est refusé).
-3. **Premier envoi**, au choix :
-   - **À la main** (le plus simple pour la première fois) : sur expo.dev, ouvrir le build et « Download » le `.aab`. Dans la Play Console : Tester > Tests internes > Créer une version > glisser le `.aab` > Enregistrer > Examiner la version > Déployer. Ajouter son adresse dans l'onglet Testeurs.
-   - **Par EAS** : créer une clé de compte de service Google (Google Cloud > IAM > Comptes de service > Clés > JSON), inviter l'adresse du compte de service dans Play Console > Utilisateurs et autorisations (droits sur les versions), déposer la clé sur expo.dev > Credentials > Android > fr.elire.app > Service credentials, puis `npx eas-cli submit -p android`. La version part en test interne.
-4. **Finir les tâches du tableau de bord** de la Play Console (l'app reste en brouillon tant qu'elles ne sont pas faites) :
-   - règles de confidentialité : <https://danny-gca.github.io/elire-website/mentions-legales/> ;
-   - accès à l'app : tout est accessible sans compte ;
-   - annonces : non ;
-   - classification du contenu : questionnaire ;
-   - public cible : adultes (18+) ;
-   - sécurité des données : aucune donnée collectée ni partagée (tout reste sur l'appareil) ;
-   - fiche du Play Store : description courte et longue, icône 512 × 512, image de présentation 1024 × 500, au moins 2 captures d'écran de téléphone.
-5. **Compte développeur personnel récent** : Google demande un test fermé avec au moins 12 testeurs pendant 14 jours avant d'ouvrir la production. Vérifier dans la Play Console si cela s'applique au compte.
-6. **Automatisation (prête)** : la fusion de la PR de release crée un tag `vX.Y.Z`, qui lance `.eas/workflows/create-production-builds.yml` (build puis envoi en test interne). À faire : la clé de compte de service sur expo.dev (étape 3, « Par EAS ») ; un fine-grained PAT (Contents et Pull requests en écriture, dépôt elire-app seul) dans le secret `RELEASE_PLEASE_TOKEN`, sinon la CI ne se lance pas sur la PR de release ; cocher Settings > Actions > General > « Allow GitHub Actions to create and approve pull requests » ; vérifier qu'EAS démarre bien sur le tag.
+1. **Attendre l'examen de Google** (quelques jours) : l'app sort du brouillon et prend le nom « élire ».
+2. **Test fermé** : au moins 12 testeurs inscrits (Tests fermés > Testeurs, chacun ouvre le lien et accepte), pendant 14 jours d'affilée. Compte développeur personnel récent : obligatoire avant la production.
+3. **Versions suivantes** : la fusion de la PR de release crée un tag `vX.Y.Z`, qui lance `.eas/workflows/create-production-builds.yml` (build puis envoi en test fermé, piste `alpha` dans `eas.json`). À vérifier à la première release : EAS démarre bien sur le tag. Si la PR de release n'a pas de checks : secret `RELEASE_PLEASE_TOKEN` (fine-grained PAT, Contents, Pull requests et Issues en écriture, dépôt elire-app seul) et Settings > Actions > General > « Allow GitHub Actions to create and approve pull requests ».
+4. **Après les 14 jours** : Tableau de bord > « Demander à publier en production », répondre aux questions sur le test, nouvel examen. Puis passer la piste de `eas.json` à `production` (ou promouvoir chaque version à la main).
+5. **Installer sans le store** : APK `npx eas-cli build -p android --profile preview` ; l'APK universel de la Play Console est bloqué hors Play par la protection automatique (Intégrité des applis).
 
 Doc : <https://docs.expo.dev/submit/android/>
 
@@ -32,21 +22,22 @@ Doc : <https://docs.expo.dev/submit/android/>
 
 ## Données
 
-- Photo d'Antoine Mikolajczak : demander au parti Équinoxe un portrait libre de droits (CC BY ou CC0), puis l'ajouter dans `assets/images/candidates/` et `src/constants/credits.ts`. En attendant, l'app affiche ses initiales.
-- Photos de Mira Markovic (Parti animaliste, nom d'usage « Douchka Markovic ») et de Selma Labib (NPA-Révolutionnaires) : rien de libre sur Commons, Wikidata ni Flickr (recherche du 2026-10-15). Écrire aux partis (formulaire du Parti animaliste, contact@npa-revolutionnaires.org) pour un portrait sous CC BY 4.0, idéalement déposé par eux sur Wikimedia Commons. Message type :
+- Portraits libres manquants (l'app affiche les initiales en attendant) : Antoine Mikolajczak, Mira Markovic (nom d'usage « Douchka Markovic »), Selma Labib. Rien de libre sur Commons, Wikidata ni Flickr (recherche du 2026-10-15). Écrire à chaque équipe de campagne (contact sur son site) pour un portrait sous CC BY 4.0, idéalement déposé sur Wikimedia Commons, puis l'ajouter dans `assets/images/candidates/` et `src/constants/credits.ts`. Message type :
   > Bonjour, je développe élire, une application gratuite et neutre de comparaison des candidats à la présidentielle 2027. Chaque candidat y figure avec un portrait sous licence libre, crédité. Pourriez-vous nous fournir un portrait de [Prénom Nom] sous licence CC BY 4.0, avec le nom du photographe à créditer (le plus simple : le publier sur Wikimedia Commons) ? Sans photo libre, la candidate apparaît avec ses initiales, comme tout candidat dans ce cas. Merci.
-- Compléter les candidats à moins de 8 propositions : Mikolajczak (5, programme 2027 annoncé le 2026-11-02), Lisnard, Philippe et Roussel (7).
+- Compléter les candidats à moins de 8 propositions : Mikolajczak (5), Lisnard, Philippe et Roussel (7).
+- Mettre à jour chaque candidat de la même façon à chaque nouveau programme ou nouvelle édition : propositions ajoutées ou remplacées, sources revérifiées, `contexte` daté.
+  - 2026-11-01 : revue mensuelle des 25 candidats (programmes publiés depuis, liens morts), puis le 1er de chaque mois.
+  - 2026-11-02 : programme 2027 annoncé d'Antoine Mikolajczak.
+  - 2026-11-06 et 07 : nouvelle édition annoncée du programme de Jean-Luc Mélenchon.
+  - Les autres : dès la publication de leur programme 2027.
 - À valider à la main : prop-ez-8 (citation lue sur une page en image, couche texte du PDF illisible) ; page de prop-na-3 (p. 11 ou p. 12 imprimée ?).
+- Titres plus larges que leur citation, à valider contre la source : prop-dl-5, prop-fr-6 ; « soignants exclus » de prop-nda-3 à préciser.
 - Harmoniser le thème de l'immigration (prop-ep-8 et prop-sl-4 en société, prop-nda-1 en sécurité).
-- Revérifier les sources LFI après la nouvelle édition de L'Avenir en commun (6-7 nov. 2026), et celles du RN dès la publication de son programme 2027.
 - Scrutin du Congrès sur l'IVG (2024-03-04) : l'URL `assemblee-nationale.fr/dyn/16/scrutins/congres-ivg` de toutes les entrées répond 404. Trouver la page officielle du scrutin du Congrès ; les votes de Batho et Becht pointent pour l'instant vers l'open data de l'Assemblée.
-- Parti de deux candidats à trancher : Wikipédia présente Natacha Polony « sans étiquette » (« Nous sommes la France » y est un slogan) et Olivier Becht Renaissance / Agir (« Projet France » y est un slogan). Garder le mouvement de campagne ou l'étiquette ?
-- Graphie : « Génération écologie » (Wikipédia, gardé) ou « Génération Écologie » (le parti).
-
-Fait le 2026-10-15 : citation de prop-ez-6 en français (extrait BFMTV de « Face à BFM ») ; 66 votes de Batho et Becht ajoutés (Bertrand et Philippot ne siégeaient pas aux dates des scrutins) ; noms, sigles et couleurs des nouveaux partis vérifiés (pas de sigle inventé pour Projet France ni Nous sommes la France).
+- Étiquette de deux candidats à trancher, avec une règle commune à tous : Natacha Polony et Olivier Becht ont un mouvement de campagne que Wikipédia présente comme un slogan. Garder le mouvement de campagne ou l'étiquette d'origine ?
+- Graphie du parti de Delphine Batho : celle de Wikipédia (gardée) ou celle du parti, qui met une majuscule à « Écologie ».
 
 ## Autres
 
 - Relecture des mentions légales et de la page Méthode et corrections par un avocat.
 - Compléter `docs/feature-20261015-smaller-updates.md` avec les derniers tours (salle, fêtes, partage, fiche candidat, score, simulation) avant de commiter.
-- Idée : une petite fête quand un thème est entièrement voté dans Explore.

@@ -1,16 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
-import { Colors, Markers, Type } from '@/constants/theme';
+import { Colors, Markers, Type, type MarkerId } from '@/constants/theme';
 import { loiChoice, voteChoice } from '@/constants/votes';
 import type { LoiVoteValue, VoteValue } from '@/lib/scoring';
 import { useMarkOf } from '@/store/votes-store';
 
-type YourVoteMarkProps = { id: string } & ({ vote: VoteValue; loiVote?: never } | { loiVote: LoiVoteValue; vote?: never });
+type YourVoteMarkProps = { id: string; /** Surligneur imposé (exemples de l'onboarding). */ marker?: MarkerId } & ({ vote: VoteValue; loiVote?: never } | { loiVote: LoiVoteValue; vote?: never });
 
 // Votre vote dans l'angle d'une ligne : la valeur passée au surligneur, comme un mot marqué à la main.
-export function YourVoteMark({ id, vote, loiVote }: YourVoteMarkProps) {
-  const marker = useMarkOf(id);
+export function YourVoteMark({ id, vote, loiVote, marker: forced }: YourVoteMarkProps) {
+  const own = useMarkOf(id);
+  const marker = forced ?? own;
   const label = loiVote !== undefined ? loiChoice(loiVote)?.label : voteChoice(vote!)?.label;
   return (
     <View style={styles.root} accessible accessibilityLabel={`Votre vote : ${label ?? ''}`}>

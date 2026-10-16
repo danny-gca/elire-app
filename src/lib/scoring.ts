@@ -118,6 +118,58 @@ export function scoreCandidat(
   };
 }
 
+export interface ScoreDetail {
+  /** Vos notes sur ses propositions, de Parfait à Impossible ; max = 2 points par proposition. */
+  programme: { rows: { value: VoteValue; count: number }[]; sum: number; max: number };
+  /** Ses scrutins, par points (+2, 0, -2) et poids (1 personnel, ½ groupe). */
+  parlement: { rows: { points: -2 | 0 | 2; weight: number; count: number }[]; sum: number; max: number };
+  /** Part du Parlement dans le total (0 à 1). */
+  share: number;
+  score: number | null;
+}
+
+/** Le calcul pas à pas, pour la fiche candidat : mêmes règles que `scoreCandidat`. */
+export function scoreDetail(
+  candidat: Candidat,
+  propositions: readonly Proposition[],
+  votes: Record<string, VoteValue>,
+  ballot: LoiBallot = { lois: [], votes: {} }
+): ScoreDetail {
+  const voted = propositions.filter((p) => p.candidatId === candidat.id && votes[p.id] !== undefined && votes[p.id] !== UNSURE);
+  const values: VoteValue[] = [2, 1, -1, -2];
+  const propRows = values.map((value) => ({ value, count: voted.filter((p) => votes[p.id] === value).length })).filter((r) => r.count > 0);
+  const propSum = propRows.reduce((acc, r) => acc + r.value * r.count, 0);
+  const propMax = voted.length * 2;
+
+  const loiRows: ScoreDetail['parlement']['rows'] = [];
+  for (const loi of ballot.lois) {
+    const position = loi.votes[candidat.id];
+    const user = ballot.votes[loi.id];
+    if (!position || user === undefined || user === 'abstention') {
+      continue;
+    }
+    const points = loiPoints(user, position.position);
+    const weight = position.typeVote === 'groupe_parti' ? GROUP_VOTE_WEIGHT : 1;
+    const row = loiRows.find((r) => r.points === points && r.weight === weight);
+    if (row) {
+      row.count += 1;
+    } else {
+      loiRows.push({ points, weight, count: 1 });
+    }
+  }
+  loiRows.sort((a, b) => b.points - a.points || b.weight - a.weight);
+  const loiSum = loiRows.reduce((acc, r) => acc + r.points * r.weight * r.count, 0);
+  const loiMax = loiRows.reduce((acc, r) => acc + 2 * r.weight * r.count, 0);
+
+  const share = loiMax === 0 ? 0 : propMax === 0 ? 1 : Math.min(MAX_PARLEMENT_SHARE, loiMax / (propMax + loiMax));
+  return {
+    programme: { rows: propRows, sum: propSum, max: propMax },
+    parlement: { rows: loiRows, sum: loiSum, max: loiMax },
+    share,
+    score: combined(propSum, propMax, loiSum, loiMax),
+  };
+}
+
 /**
  * Classés d'abord (score décroissant), puis non classés, puis non évalués.
  * À score égal, `tieOrder` (ordre tiré au hasard) décide seul : ni l'alphabet, ni le nombre de votes, qui avantagerait les élus sortants.

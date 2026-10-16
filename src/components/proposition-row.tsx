@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Marked } from '@/components/marked';
 import { YourVoteMark } from '@/components/your-vote-mark';
-import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
+import { Colors, Numeric, Spacing, Type, type MarkerId } from '@/constants/theme';
 import { UNSURE, type VoteValue } from '@/lib/scoring';
 import type { Proposition } from '@/schemas/dataset';
 import { useMarkOf } from '@/store/votes-store';
@@ -15,12 +15,15 @@ interface PropositionRowProps {
   onPress: () => void;
   /** Libellé d'action pour les lecteurs d'écran. */
   actionHint?: string;
+  /** Surligneur imposé (exemples de l'onboarding) ; sinon celui du vote. */
+  marker?: MarkerId;
 }
 
 // Titre surligné si voté, numéro et auteur dessous ; votre note dans l'angle, au surligneur.
-export function PropositionRow({ proposition, vote, author, onPress, actionHint = 'Voir le détail et la source' }: PropositionRowProps) {
+export function PropositionRow({ proposition, vote, author, onPress, actionHint = 'Voir le détail et la source', marker: forced }: PropositionRowProps) {
   const voted = vote !== undefined;
-  const marker = useMarkOf(proposition.id);
+  const own = useMarkOf(proposition.id);
+  const marker = forced ?? own;
   return (
     <Pressable
       onPress={onPress}
@@ -38,7 +41,7 @@ export function PropositionRow({ proposition, vote, author, onPress, actionHint 
         </Text>
       </View>
       <View style={[styles.side, voted && styles.sideVoted]}>
-        {voted && <YourVoteMark id={proposition.id} vote={vote} />}
+        {voted && <YourVoteMark id={proposition.id} vote={vote} marker={marker} />}
         <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
       </View>
     </Pressable>

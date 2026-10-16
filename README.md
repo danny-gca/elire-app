@@ -31,7 +31,7 @@ Application citoyenne et neutre d'aide à la décision pour l'élection préside
 
 ### Données utilisateur
 
-- `src/store/votes-store.ts` (Zustand + `persist`, version 2) : `votes` (propositions), `loiVotes` (scrutins), `order` (ordre de passage figé, propositions et scrutins intercalés, régénéré au reset), `onboardingSeen`, `marker` (surligneur actif) et `marks` (surligneur de chaque vote, jamais recoloré). Stockage : `expo-sqlite/kv-store` en natif, `localStorage` sur le web (`src/lib/storage.ts` / `storage.web.ts`).
+- `src/store/votes-store.ts` (Zustand + `persist`, version 3) : `votes` (propositions), `loiVotes` (scrutins), `order` (ordre de passage figé, propositions et scrutins intercalés, régénéré au reset), `onboardingVersion` (dernière présentation vue, revue quand `ONBOARDING_VERSION` monte), `marker` (surligneur actif) et `marks` (surligneur de chaque vote, jamais recoloré). Stockage : `expo-sqlite/kv-store` en natif, `localStorage` sur le web (`src/lib/storage.ts` / `storage.web.ts`).
 - `src/lib/shuffle.ts` : mélange Fisher-Yates + alternance des candidats et thèmes.
 - `src/lib/scoring.ts` : score d'accord (fonction pure, testée).
 

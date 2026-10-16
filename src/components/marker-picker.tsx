@@ -1,12 +1,26 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { Colors, MARKER_IDS, Markers, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
+import { Colors, MARKER_IDS, Markers, MinTarget, Radius, Spacing, Type, type MarkerId } from '@/constants/theme';
 import { useVotesStore } from '@/store/votes-store';
 
 // Les quatre surligneurs du lecteur, en grille 2 × 2 : un trait, son nom. En compact (en-tête de Voter) : les quatre traits seuls.
-export function MarkerPicker({ compact = false }: { compact?: boolean }) {
-  const marker = useVotesStore((s) => s.marker);
-  const setMarker = useVotesStore((s) => s.setMarker);
+export function MarkerPicker({
+  compact = false,
+  selected: shown,
+  onSelect,
+}: {
+  compact?: boolean;
+  /** Choix affiché ; `null` : aucun encore (onboarding). Par défaut, le surligneur actif. */
+  selected?: MarkerId | null;
+  onSelect?: (marker: MarkerId) => void;
+}) {
+  const active = useVotesStore((s) => s.marker);
+  const setActive = useVotesStore((s) => s.setMarker);
+  const marker = shown === undefined ? active : shown;
+  const setMarker = (id: MarkerId) => {
+    setActive(id);
+    onSelect?.(id);
+  };
 
   if (compact) {
     return (
@@ -85,7 +99,7 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   swatch: {
-    width: 40,
+    width: 36,
     height: MinTarget,
     borderRadius: Radius.medium,
     borderWidth: 2,

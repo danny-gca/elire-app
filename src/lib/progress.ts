@@ -34,9 +34,12 @@ export function averageText(notes: readonly number[]): string {
 }
 
 export interface Milestone {
-  /** Chiffre mis en avant, puis le reste de la phrase. */
+  /** Le palier visé, puis le chiffre mis en avant, puis l'unité : « Bilan dans 7 votes ». */
+  lead: string;
   value: number;
   text: string;
+  /** Info d'appoint, sous le palier (candidats classés). */
+  side?: string;
   ratio: number;
 }
 
@@ -44,12 +47,12 @@ export interface Milestone {
 export function nextMilestone(opinions: number, ranked: number, candidats: number): Milestone {
   if (opinions < CLASSEMENT_THRESHOLD) {
     const left = CLASSEMENT_THRESHOLD - opinions;
-    return { value: left, text: `${left > 1 ? 'votes' : 'vote'} avant votre Classement`, ratio: opinions / CLASSEMENT_THRESHOLD };
+    return { lead: 'Classement dans', value: left, text: left > 1 ? 'votes' : 'vote', ratio: opinions / CLASSEMENT_THRESHOLD };
   }
   const done = opinions % PAUSE_EVERY;
   const left = PAUSE_EVERY - done;
   const classes = `${ranked} ${ranked > 1 ? 'candidats classés' : 'candidat classé'} sur ${candidats}`;
-  return { value: left, text: `${left > 1 ? 'votes' : 'vote'} avant le prochain bilan · ${classes}`, ratio: done / PAUSE_EVERY };
+  return { lead: 'Bilan dans', value: left, text: left > 1 ? 'votes' : 'vote', side: classes, ratio: done / PAUSE_EVERY };
 }
 
 /** Une pause courte à chaque dizaine d'avis, dès l'ouverture du Classement. */

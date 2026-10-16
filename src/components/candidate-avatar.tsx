@@ -6,7 +6,7 @@ import { Colors, Type } from '@/constants/theme';
 import type { Candidat } from '@/schemas/dataset';
 
 // Photo locale, sinon initiales : jamais de visage tiers en repli. `ring` : anneau à la couleur du parti.
-export function CandidateAvatar({ candidat, size = 40, ring }: { candidat: Candidat; size?: number; ring?: string }) {
+export function CandidateAvatar({ candidat, size = 40, ring }: { candidat: Pick<Candidat, 'id' | 'avatar'>; size?: number; ring?: string }) {
   const source = CandidateImages[candidat.id];
   const shape = { width: size, height: size, borderRadius: size / 2 };
 
