@@ -15,6 +15,7 @@ import { SegmentedControl } from '@/components/ui/segmented-control';
 import { Sheet } from '@/components/ui/sheet';
 import { Colors, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { normalize } from '@/lib/format';
+import { fisherYates } from '@/lib/shuffle';
 import type { Proposition } from '@/schemas/dataset';
 import { getCandidat, propositions, thematiques } from '@/services/dataset';
 import { useVotesStore } from '@/store/votes-store';
@@ -32,7 +33,9 @@ export default function ExplorerScreen() {
   const [selected, setSelected] = useState<Proposition | null>(null);
   const q = normalize(query.trim());
 
-  const matches = useMemo(() => (q ? propositions.filter((p) => searchIndex.get(p.id)!.includes(q)) : []), [q]);
+  // Ordre tiré au hasard à l'ouverture d'Explorer, stable pendant la saisie : aucun candidat n'est toujours en tête.
+  const [order] = useState(() => fisherYates(propositions));
+  const matches = useMemo(() => (q ? order.filter((p) => searchIndex.get(p.id)!.includes(q)) : []), [q, order]);
   const pending = matches.filter((p) => votes[p.id] === undefined);
   const shown = filtre === 'a-voter' ? pending : matches;
   const sections = thematiques
