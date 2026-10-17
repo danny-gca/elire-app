@@ -1,0 +1,123 @@
+[
+  {
+    "id": "voter-boutons",
+    "ecran": "voter",
+    "quand": "arrivee",
+    "cible": "vote-boutons",
+    "ordre": 1,
+    "lignes": [
+      "Lisez la mesure, puis notez-la de −2 à +2.",
+      "Comptez environ 20 secondes par question. L’auteur reste masqué : vous jugez la mesure, pas la personne."
+    ]
+  },
+  {
+    "id": "en-savoir-plus",
+    "ecran": "voter",
+    "quand": "arrivee",
+    "cible": "en-savoir-plus",
+    "ordre": 2,
+    "lignes": [
+      "Un sigle, un doute ? Le contexte est ici.",
+      "Il ne dévoile jamais l’auteur. Toujours sans avis ? « Je ne sais pas » passe la question."
+    ]
+  },
+  {
+    "id": "a-vote",
+    "ecran": "voter",
+    "quand": "premier-vote",
+    "cible": "a-vote",
+    "ordre": 1,
+    "lignes": [
+      "Ici, vous pouvez modifier votre vote.",
+      "Touchez « A voté ! » pour le corriger, tant que la ligne est surlignée."
+    ]
+  },
+  {
+    "id": "premier-scrutin",
+    "ecran": "voter",
+    "quand": "scrutin",
+    "cible": "scrutin-entete",
+    "ordre": 1,
+    "lignes": [
+      "Ici, c’est un vrai scrutin du Parlement : votez comme si vous y siégiez.",
+      "Votre choix vous rapproche des candidats qui ont voté comme vous, et vous éloigne des autres."
+    ]
+  },
+  {
+    "id": "scrutin-hemicycle",
+    "ecran": "voter",
+    "quand": "scrutin-vote",
+    "cible": "hemicycle",
+    "ordre": 1,
+    "lignes": [
+      "Chaque point est un candidat qui a voté ce texte.",
+      "De votre couleur : comme vous. Noir : l’inverse. Vide : abstention. Touchez pour voir le détail du scrutin."
+    ]
+  },
+  {
+    "id": "palier",
+    "ecran": "voter",
+    "quand": "vote-3",
+    "cible": "palier",
+    "ordre": 1,
+    "lignes": [
+      "Votre Classement s’ouvre à 10 votes, soit 3 à 5 minutes.",
+      "Arrêtez quand vous voulez : vos votes restent sur votre appareil."
+    ]
+  },
+  {
+    "id": "classement-panneau",
+    "ecran": "cahier",
+    "quand": "classement",
+    "cible": "panneau",
+    "ordre": 1,
+    "lignes": [
+      "Touchez un candidat pour voir son programme et ses votes.",
+      "La jauge en bas du panneau dit si son score est fragile, assez sûr ou fiable."
+    ]
+  },
+  {
+    "id": "reglages",
+    "ecran": "cahier",
+    "quand": "classement",
+    "cible": "reglages",
+    "ordre": 2,
+    "lignes": [
+      "Votre surligneur, les sons et les astuces sont dans les Réglages.",
+      "Vous pouvez aussi y effacer vos votes."
+    ]
+  },
+  {
+    "id": "fiche-calcul",
+    "ecran": "candidat",
+    "quand": "fiche",
+    "cible": "calcul",
+    "ordre": 1,
+    "lignes": [
+      "Touchez pour voir le calcul de ce pourcentage.",
+      "Chaque note et chaque scrutin, ligne par ligne."
+    ]
+  },
+  {
+    "id": "explorer-recherche",
+    "ecran": "explorer",
+    "quand": "explorer",
+    "cible": "recherche",
+    "ordre": 1,
+    "lignes": [
+      "Ici, les auteurs sont visibles.",
+      "Cherchez une mesure ou un candidat : un filtre montre ensuite ce qu’il vous reste à noter."
+    ]
+  },
+  {
+    "id": "lois-scrutin",
+    "ecran": "lois",
+    "quand": "lois",
+    "cible": "premiere-loi",
+    "ordre": 1,
+    "lignes": [
+      "Touchez un scrutin pour voir qui a voté quoi.",
+      "Vote personnel ou position du groupe : c’est toujours précisé."
+    ]
+  }
+]

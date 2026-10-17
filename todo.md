@@ -40,4 +40,5 @@ Doc : <https://docs.expo.dev/submit/android/>
 ## Autres
 
 - Relecture des mentions légales et de la page Méthode et corrections par un avocat.
+- Site : refaire les captures d'écran de l'app (`public/images/explorer.webp`) après les changements de `feature/tuto-et-sons` (onglet Cahier, A voté !, en-tête des scrutins).
 - Compléter `docs/feature-20261015-smaller-updates.md` avec les derniers tours (salle, fêtes, partage, fiche candidat, score, simulation) avant de commiter.

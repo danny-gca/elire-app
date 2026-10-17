@@ -1,4 +1,5 @@
 import { StyleSheet, Text } from 'react-native';
+import { useReducedMotion } from 'react-native-reanimated';
 
 import { LoiVoteScale } from '@/components/loi-vote-scale';
 import { Sheet } from '@/components/ui/sheet';
@@ -6,11 +7,13 @@ import { VoteScale } from '@/components/vote-scale';
 import { Colors, Type } from '@/constants/theme';
 import type { VoteValue } from '@/lib/scoring';
 import { lois, propositions } from '@/services/dataset';
-import { celebrate } from '@/store/celebration-store';
+import { celebrate, type CelebrationPoint } from '@/store/celebration-store';
 import { useVotesStore } from '@/store/votes-store';
 
 const byId = new Map(propositions.map((p) => [p.id, p]));
 const loisById = new Map(lois.map((l) => [l.id, l]));
+// Le temps que la petite fête se dessine (la plus longue, l'entouré, finit vers 650ms).
+const CLOSE_AFTER_MS = 650;
 
 interface ExampleVote {
   titre: string;
@@ -38,6 +41,13 @@ export function EditVoteSheet({
   const castLoiVote = useVotesStore((s) => s.castLoiVote);
   const proposition = id ? byId.get(id) : undefined;
   const loi = id ? loisById.get(id) : undefined;
+  const reducedMotion = useReducedMotion();
+
+  // La fête part du bouton touché, dans la feuille : elle se range dès la fête dessinée, sans attendre qu'elle s'efface.
+  const voted = (point?: CelebrationPoint) => {
+    celebrate('small', 'sheet', point);
+    setTimeout(onClose, reducedMotion ? 0 : CLOSE_AFTER_MS);
+  };
 
   return (
     <Sheet visible={visible && !!(proposition || loi || example)} title="Modifier votre vote" onClose={onClose}>
@@ -49,8 +59,7 @@ export function EditVoteSheet({
             value={example.value}
             onVote={(value, point) => {
               example.onVote(value);
-              onClose();
-              celebrate('small', 'app', point);
+              voted(point);
             }}
           />
         </>
@@ -63,8 +72,7 @@ export function EditVoteSheet({
             value={votes[proposition.id]}
             onVote={(value, point) => {
               castVote(proposition.id, value);
-              onClose();
-              celebrate('small', 'app', point);
+              voted(point);
             }}
           />
         </>
@@ -77,8 +85,7 @@ export function EditVoteSheet({
             value={loiVotes[loi.id]}
             onVote={(value, point) => {
               castLoiVote(loi.id, value);
-              onClose();
-              celebrate('small', 'app', point);
+              voted(point);
             }}
           />
         </>

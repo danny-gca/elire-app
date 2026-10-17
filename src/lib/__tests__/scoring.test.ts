@@ -1,4 +1,4 @@
-import { competitionRanks, computeScores, loiPoints, reliabilityOf, scoreCandidat, scoreDetail, type LoiBallot, type VoteValue } from '@/lib/scoring';
+import { denseRanks, computeScores, loiPoints, reliabilityOf, scoreCandidat, scoreDetail, type CandidateScore, type LoiBallot, type VoteValue } from '@/lib/scoring';
 import type { Candidat, Loi, Proposition, VoteCandidatLoi } from '@/schemas/dataset';
 
 const candidat = (id: string, nom = id): Candidat => ({
@@ -83,12 +83,17 @@ describe('computeScores', () => {
     const tie = new Map([['a', 0], ['b', 1]]);
     const scores = computeScores([candidat('a'), candidat('b')], more, votes, tie);
     expect(scores.map((s) => s.candidat.id)).toEqual(['a', 'b']);
-    expect(competitionRanks(scores)).toEqual([1, 1]);
+    expect(denseRanks(scores)).toEqual([1, 1]);
   });
 
   it('donne le même rang aux scores égaux', () => {
     const scores = computeScores([candidat('a'), candidat('b'), candidat('c')], props, { a1: 2, a2: 2, b1: 2, b2: 2, c1: -2 });
-    expect(competitionRanks(scores)).toEqual([1, 1, 3]);
+    expect(denseRanks(scores)).toEqual([1, 1, 2]);
+  });
+
+  it('fait suivre les rangs après un ex æquo (1, 2, 2, 3)', () => {
+    const ranks = denseRanks([75, 58, 58, 56, 56, 52].map((score) => ({ score }) as CandidateScore));
+    expect(ranks).toEqual([1, 2, 2, 3, 3, 4]);
   });
 });
 

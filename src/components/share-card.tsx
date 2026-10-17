@@ -2,9 +2,8 @@ import { forwardRef } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { ReliabilityMark } from '@/components/reliability-mark';
-import { SITE_URL } from '@/constants/app';
 import { Colors, Markers, Numeric, Type, type MarkerId } from '@/constants/theme';
-import { competitionRanks, type CandidateScore } from '@/lib/scoring';
+import { denseRanks, type CandidateScore } from '@/lib/scoring';
 import { shareSummary, type ShareMode } from '@/lib/share';
 
 // 4:5, rendue en 320 de large pour tenir dans la feuille d'un téléphone, exportée en 1080 x 1350.
@@ -24,7 +23,7 @@ interface ShareCardProps {
 // L'image partagée, capturée telle qu'affichée : le classement, ou en discret l'avancée seule, sans nom.
 export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ mode, scores, answered, marker }, ref) {
   const ranked = scores.filter((s) => s.ranked);
-  const ranks = competitionRanks(ranked);
+  const ranks = denseRanks(ranked);
   const summary = shareSummary(scores);
   const band = { backgroundColor: Markers[marker].soft };
 
@@ -72,7 +71,7 @@ export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ m
         <Image source={require('@/assets/images/splash-icon.png')} style={styles.logo} />
         <View style={styles.footText}>
           <Text style={[Type.labelStrong, styles.ink]} numberOfLines={1}>
-            {SITE_URL.replace(/^https:\/\//, '').replace(/\/$/, '')}
+            élire
           </Text>
           <Text style={[Type.label, styles.muted]}>Sans compte, sans traceur, neutre.</Text>
         </View>

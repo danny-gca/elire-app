@@ -22,6 +22,7 @@ import { candidatureText, plural } from '@/lib/format';
 import { MIN_VOTES_PER_CANDIDAT, scoreCandidat, scoreDetail } from '@/lib/scoring';
 import type { Loi, Proposition } from '@/schemas/dataset';
 import { getCandidat, getLoisByCandidat, getPropositionsByCandidat, lois, partis, propositions, thematiques } from '@/services/dataset';
+import { useTuto, useTutoTarget } from '@/store/tuto-store';
 import { useVotesStore } from '@/store/votes-store';
 
 type Onglet = 'programme' | 'lois';
@@ -47,7 +48,7 @@ export default function CandidateScreen() {
 
   const back = (
     <Pressable
-      onPress={() => (router.canGoBack() ? router.back() : router.navigate('/results'))}
+      onPress={() => (router.canGoBack() ? router.back() : router.navigate('/cahier'))}
       accessibilityRole="button"
       accessibilityLabel="Retour"
       hitSlop={8}
@@ -56,7 +57,11 @@ export default function CandidateScreen() {
     </Pressable>
   );
 
-  if (!candidat) {
+  const score = candidat ? scoreCandidat(candidat, propositions, votes, { lois, votes: loiVotes }) : null;
+  useTuto('fiche', score?.score != null);
+  const calculTarget = useTutoTarget('calcul');
+
+  if (!candidat || !score) {
     return (
       <Screen>
         {back}
@@ -64,8 +69,6 @@ export default function CandidateScreen() {
       </Screen>
     );
   }
-
-  const score = scoreCandidat(candidat, propositions, votes, { lois, votes: loiVotes });
 
   return (
     <Screen>
@@ -112,6 +115,7 @@ export default function CandidateScreen() {
 
       {/* Touchée, la carte pose le calcul : de quoi vérifier le pourcentage à la main. */}
       <Pressable
+        {...calculTarget}
         disabled={score.score === null}
         onPress={() => setCalcul(true)}
         accessibilityRole={score.score === null ? undefined : 'button'}

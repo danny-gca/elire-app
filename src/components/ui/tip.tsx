@@ -15,7 +15,7 @@ interface TipProps {
   marker?: MarkerId;
 }
 
-const SCRIBBLE_MS = 900;
+const SCRIBBLE_MS = 1100;
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 // Encart d'aide des premières questions : un gribouillis de surligneur derrière le texte, tracé à son arrivée.
