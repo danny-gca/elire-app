@@ -1,3 +1,5 @@
+import { REPO_URL } from '@/constants/app';
+
 // Crédits des portraits (Wikimedia Commons, sauf mention), vérifiés le 2026-10-13 sur les fichiers téléchargés.
 export interface PhotoCredit {
   candidatId: string;
@@ -46,5 +48,14 @@ export const FONT_CREDITS: FontCredit[] = [
   { nom: 'Caveat', role: 'Annotations et logo', auteur: 'The Caveat Project Authors', url: 'https://github.com/googlefonts/caveat' },
 ];
 
-// Icônes d'onglets Explorer et Classement reprises d'Ionicons (MIT, licence dans assets/icons/tabs/).
+// Icône d'onglet Explorer reprise d'Ionicons (MIT, licence dans assets/icons/tabs/).
 export const ICON_CREDIT = { nom: 'Ionicons', role: 'Icônes', auteur: 'Ionic', licence: 'MIT', url: 'https://ionic.io/ionicons' };
+
+// Sons fabriqués par un script du dépôt (bruit filtré, sinus, voix synthétiques) : aucun enregistrement tiers.
+export const SOUND_CREDIT = {
+  nom: 'Sons',
+  role: 'open source',
+  auteur: 'Fabriqués par un script du dépôt, sans enregistrement',
+  licence: 'MIT',
+  url: `${REPO_URL}/blob/main/scripts/build-sounds.mjs`,
+};

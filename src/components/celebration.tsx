@@ -211,7 +211,83 @@ function traits(w: number, h: number, origin?: CelebrationPoint): Stroke[] {
   });
 }
 
-const BUILD: Record<CelebrationVariant, (w: number, h: number, origin?: CelebrationPoint) => Stroke[]> = { gerbe, fusees, surlignage, boucles, etincelles, traits };
+// Entouré : le bouton touché cerclé à la main, comme une bonne réponse au cahier, puis trois petits traits d'emphase.
+function entoure(w: number, h: number, origin?: CelebrationPoint): Stroke[] {
+  const [ring, ...ticks] = palette(4);
+  const ox = origin?.x ?? w / 2;
+  const oy = origin?.y ?? h - 76;
+  const rx = between(58, 72);
+  const ry = between(30, 38);
+  const tilt = between(-0.12, 0.05);
+  const a0 = between(-2.5, -1.9);
+  // Un peu plus d'un tour, qui s'écarte en finissant : le trait ne se referme jamais pile.
+  const loop: Point[] = sample(40, (t) => {
+    const a = a0 + Math.PI * 2 * 1.12 * t;
+    const r = 1 + 0.07 * t + 0.03 * Math.sin(t * 9);
+    const x = Math.cos(a) * rx * r;
+    const y = Math.sin(a) * ry * r;
+    return [ox + x * Math.cos(tilt) - y * Math.sin(tilt), oy + x * Math.sin(tilt) + y * Math.cos(tilt)];
+  });
+  return [
+    { points: loop, color: ring, width: 5, start: 0, dur: 420, fadeAt: 780 },
+    ...ticks.map((color, i) => {
+      const a = -1.25 + i * 0.45 + between(-0.08, 0.08);
+      const r0 = 12;
+      const r1 = r0 + between(14, 22);
+      const start = 380 + i * 50;
+      return {
+        points: [
+          [ox + Math.cos(a) * (rx + r0), oy + Math.sin(a) * (ry + r0)],
+          [ox + Math.cos(a) * (rx + r1), oy + Math.sin(a) * (ry + r1)],
+        ] as Point[],
+        color,
+        width: 4,
+        start,
+        dur: 160,
+        fadeAt: 780,
+      };
+    }),
+  ];
+}
+
+// Cadre : le bouton touché encadré à la main, quatre côtés qui dépassent aux coins, chacun d'un surligneur.
+function cadre(w: number, h: number, origin?: CelebrationPoint): Stroke[] {
+  const colors = palette(4);
+  const ox = origin?.x ?? w / 2;
+  const oy = origin?.y ?? h - 76;
+  const hw = between(58, 70);
+  const hh = between(28, 34);
+  const tilt = between(-0.06, 0.04);
+  const at = (dx: number, dy: number): Point => [ox + dx * Math.cos(tilt) - dy * Math.sin(tilt), oy + dx * Math.sin(tilt) + dy * Math.cos(tilt)];
+  const corners: Point[] = [
+    [-hw, -hh],
+    [hw, -hh],
+    [hw, hh],
+    [-hw, hh],
+  ];
+  return corners.map(([x0, y0], i) => {
+    const [x1, y1] = corners[(i + 1) % 4];
+    const len = Math.hypot(x1 - x0, y1 - y0);
+    const [ux, uy] = [(x1 - x0) / len, (y1 - y0) / len];
+    const [o0, o1] = [between(6, 12), between(6, 12)];
+    const bow = between(-3, 3);
+    const start = i * 110;
+    return {
+      points: sample(8, (t) => {
+        const d = -o0 + (len + o0 + o1) * t;
+        const b = bow * Math.sin(Math.PI * t);
+        return at(x0 + ux * d - uy * b, y0 + uy * d + ux * b);
+      }),
+      color: colors[i],
+      width: 4,
+      start,
+      dur: 180,
+      fadeAt: 780,
+    };
+  });
+}
+
+const BUILD: Record<CelebrationVariant, (w: number, h: number, origin?: CelebrationPoint) => Stroke[]> = { gerbe, fusees, surlignage, boucles, etincelles, traits, entoure, cadre };
 
 function pathOf(points: Point[]) {
   let length = 0;
@@ -257,7 +333,11 @@ function Burst({ id, variant, origin, width, height }: { id: number; variant: Ce
   useEffect(() => {
     clock.value = withTiming(total, { duration: total, easing: Easing.linear });
     const timer = setTimeout(() => done(id), total + 50);
-    return () => clearTimeout(timer);
+    // Coupée avant la fin (feuille fermée) : elle est finie, elle ne rejoue pas à la réouverture.
+    return () => {
+      clearTimeout(timer);
+      done(id);
+    };
   }, [clock, total, done, id]);
 
   return (

@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useFocusEffect } from 'expo-router';
+import { useCallback, useMemo, useState } from 'react';
 import { SectionList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -15,6 +16,7 @@ import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { normalize, plural } from '@/lib/format';
 import type { Loi, StatutLoi } from '@/schemas/dataset';
 import { lois } from '@/services/dataset';
+import { useTuto, useTutoTarget } from '@/store/tuto-store';
 import { useVotesStore } from '@/store/votes-store';
 
 type Filtre = 'tous' | StatutLoi;
@@ -26,6 +28,8 @@ export default function LoisScreen() {
   const [query, setQuery] = useState('');
   const [filtre, setFiltre] = useState<Filtre>('tous');
   const [selected, setSelected] = useState<Loi | null>(null);
+  // En quittant l'onglet, la recherche repart de zéro.
+  useFocusEffect(useCallback(() => () => setQuery(''), []));
 
   const sections = useMemo(() => {
     const q = normalize(query.trim());
@@ -43,6 +47,8 @@ export default function LoisScreen() {
   }, [query, filtre]);
 
   const resultCount = sections.reduce((n, s) => n + s.data.length, 0);
+  useTuto('lois', resultCount > 0);
+  const firstTarget = useTutoTarget('premiere-loi');
 
   return (
     <SafeAreaView edges={['top']} style={styles.safe}>
@@ -78,8 +84,8 @@ export default function LoisScreen() {
             </Text>
           </View>
         )}
-        renderItem={({ item }) => (
-          <View style={[screenStyles.column, styles.item]}>
+        renderItem={({ item, index, section }) => (
+          <View {...(index === 0 && section === sections[0] ? firstTarget : {})} style={[screenStyles.column, styles.item]}>
             <LoiCard loi={item} userVote={loiVotes[item.id]} onPress={() => setSelected(item)} />
           </View>
         )}

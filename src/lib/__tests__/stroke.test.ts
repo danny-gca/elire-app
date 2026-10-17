@@ -1,4 +1,4 @@
-import { SCRIBBLE_WIDTH, scribblePath, strokePath, strokeShape } from '@/lib/stroke';
+import { LOOP_PAD, loopPath, SCRIBBLE_WIDTH, scribblePath, strokePath, strokeShape } from '@/lib/stroke';
 
 describe('strokeShape', () => {
   it('trace toujours de gauche à droite, à travers tout le bouton, sans sortir loin en hauteur', () => {
@@ -28,16 +28,66 @@ describe('strokeShape', () => {
 });
 
 describe('scribblePath', () => {
-  it("zigzague jusqu'à droite sans toucher les bords de l'encart", () => {
-    const { d, length } = scribblePath(320, 80);
-    const pts = [...d.matchAll(/[ML](-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
-    pts.forEach(([x, y]) => {
-      expect(x).toBeGreaterThanOrEqual(SCRIBBLE_WIDTH);
-      expect(x).toBeLessThan(320 - SCRIBBLE_WIDTH);
-      expect(y).toBeGreaterThan(0);
-      expect(y).toBeLessThan(80);
-    });
-    expect(pts[pts.length - 1][0]).toBeGreaterThan(320 - SCRIBBLE_WIDTH - 16);
-    expect(length).toBeGreaterThan(320);
+  const points = (d: string) => [...d.matchAll(/(-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
+
+  it("couvre tout l'encart, de haut en bas et de gauche à droite, sans toucher ses bords", () => {
+    for (let run = 0; run < 100; run++) {
+      const { d, length } = scribblePath(320, 90);
+      const pts = points(d);
+      pts.forEach(([x, y]) => {
+        expect(x).toBeGreaterThanOrEqual(SCRIBBLE_WIDTH);
+        expect(x).toBeLessThanOrEqual(320 - SCRIBBLE_WIDTH);
+        expect(y).toBeGreaterThan(0);
+        expect(y).toBeLessThan(90);
+      });
+      expect(Math.max(...pts.map(([x]) => x))).toBeGreaterThan(320 - SCRIBBLE_WIDTH - 12);
+      // Chaque tranche de 20 px reçoit des pointes en haut et en bas : aucun blanc entre les hachures.
+      const tips = [...d.matchAll(/Q(-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
+      for (let x = SCRIBBLE_WIDTH + 40; x < 320 - SCRIBBLE_WIDTH - 40; x += 20) {
+        const near = tips.filter(([px]) => px >= x && px < x + 20);
+        expect(Math.min(...near.map(([, y]) => y))).toBeLessThan(90 * 0.2);
+        expect(Math.max(...near.map(([, y]) => y))).toBeGreaterThan(90 * 0.8);
+      }
+      expect(length).toBeGreaterThan(320 * 8);
+    }
+  });
+
+  it('penche ses montées : des diagonales, pas des verticales', () => {
+    const tips = [...scribblePath(320, 90).d.matchAll(/Q(-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
+    for (let i = 0; i + 1 < tips.length; i += 2) {
+      // Une pointe haute, puis la pointe basse suivante, nettement à gauche : la montée penchait.
+      expect(tips[i][0] - tips[i + 1][0]).toBeGreaterThan(90 * 0.3 - 11 - 1);
+    }
+  });
+});
+
+describe('loopPath', () => {
+  const points = (d: string) => d.split(/[ML]/).filter(Boolean).map((p) => p.trim().split(' ').map(Number));
+
+  it('part du message et entoure l\'élément sans toucher ses coins, en restant dans l\'écran', () => {
+    const box = { x: 16, y: 600, width: 358, height: 120 };
+    for (let run = 0; run < 200; run++) {
+      const { d, length } = loopPath([300, 180], box, { width: 390, height: 844 });
+      const pts = points(d);
+      expect(pts[0]).toEqual([300, 180]);
+      expect(length).toBeGreaterThan(900);
+      pts.forEach(([x, y]) => {
+        expect(x).toBeGreaterThanOrEqual(4);
+        expect(x).toBeLessThanOrEqual(386);
+        expect(y).toBeLessThanOrEqual(840);
+      });
+      // La boucle passe hors de l'élément : aucun point de la fin du tracé à l'intérieur.
+      pts.slice(17).forEach(([x, y]) => {
+        const inside = x > box.x + 2 && x < box.x + box.width - 2 && y > box.y + 2 && y < box.y + box.height - 2;
+        expect(inside).toBe(false);
+      });
+    }
+  });
+
+  it('garde une marge autour d\'un petit élément', () => {
+    const box = { x: 180, y: 400, width: 40, height: 40 };
+    const pts = points(loopPath([200, 100], box, { width: 390, height: 844 }).d).slice(17);
+    const near = Math.min(...pts.map(([x, y]) => Math.hypot(x - 200, y - 420)));
+    expect(near).toBeGreaterThan(20 + LOOP_PAD * 0.6);
   });
 });

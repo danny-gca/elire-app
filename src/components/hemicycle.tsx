@@ -34,7 +34,7 @@ interface HemicycleProps {
   markColor?: string;
 }
 
-// Les candidats qui ont voté ce texte prennent place, sans nom : pleins comme vous, vides à l'inverse.
+// Les candidats qui ont voté ce texte prennent place, sans nom : à votre couleur comme vous, noirs à l'inverse, vides s'ils se sont abstenus.
 export function Hemicycle({ loi, user, markColor = Markers[DEFAULT_MARKER].solid }: HemicycleProps) {
   const seats = Object.values(loi.votes)
     .map((v) => relationOf(user, v.position))
@@ -157,22 +157,23 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFill,
     borderRadius: DOT / 2,
   },
+  // Les trois sur une ligne d'un téléphone de 390 pt ; sur un écran plus étroit, la légende passe à la ligne.
   legend: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    columnGap: Spacing.three,
+    columnGap: 12,
     rowGap: Spacing.half,
   },
   legendItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.one,
+    gap: 5,
   },
   mini: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    width: 10,
+    height: 10,
+    borderRadius: 5,
   },
   ink: {
     color: Colors.ink,
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
   },
 });
 
-// Plein (surligneur), vide (encre), gris (abstention) : lisible sans la couleur.
+// Surligneur (comme vous), encre pleine (à l'inverse), vide (abstention) : trois formes lisibles sans la couleur, et pas de rouge ni de vert.
 const relationStyle = StyleSheet.create({
   same: {
     borderWidth: 1.5,
@@ -191,11 +192,11 @@ const relationStyle = StyleSheet.create({
   opposite: {
     borderWidth: 1.5,
     borderColor: Colors.ink,
-    backgroundColor: Colors.sheet,
+    backgroundColor: Colors.ink,
   },
   neutral: {
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: Colors.graphite,
-    backgroundColor: Colors.ruleSoft,
+    backgroundColor: Colors.sheet,
   },
 });

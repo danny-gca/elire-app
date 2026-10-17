@@ -38,21 +38,23 @@ export interface Milestone {
   lead: string;
   value: number;
   text: string;
-  /** Info d'appoint, sous le palier (candidats classés). */
-  side?: string;
+  /** Candidats classés sur le total, à droite du palier, et la phrase lue par les lecteurs d'écran. */
+  ranked: number;
+  candidats: number;
+  sideLabel: string;
   ratio: number;
 }
 
 // Le prochain palier plutôt que le total : d'abord le Classement, puis chaque bilan de dix votes.
 export function nextMilestone(opinions: number, ranked: number, candidats: number): Milestone {
+  const sideLabel = `${ranked} ${ranked > 1 ? 'candidats classés' : 'candidat classé'} sur ${candidats}`;
   if (opinions < CLASSEMENT_THRESHOLD) {
     const left = CLASSEMENT_THRESHOLD - opinions;
-    return { lead: 'Classement dans', value: left, text: left > 1 ? 'votes' : 'vote', ratio: opinions / CLASSEMENT_THRESHOLD };
+    return { lead: 'Classement dans', value: left, text: left > 1 ? 'votes' : 'vote', ranked, candidats, sideLabel, ratio: opinions / CLASSEMENT_THRESHOLD };
   }
   const done = opinions % PAUSE_EVERY;
   const left = PAUSE_EVERY - done;
-  const classes = `${ranked} ${ranked > 1 ? 'candidats classés' : 'candidat classé'} sur ${candidats}`;
-  return { lead: 'Bilan dans', value: left, text: left > 1 ? 'votes' : 'vote', side: classes, ratio: done / PAUSE_EVERY };
+  return { lead: 'Bilan dans', value: left, text: left > 1 ? 'votes' : 'vote', ranked, candidats, sideLabel, ratio: done / PAUSE_EVERY };
 }
 
 /** Une pause courte à chaque dizaine d'avis, dès l'ouverture du Classement. */

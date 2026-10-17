@@ -21,10 +21,10 @@ describe('progress', () => {
   });
 
   it('annonce le Classement, puis le bilan de dix votes', () => {
-    expect(nextMilestone(6, 0, 17)).toEqual({ lead: 'Classement dans', value: 4, text: 'votes', ratio: 0.6 });
+    expect(nextMilestone(6, 0, 17)).toEqual({ lead: 'Classement dans', value: 4, text: 'votes', ranked: 0, candidats: 17, sideLabel: '0 candidat classé sur 17', ratio: 0.6 });
     expect(nextMilestone(9, 0, 17).text).toBe('vote');
-    expect(nextMilestone(13, 9, 17)).toEqual({ lead: 'Bilan dans', value: 7, text: 'votes', side: '9 candidats classés sur 17', ratio: 0.3 });
-    expect(nextMilestone(20, 1, 17)).toMatchObject({ lead: 'Bilan dans', value: 10, text: 'votes', side: '1 candidat classé sur 17', ratio: 0 });
+    expect(nextMilestone(13, 9, 17)).toEqual({ lead: 'Bilan dans', value: 7, text: 'votes', ranked: 9, candidats: 17, sideLabel: '9 candidats classés sur 17', ratio: 0.3 });
+    expect(nextMilestone(20, 1, 17)).toMatchObject({ lead: 'Bilan dans', value: 10, text: 'votes', sideLabel: '1 candidat classé sur 17', ratio: 0 });
   });
 
   it('marque une pause à chaque dizaine dès 10 avis', () => {

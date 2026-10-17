@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
@@ -15,6 +15,10 @@ interface SheetProps {
   children: React.ReactNode;
 }
 
+// Fait défiler la feuille juste assez pour montrer un élément qui vient de s'ouvrir (une échelle de vote).
+const RevealContext = createContext<(target: View | null) => void>(() => {});
+export const useSheetReveal = () => useContext(RevealContext);
+
 const OPEN_MS = 260;
 const CLOSE_MS = 200;
 
@@ -28,6 +32,22 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
   const progress = useSharedValue(0);
   const drag = useSharedValue(0);
   const [panelHeight, setPanelHeight] = useState(0);
+  const scroll = useRef<ScrollView>(null);
+  const inner = useRef<View>(null);
+  const view = useRef({ offset: 0, height: 0 });
+  const reveal = useCallback((target: View | null) => {
+    if (!target || !inner.current) {
+      return;
+    }
+    target.measureLayout(inner.current, (_x, y, _w, h) => {
+      // Le contenu commence après la marge du haut ; un peu d'air sous l'élément.
+      const bottom = Spacing.two + y + h + Spacing.three;
+      const { offset, height: seen } = view.current;
+      if (bottom > offset + seen) {
+        scroll.current?.scrollTo({ y: bottom - seen, animated: true });
+      }
+    });
+  }, []);
   // Glisser l'en-tête vers le bas : au-delà du quart de la feuille ou d'un geste vif, elle se ferme ; sinon elle revient.
   const pan = Gesture.Pan()
     .activeOffsetY(8)
@@ -83,8 +103,19 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
   );
 
   const content = (
-    <ScrollView contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + Spacing.three }]}>
-      {children}
+    <ScrollView
+      ref={scroll}
+      scrollEventThrottle={32}
+      onScroll={(e) => {
+        view.current.offset = e.nativeEvent.contentOffset.y;
+      }}
+      onLayout={(e) => {
+        view.current.height = e.nativeEvent.layout.height;
+      }}
+      contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + Spacing.three }]}>
+      <View ref={inner} style={styles.inner}>
+        <RevealContext.Provider value={reveal}>{children}</RevealContext.Provider>
+      </View>
     </ScrollView>
   );
 
@@ -166,6 +197,8 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: Spacing.two,
+  },
+  inner: {
     gap: Spacing.two,
   },
 });

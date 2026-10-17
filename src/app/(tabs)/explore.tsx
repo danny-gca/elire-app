@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useFocusEffect } from 'expo-router';
+import { useCallback, useMemo, useState } from 'react';
 import { SectionList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -18,6 +19,7 @@ import { normalize } from '@/lib/format';
 import { fisherYates } from '@/lib/shuffle';
 import type { Proposition } from '@/schemas/dataset';
 import { getCandidat, propositions, thematiques } from '@/services/dataset';
+import { useTuto, useTutoTarget } from '@/store/tuto-store';
 import { useVotesStore } from '@/store/votes-store';
 
 type Filtre = 'toutes' | 'a-voter';
@@ -30,11 +32,24 @@ export default function ExplorerScreen() {
   const votes = useVotesStore((s) => s.votes);
   const [query, setQuery] = useState('');
   const [filtre, setFiltre] = useState<Filtre>('toutes');
+  useTuto('explorer', true);
+  const searchTarget = useTutoTarget('recherche');
   const [selected, setSelected] = useState<Proposition | null>(null);
   const q = normalize(query.trim());
 
   // Ordre tiré au hasard à l'ouverture d'Explorer, stable pendant la saisie : aucun candidat n'est toujours en tête.
-  const [order] = useState(() => fisherYates(propositions));
+  const [order, setOrder] = useState(() => fisherYates(propositions));
+  // En quittant l'onglet, la recherche repart de zéro.
+  useFocusEffect(
+    useCallback(
+      () => () => {
+        setQuery('');
+        setFiltre('toutes');
+        setOrder(fisherYates(propositions));
+      },
+      []
+    )
+  );
   const matches = useMemo(() => (q ? order.filter((p) => searchIndex.get(p.id)!.includes(q)) : []), [q, order]);
   const pending = matches.filter((p) => votes[p.id] === undefined);
   const shown = filtre === 'a-voter' ? pending : matches;
@@ -53,7 +68,9 @@ export default function ExplorerScreen() {
         ListHeaderComponent={
           <View style={[screenStyles.column, styles.top]}>
             <ScreenHeader title="Explorer" note="Toutes les propositions par thème, auteurs visibles." />
-            <SearchField value={query} onChangeText={setQuery} placeholder="Rechercher une mesure, un candidat" />
+            <View {...searchTarget}>
+              <SearchField value={query} onChangeText={setQuery} placeholder="Rechercher une mesure, un candidat" />
+            </View>
             {q ? (
               <SegmentedControl<Filtre>
                 accessibilityLabel="Filtrer les résultats"

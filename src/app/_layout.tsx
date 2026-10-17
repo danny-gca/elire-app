@@ -7,6 +7,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 
 import { CelebrationLayer } from '@/components/celebration';
+import { TutoLayer } from '@/components/tuto-layer';
 import { FONT_FILES } from '@/constants/fonts';
 import { Colors } from '@/constants/theme';
 
@@ -37,10 +38,12 @@ export default function RootLayout() {
         <Stack.Screen name="candidate/[id]" />
         <Stack.Screen name="theme/[id]" />
         <Stack.Screen name="credits" />
+        <Stack.Screen name="reglages" />
         <Stack.Screen name="mentions-legales" />
         <Stack.Screen name="corrections" />
         <Stack.Screen name="onboarding" options={{ presentation: 'fullScreenModal', gestureEnabled: false, animation: 'fade' }} />
       </Stack>
+      <TutoLayer />
       <CelebrationLayer host="app" />
     </ThemeProvider>
   );

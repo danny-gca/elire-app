@@ -1,13 +1,14 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { EraserIcon } from '@/components/eraser-icon';
 import { LoiVoteScale } from '@/components/loi-vote-scale';
-import { VOTE_ROW_INDENT } from '@/components/vote-row';
+import { useSheetReveal } from '@/components/ui/sheet';
 import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Radius, Spacing, Type } from '@/constants/theme';
+import { loiChoice, voteChoice } from '@/constants/votes';
 import { celebrate } from '@/store/celebration-store';
 import { useMarkOf, useVotesStore } from '@/store/votes-store';
 
@@ -20,10 +21,20 @@ export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'propos
   const marker = useMarkOf(id);
   const [editing, setEditing] = useState(false);
   const voted = kind === 'loi' ? loiVote !== undefined : vote !== undefined;
+  const label = kind === 'loi' ? loiChoice(loiVote)?.label : voteChoice(vote)?.label;
+  const reveal = useSheetReveal();
+  const scale = useRef<View>(null);
 
   return (
     <View style={styles.root}>
-      <View style={styles.head}>
+      {/* Toute la ligne se touche pour corriger le vote, comme « A voté ! ». */}
+      <Pressable
+        disabled={!voted}
+        onPress={() => setEditing((v) => !v)}
+        accessibilityRole={voted ? 'button' : undefined}
+        accessibilityLabel={voted ? `Votre vote : ${label}. ${editing ? 'Garder ce vote' : 'Modifier mon vote'}` : undefined}
+        accessibilityState={voted ? { expanded: editing } : undefined}
+        style={({ pressed }) => [styles.head, pressed && { backgroundColor: Colors.pressed }]}>
         <View style={[styles.avatar, { backgroundColor: Markers[marker].soft }]} accessibilityElementsHidden importantForAccessibility="no">
           <Ionicons name="person" size={18} color={Colors.ink} />
         </View>
@@ -31,42 +42,39 @@ export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'propos
           <Text style={[Type.bodyStrong, styles.ink]}>Moi</Text>
           <Text style={[Type.label, styles.muted]}>{voted ? 'Votre vote' : pendingNote}</Text>
         </View>
+        {/* Gomme à gauche : le vote reste aligné sur ceux des candidats. */}
         {voted && (
-          <View style={[styles.band, { backgroundColor: Markers[marker].soft }]}>
-            {kind === 'loi' ? <LoiVoteTag value={loiVote!} /> : <VoteTag value={vote!} />}
+          <View style={styles.vote}>
+            {editing ? <Ionicons name="close" size={18} color={Colors.ink} /> : <EraserIcon size={18} color={Colors.ink} />}
+            <View style={[styles.band, { backgroundColor: Markers[marker].soft }]}>
+              {kind === 'loi' ? <LoiVoteTag value={loiVote!} /> : <VoteTag value={vote!} />}
+            </View>
           </View>
         )}
-      </View>
-      {voted && (
-        <Pressable
-          onPress={() => setEditing((v) => !v)}
-          accessibilityRole="button"
-          accessibilityState={{ expanded: editing }}
-          hitSlop={8}
-          style={({ pressed }) => [styles.erase, pressed && { opacity: 0.6 }]}>
-          <EraserIcon size={16} color={Colors.graphite} />
-          <Text style={[Type.label, styles.muted, styles.underline]}>{editing ? 'Garder ce vote' : 'Modifier mon vote'}</Text>
-        </Pressable>
-      )}
-      {voted && editing && kind === 'proposition' && (
-        <VoteScale
-          value={vote}
-          onVote={(value, point) => {
-            castVote(id, value);
-            setEditing(false);
-            celebrate('small', 'sheet', point);
-          }}
-        />
-      )}
-      {voted && editing && kind === 'loi' && (
-        <LoiVoteScale
-          value={loiVote}
-          onVote={(value, point) => {
-            castLoiVote(id, value);
-            setEditing(false);
-            celebrate('small', 'sheet', point);
-          }}
-        />
+      </Pressable>
+      {/* L'échelle s'ouvre sous la ligne : la feuille défile pour la montrer. */}
+      {voted && editing && (
+        <View ref={scale} onLayout={() => reveal(scale.current)}>
+          {kind === 'proposition' ? (
+            <VoteScale
+              value={vote}
+              onVote={(value, point) => {
+                castVote(id, value);
+                setEditing(false);
+                celebrate('small', 'sheet', point);
+              }}
+            />
+          ) : (
+            <LoiVoteScale
+              value={loiVote}
+              onVote={(value, point) => {
+                castLoiVote(id, value);
+                setEditing(false);
+                celebrate('small', 'sheet', point);
+              }}
+            />
+          )}
+        </View>
       )}
     </View>
   );
@@ -75,12 +83,16 @@ export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'propos
 const styles = StyleSheet.create({
   root: {
     gap: Spacing.one,
-    paddingVertical: 12,
+    // La ligne touchable a sa propre marge de 8 : même hauteur qu'avant.
+    paddingVertical: 4,
   },
   head: {
     flexDirection: 'row',
     alignItems: 'flex-start',
     gap: 12,
+    marginHorizontal: -Spacing.one,
+    padding: Spacing.one,
+    borderRadius: Radius.small,
   },
   avatar: {
     width: 36,
@@ -98,17 +110,10 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     borderRadius: Radius.small,
   },
-  erase: {
+  vote: {
     flexDirection: 'row',
     alignItems: 'center',
-    alignSelf: 'flex-start',
     gap: 6,
-    minHeight: 32,
-    marginLeft: VOTE_ROW_INDENT,
-  },
-  underline: {
-    textDecorationLine: 'underline',
-    textDecorationColor: Colors.graphite,
   },
   ink: {
     color: Colors.ink,

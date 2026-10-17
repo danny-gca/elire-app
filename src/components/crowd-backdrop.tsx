@@ -1,9 +1,11 @@
+import { useIsFocused } from 'expo-router';
 import { useEffect } from 'react';
 import { StyleSheet, useWindowDimensions } from 'react-native';
 import Animated, { FadeIn, FadeOut, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import Svg, { Defs, LinearGradient, Path, Stop } from 'react-native-svg';
 
 import { Colors } from '@/constants/theme';
+import { useBrouhaha } from '@/lib/sound';
 
 const FADE_MS = 600;
 const ROW_GAP = 44;
@@ -85,6 +87,9 @@ export function CrowdBackdrop({ quiet = false }: { quiet?: boolean }) {
   const size = useWindowDimensions();
   // Vote posé : la salle s'efface derrière le résultat.
   const level = useSharedValue(1);
+  // Hors de Voter (onglet quitté), la salle se tait aussi.
+  const focused = useIsFocused();
+  useBrouhaha(quiet || !focused);
   useEffect(() => {
     level.value = withTiming(quiet ? 0.35 : 1, { duration: FADE_MS });
   }, [quiet, level]);

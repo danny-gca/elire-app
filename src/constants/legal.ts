@@ -22,7 +22,7 @@ export const MENTIONS: LegalSection[] = [
     titre: 'Données personnelles',
     paragraphes: [
       "Aucun compte, aucun cookie, aucun traceur. Vos votes et vos réglages restent sur votre appareil : ils ne sont jamais envoyés ni à l'éditeur ni à un tiers.",
-      "Pour les effacer : « Réinitialiser mes votes » dans le Classement, ou supprimez l'app (sur le web, les données du site dans votre navigateur).",
+      "Pour les effacer : « Réinitialiser mes votes » dans l'onglet Cahier, ou supprimez l'app (sur le web, les données du site dans votre navigateur).",
       'Signaler une erreur ouvre GitHub, qui applique ses propres conditions.',
     ],
   },

@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Colors, MARKER_IDS, Markers, MinTarget, Radius, Spacing, Type, type MarkerId } from '@/constants/theme';
+import { playSound } from '@/lib/sound';
 import { useVotesStore } from '@/store/votes-store';
 
 // Les quatre surligneurs du lecteur, en grille 2 × 2 : un trait, son nom. En compact (en-tête de Voter) : les quatre traits seuls.
@@ -18,6 +19,7 @@ export function MarkerPicker({
   const setActive = useVotesStore((s) => s.setMarker);
   const marker = shown === undefined ? active : shown;
   const setMarker = (id: MarkerId) => {
+    playSound('trait');
     setActive(id);
     onSelect?.(id);
   };

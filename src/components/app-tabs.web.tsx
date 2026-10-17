@@ -2,12 +2,13 @@ import { TabList, TabSlot, TabTrigger, Tabs, type TabListProps, type TabTriggerS
 import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 import { Brand } from '@/components/brand';
-import { Colors, MaxContentWidth, Spacing, Type } from '@/constants/theme';
+import { Colors, Markers, MaxContentWidth, Spacing, Type } from '@/constants/theme';
+import { useVotesStore } from '@/store/votes-store';
 
 // Sur le web, les sources SVG du jeu commun : nettes à toute densité d'écran.
 const TAB_ICONS = {
   index: require('@/assets/icons/tabs/voter.svg'),
-  results: require('@/assets/icons/tabs/classement.svg'),
+  cahier: require('@/assets/icons/tabs/cahier.svg'),
   lois: require('@/assets/icons/tabs/lois.svg'),
   explore: require('@/assets/icons/tabs/explorer.svg'),
 };
@@ -23,8 +24,8 @@ export function AppTabs() {
         <TabTrigger name="index" href="/" asChild>
           <TabButton icon={TAB_ICONS.index} wide={wide}>Voter</TabButton>
         </TabTrigger>
-        <TabTrigger name="results" href="/results" asChild>
-          <TabButton icon={TAB_ICONS.results} wide={wide}>Classement</TabButton>
+        <TabTrigger name="cahier" href="/cahier" asChild>
+          <TabButton icon={TAB_ICONS.cahier} wide={wide}>Cahier</TabButton>
         </TabTrigger>
         <TabTrigger name="lois" href="/lois" asChild>
           <TabButton icon={TAB_ICONS.lois} wide={wide}>Lois</TabButton>
@@ -55,16 +56,21 @@ interface TabButtonProps extends TabTriggerSlotProps {
 }
 
 function TabButton({ children, icon, wide, isFocused, ...props }: TabButtonProps) {
+  const marker = useVotesStore((s) => s.marker);
   const color = isFocused ? Colors.ink : Colors.graphite;
+  const size = wide ? 18 : 22;
   return (
     <Pressable
       {...props}
       accessibilityRole="tab"
       accessibilityState={{ selected: !!isFocused }}
       style={({ pressed }) => [wide ? styles.buttonWide : styles.button, pressed && { backgroundColor: Colors.pressed }]}>
-      <View style={[wide ? styles.indicatorWide : styles.indicator, isFocused && { backgroundColor: Colors.ink }]} />
-      <Image source={icon} style={{ width: wide ? 18 : 22, height: wide ? 18 : 22, tintColor: color }} accessibilityIgnoresInvertColors />
-      <Text style={[isFocused ? Type.labelStrong : Type.label, { color }]}>{children}</Text>
+      <Image source={icon} style={{ width: size, height: size, tintColor: color }} accessibilityIgnoresInvertColors />
+      <View>
+        {/* L'onglet actif : son libellé surligné de biais, au surligneur du lecteur. */}
+        {isFocused && <View style={[styles.mark, { backgroundColor: Markers[marker].soft }]} />}
+        <Text style={[isFocused ? Type.labelStrong : Type.label, { color }]}>{children}</Text>
+      </View>
     </Pressable>
   );
 }
@@ -134,20 +140,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     minHeight: 56,
   },
-  indicator: {
+  mark: {
     position: 'absolute',
-    top: 0,
-    left: '25%',
-    right: '25%',
-    height: 2,
-    backgroundColor: 'transparent',
-  },
-  indicatorWide: {
-    position: 'absolute',
-    bottom: 0,
-    left: 14,
-    right: 14,
-    height: 2,
-    backgroundColor: 'transparent',
+    top: 7,
+    bottom: -1,
+    left: -5,
+    right: -5,
+    borderRadius: 3,
+    transform: [{ rotate: '-3deg' }],
   },
 });

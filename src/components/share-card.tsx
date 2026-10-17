@@ -2,7 +2,6 @@ import { forwardRef } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { ReliabilityMark } from '@/components/reliability-mark';
-import { SITE_URL } from '@/constants/app';
 import { Colors, Markers, Numeric, Type, type MarkerId } from '@/constants/theme';
 import { competitionRanks, type CandidateScore } from '@/lib/scoring';
 import { shareSummary, type ShareMode } from '@/lib/share';
@@ -72,7 +71,7 @@ export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ m
         <Image source={require('@/assets/images/splash-icon.png')} style={styles.logo} />
         <View style={styles.footText}>
           <Text style={[Type.labelStrong, styles.ink]} numberOfLines={1}>
-            {SITE_URL.replace(/^https:\/\//, '').replace(/\/$/, '')}
+            élire
           </Text>
           <Text style={[Type.label, styles.muted]}>Sans compte, sans traceur, neutre.</Text>
         </View>

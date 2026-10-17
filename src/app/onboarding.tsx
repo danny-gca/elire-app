@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   AccessibilityInfo,
   Pressable,
@@ -17,17 +17,21 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
+import {
+  Gesture,
+  GestureDetector,
+  GestureHandlerRootView,
+} from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { CandidateAvatar } from "@/components/candidate-avatar";
+import { EditChip } from "@/components/edit-chip";
 import { EditVoteSheet } from "@/components/edit-vote-sheet";
-import { EraserIcon } from "@/components/eraser-icon";
 import { Marked } from "@/components/marked";
 import { MarkerPicker } from "@/components/marker-picker";
 import { PropositionRow } from "@/components/proposition-row";
 import { SweepText } from "@/components/sweep-text";
 import { Button } from "@/components/ui/button";
-import { ResetButton } from "@/components/ui/reset-button";
 import { VoteScale } from "@/components/vote-scale";
 import { VoteTag } from "@/components/vote-tag";
 import { PositionMark, YourVoteMark } from "@/components/your-vote-mark";
@@ -42,6 +46,7 @@ import {
   type MarkerId,
 } from "@/constants/theme";
 import type { VoteValue } from "@/lib/scoring";
+import { playSound } from "@/lib/sound";
 import type { Proposition } from "@/schemas/dataset";
 import { celebrate } from "@/store/celebration-store";
 import { useVotesStore } from "@/store/votes-store";
@@ -49,14 +54,7 @@ import { useVotesStore } from "@/store/votes-store";
 // Le temps de lire une page avant la suivante, montré par le trait du haut.
 const STORY_MS = 15000;
 
-type Demo =
-  | "picker"
-  | "vote"
-  | "eraser"
-  | "source"
-  | "groupe"
-  | "reset"
-  | "start";
+type Demo = "picker" | "vote" | "eraser" | "source" | "groupe" | "start";
 
 interface Story {
   /** Début du titre, en encre. */
@@ -68,7 +66,7 @@ interface Story {
 }
 
 // Les démonstrations à essayer vont en bas, hors des zones de toucher de la page.
-const INTERACTIVE: Demo[] = ["picker", "vote", "eraser", "source", "reset"];
+const INTERACTIVE: Demo[] = ["picker", "vote", "eraser", "source"];
 
 const STORIES: Story[] = [
   {
@@ -78,38 +76,37 @@ const STORIES: Story[] = [
   {
     lead: "Votre surligneur :",
     mark: "vos avis, votre couleur.",
-    body: "Choisissez la couleur de vos marques, elle sert dès la page suivante. Vous pourrez en changer en haut de Voter ; ce que vous avez déjà surligné garde sa couleur.",
+    body: "Choisissez la couleur de vos avis. Vous pourrez la changer plus tard : ce que vous avez déjà surligné garde sa couleur.",
     demo: "picker",
   },
   {
     lead: "Neutralité :",
     mark: "vous jugez la mesure, pas la personne.",
-    body: "Les propositions arrivent sans nom ni parti, dans un ordre mélangé. Notez-les d’Impossible à Parfait, ou « Je ne sais pas » : essayez ci-dessous.",
+    body: "Les propositions arrivent sans nom ni parti, dans un ordre mélangé. Notez-les ! Essayez ci-dessous.",
     demo: "vote",
   },
   {
     lead: "Changer d’avis :",
     mark: "la gomme.",
-    body: "Juste après un vote, « A voté ! » reste 10 secondes en haut de Voter : touchez-le pour corriger. Plus tard, ouvrez une proposition ou un scrutin déjà voté dans Explorer, Lois ou la fiche d’un candidat, puis touchez la gomme. Essayez ci-dessous.",
+    body: "Juste après un vote, touchez « A voté ! » pour le corriger. Vous pourrez aussi modifier vos votes après coup, si vous n’avez pas eu le temps de le faire. Essayez ci-dessous.",
     demo: "eraser",
   },
   {
     lead: "Transparence :",
     mark: "chaque fait a sa source.",
-    body: "Dans Explorer, chaque proposition montre son auteur, sa date et sa source ; chaque scrutin renvoie au site officiel du Parlement. Touchez l’exemple (fictif).",
+    body: "Chaque proposition montre son auteur, sa date et sa source, et chaque scrutin renvoie à sa source. Essayez l’exemple ci-dessous.",
     demo: "source",
   },
   {
     lead: "Responsabilité :",
     mark: "une promesse n’est pas un vote.",
-    body: "Le programme 2027 et les votes réels au Parlement sont séparés. Quand un candidat n’a pas voté lui-même, c’est écrit : vote de son groupe.",
+    body: "Ce qu’un candidat promet et ce qu’il a vraiment voté sont montrés séparément. S’il n’était pas élu au moment d’un vote, on montre comment ont voté les élus de son parti : on appelle ça son « groupe ».",
     demo: "groupe",
   },
   {
     lead: "Confidentialité :",
     mark: "vos avis restent chez vous.",
-    body: "Aucun compte, aucune statistique envoyée. Vos votes restent sur cet appareil, et vous pouvez les effacer à tout moment, avec le bouton en bas du Classement. Essayez-le ci-dessous : cet exemple ne touche pas à vos votes.",
-    demo: "reset",
+    body: "Aucun compte, aucune statistique envoyée. Vos votes restent sur cet appareil, et vous pouvez les effacer à tout moment.",
   },
   {
     lead: "élire",
@@ -129,10 +126,12 @@ export default function OnboardingScreen() {
   const [held, setHeld] = useState(false);
   // Aucun surligneur choisi au départ : « votre couleur » se surligne au premier choix.
   const [picked, setPicked] = useState<MarkerId | null>(null);
-  // Un seul vote fictif suit toute la présentation : posé en Neutralité, corrigé à la gomme, retrouvé ensuite ; chaque toucher compte.
-  const [example, setExample] = useState<ExampleState>({ count: 0 });
-  const voteExample = (vote: VoteValue) =>
-    setExample((e) => ({ vote, count: e.count + 1 }));
+  // Un seul vote fictif suit toute la présentation : posé en Neutralité, corrigé à la gomme, retrouvé ensuite.
+  const [example, setExample] = useState<ExampleState>({});
+  const voteExample = (vote: VoteValue) => {
+    playSound("trait");
+    setExample({ vote });
+  };
   const progress = useSharedValue(0);
   const autoplay = !reducedMotion && !screenReader && !held;
   const last = index === STORIES.length - 1;
@@ -155,6 +154,39 @@ export default function OnboardingScreen() {
     setHeld(false);
     setIndex(Math.max(0, Math.min(STORIES.length - 1, next)));
   };
+
+  // Glisser comme une story : vers la gauche la suivante, vers la droite la précédente.
+  const [swipedAt, setSwipedAt] = useState(0);
+  const tap = (next: number) => {
+    // Un glissement finit par un relâché : ce n'est pas un toucher sur la zone.
+    if (Date.now() - swipedAt > 400) {
+      goTo(next);
+    }
+  };
+  const onSwipe = useCallback(
+    (e?: { translationX: number; velocityX: number }) => {
+      setSwipedAt(Date.now());
+      if (!e) {
+        return;
+      }
+      if ((e.translationX < -48 || e.velocityX < -500) && !last) {
+        goTo(index + 1);
+      } else if (e.translationX > 48 || e.velocityX > 500) {
+        goTo(index - 1);
+      }
+    },
+    [index, last],
+  );
+  const swipe = useMemo(
+    () =>
+      Gesture.Pan()
+        .runOnJS(true)
+        .activeOffsetX([-24, 24])
+        .failOffsetY([-20, 20])
+        .onStart(() => onSwipe())
+        .onEnd((e) => onSwipe(e)),
+    [onSwipe],
+  );
 
   useEffect(() => {
     progress.value = 0;
@@ -198,82 +230,90 @@ export default function OnboardingScreen() {
           ))}
         </View>
 
-        <View style={styles.stage}>
-          {/* Comme une story : à gauche la page d'avant, à droite la suivante. */}
-          <Pressable
-            style={styles.zoneLeft}
-            onPress={() => goTo(index - 1)}
-            accessibilityRole="button"
-            accessibilityLabel="Page précédente"
-          />
-          <Pressable
-            style={styles.zoneRight}
-            onPress={() => (last ? undefined : goTo(index + 1))}
-            accessibilityRole="button"
-            accessibilityLabel="Page suivante"
-          />
-          {story.demo === "start" ? (
-            <Animated.View
-              key={index}
-              entering={FadeIn.duration(260)}
-              style={styles.start}
-            >
-              <Image
-                source={require("@/assets/images/splash-icon.png")}
-                style={styles.startLogo}
-                accessibilityIgnoresInvertColors
+        <GestureHandlerRootView style={styles.stage}>
+          <GestureDetector gesture={swipe}>
+            <View style={styles.stage}>
+              {/* Comme une story : à gauche la page d'avant, à droite la suivante. */}
+              <Pressable
+                style={styles.zoneLeft}
+                onPress={() => tap(index - 1)}
+                accessibilityRole="button"
+                accessibilityLabel="Page précédente"
               />
-              <Text
-                style={[Type.display, styles.ink]}
-                accessibilityRole="header"
-              >
-                élire
-              </Text>
-              <Button
-                label="Commencer à voter"
-                variant="primary"
-                onPress={finish}
-                style={styles.cta}
+              <Pressable
+                style={styles.zoneRight}
+                onPress={() => (last ? undefined : tap(index + 1))}
+                accessibilityRole="button"
+                accessibilityLabel="Page suivante"
               />
-            </Animated.View>
-          ) : (
-            <Animated.View
-              key={index}
-              entering={FadeIn.duration(260)}
-              style={styles.content}
-              pointerEvents="none"
-            >
-              {index === 0 && (
-                <Image
-                  source={require("@/assets/images/splash-icon.png")}
-                  style={styles.logo}
-                  accessibilityIgnoresInvertColors
-                />
-              )}
-              <View
-                accessible
-                accessibilityRole="header"
-                accessibilityLabel={[story.lead, story.mark]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                <Text style={[Type.screenTitle, styles.ink]}>{story.lead}</Text>
-                {story.mark && (
-                  <SweepText
-                    key={sweep ?? "none"}
-                    marker={sweep ?? undefined}
-                    header={false}
-                    style={[Type.screenTitle, styles.ink]}
+              {story.demo === "start" ? (
+                <Animated.View
+                  key={index}
+                  entering={FadeIn.duration(260)}
+                  style={styles.start}
+                >
+                  <Image
+                    source={require("@/assets/images/splash-icon.png")}
+                    style={styles.startLogo}
+                    accessibilityIgnoresInvertColors
+                  />
+                  <Text
+                    style={[Type.display, styles.ink]}
+                    accessibilityRole="header"
                   >
-                    {story.mark}
-                  </SweepText>
-                )}
-              </View>
-              <Text style={[Type.body, styles.soft]}>{story.body}</Text>
-              {story.demo === "groupe" && <GroupeDemo vote={example.vote} />}
-            </Animated.View>
-          )}
-        </View>
+                    élire
+                  </Text>
+                  <Button
+                    label="Commencer à voter"
+                    variant="primary"
+                    onPress={finish}
+                    style={styles.cta}
+                  />
+                </Animated.View>
+              ) : (
+                <Animated.View
+                  key={index}
+                  entering={FadeIn.duration(260)}
+                  style={styles.content}
+                  pointerEvents="none"
+                >
+                  {index === 0 && (
+                    <Image
+                      source={require("@/assets/images/splash-icon.png")}
+                      style={styles.logo}
+                      accessibilityIgnoresInvertColors
+                    />
+                  )}
+                  <View
+                    accessible
+                    accessibilityRole="header"
+                    accessibilityLabel={[story.lead, story.mark]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    <Text style={[Type.screenTitle, styles.ink]}>
+                      {story.lead}
+                    </Text>
+                    {story.mark && (
+                      <SweepText
+                        key={sweep ?? "none"}
+                        marker={sweep ?? undefined}
+                        header={false}
+                        style={[Type.screenTitle, styles.ink]}
+                      >
+                        {story.mark}
+                      </SweepText>
+                    )}
+                  </View>
+                  <Text style={[Type.body, styles.soft]}>{story.body}</Text>
+                  {story.demo === "groupe" && (
+                    <GroupeDemo vote={example.vote} />
+                  )}
+                </Animated.View>
+              )}
+            </View>
+          </GestureDetector>
+        </GestureHandlerRootView>
 
         <View style={styles.bottom}>
           {interactive && (
@@ -291,12 +331,6 @@ export default function OnboardingScreen() {
                 <EraserDemo vote={example.vote} onVote={voteExample} />
               )}
               {story.demo === "source" && <SourceDemo vote={example.vote} />}
-              {story.demo === "reset" && (
-                <ResetDemo
-                  count={example.count}
-                  onErase={() => setExample({ count: 0 })}
-                />
-              )}
             </View>
           )}
           <Text
@@ -313,8 +347,6 @@ export default function OnboardingScreen() {
 
 interface ExampleState {
   vote?: VoteValue;
-  /** Touchers de vote dans la présentation : ce que l'exemple de Confidentialité efface. */
-  count: number;
 }
 
 const EXAMPLE: Proposition = {
@@ -380,26 +412,21 @@ function EraserDemo({
         accessibilityHint="Ouvre la modification du vote, sur l’exemple"
         style={({ pressed }) => [
           styles.demo,
+          vote !== undefined && { backgroundColor: Markers[marker].solid },
           pressed && { backgroundColor: Colors.pressed },
         ]}
       >
         <Text style={[Type.note, styles.ink]}>A voté !</Text>
-        <View style={styles.flex}>
-          <Marked
-            active={vote !== undefined}
-            marker={marker}
-            style={[Type.label, styles.ink]}
-            numberOfLines={1}
-          >
-            {EXAMPLE.titre}
-          </Marked>
-        </View>
-        {vote !== undefined ? (
-          <VoteTag value={vote} />
-        ) : (
-          <Text style={[Type.label, styles.muted]}>Pas encore voté</Text>
-        )}
-        <EraserIcon size={20} color={Colors.ink} />
+        <Text style={[Type.label, styles.ink, styles.flex]} numberOfLines={1}>
+          {EXAMPLE.titre}
+        </Text>
+        <EditChip>
+          {vote !== undefined ? (
+            <VoteTag value={vote} />
+          ) : (
+            <Text style={[Type.label, styles.muted]}>Pas encore voté</Text>
+          )}
+        </EditChip>
       </Pressable>
       <EditVoteSheet
         id={null}
@@ -446,7 +473,7 @@ function SourceDemo({ vote }: { vote?: VoteValue }) {
               entering={FadeIn.duration(180)}
               style={[Type.label, styles.soft]}
             >
-              Ouvre la page de la source dans votre navigateur.
+              La page s’ouvrira dans votre navigateur.
             </Animated.Text>
           )}
         </Animated.View>
@@ -504,40 +531,6 @@ function GroupeDemo({ vote }: { vote?: VoteValue }) {
           <PositionMark label={r.position} />
         </View>
       ))}
-    </View>
-  );
-}
-
-// Le vrai bouton du Classement, branché sur les votes de la présentation : il n'efface jamais vos vrais votes.
-function ResetDemo({ count, onErase }: { count: number; onErase: () => void }) {
-  const [shown, setShown] = useState<number | null>(null);
-  const value = shown ?? count;
-
-  const erase = () => {
-    celebrate("small");
-    // Le compteur descend vite jusqu'à zéro : on voit les votes partir.
-    for (let n = count - 1; n >= 0; n--) {
-      setTimeout(() => setShown(n), (count - n) * 45);
-    }
-    setTimeout(
-      () => {
-        onErase();
-        setShown(null);
-      },
-      (count + 1) * 45,
-    );
-  };
-
-  return (
-    <View style={styles.card}>
-      <View style={styles.cardBody}>
-        <Text style={[Type.bodyStrong, styles.ink]}>
-          {value > 0
-            ? `Exemple : ${value} vote${value > 1 ? "s" : ""}`
-            : "Exemple : aucun vote"}
-        </Text>
-        <ResetButton count={value} onConfirm={erase} />
-      </View>
     </View>
   );
 }

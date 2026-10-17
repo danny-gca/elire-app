@@ -1,13 +1,15 @@
 import type { GestureResponderEvent } from 'react-native';
 import { create } from 'zustand';
 
+import { playSound } from '@/lib/sound';
+
 /** big : un cap franchi (bilan, fin, bienvenue) ; small : un geste confirmé (vote modifié, image partagée). */
 export type CelebrationSize = 'big' | 'small';
 /** Où jouer : l'app, ou au-dessus de la feuille ouverte (une Modal cache la racine). */
 export type CelebrationHost = 'app' | 'sheet';
 
 export const BIG_VARIANTS = ['gerbe', 'fusees', 'surlignage', 'boucles'] as const;
-export const SMALL_VARIANTS = ['etincelles', 'traits'] as const;
+export const SMALL_VARIANTS = ['etincelles', 'traits', 'entoure', 'cadre'] as const;
 export type CelebrationVariant = (typeof BIG_VARIANTS)[number] | (typeof SMALL_VARIANTS)[number];
 
 export interface CelebrationPoint {
@@ -44,6 +46,8 @@ export const useCelebrationStore = create<CelebrationState>((set, get) => ({
   celebrate: (size, host = 'app', origin) => {
     const variant = pick(size, get().last[size]);
     set({ current: { id: Date.now(), size, host, variant, origin }, last: { ...get().last, [size]: variant } });
+    // Chaque fête a sa gerbe de feutres : longue pour un cap, courte pour un geste.
+    playSound(size === 'big' ? 'palier' : 'festif');
   },
   done: (id) => {
     if (get().current?.id === id) {
