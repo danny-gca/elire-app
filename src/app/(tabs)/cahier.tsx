@@ -18,7 +18,7 @@ import { Colors, MaxContentWidth, MinTarget, Numeric, Radius, Spacing, Type, Vot
 import { VOTE_CHOICES } from '@/constants/votes';
 import { plural } from '@/lib/format';
 import { CLASSEMENT_THRESHOLD, opinionCount } from '@/lib/progress';
-import { competitionRanks, computeScores, GROUP_VOTE_WEIGHT, MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, type CandidateScore, type Reliability } from '@/lib/scoring';
+import { denseRanks, computeScores, GROUP_VOTE_WEIGHT, MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, type CandidateScore, type Reliability } from '@/lib/scoring';
 import { fisherYates } from '@/lib/shuffle';
 import { candidats, lois, propositions } from '@/services/dataset';
 import { useTuto, useTutoTarget } from '@/store/tuto-store';
@@ -305,7 +305,7 @@ function Board({ entries, columns, ranked = false }: { entries: CandidateScore[]
   const [inner, setInner] = useState(0);
   const [size, setSize] = useState({ width: 0, height: 0 });
   const slot = inner > 0 ? { width: (inner - GAP * (columns - 1)) / columns } : { flex: 1 };
-  const ranks = competitionRanks(entries);
+  const ranks = denseRanks(entries);
   const tied = (i: number) => ranks.filter((r) => r === ranks[i]).length > 1;
   const rows: CandidateScore[][] = [];
   for (let i = 0; i < entries.length; i += columns) {

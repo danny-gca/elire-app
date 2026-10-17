@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { ReliabilityMark } from '@/components/reliability-mark';
 import { Colors, Markers, Numeric, Type, type MarkerId } from '@/constants/theme';
-import { competitionRanks, type CandidateScore } from '@/lib/scoring';
+import { denseRanks, type CandidateScore } from '@/lib/scoring';
 import { shareSummary, type ShareMode } from '@/lib/share';
 
 // 4:5, rendue en 320 de large pour tenir dans la feuille d'un téléphone, exportée en 1080 x 1350.
@@ -23,7 +23,7 @@ interface ShareCardProps {
 // L'image partagée, capturée telle qu'affichée : le classement, ou en discret l'avancée seule, sans nom.
 export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ mode, scores, answered, marker }, ref) {
   const ranked = scores.filter((s) => s.ranked);
-  const ranks = competitionRanks(ranked);
+  const ranks = denseRanks(ranked);
   const summary = shareSummary(scores);
   const band = { backgroundColor: Markers[marker].soft };
 

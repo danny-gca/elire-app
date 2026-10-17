@@ -515,7 +515,7 @@ Le même mobilier pour chaque candidat, seul le score change ; une seule touche 
 
 ### Named Rules
 
-**The Identical Furniture Rule.** Tous les candidats ont la même fiche, la même taille et la même place. Deux scores égaux partagent le même rang (« ex æquo »), dans un ordre tiré au hasard à chaque lancement.
+**The Identical Furniture Rule.** Tous les candidats ont la même fiche, la même taille et la même place. Deux scores égaux partagent le même rang (« ex æquo »), et le suivant prend le rang d’après (1, 2, 2, 3 : `denseRanks`), dans un ordre tiré au hasard à chaque lancement.
 
 ## Do's and Don'ts
 

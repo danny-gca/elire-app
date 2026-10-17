@@ -188,7 +188,7 @@ export function computeScores(
     .sort((a, b) => group(a) - group(b) || (b.score ?? 0) - (a.score ?? 0) || tie(a) - tie(b));
 }
 
-/** Rang « olympique » : deux scores égaux partagent le même rang (1, 1, 3...). */
-export function competitionRanks(scores: readonly CandidateScore[]): number[] {
-  return scores.map((s) => 1 + scores.filter((o) => (o.score ?? -1) > (s.score ?? -1)).length);
+/** Rang qui se suit : deux scores égaux partagent le même rang, le suivant prend le rang d'après (1, 2, 2, 3...). */
+export function denseRanks(scores: readonly CandidateScore[]): number[] {
+  return scores.map((s) => 1 + new Set(scores.map((o) => o.score ?? -1).filter((v) => v > (s.score ?? -1))).size);
 }
