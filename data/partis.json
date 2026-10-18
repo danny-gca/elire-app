@@ -164,7 +164,7 @@
       "code": "DSV",
       "libelle": "Droite souverainiste",
       "election": "législatives 2024",
-      "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/11/91/9108/index.php"
     },
     "siteWeb": "https://debout-la-france.fr"
   },
@@ -217,7 +217,7 @@
       "code": "EXG",
       "libelle": "Extrême gauche",
       "election": "législatives 2024",
-      "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/11/93/9302/index.php"
     },
     "siteWeb": "https://www.revolutionpermanente.fr"
   },
@@ -263,7 +263,7 @@
       "code": "ECO",
       "libelle": "Écologistes",
       "election": "législatives 2024",
-      "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/75/79/7902/index.php"
     },
     "siteWeb": "https://www.generationecologie.fr"
   },
