@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-16T13:21:39.575Z",
+    "generatedAt": "2026-10-18T17:52:02.790Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
@@ -173,7 +173,7 @@
         "code": "DSV",
         "libelle": "Droite souverainiste",
         "election": "législatives 2024",
-        "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/11/91/9108/index.php"
       },
       "siteWeb": "https://debout-la-france.fr"
     },
@@ -226,7 +226,7 @@
         "code": "EXG",
         "libelle": "Extrême gauche",
         "election": "législatives 2024",
-        "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/11/93/9302/index.php"
       },
       "siteWeb": "https://www.revolutionpermanente.fr"
     },
@@ -272,7 +272,7 @@
         "code": "ECO",
         "libelle": "Écologistes",
         "election": "législatives 2024",
-        "sourceUrl": "https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-1er-tour"
+        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/75/79/7902/index.php"
       },
       "siteWeb": "https://www.generationecologie.fr"
     },
@@ -4820,81 +4820,75 @@
       "chambre": "assemblee_nationale",
       "dateVote": "2024-03-04",
       "statut": "adoptee",
-      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049252033",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1",
       "votes": {
-        "gabriel-attal": {
-          "position": "pour",
-          "typeVote": "individuel",
-          "explication": "Premier ministre ayant ouvert le Congrès à Versailles pour sceller l'inscription dans la Constitution.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
-        },
         "edouard-philippe": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "HOR",
           "groupeNom": "Horizons et apparentés",
-          "explication": "Le groupe Horizons a voté très massivement en faveur de la constitutionnalisation.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "Position majoritaire du groupe : 28 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "jean-luc-melenchon": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "LFI-NUPES",
           "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
-          "explication": "Initiative historique portée par Mathilde Panot et le groupe LFI à l'Assemblée.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "Position majoritaire du groupe : 75 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "marine-tondelier": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "ECOLO",
           "groupeNom": "Écologiste - NUPES",
-          "explication": "Les parlementaires écologistes ont voté à 100% pour la liberté garantie constitutionnelle.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "Position majoritaire du groupe : 22 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "raphael-glucksmann": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
-          "explication": "Place Publique et les socialistes ont unanimement voté pour au Congrès.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "Position majoritaire du groupe : 31 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "marine-le-pen": {
           "position": "pour",
           "typeVote": "individuel",
-          "explication": "A voté pour lors du vote solennel au Congrès, malgré la division de son groupe parlementaire.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "A voté pour au Congrès.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "francois-ruffin": {
           "position": "pour",
           "typeVote": "individuel",
-          "explication": "A voté pour la protection constitutionnelle de l'avortement.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "A voté pour au Congrès.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "fabien-roussel": {
           "position": "pour",
           "typeVote": "individuel",
-          "explication": "Les députés communistes ont voté pour à l'unanimité.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/congres-ivg"
+          "explication": "A voté pour au Congrès.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "bruno-retailleau": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "S'est opposé à l'inscription dans la Constitution, estimant que la liberté d'avorter n'était pas menacée en France.",
-          "sourceUrl": "https://www.senat.fr/scrutin-public/2023-2024/scr2023-138.html"
+          "explication": "A voté contre au Congrès.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "delphine-batho": {
           "position": "pour",
           "typeVote": "individuel",
           "explication": "A voté pour au Congrès.",
-          "sourceUrl": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip"
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         },
         "olivier-becht": {
           "position": "pour",
           "typeVote": "individuel",
           "explication": "A voté pour au Congrès.",
-          "sourceUrl": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip"
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
         }
       },
       "ref": "L-14"
@@ -5636,14 +5630,8 @@
       "chambre": "assemblee_nationale",
       "dateVote": "2023-03-20",
       "statut": "adoptee",
-      "sourceOfficielleUrl": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047445248",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
       "votes": {
-        "gabriel-attal": {
-          "position": "pour",
-          "typeVote": "individuel",
-          "explication": "Ministre puis député de la majorité présidentielle, soutien indéfectible à l'équilibre financier du régime par répartition.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/dossiers/DLR5L16N46950"
-        },
         "edouard-philippe": {
           "position": "pour",
           "typeVote": "groupe_parti",
@@ -5656,7 +5644,7 @@
           "position": "pour",
           "typeVote": "individuel",
           "explication": "Président du groupe Les Républicains au Sénat, a voté pour le compromis de la commission mixte paritaire.",
-          "sourceUrl": "https://www.senat.fr/scrutin-public/2022-2023/scr2022-146.html"
+          "sourceUrl": "https://www.senat.fr/scrutin-public/2022/scr2022-251.html"
         },
         "jean-luc-melenchon": {
           "position": "contre",

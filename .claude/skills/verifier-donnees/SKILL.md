@@ -21,6 +21,23 @@ node .claude/skills/verifier-donnees/scripts/check-sources.mjs --lois           
 - `A LIRE` : extrait non retrouvé mot pour mot, PDF illisible, site anti-robot (Légifrance, Parlement européen), serveur saturé. À ouvrir à la main : ce n'est pas une erreur tant que ce n'est pas lu.
 - Le script ne juge ni le sens ni la neutralité : l'étape 2 reste obligatoire.
 
+### Liens
+
+```bash
+node .claude/skills/verifier-donnees/scripts/check-links.mjs                      # tous les liens de data/ et src/constants/
+node .claude/skills/verifier-donnees/scripts/check-links.mjs --fichier lois.json  # un fichier
+```
+
+Contrôle chaque lien affiché dans l'application (sources, votes, sites, crédits photo) et donne son emplacement. À lancer à chaque audit et avant chaque build : un lien mort fait rejeter l'application par Google Play.
+
+- `ERREUR` (404, 410, domaine disparu) : chercher un lien de remplacement, dans cet ordre :
+  1. la même page à sa nouvelle adresse sur le même site (recherche web `site:<domaine> <titre>`, plan du site, page parente) ;
+  2. une page officielle équivalente : pour un vote, la page du scrutin (Assemblée `dyn/<législature>/scrutins/<n>`, Sénat `scrutin-public/<année>/scr<année>-<n>.html`, liste du dossier `scrutin-public/dossiers/<dossier>_scr.html`, Congrès `dyn/<législature>/scrutins/c<n>`) ;
+  3. pour une proposition seulement, la copie d'archive `web.archive.org` de la page d'origine.
+
+  Le remplaçant doit être lu et contenir vraiment la donnée (citation, vote nominatif, position du groupe), sinon la donnée est **retirée**. Un lien inventé ou deviné est interdit : on l'ouvre avant de l'écrire.
+- `A LIRE` (anti-robot, serveur saturé) : ouvrir avec WebFetch. Si la page existe, rien à faire ; si une page officielle sans blocage dit la même chose, la préférer (le vérificateur de Google Play est aussi un robot).
+
 ## 2. Lecture, élément par élément
 
 Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
