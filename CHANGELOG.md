@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/danny-gca/elire-app/compare/v1.1.1...v1.1.2) (2026-10-18)
+
+
+### Corrections
+
+* ci/simplifier workflows ([#23](https://github.com/danny-gca/elire-app/issues/23)) ([d885b18](https://github.com/danny-gca/elire-app/commit/d885b188c9f8ae303f1fc9a9382e7f37ec69fec4))
+
 ## [1.1.1](https://github.com/danny-gca/elire-app/compare/v1.1.0...v1.1.1) (2026-10-18)
 
 
