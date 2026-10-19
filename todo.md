@@ -4,24 +4,9 @@
 - améliorer le logo de l'app pour utiliser les 4 couleurs de surligneurs
 - Refaire les screenshots pour mobile avec les nouveaux design
 - reinitialiser les votes -> faire un celebrate big().
-
-1. **Attendre l'examen de Google** (quelques jours) : l'app sort du brouillon et prend le nom « élire ».
-2. **Test fermé** : au moins 12 testeurs inscrits (Tests fermés > Testeurs, chacun ouvre le lien et accepte), pendant 14 jours d'affilée. Compte développeur personnel récent : obligatoire avant la production.
-3. **Versions suivantes** : la fusion de la PR de release crée un tag `vX.Y.Z`, qui lance `.eas/workflows/create-production-builds.yml` (build puis envoi en test fermé, piste `alpha` dans `eas.json`). À vérifier à la première release : EAS démarre bien sur le tag. Si la PR de release n'a pas de checks : secret `RELEASE_PLEASE_TOKEN` (fine-grained PAT, Contents, Pull requests et Issues en écriture, dépôt elire-app seul) et Settings > Actions > General > « Allow GitHub Actions to create and approve pull requests ».
-4. **Après les 14 jours** : Tableau de bord > « Demander à publier en production », répondre aux questions sur le test, nouvel examen. Puis passer la piste de `eas.json` à `production` (ou promouvoir chaque version à la main).
-5. **Installer sans le store** : APK `npx eas-cli build -p android --profile preview` ; l'APK universel de la Play Console est bloqué hors Play par la protection automatique (Intégrité des applis).
-
-Doc : <https://docs.expo.dev/submit/android/>
-
-## À vérifier sur un téléphone Android (après le build)
-
-- Fermer une feuille en la glissant vers le bas.
-- Partage natif de l'image du classement.
-- Nouvelle icône, écran de lancement, nom « élire ».
 - La salle derrière les scrutins : fluidité et rendu.
-- Les fêtes : point de départ dans une feuille (décalage possible de la hauteur de la barre d'état), fête de bienvenue en fin d'onboarding.
-
-## Données
+- son du scrutin un peu trop wtf
+- ajoute plus de retour haptique/vibration quand on fait des actions (vote, changement de page navbar...) sans trop abuser
 
 - Portraits libres manquants (l'app affiche les initiales en attendant) : Antoine Mikolajczak, Mira Markovic (nom d'usage « Douchka Markovic »), Selma Labib. Rien de libre sur Commons, Wikidata ni Flickr (recherche du 2026-10-15). Écrire à chaque équipe de campagne (contact sur son site) pour un portrait sous CC BY 4.0, idéalement déposé sur Wikimedia Commons, puis l'ajouter dans `assets/images/candidates/` et `src/constants/credits.ts`. Message type :
   > Bonjour, je développe élire, une application gratuite et neutre de comparaison des candidats à la présidentielle 2027. Chaque candidat y figure avec un portrait sous licence libre, crédité. Pourriez-vous nous fournir un portrait de [Prénom Nom] sous licence CC BY 4.0, avec le nom du photographe à créditer (le plus simple : le publier sur Wikimedia Commons) ? Sans photo libre, la candidate apparaît avec ses initiales, comme tout candidat dans ce cas. Merci.
