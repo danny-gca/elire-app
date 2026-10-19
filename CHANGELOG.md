@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/danny-gca/elire-app/compare/v1.1.2...v1.2.0) (2026-10-19)
+
+
+### Nouveautés
+
+* améliorations et corrections visuelle ([#28](https://github.com/danny-gca/elire-app/issues/28)) ([a7c4db2](https://github.com/danny-gca/elire-app/commit/a7c4db2c10031d8854f471e515bd26367d9afc0e))
+* **android:** optimisation android ([#25](https://github.com/danny-gca/elire-app/issues/25)) ([4a86096](https://github.com/danny-gca/elire-app/commit/4a86096363c108c158c55456625f35db01e129ff))
+
 ## [1.1.2](https://github.com/danny-gca/elire-app/compare/v1.1.1...v1.1.2) (2026-10-18)
 
 
