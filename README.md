@@ -62,7 +62,7 @@ Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à part
 - **UI** : `expo-image`, `react-native-reanimated`, `@expo/vector-icons`.
 - **Données** : Zod 4 + papaparse (outils de build).
 - **Tests** : Jest (`jest-expo`).
-- **Plateformes** : iOS, Android, Web (export statique). Déploiement mobile documenté dans [docs/feature-20261014-deploy.md](docs/feature-20261014-deploy.md).
+- **Plateformes** : iOS, Android, Web (export statique). Déploiement mobile documenté dans [docs/feature-20261014-deploy.md](docs/feature-20261014-deploy.md). Optimisations de build Android (R8, obscurcissement DEX, ProGuard via `expo-build-properties`) documentées dans [docs/feature-20261019-android-opti.md](docs/feature-20261019-android-opti.md).
 
 ## 5. Commandes Développeur
 
