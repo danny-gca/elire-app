@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { ResetButton } from '@/components/ui/reset-button';
 import { Colors, MinTarget, Spacing, Type } from '@/constants/theme';
 import { opinionCount } from '@/lib/progress';
+import { useCelebrationStore } from '@/store/celebration-store';
 import { useSettingsStore } from '@/store/settings-store';
 import { useTutoStore } from '@/store/tuto-store';
 import { useVotesStore } from '@/store/votes-store';
@@ -65,12 +66,12 @@ export default function ReglagesScreen() {
         <Text style={[Type.bodyStrong, styles.ink]} accessibilityRole="header">
           Vos votes
         </Text>
-        {/* Tout recommencer : les astuces reviennent avec les premiers votes. */}
+        {/* Tout recommencer : efface les votes sans toucher aux astuces déjà vues. */}
         <ResetButton
           count={opinionCount(votes, loiVotes)}
           onConfirm={() => {
             resetVotes();
-            resetTutos();
+            useCelebrationStore.getState().celebrate('small');
           }}
         />
       </View>

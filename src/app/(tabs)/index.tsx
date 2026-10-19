@@ -597,7 +597,9 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
         style={({ pressed }) => [styles.lastRow, pressed && { backgroundColor: Colors.pressed }]}>
         {/* « Je ne sais pas » n'est pas une marque : fond neutre. */}
         <CountdownFill remaining={fill} color={votes[id] === UNSURE && !loi ? Colors.ruleSoft : Markers[marker].solid} />
-        <Text style={[Type.note, styles.lastNote, styles.ink]}>A voté !</Text>
+        <Text style={[Type.note, styles.lastNote, styles.ink]} numberOfLines={1}>
+          A voté !
+        </Text>
         <Text style={[Type.label, styles.ink, styles.lastTitle]} numberOfLines={1}>
           {title}
         </Text>
@@ -698,6 +700,7 @@ const styles = StyleSheet.create({
   lastNote: {
     fontSize: 20,
     lineHeight: 24,
+    flexShrink: 0,
   },
   lastTitle: {
     flex: 1,
