@@ -1,8 +1,8 @@
 # À faire
 
-- faire des festivités quand on termine tous les votes
-- afficher le bandeau tips dans Lois et Explorer quand on a tout voter en mode "bravo"
-
+- faire plusieurs celebrate big() quand on termine tous les votes et afficher un message sur le classement et dans "partager" (J'ai voté à tout !)
+- améliorer le logo de l'app pour utiliser les 4 couleurs de surligneurs
+- Refaire les screenshots pour mobile avec les nouveaux design
 
 1. **Attendre l'examen de Google** (quelques jours) : l'app sort du brouillon et prend le nom « élire ».
 2. **Test fermé** : au moins 12 testeurs inscrits (Tests fermés > Testeurs, chacun ouvre le lien et accepte), pendant 14 jours d'affilée. Compte développeur personnel récent : obligatoire avant la production.
