@@ -1,8 +1,9 @@
 # À faire
 
-- faire plusieurs celebrate big() quand on termine tous les votes et afficher un message sur le classement et dans "partager" (J'ai voté à tout !)
+- faire plusieurs celebrate big() d'affilé (avec un peu d'espacement) quand on termine tous les votes et afficher un message sur le classement et dans "partager" (J'ai voté à tout !) Afficher sur la page "Voter" "Vous avez remplis tous les votes, partagez votre classement !" et afficher le bouton "partager" sur la page vote.
 - améliorer le logo de l'app pour utiliser les 4 couleurs de surligneurs
 - Refaire les screenshots pour mobile avec les nouveaux design
+- reinitialiser les votes -> faire un celebrate big().
 
 1. **Attendre l'examen de Google** (quelques jours) : l'app sort du brouillon et prend le nom « élire ».
 2. **Test fermé** : au moins 12 testeurs inscrits (Tests fermés > Testeurs, chacun ouvre le lien et accepte), pendant 14 jours d'affilée. Compte développeur personnel récent : obligatoire avant la production.
