@@ -416,7 +416,9 @@ function EraserDemo({
           pressed && { backgroundColor: Colors.pressed },
         ]}
       >
-        <Text style={[Type.note, styles.ink]}>A voté !</Text>
+        <Text style={[Type.note, styles.ink, styles.noShrink]} numberOfLines={1}>
+          A voté !
+        </Text>
         <Text style={[Type.label, styles.ink, styles.flex]} numberOfLines={1}>
           {EXAMPLE.titre}
         </Text>
@@ -690,5 +692,8 @@ const styles = StyleSheet.create({
   },
   muted: {
     color: Colors.graphite,
+  },
+  noShrink: {
+    flexShrink: 0,
   },
 });

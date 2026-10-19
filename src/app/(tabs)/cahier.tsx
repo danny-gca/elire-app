@@ -55,7 +55,8 @@ export default function CahierScreen() {
   // Non classés dans l'ordre tiré au hasard seul : un score partiel ne doit pas les départager.
   const others = scores.filter((s) => !s.ranked).sort((a, b) => tieOrder.get(a.candidat.id)! - tieOrder.get(b.candidat.id)!);
   const columns = Math.min(width, MaxContentWidth) < 560 ? 3 : 4;
-  useTuto('classement', votedCount >= MIN_VOTES_REQUIRED && ranked.length > 0);
+  useTuto('cahier', true);
+  useTuto('classement', ranked.length > 0);
   const settingsTarget = useTutoTarget('reglages');
 
   return (

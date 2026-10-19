@@ -79,9 +79,9 @@
   {
     "id": "reglages",
     "ecran": "cahier",
-    "quand": "classement",
+    "quand": "cahier",
     "cible": "reglages",
-    "ordre": 2,
+    "ordre": 1,
     "lignes": [
       "Votre surligneur, les sons et les astuces sont dans les Réglages.",
       "Vous pouvez aussi y effacer vos votes."
