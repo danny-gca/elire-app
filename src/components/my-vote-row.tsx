@@ -9,6 +9,7 @@ import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Radius, Spacing, Type } from '@/constants/theme';
 import { loiChoice, voteChoice } from '@/constants/votes';
+import { buzz } from '@/lib/sound';
 import { celebrate } from '@/store/celebration-store';
 import { useMarkOf, useVotesStore } from '@/store/votes-store';
 
@@ -62,6 +63,7 @@ export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'propos
                 castVote(id, value);
                 setEditing(false);
                 celebrate('small', 'sheet', point);
+                buzz('light');
               }}
             />
           ) : (
@@ -71,6 +73,7 @@ export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'propos
                 castLoiVote(id, value);
                 setEditing(false);
                 celebrate('small', 'sheet', point);
+                buzz('light');
               }}
             />
           )}

@@ -10,6 +10,16 @@ export function opinionCount(votes: Record<string, VoteValue>, loiVotes: Record<
   return Object.values(votes).filter((v) => v !== UNSURE).length + Object.keys(loiVotes).length;
 }
 
+/** Tout voté : chaque proposition et chaque scrutin a une réponse, « Je ne sais pas » compris. */
+export function allVoted(
+  votes: Record<string, VoteValue>,
+  loiVotes: Record<string, LoiVoteValue>,
+  propositions: readonly { id: string }[],
+  lois: readonly { id: string }[],
+): boolean {
+  return propositions.every((p) => votes[p.id] !== undefined) && lois.every((l) => loiVotes[l.id] !== undefined);
+}
+
 /** Propositions notées (hors « Je ne sais pas ») de chaque candidat, du plus au moins noté. */
 export function notesPerCandidat(propositions: readonly Proposition[], votes: Record<string, VoteValue>, candidatIds: readonly string[]): number[] {
   const perCandidat = new Map<string, number>(candidatIds.map((id) => [id, 0]));

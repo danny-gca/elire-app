@@ -1,4 +1,4 @@
-// Génère les SVG et PNG de la marque (icône, Android adaptative, favicon, splash) depuis assets/brand/mark.svg, avec Chrome sans interface.
+// Génère les SVG et PNG de la marque (icône, icône Play Store 512, Android adaptative, favicon, splash, bannière Play Store) depuis assets/brand/mark.svg et mark-monochrome.svg, avec Chrome sans interface.
 // Usage : node scripts/build-brand.mjs (google-chrome requis)
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -22,26 +22,24 @@ const stripComments = (input) => {
   return out;
 };
 const mark = stripComments(fs.readFileSync(path.join(BRAND, 'mark.svg'), 'utf8'));
-// Monochrome : la lettre seule, la bande blanche la noierait.
-const white = mark.replace(/<rect[^>]*\/>\s*/, '').replace(/fill="#[0-9A-Fa-f]{6}"/g, 'fill="#FFFFFF"');
+// Monochrome (icône à thème Android) : les mêmes traits en blanc, chaque morceau à sa transparence (mark-monochrome.svg).
+const white = stripComments(fs.readFileSync(path.join(BRAND, 'mark-monochrome.svg'), 'utf8'));
 const paper = `<rect width="1024" height="1024" fill="${PAPER}"/>`;
-// Filet de marge du cahier, à gauche de la lettre.
-const rule = '<rect x="232" y="0" width="10" height="1024" fill="#5B6168"/>';
 // Zone sûre des icônes adaptatives Android : la marque à 62 %, centrée.
 const safe = (body) => `<g transform="translate(194.56 194.56) scale(0.62)">${body}</g>`;
 const svg = (body) => `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">${body}</svg>`;
 
 const VARIANTS = [
-  { svg: 'icon.svg', body: paper + rule + mark, png: [['icon.png', 1024], ['logo.png', 1024]] },
+  { svg: 'icon.svg', body: paper + mark, png: [['icon.png', 1024], ['logo.png', 1024], ['icon-512.png', 512]] },
   { svg: 'adaptive-bg.svg', body: paper, png: [['android-icon-background.png', 1024]] },
   { svg: 'adaptive-fg.svg', body: safe(mark), png: [['android-icon-foreground.png', 1024]] },
   { svg: 'monochrome.svg', body: safe(white), png: [['android-icon-monochrome.png', 1024]] },
-  { svg: 'favicon.svg', body: paper + rule + mark, png: [['favicon.png', 96]] },
+  { svg: 'favicon.svg', body: paper + mark, png: [['favicon.png', 96]] },
   { svg: 'splash.svg', body: mark, png: [['splash-icon.png', 512]] },
 ];
 
 const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'brand-'));
-const chrome = spawn('google-chrome', ['--headless=new', `--remote-debugging-port=${PORT}`, '--no-first-run', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
+const chrome = spawn('google-chrome', ['--headless=new', `--remote-debugging-port=${PORT}`, '--no-first-run', '--allow-file-access-from-files', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let url;
 for (let i = 0; i < 50 && !url; i++) {
@@ -78,6 +76,16 @@ for (const v of VARIANTS) {
   }
   console.log(`✅ ${v.svg}`);
 }
+
+// Bannière du Play Store (1024 x 500) : une page HTML qui reprend l'icône et les polices de l'app, sur fond opaque (PNG sans transparence).
+await send('Emulation.setDefaultBackgroundColorOverride', {});
+await send('Emulation.setDeviceMetricsOverride', { width: 1024, height: 500, deviceScaleFactor: 1, mobile: false });
+await send('Page.navigate', { url: `file://${path.join(BRAND, 'feature-graphic.html')}` });
+await sleep(800);
+await send('Runtime.evaluate', { expression: 'document.fonts.ready.then(() => true)', awaitPromise: true });
+const banner = await send('Page.captureScreenshot', { format: 'png', clip: { x: 0, y: 0, width: 1024, height: 500, scale: 1 } });
+fs.writeFileSync(path.join(IMAGES, 'feature-graphic.png'), Buffer.from(banner.result.data, 'base64'));
+console.log('✅ feature-graphic.html');
 ws.close();
 const exited = new Promise((resolve) => chrome.once('exit', resolve));
 chrome.kill();

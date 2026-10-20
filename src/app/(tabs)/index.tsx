@@ -33,7 +33,7 @@ import { scoreCandidat, UNSURE, type LoiVoteValue, type VoteValue } from '@/lib/
 import { buzz, playSound } from '@/lib/sound';
 import type { Loi } from '@/schemas/dataset';
 import { candidats, getThematique, lois, propositions } from '@/services/dataset';
-import { celebrate } from '@/store/celebration-store';
+import { celebrate, celebrateSeries } from '@/store/celebration-store';
 import { useTuto, useTutoActive, useTutoTarget } from '@/store/tuto-store';
 import { selectNextId, useMarkOf, useVotesStore } from '@/store/votes-store';
 
@@ -109,15 +109,21 @@ export default function VoterScreen() {
   const milestone = nextMilestone(opinions, ranked, candidats.length);
   const pause = !hold && !revealId && isPause(opinions) && pausedAt !== opinions;
   const finished = !current && !currentLoi;
-  // Un bilan qui s'ouvre ou la dernière question : on fête, une fois, au moment où ça arrive.
+  // Un bilan qui s'ouvre : une fête ; la dernière question : une série. Une fois, au moment où ça arrive.
   const reached = useRef({ pause, finished });
   useEffect(() => {
-    if ((pause && !reached.current.pause) || (finished && !reached.current.finished)) {
+    let cancel: (() => void) | undefined;
+    if (finished && !reached.current.finished) {
+      // Sans animation, une seule fête : un seul son.
+      cancel = celebrateSeries('big', reducedMotion ? 1 : 3);
+      buzz('success');
+    } else if (pause && !reached.current.pause) {
       celebrate('big');
       buzz('success');
     }
     reached.current = { pause, finished };
-  }, [pause, finished]);
+    return cancel;
+  }, [pause, finished, reducedMotion]);
 
   const handleVote = (value: VoteValue) => {
     if (!current) {
@@ -125,6 +131,7 @@ export default function VoterScreen() {
     }
     castVote(current.id, value);
     playSound('trait');
+    buzz('light');
     AccessibilityInfo.announceForAccessibility(`Vote enregistré : ${voteChoice(value)?.label ?? ''}`);
     if (reducedMotion) {
       setLastId(current.id);
@@ -209,7 +216,13 @@ export default function VoterScreen() {
   if (finished) {
     return (
       <>
-        <FinishedView onEdit={setEditing} onSeeRanking={() => router.navigate('/cahier')} counter={counter} />
+        <FinishedView
+          onEdit={setEditing}
+          onSeeRanking={() => router.navigate('/cahier')}
+          // Le partage vit dans le Cahier (scores et ex æquo y sont calculés) : on l'y ouvre directement.
+          onShare={opinions >= CLASSEMENT_THRESHOLD && ranked > 0 ? () => router.navigate({ pathname: '/cahier', params: { partager: '1' } }) : undefined}
+          counter={counter}
+        />
         <EditVoteSheet id={editing} onClose={() => setEditing(null)} />
       </>
     );
@@ -612,10 +625,13 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
 function FinishedView({
   onEdit,
   onSeeRanking,
+  onShare,
   counter,
 }: {
   onEdit: (id: string) => void;
   onSeeRanking: () => void;
+  /** Absent tant qu'aucun candidat n'est classé : il n'y a rien à partager. */
+  onShare?: () => void;
   counter: React.ReactNode;
 }) {
   const votes = useVotesStore((s) => s.votes);
@@ -626,9 +642,12 @@ function FinishedView({
     <Screen>
       <ScreenHeader title="Voter" accessory={counter} />
       <View style={styles.finished}>
-        <Text style={[Type.display, styles.ink]}>Vous avez donné votre avis sur toutes les propositions et tous les scrutins.</Text>
+        <Text style={[Type.display, styles.ink]}>
+          {onShare ? 'Vous avez rempli tous les votes, partagez votre classement !' : 'Vous avez donné votre avis sur toutes les propositions et tous les scrutins.'}
+        </Text>
         <Text style={[Type.body, styles.soft]}>Relisez vos votes ci-dessous : touchez une ligne pour le changer.</Text>
-        <Button label="Voir le classement" variant="primary" onPress={onSeeRanking} />
+        {onShare && <Button label="Partager mon classement" icon="share-outline" variant="primary" onPress={onShare} />}
+        <Button label="Voir le classement" variant={onShare ? 'secondary' : 'primary'} onPress={onSeeRanking} />
       </View>
       <View style={styles.list}>
         {order.map((id, i) => {

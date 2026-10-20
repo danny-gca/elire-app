@@ -1,6 +1,6 @@
 # Sons d'élire
 
-Tous les sons sont fabriqués par `scripts/build-sounds.mjs` (Node et ffmpeg), à partir de bruit filtré, de sinus (glissants pour le feutre) et, pour le brouhaha, d'une foule de voix synthétiques (hauteur, syllabes, formants de voyelles, réverbération de salle). Aucun enregistrement ni échantillon tiers : ils suivent la licence du code du dépôt (MIT).
+Tous les sons sont fabriqués par `scripts/build-sounds.mjs` (Node et ffmpeg), à partir de bruit filtré, de sinus (glissants pour le feutre) et, pour le brouhaha, de huit voix synthétiques qui « parlent » (syllabes tirées au hasard : « bla », « po », « pi », « lu », « vo », « ta », « keu »… ; affirmations, questions et exclamations, « euh » et pauses), chaque personne de la salle avec sa variante de voix, superposées à plusieurs distances dans une réverbération de salle. Aucun enregistrement ni échantillon tiers : ils suivent la licence du code du dépôt (MIT).
 
 | Fichier | Moment |
 | --- | --- |
@@ -9,6 +9,7 @@ Tous les sons sont fabriqués par `scripts/build-sounds.mjs` (Node et ffmpeg), �
 | `tampon-1`, `tampon-2` | coup de tampon à l'arrivée d'un scrutin |
 | `palier` | gerbe de traits : bilan tous les 10 votes, fin de la présentation |
 | `festif` | trois coups de feutre distincts : petite fête (vote modifié, image partagée) |
-| `brouhaha` | rumeur de l'hémicycle pendant un scrutin, en boucle (14 s) |
+| `brouhaha` | rumeur de l'hémicycle pendant un scrutin, en boucle (16 s) : les 8 voix, trois fois chacune |
+| `voix/voix-1` à `voix-8` | chaque voix seule, pour l'écouter et la régler (non embarquées dans l'app) |
 
 Pour les remplacer par des prises maison (feutre sur un tableau, tampon sur une table) : même nom, mono, AAC (`.m4a`), courtes (moins de 30 Ko), silence coupé au début. Une prise venue d'ailleurs doit être sous CC0, et créditée ici (auteur, licence, lien).

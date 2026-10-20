@@ -3,6 +3,7 @@ import { AccessibilityInfo } from 'react-native';
 
 import { Button } from '@/components/ui/button';
 import { plural } from '@/lib/format';
+import { buzz } from '@/lib/sound';
 
 interface ResetButtonProps {
   count: number;
@@ -34,6 +35,8 @@ export function ResetButton({ count, onConfirm, armed: controlled, onArmedChange
       setArmed(false);
       onConfirm();
     } else {
+      // Le bouton passe en rouge : un appui de plus efface tout.
+      buzz('warning');
       setArmed(true);
     }
   };

@@ -1,13 +1,15 @@
 import { useIsFocused } from 'expo-router';
-import { useEffect } from 'react';
+import { memo, useEffect, useMemo } from 'react';
 import { StyleSheet, useWindowDimensions } from 'react-native';
-import Animated, { FadeIn, FadeOut, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
-import Svg, { Defs, LinearGradient, Path, Stop } from 'react-native-svg';
+import Animated, { Easing, FadeOut, useAnimatedProps, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming, type SharedValue } from 'react-native-reanimated';
+import Svg, { Defs, G, LinearGradient, Path, Stop } from 'react-native-svg';
 
 import { Colors } from '@/constants/theme';
 import { useBrouhaha } from '@/lib/sound';
 
 const FADE_MS = 600;
+// La salle se remplit rang par rang depuis la tribune, en même temps que la rumeur monte.
+export const CROWD_APPEAR_MS = 1400;
 const ROW_GAP = 44;
 const SEAT_GAP = 30;
 const AISLES = 5;
@@ -24,15 +26,25 @@ function seeded(seed: number) {
 
 const f = (n: number) => n.toFixed(1);
 
-// Plan de l'hémicycle vu de dessus, au trait : pupitres en arcs, allées, chacun tourné vers la tribune (en haut).
-function plan(width: number, height: number) {
+interface Row {
+  desks: string;
+  shoulders: string;
+  heads: string;
+}
+
+const AnimatedG = Animated.createAnimatedComponent(G);
+
+// Plan de l'hémicycle vu de dessus, au trait : pupitres en arcs, allées, chacun tourné vers la tribune (en haut). Un tracé par rang.
+function plan(width: number, height: number): Row[] {
   const random = seeded(11);
   const cx = width / 2;
-  const cy = height * 0.4;
-  let desks = '';
-  let shoulders = '';
-  let heads = '';
-  for (let r = height * 0.16; r < Math.hypot(width / 2, height - cy) + ROW_GAP; r += ROW_GAP) {
+  // Tribune haut placée : la salle occupe presque tout le fond.
+  const cy = height * 0.22;
+  const rows: Row[] = [];
+  for (let r = height * 0.12; r < Math.hypot(width / 2, height - cy) + ROW_GAP; r += ROW_GAP) {
+    let desks = '';
+    let shoulders = '';
+    let heads = '';
     const gap = AISLE_WIDTH / 2 / r;
     // Pupitres : un arc par travée, coupé aux allées, avec un léger tremblé de plume.
     for (let k = 0; k <= AISLES; k++) {
@@ -56,7 +68,8 @@ function plan(width: number, height: number) {
       }
       const x = cx + r * Math.cos(a);
       const y = cy + r * Math.sin(a);
-      if (x < -20 || x > width + 20 || y > height + 20) {
+      // Pas de siège coupé au bord : il est en entier à l'écran, ou il n'est pas dessiné.
+      if (x < 14 || x > width - 14 || y > height - 10) {
         continue;
       }
       // Regard vers la tribune ; épaules en ellipse sous la tête, perpendiculaires au regard.
@@ -77,12 +90,26 @@ function plan(width: number, height: number) {
       const hy = y + uy * 1.5;
       heads += `M${f(hx - hr)} ${f(hy)}a${f(hr)} ${f(hr)} 0 1 0 ${f(2 * hr)} 0a${f(hr)} ${f(hr)} 0 1 0 ${f(-2 * hr)} 0Z`;
     }
+    rows.push({ desks, shoulders, heads });
   }
-  return { desks, shoulders, heads };
+  return rows;
+}
+
+// Un rang apparaît quand la vague venue de la tribune l'atteint.
+function CrowdRow({ row, index, count, reveal }: { row: Row; index: number; count: number; reveal: SharedValue<number> }) {
+  const animatedProps = useAnimatedProps(() => ({ opacity: Math.min(1, Math.max(0, reveal.value * (count + 2) - index)) }));
+  return (
+    <AnimatedG animatedProps={animatedProps}>
+      <Path d={row.desks} stroke="url(#crowd)" strokeWidth={1.5} strokeLinecap="round" fill="none" />
+      <Path d={row.shoulders} stroke="url(#crowd)" strokeWidth={1.2} fill={Colors.paper} />
+      <Path d={row.heads} stroke="url(#crowd)" strokeWidth={1.2} fill={Colors.paper} />
+    </AnimatedG>
+  );
 }
 
 // Pendant un scrutin, la salle derrière l'écran : le plan de l'hémicycle au trait de cahier, sans visage ni couleur.
-export function CrowdBackdrop({ quiet = false }: { quiet?: boolean }) {
+// Mémoïsée : Voter se redessine souvent pendant un scrutin (compte à rebours), la salle ne bouge que si `quiet` change.
+export const CrowdBackdrop = memo(function CrowdBackdrop({ quiet = false }: { quiet?: boolean }) {
   // Taille de la fenêtre, pas du conteneur : un conteneur qui suit le contenu ferait des milliers de rangs.
   const size = useWindowDimensions();
   // Vote posé : la salle s'efface derrière le résultat.
@@ -94,31 +121,37 @@ export function CrowdBackdrop({ quiet = false }: { quiet?: boolean }) {
     level.value = withTiming(quiet ? 0.35 : 1, { duration: FADE_MS });
   }, [quiet, level]);
   const levelStyle = useAnimatedStyle(() => ({ opacity: level.value }));
-  const drawing = plan(size.width, size.height);
+  const reducedMotion = useReducedMotion();
+  const reveal = useSharedValue(reducedMotion ? 1 : 0);
+  useEffect(() => {
+    reveal.value = withTiming(1, { duration: reducedMotion ? 0 : CROWD_APPEAR_MS, easing: Easing.out(Easing.quad) });
+  }, [reveal, reducedMotion]);
+  // Le plan ne se recalcule qu'au changement de taille de la fenêtre.
+  const rows = useMemo(() => plan(size.width, size.height), [size.width, size.height]);
 
   return (
     <Animated.View
-      entering={FadeIn.duration(FADE_MS)}
       exiting={FadeOut.duration(FADE_MS / 2)}
       pointerEvents="none"
       style={StyleSheet.absoluteFill}
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants">
-      <Animated.View style={[StyleSheet.absoluteFill, levelStyle]}>
+      {/* Les fondus passent par une texture : le grand dessin n'est pas recalculé à chaque image. */}
+      <Animated.View style={[StyleSheet.absoluteFill, levelStyle]} renderToHardwareTextureAndroid shouldRasterizeIOS>
         <Svg width={size.width} height={size.height}>
           {/* La salle s'efface vers le haut : l'en-tête reste net. */}
           <Defs>
             <LinearGradient id="crowd" x1="0" y1="0" x2="0" y2={size.height} gradientUnits="userSpaceOnUse">
-              <Stop offset="0.15" stopColor={Colors.ink} stopOpacity={0} />
-              <Stop offset="0.6" stopColor={Colors.ink} stopOpacity={0.16} />
+              <Stop offset="0.1" stopColor={Colors.ink} stopOpacity={0} />
+              <Stop offset="0.45" stopColor={Colors.ink} stopOpacity={0.16} />
               <Stop offset="1" stopColor={Colors.ink} stopOpacity={0.2} />
             </LinearGradient>
           </Defs>
-          <Path d={drawing.desks} stroke="url(#crowd)" strokeWidth={1.5} strokeLinecap="round" fill="none" />
-          <Path d={drawing.shoulders} stroke="url(#crowd)" strokeWidth={1.2} fill={Colors.paper} />
-          <Path d={drawing.heads} stroke="url(#crowd)" strokeWidth={1.2} fill={Colors.paper} />
+          {rows.map((row, i) => (
+            <CrowdRow key={i} row={row} index={i} count={rows.length} reveal={reveal} />
+          ))}
         </Svg>
       </Animated.View>
     </Animated.View>
   );
-}
+});

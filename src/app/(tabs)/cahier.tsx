@@ -1,9 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useFocusEffect, useRouter } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
+import { AllVotedNote } from '@/components/all-voted-note';
 import { CandidateAvatar } from '@/components/candidate-avatar';
 import { CandidatePanel } from '@/components/candidate-panel';
 import { DataFooter } from '@/components/data-footer';
@@ -17,7 +18,7 @@ import { VoteTag } from '@/components/vote-tag';
 import { Colors, MaxContentWidth, MinTarget, Numeric, Radius, Spacing, Type, VoteColors } from '@/constants/theme';
 import { VOTE_CHOICES } from '@/constants/votes';
 import { plural } from '@/lib/format';
-import { CLASSEMENT_THRESHOLD, opinionCount } from '@/lib/progress';
+import { allVoted, CLASSEMENT_THRESHOLD, opinionCount } from '@/lib/progress';
 import { denseRanks, computeScores, GROUP_VOTE_WEIGHT, MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, type CandidateScore, type Reliability } from '@/lib/scoring';
 import { fisherYates } from '@/lib/shuffle';
 import { candidats, lois, propositions } from '@/services/dataset';
@@ -40,7 +41,10 @@ export default function CahierScreen() {
   const votes = useVotesStore((s) => s.votes);
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const { width } = useWindowDimensions();
+  const marker = useVotesStore((s) => s.marker);
   const [sharing, setSharing] = useState(false);
+  // Venu du bouton « Partager » de Voter : la feuille s'ouvre d'elle-même, une fois.
+  const { partager } = useLocalSearchParams<{ partager?: string }>();
   const [tieOrder, setTieOrder] = useState(shuffleTies);
   useFocusEffect(useCallback(() => () => setTieOrder(shuffleTies()), []));
 
@@ -55,8 +59,17 @@ export default function CahierScreen() {
   // Non classés dans l'ordre tiré au hasard seul : un score partiel ne doit pas les départager.
   const others = scores.filter((s) => !s.ranked).sort((a, b) => tieOrder.get(a.candidat.id)! - tieOrder.get(b.candidat.id)!);
   const columns = Math.min(width, MaxContentWidth) < 560 ? 3 : 4;
-  useTuto('cahier', true);
-  useTuto('classement', ranked.length > 0);
+  const complete = allVoted(votes, loiVotes, propositions, lois);
+  const shareOpen = sharing || (partager === '1' && ranked.length > 0);
+  const closeShare = () => {
+    setSharing(false);
+    if (partager) {
+      router.setParams({ partager: undefined });
+    }
+  };
+  // Pas d'astuce sous la feuille de partage : elle attend sa fermeture.
+  useTuto('cahier', !shareOpen);
+  useTuto('classement', !shareOpen && ranked.length > 0);
   const settingsTarget = useTutoTarget('reglages');
 
   return (
@@ -93,6 +106,7 @@ export default function CahierScreen() {
         </View>
       ) : (
         <>
+          {complete && <AllVotedNote marker={marker} style={styles.allVoted} />}
           <Text style={[Type.bodyStrong, styles.ink, styles.heading]} accessibilityRole="header">
             Candidats les plus proches de vos votes
           </Text>
@@ -128,7 +142,7 @@ export default function CahierScreen() {
       )}
 
       <DataFooter />
-      <ShareSheet visible={sharing} onClose={() => setSharing(false)} scores={scores} answered={votedCount} />
+      <ShareSheet visible={shareOpen} onClose={closeShare} scores={scores} answered={votedCount} complete={complete} />
     </Screen>
   );
 }
@@ -409,6 +423,9 @@ const styles = StyleSheet.create({
     borderColor: Colors.rule,
   },
   share: {
+    marginTop: Spacing.two,
+  },
+  allVoted: {
     marginTop: Spacing.two,
   },
   emptyBoard: {

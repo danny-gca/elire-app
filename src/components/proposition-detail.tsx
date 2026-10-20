@@ -4,7 +4,7 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { CandidateAvatar } from '@/components/candidate-avatar';
 import { MyVoteRow } from '@/components/my-vote-row';
 import { Button } from '@/components/ui/button';
-import { reportIssueUrl } from '@/constants/app';
+import { reportUrl } from '@/constants/app';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { formatDate } from '@/lib/format';
 import type { Proposition } from '@/schemas/dataset';
@@ -24,7 +24,7 @@ function domainOf(url: string) {
 // Contenu de la feuille « source et contexte ».
 export function PropositionDetail({ proposition, anonymous = false, onOpenCandidate }: PropositionDetailProps) {
   const auteur = anonymous ? undefined : getCandidat(proposition.candidatId);
-  const report = reportIssueUrl(proposition.ref, proposition.titre);
+  const report = reportUrl(proposition.ref, proposition.titre);
 
   return (
     <View style={styles.root}>

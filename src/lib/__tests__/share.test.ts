@@ -10,5 +10,6 @@ describe('partage', () => {
 
   it("n'écrit aucun nom de candidat dans le texte", () => {
     expect(shareText(48, 'https://exemple.fr')).toBe("48 questions répondues à l'aveugle : je me fais mon avis avec élire. https://exemple.fr");
+    expect(shareText(48, 'https://exemple.fr', true)).toBe("J'ai voté à tout sur élire : 48 questions répondues à l'aveugle. https://exemple.fr");
   });
 });

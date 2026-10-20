@@ -11,7 +11,8 @@ import { Button } from '@/components/ui/button';
 import { ResetButton } from '@/components/ui/reset-button';
 import { Colors, MinTarget, Spacing, Type } from '@/constants/theme';
 import { opinionCount } from '@/lib/progress';
-import { useCelebrationStore } from '@/store/celebration-store';
+import { buzz } from '@/lib/sound';
+import { celebrate } from '@/store/celebration-store';
 import { useSettingsStore } from '@/store/settings-store';
 import { useTutoStore } from '@/store/tuto-store';
 import { useVotesStore } from '@/store/votes-store';
@@ -71,7 +72,9 @@ export default function ReglagesScreen() {
           count={opinionCount(votes, loiVotes)}
           onConfirm={() => {
             resetVotes();
-            useCelebrationStore.getState().celebrate('small');
+            // Une page blanche : un nouveau départ se fête en grand.
+            celebrate('big');
+            buzz('success');
           }}
         />
       </View>

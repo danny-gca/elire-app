@@ -52,7 +52,8 @@ Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à part
 
 - **Univers « cahier annoté »** : papier blanc froid, encre, graphite, surligneur du lecteur réservé à ses votes, Literata (titres), Atkinson Hyperlegible Next (texte) et Caveat (annotations du lecteur), auto-hébergées sous SIL OFL 1.1 dans `assets/fonts/` et chargées par `src/app/_layout.tsx`, deux tailles de lecture (17 et 13). Tokens dans `src/constants/theme.ts`.
 - **Composants** : `src/components/ui/` (Button, ResetButton, Badge, ProgressCounter, SegmentedControl, SearchField, Sheet) et composants métier (`proposition-sheet`, `vote-scale`, `candidate-panel`, `loi-card`, `vote-row`...).
-- **Logo** : source vectorielle `assets/brand/mark.svg`, icônes rendues dans `assets/images/`.
+- **Logo** : la France d'un trait de feutre aux quatre surligneurs, le « é » au centre. Sources `assets/brand/mark.svg` (logo), `mark-monochrome.svg` (icône à thème Android) et `e.svg` (la lettre seule) ; icônes et bannière du Play Store (`assets/brand/feature-graphic.html`) rendues dans `assets/images/` par `node scripts/build-brand.mjs`.
+- **Captures des stores** : `assets/images/screenshots/` (iPhone 6,9 pouces, iPad 13 pouces, téléphone et tablettes 7 et 10 pouces Android), refaites depuis l'export web par `node scripts/build-screenshots.mjs <export>` (votes de démo identiques, candidats et partis anonymes).
 
 ## 4. Stack Technique
 

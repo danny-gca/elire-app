@@ -1,3 +1,5 @@
+import { REPORT_FORM } from '@/constants/app';
+
 // Mentions légales et politique de correction : même texte sur le site (elire-website/src/data/legal.ts), à relire par un avocat.
 export type LegalSection = { titre: string; paragraphes: string[] };
 
@@ -23,7 +25,9 @@ export const MENTIONS: LegalSection[] = [
     paragraphes: [
       "Aucun compte, aucun cookie, aucun traceur. Vos votes et vos réglages restent sur votre appareil : ils ne sont jamais envoyés ni à l'éditeur ni à un tiers.",
       "Pour les effacer : « Réinitialiser mes votes » dans l'onglet Cahier, ou supprimez l'app (sur le web, les données du site dans votre navigateur).",
-      'Signaler une erreur ouvre GitHub, qui applique ses propres conditions.',
+      REPORT_FORM.url
+        ? "Signaler une erreur ouvre un formulaire Google, qui applique ses propres conditions. Rien n'est envoyé avant votre clic sur Envoyer, et votre adresse n'est demandée que si vous voulez une réponse."
+        : 'Signaler une erreur ouvre GitHub, qui applique ses propres conditions.',
     ],
   },
   {

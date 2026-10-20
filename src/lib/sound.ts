@@ -24,7 +24,8 @@ export type SoundName = keyof typeof SOURCES;
 // Discrets : un cahier, pas une salle de jeux.
 const VOLUME: Record<SoundName, number> = { trait: 0.12, feuille: 0.05, tampon: 0.2, palier: 0.14, festif: 0.12 };
 const BROUHAHA = require('@/assets/sounds/brouhaha.m4a');
-const BROUHAHA_VOLUME = 0.018;
+// Des voix qui parlent, plus une rumeur : assez fort pour sentir la salle, sous les sons des gestes.
+const BROUHAHA_VOLUME = 0.04;
 // Vote posé : la salle se tait doucement.
 const QUIET_MS = 1500;
 
@@ -88,12 +89,35 @@ export function playSound(name: SoundName) {
     .catch(() => {});
 }
 
-/** Vibration légère (tampon) ou de réussite (bilan), coupée avec les sons. */
-export function buzz(kind: 'light' | 'success') {
+export type BuzzKind = 'selection' | 'light' | 'success' | 'warning';
+
+// Android : les retours du système (sans moteur de vibration simulé), comme sur iOS.
+const ANDROID_HAPTICS: Record<BuzzKind, Haptics.AndroidHaptics> = {
+  selection: Haptics.AndroidHaptics.Segment_Tick,
+  light: Haptics.AndroidHaptics.Context_Click,
+  success: Haptics.AndroidHaptics.Confirm,
+  warning: Haptics.AndroidHaptics.Reject,
+};
+
+function iosHaptic(kind: BuzzKind) {
+  switch (kind) {
+    case 'selection':
+      return Haptics.selectionAsync();
+    case 'light':
+      return Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    case 'success':
+      return Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    case 'warning':
+      return Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+  }
+}
+
+/** Vibration d'un geste qui compte (onglet, vote, partage, bilan), coupée avec les sons. Jamais au défilement. */
+export function buzz(kind: BuzzKind) {
   if (!enabled() || Platform.OS === 'web') {
     return;
   }
-  const done = kind === 'light' ? Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light) : Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+  const done = Platform.OS === 'android' ? Haptics.performAndroidHapticsAsync(ANDROID_HAPTICS[kind]) : iosHaptic(kind);
   done.catch(() => {});
 }
 
@@ -164,7 +188,8 @@ export function useBrouhaha(quiet: boolean) {
       return;
     }
     setup();
-    crowdTo(quiet ? 0 : BROUHAHA_VOLUME, quiet ? QUIET_MS : 600);
+    // La rumeur monte au rythme de la salle qui se remplit (CROWD_APPEAR_MS).
+    crowdTo(quiet ? 0 : BROUHAHA_VOLUME, quiet ? QUIET_MS : 1400);
     return () => crowdTo(0, 400);
   }, [sons, quiet]);
 }

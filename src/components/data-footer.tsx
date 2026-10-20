@@ -2,14 +2,14 @@ import { Link } from 'expo-router';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Brand } from '@/components/brand';
-import { APP_VERSION, reportIssueUrl } from '@/constants/app';
+import { APP_VERSION, reportUrl } from '@/constants/app';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { formatDate } from '@/lib/format';
 import { metadata } from '@/services/dataset';
 
 // Pied de page : la marque, puis la traçabilité (date des données, signalement d'erreur).
 export function DataFooter() {
-  const report = reportIssueUrl();
+  const report = reportUrl();
   return (
     <View style={styles.root}>
       <View style={styles.brand}>

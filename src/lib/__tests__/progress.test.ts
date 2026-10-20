@@ -1,6 +1,6 @@
 import type { Proposition } from '@/schemas/dataset';
 
-import { averageText, isPause, nextMilestone, notesPerCandidat, opinionCount, rankedCount } from '../progress';
+import { allVoted, averageText, isPause, nextMilestone, notesPerCandidat, opinionCount, rankedCount } from '../progress';
 
 const prop = (id: string, candidatId: string) => ({ id, candidatId }) as Proposition;
 const props = [prop('a1', 'a'), prop('a2', 'a'), prop('b1', 'b'), prop('b2', 'b')];
@@ -8,6 +8,13 @@ const props = [prop('a1', 'a'), prop('a2', 'a'), prop('b1', 'b'), prop('b2', 'b'
 describe('progress', () => {
   it('ne compte pas « Je ne sais pas » comme un avis', () => {
     expect(opinionCount({ a1: 2, a2: 0 }, { l1: 'pour' })).toBe(2);
+  });
+
+  it('tout voté : chaque proposition et chaque scrutin a une réponse, « Je ne sais pas » compris', () => {
+    const lois = [{ id: 'l1' }];
+    expect(allVoted({ a1: 0, a2: 1, b1: 2, b2: -1 }, { l1: 'pour' }, props, lois)).toBe(true);
+    expect(allVoted({ a1: 0, a2: 1, b1: 2 }, { l1: 'pour' }, props, lois)).toBe(false);
+    expect(allVoted({ a1: 0, a2: 1, b1: 2, b2: -1 }, {}, props, lois)).toBe(false);
   });
 
   it('classe un candidat dès 2 propositions notées, hors « Je ne sais pas »', () => {
