@@ -27,37 +27,48 @@ export interface Celebration {
 }
 
 interface CelebrationState {
-  current: Celebration | null;
+  /** Plusieurs fêtes peuvent se chevaucher (série) : aucune ne coupe la précédente. */
+  active: Celebration[];
   last: Partial<Record<CelebrationSize, CelebrationVariant>>;
   celebrate: (size: CelebrationSize, host?: CelebrationHost, origin?: CelebrationPoint) => void;
   done: (id: number) => void;
 }
 
-// Jamais deux fois la même animation d'affilée.
-function pick(size: CelebrationSize, last?: CelebrationVariant): CelebrationVariant {
+// Jamais deux fois la même animation d'affilée, ni deux fois la même dans une série.
+function pick(size: CelebrationSize, avoid: readonly (CelebrationVariant | undefined)[]): CelebrationVariant {
   const pool: readonly CelebrationVariant[] = size === 'big' ? BIG_VARIANTS : SMALL_VARIANTS;
-  const options = pool.filter((v) => v !== last);
-  return options[Math.floor(Math.random() * options.length)];
+  const options = pool.filter((v) => !avoid.includes(v));
+  const from = options.length > 0 ? options : pool;
+  return from[Math.floor(Math.random() * from.length)];
 }
 
+let nextId = 1;
+
 export const useCelebrationStore = create<CelebrationState>((set, get) => ({
-  current: null,
+  active: [],
   last: {},
   celebrate: (size, host = 'app', origin) => {
-    const variant = pick(size, get().last[size]);
-    set({ current: { id: Date.now(), size, host, variant, origin }, last: { ...get().last, [size]: variant } });
-    // Chaque fête a sa gerbe de feutres : longue pour un cap, courte pour un geste.
-    playSound(size === 'big' ? 'palier' : 'festif');
+    const { active, last } = get();
+    const variant = pick(size, [last[size], ...active.map((c) => c.variant)]);
+    set({ active: [...active, { id: nextId++, size, host, variant, origin }], last: { ...last, [size]: variant } });
+    // Chaque fête a sa gerbe de feutres : longue pour un cap, courte pour un geste ; dans une série, la suite est courte.
+    playSound(size === 'big' && !active.some((c) => c.size === 'big') ? 'palier' : 'festif');
   },
   done: (id) => {
-    if (get().current?.id === id) {
-      set({ current: null });
+    if (get().active.some((c) => c.id === id)) {
+      set({ active: get().active.filter((c) => c.id !== id) });
     }
   },
 }));
 
 export const celebrate = (size: CelebrationSize, host?: CelebrationHost, origin?: CelebrationPoint) =>
   useCelebrationStore.getState().celebrate(size, host, origin);
+
+/** Plusieurs fêtes espacées (fin de tous les votes) ; renvoie de quoi annuler celles pas encore parties. */
+export function celebrateSeries(size: CelebrationSize, count = 3, gapMs = 600): () => void {
+  const timers = Array.from({ length: count }, (_, i) => setTimeout(() => celebrate(size), i * gapMs));
+  return () => timers.forEach(clearTimeout);
+}
 
 /** Point touché, dans la fenêtre (sur le web, pageX compte le défilement : clientX) ; au clavier, aucun. */
 export function pointOf(e: GestureResponderEvent): CelebrationPoint | undefined {

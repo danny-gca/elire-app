@@ -3,8 +3,10 @@ import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'r
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Brand } from '@/components/brand';
+import { BottomBarContext } from '@/components/screen';
 import { TAB_ICONS } from '@/constants/tab-icons';
 import { Colors, Markers, MaxContentWidth, Spacing, Type } from '@/constants/theme';
+import { buzz } from '@/lib/sound';
 import { useVotesStore } from '@/store/votes-store';
 
 // Barre du bas sur mobile, barre du haut sur grand écran (tablette paysage / desktop).
@@ -36,7 +38,9 @@ export function AppTabs() {
   return (
     <Tabs style={styles.root}>
       {wide && list}
-      <TabSlot style={styles.slot} />
+      <BottomBarContext.Provider value={!wide}>
+        <TabSlot style={styles.slot} />
+      </BottomBarContext.Provider>
       {!wide && list}
     </Tabs>
   );
@@ -51,7 +55,7 @@ interface TabButtonProps extends TabTriggerSlotProps {
   children: React.ReactNode;
 }
 
-function TabButton({ children, icon, wide, isFocused, ...props }: TabButtonProps) {
+function TabButton({ children, icon, wide, isFocused, onPress, ...props }: TabButtonProps) {
   const marker = useVotesStore((s) => s.marker);
   const color = isFocused ? Colors.ink : Colors.graphite;
   const size = wide ? 18 : 22;
@@ -59,6 +63,13 @@ function TabButton({ children, icon, wide, isFocused, ...props }: TabButtonProps
   return (
     <Pressable
       {...props}
+      onPress={(e) => {
+        // Un changement d'onglet se sent ; retoucher l'onglet actif, non.
+        if (!isFocused) {
+          buzz('selection');
+        }
+        onPress?.(e);
+      }}
       accessibilityRole="tab"
       accessibilityState={{ selected: !!isFocused }}
       style={({ pressed }) => [

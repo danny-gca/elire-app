@@ -2,10 +2,10 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { Colors, Type } from '@/constants/theme';
 
-// Le « é » n'occupe que le centre de son image (x 143-417, y 81-400 sur 512) : on le recadre pour l'aligner.
-const BOX = { x: 143, y: 81, w: 274, h: 319, size: 512 };
+// Le logo (la France d'un trait, le « é » au centre) n'occupe que le centre de son image (x 61-430, y 65-424 sur 512) : on le recadre pour l'aligner.
+const BOX = { x: 61, y: 65, w: 369, h: 359, size: 512 };
 
-// Logo et nom : le « é » au surligneur, puis « élire ».
+// Logo et nom : la France au feutre et son « é », puis « élire ».
 export function Brand({ height = 28 }: { height?: number }) {
   const scale = height / BOX.h;
   const full = BOX.size * scale;

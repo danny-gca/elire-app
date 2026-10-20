@@ -4,7 +4,7 @@ import { Linking, StyleSheet, Text, View } from 'react-native';
 import { MyVoteRow } from '@/components/my-vote-row';
 import { Button } from '@/components/ui/button';
 import { VoteRow } from '@/components/vote-row';
-import { reportIssueUrl } from '@/constants/app';
+import { reportUrl } from '@/constants/app';
 import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
 import { CHAMBRE_LABELS, NATURE_LABELS, STATUT_LABELS, formatDate } from '@/lib/format';
 import { fisherYates } from '@/lib/shuffle';
@@ -25,7 +25,7 @@ function domainOf(url: string) {
 
 // Contenu de la feuille d'un scrutin : le texte, votre vote (modifiable), les positions des candidats, la source.
 export function LoiDetail({ loi, candidatId }: LoiDetailProps) {
-  const report = reportIssueUrl(loi.ref, loi.titre);
+  const report = reportUrl(loi.ref, loi.titre);
   // Groupés par position ; dans chaque groupe, un ordre tiré au hasard à chaque ouverture : personne n'est toujours en tête.
   const entries = useMemo(
     () =>

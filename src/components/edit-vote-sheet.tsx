@@ -7,6 +7,7 @@ import { VoteScale } from '@/components/vote-scale';
 import { Colors, Type } from '@/constants/theme';
 import type { VoteValue } from '@/lib/scoring';
 import { lois, propositions } from '@/services/dataset';
+import { buzz } from '@/lib/sound';
 import { celebrate, type CelebrationPoint } from '@/store/celebration-store';
 import { useVotesStore } from '@/store/votes-store';
 
@@ -46,6 +47,7 @@ export function EditVoteSheet({
   // La fête part du bouton touché, dans la feuille : elle se range dès la fête dessinée, sans attendre qu'elle s'efface.
   const voted = (point?: CelebrationPoint) => {
     celebrate('small', 'sheet', point);
+    buzz('light');
     setTimeout(onClose, reducedMotion ? 0 : CLOSE_AFTER_MS);
   };
 

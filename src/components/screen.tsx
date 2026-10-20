@@ -1,7 +1,11 @@
+import { createContext, useContext } from 'react';
 import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BottomTabInset, Colors, MaxContentWidth, Spacing } from '@/constants/theme';
+
+/** Vrai sous la barre d'onglets du bas : c'est elle qui réserve la marge du système (barre de navigation, indicateur d'accueil). */
+export const BottomBarContext = createContext(false);
 
 // Fond papier, colonne centrée, gouttière de 16 pt.
 export function Screen({
@@ -25,8 +29,10 @@ export function Screen({
   /** Bandeau fixe en bas, au-dessus de la barre d'onglets (le contenu défile au-dessus). */
   footer?: React.ReactNode;
 }) {
+  // Sans barre d'onglets en bas (Réglages, fiches, grand écran), l'écran réserve lui-même la marge du bas.
+  const underBottomBar = useContext(BottomBarContext);
   return (
-    <SafeAreaView edges={['top']} style={styles.safe}>
+    <SafeAreaView edges={underBottomBar ? ['top'] : ['top', 'bottom']} style={styles.safe}>
       {backdrop}
       <View style={styles.fill}>
         {header && (

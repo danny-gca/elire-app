@@ -351,15 +351,20 @@ function Burst({ id, variant, origin, width, height }: { id: number; variant: Ce
 
 // Fête un moment (bilan, fin, bienvenue, vote modifié) : des traits des 4 surligneurs jaillissent du bas puis s'effacent.
 export function CelebrationLayer({ host }: { host: CelebrationHost }) {
-  const current = useCelebrationStore((s) => s.current);
+  const active = useCelebrationStore((s) => s.active);
   const reducedMotion = useReducedMotion();
   const { width, height } = useWindowDimensions();
-  if (!current || current.host !== host || reducedMotion) {
+  const here = active.filter((c) => c.host === host);
+  if (here.length === 0 || reducedMotion) {
     return null;
   }
   return (
     <View pointerEvents="none" style={StyleSheet.absoluteFill} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-      <Burst key={current.id} id={current.id} variant={current.variant} origin={current.origin} width={width} height={height} />
+      {here.map((c) => (
+        <View key={c.id} style={StyleSheet.absoluteFill}>
+          <Burst id={c.id} variant={c.variant} origin={c.origin} width={width} height={height} />
+        </View>
+      ))}
     </View>
   );
 }

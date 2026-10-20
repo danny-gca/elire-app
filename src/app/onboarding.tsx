@@ -46,7 +46,7 @@ import {
   type MarkerId,
 } from "@/constants/theme";
 import type { VoteValue } from "@/lib/scoring";
-import { playSound } from "@/lib/sound";
+import { buzz, playSound } from "@/lib/sound";
 import type { Proposition } from "@/schemas/dataset";
 import { celebrate } from "@/store/celebration-store";
 import { useVotesStore } from "@/store/votes-store";
@@ -143,6 +143,7 @@ export default function OnboardingScreen() {
   const finish = () => {
     completeOnboarding();
     celebrate("big");
+    buzz("success");
     if (router.canGoBack()) {
       router.back();
     } else {

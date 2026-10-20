@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
+import { AllVotedNote } from '@/components/all-voted-note';
 import { ReliabilityMark } from '@/components/reliability-mark';
 import { Colors, Markers, Numeric, Type, type MarkerId } from '@/constants/theme';
 import { denseRanks, type CandidateScore } from '@/lib/scoring';
@@ -9,23 +10,26 @@ import { shareSummary, type ShareMode } from '@/lib/share';
 // 4:5, rendue en 320 de large pour tenir dans la feuille d'un téléphone, exportée en 1080 x 1350.
 export const SHARE_CARD = { width: 320, height: 400, exportWidth: 1080, exportHeight: 1350 };
 const MAX_ROWS = 8;
-// Le « é » du logo n'occupe que le centre de son image (143 à 417 sur 512) : on aligne la lettre, pas l'image.
+// Le logo n'occupe que le centre de son image (61 à 430 sur 512) : on aligne le dessin, pas l'image.
 const LOGO = 36;
-const LOGO_INSET = (143 / 512) * LOGO;
+const LOGO_INSET = (61 / 512) * LOGO;
 
 interface ShareCardProps {
   mode: ShareMode;
   scores: CandidateScore[];
   answered: number;
   marker: MarkerId;
+  complete?: boolean;
 }
 
 // L'image partagée, capturée telle qu'affichée : le classement, ou en discret l'avancée seule, sans nom.
-export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ mode, scores, answered, marker }, ref) {
+export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ mode, scores, answered, marker, complete = false }, ref) {
   const ranked = scores.filter((s) => s.ranked);
   const ranks = denseRanks(ranked);
   const summary = shareSummary(scores);
   const band = { backgroundColor: Markers[marker].soft };
+  // La note « J'ai voté à tout ! » prend la place d'une ligne : la carte garde sa hauteur.
+  const rows = complete ? MAX_ROWS - 1 : MAX_ROWS;
 
   return (
     <View ref={ref} collapsable={false} style={styles.card}>
@@ -33,11 +37,12 @@ export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ m
       <View style={styles.head}>
         <Text style={[Type.caps, styles.muted]}>Présidentielle 2027</Text>
         <Text style={[Type.display, styles.ink]}>{mode === 'complet' ? 'Mon classement' : 'Je me fais mon avis'}</Text>
+        {complete && <AllVotedNote marker={marker} />}
       </View>
 
       {mode === 'complet' ? (
         <View style={styles.list}>
-          {ranked.slice(0, MAX_ROWS).map((s, i) => (
+          {ranked.slice(0, rows).map((s, i) => (
             <View key={s.candidat.id} style={styles.row}>
               {/* Liseré aux couleurs du parti, comme le bandeau du panneau. */}
               <View style={[styles.party, { backgroundColor: s.candidat.couleurParti }]} />
@@ -49,8 +54,8 @@ export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ m
               <Text style={[Type.labelStrong, Numeric, styles.ink, styles.score]}>{s.score} %</Text>
             </View>
           ))}
-          {ranked.length > MAX_ROWS && (
-            <Text style={[Type.label, styles.muted, styles.more]}>et {ranked.length - MAX_ROWS} autres candidats classés</Text>
+          {ranked.length > rows && (
+            <Text style={[Type.label, styles.muted, styles.more]}>et {ranked.length - rows} autres candidats classés</Text>
           )}
         </View>
       ) : (
