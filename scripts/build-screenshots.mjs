@@ -133,7 +133,12 @@ const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/cs
 function resolve(urlPath) {
   const rel = decodeURIComponent(urlPath.replace(BASE, '').split('?')[0]).replace(/^\/+/, '');
   const candidates = [rel, `${rel}.html`, path.join(rel, 'index.html'), path.join(path.dirname(rel), '[id].html')];
-  return candidates.map((c) => path.join(DIST, c)).find((f) => f.startsWith(DIST) && fs.existsSync(f) && fs.statSync(f).isFile());
+  for (const c of candidates) {
+    const f = path.resolve(DIST, c);
+    // Garde contre « ../ » : le fichier doit rester dans l'export.
+    if (!f.startsWith(DIST + path.sep)) continue;
+    if (fs.existsSync(f) && fs.statSync(f).isFile()) return f;
+  }
 }
 const server = http.createServer((req, res) => {
   const file = resolve(req.url ?? '/');
