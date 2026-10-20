@@ -1,6 +1,6 @@
 # Sons d'élire
 
-Tous les sons sont fabriqués par `scripts/build-sounds.mjs` (Node et ffmpeg), à partir de bruit filtré, de sinus (glissants pour le feutre) et, pour le brouhaha, de huit voix synthétiques qui « parlent » (« Blablabla bababa BAH baba ! » : consonnes, formants, intonation), superposées à plusieurs distances dans une réverbération de salle. Aucun enregistrement ni échantillon tiers : ils suivent la licence du code du dépôt (MIT).
+Tous les sons sont fabriqués par `scripts/build-sounds.mjs` (Node et ffmpeg), à partir de bruit filtré, de sinus (glissants pour le feutre) et, pour le brouhaha, de huit voix synthétiques qui « parlent » (syllabes tirées au hasard : « bla », « po », « pi », « lu », « vo », « ta », « keu »… ; affirmations, questions et exclamations, « euh » et pauses), chaque personne de la salle avec sa variante de voix, superposées à plusieurs distances dans une réverbération de salle. Aucun enregistrement ni échantillon tiers : ils suivent la licence du code du dépôt (MIT).
 
 | Fichier | Moment |
 | --- | --- |

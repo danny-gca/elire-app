@@ -81,7 +81,16 @@ Le lot 8 reprend aussi la ligne « Site : refaire les captures d'écran de l'app
 - Brouhaha : chaque voix parle 3 fois, à 3 distances (quelques voisins nets, beaucoup de voix lointaines plus sourdes), dans la réverbération de salle. Boucle de 16 s, sans le grave artificiel (-15 %) de l'ancienne version.
 - Plus fort : +3 dB dans le fichier, et `BROUHAHA_VOLUME` passe de 0,018 à 0,04 (≈ +10 dB au total). La rumeur monte en 1,4 s, au rythme de la salle.
 
-**[À trancher]** Danny écoute `voix-1` à `voix-8` et `brouhaha.m4a`. Réglages possibles : liste `VOICES` (une voix à retirer ou à changer), `BROUHAHA_VOLUME`.
+**[Danny]** Le brouhaha est pas mal, mais les voix sont trop robotiques et pas assez variées : pas que « bla », aussi « blo », « pa », « po », « pi », « pu », « la », « lo », « lu », « va », « vo »…
+
+**[Fait]** Deuxième version des voix :
+
+- syllabes tirées au hasard : 14 attaques (b, p, d, t, g, k, m, n, l, v, f, bl, pl, aucune) et 9 voyelles (a, o, i, u, ou, é, è, e, eu), avec parfois un mot répété (« papapa ») ; v et f en friction, k et g placés selon la voyelle ;
+- phrases en affirmation, question ou exclamation, montée de continuation en fin de groupe, « euh » et pauses, mots appuyés, débit qui varie ;
+- moins robotique : la hauteur glisse dans chaque syllabe et dérive lentement, l'ouverture de la glotte et la brillance suivent le volume (plus de souffle quand c'est doux, moins d'aigus), F1 et F2 bougent à chaque voyelle, formants propres à chaque voix ;
+- dans la salle, chacune des 24 personnes tire sa variante de voix (hauteur, débit, expressivité, formants) ; niveau inchangé.
+
+**[À trancher]** Danny écoute `voix-1` à `voix-8` et `brouhaha.m4a`. Réglages possibles : `ONSETS` et `VOWELS` (poids des syllabes), liste `VOICES`, `BROUHAHA_VOLUME`.
 
 ## 5. La salle derrière les scrutins
 

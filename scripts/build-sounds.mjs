@@ -84,7 +84,6 @@ const LOOP_S = 16;
 let seed = 61;
 const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 const between = (a, b) => a + rand() * (b - a);
-const pickOf = (list) => list[Math.floor(rand() * list.length)];
 
 // Passe-bande à gain constant (biquad RBJ), dont la fréquence peut glisser sans couper le son.
 function resonator(rate = RATE) {
@@ -124,129 +123,210 @@ function klatt() {
   return filter;
 }
 
-// Formants d'une voix d'homme (F1 à F4, Hz) et leurs largeurs ; une voix plus aiguë les multiplie par `tract`.
+// Formants d'une voix d'homme (F1 à F4, Hz) et leurs largeurs ; chaque voix les met à l'échelle de son conduit vocal.
 const PHONES = {
-  a: { f: [700, 1220, 2600, 3500], bw: [90, 100, 140, 220] },
-  o: { f: [480, 880, 2450, 3400], bw: [80, 90, 140, 220] },
+  a: { f: [700, 1300, 2600, 3500], bw: [90, 100, 140, 220] },
+  o: { f: [460, 860, 2450, 3400], bw: [80, 90, 140, 220] },
+  i: { f: [290, 2250, 2950, 3600], bw: [60, 100, 150, 220] },
+  u: { f: [290, 1800, 2200, 3300], bw: [60, 100, 150, 220] },
+  ou: { f: [310, 760, 2300, 3300], bw: [60, 90, 140, 220] },
   é: { f: [400, 2050, 2650, 3500], bw: [70, 100, 150, 220] },
+  è: { f: [560, 1850, 2550, 3500], bw: [80, 100, 150, 220] },
   e: { f: [480, 1450, 2450, 3400], bw: [80, 100, 140, 220] },
-  l: { f: [360, 1100, 2700, 3400], bw: [90, 120, 180, 250] },
+  eu: { f: [400, 1500, 2300, 3400], bw: [70, 100, 140, 220] },
+  l: { f: [360, 1200, 2700, 3400], bw: [90, 120, 180, 250] },
   m: { f: [270, 1050, 2300, 3300], bw: [140, 300, 350, 400] },
-  // Occlusives : d'où partent les formants à l'ouverture des lèvres (b, p) ou de la langue (d).
-  b: { f: [220, 850, 2200, 3300], bw: [100, 120, 180, 250] },
-  d: { f: [250, 1750, 2650, 3400], bw: [100, 120, 180, 250] },
+  n: { f: [270, 1500, 2500, 3300], bw: [140, 300, 350, 400] },
+  // Lieux d'articulation : d'où partent les formants à l'ouverture (lèvres, dents) ; le voile du palais suit la voyelle.
+  labial: { f: [220, 850, 2200, 3300], bw: [100, 120, 180, 250] },
+  dental: { f: [250, 1750, 2650, 3400], bw: [100, 120, 180, 250] },
 };
-
-// Une syllabe : consonnes d'attaque (b, d, p, l, m), puis la voyelle.
-function syllable(onset, vowel, len, stress, pitch) {
-  const segs = [];
-  for (const c of onset) {
-    if (c === 'b' || c === 'd' || c === 'p') {
-      const place = c === 'd' ? 'd' : 'b';
-      // Occlusion : bouche fermée, seule une sourde vibration passe (rien pour p).
-      segs.push({ phone: place, dur: between(0.035, 0.055), av: c === 'p' ? 0 : 0.12, pitch });
-      // Explosion : un bref souffle à l'ouverture, plus aigu pour d.
-      segs.push({ phone: place, dur: 0.01, av: c === 'p' ? 0 : 0.3, an: 0.5 * stress, burst: c === 'd' ? 3200 : 1100, pitch });
-      if (c === 'p') {
-        segs.push({ phone: place, dur: 0.025, av: 0, an: 0.2, burst: 1500, pitch });
-      }
-    } else {
-      segs.push({ phone: c, dur: between(0.045, 0.065), av: c === 'm' ? 0.45 : 0.7, pitch });
+// Consonnes : lieu, voisement, fréquence du bruit (explosion ou friction), souffle après l'explosion des sourdes.
+const CONSONANTS = {
+  b: { place: 'labial', voiced: true, burst: 1000 },
+  p: { place: 'labial', voiced: false, burst: 1100, asp: 0.025 },
+  d: { place: 'dental', voiced: true, burst: 3600 },
+  t: { place: 'dental', voiced: false, burst: 4000, asp: 0.03 },
+  g: { place: 'velar', voiced: true, burst: 2000 },
+  k: { place: 'velar', voiced: false, burst: 2200, asp: 0.035 },
+  v: { place: 'labial', voiced: true, fric: 4500 },
+  f: { place: 'labial', voiced: false, fric: 5500 },
+  m: { nasal: 'm' },
+  n: { nasal: 'n' },
+  l: { liquid: true },
+};
+// Attaques et voyelles tirées au hasard, avec leurs poids : « bla », « po », « pi », « lu », « vo », « ta », « keu »…
+const ONSETS = { b: 9, p: 9, l: 9, m: 7, d: 6, t: 6, v: 6, k: 5, n: 5, f: 3, g: 3, bl: 4, pl: 3, '': 3 };
+const VOWELS = { a: 22, o: 12, i: 11, é: 10, ou: 8, è: 8, e: 8, u: 7, eu: 6 };
+function weighted(table) {
+  const entries = Object.entries(table);
+  let r = rand() * entries.reduce((n, [, w]) => n + w, 0);
+  for (const [key, w] of entries) {
+    r -= w;
+    if (r <= 0) {
+      return key;
     }
   }
-  segs.push({ phone: vowel, dur: len, av: stress, pitch, vowel: true });
+  return entries[0][0];
+}
+const ONSET_LETTERS = { bl: ['b', 'l'], pl: ['p', 'l'], '': [] };
+const randomSyllable = () => {
+  const onset = weighted(ONSETS);
+  return { onset: ONSET_LETTERS[onset] ?? [onset], vowel: weighted(VOWELS) };
+};
+
+// Une voyelle n'est jamais deux fois la même : F1 et F2 bougent de quelques pour cent.
+const varied = (shape) => ({ f: shape.f.map((f, j) => (j < 2 ? f * between(0.94, 1.06) : f)), bw: shape.bw });
+// Le voile du palais (k, g) se place près de la voyelle qui suit.
+const velar = (vowel) => {
+  const f2 = Math.min(2300, Math.max(1300, PHONES[vowel].f[1] * 1.05 + 200));
+  return { f: [250, f2, f2 + 300, 3400], bw: [100, 120, 180, 250] };
+};
+
+// Une syllabe : consonnes d'attaque puis la voyelle, qui glisse de la hauteur `p0` à `p1`.
+function syllable({ onset, vowel }, len, amp, p0, p1) {
+  const segs = [];
+  for (const c of onset) {
+    const k = CONSONANTS[c];
+    const shape = k.place === 'velar' ? velar(vowel) : PHONES[k.place ?? k.nasal ?? 'l'];
+    if (k.burst) {
+      // Occlusion (une sourde vibration pour les voisées), explosion, puis souffle pour les sourdes.
+      segs.push({ shape, dur: between(0.03, 0.055), av: k.voiced ? 0.1 : 0, p0, p1: p0 });
+      segs.push({ shape, dur: between(0.007, 0.012), av: k.voiced ? 0.25 : 0, an: 0.5 * amp, burst: k.burst * between(0.85, 1.15), p0, p1: p0 });
+      if (k.asp) {
+        segs.push({ shape, dur: k.asp * between(0.7, 1.3), av: 0, an: 0.18, burst: 1500, p0, p1: p0 });
+      }
+    } else if (k.fric) {
+      // Friction continue entre les lèvres et les dents, voisée pour v.
+      segs.push({ shape, dur: between(0.06, 0.09), av: k.voiced ? 0.35 : 0, an: k.voiced ? 0.12 : 0.22, burst: k.fric, steady: true, p0, p1: p0 });
+    } else {
+      segs.push({ shape, dur: between(0.045, 0.075), av: k.nasal ? 0.45 : 0.7, p0, p1: p0 });
+    }
+  }
+  segs.push({ shape: varied(PHONES[vowel]), dur: len, av: amp, p0, p1, vowel: true });
   return segs;
 }
 
-// Mots de « bla » : attaques de chaque syllabe. B : le « BAH ! » appuyé.
-const WORDS = [['bl', 'bl', 'bl'], ['b', 'b', 'b'], ['b', 'b', 'b', 'b', 'b'], ['b', 'b'], ['bl', 'b'], ['m', 'b', 'l'], ['d', 'b', 'd'], ['p', 'b']];
-const vowelOf = () => (rand() < 0.75 ? 'a' : pickOf(['o', 'é', 'e']));
-
-// Une phrase : 3 à 6 mots, un « BAH » appuyé de temps en temps, une fin exclamative. L'intonation descend au fil de la phrase.
+// Une phrase : affirmation, question ou exclamation. L'intonation descend au fil de la phrase, monte en fin de groupe
+// (comme en français), puis tombe, monte ou s'exclame à la fin ; parfois un « euh », une pause, un mot appuyé.
 function phrase(p) {
-  const words = Array.from({ length: Math.floor(between(3, 7)) }, () => pickOf(WORDS));
-  if (rand() < 0.6) {
-    words.splice(Math.floor(between(1, words.length)), 0, ['B']);
-  }
+  const kind = weighted({ affirmation: 5, question: 2, exclamation: 3 });
+  const words = Array.from({ length: Math.floor(between(2, 7)) }, () => {
+    const n = Number(weighted({ 1: 3, 2: 3.5, 3: 2.5, 4: 1 }));
+    // Une fois sur trois, la même syllabe répétée : « papapa », « blablabla ».
+    const first = randomSyllable();
+    return Array.from({ length: n }, () => (rand() < 0.35 ? first : randomSyllable()));
+  });
   const count = words.reduce((n, w) => n + w.length, 0);
-  const base = Math.max(0.05, 1 / p.rate - 0.06);
+  const tempo = between(0.85, 1.15);
+  const base = 1 / (p.rate * tempo);
   const segs = [];
+  if (rand() < 0.12) {
+    segs.push(...syllable({ onset: [], vowel: 'eu' }, between(0.22, 0.38), 0.7, 1, 0.9));
+    segs.push({ shape: PHONES.e, dur: between(0.08, 0.2), av: 0, p0: 1, p1: 1 });
+  }
   let k = 0;
+  let pitch = 1.05;
   words.forEach((word, w) => {
     const last = w === words.length - 1;
-    word.forEach((onset, i) => {
-      const fall = 1.12 - 0.22 * (k++ / count);
+    word.forEach((syl, i) => {
+      const decl = 1.08 - 0.18 * (k++ / count);
       const end = i === word.length - 1;
-      if (onset === 'B') {
-        segs.push(...syllable('b', 'a', base * 1.9, 1.5, fall * (1 + 1.2 * p.expr)));
-      } else {
-        const accent = end ? 1 + (last ? 1 : 0.5) * p.expr : 1;
-        const len = base * between(0.8, 1.2) * (end && last ? 1.6 : 1);
-        segs.push(...syllable(onset, vowelOf(), len, end ? 1.1 : 0.9, fall * accent));
+      const stressed = rand() < 0.15;
+      let target = decl * (1 + between(-0.05, 0.05) * p.expr * 4) * (stressed ? 1 + p.expr * 0.6 : 1);
+      let len = base * between(0.65, 1.45) * (stressed ? 1.3 : 1);
+      let amp = between(0.75, 1.15) * (stressed ? 1.25 : 1);
+      if (end && !last) {
+        // Montée de continuation : le groupe n'est pas fini.
+        target *= 1 + between(0.05, 0.13) * (p.expr * 3);
       }
+      if (end && last) {
+        len *= 1.7;
+        if (kind === 'question') {
+          segs.push(...syllable(syl, len, amp, target, target * (1 + 0.9 * p.expr + 0.1)));
+          return;
+        }
+        const peak = kind === 'exclamation' ? 1 + 0.8 * p.expr : 1;
+        amp *= kind === 'exclamation' ? 1.3 : 0.85;
+        segs.push(...syllable(syl, len, amp, target * peak, target * (kind === 'exclamation' ? 0.95 : 0.8)));
+        return;
+      }
+      // La hauteur glisse de la syllabe précédente vers la suivante, jamais en paliers.
+      segs.push(...syllable(syl, len, amp, (pitch + target) / 2, target));
+      pitch = target;
     });
-    // Entre deux mots, parfois rien : la parole est liée.
-    segs.push({ phone: 'e', dur: rand() < 0.3 ? 0.01 : between(0.04, 0.12), av: 0, pitch: 1 });
+    // Entre deux mots, parfois rien (la parole est liée), parfois une vraie pause.
+    const gap = rand() < 0.35 ? 0.005 : rand() < 0.1 ? between(0.2, 0.35) : between(0.03, 0.14);
+    segs.push({ shape: PHONES.e, dur: gap, av: 0, p0: pitch, p1: pitch });
   });
-  // « ! » : le souffle qui finit la phrase.
-  segs.push({ phone: 'a', dur: 0.06, av: 0, an: 0.08, burst: 1200, pitch: 0.9 });
+  // Le souffle qui finit la phrase.
+  segs.push({ shape: PHONES.a, dur: 0.06, av: 0, an: 0.08, burst: 1200, p0: 0.9, p1: 0.9 });
   return segs;
 }
 
 const CTRL = 16;
 const ease = (tau) => 1 - Math.exp(-CTRL / (RATE * tau));
 
-// Synthèse : onde glottale (Rosenberg), quatre formants en cascade, souffle et explosions en parallèle.
+// Synthèse : onde glottale (Rosenberg) dont l'ouverture et la brillance suivent le volume, quatre formants en cascade
+// propres à chaque voix, souffle, explosions et frictions en parallèle, hauteur qui dérive lentement.
 function render(segs, p) {
   const total = Math.floor(segs.reduce((n, s) => n + s.dur, 0) * RATE);
   const out = new Float32Array(total);
   const tract = [klatt(), klatt(), klatt(), klatt()];
-  const burstFilter = resonator();
-  const start = PHONES[segs[0].phone];
-  const freqs = start.f.map((f) => f * p.tract);
-  const bws = [...start.bw];
-  let [f0, av, phase, flowPrev, jitter, shimmer] = [p.f0, 0, 0, 0, 0, 1];
+  const noiseFilter = resonator();
+  const freqs = segs[0].shape.f.map((f, j) => f * p.fscale[j]);
+  const bws = [...segs[0].shape.bw];
+  let [f0, av, phase, flowPrev, jitter, shimmer, drift, tilt] = [p.f0, 0, 0, 0, 0, 1, 0, 0];
   let t = 0;
-  let prevPlosive = false;
+  let prevBurst = false;
   for (const seg of segs) {
     const len = Math.floor(seg.dur * RATE);
-    const target = PHONES[seg.phone];
-    // Après une explosion, les formants filent vers la voyelle : c'est ce glissement qui fait entendre « ba ».
-    const kf = ease(prevPlosive ? 0.012 : 0.02);
+    // Après une explosion, les formants filent vers la voyelle : c'est ce glissement qui fait entendre « ba », « da », « ka ».
+    const kf = ease(prevBurst ? 0.012 : 0.02);
     if (seg.burst) {
-      burstFilter.tune(seg.burst, seg.burst * 0.8);
+      noiseFilter.tune(seg.burst, seg.burst * (seg.steady ? 0.6 : 0.8));
     }
     for (let i = 0; i < len && t < total; i++, t++) {
+      const u = i / len;
       if (i % CTRL === 0) {
         for (let j = 0; j < 4; j++) {
-          freqs[j] += (target.f[j] * p.tract - freqs[j]) * kf;
-          bws[j] += (target.bw[j] - bws[j]) * kf;
+          freqs[j] += (seg.shape.f[j] * p.fscale[j] - freqs[j]) * kf;
+          bws[j] += (seg.shape.bw[j] - bws[j]) * kf;
           tract[j].tune(freqs[j], bws[j]);
         }
-        f0 += (p.f0 * seg.pitch - f0) * ease(0.04);
-        av += (seg.av - av) * ease(0.006);
+        // Une voix ne tient jamais sa note : petite dérive lente, plus marquée chez les voix rugueuses.
+        drift += (rand() - 0.5) * 0.008 * p.rough - drift * 0.003;
+        const target = p.f0 * (seg.p0 + (seg.p1 - seg.p0) * u) * (1 + drift);
+        f0 += (target - f0) * ease(0.025);
+        // La voyelle s'affaiblit un peu en se tenant.
+        av += (seg.av * (seg.vowel ? 1 - 0.25 * u : 1) - av) * ease(0.006);
       }
       phase += (f0 * (1 + jitter)) / RATE;
       if (phase >= 1) {
         // Chaque période un peu différente : une voix humaine n'est jamais stable.
         phase -= 1;
-        jitter = (rand() - 0.5) * 0.02 * p.rough;
-        shimmer = 1 + (rand() - 0.5) * 0.12 * p.rough;
+        jitter = (rand() - 0.5) * 0.025 * p.rough;
+        shimmer = 1 + (rand() - 0.5) * 0.15 * p.rough;
       }
-      const flow = phase < 0.4 ? 0.5 * (1 - Math.cos((Math.PI * phase) / 0.4)) : phase < 0.56 ? Math.cos((Math.PI * (phase - 0.4)) / 0.32) : 0;
+      // Voix douce : glotte plus ouverte, plus de souffle ; voix forte : fermeture nette, plus d'aigus.
+      const open = 0.45 + 0.25 * (1 - Math.min(1, av)) + p.breath;
+      const [tp, tn] = [open * 0.72, open * 0.28];
+      const flow = phase < tp ? 0.5 * (1 - Math.cos((Math.PI * phase) / tp)) : phase < tp + tn ? Math.cos((Math.PI * (phase - tp)) / (2 * tn)) : 0;
       const glottis = ((flow - flowPrev) * RATE) / f0;
       flowPrev = flow;
-      const breath = (rand() * 2 - 1) * p.breath * (0.3 + flow);
-      let x = av * shimmer * (glottis * 0.25 + breath);
+      tilt += (0.18 + 0.35 * Math.min(1, av) * p.bright) * (glottis - tilt);
+      const breath = (rand() * 2 - 1) * (p.breath + 0.03) * (0.3 + flow);
+      let x = av * shimmer * (tilt * 0.4 + breath);
       for (const f of tract) {
         x = f(x);
       }
       if (seg.an) {
-        x += burstFilter((rand() * 2 - 1) * seg.an * Math.exp((-3 * i) / len));
+        const shape = seg.steady ? Math.sin(Math.PI * u) : Math.exp(-3 * u);
+        x += noiseFilter((rand() * 2 - 1) * seg.an * shape);
       }
       out[t] = x;
     }
-    prevPlosive = !!seg.burst;
+    prevBurst = !!seg.burst && !seg.steady;
   }
   return out;
 }
@@ -267,17 +347,28 @@ function speak(p, total, pause) {
   return out.map((x) => (x / rms) * 0.1);
 }
 
-// Huit voix : hauteur, longueur du conduit vocal, débit, expressivité, souffle, rugosité.
+// Huit voix : hauteur, longueur du conduit vocal, débit, expressivité, souffle, rugosité, brillance.
 const VOICES = [
-  { f0: 100, tract: 1.0, rate: 4.5, expr: 0.15, breath: 0.06, rough: 1 },
-  { f0: 210, tract: 1.17, rate: 6.5, expr: 0.3, breath: 0.1, rough: 0.8 },
-  { f0: 135, tract: 1.03, rate: 6, expr: 0.35, breath: 0.05, rough: 1.2 },
-  { f0: 175, tract: 1.12, rate: 5, expr: 0.2, breath: 0.12, rough: 0.9 },
-  { f0: 110, tract: 0.97, rate: 3.8, expr: 0.12, breath: 0.15, rough: 1.6 },
-  { f0: 235, tract: 1.2, rate: 7, expr: 0.25, breath: 0.08, rough: 0.7 },
-  { f0: 120, tract: 1.02, rate: 5.5, expr: 0.22, breath: 0.07, rough: 1 },
-  { f0: 195, tract: 1.15, rate: 5.5, expr: 0.2, breath: 0.1, rough: 0.9 },
+  { f0: 100, tract: 1.0, rate: 4.5, expr: 0.15, breath: 0.06, rough: 1, bright: 0.8 },
+  { f0: 210, tract: 1.17, rate: 6.5, expr: 0.3, breath: 0.1, rough: 0.8, bright: 1 },
+  { f0: 135, tract: 1.03, rate: 6, expr: 0.35, breath: 0.05, rough: 1.2, bright: 1.1 },
+  { f0: 175, tract: 1.12, rate: 5, expr: 0.2, breath: 0.12, rough: 0.9, bright: 0.7 },
+  { f0: 110, tract: 0.97, rate: 3.8, expr: 0.12, breath: 0.15, rough: 1.6, bright: 0.6 },
+  { f0: 235, tract: 1.2, rate: 7, expr: 0.25, breath: 0.08, rough: 0.7, bright: 1.2 },
+  { f0: 120, tract: 1.02, rate: 5.5, expr: 0.22, breath: 0.07, rough: 1, bright: 0.9 },
+  { f0: 195, tract: 1.15, rate: 5.5, expr: 0.2, breath: 0.1, rough: 0.9, bright: 0.85 },
 ];
+// Chaque personne de la salle tire sa variante d'une voix : hauteur, débit, expressivité, et des formants à elle.
+const person = (v, spread = 1) => {
+  const tract = v.tract * (1 + between(-0.03, 0.03) * spread);
+  return {
+    ...v,
+    f0: v.f0 * (1 + between(-0.12, 0.12) * spread),
+    rate: v.rate * (1 + between(-0.15, 0.15) * spread),
+    expr: v.expr * (1 + between(-0.2, 0.3) * spread),
+    fscale: [0, 1, 2, 3].map(() => tract * between(0.95, 1.05)),
+  };
+};
 
 // Réverbération de salle (peignes de Schroeder) : les mots se fondent, il ne reste que la rumeur.
 function room(input) {
@@ -308,7 +399,7 @@ function room(input) {
 
 function voices() {
   fs.mkdirSync(path.join(DIR, 'voix'), { recursive: true });
-  VOICES.forEach((p, i) => encode(`voix/voix-${i + 1}`, speak(p, 6 * RATE, [0.4, 0.6]), RATE, 0.8, 'highpass=f=80,lowpass=f=5000'));
+  VOICES.forEach((v, i) => encode(`voix/voix-${i + 1}`, speak(person(v, 0), 8 * RATE, [0.4, 0.7]), RATE, 0.8, 'highpass=f=80,lowpass=f=5000'));
 }
 
 function brouhaha() {
@@ -322,7 +413,7 @@ function brouhaha() {
       const gain = 1 - 0.75 * far;
       const k = 0.25 + 0.6 * (1 - far);
       let lp = 0;
-      speak(p, total, [0.3, 2]).forEach((x, i) => {
+      speak(person(p), total, [0.3, 2]).forEach((x, i) => {
         // Les voix lointaines sont plus sourdes.
         lp += k * (x - lp);
         mix[i] += lp * gain;
