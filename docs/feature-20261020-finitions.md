@@ -13,11 +13,11 @@ Légende : **[Danny]** = demandé tel quel, **[Proposition]** = ma proposition, 
 | 1 | Fête de fin : fêtes en série, « J'ai voté à tout ! », bouton Partager sur Voter | [Fait] |
 | 2 | « Réinitialiser mes votes » : grande fête | [Fait] |
 | 3 | Plus de vibrations, sans abuser | [Fait] |
-| 4 | Brouhaha refait à partir de voix | [Fait], à écouter |
+| 4 | Brouhaha refait à partir de voix | [Fait] |
 | 5 | La salle : apparition progressive, sièges entiers, plus de place, fluidité | [Fait], à tester sur Android |
 | 6 | Signaler une erreur par un formulaire Google | [Fait] côté app, formulaire à créer par Danny |
 | 7 | Logo : la France d'un trait (6a3), remplacé partout | [Fait] |
-| 8 | Captures d'écran : stores (app) et site | à faire (lot 7 fait) |
+| 8 | Captures d'écran : stores (app), bannière Play Store et site | [Fait] |
 | 9 | Correctifs restants de la feature Android (`feature-20261019-android-opti.md`) | à faire |
 | 10 | Bug : Réglages passe sous les boutons Android | [Fait], à tester sur Android |
 
