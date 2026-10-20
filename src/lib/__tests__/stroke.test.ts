@@ -28,11 +28,19 @@ describe('strokeShape', () => {
 });
 
 describe('scribblePath', () => {
+  // Hasard à graine fixe (mulberry32) : le test ne dépend plus du tirage.
+  const seeded = (seed: number) => () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
   const points = (d: string) => [...d.matchAll(/(-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
 
   it("couvre tout l'encart, de haut en bas et de gauche à droite, sans toucher ses bords", () => {
+    const random = seeded(2027);
     for (let run = 0; run < 100; run++) {
-      const { d, length } = scribblePath(320, 90);
+      const { d, length } = scribblePath(320, 90, random);
       const pts = points(d);
       pts.forEach(([x, y]) => {
         expect(x).toBeGreaterThanOrEqual(SCRIBBLE_WIDTH);
@@ -53,7 +61,7 @@ describe('scribblePath', () => {
   });
 
   it('penche ses montées : des diagonales, pas des verticales', () => {
-    const tips = [...scribblePath(320, 90).d.matchAll(/Q(-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
+    const tips = [...scribblePath(320, 90, seeded(2027)).d.matchAll(/Q(-?[\d.]+) (-?[\d.]+)/g)].map((m) => [Number(m[1]), Number(m[2])]);
     for (let i = 0; i + 1 < tips.length; i += 2) {
       // Une pointe haute, puis la pointe basse suivante, nettement à gauche : la montée penchait.
       expect(tips[i][0] - tips[i + 1][0]).toBeGreaterThan(90 * 0.3 - 11 - 1);
