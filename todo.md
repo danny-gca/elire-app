@@ -2,7 +2,15 @@
 
 ## Dev à faire
 
-- Aucun (pour l'instant)
+- amélioration du bouton partage :
+- ajouter un partage par nb de point par theme
+- Modifier le partage pour slider entre les différent type de partage, avec des points afficher en bas de l'écran
+
+- Réfléchir a mettre en place un json/typage plus complet par programme et par candidat pour les rapprocher, si un candidat veut la même chose qu'un autre on pourrait donner des points a plusieurs candidats d'un coup et pas remettre la même question plusieurs fois pour éviter les doublons
+- noter dans les infos candidats si on a le programme complet ou pas
+- si on a le programme complet, essayer de le remplir au maximum d'info du programme, ça nous permettra de plus facilement voir si on peut mettre le programme en face d'un autre
+- et si on met les programmes en face des autres on peut aussi calculer les propositions qui sont a l'inverse d'un programme a l'autre (par exemple un candidat dit "monter plus de reacteur nucléaire" et un autre dit "supprimer des reacteurs nucléaires", on pourrait proposer une seule question qui retire des points à l'un et ajoute des points a l'autre avec le détail sur la proposition de chaque candidat). est-ce possible tu penses ? mathématiquement parlant et si on classe bien les datas correctement ? pour créer les propositions "qui vont en face" un script pourrait faire l'affaire ? comment choisir proprement ? je sais qu'il y a des solutions comme obsidian/gortex qui met relie des mots ensemble par exemple, est-ce que ça pourrait etre une solution ou pas du tout et il y a autre chose ? ou bien seulement en json et en script on pourrait faire un truc ?
+- mon but premier c'est éviter les questions en double, j'en ai vu beaucoup trop similaire, et je sais meme pas si c'est vraiment dans leurs programme. donc il faudrait peut etre meme différencier les questions de "programme" et les "avoeux inattendu à la télé, réseaux sociaux, journaux etc.." qui n'est pas dis de la meme façon dans le programme quoi. mieux catégoriser les propositions en fait.
 
 ## Infos candidats
 
