@@ -24,6 +24,7 @@ const TITLES: Record<ShareMode, string> = {
   discret: 'Je me fais mon avis',
   themes: 'Ce qui me parle le plus',
   scrutins: 'Si j’avais siégé',
+  enjeux: 'Les débats que j’ai tranchés',
 };
 
 interface ShareCardProps {
@@ -34,10 +35,11 @@ interface ShareCardProps {
   complete?: boolean;
   themes: ThemeAverage[];
   scrutins: ScrutinsSummary;
+  enjeux: { tranches: number; total: number };
 }
 
 // L'image partagée, capturée telle qu'affichée : le classement, ou sans aucun nom l'avancée, les thèmes ou les scrutins.
-export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ mode, scores, answered, marker, complete = false, themes, scrutins }, ref) {
+export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ mode, scores, answered, marker, complete = false, themes, scrutins, enjeux }, ref) {
   const ranked = scores.filter((s) => s.ranked);
   const ranks = denseRanks(ranked);
   const summary = shareSummary(scores);
@@ -59,6 +61,8 @@ export const ShareCard = forwardRef<View, ShareCardProps>(function ShareCard({ m
         <ThemesBody themes={themes} />
       ) : mode === 'scrutins' ? (
         <ScrutinsBody scrutins={scrutins} band={band} />
+      ) : mode === 'enjeux' ? (
+        <EnjeuxBody enjeux={enjeux} band={band} />
       ) : mode === 'complet' ? (
         <View style={styles.list}>
           {ranked.slice(0, rows).map((s, i) => (
@@ -160,6 +164,24 @@ function ScrutinsBody({ scrutins, band }: { scrutins: ScrutinsSummary; band: { b
       </View>
       <Text style={[Type.bodyStrong, styles.ink]}>{scrutinsTail(scrutins)}, avec mes votes.</Text>
       {detail !== '' && <Text style={[Type.label, styles.soft]}>{detail}.</Text>}
+    </View>
+  );
+}
+
+// Les questions communes tranchées (Je ne sais pas exclu), sans nom.
+function EnjeuxBody({ enjeux, band }: { enjeux: { tranches: number; total: number }; band: { backgroundColor: string } }) {
+  if (enjeux.tranches === 0) {
+    return <Empty text="Notez une question commune pour remplir cette image." />;
+  }
+  return (
+    <View style={styles.discreet}>
+      <View style={styles.bigWrap}>
+        <View style={[styles.bigBand, band]} />
+        <Text style={[styles.big, Numeric, styles.ink]}>{enjeux.tranches}</Text>
+      </View>
+      <Text style={[Type.bodyStrong, styles.ink]}>
+        {enjeux.tranches > 1 ? 'débats tranchés' : 'débat tranché'} sur {enjeux.total}, là où plusieurs candidats s’opposent ou se rejoignent.
+      </Text>
     </View>
   );
 }

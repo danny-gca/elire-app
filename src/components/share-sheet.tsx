@@ -20,11 +20,11 @@ import { Sheet } from '@/components/ui/sheet';
 import { SITE_URL } from '@/constants/app';
 import { Colors, MinTarget, Spacing, Type } from '@/constants/theme';
 import type { CandidateScore } from '@/lib/scoring';
-import { scrutinsSummary, shareText, type ShareMode } from '@/lib/share';
+import { enjeuxSummary, scrutinsSummary, shareText, type ShareMode } from '@/lib/share';
 import { shareImage } from '@/lib/share-image';
 import { buzz } from '@/lib/sound';
 import { themeAverages } from '@/lib/themes';
-import { lois, propositions, thematiques } from '@/services/dataset';
+import { enjeux as allEnjeux, lois, questions, thematiques } from '@/services/dataset';
 import { celebrate, pointOf, type CelebrationPoint } from '@/store/celebration-store';
 import { useVotesStore } from '@/store/votes-store';
 
@@ -40,6 +40,7 @@ const MODES: { mode: ShareMode; label: string }[] = [
   { mode: 'discret', label: 'Discret, sans nom' },
   { mode: 'themes', label: 'Mes thèmes' },
   { mode: 'scrutins', label: 'Mes scrutins' },
+  { mode: 'enjeux', label: 'Mes enjeux' },
 ];
 // Sur un écran étroit, l'aperçu rapetisse pour laisser dépasser les voisines de PEEK : on voit qu'il y a d'autres images.
 const PEEK = 48;
@@ -79,15 +80,20 @@ export function ShareSheet({
   const shown = useSharedValue(page);
   const cards = useRef<(View | null)[]>([]);
   const webCard = useRef<View>(null);
-  const themes = useMemo(() => themeAverages(thematiques, propositions, votes), [votes]);
+  const themes = useMemo(() => themeAverages(thematiques, questions, votes), [votes]);
   const scrutins = useMemo(() => scrutinsSummary(lois, loiVotes), [loiVotes]);
+  const enjeux = useMemo(() => enjeuxSummary(allEnjeux, votes), [votes]);
   const { mode } = MODES[page];
-  const empty = (mode === 'themes' && themes.every((t) => t.average === null)) || (mode === 'scrutins' && scrutins.total === 0);
+  const empty =
+    (mode === 'themes' && themes.every((t) => t.average === null)) ||
+    (mode === 'scrutins' && scrutins.total === 0) ||
+    (mode === 'enjeux' && enjeux.tranches === 0);
   const captions: Record<ShareMode, string> = {
     complet: `Vos ${complete ? 7 : 8} premiers candidats et leurs scores.`,
     discret: 'Seulement votre nombre de questions et la fiabilité de vos scores : aucun candidat n’apparaît.',
     themes: `Vos ${thematiques.length} thèmes, du plus au moins approuvé, selon la moyenne de vos notes : combien leurs propositions vous ont plu, pas leur importance. Aucun candidat.`,
     scrutins: 'Vos votes Pour ou Contre comparés au sort réel des textes au Parlement. Aucun candidat.',
+    enjeux: 'Le nombre de questions communes à plusieurs candidats que vous avez tranchées. Aucun candidat.',
   };
 
   const onPage = (i: number) => {
@@ -113,7 +119,7 @@ export function ShareSheet({
     try {
       // Seule l'image affichée part.
       const uri = await captureRef(Platform.OS === 'web' ? webCard.current! : cards.current[page]!, { format: 'png', width: SHARE_CARD.exportWidth, height: SHARE_CARD.exportHeight, result: 'tmpfile' });
-      const result = await shareImage(uri, shareText(mode, { answered, complete, scrutins }, SITE_URL));
+      const result = await shareImage(uri, shareText(mode, { answered, complete, scrutins, enjeux }, SITE_URL));
       setStatus(result);
       if (result === 'shared' || result === 'downloaded') {
         celebrate('small', 'sheet', point);
@@ -134,7 +140,7 @@ export function ShareSheet({
         {/* html2canvas rogne une carte réduite par ses parents : sur le web, on capture cette copie en taille réelle, dans une boîte vide qui la cache. */}
         {Platform.OS === 'web' && (
           <View style={styles.webCapture} aria-hidden pointerEvents="none">
-            <ShareCard ref={webCard} mode={mode} scores={scores} answered={answered} marker={marker} complete={complete} themes={themes} scrutins={scrutins} />
+            <ShareCard ref={webCard} mode={mode} scores={scores} answered={answered} marker={marker} complete={complete} themes={themes} scrutins={scrutins} enjeux={enjeux} />
           </View>
         )}
         {tableWidth > 0 && (
@@ -170,6 +176,7 @@ export function ShareSheet({
                     complete={complete}
                     themes={themes}
                     scrutins={scrutins}
+                    enjeux={enjeux}
                   />
                 </View>
               </Page>

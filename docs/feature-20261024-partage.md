@@ -11,7 +11,7 @@ Légende : **[Danny]** = demandé tel quel, **[Proposition]** = ma proposition, 
 | 1 | Carrousel : glisser d'une image à l'autre, points en bas | [Fait] |
 | 2 | Image « Mes thèmes » : les 12 thèmes triés par la moyenne de mes notes | [Fait] |
 | 3 | Image « Mes scrutins » : mes votes comparés au sort réel des textes | [Fait] |
-| 4 | Image « Mes enjeux » | [Décidé], après `feature-20261024-enjeux.md` |
+| 4 | Image « Mes enjeux » | [Fait] |
 | 5 | Bug : le « ! » penché de Caveat coupé sur mobile | [Fait], à tester sur Android |
 | 6 | Gomme : sans trait au sol, petit côté grisé | [Fait] |
 | 7 | Carrousel : voir les images voisines sur les côtés | [Fait] |
@@ -68,7 +68,7 @@ Règle commune à toutes les images **[Décidé]** : aucun nom de candidat ni de
 
 ## 4. Image « Mes enjeux »
 
-**[Décidé]** Après la feature enjeux : « J'ai tranché 15 débats », sans nom. Détail à écrire quand les enjeux existent.
+**[Fait]** 5e image du carrousel : « Les débats que j'ai tranchés », le nombre d'enjeux notés (hors « Je ne sais pas ») en grand chiffre, « débats tranchés sur 17 », aucun nom (`enjeuxSummary`, testé). Texte : « J'ai tranché 13 débats sur élire. »
 
 ## 5. Bug : le « ! » coupé
 

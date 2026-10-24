@@ -1,4 +1,4 @@
-import { scrutinsSentence, scrutinsSummary, shareSummary, shareText } from '@/lib/share';
+import { enjeuxSummary, scrutinsSentence, scrutinsSummary, shareSummary, shareText } from '@/lib/share';
 import type { CandidateScore } from '@/lib/scoring';
 import type { Loi } from '@/schemas/dataset';
 
@@ -25,5 +25,12 @@ describe('partage', () => {
     expect(shareText('scrutins', { answered: 10, scrutins: summary }, 'https://exemple.fr')).toBe(
       'Avec mes votes, 2 textes sur 4 auraient eu le même sort au Parlement. Je me fais mon avis avec élire. https://exemple.fr'
     );
+  });
+
+  it('compte les débats tranchés, sans « Je ne sais pas »', () => {
+    const enjeux = [{ id: 'e1' }, { id: 'e2' }, { id: 'e3' }];
+    const summary = enjeuxSummary(enjeux, { e1: 2, e2: 0, e3: -1, p1: 2 });
+    expect(summary).toEqual({ tranches: 2, total: 3 });
+    expect(shareText('enjeux', { answered: 10, enjeux: summary }, 'https://exemple.fr')).toBe("J'ai tranché 2 débats sur élire. https://exemple.fr");
   });
 });

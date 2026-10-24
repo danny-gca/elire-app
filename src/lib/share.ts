@@ -1,7 +1,7 @@
-import type { LoiVoteValue, CandidateScore } from '@/lib/scoring';
+import { UNSURE, type CandidateScore, type LoiVoteValue, type VoteValue } from '@/lib/scoring';
 import type { Loi } from '@/schemas/dataset';
 
-export type ShareMode = 'complet' | 'discret' | 'themes' | 'scrutins';
+export type ShareMode = 'complet' | 'discret' | 'themes' | 'scrutins' | 'enjeux';
 
 /** Chiffres du mode discret : aucun nom, seulement l'avancée du lecteur. */
 export function shareSummary(scores: readonly CandidateScore[]) {
@@ -51,14 +51,22 @@ export function scrutinsSentence(summary: ScrutinsSummary): string {
   return `Avec mes votes, ${summary.same} ${scrutinsTail(summary)}.`;
 }
 
+/** Questions communes notées (hors « Je ne sais pas ») sur le total : « J'ai tranché 12 débats ». */
+export function enjeuxSummary(enjeux: readonly { id: string }[], votes: Record<string, VoteValue>): { tranches: number; total: number } {
+  return { tranches: enjeux.filter((e) => votes[e.id] !== undefined && votes[e.id] !== UNSURE).length, total: enjeux.length };
+}
+
 /** Texte qui accompagne l'image : jamais de nom de candidat, même en mode complet. */
 export function shareText(
   mode: ShareMode,
-  { answered, complete = false, scrutins }: { answered: number; complete?: boolean; scrutins?: ScrutinsSummary },
+  { answered, complete = false, scrutins, enjeux }: { answered: number; complete?: boolean; scrutins?: ScrutinsSummary; enjeux?: { tranches: number } },
   url: string
 ): string {
   if (mode === 'themes') {
     return `Les thèmes où j'ai le plus approuvé sur élire. ${url}`;
+  }
+  if (mode === 'enjeux' && enjeux) {
+    return `J'ai tranché ${enjeux.tranches} ${enjeux.tranches > 1 ? 'débats' : 'débat'} sur élire. ${url}`;
   }
   if (mode === 'scrutins' && scrutins) {
     return `${scrutinsSentence(scrutins)} Je me fais mon avis avec élire. ${url}`;

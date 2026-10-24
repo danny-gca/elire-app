@@ -1,5 +1,5 @@
 import { UNSURE, type VoteValue } from '@/lib/scoring';
-import type { Proposition, Thematique } from '@/schemas/dataset';
+import type { Thematique } from '@/schemas/dataset';
 
 export interface ThemeAverage {
   thematique: Thematique;
@@ -14,14 +14,14 @@ export function signedAverage(average: number): string {
   return `${rounded > 0 ? '+' : ''}${String(rounded).replace('.', ',')}`;
 }
 
-/** Moyenne des notes par thème (« Je ne sais pas » exclu), de la plus haute à la plus basse ; sans note en bas, égalités par nom. */
+/** Moyenne des notes par thème, une par question (« Je ne sais pas » exclu) ; sans note en bas, égalités par nom. */
 export function themeAverages(
   thematiques: readonly Thematique[],
-  propositions: readonly Proposition[],
+  questions: readonly { id: string; thematiqueId: string }[],
   votes: Record<string, VoteValue>
 ): ThemeAverage[] {
   const sums = new Map<string, { sum: number; count: number }>();
-  for (const p of propositions) {
+  for (const p of questions) {
     const v = votes[p.id];
     if (v === undefined || v === UNSURE) {
       continue;
