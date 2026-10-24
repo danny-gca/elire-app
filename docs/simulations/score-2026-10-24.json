@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-24",
+  "donnees": "2026-10-24",
+  "graine": 2027,
+  "lecteurs": 25000,
+  "lecteur": {
+    "questions": 45,
+    "scrutins": 15
+  },
+  "enjeux": 17,
+  "candidats": {
+    "total": 25,
+    "ontSiege": 13,
+    "nontJamaisSiege": 12
+  },
+  "test1_lecteurAccordAvecX_XSortNumero1": {
+    "avant: au nombre, égalité par fiabilité": {
+      "xASiege": 48,
+      "xNaJamaisSiege": 42.5
+    },
+    "option 1: au nombre, égalité au hasard": {
+      "xASiege": 46,
+      "xNaJamaisSiege": 41.6
+    },
+    "option 2: moitié programme, moitié Parlement": {
+      "xASiege": 43.8,
+      "xNaJamaisSiege": 41.7
+    },
+    "retenue": {
+      "xASiege": 44.1,
+      "xNaJamaisSiege": 41.6
+    }
+  },
+  "test2_lecteurAuHasard_partDeNumero1ParCandidat": {
+    "avant: au nombre, égalité par fiabilité": {
+      "aSiege": 1.4,
+      "naJamaisSiege": 6.8
+    },
+    "option 1: au nombre, égalité au hasard": {
+      "aSiege": 1.4,
+      "naJamaisSiege": 6.9
+    },
+    "option 2: moitié programme, moitié Parlement": {
+      "aSiege": 1.7,
+      "naJamaisSiege": 6.5
+    },
+    "retenue": {
+      "aSiege": 1.7,
+      "naJamaisSiege": 6.5
+    }
+  },
+  "test3_retenue_selonNombreDEnjeux": {
+    "aucun": {
+      "candidats": 3,
+      "lecteurAccordAvecX_XSortNumero1": 38.8,
+      "lecteurAuHasard_partDeNumero1ParCandidat": 4.2
+    },
+    "un ou deux": {
+      "candidats": 17,
+      "lecteurAccordAvecX_XSortNumero1": 43.9,
+      "lecteurAuHasard_partDeNumero1ParCandidat": 3.7
+    },
+    "trois ou plus": {
+      "candidats": 5,
+      "lecteurAccordAvecX_XSortNumero1": 42.1,
+      "lecteurAuHasard_partDeNumero1ParCandidat": 5
+    }
+  }
+}

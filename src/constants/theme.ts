@@ -100,7 +100,8 @@ export const Type = {
   labelStrong: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 13, lineHeight: 18 },
   caps: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 13, lineHeight: 18, letterSpacing: 0.4, textTransform: 'uppercase' },
   /** Écriture du lecteur (« Votre avis », « A voté ! ») : jamais sous 20, en peu de mots. */
-  note: { fontFamily: font('Caveat-Bold', 'hand'), fontSize: 22, lineHeight: 26 },
+  // Caveat penche au-delà de sa boîte : sans cette marge, Android coupe le « ! » final.
+  note: { fontFamily: font('Caveat-Bold', 'hand'), fontSize: 22, lineHeight: 26, paddingRight: 4 },
 } satisfies Record<string, TextStyle>;
 
 export const Numeric: TextStyle = { fontVariant: ['tabular-nums'] };

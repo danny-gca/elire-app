@@ -53,12 +53,34 @@ export function interleaveLois(
   const tail = order.slice(from);
   const every = Math.max(1, Math.floor(tail.length / Math.max(1, pending.length)));
   const result = order.slice(0, from);
+  // Un créneau sauté (voisin d'un élément déjà intercalé) est rattrapé dès la place libre suivante.
+  let owed = 0;
   tail.forEach((id, i) => {
     result.push(id);
     const next = tail[i + 1];
-    if ((i + 1) % every === 0 && pending.length > 0 && !existing.has(id) && (!next || !existing.has(next))) {
+    if ((i + 1) % every === 0) {
+      owed++;
+    }
+    if (owed > 0 && pending.length > 0 && !existing.has(id) && (!next || !existing.has(next))) {
       result.push(pending.shift()!);
+      owed--;
     }
   });
-  return [...result, ...pending];
+  // Ceux qui restent prennent la dernière place libre (aucun voisin intercalé), sinon la fin.
+  const placed = new Set([...existing, ...loiIds]);
+  const free = (j: number) => (j === 0 || !placed.has(result[j - 1])) && (j === result.length || !placed.has(result[j]));
+  for (const id of pending) {
+    let j = result.length;
+    while (j > from && !free(j)) {
+      j--;
+    }
+    result.splice(free(j) ? j : result.length, 0, id);
+  }
+  return result;
+}
+
+/** Ordre de passage complet : propositions seules par tours, enjeux intercalés, puis scrutins, jamais collés à un enjeu. */
+export function questionOrder(solo: readonly Proposition[], enjeuIds: readonly string[], loiIds: readonly string[], random: () => number = Math.random): string[] {
+  const withEnjeux = interleaveLois(balancedOrder(solo, random), enjeuIds, { random });
+  return interleaveLois(withEnjeux, loiIds, { existing: new Set(enjeuIds), random });
 }

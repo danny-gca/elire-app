@@ -1,4 +1,4 @@
-import { LOOP_PAD, loopPath, SCRIBBLE_WIDTH, scribblePath, strokePath, strokeShape } from '@/lib/stroke';
+import { frameSides, polyline, LOOP_PAD, loopPath, SCRIBBLE_WIDTH, scribblePath, strokePath, strokeShape } from '@/lib/stroke';
 
 describe('strokeShape', () => {
   it('trace toujours de gauche à droite, à travers tout le bouton, sans sortir loin en hauteur', () => {
@@ -97,5 +97,25 @@ describe('loopPath', () => {
     const pts = points(loopPath([200, 100], box, { width: 390, height: 844 }).d).slice(17);
     const near = Math.min(...pts.map(([x, y]) => Math.hypot(x - 200, y - 420)));
     expect(near).toBeGreaterThan(20 + LOOP_PAD * 0.6);
+  });
+});
+
+describe('frameSides', () => {
+  it('trace 4 côtés qui dépassent des coins, du haut dans le sens des aiguilles', () => {
+    const sides = frameSides(200, 100, () => 0.5);
+    expect(sides).toHaveLength(4);
+    const [top, right, bottom, left] = sides;
+    expect(top[0][0]).toBeLessThan(0);
+    expect(top[top.length - 1][0]).toBeGreaterThan(200);
+    expect(right[0][1]).toBeLessThan(0);
+    expect(right[right.length - 1][1]).toBeGreaterThan(100);
+    expect(bottom[0][0]).toBeGreaterThan(200);
+    expect(left[left.length - 1][1]).toBeLessThan(0);
+  });
+});
+
+describe('polyline', () => {
+  it('écrit le tracé et mesure sa longueur', () => {
+    expect(polyline([[0, 0], [3, 4], [3, 10]])).toEqual({ d: 'M0.0 0.0L3.0 4.0L3.0 10.0', length: 11 });
   });
 });

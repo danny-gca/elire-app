@@ -5,15 +5,19 @@ import path from 'node:path';
 import Papa from 'papaparse';
 import { z } from 'zod';
 
+import { checkEnjeux } from '../src/lib/enjeux-check.ts';
+import { programmeReminders } from '../src/lib/programme-check.ts';
 import { acronymsIn, unexplainedInTitle } from '../src/lib/glossary.ts';
 import {
   CandidatSourceSchema,
+  EnjeuSourceSchema,
   GlossaireEntrySchema,
   LoiSourceSchema,
   PartiSchema,
   PropositionCsvSchema,
   ThematiqueSchema,
   type Candidat,
+  type Enjeu,
   type Loi,
   type Proposition,
 } from '../src/schemas/dataset.ts';
@@ -110,12 +114,12 @@ function checkPreciseUrl(value: string, where: string) {
 interface Refs {
   propositions: Record<string, number>;
   lois: Record<string, number>;
+  enjeux: Record<string, number>;
 }
 
 function loadRefs(): Refs {
-  return fs.existsSync(REFS_FILE)
-    ? JSON.parse(fs.readFileSync(REFS_FILE, 'utf-8'))
-    : { propositions: {}, lois: {} };
+  const refs = fs.existsSync(REFS_FILE) ? JSON.parse(fs.readFileSync(REFS_FILE, 'utf-8')) : {};
+  return { propositions: {}, lois: {}, enjeux: {}, ...refs };
 }
 
 function hash(text: string): number {
@@ -139,12 +143,12 @@ function propositionNumber(refs: Refs, id: string): number {
   return refs.propositions[id];
 }
 
-// Numéro de loi stable, attribué dans l'ordre d'arrivée.
-function loiNumber(refs: Refs, id: string): number {
-  if (refs.lois[id] === undefined) {
-    refs.lois[id] = Math.max(0, ...Object.values(refs.lois)) + 1;
+// Numéro de loi ou d'enjeu stable, attribué dans l'ordre d'arrivée.
+function sequentialNumber(numbers: Record<string, number>, id: string): number {
+  if (numbers[id] === undefined) {
+    numbers[id] = Math.max(0, ...Object.values(numbers)) + 1;
   }
-  return refs.lois[id];
+  return numbers[id];
 }
 
 // Date conservée si le contenu n'a pas changé, pour que `npm run check` puisse comparer avec git.
@@ -153,8 +157,8 @@ function previousGeneratedAt(content: object): string | undefined {
     return undefined;
   }
   const { metadata, ...previous } = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
-  const { partis, thematiques, candidats, propositions, lois, glossaire } = previous;
-  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, glossaire }) === JSON.stringify(content);
+  const { partis, thematiques, candidats, propositions, lois, enjeux, glossaire } = previous;
+  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, enjeux, glossaire }) === JSON.stringify(content);
   return same ? metadata?.generatedAt : undefined;
 }
 
@@ -163,6 +167,7 @@ function main() {
   const thematiques = parseArray(ThematiqueSchema, readJson('thematiques.json'), 'thematiques.json');
   const rawCandidats = parseArray(CandidatSourceSchema, readJson('candidats.json'), 'candidats.json');
   const sourceLois = parseArray(LoiSourceSchema, readJson('lois.json'), 'lois.json');
+  const sourceEnjeux = parseArray(EnjeuSourceSchema, readJson('enjeux.json'), 'enjeux.json');
   const glossaire = parseArray(GlossaireEntrySchema, readJson('glossaire.json'), 'glossaire.json');
   const glossarySigles = new Set(glossaire.map((g) => g.sigle));
   const usedSigles = new Set<string>();
@@ -172,6 +177,7 @@ function main() {
   checkUniqueIds(thematiques, 'thematiques.json');
   checkUniqueIds(rawCandidats, 'candidats.json');
   checkUniqueIds(sourceLois, 'lois.json');
+  checkUniqueIds(sourceEnjeux, 'enjeux.json');
 
   const partisById = new Map(partis.map((p) => [p.id, p]));
   const thematiqueIds = new Set(thematiques.map((t) => t.id));
@@ -226,6 +232,7 @@ function main() {
         description: row.description,
         sourceUrl: row.source_url,
         dateDeclaration: row.date_declaration || undefined,
+        typeSource: row.type_source,
         contexte: row.contexte,
       });
     }
@@ -234,7 +241,7 @@ function main() {
 
   const lois: Loi[] = [...sourceLois]
     .sort((a, b) => a.dateVote.localeCompare(b.dateVote) || a.id.localeCompare(b.id))
-    .map((loi) => ({ ...loi, ref: `L-${String(loiNumber(refs, loi.id)).padStart(2, '0')}` }))
+    .map((loi) => ({ ...loi, ref: `L-${String(sequentialNumber(refs.lois, loi.id)).padStart(2, '0')}` }))
     .sort((a, b) => b.dateVote.localeCompare(a.dateVote));
 
   for (const loi of lois) {
@@ -252,6 +259,19 @@ function main() {
     }
   }
 
+  errors.push(...checkEnjeux(sourceEnjeux, propositions, thematiqueIds));
+  const enjeux: Enjeu[] = sourceEnjeux.map((e) => ({ ...e, ref: `E-${String(sequentialNumber(refs.enjeux, e.id)).padStart(2, '0')}` }));
+  const linked = new Map(enjeux.flatMap((e) => e.positions.map((p) => [p.propositionId, { enjeuId: e.id, sens: p.sens }] as const)));
+  for (const p of propositions) {
+    Object.assign(p, linked.get(p.id));
+  }
+  for (const e of enjeux) {
+    const where = `enjeux.json ${e.id}`;
+    checkText(`${e.question} ${e.enjeu}`, where);
+    checkAnonymous(`${e.question} ${e.enjeu}`, anonymity, where);
+    checkAcronyms(e.question, [e.enjeu], glossarySigles, usedSigles, where);
+  }
+
   glossaire.forEach((g) => {
     checkText(`${g.forme} ${g.definition ?? ''}`, `glossaire.json ${g.sigle}`);
     // « BFMTV : BFMTV » n'explique rien.
@@ -262,6 +282,7 @@ function main() {
       warnings.push(`glossaire.json ${g.sigle} : sigle employé nulle part`);
     }
   });
+  warnings.push(...programmeReminders(rawCandidats, new Date().toISOString().slice(0, 10)));
 
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
   if (warnings.length > 0) {
@@ -273,7 +294,7 @@ function main() {
     process.exit(1);
   }
 
-  const content = { partis, thematiques, candidats, propositions, lois, glossaire };
+  const content = { partis, thematiques, candidats, propositions, lois, enjeux, glossaire };
   const dataset = {
     metadata: {
       generatedAt: previousGeneratedAt(content) ?? new Date().toISOString(),
@@ -282,12 +303,14 @@ function main() {
       thematiquesCount: thematiques.length,
       propositionsCount: propositions.length,
       loisCount: lois.length,
+      enjeuxCount: enjeux.length,
     },
     partis,
     thematiques,
     candidats,
     propositions,
     lois,
+    enjeux,
     glossaire,
   };
 
@@ -297,7 +320,7 @@ function main() {
 
   console.log(
     `✅ ${partis.length} partis, ${candidats.length} candidats, ${thematiques.length} thématiques, ` +
-      `${propositions.length} propositions, ${lois.length} lois, ${glossaire.length} sigles -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
+      `${propositions.length} propositions, ${lois.length} lois, ${enjeux.length} enjeux, ${glossaire.length} sigles -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
   );
 }
 

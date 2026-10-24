@@ -9,17 +9,26 @@ import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Radius, Spacing, Type } from '@/constants/theme';
 import { loiChoice, voteChoice } from '@/constants/votes';
+import { voteTarget } from '@/lib/enjeux';
+import type { VoteValue } from '@/lib/scoring';
 import { buzz } from '@/lib/sound';
+import { propositions } from '@/services/dataset';
 import { celebrate } from '@/store/celebration-store';
 import { useMarkOf, useVotesStore } from '@/store/votes-store';
 
+const byId = new Map(propositions.map((p) => [p.id, p]));
+
 // « Moi », présenté comme un candidat : votre vote à côté des leurs, modifiable à la gomme.
+// Une proposition d'enjeu lit et écrit la note de sa question, inversée pour un « contre ».
 export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'proposition' | 'loi'; pendingNote: string }) {
-  const vote = useVotesStore((s) => s.votes[id]);
+  const proposition = kind === 'proposition' ? byId.get(id) : undefined;
+  const { key, sign } = proposition ? voteTarget(proposition) : { key: id, sign: 1 };
+  const raw = useVotesStore((s) => s.votes[key]);
+  const vote = raw === undefined ? undefined : ((raw * sign) as VoteValue);
   const loiVote = useVotesStore((s) => s.loiVotes[id]);
   const castVote = useVotesStore((s) => s.castVote);
   const castLoiVote = useVotesStore((s) => s.castLoiVote);
-  const marker = useMarkOf(id);
+  const marker = useMarkOf(key);
   const [editing, setEditing] = useState(false);
   const voted = kind === 'loi' ? loiVote !== undefined : vote !== undefined;
   const label = kind === 'loi' ? loiChoice(loiVote)?.label : voteChoice(vote)?.label;
@@ -60,7 +69,7 @@ export function MyVoteRow({ id, kind, pendingNote }: { id: string; kind: 'propos
             <VoteScale
               value={vote}
               onVote={(value, point) => {
-                castVote(id, value);
+                castVote(key, (value * sign) as VoteValue);
                 setEditing(false);
                 celebrate('small', 'sheet', point);
                 buzz('light');

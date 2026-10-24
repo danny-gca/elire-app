@@ -19,10 +19,12 @@ interface MoreInfoProps {
   onToggle?: (open: boolean) => void;
   /** Le texte vient de s'afficher (mis en page) : l'écran peut défiler jusqu'à lui. */
   onOpen?: () => void;
+  /** Type de source (« Programme 2027 »...), au-dessus du contexte : il ne trahit pas l'auteur. */
+  source?: string;
 }
 
 // « En savoir plus » : le glossaire des sigles de la feuille, puis le contexte. Aucune source : elle trahirait l'auteur.
-export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen }: MoreInfoProps) {
+export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen, source }: MoreInfoProps) {
   const [own, setOwn] = useState(false);
   const open = controlled ?? own;
   const setOpen = (next: boolean) => (onToggle ? onToggle(next) : setOwn(next));
@@ -46,14 +48,17 @@ export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen }: Mo
                 Glossaire
               </Text>
               {entries.map((g) => (
-                <Text key={g.sigle} style={[Type.label, styles.soft]}>
+                <Text key={g.sigle} style={[Type.label, styles.soft]} selectable>
                   <Text style={[Type.labelStrong, styles.ink]}>{g.sigle}</Text> : {g.forme}
                   {g.definition ? `. ${g.definition}` : '.'}
                 </Text>
               ))}
             </View>
           )}
-          <Text style={[Type.body, styles.soft]}>{text}</Text>
+          {source && <Text style={[Type.labelStrong, styles.muted]}>{source}</Text>}
+          <Text style={[Type.body, styles.soft]} selectable>
+            {text}
+          </Text>
         </Animated.View>
       )}
     </View>

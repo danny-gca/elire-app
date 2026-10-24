@@ -5,11 +5,13 @@ import { DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 
 import { CelebrationLayer } from '@/components/celebration';
 import { TutoLayer } from '@/components/tuto-layer';
 import { FONT_FILES } from '@/constants/fonts';
 import { Colors } from '@/constants/theme';
+import { useVotesStore } from '@/store/votes-store';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,6 +28,13 @@ export default function RootLayout() {
       SplashScreen.hideAsync();
     }
   }, [loaded, error]);
+  // Web : la sélection de texte prend la couleur du surligneur choisi (global.css).
+  const marker = useVotesStore((s) => s.marker);
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      document.documentElement.dataset.marker = marker;
+    }
+  }, [marker]);
   if (!loaded && !error) {
     return null;
   }

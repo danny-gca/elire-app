@@ -8,10 +8,20 @@ html, body, #root {
   text-rendering: optimizeLegibility;
 }
 
+/* Rien ne se sélectionne par défaut (feuilles comprises, hors de #root) : seuls les textes éditoriaux portent `selectable`. */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* La sélection prend le surligneur du lecteur (data-marker posé sur <html> par _layout.tsx), jaune par défaut. */
 ::selection {
   background: rgba(234, 219, 63, 0.55);
   color: #1C1E21;
 }
+html[data-marker='rose'] ::selection { background: rgba(242, 167, 195, 0.55); }
+html[data-marker='vert'] ::selection { background: rgba(168, 224, 161, 0.55); }
+html[data-marker='bleu'] ::selection { background: rgba(169, 211, 245, 0.55); }
 
 :focus-visible {
   outline: 2px solid #1C1E21;
@@ -20,6 +30,8 @@ html, body, #root {
 
 input, textarea {
   caret-color: #1C1E21;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 * {

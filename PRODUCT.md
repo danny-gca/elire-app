@@ -24,7 +24,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 
 ## Capabilities and Constraints
 
-- Fonctionnalités : vote à l'aveugle sur 4 niveaux (Impossible, Contre, Pour, Parfait) ou « Je ne sais pas » (non compté), contexte et glossaire des sigles dans « En savoir plus », vote sur des scrutins réels (Contre, Abstention, Pour) comparé aux votes des candidats, score d'accord combiné par candidat en temps réel, fiches candidats (programme 2027 + votes au Parlement), modification d'un vote depuis partout (gomme), partage d'une image du classement (complète ou sans nom), explorateur par thématique, catalogue des lois et scrutins parlementaires.
+- Fonctionnalités : vote à l'aveugle sur 4 niveaux (Impossible, Contre, Pour, Parfait) ou « Je ne sais pas » (non compté), contexte et glossaire des sigles dans « En savoir plus », questions communes à plusieurs candidats (une note qui compte pour chacun, inversée pour qui propose l'inverse, détail sans nom après le vote), vote sur des scrutins réels (Contre, Abstention, Pour) comparé aux votes des candidats, score d'accord combiné par candidat en temps réel, fiches candidats (programme 2027 + votes au Parlement), modification d'un vote depuis partout (gomme), partage d'une image au choix (classement, ou sans nom : avancée, thèmes, scrutins, débats tranchés), explorateur par thématique, catalogue des lois et scrutins parlementaires.
 - Votes enregistrés uniquement sur l'appareil (expo-sqlite/kv-store en natif, localStorage sur le web), effaçables à tout moment.
 - Contraintes techniques : Expo React Native (iOS, Android, Web), données publiques embarquées en JSON validé par Zod, Zustand, aucune requête tierce (polices libres auto-hébergées), thème clair obligatoire exclusif (aucun thème sombre).
 - Neutralité républicaine absolue : anonymat des propositions en mode découverte, ordre de présentation mélangé, source et numéro stable pour chaque proposition et loi, rangs ex æquo départagés au hasard, couleurs d'échelle réservées aux votes de l'utilisateur ; la couleur d'un parti ne marque que son identité (anneau du portrait, en-tête de la fiche), jamais un score ni le vote à l'aveugle.
@@ -38,7 +38,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 
 ## Evidence on Hand
 
-- Données éditoriales : data/candidats/\*.csv (194 propositions vérifiées, 8 par candidat pour 21 d'entre eux, 25 candidats, chacun avec la source datée de sa candidature), data/lois.json (42 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen).
+- Données éditoriales : data/candidats/\*.csv (197 propositions vérifiées, 8 par candidat pour 22 d'entre eux, 25 candidats, chacun avec la source datée de sa candidature et le statut de son programme 2027 ; chaque proposition dit son type de source), data/enjeux.json (17 questions communes qui réunissent 45 propositions), data/lois.json (42 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen).
 - Qualité des sources : chaque proposition renvoie à un document précis qui la contient (vérification du 2026-10-13, docs/verification-donnees.md). Plusieurs mesures viennent de programmes 2022, faute de programme 2027 publié.
 - Charte graphique : src/constants/theme.ts, logo vectoriel assets/brand/mark.svg, contrat de direction .impeccable/surfaces/src-app-tabs-index-tsx.md.
 

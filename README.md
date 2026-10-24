@@ -1,85 +1,164 @@
 # élire - Présidentielle 2027
 
-Application citoyenne et neutre d'aide à la décision pour l'élection présidentielle 2027.
+Une application gratuite et neutre pour savoir de quels candidats à la présidentielle 2027 vous êtes le plus proche, à partir de leurs propositions et de leurs votes au Parlement.
 
-> Ce README décrit l'état **actuel** du code. Les tâches ouvertes sont dans [todo.md](todo.md), la direction visuelle dans `.impeccable/surfaces/`.
+## En bref
 
-## 1. Vision & Principes
+- Vous notez des propositions sans savoir de qui elles viennent.
+- L'app calcule votre accord avec chaque candidat.
+- Vous découvrez ensuite qui propose quoi, avec la source de chaque mesure.
+- Aucun compte, aucune publicité, aucune donnée envoyée : tout reste sur votre appareil.
 
-- **100% Local-first** : zéro compte, zéro télémétrie, polices auto-hébergées et aucune requête tierce ; les votes restent sur l'appareil.
-- **Transparence** : chaque proposition, loi et vote porte une URL de source et un numéro stable (`P-531`, `L-28`) repris dans « Signaler une erreur » (ticket GitHub pré-rempli). Chaque proposition a été vérifiée contre une source précise ; sa description est la citation exacte (voir `docs/verification-donnees.md`). Crédits des portraits dans l'app. Écrans « Mentions légales » et « Méthode et corrections » (délai de correction, droit de réponse) dans le pied de données, texte dans `src/constants/legal.ts`.
-- **Neutralité** : propositions anonymes pendant le vote, ordre tiré au hasard par tours (une proposition par candidat à chaque tour, jamais deux fois de suite le même candidat), couleurs d'échelle réservées aux votes de l'utilisateur, égalités départagées au hasard.
+## Ce que vous pouvez faire
 
-## 2. Fonctionnalités
+- **Voter** : notez chaque proposition de « Impossible » à « Parfait », ou passez avec « Je ne sais pas ».
+- **Questions communes** : quand plusieurs candidats proposent la même chose, ou l'inverse, une seule question compte pour tous.
+- **Scrutins réels** : votez aussi sur des textes passés au Parlement et comparez-vous aux élus.
+- **Classement** : après 10 votes, voyez les candidats les plus proches de vos avis.
+- **Partager** : envoyez une image de votre classement, ou sans aucun nom votre avancée, vos thèmes, vos scrutins ou vos débats tranchés.
+- **Explorer** : parcourez toutes les propositions par thème, avec leur auteur et leur source.
+- **Lois** : retrouvez chaque scrutin et la position de chaque candidat.
+- **Fiche candidat** : biographie, programme et votes au Parlement sur une seule page.
+- **Changer d'avis** : la gomme modifie n'importe quel vote, partout dans l'app.
 
-- **Présentation au premier lancement** (`/onboarding`) : 5 stories (neutralité, transparence, responsabilité, confidentialité), revisitable depuis le pied de page.
-- **Navigation à 4 onglets** : barre d'onglets personnalisée unifiée sur iOS, Android et le Web (icônes dédiées et surlignage feutre du lecteur), barre du bas sur mobile et barre du haut à partir de 900 px.
-  1. **Voter** : propositions à l'aveugle, 4 niveaux **Impossible (-2), Contre (-1), Pour (+1), Parfait (+2)**, et **Je ne sais pas**, qui ne compte nulle part (ni dans le score, ni pour ouvrir le Classement). « En savoir plus » déplie sur la feuille le glossaire des sigles (`data/glossaire.json`) puis le contexte ; aucune source dans Voter, elle trahirait l'auteur (elle reste dans Explorer, la fiche candidat et Lois). Sous le titre, le prochain palier plutôt que le total (« 4 votes avant votre Classement », puis « 7 votes avant le prochain bilan · 9 candidats classés sur 25 », `src/lib/progress.ts`) ; avant le premier vote, une estimation (environ 20 secondes par question, Classement en 3 à 5 minutes) ; à chaque dizaine d'avis, un bilan montre la précision (moyenne de propositions notées par candidat, un panneau par candidat, rempli selon la fiabilité de chaque score) et propose « 10 questions de plus », ou « Voir le Classement ». Le dernier vote s'affiche 10 s sur une ligne, avec une gomme pour le modifier ; la même gomme est dans le détail de chaque vote (Explorer, fiche candidat, Lois), où une ligne « Moi » montre votre vote à côté de celui des candidats. La citation est coupée à 2 lignes, entière dans « En savoir plus ». Un scrutin se distingue par son en-tête à l'hémicycle, son fond gris froid et un contour tracé à l'arrivée ; après le vote, un geste sur l'écran arrête l'avance automatique. Environ une fois toutes les trois propositions, un **scrutin réel** : question anonyme (`question`, et `enjeu` dans « En savoir plus »), 3 choix **Contre, Abstention, Pour**, puis un hémicycle anonyme montre combien de candidats ont voté comme vous ou à l'inverse, avec le titre officiel et le résultat ; la suite part seule au bout de 5 s (« Question suivante » pour aller plus vite, rien d'automatique avec un lecteur d'écran natif). En fin de série : liste de toutes les propositions et de tous les scrutins avec son vote, modifiable.
-  2. **Cahier** : d'abord le **Classement**, en panneaux identiques et numérotés (rangs ex æquo), débloqué après 10 votes ; un candidat est classé à partir de 2 propositions votées. Partage d'une image du classement (10 premiers) ou discrète (nombre de questions et fiabilité, sans nom), via la feuille de partage du système (`react-native-view-shot`, `expo-sharing`) ou, sur le web, le partage de fichier ou le téléchargement. Réinitialisation des votes (confirmation en deux appuis). Puis les réglages (surligneur, effacer ses votes) et l'à-propos.
-  3. **Lois** : recherche, filtre par statut, regroupement par année ; position de chaque candidat en distinguant vote personnel et position de groupe.
-  4. **Explorer** : sommaire des 12 thèmes (votées / total), page par thème (`/theme/[id]`, filtre « Pas encore votées », thème suivant), recherche (sans accents) avec le même filtre, auteur affiché, vos votes surlignés.
-- **Fiche candidat** (`/candidate/[id]`) : flèche retour seule, biographie, accord avec vos votes, « Programme 2027 » / « Votes au Parlement » (message dédié si le candidat n'a pas siégé).
+## Nos engagements
 
-## 3. Architecture
+- **Neutre** : pendant le vote, les propositions sont anonymes et tirées au hasard.
+- **Équitable** : chaque candidat a le même nombre de propositions visé et les mêmes règles de source.
+- **Sourcé** : chaque proposition cite mot pour mot un document précis, avec son lien.
+- **Privé** : vos votes ne quittent jamais votre appareil et s'effacent en deux appuis.
+- **Corrigeable** : chaque élément porte un numéro (`P-531`, `L-28`) pour signaler une erreur en un appui.
 
-### Données publiques (embarquées dans le bundle)
+## Comment le score est calculé
 
-- **Sources éditoriales** (dossier `data/`, seule source de vérité, éditée à la main) : `partis.json`, `candidats.json`, `thematiques.json`, `candidats/<candidat-id>.csv`, `lois.json`, `refs.json` (registre des numéros stables, géré par le build).
-- **Compilation** : `npm run build:data` (`scripts/build-data.ts`) valide tout avec Zod (`src/schemas/dataset.ts`) et papaparse, puis écrit `src/data/dataset.json`. Le build **échoue** sur un schéma invalide, un id en double, une référence inconnue ou une apostrophe manquante. Les sources vers une page d'accueil sont des avertissements, bloquants avec `npm run build:data:strict`.
-- **Accès** : `src/services/dataset.ts` exporte les données en synchrone (`candidats`, `propositions`, `lois`, `getCandidat()`, `getLoisByCandidat()`...).
-- **Types** : générés depuis les schémas Zod (`src/schemas/dataset.ts`).
+- Votre note va de -2 (Impossible) à +2 (Parfait) et compte pour l'auteur de la proposition.
+- Sur une question commune, elle compte pour chaque candidat qui la propose, et à l'inverse pour celui qui propose le contraire.
+- Sur un scrutin, un candidat gagne des points s'il a voté comme vous et en perd s'il a voté l'inverse.
+- Un vote de groupe compte moitié moins qu'un vote personnel.
+- Les votes au Parlement ne font jamais plus de la moitié du score.
+- Un candidat est classé dès 2 propositions notées, et une jauge dit si son score est fiable.
+- À égalité, les candidats partagent le même rang, dans un ordre tiré au hasard.
+- Le pourquoi de chaque règle, simulations à l'appui : [docs/simulations](docs/simulations/README.md).
+
+## Les données
+
+Tout est dans [data/](data/), sous licence libre, lisible directement sur GitHub sans rien installer.
+
+- **Propositions** : un fichier par candidat, affiché en tableau par GitHub (liste ci-dessous).
+- **Scrutins** : [lois.json](data/lois.json), 42 votes réels à l'Assemblée, au Sénat et au Parlement européen, de 2017 à 2026.
+- **Candidats** : [candidats.json](data/candidats.json), avec la source datée de chaque candidature.
+- **Partis** : [partis.json](data/partis.json), avec leur nuance officielle du ministère de l'Intérieur.
+- **Thèmes** : [thematiques.json](data/thematiques.json), les 12 thèmes de l'app.
+- **Questions communes** : [enjeux.json](data/enjeux.json), chaque question et la position, pour ou contre, de chaque candidat.
+- **Sigles** : [glossaire.json](data/glossaire.json), la définition de chaque sigle affiché.
+- **À savoir** : faute de programme 2027 publié, certaines mesures viennent d'un programme de 2022 ou 2024 ; chaque proposition dit son type de source (Programme 2027, Programme précédent, Prise de position).
+
+| Candidat | Parti | Propositions | Programme 2027 |
+| --- | --- | --- | --- |
+| [Anasse Kazib](data/candidats/anasse-kazib.csv) | RP | 8 | Partiel |
+| [Antoine Mikolajczak](data/candidats/antoine-mikolajczak.csv) | EQX | 8 | Partiel, complet annoncé le 2 novembre 2026 |
+| [Bruno Retailleau](data/candidats/bruno-retailleau.csv) | LR | 8 | Partiel |
+| [David Lisnard](data/candidats/david-lisnard.csv) | NE | 7 | Complet |
+| [Delphine Batho](data/candidats/delphine-batho.csv) | GE | 8 | Aucun |
+| [Édouard Philippe](data/candidats/edouard-philippe.csv) | HOR | 7 | Partiel |
+| [Éric Zemmour](data/candidats/eric-zemmour.csv) | REC | 8 | Aucun |
+| [Fabien Roussel](data/candidats/fabien-roussel.csv) | PCF | 7 | Aucun |
+| [Florian Philippot](data/candidats/florian-philippot.csv) | LP | 8 | Complet |
+| [François Asselineau](data/candidats/francois-asselineau.csv) | UPR | 8 | Aucun |
+| [François Ruffin](data/candidats/francois-ruffin.csv) | DEBOUT | 8 | Partiel |
+| [Gabriel Attal](data/candidats/gabriel-attal.csv) | REN | 8 | Aucun |
+| [Jean Lassalle](data/candidats/jean-lassalle.csv) | RES | 8 | Aucun |
+| [Jean-Luc Mélenchon](data/candidats/jean-luc-melenchon.csv) | LFI | 8 | Complet, nouvelle édition annoncée le 6 novembre 2026 |
+| [Karim Bouamrane](data/candidats/karim-bouamrane.csv) | FHuF | 8 | Partiel |
+| [Marine Le Pen](data/candidats/marine-le-pen.csv) | RN | 8 | Aucun |
+| [Marine Tondelier](data/candidats/marine-tondelier.csv) | EELV | 8 | Complet |
+| [Mira Markovic](data/candidats/mira-markovic.csv) | PA | 8 | Aucun |
+| [Natacha Polony](data/candidats/natacha-polony.csv) | Nous sommes la France | 8 | Partiel |
+| [Nathalie Arthaud](data/candidats/nathalie-arthaud.csv) | LO | 8 | Partiel |
+| [Nicolas Dupont-Aignan](data/candidats/nicolas-dupont-aignan.csv) | DLF | 8 | Partiel |
+| [Olivier Becht](data/candidats/olivier-becht.csv) | Projet France | 8 | Partiel, complet annoncé le 9 novembre 2026 |
+| [Raphaël Glucksmann](data/candidats/raphael-glucksmann.csv) | PP-PS | 8 | Aucun |
+| [Selma Labib](data/candidats/selma-labib.csv) | NPA-R | 8 | Partiel |
+| [Xavier Bertrand](data/candidats/xavier-bertrand.csv) | NF | 8 | Aucun |
+
+## Une erreur ? Une idée ?
+
+- **Dans l'app** : « Signaler une erreur » sur une proposition ou une loi envoie son numéro.
+- **Sur GitHub** : ouvrez un [ticket « Erreur dans les données »](../../issues/new?template=erreur-donnees.yml).
+- **Pour contribuer** : règles de source et de neutralité dans [CONTRIBUTING.md](CONTRIBUTING.md), et [code de conduite](CODE_OF_CONDUCT.md).
+
+## Licences et soutien
+
+- **Code** : [MIT](LICENSE).
+- **Données** : [CC BY-SA 4.0](data/LICENSE.md), réutilisables en citant élire.
+- **Portraits** : chacun sous sa propre licence, créditée dans l'écran « Crédits photos ».
+- **Soutenir** : bouton « Sponsor » de GitHub.
+
+---
+
+## Pour les développeurs
+
+Ce qui suit décrit l'état actuel du code ; les tâches ouvertes sont dans [todo.md](todo.md).
+
+### Stack
+
+- **Framework** : Expo SDK 57, React Native 0.86, React 19, React Compiler et routes typées.
+- **Navigation** : Expo Router (`src/app/`) avec une barre d'onglets universelle (`expo-router/ui`).
+- **État** : Zustand persisté dans `expo-sqlite/kv-store` en natif, `localStorage` sur le web.
+- **UI** : `expo-image`, `react-native-reanimated`, `@expo/vector-icons`.
+- **Données** : Zod 4 et papaparse, au build seulement.
+- **Tests** : Jest (`jest-expo`).
+- **Plateformes** : iOS, Android et Web en export statique.
+
+### Commandes
+
+- **Installer** : `npm install` (Node 22.18+, requis par `scripts/build-data.ts`).
+- **Lancer** : `npx expo start` (ou `npm run web`, `npm run android`, `npm run ios`).
+- **Tout vérifier** : `npm run check` (données, dataset à jour, typecheck, lint, tests).
+- **Typecheck** : `npm run typecheck` (lancer `npx expo start` une fois avant, pour les routes typées).
+- **Lint** : `npm run lint`.
+- **Tests** : `npm test`.
+- **Compiler les données** : `npm run build:data`, ou `build:data:strict` pour bloquer sur les avertissements.
+- **Simuler le score** : `npm run simulate:scoring`.
+- **Chercher des questions communes** : `npm run find:enjeux` (rapport `docs/enjeux-candidats.md`, à relire).
+- **Diagnostic Expo** : `npx expo-doctor`.
+- **Ajouter un package** : `npx expo install <package>`.
+- **Build de production** : `npx eas-cli@latest workflow:run create-production-builds.yml`.
+
+### Pipeline des données
+
+- **Sources** : `data/` est la seule source de vérité, éditée à la main selon [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Compilation** : `scripts/build-data.ts` valide tout avec Zod (`src/schemas/dataset.ts`) et écrit `src/data/dataset.json`.
+- **Blocages** : le build échoue sur un schéma invalide, un id en double, une référence inconnue, une apostrophe ou un sigle manquant.
+- **Numéros stables** : `data/refs.json` est géré par le build, jamais à la main.
+- **Accès** : `src/services/dataset.ts` exporte les données en synchrone (`candidats`, `propositions`, `lois`, `getCandidat()`...).
+- **Types** : déduits des schémas Zod.
+- **Collecte et audit** : skills `.claude/skills/collecter-donnees/` et `.claude/skills/verifier-donnees/`, lisibles sans assistant IA.
+- **Tableau du README** : à mettre à jour à la main quand un candidat ou son nombre de propositions change.
 
 ### Données utilisateur
 
-- `src/store/votes-store.ts` (Zustand + `persist`, version 3) : `votes` (propositions), `loiVotes` (scrutins), `order` (ordre de passage figé, propositions et scrutins intercalés, régénéré au reset), `onboardingVersion` (dernière présentation vue, revue quand `ONBOARDING_VERSION` monte), `marker` (surligneur actif) et `marks` (surligneur de chaque vote, jamais recoloré). Stockage : `expo-sqlite/kv-store` en natif, `localStorage` sur le web (`src/lib/storage.ts` / `storage.web.ts`).
-- `src/lib/shuffle.ts` : mélange Fisher-Yates + alternance des candidats et thèmes.
-- `src/lib/scoring.ts` : score d'accord (fonction pure, testée).
-
-### Calcul du score d'accord
-
-Pour chaque candidat, un seul score combiné, ramené sur 0-100 % :
-
-- propositions : la note de l'utilisateur (-2..+2) ;
-- scrutins : +2 si le candidat a voté comme l'utilisateur, -2 à l'inverse, 0 si le candidat s'est abstenu ; l'abstention de l'utilisateur ne compte pour personne (ni score, ni fiabilité) ; un vote de groupe pèse moitié (`GROUP_VOTE_WEIGHT`) ;
-- un scrutin où le candidat n'a pas voté (pas élu, pas de groupe) ne compte pas pour lui : ni point en plus, ni point en moins ;
-- programme et scrutins pèsent au nombre de leurs votes, mais les scrutins jamais plus de la moitié du score (`MAX_PARLEMENT_SHARE`) : un sortant n'est pas jugé surtout sur ses votes passés.
-
-Sans vote : « Pas encore évalué » (pas de 50 % par défaut). Classé à partir de 2 propositions votées (les scrutins seuls ne suffisent pas) ; à score égal, même rang, dans un ordre tiré au hasard à chaque lancement (le nombre de votes ne départage pas : il avantagerait les élus sortants). Pourquoi : [docs/simulations](docs/simulations/README.md), à relancer avec `npm run simulate:scoring`. La fiche candidat détaille la part programme et la part votes au Parlement.
-
-**Fiabilité** d'un score classé, selon ses éléments (proposition notée ou vote personnel : 1, vote de groupe : ½) : fragile sous 3, assez sûr de 3 à 4,5, fiable à partir de 5. Chaque candidat a jusqu'à 8 propositions, chacune dans un thème différent : tous peuvent devenir fiables avec leur seul programme. Affichée en jauge de 3 traits dans le Classement, détaillée sur la fiche, et dans le bilan de Voter (panneaux remplis au tiers, aux deux tiers ou en entier).
+- **Store** : `src/store/votes-store.ts` (Zustand `persist`, version 4) garde `votes` (un vote par question : proposition seule ou enjeu), `loiVotes`, `order`, `onboardingVersion`, `marker`, `marks` et `questionsChanged`.
+- **Questions communes** : `src/lib/enjeux.ts` déduit la note de chaque proposition (`effectiveVotes`, inversée pour un « contre ») ; `usePropositionVotes()` la donne aux écrans.
+- **Ordre de passage** : `questionOrder` (`src/lib/shuffle.ts`) mélange les propositions seules en alternant candidats et thèmes, puis intercale enjeux et scrutins, jamais côte à côte.
+- **Score** : `src/lib/scoring.ts`, fonction pure et testée.
+- **Constantes du score** : `MIN_VOTES_PER_CANDIDAT` (2), `GROUP_VOTE_WEIGHT` (0,5), `MAX_PARLEMENT_SHARE` (0,5), `RELIABILITY_FROM` (3 et 5 éléments).
+- **Progression** : `src/lib/progress.ts` (paliers, bilans, `allVoted()`).
 
 ### Interface
 
-- **Univers « cahier annoté »** : papier blanc froid, encre, graphite, surligneur du lecteur réservé à ses votes, Literata (titres), Atkinson Hyperlegible Next (texte) et Caveat (annotations du lecteur), auto-hébergées sous SIL OFL 1.1 dans `assets/fonts/` et chargées par `src/app/_layout.tsx`, deux tailles de lecture (17 et 13). Tokens dans `src/constants/theme.ts`.
-- **Composants** : `src/components/ui/` (Button, ResetButton, Badge, ProgressCounter, SegmentedControl, SearchField, Sheet) et composants métier (`proposition-sheet`, `vote-scale`, `candidate-panel`, `loi-card`, `vote-row`...).
-- **Logo** : la France d'un trait de feutre aux quatre surligneurs, le « é » au centre. Sources `assets/brand/mark.svg` (logo), `mark-monochrome.svg` (icône à thème Android) et `e.svg` (la lettre seule) ; icônes et bannière du Play Store (`assets/brand/feature-graphic.html`) rendues dans `assets/images/` par `node scripts/build-brand.mjs`.
-- **Captures des stores** : `assets/images/screenshots/` (iPhone 6,9 pouces, iPad 13 pouces, téléphone et tablettes 7 et 10 pouces Android), refaites depuis l'export web par `node scripts/build-screenshots.mjs <export>` (votes de démo identiques, candidats et partis anonymes).
+- **Direction** : « le cahier annoté », décrite dans [DESIGN.md](DESIGN.md) et `.impeccable/surfaces/`.
+- **Tokens** : `src/constants/theme.ts`, thème clair seulement.
+- **Polices** : Literata, Atkinson Hyperlegible Next et Caveat, auto-hébergées sous SIL OFL 1.1 dans `assets/fonts/`.
+- **Composants** : `src/components/ui/` pour la base, `src/components/` pour le métier (`proposition-sheet`, `vote-scale`, `share-card`...).
+- **Partage** : `react-native-view-shot` et `expo-sharing`, partage de fichier ou téléchargement sur le web.
+- **Textes légaux** : `src/constants/legal.ts`.
+- **Logo** : sources dans `assets/brand/`, icônes rendues par `node scripts/build-brand.mjs`.
+- **Captures des stores** : `assets/images/screenshots/`, refaites par `node scripts/build-screenshots.mjs <export>`.
 
-## 4. Stack Technique
+### Documentation
 
-- **Framework** : Expo SDK 57, React Native 0.86, React 19, React Compiler, routes typées.
-- **Navigation** : Expo Router (`src/app/`), barre d'onglets personnalisée universelle (`expo-router/ui`).
-- **État** : Zustand persisté (`expo-sqlite/kv-store`).
-- **UI** : `expo-image`, `react-native-reanimated`, `@expo/vector-icons`.
-- **Données** : Zod 4 + papaparse (outils de build).
-- **Tests** : Jest (`jest-expo`).
-- **Plateformes** : iOS, Android, Web (export statique). Déploiement mobile documenté dans [docs/feature-20261014-deploy.md](docs/feature-20261014-deploy.md). Optimisations de build Android (R8, obscurcissement DEX, ProGuard via `expo-build-properties`) documentées dans [docs/feature-20261019-android-opti.md](docs/feature-20261019-android-opti.md).
-
-## 5. Commandes Développeur
-
-- **Installer les dépendances (obligatoire avant tout)** : `npm install` (Node 22.18+, requis pour exécuter `scripts/build-data.ts`)
-- **Lancer le serveur de dév** : `npx expo start` (`npm run web`, `npm run android`, `npm run ios`)
-- **Tout vérifier** : `npm run check` (build des données + dataset à jour + typecheck + lint + tests)
-- **Typecheck** : `npm run typecheck` (lancer `npx expo start` une fois pour générer `expo-env.d.ts` et les routes typées)
-- **Lint** : `npm run lint`
-- **Tests** : `npm test`
-- **Compiler les données** : `npm run build:data` (ou `build:data:strict`)
-- **Diagnostic Expo** : `npx expo-doctor`
-- **Installer un package compatible Expo** : `npx expo install <package>`
-- **Build de production EAS Workflow** : `npx eas-cli@latest workflow:run create-production-builds.yml`
-
-## 6. Contribuer, licences, soutien
-
-- **Contribuer** : signalements d'erreur, règles de sourçage et de neutralité, conventions de code dans [CONTRIBUTING.md](CONTRIBUTING.md). Code de conduite : [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-- **Licences** : code sous [MIT](LICENSE), données (`data/`) sous [CC BY-SA 4.0](data/LICENSE.md), portraits sous leur propre licence (écran « Crédits photos »).
-- **Soutenir** : bouton « Sponsor » de GitHub, configuré dans `.github/FUNDING.yml`.
+- **Déploiement mobile** : [docs/feature-20261014-deploy.md](docs/feature-20261014-deploy.md).
+- **Optimisations Android** : [docs/feature-20261019-android-opti.md](docs/feature-20261019-android-opti.md).
+- **Historique des features** : un fichier `docs/feature-AAAAMMJJ-sujet.md` par lot.
+- **Produit** : [PRODUCT.md](PRODUCT.md).

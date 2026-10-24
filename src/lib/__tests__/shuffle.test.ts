@@ -1,4 +1,5 @@
-import { balancedOrder, fisherYates, interleaveLois } from '@/lib/shuffle';
+import { balancedOrder, fisherYates, interleaveLois, questionOrder } from '@/lib/shuffle';
+import type { Proposition } from '@/schemas/dataset';
 import { lois, propositions } from '@/services/dataset';
 
 describe('fisherYates', () => {
@@ -60,5 +61,39 @@ describe('interleaveLois', () => {
     const base = balancedOrder(propositions);
     const order = interleaveLois(base, [...loiIds], { from: 10 });
     expect(order.slice(0, 10)).toEqual(base.slice(0, 10));
+  });
+});
+
+describe('questionOrder', () => {
+  const solo = Array.from({ length: 30 }, (_, i) => ({ id: `p${i}`, candidatId: `c${i % 6}`, thematiqueId: `t${i % 4}` }) as Proposition);
+  const enjeuIds = ['e1', 'e2', 'e3', 'e4', 'e5'];
+  const loiIds = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6'];
+
+  it('intercale enjeux et scrutins : jamais deux enjeux de suite, jamais un scrutin collé à un enjeu', () => {
+    for (let run = 0; run < 50; run++) {
+      const order = questionOrder(solo, enjeuIds, loiIds);
+      expect([...order].sort()).toEqual([...solo.map((p) => p.id), ...enjeuIds, ...loiIds].sort());
+      order.forEach((id, i) => {
+        const next = order[i + 1];
+        if (enjeuIds.includes(id) && next) {
+          expect(enjeuIds.includes(next) || loiIds.includes(next)).toBe(false);
+        }
+        if (loiIds.includes(id) && next) {
+          expect(enjeuIds.includes(next)).toBe(false);
+        }
+      });
+    }
+  });
+
+  it('répartit les scrutins sur toute la série, sans les entasser à la fin', () => {
+    const many = Array.from({ length: 152 }, (_, i) => ({ id: `p${i}`, candidatId: `c${i % 25}`, thematiqueId: `t${i % 12}` }) as Proposition);
+    const enjeux = Array.from({ length: 17 }, (_, i) => `e${i}`);
+    const scrutins = Array.from({ length: 42 }, (_, i) => `l${i}`);
+    let last20 = 0;
+    for (let run = 0; run < 100; run++) {
+      last20 += questionOrder(many, enjeux, scrutins).slice(-20).filter((id) => id.startsWith('l')).length;
+    }
+    // Régulier : 42 scrutins sur 211 questions, environ 4 dans les 20 dernières.
+    expect(last20 / 100).toBeLessThan(6);
   });
 });

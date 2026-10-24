@@ -37,7 +37,7 @@ export function LegalPage({
             {section.titre}
           </Text>
           {section.paragraphes.map((p) => (
-            <Text key={p} style={[Type.body, styles.ink]}>
+            <Text key={p} style={[Type.body, styles.ink]} selectable>
               {p}
             </Text>
           ))}

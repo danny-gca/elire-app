@@ -37,16 +37,22 @@ export function LoiDetail({ loi, candidatId }: LoiDetailProps) {
 
   return (
     <View style={styles.root}>
-      <Text style={[Type.bodyStrong, styles.ink]}>{loi.titre}</Text>
-      <Text style={[Type.label, Numeric, styles.muted]}>
+      <Text style={[Type.bodyStrong, styles.ink]} selectable>
+        {loi.titre}
+      </Text>
+      <Text style={[Type.label, Numeric, styles.muted]} selectable>
         {NATURE_LABELS[loi.nature]} · {CHAMBRE_LABELS[loi.chambre]} · {formatDate(loi.dateVote)} · {loi.ref} ·{' '}
         <Text style={[Type.labelStrong, styles.ink]}>{STATUT_LABELS[loi.statut]}</Text>
       </Text>
-      <Text style={[Type.body, styles.soft]}>{loi.resume}</Text>
+      <Text style={[Type.body, styles.soft]} selectable>
+        {loi.resume}
+      </Text>
 
       <View style={styles.block}>
         <Text style={[Type.labelStrong, styles.muted]}>La question posée</Text>
-        <Text style={[Type.body, styles.ink]}>{loi.question}</Text>
+        <Text style={[Type.body, styles.ink]} selectable>
+          {loi.question}
+        </Text>
       </View>
 
       <View style={styles.block}>

@@ -1,4 +1,5 @@
 import { denseRanks, computeScores, loiPoints, reliabilityOf, scoreCandidat, scoreDetail, type CandidateScore, type LoiBallot, type VoteValue } from '@/lib/scoring';
+import { effectiveVotes } from '@/lib/enjeux';
 import type { Candidat, Loi, Proposition, VoteCandidatLoi } from '@/schemas/dataset';
 
 const candidat = (id: string, nom = id): Candidat => ({
@@ -7,6 +8,7 @@ const candidat = (id: string, nom = id): Candidat => ({
   partiId: 'p',
   avatar: 'XX',
   candidature: { statut: 'declaree', date: '2026-01-01', sourceUrl: 'https://exemple.fr' },
+  programme: { statut: 'aucun' },
   biographie: 'bio',
   parti: 'Parti',
   couleurParti: '#000000',
@@ -21,6 +23,7 @@ const prop = (id: string, candidatId: string): Proposition => ({
   description: 'desc',
   sourceUrl: 'https://exemple.fr/doc',
   dateDeclaration: '2024-01-01',
+  typeSource: 'programme_2027',
   contexte: 'ctx',
 });
 
@@ -193,5 +196,17 @@ describe('scoreDetail', () => {
   it('compte un vote de groupe à moitié', () => {
     const d = scoreDetail(candidat('b'), props, { b1: 2 }, { lois, votes: { l1: 'pour' } });
     expect(d.parlement).toEqual({ rows: [{ points: -2, weight: 0.5, count: 1 }], sum: -1, max: 1 });
+  });
+});
+
+describe('scoreCandidat avec un enjeu', () => {
+  it('« Parfait » sur la question : 100 % au candidat pour, 0 % au candidat contre', () => {
+    const props = [
+      { ...prop('pa', 'a'), enjeuId: 'e1', sens: 'pour' as const },
+      { ...prop('pb', 'b'), enjeuId: 'e1', sens: 'contre' as const },
+    ];
+    const votes = effectiveVotes({ e1: 2 }, props);
+    expect(scoreCandidat(candidat('a'), props, votes).score).toBe(100);
+    expect(scoreCandidat(candidat('b'), props, votes).score).toBe(0);
   });
 });

@@ -20,7 +20,7 @@ Un programme 2022 reste utilisable tant qu'aucun programme 2027 n'est publié ; 
 
 1. Vérifier la candidature (déclaration ou désignation datée, avec source). Une simple rumeur ne suffit pas.
 2. `data/partis.json` si le parti manque : `id`, `nom` (graphie du parti), `sigle` (seulement s'il l'utilise lui-même ou si la presse le fait ; sinon, aucun), `couleur` (celle de son logo), `nuanceOfficielle` (la nuance attribuée par le ministère de l'Intérieur à la dernière élection nationale du parti : `code`, `libelle`, `election`, `sourceUrl` ; absente s'il n'a jamais été classé, sans rien inventer), `siteWeb`.
-3. `data/candidats.json` : `id` kebab-case (`prenom-nom`), `nom`, `partiId`, `avatar` (initiales), `biographie` d'une phrase, factuelle.
+3. `data/candidats.json` : `id` kebab-case (`prenom-nom`), `nom`, `partiId`, `avatar` (initiales), `biographie` d'une phrase, factuelle, `programme` (statut, `url`, `date` de publication si la source la donne, `annonce` si une date de sortie est annoncée).
 4. Photo : chercher sur Wikimedia Commons (licence CC0, CC BY ou CC BY-SA), garder le fichier exact, recadrer avec `scripts/crop-portrait.py` (carré 512 px centré sur le visage) vers `assets/images/candidates/<id>.jpg`, puis vérifier le résultat à l'œil ; l'ajouter à `src/constants/candidate-images.ts` et créditer dans `src/constants/credits.ts`. Pas de photo libre : initiales.
 5. Créer `data/candidats/<id>.csv` (section suivante).
 
@@ -29,7 +29,7 @@ Un programme 2022 reste utilisable tant qu'aucun programme 2027 n'est publié ; 
 `data/candidats/<candidat-id>.csv`, en-tête :
 
 ```
-id,thematique_id,titre,description,source_url,date_declaration,contexte
+id,thematique_id,titre,description,source_url,date_declaration,type_source,contexte
 ```
 
 - `id` : `prop-<initiales>-<n>` (ex. `prop-mt-7`), jamais réutilisé.
@@ -37,6 +37,7 @@ id,thematique_id,titre,description,source_url,date_declaration,contexte
 - `titre` : la mesure, courte et neutre.
 - `description` : citation exacte « … », coupures `[...]`.
 - `source_url` : le document précis ; `date_declaration` : `AAAA-MM-JJ` ou vide si la source n'est pas datée.
+- `type_source` : `programme_2027` (programme, site, livret, tract ou manifeste de campagne 2027), `programme_anterieur` (programme 2017, 2022 ou 2024), `prise_de_position` (interview, discours, article, communiqué, réseau social, acte de ministre).
 - `contexte` : type de document et circonstance (et page), puis les précisions utiles de la mesure (chiffres, modalités, exceptions), tirées de la source ; 250 caractères environ.
 - Anonymat : ni nom du candidat ou du parti, ni slogan de campagne dans `titre`, `description` et `contexte` (lus pendant le vote à l'aveugle). Couper le nom de la citation avec `[...]`.
 - Sigles : titre et question en clair (sigle seulement du quotidien, TVA, SMIC, RSA, SNCF, RATP, EDF, IVG, ou entre parenthèses après sa forme claire) ; chaque sigle des textes lus à l'aveugle est dans `data/glossaire.json` (le build bloque sinon).
@@ -50,6 +51,16 @@ id,thematique_id,titre,description,source_url,date_declaration,contexte
 - `id` : `<sujet>-<annee>` ; `thematiqueId` ; `nature` (`projet_loi`, `proposition_loi`, `motion_censure`, `declaration_gouvernement`, `resolution`, `texte_europeen`) ; `chambre` (`assemblee_nationale`, `senat`, `parlement_europeen`) ; `dateVote` ; `statut` (`adoptee`, `rejetee`, `en_cours`) ; `titre` ; `question` (posée à l'aveugle, sans nom de candidat, de parti ni de loi éponyme, sans résultat ; répondre « Pour » doit correspondre à la position « pour » du scrutin) ; `enjeu` (ce que fait le texte, sans nom ni résultat) ; `resume` factuel ; `sourceOfficielleUrl` = la page du scrutin.
 - `votes` : une entrée par candidat concerné, `position` (`pour`, `contre`, `abstention`), `typeVote` (`individuel` si le candidat a voté lui-même, sinon `groupe_parti` avec `groupe` et `groupeNom` à la date), `explication` factuelle, `sourceUrl` du même scrutin.
 - Choisir des scrutins publics à résultats nominatifs, sur des sujets des thèmes de l'app, qui concernent plusieurs candidats.
+
+## Ajouter un enjeu commun
+
+Une question neutre qui réunit des propositions de plusieurs candidats (`data/enjeux.json`).
+
+1. `npm run build:data`, puis `npm run find:enjeux` (option `--seuil=0.2` pour élargir) : le rapport `docs/enjeux-candidats.md` liste par thème les groupes de propositions proches ou opposées. Un tri à relire, jamais une décision.
+2. Garder un groupe seulement si chaque proposition porte la même idée (« pour ») ou dit explicitement l'inverse (« contre » : supprimer, quitter, démanteler). Ne rien déduire d'un silence. Une proposition qui mêle deux idées reste seule tant qu'elle n'est pas réécrite sur une.
+3. Proposer à Danny chaque enjeu (question, positions, sens) et attendre sa validation avant de l'écrire.
+4. Écrire l'objet : `id` (kebab-case), `thematiqueId` (celui de toutes ses propositions), `question` (130 caractères au plus, anonyme, formulée comme le changement que propose le plus de candidats), `enjeu` (ce que tranche la question, 220 caractères au plus, sans chiffre propre à un candidat), `positions` : `{ "propositionId": "prop-…", "sens": "pour" | "contre" }`, au moins 2 candidats différents, une position par candidat.
+5. Une proposition n'est que dans un enjeu ; les numéros `E-xx` sont attribués par le build.
 
 ## Terminer
 

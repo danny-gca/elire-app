@@ -15,14 +15,14 @@ import { Colors, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
 import { fisherYates } from '@/lib/shuffle';
 import type { Proposition } from '@/schemas/dataset';
 import { getCandidat, propositions, thematiques } from '@/services/dataset';
-import { useVotesStore } from '@/store/votes-store';
+import { usePropositionVotes } from '@/store/votes-store';
 
 type Filtre = 'toutes' | 'a-voter';
 
 export default function ThemeScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const votes = useVotesStore((s) => s.votes);
+  const votes = usePropositionVotes();
   const [filtre, setFiltre] = useState<Filtre>('toutes');
   const [selected, setSelected] = useState<Proposition | null>(null);
 
