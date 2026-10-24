@@ -79,11 +79,13 @@ export default function CandidateScreen() {
       <View style={styles.identity}>
         <CandidateAvatar candidat={candidat} size={72} ring={candidat.couleurParti} />
         <View style={[styles.flex, styles.identityText]}>
-          <Text style={[Type.display, styles.ink]} accessibilityRole="header">
+          <Text style={[Type.display, styles.ink]} accessibilityRole="header" selectable>
             {candidat.nom}
           </Text>
           {/* Le nom du parti dans sa couleur, foncée si besoin pour rester lisible. */}
-          <Text style={[Type.labelStrong, { color: readableOn(candidat.couleurParti, Colors.paper) }]}>{candidat.parti}</Text>
+          <Text style={[Type.labelStrong, { color: readableOn(candidat.couleurParti, Colors.paper) }]} selectable>
+            {candidat.parti}
+          </Text>
           {/* Le classement du ministère, sourcé ; jamais le nôtre. */}
           {parti?.nuanceOfficielle ? (
             <Pressable onPress={() => Linking.openURL(parti.nuanceOfficielle!.sourceUrl)} accessibilityRole="link" hitSlop={4}>
@@ -98,7 +100,9 @@ export default function CandidateScreen() {
         </View>
       </View>
 
-      <Text style={[Type.body, styles.soft]}>{candidat.biographie}</Text>
+      <Text style={[Type.body, styles.soft]} selectable>
+        {candidat.biographie}
+      </Text>
       <Pressable
         onPress={() => Linking.openURL(candidat.candidature.sourceUrl)}
         accessibilityRole="link"

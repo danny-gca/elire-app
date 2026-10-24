@@ -50,7 +50,11 @@ export function VoteRow({ vote, candidat }: VoteRowProps) {
           <Ionicons name={groupe ? 'people' : 'person'} size={14} color={Colors.ink} />
           <Text style={[Type.labelStrong, styles.ink]}>{typeLabel}</Text>
         </View>
-        {vote.explication && !REPEATS_TAG.test(vote.explication) && <Text style={[Type.label, styles.soft]}>{vote.explication}</Text>}
+        {vote.explication && !REPEATS_TAG.test(vote.explication) && (
+          <Text style={[Type.label, styles.soft]} selectable>
+            {vote.explication}
+          </Text>
+        )}
         <Pressable onPress={() => Linking.openURL(vote.sourceUrl)} accessibilityRole="link" hitSlop={8} style={styles.link}>
           <Text style={[Type.label, styles.muted, styles.underline]}>Voir le scrutin officiel</Text>
         </Pressable>

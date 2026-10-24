@@ -46,14 +46,16 @@ export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen }: Mo
                 Glossaire
               </Text>
               {entries.map((g) => (
-                <Text key={g.sigle} style={[Type.label, styles.soft]}>
+                <Text key={g.sigle} style={[Type.label, styles.soft]} selectable>
                   <Text style={[Type.labelStrong, styles.ink]}>{g.sigle}</Text> : {g.forme}
                   {g.definition ? `. ${g.definition}` : '.'}
                 </Text>
               ))}
             </View>
           )}
-          <Text style={[Type.body, styles.soft]}>{text}</Text>
+          <Text style={[Type.body, styles.soft]} selectable>
+            {text}
+          </Text>
         </Animated.View>
       )}
     </View>

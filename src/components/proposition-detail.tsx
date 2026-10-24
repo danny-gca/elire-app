@@ -28,13 +28,19 @@ export function PropositionDetail({ proposition, anonymous = false, onOpenCandid
 
   return (
     <View style={styles.root}>
-      <Text style={[Type.bodyStrong, styles.title]}>{proposition.titre}</Text>
-      <Text style={[Type.body, styles.text]}>{proposition.description}</Text>
+      <Text style={[Type.bodyStrong, styles.title]} selectable>
+        {proposition.titre}
+      </Text>
+      <Text style={[Type.body, styles.text]} selectable>
+        {proposition.description}
+      </Text>
 
       <View style={styles.block}>
         <Text style={[Type.labelStrong, styles.muted]}>Contexte</Text>
-        <Text style={[Type.body, styles.text]}>{proposition.contexte}</Text>
-        <Text style={[Type.label, Numeric, styles.muted]}>
+        <Text style={[Type.body, styles.text]} selectable>
+          {proposition.contexte}
+        </Text>
+        <Text style={[Type.label, Numeric, styles.muted]} selectable>
           {proposition.dateDeclaration ? `Déclaré le ${formatDate(proposition.dateDeclaration)} · ` : ''}
           {proposition.ref}
         </Text>

@@ -13,29 +13,30 @@ interface SweepTextProps {
   style?: StyleProp<TextStyle>;
   /** Faux quand le texte n'est qu'une partie d'un titre déjà annoncé. */
   header?: boolean;
+  selectable?: boolean;
 }
 
 // Le trait balaie le texte de gauche à droite, ligne après ligne (web : global.css [data-sweep]).
-export function SweepText({ children, marker, style, header = true }: SweepTextProps) {
+export function SweepText({ children, marker, style, header = true, selectable }: SweepTextProps) {
   const role = header ? 'header' : undefined;
   if (!marker) {
     return (
-      <Text style={style} accessibilityRole={role}>
+      <Text style={style} accessibilityRole={role} selectable={selectable}>
         {children}
       </Text>
     );
   }
   if (Platform.OS === 'web') {
     return (
-      <Text style={style} accessibilityRole={role}>
+      <Text style={style} accessibilityRole={role} selectable={selectable}>
         <Text {...({ dataSet: { sweep: marker } } as object)}>{children}</Text>
       </Text>
     );
   }
-  return <NativeSweep marker={marker} style={style} header={header}>{children}</NativeSweep>;
+  return <NativeSweep marker={marker} style={style} header={header} selectable={selectable}>{children}</NativeSweep>;
 }
 
-function NativeSweep({ children, marker, style, header }: Required<Pick<SweepTextProps, 'marker'>> & SweepTextProps) {
+function NativeSweep({ children, marker, style, header, selectable }: Required<Pick<SweepTextProps, 'marker'>> & SweepTextProps) {
   const role = header ? 'header' : undefined;
   const [lines, setLines] = useState<TextLayoutLine[]>([]);
   const progress = useSharedValue(0);
@@ -61,7 +62,7 @@ function NativeSweep({ children, marker, style, header }: Required<Pick<SweepTex
           color={Markers[marker].soft}
         />
       ))}
-      <Text style={style} accessibilityRole={role} onTextLayout={(e) => setLines(e.nativeEvent.lines)}>
+      <Text style={style} accessibilityRole={role} selectable={selectable} onTextLayout={(e) => setLines(e.nativeEvent.lines)}>
         {children}
       </Text>
     </View>

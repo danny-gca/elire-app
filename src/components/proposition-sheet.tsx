@@ -159,11 +159,11 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
         )}
       </View>
       <View style={styles.body}>
-        <SweepText marker={sweep} style={[Type.display, styles.title]}>
+        <SweepText marker={sweep} style={[Type.display, styles.title]} selectable>
           {proposition.titre}
         </SweepText>
         {proposition.description ? (
-          <Text style={[Type.body, styles.description]} numberOfLines={quoteOpen ? undefined : 2}>
+          <Text style={[Type.body, styles.description]} numberOfLines={quoteOpen ? undefined : 2} selectable>
             {proposition.description}
           </Text>
         ) : null}
