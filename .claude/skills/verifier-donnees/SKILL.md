@@ -52,10 +52,12 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - Sigles : titre et question en clair (sigle seulement du quotidien, TVA, SMIC, RSA, SNCF, RATP, EDF, IVG, ou entre parenthèses après sa forme claire) ; chaque sigle des textes lus à l'aveugle est dans `data/glossaire.json` (le build bloque sinon).
 - Lisibilité : titre d'une idée (environ 90 caractères), mots simples, sigles expliqués ; citation courte.
 - `thematique_id` cohérent, auteur bien le candidat (pas un cadre du parti).
+- `type_source` exact : `programme_2027` seulement pour un document de campagne 2027 (programme, site, livret, tract, manifeste) ; un programme 2017, 2022 ou 2024 est `programme_anterieur` ; une interview, un discours, un article ou un acte de ministre est `prise_de_position`.
 - Verdict : **confirmée**, **reformulée** (titre ou citation corrigés selon la source) ou **retirée** (introuvable).
 
 **Candidat** (`data/candidats.json`)
 - Candidature déclarée ou désignation officielle, avec une source datée ; sinon le signaler.
+- `programme` : `complet` seulement si un programme 2027 entier est publié (l'`url` y mène), `partiel` pour des premières mesures, un dépliant ou un site en cours, sinon `aucun` ; `date` seulement si la source la donne. Une publication annoncée à une date précise (programme complet, livret) va dans `annonce` (`date`, `sourceUrl` qui la cite) : une fois la date passée, le build la rappelle jusqu'à la mise à jour de `programme` et le retrait d'`annonce`.
 - Parti et biographie factuels et neutres.
 - Photo : fichier exact sur Wikimedia Commons sous CC0, CC BY ou CC BY-SA, crédité dans `src/constants/credits.ts`. « Tous droits réservés » : pas de photo, initiales.
 
@@ -68,6 +70,11 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - `groupe_parti` : la position majoritaire de son groupe dans l'analyse par groupe, avec `groupe` (sigle à la date) et `groupeNom`. Si le parti n'avait aucun élu ni groupe dans cette chambre à cette date, le vote est **retiré**.
 - `explication` : un fait (« a voté pour avec son groupe »), jamais une opinion (« coup de force », « courageux »).
 - Le `sourceUrl` du vote pointe vers le même scrutin.
+
+**Enjeu** (`data/enjeux.json`)
+- Chaque position porte la même idée que la question (`pour`) ou dit explicitement l'inverse (`contre`) : relire la citation de chaque proposition. Une position déduite d'un silence ou d'une mesure voisine est **retirée** de l'enjeu (la proposition redevient seule).
+- La `question` est neutre, anonyme, d'une idée ; l'`enjeu` ne reprend aucun chiffre propre à un candidat.
+- Une proposition qui mêle deux idées n'entre pas dans un enjeu.
 
 ## 3. Corriger et consigner
 

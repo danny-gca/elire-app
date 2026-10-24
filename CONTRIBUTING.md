@@ -19,8 +19,9 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 
 | Fichier | Contenu |
 |---|---|
-| `data/candidats/<candidat-id>.csv` | Propositions d'un candidat : `id, thematique_id, titre, description, source_url, date_declaration, contexte` |
+| `data/candidats/<candidat-id>.csv` | Propositions d'un candidat : `id, thematique_id, titre, description, source_url, date_declaration, type_source, contexte` |
 | `data/lois.json` | Scrutins et position de chaque candidat ; `question` et `enjeu` sont lus pendant le vote à l'aveugle (sans nom ni résultat, « Pour » = la position « pour » du scrutin) |
+| `data/enjeux.json` | Questions communes : une `question` neutre (et son `enjeu`) qui réunit des propositions de plusieurs candidats, chacune `pour` ou `contre` ; procédure dans le skill `collecter-donnees` |
 | `data/glossaire.json` | Sigles des textes lus à l'aveugle : `sigle`, `forme` développée, `definition` d'une phrase (affichés dans « En savoir plus ») |
 | `data/candidats.json`, `partis.json`, `thematiques.json` | Référentiels |
 | `data/refs.json` | Numéros stables, géré par le build : ne pas éditer |
@@ -35,10 +36,13 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 6. **Titre fidèle** : le titre résume la citation sans la déformer, sans rien ajouter ni retirer (chiffre, portée, condition). La page « Méthode et corrections » le promet.
 7. **Simple et court** : un titre d'une idée (environ 90 caractères) ; une citation de moins de 200 caractères environ.
 8. **Sigles** : un titre ou une question s'écrit en clair ; un sigle n'y reste que s'il est du quotidien (TVA, SMIC, RSA, SNCF, RATP, EDF, IVG) ou entre parenthèses après sa forme claire (« l'Alliance atlantique (OTAN) »). Tout sigle des textes lus à l'aveugle (titre, description, contexte, question, enjeu) doit figurer dans `data/glossaire.json` (sigle, forme développée, une phrase) : il s'affiche dans « En savoir plus ». Le build bloque sinon.
-9. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
+9. **Type de source** (`type_source`) : `programme_2027` (programme, site, livret, tract ou manifeste de campagne 2027), `programme_anterieur` (programme d'une élection passée : 2017, 2022, 2024), `prise_de_position` (interview, discours, article, communiqué, réseau social, ou acte de ministre comme une circulaire). Affiché dans « En savoir plus » et le détail : il ne pèse pas dans le score.
+10. **Enjeux communs** : une proposition n'entre dans un enjeu que si elle porte la même idée (`pour`) ou dit explicitement l'inverse (`contre` : supprimer, quitter, démanteler) ; un silence n'est jamais une position. Une proposition dans un enjeu au plus, au moins 2 candidats, une position par candidat, le thème de l'enjeu pour toutes. Le build bloque sinon.
+11. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
 
 ### Entrée d'un candidat
 
+- Chaque candidat a un `programme` dans `data/candidats.json` : `complet` (programme 2027 publié en entier), `partiel` (premières mesures, dépliant, site en cours) ou `aucun` ; `url` obligatoire sauf pour `aucun`, `date` seulement si la source la donne. Une publication annoncée à une date précise (programme complet, livret) va dans `annonce` (`date`, `sourceUrl` qui la cite) : une fois la date passée, le build la rappelle jusqu'à la mise à jour de `programme` et le retrait d'`annonce`.
 - Un candidat entre quand sa candidature est **déclarée** (annonce publique par la personne) ou **désignée** (vote ou décision officielle de son parti), avec une source datée. « Pressenti » ou « envisage » ne suffit pas.
 - Il sort s'il se retire ou s'il est remplacé ; ses propositions restent dans l'historique du dépôt.
 - Chaque nouveau candidat arrive avec le même nombre de propositions que les autres.

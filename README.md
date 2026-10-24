@@ -12,9 +12,10 @@ Une application gratuite et neutre pour savoir de quels candidats à la préside
 ## Ce que vous pouvez faire
 
 - **Voter** : notez chaque proposition de « Impossible » à « Parfait », ou passez avec « Je ne sais pas ».
+- **Questions communes** : quand plusieurs candidats proposent la même chose, ou l'inverse, une seule question compte pour tous.
 - **Scrutins réels** : votez aussi sur des textes passés au Parlement et comparez-vous aux élus.
 - **Classement** : après 10 votes, voyez les candidats les plus proches de vos avis.
-- **Partager** : envoyez une image de votre classement, ou sans aucun nom votre avancée, vos thèmes ou vos scrutins.
+- **Partager** : envoyez une image de votre classement, ou sans aucun nom votre avancée, vos thèmes, vos scrutins ou vos débats tranchés.
 - **Explorer** : parcourez toutes les propositions par thème, avec leur auteur et leur source.
 - **Lois** : retrouvez chaque scrutin et la position de chaque candidat.
 - **Fiche candidat** : biographie, programme et votes au Parlement sur une seule page.
@@ -31,6 +32,7 @@ Une application gratuite et neutre pour savoir de quels candidats à la préside
 ## Comment le score est calculé
 
 - Votre note va de -2 (Impossible) à +2 (Parfait) et compte pour l'auteur de la proposition.
+- Sur une question commune, elle compte pour chaque candidat qui la propose, et à l'inverse pour celui qui propose le contraire.
 - Sur un scrutin, un candidat gagne des points s'il a voté comme vous et en perd s'il a voté l'inverse.
 - Un vote de groupe compte moitié moins qu'un vote personnel.
 - Les votes au Parlement ne font jamais plus de la moitié du score.
@@ -47,36 +49,37 @@ Tout est dans [data/](data/), sous licence libre, lisible directement sur GitHub
 - **Candidats** : [candidats.json](data/candidats.json), avec la source datée de chaque candidature.
 - **Partis** : [partis.json](data/partis.json), avec leur nuance officielle du ministère de l'Intérieur.
 - **Thèmes** : [thematiques.json](data/thematiques.json), les 12 thèmes de l'app.
+- **Questions communes** : [enjeux.json](data/enjeux.json), chaque question et la position, pour ou contre, de chaque candidat.
 - **Sigles** : [glossaire.json](data/glossaire.json), la définition de chaque sigle affiché.
-- **À savoir** : faute de programme 2027 publié, certaines mesures viennent d'un programme de 2022 ou 2024, ce que précise leur contexte.
+- **À savoir** : faute de programme 2027 publié, certaines mesures viennent d'un programme de 2022 ou 2024 ; chaque proposition dit son type de source (Programme 2027, Programme précédent, Prise de position).
 
-| Candidat | Parti | Propositions |
-| --- | --- | --- |
-| [Anasse Kazib](data/candidats/anasse-kazib.csv) | RP | 8 |
-| [Antoine Mikolajczak](data/candidats/antoine-mikolajczak.csv) | EQX | 5 |
-| [Bruno Retailleau](data/candidats/bruno-retailleau.csv) | LR | 8 |
-| [David Lisnard](data/candidats/david-lisnard.csv) | NE | 7 |
-| [Delphine Batho](data/candidats/delphine-batho.csv) | GE | 8 |
-| [Édouard Philippe](data/candidats/edouard-philippe.csv) | HOR | 7 |
-| [Éric Zemmour](data/candidats/eric-zemmour.csv) | REC | 8 |
-| [Fabien Roussel](data/candidats/fabien-roussel.csv) | PCF | 7 |
-| [Florian Philippot](data/candidats/florian-philippot.csv) | LP | 8 |
-| [François Asselineau](data/candidats/francois-asselineau.csv) | UPR | 8 |
-| [François Ruffin](data/candidats/francois-ruffin.csv) | DEBOUT | 8 |
-| [Gabriel Attal](data/candidats/gabriel-attal.csv) | REN | 8 |
-| [Jean Lassalle](data/candidats/jean-lassalle.csv) | RES | 8 |
-| [Jean-Luc Mélenchon](data/candidats/jean-luc-melenchon.csv) | LFI | 8 |
-| [Karim Bouamrane](data/candidats/karim-bouamrane.csv) | FHuF | 8 |
-| [Marine Le Pen](data/candidats/marine-le-pen.csv) | RN | 8 |
-| [Marine Tondelier](data/candidats/marine-tondelier.csv) | EELV | 8 |
-| [Mira Markovic](data/candidats/mira-markovic.csv) | PA | 8 |
-| [Natacha Polony](data/candidats/natacha-polony.csv) | Nous sommes la France | 8 |
-| [Nathalie Arthaud](data/candidats/nathalie-arthaud.csv) | LO | 8 |
-| [Nicolas Dupont-Aignan](data/candidats/nicolas-dupont-aignan.csv) | DLF | 8 |
-| [Olivier Becht](data/candidats/olivier-becht.csv) | Projet France | 8 |
-| [Raphaël Glucksmann](data/candidats/raphael-glucksmann.csv) | PP-PS | 8 |
-| [Selma Labib](data/candidats/selma-labib.csv) | NPA-R | 8 |
-| [Xavier Bertrand](data/candidats/xavier-bertrand.csv) | NF | 8 |
+| Candidat | Parti | Propositions | Programme 2027 |
+| --- | --- | --- | --- |
+| [Anasse Kazib](data/candidats/anasse-kazib.csv) | RP | 8 | Partiel |
+| [Antoine Mikolajczak](data/candidats/antoine-mikolajczak.csv) | EQX | 8 | Partiel, complet annoncé le 2 novembre 2026 |
+| [Bruno Retailleau](data/candidats/bruno-retailleau.csv) | LR | 8 | Partiel |
+| [David Lisnard](data/candidats/david-lisnard.csv) | NE | 7 | Complet |
+| [Delphine Batho](data/candidats/delphine-batho.csv) | GE | 8 | Aucun |
+| [Édouard Philippe](data/candidats/edouard-philippe.csv) | HOR | 7 | Partiel |
+| [Éric Zemmour](data/candidats/eric-zemmour.csv) | REC | 8 | Aucun |
+| [Fabien Roussel](data/candidats/fabien-roussel.csv) | PCF | 7 | Aucun |
+| [Florian Philippot](data/candidats/florian-philippot.csv) | LP | 8 | Complet |
+| [François Asselineau](data/candidats/francois-asselineau.csv) | UPR | 8 | Aucun |
+| [François Ruffin](data/candidats/francois-ruffin.csv) | DEBOUT | 8 | Partiel |
+| [Gabriel Attal](data/candidats/gabriel-attal.csv) | REN | 8 | Aucun |
+| [Jean Lassalle](data/candidats/jean-lassalle.csv) | RES | 8 | Aucun |
+| [Jean-Luc Mélenchon](data/candidats/jean-luc-melenchon.csv) | LFI | 8 | Complet, nouvelle édition annoncée le 6 novembre 2026 |
+| [Karim Bouamrane](data/candidats/karim-bouamrane.csv) | FHuF | 8 | Partiel |
+| [Marine Le Pen](data/candidats/marine-le-pen.csv) | RN | 8 | Aucun |
+| [Marine Tondelier](data/candidats/marine-tondelier.csv) | EELV | 8 | Complet |
+| [Mira Markovic](data/candidats/mira-markovic.csv) | PA | 8 | Aucun |
+| [Natacha Polony](data/candidats/natacha-polony.csv) | Nous sommes la France | 8 | Partiel |
+| [Nathalie Arthaud](data/candidats/nathalie-arthaud.csv) | LO | 8 | Partiel |
+| [Nicolas Dupont-Aignan](data/candidats/nicolas-dupont-aignan.csv) | DLF | 8 | Partiel |
+| [Olivier Becht](data/candidats/olivier-becht.csv) | Projet France | 8 | Partiel, complet annoncé le 9 novembre 2026 |
+| [Raphaël Glucksmann](data/candidats/raphael-glucksmann.csv) | PP-PS | 8 | Aucun |
+| [Selma Labib](data/candidats/selma-labib.csv) | NPA-R | 8 | Partiel |
+| [Xavier Bertrand](data/candidats/xavier-bertrand.csv) | NF | 8 | Aucun |
 
 ## Une erreur ? Une idée ?
 
@@ -117,6 +120,7 @@ Ce qui suit décrit l'état actuel du code ; les tâches ouvertes sont dans [tod
 - **Tests** : `npm test`.
 - **Compiler les données** : `npm run build:data`, ou `build:data:strict` pour bloquer sur les avertissements.
 - **Simuler le score** : `npm run simulate:scoring`.
+- **Chercher des questions communes** : `npm run find:enjeux` (rapport `docs/enjeux-candidats.md`, à relire).
 - **Diagnostic Expo** : `npx expo-doctor`.
 - **Ajouter un package** : `npx expo install <package>`.
 - **Build de production** : `npx eas-cli@latest workflow:run create-production-builds.yml`.
@@ -134,8 +138,9 @@ Ce qui suit décrit l'état actuel du code ; les tâches ouvertes sont dans [tod
 
 ### Données utilisateur
 
-- **Store** : `src/store/votes-store.ts` (Zustand `persist`, version 3) garde `votes`, `loiVotes`, `order`, `onboardingVersion`, `marker` et `marks`.
-- **Ordre de passage** : `src/lib/shuffle.ts` mélange (Fisher-Yates) en alternant candidats et thèmes, un scrutin toutes les trois questions environ.
+- **Store** : `src/store/votes-store.ts` (Zustand `persist`, version 4) garde `votes` (un vote par question : proposition seule ou enjeu), `loiVotes`, `order`, `onboardingVersion`, `marker`, `marks` et `questionsChanged`.
+- **Questions communes** : `src/lib/enjeux.ts` déduit la note de chaque proposition (`effectiveVotes`, inversée pour un « contre ») ; `usePropositionVotes()` la donne aux écrans.
+- **Ordre de passage** : `questionOrder` (`src/lib/shuffle.ts`) mélange les propositions seules en alternant candidats et thèmes, puis intercale enjeux et scrutins, jamais côte à côte.
 - **Score** : `src/lib/scoring.ts`, fonction pure et testée.
 - **Constantes du score** : `MIN_VOTES_PER_CANDIDAT` (2), `GROUP_VOTE_WEIGHT` (0,5), `MAX_PARLEMENT_SHARE` (0,5), `RELIABILITY_FROM` (3 et 5 éléments).
 - **Progression** : `src/lib/progress.ts` (paliers, bilans, `allVoted()`).
