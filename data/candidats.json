@@ -9,6 +9,14 @@
       "statut": "designee",
       "date": "2026-06-27",
       "sourceUrl": "https://www.sudradio.fr/sud-radio/presidentielle-2027-qui-sont-les-candidats-declares"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/07/Parti-equinoxe-Tracts.pdf",
+      "annonce": {
+        "date": "2026-11-02",
+        "sourceUrl": "https://parti-equinoxe.fr/presidentielle-2027/"
+      }
     }
   },
   {
@@ -22,6 +30,9 @@
       "statut": "designee",
       "date": "2026-10-11",
       "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -35,6 +46,10 @@
       "statut": "declaree",
       "date": "2024-09-03",
       "sourceUrl": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/havre/je-serai-candidat-a-la-prochaine-election-presidentielle-edouard-philippe-l-ancien-premier-ministre-et-maire-du-havre-officialise-sa-candidature-3026366.html"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://www.edouardphilippe.fr/#priorites"
     }
   },
   {
@@ -48,6 +63,9 @@
       "statut": "declaree",
       "date": "2026-05-22",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-officialise-sa-candidature-436721"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -61,6 +79,15 @@
       "statut": "declaree",
       "date": "2026-05-03",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-jean-luc-melenchon-officialise-sa-candidature-pour-2027-435851"
+    },
+    "programme": {
+      "statut": "complet",
+      "url": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
+      "date": "2025-02-18",
+      "annonce": {
+        "date": "2026-11-06",
+        "sourceUrl": "https://melenchon2027.fr/programme/decouvrir/"
+      }
     }
   },
   {
@@ -74,6 +101,9 @@
       "statut": "declaree",
       "date": "2026-07-07",
       "sourceUrl": "https://fr.euronews.com/my-europe/2026/07/07/je-suis-candidate-a-lelection-presidentielle-annonce-marine-le-pen-sur-tf1"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -87,6 +117,11 @@
       "statut": "designee",
       "date": "2025-12-08",
       "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
+    },
+    "programme": {
+      "statut": "complet",
+      "url": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+      "date": "2026-07-13"
     }
   },
   {
@@ -100,6 +135,11 @@
       "statut": "designee",
       "date": "2026-04-19",
       "sourceUrl": "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-bruno-retailleau-largement-designe-candidat-par-les-adherents-du-parti-les-republicains_7949957.html"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://republicains.fr/wp-content/uploads/2026/09/LR_Ecole_vF.pdf",
+      "date": "2026-08-31"
     }
   },
   {
@@ -113,6 +153,10 @@
       "statut": "declaree",
       "date": "2026-09-18",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://nouspresident.fr/notre-programme/"
     }
   },
   {
@@ -126,6 +170,9 @@
       "statut": "designee",
       "date": "2026-09-06",
       "sourceUrl": "https://lcp.fr/actualites/fabien-roussel-officiellement-candidat-du-pcf-a-l-election-presidentielle-de-2027-441389"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -139,6 +186,9 @@
       "statut": "declaree",
       "date": "2026-09-17",
       "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -152,6 +202,11 @@
       "statut": "designee",
       "date": "2025-12-08",
       "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
+      "date": "2026-06-26"
     }
   },
   {
@@ -165,6 +220,9 @@
       "statut": "declaree",
       "date": "2026-03-21",
       "sourceUrl": "https://upr.fr/militantisme/19-ans-de-lupr-francois-asselineau-lance-sa-campagne-presidentielle-2027-et-nomme-marc-parigot-directeur-de-campagne/"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -178,6 +236,10 @@
       "statut": "declaree",
       "date": "2025-03-08",
       "sourceUrl": "https://www.lejdd.fr/politique/cette-presidentielle-sera-peut-etre-la-derniere-dun-peuple-libre-dupont-aignan-annonce-sa-candidature-pour-2027-155797"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://www.debout-la-france.fr/notre-projet/"
     }
   },
   {
@@ -191,6 +253,10 @@
       "statut": "declaree",
       "date": "2026-03-31",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/le-maire-de-cannes-david-lisnard-annonce-sa-candidature-a-l-election-presidentielle-et-officialise-son-depart-des-republicains_7907063.html"
+    },
+    "programme": {
+      "statut": "complet",
+      "url": "https://www.unenouvelleenergie.fr/notre-programme/"
     }
   },
   {
@@ -204,6 +270,9 @@
       "statut": "pressentie",
       "date": "2026-07-10",
       "sourceUrl": "https://www.europe1.fr/politique/presidentielle-jean-lassalle-lance-une-cagnotte-pour-financer-sa-candidature-970134"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -216,6 +285,9 @@
       "statut": "designee",
       "date": "2026-10-02",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -228,6 +300,10 @@
       "statut": "declaree",
       "date": "2026-06-01",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-cheminot-anasse-kazib-annonce-sa-candidature_8040020.html"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf"
     }
   },
   {
@@ -240,6 +316,10 @@
       "statut": "declaree",
       "date": "2026-05-09",
       "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
+    },
+    "programme": {
+      "statut": "complet",
+      "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf"
     }
   },
   {
@@ -252,6 +332,11 @@
       "statut": "designee",
       "date": "2026-06-17",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/communique-presidentielle-2027-selma-labib-une-candidature-ouvriere-et-revolutionnaire-soutenue-par-gael-quirante"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
+      "date": "2026-09-28"
     }
   },
   {
@@ -264,6 +349,10 @@
       "statut": "declaree",
       "date": "2026-06-09",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-qui-est-karim-bouamrane-le-maire-socialiste-de-saint-ouen-et-nouveau"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf"
     }
   },
   {
@@ -275,7 +364,10 @@
     "candidature": {
       "statut": "designee",
       "date": "2026-06-06",
-      "sourceUrl": "https://www.generationecologie.fr/app/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
+      "sourceUrl": "https://generationecologie.fr/wp-content/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   },
   {
@@ -288,6 +380,14 @@
       "statut": "declaree",
       "date": "2026-09-24",
       "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://becht2027.fr/projet-france/",
+      "annonce": {
+        "date": "2026-11-09",
+        "sourceUrl": "https://becht2027.fr/projet-france/le-livre/"
+      }
     }
   },
   {
@@ -300,6 +400,10 @@
       "statut": "declaree",
       "date": "2026-10-14",
       "sourceUrl": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-mercredi-14-octobre-2026-3340206"
+    },
+    "programme": {
+      "statut": "partiel",
+      "url": "https://natachapolony2027.fr/natacha-polony/ma-vision"
     }
   },
   {
@@ -312,6 +416,9 @@
       "statut": "declaree",
       "date": "2026-08-27",
       "sourceUrl": "https://lcp.fr/actualites/2027-figure-de-la-droite-xavier-bertrand-confirme-qu-il-sera-candidat-a-l-election"
+    },
+    "programme": {
+      "statut": "aucun"
     }
   }
 ]
