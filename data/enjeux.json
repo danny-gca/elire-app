@@ -1,0 +1,180 @@
+[
+  {
+    "id": "nouveaux-reacteurs",
+    "thematiqueId": "environnement",
+    "question": "Construire de nouveaux réacteurs nucléaires",
+    "enjeu": "Lancer la construction de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà.",
+    "positions": [
+      { "propositionId": "prop-ez-7", "sens": "pour" },
+      { "propositionId": "prop-fro-2", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "eoliennes",
+    "thematiqueId": "environnement",
+    "question": "Arrêter les nouveaux projets éoliens et démanteler les éoliennes déjà installées",
+    "enjeu": "Ne plus autoriser de nouvelles éoliennes et démonter, progressivement ou non, celles qui produisent déjà de l'électricité.",
+    "positions": [
+      { "propositionId": "prop-fp-4", "sens": "pour" },
+      { "propositionId": "prop-mlp-7", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "referendum-initiative-citoyenne",
+    "thematiqueId": "institutions",
+    "question": "Créer un référendum d'initiative citoyenne",
+    "enjeu": "Permettre aux électeurs de déclencher eux-mêmes un référendum en réunissant assez de signatures, sans passer par le président ni le Parlement.",
+    "positions": [
+      { "propositionId": "prop-fp-2", "sens": "pour" },
+      { "propositionId": "prop-fa-3", "sens": "pour" },
+      { "propositionId": "prop-nda-2", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "quitter-otan",
+    "thematiqueId": "international",
+    "question": "Quitter l'Alliance atlantique (OTAN)",
+    "enjeu": "Faire sortir la France de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
+    "positions": [
+      { "propositionId": "prop-fro-7", "sens": "pour" },
+      { "propositionId": "prop-fa-2", "sens": "pour" },
+      { "propositionId": "prop-jlm-6", "sens": "pour" },
+      { "propositionId": "prop-jl-8", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "quitter-union-europeenne",
+    "thematiqueId": "international",
+    "question": "Quitter l'Union européenne",
+    "enjeu": "Faire sortir la France de l'Union européenne et de ses règles communes, comme l'a fait le Royaume-Uni.",
+    "positions": [
+      { "propositionId": "prop-fa-1", "sens": "pour" },
+      { "propositionId": "prop-fp-1", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "budget-defense",
+    "thematiqueId": "international",
+    "question": "Augmenter le budget de la défense",
+    "enjeu": "Consacrer davantage d'argent public à l'armée et à la défense du pays.",
+    "positions": [
+      { "propositionId": "prop-ez-8", "sens": "pour" },
+      { "propositionId": "prop-kb-2", "sens": "pour" },
+      { "propositionId": "prop-db-3", "sens": "pour" },
+      { "propositionId": "prop-sl-3", "sens": "contre" }
+    ]
+  },
+  {
+    "id": "impot-fortune",
+    "thematiqueId": "economie",
+    "question": "Rétablir un impôt sur la fortune",
+    "enjeu": "Taxer à nouveau chaque année le patrimoine des plus riches, comme l'impôt de solidarité sur la fortune remplacé en 2018.",
+    "positions": [
+      { "propositionId": "prop-fr-5", "sens": "pour" },
+      { "propositionId": "prop-nda-6", "sens": "pour" },
+      { "propositionId": "prop-mt-7", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "taxes-carburants",
+    "thematiqueId": "economie",
+    "question": "Baisser les taxes sur les carburants",
+    "enjeu": "Réduire la TVA ou les taxes payées sur l'essence et le gazole pour faire baisser leur prix à la pompe.",
+    "positions": [
+      { "propositionId": "prop-jl-7", "sens": "pour" },
+      { "propositionId": "prop-mlp-4", "sens": "pour" },
+      { "propositionId": "prop-np-2", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "reculer-retraite",
+    "thematiqueId": "economie",
+    "question": "Reculer l'âge de départ à la retraite",
+    "enjeu": "Repousser l'âge légal à partir duquel on peut partir à la retraite.",
+    "positions": [
+      { "propositionId": "prop-ep-1", "sens": "pour" },
+      { "propositionId": "prop-xb-3", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "regulariser-sans-papiers",
+    "thematiqueId": "societe",
+    "question": "Régulariser tous les sans-papiers",
+    "enjeu": "Donner un titre de séjour à toutes les personnes étrangères qui vivent en France sans autorisation.",
+    "positions": [
+      { "propositionId": "prop-ak-4", "sens": "pour" },
+      { "propositionId": "prop-na-6", "sens": "pour" },
+      { "propositionId": "prop-sl-4", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "temps-de-travail",
+    "thematiqueId": "travail",
+    "question": "Réduire le temps de travail sans baisse de salaire",
+    "enjeu": "Travailler moins d'heures par semaine ou par an, en gardant le même salaire.",
+    "positions": [
+      { "propositionId": "prop-ak-2", "sens": "pour" },
+      { "propositionId": "prop-br-3", "sens": "contre" }
+    ]
+  },
+  {
+    "id": "recrutement-enseignants",
+    "thematiqueId": "education",
+    "question": "Laisser les chefs d'établissement recruter leurs enseignants",
+    "enjeu": "Confier le choix des professeurs au directeur ou au principal de chaque école, plutôt qu'à l'affectation nationale.",
+    "positions": [
+      { "propositionId": "prop-dl-3", "sens": "pour" },
+      { "propositionId": "prop-ob-6", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "uniforme-ecole",
+    "thematiqueId": "education",
+    "question": "Imposer l'uniforme à l'école",
+    "enjeu": "Faire porter la même tenue à tous les élèves de l'école publique, tout de suite ou après une expérimentation.",
+    "positions": [
+      { "propositionId": "prop-ez-2", "sens": "pour" },
+      { "propositionId": "prop-ga-1", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "peines-planchers",
+    "thematiqueId": "securite",
+    "question": "Instaurer des peines minimales obligatoires",
+    "enjeu": "Fixer, pour certaines infractions, une peine minimale que le juge doit en principe prononcer (peines planchers).",
+    "positions": [
+      { "propositionId": "prop-ep-7", "sens": "pour" },
+      { "propositionId": "prop-br-1", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "soins-rembourses",
+    "thematiqueId": "sante",
+    "question": "Rembourser à 100 % tous les soins prescrits",
+    "enjeu": "Faire prendre en charge en entier par la Sécurité sociale les soins prescrits par un médecin, sans reste à payer.",
+    "positions": [
+      { "propositionId": "prop-fro-3", "sens": "pour" },
+      { "propositionId": "prop-jlm-8", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "prix-minimum-agricole",
+    "thematiqueId": "agriculture",
+    "question": "Garantir aux agriculteurs un prix minimum pour leurs produits",
+    "enjeu": "Empêcher que les agriculteurs vendent leur production en dessous d'un prix fixé à partir de ce qu'elle leur coûte.",
+    "positions": [
+      { "propositionId": "prop-fro-4", "sens": "pour" },
+      { "propositionId": "prop-jl-1", "sens": "pour" }
+    ]
+  },
+  {
+    "id": "normes-agricoles",
+    "thematiqueId": "agriculture",
+    "question": "Ne plus imposer aux agriculteurs des règles plus strictes que celles de l'Europe",
+    "enjeu": "Supprimer ou ne plus ajouter les normes françaises qui vont au-delà de ce que l'Union européenne exige de tous ses agriculteurs.",
+    "positions": [
+      { "propositionId": "prop-ga-6", "sens": "pour" },
+      { "propositionId": "prop-xb-7", "sens": "pour" }
+    ]
+  }
+]

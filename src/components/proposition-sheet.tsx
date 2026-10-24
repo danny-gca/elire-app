@@ -12,9 +12,9 @@ import type { Proposition, Thematique } from '@/schemas/dataset';
 import { useTutoTarget } from '@/store/tuto-store';
 
 interface PropositionSheetProps {
-  /** Une proposition (titre, citation), ou un scrutin présenté de la même façon (question seule). */
+  /** Une proposition (titre, citation), ou un scrutin ou une question commune présentés de la même façon (question seule). */
   proposition: Pick<Proposition, 'ref' | 'thematiqueId' | 'titre'> & { description?: string };
-  kind?: 'Proposition' | 'Scrutin';
+  kind?: 'Proposition' | 'Scrutin' | 'Question commune';
   /** Citation en entier (« En savoir plus » ouvert) ; sinon coupée à 2 lignes pour garder les boutons visibles. */
   quoteOpen?: boolean;
   /** Scrutin : chambre et année, à droite de « Scrutin réel ». */

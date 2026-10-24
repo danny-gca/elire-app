@@ -9,6 +9,8 @@ import { CountdownFill } from '@/components/countdown-fill';
 import { CrowdBackdrop } from '@/components/crowd-backdrop';
 import { EditChip } from '@/components/edit-chip';
 import { EditVoteSheet } from '@/components/edit-vote-sheet';
+import { EnjeuFrame, FRAME_DRAW_MS } from '@/components/enjeu-frame';
+import { EnjeuReveal } from '@/components/enjeu-reveal';
 import { Hemicycle } from '@/components/hemicycle';
 import { LoiDetail } from '@/components/loi-detail';
 import { LoiVoteScale } from '@/components/loi-vote-scale';
@@ -27,19 +29,19 @@ import { VoteScale } from '@/components/vote-scale';
 import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { loiChoice, voteChoice } from '@/constants/votes';
-import { CHAMBRE_LABELS, STATUT_LABELS, formatDate } from '@/lib/format';
-import { averageText, CLASSEMENT_THRESHOLD, isPause, nextMilestone, opinionCount, rankedCount, type Milestone } from '@/lib/progress';
-import { scoreCandidat, UNSURE, type LoiVoteValue, type VoteValue } from '@/lib/scoring';
+import { CHAMBRE_LABELS, STATUT_LABELS, TYPE_SOURCE_LABELS, formatDate } from '@/lib/format';
+import { CLASSEMENT_THRESHOLD, isPause, nextMilestone, opinionCount, rankedCount, type Milestone } from '@/lib/progress';
+import { MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, scoreCandidat, UNSURE, type LoiVoteValue, type VoteValue } from '@/lib/scoring';
 import { buzz, playSound } from '@/lib/sound';
-import type { Loi } from '@/schemas/dataset';
-import { candidats, getThematique, lois, propositions } from '@/services/dataset';
+import type { Enjeu, Loi } from '@/schemas/dataset';
+import { candidats, getCandidat, getEnjeu, getThematique, lois, propositions, questions } from '@/services/dataset';
 import { celebrate, celebrateSeries } from '@/store/celebration-store';
 import { useTuto, useTutoActive, useTutoTarget } from '@/store/tuto-store';
-import { selectNextId, useMarkOf, useVotesStore } from '@/store/votes-store';
+import { selectNextId, useMarkOf, usePropositionVotes, useVotesStore } from '@/store/votes-store';
 
 const byId = new Map(propositions.map((p) => [p.id, p]));
 const loisById = new Map(lois.map((l) => [l.id, l]));
-const TOTAL = propositions.length + lois.length;
+const TOTAL = questions.length + lois.length;
 // La feuille votée remonte se ranger en « A voté ! ».
 const LEAVE_MS = 320;
 // « A voté ! » reste le temps de corriger d'un geste, puis s'efface (la gomme reste partout ailleurs).
@@ -56,6 +58,9 @@ export default function VoterScreen() {
   const order = useVotesStore((s) => s.order);
   const castVote = useVotesStore((s) => s.castVote);
   const castLoiVote = useVotesStore((s) => s.castLoiVote);
+  const propositionVotes = usePropositionVotes();
+  const questionsChanged = useVotesStore((s) => s.questionsChanged);
+  const dismissQuestionsChanged = useVotesStore((s) => s.dismissQuestionsChanged);
 
   const [lastId, setLastId] = useState<string | null>(null);
   const [editing, setEditing] = useState<string | null>(null);
@@ -103,12 +108,13 @@ export default function VoterScreen() {
   const currentId = revealId ?? hold?.id ?? selectNextId({ votes, loiVotes, order });
   const current = currentId ? byId.get(currentId) : undefined;
   const currentLoi = currentId ? loisById.get(currentId) : undefined;
+  const currentEnjeu = currentId ? getEnjeu(currentId) : undefined;
   const votedCount = Object.keys(votes).length + Object.keys(loiVotes).length;
   const opinions = opinionCount(votes, loiVotes);
-  const ranked = rankedCount(propositions, votes);
+  const ranked = rankedCount(propositions, propositionVotes);
   const milestone = nextMilestone(opinions, ranked, candidats.length);
   const pause = !hold && !revealId && isPause(opinions) && pausedAt !== opinions;
-  const finished = !current && !currentLoi;
+  const finished = !current && !currentLoi && !currentEnjeu;
   // Un bilan qui s'ouvre : une fête ; la dernière question : une série. Une fois, au moment où ça arrive.
   const reached = useRef({ pause, finished });
   useEffect(() => {
@@ -150,6 +156,18 @@ export default function VoterScreen() {
     AccessibilityInfo.announceForAccessibility(`Vote enregistré : ${loiChoice(value)?.label ?? ''}`);
   };
 
+  // Question commune : même échelle qu'une proposition, puis l'écran sans nom, comme après un scrutin.
+  const handleEnjeuVote = (value: VoteValue) => {
+    if (!currentEnjeu) {
+      return;
+    }
+    castVote(currentEnjeu.id, value);
+    playSound('trait');
+    buzz('light');
+    setRevealId(currentEnjeu.id);
+    AccessibilityInfo.announceForAccessibility(`Vote enregistré : ${voteChoice(value)?.label ?? ''}`);
+  };
+
   const handleNext = () => {
     const done = () => {
       setLoiLeaving(false);
@@ -165,14 +183,41 @@ export default function VoterScreen() {
   };
 
   const loiRevealed = !!currentLoi && revealId === currentLoi.id;
+  const enjeuRevealed = !!currentEnjeu && revealId === currentEnjeu.id;
   const tutoActive = useTutoActive();
-  const loiFlow = useLoiFlow({ id: currentLoi?.id, revealed: loiRevealed, leaving: loiLeaving, animate: !reducedMotion, paused: tutoActive, onNext: handleNext });
+  const loiFlow = useLoiFlow({
+    id: currentLoi?.id ?? currentEnjeu?.id,
+    revealed: loiRevealed || enjeuRevealed,
+    leaving: loiLeaving,
+    animate: !reducedMotion,
+    paused: tutoActive,
+    onNext: handleNext,
+  });
+  const enjeuMarker = useMarkOf(currentEnjeu?.id ?? '');
+  const enjeuValue = currentEnjeu ? votes[currentEnjeu.id] : undefined;
   const loiMarker = useMarkOf(currentLoi?.id ?? '');
   const loiValue = currentLoi ? loiVotes[currentLoi.id] : undefined;
 
   // Les boutons restent au bas de l'écran, au-dessus des onglets : on vote sans faire défiler.
-  const nextStep = !!currentLoi && loiRevealed && loiFlow.step === 'hemicycle';
-  const dock = pause ? null : currentLoi ? (
+  const nextStep = (loiRevealed || enjeuRevealed) && loiFlow.step === 'hemicycle';
+  const dock = pause ? null : currentEnjeu ? (
+    nextStep ? (
+      <Button
+        label="Question suivante"
+        variant="primary"
+        onPress={handleNext}
+        disabled={loiLeaving}
+        countdown={loiFlow.autoNext ? loiFlow.remaining : undefined}
+      />
+    ) : (
+      <VoteScale
+        value={enjeuValue}
+        onVote={handleEnjeuVote}
+        disabled={enjeuRevealed}
+        stroke={enjeuRevealed && enjeuValue !== undefined ? { value: enjeuValue, color: Markers[enjeuMarker].soft } : undefined}
+      />
+    )
+  ) : currentLoi ? (
     nextStep ? (
       <Button
         label="Question suivante"
@@ -205,7 +250,8 @@ export default function VoterScreen() {
 
   // Le tuto des premières fois (src/constants/tutos.json) : chaque étape une seule fois, l'app en pause.
   const calm = !pause && !hold && !loiLeaving;
-  useTuto('arrivee', calm && !!current && votedCount === 0);
+  useTuto('arrivee', calm && (!!current || !!currentEnjeu) && votedCount === 0);
+  useTuto('enjeu', calm && !!currentEnjeu && !enjeuRevealed);
   useTuto('premier-vote', calm && !!lastId && !revealId);
   useTuto('scrutin', calm && !!currentLoi && !loiRevealed);
   useTuto('scrutin-vote', calm && loiRevealed && loiFlow.step === 'hemicycle');
@@ -253,8 +299,26 @@ export default function VoterScreen() {
 
       {/* La feuille au milieu de l'espace libre : une question courte reste près des boutons. */}
       <View style={styles.stage}>
+        {questionsChanged && !pause && (
+          <View style={styles.notice} accessibilityLiveRegion="polite">
+            <Text style={[Type.body, styles.ink]}>Les questions ont changé : vos votes repartent de zéro.</Text>
+            <Button label="Compris" onPress={dismissQuestionsChanged} />
+          </View>
+        )}
         {pause ? (
           <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/cahier')} onContinue={() => setPausedAt(opinions)} />
+        ) : currentEnjeu ? (
+          <EnjeuBallot
+            key={currentEnjeu.id}
+            enjeu={currentEnjeu}
+            value={enjeuValue}
+            revealed={enjeuRevealed}
+            leaving={loiLeaving}
+            step={loiFlow.step}
+            holdProps={loiFlow.holdProps}
+            onInfoOpen={showInfo}
+            onRevealLayout={() => scrollRef.current?.scrollToEnd({ animated: true })}
+          />
         ) : currentLoi ? (
           <LoiBallot
             key={currentLoi.id}
@@ -279,6 +343,7 @@ export default function VoterScreen() {
                   <View {...infoTarget}>
                     <MoreInfo
                       text={current.contexte}
+                      source={TYPE_SOURCE_LABELS[current.typeSource]}
                       terms={[current.titre, current.description, current.contexte]}
                       open={infoFor === current.id}
                       onToggle={(open) => setInfoFor(open ? current.id : null)}
@@ -454,6 +519,53 @@ function LoiBallot({
   );
 }
 
+// Une question commune : la feuille encadrée aux quatre surligneurs, puis, une fois votée, chaque mesure sans nom.
+function EnjeuBallot({
+  enjeu,
+  value,
+  revealed,
+  leaving,
+  step,
+  holdProps,
+  onInfoOpen,
+  onRevealLayout,
+}: {
+  enjeu: Enjeu;
+  value?: VoteValue;
+  revealed: boolean;
+  leaving: boolean;
+  step: LoiStep;
+  holdProps: object;
+  onInfoOpen: () => void;
+  onRevealLayout: () => void;
+}) {
+  const marker = useMarkOf(enjeu.id);
+  const reducedMotion = useReducedMotion();
+  const frameTarget = useTutoTarget('enjeu-cadre');
+  return (
+    <Leaving leaving={leaving}>
+      <View {...holdProps}>
+        <View {...frameTarget} style={styles.sheetWrap}>
+          <EnjeuFrame animate={!reducedMotion}>
+            <PropositionSheet
+              kind="Question commune"
+              sweep={revealed && step !== 'button' && value !== UNSURE ? marker : undefined}
+              proposition={{ ref: enjeu.ref, thematiqueId: enjeu.thematiqueId, titre: enjeu.question }}
+              thematique={getThematique(enjeu.thematiqueId)}>
+              <MoreInfo text={enjeu.enjeu} terms={[enjeu.question, enjeu.enjeu]} onOpen={onInfoOpen} />
+            </PropositionSheet>
+          </EnjeuFrame>
+        </View>
+        {revealed && value !== undefined && step === 'hemicycle' && (
+          <Animated.View entering={reducedMotion ? undefined : FadeIn.duration(FRAME_DRAW_MS / 2)} style={styles.reveal} onLayout={onRevealLayout}>
+            <EnjeuReveal enjeu={enjeu} value={value} />
+          </Animated.View>
+        )}
+      </View>
+    </Leaving>
+  );
+}
+
 // Avec un lecteur d'écran, rien ne part seul : la personne avance à son rythme (non détectable sur le web, qui répond toujours oui).
 function useScreenReader() {
   const [enabled, setEnabled] = useState(false);
@@ -505,10 +617,10 @@ function PauseCard({
   onSeeRanking: () => void;
   onContinue: () => void;
 }) {
-  const votes = useVotesStore((s) => s.votes);
+  const votes = usePropositionVotes();
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const scores = candidats.map((c) => scoreCandidat(c, propositions, votes, { lois, votes: loiVotes }));
-  const average = averageText(scores.map((s) => s.programme.count));
+  const noted = scores.filter((s) => s.programme.count > 0).length;
   const fills = scores
     .map((s): Fill => s.reliability ?? (s.programme.count > 0 ? 'note' : 'none'))
     .sort((a, b) => FILL_ORDER.indexOf(a) - FILL_ORDER.indexOf(b));
@@ -525,8 +637,8 @@ function PauseCard({
         {title}
       </Text>
       <Text style={[Type.body, styles.soft]}>
-        En moyenne <Text style={[Type.bodyStrong, Numeric, styles.ink]}>{average}</Text> proposition
-        {Number(average.replace(',', '.')) >= 2 ? 's notées' : ' notée'} par candidat ; il en faut 2 pour le classer, et 5 éléments pour un score fiable.
+        <Text style={[Type.bodyStrong, Numeric, styles.ink]}>{noted}</Text> {noted > 1 ? 'candidats notés' : 'candidat noté'}. Un candidat est
+        classé dès {MIN_VOTES_PER_CANDIDAT} notes, fiable dès {RELIABILITY_FROM.fiable}.
       </Text>
       <View accessible accessibilityLabel={`${ranked} candidats classés sur ${candidats.length}`} style={styles.panels}>
         {fills.map((f, i) => (
@@ -586,7 +698,7 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
   const target = useTutoTarget('a-vote');
 
   const loi = loisById.get(id);
-  const title = loi ? loi.question : byId.get(id)?.titre;
+  const title = loi ? loi.question : (getEnjeu(id)?.question ?? byId.get(id)?.titre);
   const tag = loi ? (
     loiVotes[id] && <LoiVoteTag value={loiVotes[id]} />
   ) : (
@@ -653,15 +765,52 @@ function FinishedView({
         {order.map((id, i) => {
           const p = byId.get(id);
           const loi = loisById.get(id);
+          const enjeu = getEnjeu(id);
           return (
             <View key={id} style={i > 0 && styles.separator}>
               {p && <PropositionRow proposition={p} vote={votes[p.id]} onPress={() => onEdit(id)} actionHint="Modifier votre vote" />}
               {loi && <LoiRow loi={loi} vote={loiVotes[loi.id]} onPress={() => onEdit(id)} />}
+              {enjeu && <EnjeuRow enjeu={enjeu} vote={votes[enjeu.id]} onPress={() => onEdit(id)} />}
             </View>
           );
         })}
       </View>
     </Screen>
+  );
+}
+
+// Le récapitulatif de fin : la question commune et, enfin, les noms des candidats pour et contre.
+function EnjeuRow({ enjeu, vote, onPress }: { enjeu: Enjeu; vote?: VoteValue; onPress: () => void }) {
+  const marker = useMarkOf(enjeu.id);
+  const names = (sens: 'pour' | 'contre') =>
+    enjeu.positions
+      .filter((p) => p.sens === sens)
+      .map((p) => getCandidat(byId.get(p.propositionId)?.candidatId ?? '')?.nom)
+      .filter(Boolean)
+      .join(', ');
+  const pour = names('pour');
+  const contre = names('contre');
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityHint="Modifier votre vote"
+      style={({ pressed }) => [styles.row, pressed && { backgroundColor: Colors.pressed }]}>
+      <View style={styles.rowBody}>
+        <Marked active={vote !== undefined && vote !== UNSURE} marker={marker} style={[Type.body, styles.ink]}>
+          {enjeu.question}
+        </Marked>
+        <Text style={[Type.label, styles.muted]}>
+          Pour : {pour}
+          {contre ? ` · Contre : ${contre}` : ''}
+        </Text>
+        <View style={styles.rowMeta}>
+          <Text style={[Type.label, Numeric, styles.muted]}>{enjeu.ref} · Question commune ·</Text>
+          {vote !== undefined ? <VoteTag value={vote} /> : <Text style={[Type.label, styles.muted]}>Pas encore voté</Text>}
+        </View>
+      </View>
+      <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
+    </Pressable>
   );
 }
 
@@ -776,6 +925,15 @@ const styles = StyleSheet.create({
   reveal: {
     marginTop: Spacing.two,
     gap: Spacing.two,
+  },
+  notice: {
+    gap: Spacing.two,
+    marginBottom: Spacing.two,
+    padding: Spacing.two,
+    backgroundColor: Colors.sheet,
+    borderRadius: Radius.large,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.rule,
   },
   result: {
     backgroundColor: Colors.sheet,

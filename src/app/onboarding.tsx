@@ -360,6 +360,7 @@ const EXAMPLE: Proposition = {
     "« Les bibliothèques ouvriront le dimanche et plus tard le soir, pour que chacun puisse y lire, y travailler ou y réviser quand il est libre. »",
   sourceUrl: "https://exemple.fr/programme.pdf",
   dateDeclaration: "2026-03-03",
+  typeSource: "programme_2027",
   contexte: "Exemple fictif.",
 };
 

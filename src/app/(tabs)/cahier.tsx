@@ -21,9 +21,9 @@ import { plural } from '@/lib/format';
 import { allVoted, CLASSEMENT_THRESHOLD, opinionCount } from '@/lib/progress';
 import { denseRanks, computeScores, GROUP_VOTE_WEIGHT, MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, type CandidateScore, type Reliability } from '@/lib/scoring';
 import { fisherYates } from '@/lib/shuffle';
-import { candidats, lois, propositions } from '@/services/dataset';
+import { candidats, lois, propositions, questions } from '@/services/dataset';
 import { useTuto, useTutoTarget } from '@/store/tuto-store';
-import { useVotesStore } from '@/store/votes-store';
+import { usePropositionVotes, useVotesStore } from '@/store/votes-store';
 
 const MIN_VOTES_REQUIRED = CLASSEMENT_THRESHOLD;
 // Départage des égalités tiré au hasard à chaque visite du Cahier : aucun candidat n'est favorisé par son nom.
@@ -39,6 +39,7 @@ const TAPE_ROOM = 10;
 export default function CahierScreen() {
   const router = useRouter();
   const votes = useVotesStore((s) => s.votes);
+  const propositionVotes = usePropositionVotes();
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const { width } = useWindowDimensions();
   const marker = useVotesStore((s) => s.marker);
@@ -52,14 +53,14 @@ export default function CahierScreen() {
   const votedCount = opinionCount(votes, loiVotes);
   const loiCount = Object.keys(loiVotes).length;
   const scores = useMemo(
-    () => computeScores(candidats, propositions, votes, tieOrder, { lois, votes: loiVotes }),
-    [votes, loiVotes, tieOrder]
+    () => computeScores(candidats, propositions, propositionVotes, tieOrder, { lois, votes: loiVotes }),
+    [propositionVotes, loiVotes, tieOrder]
   );
   const ranked = scores.filter((s) => s.ranked);
   // Non classés dans l'ordre tiré au hasard seul : un score partiel ne doit pas les départager.
   const others = scores.filter((s) => !s.ranked).sort((a, b) => tieOrder.get(a.candidat.id)! - tieOrder.get(b.candidat.id)!);
   const columns = Math.min(width, MaxContentWidth) < 560 ? 3 : 4;
-  const complete = allVoted(votes, loiVotes, propositions, lois);
+  const complete = allVoted(votes, loiVotes, questions, lois);
   const shareOpen = sharing || (partager === '1' && ranked.length > 0);
   const closeShare = () => {
     setSharing(false);

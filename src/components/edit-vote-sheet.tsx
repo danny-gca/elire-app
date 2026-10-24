@@ -5,11 +5,12 @@ import { LoiVoteScale } from '@/components/loi-vote-scale';
 import { Sheet } from '@/components/ui/sheet';
 import { VoteScale } from '@/components/vote-scale';
 import { Colors, Type } from '@/constants/theme';
+import { voteTarget } from '@/lib/enjeux';
 import type { VoteValue } from '@/lib/scoring';
-import { lois, propositions } from '@/services/dataset';
+import { getEnjeu, lois, propositions } from '@/services/dataset';
 import { buzz } from '@/lib/sound';
 import { celebrate, type CelebrationPoint } from '@/store/celebration-store';
-import { useVotesStore } from '@/store/votes-store';
+import { usePropositionVotes, useVotesStore } from '@/store/votes-store';
 
 const byId = new Map(propositions.map((p) => [p.id, p]));
 const loisById = new Map(lois.map((l) => [l.id, l]));
@@ -36,11 +37,13 @@ export function EditVoteSheet({
   onClose: () => void;
   example?: ExampleVote;
 }) {
-  const votes = useVotesStore((s) => s.votes);
+  const propositionVotes = usePropositionVotes();
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const castVote = useVotesStore((s) => s.castVote);
   const castLoiVote = useVotesStore((s) => s.castLoiVote);
   const proposition = id ? byId.get(id) : undefined;
+  const enjeu = id ? getEnjeu(id) : undefined;
+  const votes = useVotesStore((s) => s.votes);
   const loi = id ? loisById.get(id) : undefined;
   const reducedMotion = useReducedMotion();
 
@@ -52,7 +55,7 @@ export function EditVoteSheet({
   };
 
   return (
-    <Sheet visible={visible && !!(proposition || loi || example)} title="Modifier votre vote" onClose={onClose}>
+    <Sheet visible={visible && !!(proposition || loi || enjeu || example)} title="Modifier votre vote" onClose={onClose}>
       {example && (
         <>
           <Text style={[Type.bodyStrong, styles.ink]}>{example.titre}</Text>
@@ -71,9 +74,23 @@ export function EditVoteSheet({
           <Text style={[Type.bodyStrong, styles.ink]}>{proposition.titre}</Text>
           <Text style={[Type.body, styles.soft]}>{proposition.description}</Text>
           <VoteScale
-            value={votes[proposition.id]}
+            value={propositionVotes[proposition.id]}
             onVote={(value, point) => {
-              castVote(proposition.id, value);
+              const { key, sign } = voteTarget(proposition);
+              castVote(key, (value * sign) as VoteValue);
+              voted(point);
+            }}
+          />
+        </>
+      )}
+      {enjeu && (
+        <>
+          <Text style={[Type.bodyStrong, styles.ink]}>{enjeu.question}</Text>
+          <Text style={[Type.body, styles.soft]}>{enjeu.enjeu}</Text>
+          <VoteScale
+            value={votes[enjeu.id]}
+            onVote={(value, point) => {
+              castVote(enjeu.id, value);
               voted(point);
             }}
           />

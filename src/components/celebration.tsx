@@ -4,6 +4,7 @@ import Animated, { Easing, useAnimatedProps, useReducedMotion, useSharedValue, w
 import Svg, { Path } from 'react-native-svg';
 
 import { MARKER_IDS, Markers } from '@/constants/theme';
+import { frameSides, polyline } from '@/lib/stroke';
 import { useCelebrationStore, type CelebrationHost, type CelebrationPoint, type CelebrationVariant } from '@/store/celebration-store';
 
 const FADE = 420;
@@ -259,49 +260,20 @@ function cadre(w: number, h: number, origin?: CelebrationPoint): Stroke[] {
   const hh = between(28, 34);
   const tilt = between(-0.06, 0.04);
   const at = (dx: number, dy: number): Point => [ox + dx * Math.cos(tilt) - dy * Math.sin(tilt), oy + dx * Math.sin(tilt) + dy * Math.cos(tilt)];
-  const corners: Point[] = [
-    [-hw, -hh],
-    [hw, -hh],
-    [hw, hh],
-    [-hw, hh],
-  ];
-  return corners.map(([x0, y0], i) => {
-    const [x1, y1] = corners[(i + 1) % 4];
-    const len = Math.hypot(x1 - x0, y1 - y0);
-    const [ux, uy] = [(x1 - x0) / len, (y1 - y0) / len];
-    const [o0, o1] = [between(6, 12), between(6, 12)];
-    const bow = between(-3, 3);
-    const start = i * 110;
-    return {
-      points: sample(8, (t) => {
-        const d = -o0 + (len + o0 + o1) * t;
-        const b = bow * Math.sin(Math.PI * t);
-        return at(x0 + ux * d - uy * b, y0 + uy * d + ux * b);
-      }),
-      color: colors[i],
-      width: 4,
-      start,
-      dur: 180,
-      fadeAt: 780,
-    };
-  });
+  return frameSides(hw * 2, hh * 2).map((side, i) => ({
+    points: side.map(([x, y]) => at(x - hw, y - hh)),
+    color: colors[i],
+    width: 4,
+    start: i * 110,
+    dur: 180,
+    fadeAt: 780,
+  }));
 }
 
 const BUILD: Record<CelebrationVariant, (w: number, h: number, origin?: CelebrationPoint) => Stroke[]> = { gerbe, fusees, surlignage, boucles, etincelles, traits, entoure, cadre };
 
-function pathOf(points: Point[]) {
-  let length = 0;
-  points.forEach(([x, y], i) => {
-    if (i > 0) {
-      length += Math.hypot(x - points[i - 1][0], y - points[i - 1][1]);
-    }
-  });
-  const d = points.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x.toFixed(1)} ${y.toFixed(1)}`).join('');
-  return { d, length };
-}
-
 function StrokePath({ stroke, clock }: { stroke: Stroke; clock: SharedValue<number> }) {
-  const [{ d, length }] = useState(() => pathOf(stroke.points));
+  const [{ d, length }] = useState(() => polyline(stroke.points));
   const { start, dur, fadeAt, opacity = 1 } = stroke;
   const animatedProps = useAnimatedProps(() => {
     const t = clock.value;

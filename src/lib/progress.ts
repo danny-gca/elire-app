@@ -37,12 +37,6 @@ export function rankedCount(propositions: readonly Proposition[], votes: Record<
   return notesPerCandidat(propositions, votes, ids).filter((n) => n >= MIN_VOTES_PER_CANDIDAT).length;
 }
 
-/** Moyenne de propositions notées par candidat, en écriture française (« 0,6 »). */
-export function averageText(notes: readonly number[]): string {
-  const average = notes.length > 0 ? notes.reduce((a, b) => a + b, 0) / notes.length : 0;
-  return String(Math.round(average * 10) / 10).replace('.', ',');
-}
-
 export interface Milestone {
   /** Le palier visé, puis le chiffre mis en avant, puis l'unité : « Bilan dans 7 votes ». */
   lead: string;

@@ -18,19 +18,19 @@ import { ReliabilityMark, reliabilityHint } from '@/components/reliability-mark'
 import { ScoreCalcul } from '@/components/score-calcul';
 import { Colors, MinTarget, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { readableOn } from '@/lib/color';
-import { candidatureText, plural } from '@/lib/format';
+import { candidatureText, plural, programmeText } from '@/lib/format';
 import { MIN_VOTES_PER_CANDIDAT, scoreCandidat, scoreDetail } from '@/lib/scoring';
 import type { Loi, Proposition } from '@/schemas/dataset';
 import { getCandidat, getLoisByCandidat, getPropositionsByCandidat, lois, partis, propositions, thematiques } from '@/services/dataset';
 import { useTuto, useTutoTarget } from '@/store/tuto-store';
-import { useVotesStore } from '@/store/votes-store';
+import { usePropositionVotes, useVotesStore } from '@/store/votes-store';
 
 type Onglet = 'programme' | 'lois';
 
 export default function CandidateScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const votes = useVotesStore((s) => s.votes);
+  const votes = usePropositionVotes();
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const [onglet, setOnglet] = useState<Onglet>('programme');
   const [selected, setSelected] = useState<Proposition | null>(null);
@@ -111,6 +111,18 @@ export default function CandidateScreen() {
         style={styles.link}>
         <Text style={[Type.labelStrong, styles.underline]}>{candidatureText(candidat.candidature)}</Text>
       </Pressable>
+      {candidat.programme.url ? (
+        <Pressable
+          onPress={() => Linking.openURL(candidat.programme.url!)}
+          accessibilityRole="link"
+          accessibilityHint="Ouvre le programme"
+          hitSlop={8}
+          style={styles.link}>
+          <Text style={[Type.labelStrong, styles.underline]}>{programmeText(candidat.programme)}</Text>
+        </Pressable>
+      ) : (
+        <Text style={[Type.label, styles.muted]}>{programmeText(candidat.programme)}</Text>
+      )}
       {parti && (
         <Pressable onPress={() => Linking.openURL(parti.siteWeb)} accessibilityRole="link" hitSlop={8} style={styles.link}>
           <Text style={[Type.labelStrong, styles.underline]}>Site du parti · {new URL(parti.siteWeb).hostname.replace(/^www\./, '')}</Text>

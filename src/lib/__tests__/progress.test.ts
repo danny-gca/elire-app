@@ -1,6 +1,6 @@
 import type { Proposition } from '@/schemas/dataset';
 
-import { allVoted, averageText, isPause, nextMilestone, notesPerCandidat, opinionCount, rankedCount } from '../progress';
+import { allVoted, isPause, nextMilestone, notesPerCandidat, opinionCount, rankedCount } from '../progress';
 
 const prop = (id: string, candidatId: string) => ({ id, candidatId }) as Proposition;
 const props = [prop('a1', 'a'), prop('a2', 'a'), prop('b1', 'b'), prop('b2', 'b')];
@@ -23,8 +23,6 @@ describe('progress', () => {
 
   it('compte les propositions notées de chaque candidat, même sans note', () => {
     expect(notesPerCandidat(props, { a1: 1, b1: 2, b2: -1 }, ['a', 'b', 'c'])).toEqual([2, 1, 0]);
-    expect(averageText([2, 1, 0])).toBe('1');
-    expect(averageText([1, 0, 0])).toBe('0,3');
   });
 
   it('annonce le Classement, puis le bilan de dix votes', () => {

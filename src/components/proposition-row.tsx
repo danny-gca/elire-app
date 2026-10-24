@@ -4,8 +4,10 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Marked } from '@/components/marked';
 import { YourVoteMark } from '@/components/your-vote-mark';
 import { Colors, Numeric, Spacing, Type, type MarkerId } from '@/constants/theme';
+import { voteTarget } from '@/lib/enjeux';
 import { UNSURE, type VoteValue } from '@/lib/scoring';
 import type { Proposition } from '@/schemas/dataset';
+import { getEnjeu } from '@/services/dataset';
 import { useMarkOf } from '@/store/votes-store';
 
 interface PropositionRowProps {
@@ -22,8 +24,9 @@ interface PropositionRowProps {
 // Titre surligné si voté, numéro et auteur dessous ; votre note dans l'angle, au surligneur.
 export function PropositionRow({ proposition, vote, author, onPress, actionHint = 'Voir le détail et la source', marker: forced }: PropositionRowProps) {
   const voted = vote !== undefined;
-  const own = useMarkOf(proposition.id);
+  const own = useMarkOf(voteTarget(proposition).key);
   const marker = forced ?? own;
+  const shared = proposition.enjeuId ? (getEnjeu(proposition.enjeuId)?.positions.length ?? 1) - 1 : 0;
   return (
     <Pressable
       onPress={onPress}
@@ -38,6 +41,7 @@ export function PropositionRow({ proposition, vote, author, onPress, actionHint 
           {proposition.ref}
           {voted ? '' : ' · Pas encore voté'}
           {author ? ` · ${author}` : ''}
+          {shared > 0 ? ` · Question partagée avec ${shared} ${shared > 1 ? 'candidats' : 'candidat'}` : ''}
         </Text>
       </View>
       <View style={[styles.side, voted && styles.sideVoted]}>

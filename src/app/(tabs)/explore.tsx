@@ -20,7 +20,7 @@ import { fisherYates } from '@/lib/shuffle';
 import type { Proposition } from '@/schemas/dataset';
 import { getCandidat, propositions, thematiques } from '@/services/dataset';
 import { useTuto, useTutoTarget } from '@/store/tuto-store';
-import { useVotesStore } from '@/store/votes-store';
+import { usePropositionVotes } from '@/store/votes-store';
 
 type Filtre = 'toutes' | 'a-voter';
 
@@ -29,7 +29,7 @@ const searchIndex = new Map(
 );
 
 export default function ExplorerScreen() {
-  const votes = useVotesStore((s) => s.votes);
+  const votes = usePropositionVotes();
   const [query, setQuery] = useState('');
   const [filtre, setFiltre] = useState<Filtre>('toutes');
   useTuto('explorer', true);

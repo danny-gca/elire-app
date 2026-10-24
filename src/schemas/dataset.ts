@@ -41,6 +41,17 @@ export const CandidatureSchema = z.object({
   sourceUrl: url,
 });
 
+// Programme 2027 publié : en entier, en partie (premières mesures, dépliant), ou pas encore ; date seulement si la source la donne.
+export const ProgrammeSchema = z
+  .object({
+    statut: z.enum(['complet', 'partiel', 'aucun']),
+    url: url.optional(),
+    date: isoDate.optional(),
+    // Prochaine publication annoncée (programme complet, livret...) : le build la rappelle une fois la date passée.
+    annonce: z.object({ date: isoDate, sourceUrl: url }).optional(),
+  })
+  .refine((p) => p.statut === 'aucun' || p.url, 'url attendue sauf pour « aucun »');
+
 export const CandidatSourceSchema = z.object({
   id,
   nom: z.string().min(1),
@@ -49,6 +60,7 @@ export const CandidatSourceSchema = z.object({
   photoUrl: url.optional(),
   biographie: z.string().min(1),
   candidature: CandidatureSchema,
+  programme: ProgrammeSchema,
 });
 
 export const CandidatSchema = CandidatSourceSchema.extend({
@@ -57,6 +69,9 @@ export const CandidatSchema = CandidatSourceSchema.extend({
   /** Sigle du parti s'il en a un ; sinon l'app écrit son nom. */
   sigleParti: z.string().min(1).optional(),
 });
+
+// Programme 2027, programme d'une élection passée, ou prise de position (interview, article, circulaire...).
+export const TypeSourceSchema = z.enum(['programme_2027', 'programme_anterieur', 'prise_de_position']);
 
 // Une ligne de data/candidats/<candidat-id>.csv
 export const PropositionCsvSchema = z.object({
@@ -67,10 +82,12 @@ export const PropositionCsvSchema = z.object({
   source_url: url,
   // Vide quand la source n'est pas datée.
   date_declaration: isoDate.or(z.literal('')),
+  type_source: TypeSourceSchema,
   contexte: z.string().min(1),
 });
 
-const ref = z.string().regex(/^[PL]-\d{2,3}$/, 'référence P-123 / L-12 attendue');
+const ref = z.string().regex(/^[PLE]-\d{2,3}$/, 'référence P-123 / L-12 / E-04 attendue');
+export const SensSchema = z.enum(['pour', 'contre']);
 
 export const PropositionSchema = z.object({
   id,
@@ -81,8 +98,23 @@ export const PropositionSchema = z.object({
   description: z.string().min(1),
   sourceUrl: url,
   dateDeclaration: isoDate.optional(),
+  typeSource: TypeSourceSchema,
   contexte: z.string().min(1),
+  /** Question commune qui porte cette proposition (data/enjeux.json), posée par le build. */
+  enjeuId: id.optional(),
+  sens: SensSchema.optional(),
 });
+
+// Une entrée de data/enjeux.json : une question neutre, chaque candidat pour ou contre par une de ses propositions.
+export const EnjeuSourceSchema = z.object({
+  id,
+  thematiqueId: id,
+  question: z.string().min(1).max(130),
+  enjeu: z.string().min(1).max(220),
+  positions: z.array(z.object({ propositionId: id, sens: SensSchema })).min(2),
+});
+
+export const EnjeuSchema = EnjeuSourceSchema.extend({ ref });
 
 export const NatureLoiSchema = z.enum([
   'projet_loi',
@@ -142,12 +174,14 @@ export const DatasetSchema = z.object({
     thematiquesCount: z.number(),
     propositionsCount: z.number(),
     loisCount: z.number(),
+    enjeuxCount: z.number(),
   }),
   partis: z.array(PartiSchema),
   thematiques: z.array(ThematiqueSchema),
   candidats: z.array(CandidatSchema),
   propositions: z.array(PropositionSchema),
   lois: z.array(LoiSchema),
+  enjeux: z.array(EnjeuSchema),
   glossaire: z.array(GlossaireEntrySchema),
 });
 
@@ -155,7 +189,12 @@ export type Parti = z.infer<typeof PartiSchema>;
 export type Thematique = z.infer<typeof ThematiqueSchema>;
 export type Candidat = z.infer<typeof CandidatSchema>;
 export type Candidature = z.infer<typeof CandidatureSchema>;
+export type Programme = z.infer<typeof ProgrammeSchema>;
 export type Proposition = z.infer<typeof PropositionSchema>;
+export type TypeSource = z.infer<typeof TypeSourceSchema>;
+export type Sens = z.infer<typeof SensSchema>;
+export type EnjeuSource = z.infer<typeof EnjeuSourceSchema>;
+export type Enjeu = z.infer<typeof EnjeuSchema>;
 export type NatureLoi = z.infer<typeof NatureLoiSchema>;
 export type Chambre = z.infer<typeof ChambreSchema>;
 export type StatutLoi = z.infer<typeof StatutLoiSchema>;

@@ -211,7 +211,10 @@
     "prop-sl-7": 225,
     "prop-sl-8": 405,
     "prop-xb-7": 730,
-    "prop-xb-8": 745
+    "prop-xb-8": 745,
+    "prop-am-9": 180,
+    "prop-am-10": 685,
+    "prop-am-11": 866
   },
   "lois": {
     "loi-energies-renouvelables-2023": 1,
@@ -258,5 +261,24 @@
     "plfss-2026": 42,
     "aide-a-mourir-2026": 43,
     "mineurs-reseaux-sociaux-2026": 44
+  },
+  "enjeux": {
+    "nouveaux-reacteurs": 1,
+    "eoliennes": 2,
+    "referendum-initiative-citoyenne": 3,
+    "quitter-otan": 4,
+    "quitter-union-europeenne": 5,
+    "budget-defense": 6,
+    "impot-fortune": 7,
+    "taxes-carburants": 8,
+    "reculer-retraite": 9,
+    "regulariser-sans-papiers": 10,
+    "temps-de-travail": 11,
+    "recrutement-enseignants": 12,
+    "uniforme-ecole": 13,
+    "peines-planchers": 14,
+    "soins-rembourses": 15,
+    "prix-minimum-agricole": 16,
+    "normes-agricoles": 17
   }
 }

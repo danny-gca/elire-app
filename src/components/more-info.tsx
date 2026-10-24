@@ -19,10 +19,12 @@ interface MoreInfoProps {
   onToggle?: (open: boolean) => void;
   /** Le texte vient de s'afficher (mis en page) : l'écran peut défiler jusqu'à lui. */
   onOpen?: () => void;
+  /** Type de source (« Programme 2027 »...), au-dessus du contexte : il ne trahit pas l'auteur. */
+  source?: string;
 }
 
 // « En savoir plus » : le glossaire des sigles de la feuille, puis le contexte. Aucune source : elle trahirait l'auteur.
-export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen }: MoreInfoProps) {
+export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen, source }: MoreInfoProps) {
   const [own, setOwn] = useState(false);
   const open = controlled ?? own;
   const setOpen = (next: boolean) => (onToggle ? onToggle(next) : setOwn(next));
@@ -53,6 +55,7 @@ export function MoreInfo({ text, terms, open: controlled, onToggle, onOpen }: Mo
               ))}
             </View>
           )}
+          {source && <Text style={[Type.labelStrong, styles.muted]}>{source}</Text>}
           <Text style={[Type.body, styles.soft]} selectable>
             {text}
           </Text>

@@ -55,6 +55,17 @@
     ]
   },
   {
+    "id": "premier-enjeu",
+    "ecran": "voter",
+    "quand": "enjeu",
+    "cible": "enjeu-cadre",
+    "ordre": 1,
+    "lignes": [
+      "Cette question réunit plusieurs candidats.",
+      "Votre note compte pour chacun, dans un sens ou dans l’autre."
+    ]
+  },
+  {
     "id": "palier",
     "ecran": "voter",
     "quand": "vote-3",
