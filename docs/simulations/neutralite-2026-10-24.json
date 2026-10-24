@@ -1,0 +1,4232 @@
+{
+  "date": "2026-10-24",
+  "donnees": "2026-10-24",
+  "graine": 2027,
+  "lecteursParCas": 25000,
+  "attenduSiNeutre": {
+    "numero1": 4,
+    "top6": 24
+  },
+  "lecteur": {
+    "partiel": {
+      "questions": 45,
+      "lois": 15
+    },
+    "sansScrutins": {
+      "questions": 45,
+      "lois": 0
+    },
+    "complet": {
+      "questions": 172,
+      "lois": 42
+    }
+  },
+  "profils": {
+    "tout +2 et pour": {
+      "partiel": {
+        "ecartTop6": {
+          "min": 0,
+          "max": 51.3
+        },
+        "candidats": [
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 8.9,
+            "top6": 51.3,
+            "bas6": 0.2
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 8.5,
+            "top6": 50.7,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 8.6,
+            "top6": 50.7,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 8.4,
+            "top6": 50.6,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 8.7,
+            "top6": 50.4,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 8.7,
+            "top6": 50.2,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 8.4,
+            "top6": 50.1,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 8.1,
+            "top6": 49.9,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 8.3,
+            "top6": 49.7,
+            "bas6": 0.4
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 8.1,
+            "top6": 49.7,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 59.1,
+            "numero1": 7.5,
+            "top6": 44.1,
+            "bas6": 0.3
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 5.5,
+            "top6": 32.3,
+            "bas6": 20.2
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 0.7,
+            "top6": 6.6,
+            "bas6": 7.3
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0.6,
+            "top6": 6.4,
+            "bas6": 7
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 0.8,
+            "top6": 4.5,
+            "bas6": 56.1
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.5,
+            "numero1": 0.2,
+            "top6": 2.3,
+            "bas6": 11.4
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0,
+            "top6": 0.2,
+            "bas6": 36.9
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 0,
+            "top6": 0.1,
+            "bas6": 42.1
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0,
+            "top6": 0.1,
+            "bas6": 45.1
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 67
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 59.1
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 66.5
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.3,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 55.7
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 65.2
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 57.1
+          }
+        ]
+      },
+      "sansScrutins": {
+        "ecartTop6": {
+          "min": 16,
+          "max": 25.7
+        },
+        "candidats": [
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.3,
+            "numero1": 4.5,
+            "top6": 25.7,
+            "bas6": 23.5
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.3,
+            "top6": 25.6,
+            "bas6": 23
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.2,
+            "top6": 25.5,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 4,
+            "top6": 25.3,
+            "bas6": 23
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.2,
+            "top6": 25.3,
+            "bas6": 23.2
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.3,
+            "top6": 25.2,
+            "bas6": 22.9
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 4.2,
+            "top6": 25.2,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 4.3,
+            "top6": 25.2,
+            "bas6": 22.6
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.3,
+            "top6": 25.2,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 4.2,
+            "top6": 25.1,
+            "bas6": 23.6
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.2,
+            "top6": 25,
+            "bas6": 22.9
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 4.3,
+            "top6": 25,
+            "bas6": 23
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.2,
+            "top6": 24.9,
+            "bas6": 23.2
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 4.1,
+            "top6": 24.9,
+            "bas6": 22.9
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 4.1,
+            "top6": 24.8,
+            "bas6": 22.8
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4,
+            "top6": 24.8,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.2,
+            "top6": 24.8,
+            "bas6": 23.2
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 4.1,
+            "top6": 24.7,
+            "bas6": 23.3
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 4.2,
+            "top6": 24.7,
+            "bas6": 23
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.1,
+            "numero1": 3.8,
+            "top6": 24.6,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 59.2,
+            "numero1": 3.6,
+            "top6": 22.2,
+            "bas6": 20.1
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 59,
+            "numero1": 3.6,
+            "top6": 21.9,
+            "bas6": 20.5
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 59.1,
+            "numero1": 3.6,
+            "top6": 21.8,
+            "bas6": 20.6
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 2.8,
+            "top6": 16.6,
+            "bas6": 38.6
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 2.7,
+            "top6": 16,
+            "bas6": 38.5
+          }
+        ]
+      },
+      "complet": {
+        "ecartTop6": {
+          "min": 0,
+          "max": 54.9
+        },
+        "candidats": [
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9.1,
+            "top6": 54.9,
+            "bas6": 0
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9.2,
+            "top6": 54.8,
+            "bas6": 0
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9.4,
+            "top6": 54.8,
+            "bas6": 0
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9,
+            "top6": 54.7,
+            "bas6": 0
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9.1,
+            "top6": 54.6,
+            "bas6": 0
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9.1,
+            "top6": 54.5,
+            "bas6": 0
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.9,
+            "top6": 54.5,
+            "bas6": 0
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 9.1,
+            "top6": 54.5,
+            "bas6": 0
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 9.4,
+            "top6": 54.3,
+            "bas6": 0
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.9,
+            "top6": 54.2,
+            "bas6": 0
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.8,
+            "top6": 54.2,
+            "bas6": 0
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 100
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 50.4
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 100
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 100
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 100
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 100
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 49.6
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          }
+        ]
+      }
+    },
+    "plutôt oui (80 %)": {
+      "partiel": {
+        "ecartTop6": {
+          "min": 3.1,
+          "max": 37.5
+        },
+        "candidats": [
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 8.3,
+            "top6": 37.5,
+            "bas6": 16.9
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 8.3,
+            "top6": 37.1,
+            "bas6": 17.7
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 7.9,
+            "top6": 36.9,
+            "bas6": 17.6
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 7.9,
+            "top6": 36.7,
+            "bas6": 16.9
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 8.3,
+            "top6": 36.7,
+            "bas6": 17.2
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 8.3,
+            "top6": 36.7,
+            "bas6": 17.2
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 7.7,
+            "top6": 36.6,
+            "bas6": 17.2
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 7.5,
+            "top6": 36.5,
+            "bas6": 16.8
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 8,
+            "top6": 36.3,
+            "bas6": 17.3
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 7.8,
+            "top6": 36.2,
+            "bas6": 17.4
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 58.7,
+            "numero1": 7.6,
+            "top6": 32.5,
+            "bas6": 15.7
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 1.9,
+            "top6": 32.5,
+            "bas6": 11.7
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 1.3,
+            "top6": 31.6,
+            "bas6": 11.4
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 5.9,
+            "top6": 28.1,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.6,
+            "numero1": 0.9,
+            "top6": 24.8,
+            "bas6": 11.9
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.4,
+            "numero1": 0.2,
+            "top6": 15,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0.1,
+            "top6": 13,
+            "bas6": 28.5
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0.1,
+            "top6": 12.7,
+            "bas6": 26
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.1,
+            "numero1": 1.6,
+            "top6": 9.9,
+            "bas6": 42.1
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 0,
+            "top6": 8.3,
+            "bas6": 32.4
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0.1,
+            "top6": 8.1,
+            "bas6": 33.2
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.7,
+            "numero1": 0,
+            "top6": 4.7,
+            "bas6": 32.1
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66,
+            "numero1": 0.1,
+            "top6": 4.7,
+            "bas6": 44.2
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.3,
+            "numero1": 0,
+            "top6": 3.8,
+            "bas6": 44
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 0,
+            "top6": 3.1,
+            "bas6": 44.9
+          }
+        ]
+      },
+      "sansScrutins": {
+        "ecartTop6": {
+          "min": 19,
+          "max": 25.4
+        },
+        "candidats": [
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 4.4,
+            "top6": 25.4,
+            "bas6": 23.7
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 4.2,
+            "top6": 25.4,
+            "bas6": 24
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.2,
+            "top6": 25.3,
+            "bas6": 23.8
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.1,
+            "top6": 25.2,
+            "bas6": 23.6
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4,
+            "top6": 25,
+            "bas6": 24.1
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.2,
+            "top6": 25,
+            "bas6": 24.1
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4,
+            "top6": 25,
+            "bas6": 23.6
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.3,
+            "top6": 25,
+            "bas6": 23.7
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.1,
+            "top6": 24.9,
+            "bas6": 23.9
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 4.2,
+            "top6": 24.9,
+            "bas6": 23.8
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 4.2,
+            "top6": 24.9,
+            "bas6": 23.6
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.3,
+            "top6": 24.7,
+            "bas6": 23.5
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4,
+            "top6": 24.5,
+            "bas6": 23.9
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.9,
+            "top6": 24.5,
+            "bas6": 23.7
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 3.9,
+            "top6": 24.5,
+            "bas6": 23
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 23.6
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 23.8
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 3.9,
+            "top6": 24.3,
+            "bas6": 23.9
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4,
+            "top6": 24.3,
+            "bas6": 24
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 3.8,
+            "top6": 24.2,
+            "bas6": 23
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.6,
+            "numero1": 3.9,
+            "top6": 22.1,
+            "bas6": 20.9
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.9,
+            "numero1": 3.7,
+            "top6": 22,
+            "bas6": 20.5
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 58.2,
+            "numero1": 3.7,
+            "top6": 21.7,
+            "bas6": 21
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 3.4,
+            "top6": 19.3,
+            "bas6": 31.3
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.2,
+            "top6": 19,
+            "bas6": 31.7
+          }
+        ]
+      },
+      "complet": {
+        "ecartTop6": {
+          "min": 0,
+          "max": 44.2
+        },
+        "candidats": [
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 10.4,
+            "top6": 44.2,
+            "bas6": 10.3
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.4,
+            "top6": 43.6,
+            "bas6": 9.8
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.3,
+            "top6": 43.5,
+            "bas6": 9.9
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.4,
+            "top6": 43.4,
+            "bas6": 9.8
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.4,
+            "top6": 43.4,
+            "bas6": 9.6
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.4,
+            "top6": 43.2,
+            "bas6": 9.8
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.9,
+            "top6": 43.1,
+            "bas6": 9.5
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.5,
+            "top6": 43,
+            "bas6": 9.9
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8,
+            "top6": 42.9,
+            "bas6": 9.6
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 8.2,
+            "top6": 42.8,
+            "bas6": 9.6
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 7.9,
+            "top6": 42.7,
+            "bas6": 9.2
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.3,
+            "top6": 33.8,
+            "bas6": 2.6
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.1,
+            "top6": 31,
+            "bas6": 2.4
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0.6,
+            "top6": 24.8,
+            "bas6": 4.4
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 3,
+            "top6": 23.9,
+            "bas6": 19.2
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 3.4,
+            "bas6": 17.4
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 2.4,
+            "bas6": 20.1
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 1.8,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.1,
+            "top6": 1.2,
+            "bas6": 68.8
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0.6,
+            "bas6": 37.9
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0.6,
+            "bas6": 35.7
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0.2,
+            "bas6": 49.2
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0.1,
+            "bas6": 67.8
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0.1,
+            "bas6": 71.6
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 71.5
+          }
+        ]
+      }
+    },
+    "au hasard": {
+      "partiel": {
+        "ecartTop6": {
+          "min": 18.5,
+          "max": 27
+        },
+        "candidats": [
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 7,
+            "top6": 27,
+            "bas6": 25.9
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 6.5,
+            "top6": 26.6,
+            "bas6": 25.8
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 6.9,
+            "top6": 26.6,
+            "bas6": 26
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 6.7,
+            "top6": 26.5,
+            "bas6": 26.2
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 6.5,
+            "top6": 26.3,
+            "bas6": 26.1
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 6.5,
+            "top6": 26.3,
+            "bas6": 26
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 6.6,
+            "top6": 26.2,
+            "bas6": 25.4
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 6.8,
+            "top6": 26.2,
+            "bas6": 26
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 6.7,
+            "top6": 26,
+            "bas6": 26.6
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 6.4,
+            "top6": 25.9,
+            "bas6": 26.3
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 6.6,
+            "top6": 25.7,
+            "bas6": 26.4
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 4.2,
+            "top6": 25.1,
+            "bas6": 25.8
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 1.8,
+            "top6": 23.3,
+            "bas6": 22.8
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 59,
+            "numero1": 6.4,
+            "top6": 23.2,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 1.5,
+            "top6": 23,
+            "bas6": 22.9
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 1.5,
+            "top6": 22.8,
+            "bas6": 22.7
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 1.3,
+            "top6": 22.7,
+            "bas6": 22.4
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 1.5,
+            "top6": 22.4,
+            "bas6": 22.3
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 1.4,
+            "top6": 22.2,
+            "bas6": 22.3
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 65.8,
+            "numero1": 1.5,
+            "top6": 22.1,
+            "bas6": 22.5
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 1.2,
+            "top6": 21.9,
+            "bas6": 22.6
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 1.2,
+            "top6": 21.9,
+            "bas6": 22.1
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 1.2,
+            "top6": 21.9,
+            "bas6": 22.3
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.4,
+            "numero1": 1.3,
+            "top6": 19.7,
+            "bas6": 20.2
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.8,
+            "numero1": 0.9,
+            "top6": 18.5,
+            "bas6": 19.4
+          }
+        ]
+      },
+      "sansScrutins": {
+        "ecartTop6": {
+          "min": 21.2,
+          "max": 24.8
+        },
+        "candidats": [
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.5,
+            "top6": 24.8,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 4,
+            "top6": 24.7,
+            "bas6": 23.9
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 4.1,
+            "top6": 24.6,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.3,
+            "numero1": 4.1,
+            "top6": 24.6,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.2,
+            "top6": 24.6,
+            "bas6": 24.7
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 4.3,
+            "top6": 24.5,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4,
+            "top6": 24.4,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 4.2,
+            "top6": 24.4,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 3.8,
+            "top6": 24.4,
+            "bas6": 24.4
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 3.8,
+            "top6": 24.4,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.1,
+            "top6": 24.3,
+            "bas6": 24.7
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 3.8,
+            "top6": 24.3,
+            "bas6": 24
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.1,
+            "numero1": 4.2,
+            "top6": 24.3,
+            "bas6": 24.1
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 4.2,
+            "top6": 24.3,
+            "bas6": 24.7
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 3.9,
+            "top6": 24.1,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 4.1,
+            "top6": 24.1,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.8,
+            "top6": 24,
+            "bas6": 24.1
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 3.8,
+            "top6": 23.8,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 3.9,
+            "top6": 23.8,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 59.4,
+            "numero1": 3.8,
+            "top6": 21.9,
+            "bas6": 21.8
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 59.2,
+            "numero1": 3.5,
+            "top6": 21.2,
+            "bas6": 22
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.7,
+            "numero1": 3.6,
+            "top6": 21.2,
+            "bas6": 21
+          }
+        ]
+      },
+      "complet": {
+        "ecartTop6": {
+          "min": 17.1,
+          "max": 31.6
+        },
+        "candidats": [
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 7.8,
+            "top6": 31.6,
+            "bas6": 31.6
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 7.1,
+            "top6": 29.8,
+            "bas6": 29.4
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.9,
+            "top6": 29.6,
+            "bas6": 28.8
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.7,
+            "top6": 29.6,
+            "bas6": 29.2
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.9,
+            "top6": 29.3,
+            "bas6": 29.4
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.9,
+            "top6": 29.3,
+            "bas6": 29.1
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.8,
+            "top6": 29.3,
+            "bas6": 29
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.5,
+            "top6": 29.2,
+            "bas6": 29.4
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.7,
+            "top6": 29.1,
+            "bas6": 29.5
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 7.1,
+            "top6": 29,
+            "bas6": 29.3
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 7,
+            "top6": 28.9,
+            "bas6": 29.5
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.8,
+            "top6": 28.6,
+            "bas6": 29.5
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 4.2,
+            "top6": 27.3,
+            "bas6": 27.1
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 1.3,
+            "top6": 19.7,
+            "bas6": 20
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.2,
+            "top6": 19.6,
+            "bas6": 18.9
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.5,
+            "top6": 19.4,
+            "bas6": 19.5
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1,
+            "top6": 18.8,
+            "bas6": 18.5
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1,
+            "top6": 18.2,
+            "bas6": 18.3
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1,
+            "top6": 18.2,
+            "bas6": 18.5
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0.9,
+            "top6": 18.1,
+            "bas6": 17.8
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1,
+            "top6": 17.9,
+            "bas6": 17.7
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.1,
+            "top6": 17.9,
+            "bas6": 18.1
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.9,
+            "top6": 17.3,
+            "bas6": 17.5
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.7,
+            "top6": 17.2,
+            "bas6": 17.3
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.9,
+            "top6": 17.1,
+            "bas6": 17.2
+          }
+        ]
+      }
+    },
+    "mélange (penchant tiré au hasard, 10 % Je ne sais pas)": {
+      "partiel": {
+        "ecartTop6": {
+          "min": 19.1,
+          "max": 26.5
+        },
+        "candidats": [
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.4,
+            "numero1": 6.8,
+            "top6": 26.5,
+            "bas6": 26.2
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 6.6,
+            "top6": 26.4,
+            "bas6": 25.8
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.2,
+            "numero1": 6.6,
+            "top6": 26.4,
+            "bas6": 25.5
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 6.5,
+            "top6": 26.3,
+            "bas6": 25.6
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.4,
+            "numero1": 6.2,
+            "top6": 26.2,
+            "bas6": 25.8
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.2,
+            "numero1": 6.3,
+            "top6": 25.9,
+            "bas6": 25.6
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.6,
+            "numero1": 6.3,
+            "top6": 25.8,
+            "bas6": 25.3
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.2,
+            "numero1": 6,
+            "top6": 25.8,
+            "bas6": 25.9
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.5,
+            "numero1": 6.2,
+            "top6": 25.6,
+            "bas6": 25.7
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 6,
+            "top6": 25.4,
+            "bas6": 26
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.5,
+            "numero1": 5.8,
+            "top6": 25.3,
+            "bas6": 25.5
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.6,
+            "numero1": 5.1,
+            "top6": 24.7,
+            "bas6": 25
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 2.6,
+            "top6": 23.9,
+            "bas6": 23.3
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60,
+            "numero1": 1.5,
+            "top6": 23.4,
+            "bas6": 23.5
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.4,
+            "numero1": 1.7,
+            "top6": 23.1,
+            "bas6": 23
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.9,
+            "numero1": 1.5,
+            "top6": 23,
+            "bas6": 22.8
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 2.3,
+            "top6": 22.9,
+            "bas6": 23.2
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.5,
+            "numero1": 1.9,
+            "top6": 22.6,
+            "bas6": 23.3
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.2,
+            "numero1": 1.3,
+            "top6": 22.4,
+            "bas6": 23.7
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60,
+            "numero1": 1.5,
+            "top6": 22.4,
+            "bas6": 23.1
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 52,
+            "numero1": 5.8,
+            "top6": 22.4,
+            "bas6": 22.5
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.4,
+            "numero1": 1.5,
+            "top6": 22.3,
+            "bas6": 22.5
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 1.3,
+            "top6": 22.2,
+            "bas6": 22.3
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 51.8,
+            "numero1": 1.3,
+            "top6": 20.1,
+            "bas6": 19.8
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 52.1,
+            "numero1": 1.3,
+            "top6": 19.1,
+            "bas6": 19.1
+          }
+        ]
+      },
+      "sansScrutins": {
+        "ecartTop6": {
+          "min": 20.8,
+          "max": 25.1
+        },
+        "candidats": [
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.3,
+            "numero1": 4.1,
+            "top6": 25.1,
+            "bas6": 23.6
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.4,
+            "numero1": 4.2,
+            "top6": 25,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 4.3,
+            "top6": 24.8,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.9,
+            "numero1": 4.2,
+            "top6": 24.8,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.5,
+            "numero1": 4,
+            "top6": 24.7,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 3.8,
+            "top6": 24.7,
+            "bas6": 23.5
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.8,
+            "numero1": 4.2,
+            "top6": 24.5,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60.3,
+            "numero1": 4.1,
+            "top6": 24.5,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 4.2,
+            "top6": 24.5,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.6,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 23.9
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.9,
+            "numero1": 3.7,
+            "top6": 24.4,
+            "bas6": 23.9
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.8,
+            "numero1": 4.1,
+            "top6": 24.4,
+            "bas6": 24
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.6,
+            "numero1": 3.9,
+            "top6": 24.3,
+            "bas6": 24
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 59.7,
+            "numero1": 4.1,
+            "top6": 24.3,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60.1,
+            "numero1": 4.4,
+            "top6": 24.3,
+            "bas6": 25.1
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.5,
+            "numero1": 4,
+            "top6": 24.2,
+            "bas6": 24.1
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60,
+            "numero1": 3.5,
+            "top6": 24.1,
+            "bas6": 24
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60,
+            "numero1": 4.1,
+            "top6": 24.1,
+            "bas6": 25
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 60,
+            "numero1": 4.1,
+            "top6": 24.1,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 60,
+            "numero1": 4.1,
+            "top6": 24,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.9,
+            "numero1": 4.2,
+            "top6": 24,
+            "bas6": 25.1
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 59.9,
+            "numero1": 3.8,
+            "top6": 23.8,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 51.7,
+            "numero1": 3.8,
+            "top6": 21.3,
+            "bas6": 21.3
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 52.5,
+            "numero1": 3.3,
+            "top6": 21,
+            "bas6": 20.8
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 51.9,
+            "numero1": 3.6,
+            "top6": 20.8,
+            "bas6": 21.4
+          }
+        ]
+      },
+      "complet": {
+        "ecartTop6": {
+          "min": 15.2,
+          "max": 30.1
+        },
+        "candidats": [
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 7.5,
+            "top6": 30.1,
+            "bas6": 29.9
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 7.1,
+            "top6": 29.4,
+            "bas6": 29.4
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6,
+            "top6": 29.1,
+            "bas6": 28.3
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.2,
+            "top6": 29.1,
+            "bas6": 28.4
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.6,
+            "top6": 29,
+            "bas6": 29.1
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.2,
+            "top6": 28.9,
+            "bas6": 28.7
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.1,
+            "top6": 28.9,
+            "bas6": 28.6
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.3,
+            "top6": 28.8,
+            "bas6": 29.3
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.4,
+            "top6": 28.7,
+            "bas6": 28.9
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.2,
+            "top6": 28.6,
+            "bas6": 29.2
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6,
+            "top6": 28.4,
+            "bas6": 29.2
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 6.1,
+            "top6": 28.4,
+            "bas6": 28.9
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 5.4,
+            "top6": 27.6,
+            "bas6": 27.5
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 3.3,
+            "top6": 24.6,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 2.3,
+            "top6": 22.8,
+            "bas6": 22.9
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 2.5,
+            "top6": 22.7,
+            "bas6": 22.7
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 1.6,
+            "top6": 19.5,
+            "bas6": 19.8
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1,
+            "top6": 18.7,
+            "bas6": 18.4
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 1.1,
+            "top6": 17.7,
+            "bas6": 18
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.8,
+            "top6": 17.5,
+            "bas6": 17.4
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.3,
+            "top6": 17.5,
+            "bas6": 17.4
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.1,
+            "top6": 16.9,
+            "bas6": 16.8
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.1,
+            "top6": 16.5,
+            "bas6": 16.1
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.9,
+            "top6": 15.7,
+            "bas6": 15
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.8,
+            "top6": 15.2,
+            "bas6": 15.2
+          }
+        ]
+      }
+    },
+    "plutôt non (80 %)": {
+      "partiel": {
+        "ecartTop6": {
+          "min": 11.2,
+          "max": 45
+        },
+        "candidats": [
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 8.1,
+            "top6": 45,
+            "bas6": 4.7
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 6.8,
+            "top6": 44.8,
+            "bas6": 3.1
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 6.8,
+            "top6": 43.8,
+            "bas6": 3.7
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.1,
+            "numero1": 11.7,
+            "top6": 42,
+            "bas6": 10.4
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 3.5,
+            "top6": 32.7,
+            "bas6": 8.3
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 59.1,
+            "numero1": 3.6,
+            "top6": 32.7,
+            "bas6": 4.7
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 3.8,
+            "top6": 32.3,
+            "bas6": 8.1
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 2.9,
+            "top6": 27.7,
+            "bas6": 13
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 2.1,
+            "top6": 25.8,
+            "bas6": 12.7
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 2.2,
+            "top6": 24.9,
+            "bas6": 15
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 6,
+            "top6": 24.4,
+            "bas6": 28.1
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.7,
+            "top6": 17.6,
+            "bas6": 37
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 3.6,
+            "top6": 17.6,
+            "bas6": 36.4
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 3.7,
+            "top6": 17.6,
+            "bas6": 36.7
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 3.8,
+            "top6": 17.6,
+            "bas6": 36.1
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 3.7,
+            "top6": 17.6,
+            "bas6": 36.8
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 3.7,
+            "top6": 17.6,
+            "bas6": 36.3
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.8,
+            "top6": 17.1,
+            "bas6": 36.4
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.8,
+            "top6": 17,
+            "bas6": 36.6
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 3.6,
+            "top6": 17,
+            "bas6": 37.1
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 3.3,
+            "top6": 16.7,
+            "bas6": 36.8
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 58.7,
+            "numero1": 3.5,
+            "top6": 15.7,
+            "bas6": 32.2
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.9,
+            "numero1": 0.8,
+            "top6": 12,
+            "bas6": 25.3
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 0.8,
+            "top6": 11.5,
+            "bas6": 31.9
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 0.8,
+            "top6": 11.2,
+            "bas6": 32.6
+          }
+        ]
+      },
+      "sansScrutins": {
+        "ecartTop6": {
+          "min": 20,
+          "max": 31.7
+        },
+        "candidats": [
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 6.4,
+            "top6": 31.7,
+            "bas6": 19.2
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 6.6,
+            "top6": 31.6,
+            "bas6": 18.8
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 4.3,
+            "top6": 24.6,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 3.8,
+            "top6": 24.5,
+            "bas6": 24.4
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 4.1,
+            "top6": 24.3,
+            "bas6": 25.3
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 3.9,
+            "top6": 24.1,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.1,
+            "top6": 24,
+            "bas6": 24.7
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 4.1,
+            "top6": 24,
+            "bas6": 25
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 3.7,
+            "top6": 24,
+            "bas6": 25.2
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 3.8,
+            "top6": 23.9,
+            "bas6": 25
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 3.9,
+            "top6": 23.8,
+            "bas6": 25.1
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 3.9,
+            "top6": 23.8,
+            "bas6": 24.3
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 3.8,
+            "top6": 23.7,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 4.2,
+            "top6": 23.6,
+            "bas6": 25.1
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 3.7,
+            "top6": 23.6,
+            "bas6": 25
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 3.9,
+            "top6": 23.5,
+            "bas6": 25.2
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 3.6,
+            "top6": 23.3,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 3.5,
+            "top6": 23.3,
+            "bas6": 24.7
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 3.7,
+            "top6": 23.1,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.1,
+            "numero1": 3.7,
+            "top6": 23.1,
+            "bas6": 24.4
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 3.7,
+            "top6": 23,
+            "bas6": 24.5
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 3.5,
+            "top6": 23,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 59.1,
+            "numero1": 3.6,
+            "top6": 21.2,
+            "bas6": 22.2
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.8,
+            "numero1": 3.5,
+            "top6": 21.1,
+            "bas6": 22.1
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.5,
+            "numero1": 3.1,
+            "top6": 20,
+            "bas6": 22
+          }
+        ]
+      },
+      "complet": {
+        "ecartTop6": {
+          "min": 2.4,
+          "max": 72.7
+        },
+        "candidats": [
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 16,
+            "top6": 72.7,
+            "bas6": 0.1
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 11.8,
+            "top6": 71.3,
+            "bas6": 0
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 24,
+            "top6": 68.6,
+            "bas6": 1.3
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 11.3,
+            "top6": 68.1,
+            "bas6": 0.1
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 4.6,
+            "top6": 49.4,
+            "bas6": 0.2
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 3.4,
+            "top6": 38.2,
+            "bas6": 0.5
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 3.1,
+            "top6": 35.1,
+            "bas6": 0.5
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.8,
+            "top6": 23.9,
+            "bas6": 1.8
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1,
+            "top6": 19.6,
+            "bas6": 2.3
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 3.9,
+            "top6": 19.4,
+            "bas6": 23.7
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.1,
+            "top6": 17.3,
+            "bas6": 3.5
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 2.2,
+            "top6": 10.7,
+            "bas6": 44.6
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.7,
+            "top6": 10.1,
+            "bas6": 43.1
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.6,
+            "top6": 10,
+            "bas6": 43.4
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.4,
+            "top6": 9.7,
+            "bas6": 43.2
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.6,
+            "top6": 9.7,
+            "bas6": 43.3
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.6,
+            "top6": 9.7,
+            "bas6": 43.3
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.6,
+            "top6": 9.6,
+            "bas6": 43.5
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.7,
+            "top6": 9.5,
+            "bas6": 43.4
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.5,
+            "top6": 9.5,
+            "bas6": 43.4
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.3,
+            "top6": 9.3,
+            "bas6": 43.1
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 1.4,
+            "top6": 9.3,
+            "bas6": 43.2
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0.2,
+            "top6": 4.3,
+            "bas6": 24.2
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.1,
+            "top6": 2.6,
+            "bas6": 32.8
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0.1,
+            "top6": 2.4,
+            "bas6": 31.2
+          }
+        ]
+      }
+    },
+    "tout -2 et contre": {
+      "partiel": {
+        "ecartTop6": {
+          "min": 0.2,
+          "max": 67.1
+        },
+        "candidats": [
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.3,
+            "numero1": 15.6,
+            "top6": 67.1,
+            "bas6": 0
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 18,
+            "top6": 66.5,
+            "bas6": 0
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 22.3,
+            "top6": 65.3,
+            "bas6": 0
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 1.1,
+            "top6": 59.3,
+            "bas6": 0
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 0.6,
+            "top6": 56.9,
+            "bas6": 0
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 27,
+            "top6": 56.1,
+            "bas6": 4.4
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.5,
+            "numero1": 1.7,
+            "top6": 55.9,
+            "bas6": 0
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 6.3,
+            "top6": 44.8,
+            "bas6": 0.1
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 0.2,
+            "top6": 41.3,
+            "bas6": 0.1
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.3,
+            "numero1": 0.1,
+            "top6": 37.5,
+            "bas6": 0.2
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 7.1,
+            "top6": 20.4,
+            "bas6": 32.2
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.5,
+            "numero1": 0,
+            "top6": 11.5,
+            "bas6": 2.4
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 0,
+            "top6": 7.4,
+            "bas6": 6.4
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0,
+            "top6": 7,
+            "bas6": 6.6
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.2
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.7
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 49.9
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.2,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.7
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 59,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 44.4
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.3
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.4,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 49.6
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.7
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.1,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.1
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0,
+            "top6": 0.3,
+            "bas6": 50.9
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 0,
+            "top6": 0.2,
+            "bas6": 50.1
+          }
+        ]
+      },
+      "sansScrutins": {
+        "ecartTop6": {
+          "min": 20.1,
+          "max": 38.6
+        },
+        "candidats": [
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 22.3,
+            "top6": 38.6,
+            "bas6": 16.1
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.8,
+            "numero1": 22.6,
+            "top6": 38.4,
+            "bas6": 16.7
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 2.7,
+            "top6": 23.9,
+            "bas6": 24.6
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.4,
+            "numero1": 2.5,
+            "top6": 23.6,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.4,
+            "numero1": 2.5,
+            "top6": 23.4,
+            "bas6": 25.6
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 65.9,
+            "numero1": 2.6,
+            "top6": 23.4,
+            "bas6": 24.4
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 2.5,
+            "top6": 23.3,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67.1,
+            "numero1": 2.6,
+            "top6": 23.3,
+            "bas6": 25.8
+          },
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 2.4,
+            "top6": 23.2,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 2.5,
+            "top6": 23.2,
+            "bas6": 25.1
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 2.5,
+            "top6": 23.2,
+            "bas6": 25.2
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 2.6,
+            "top6": 23.1,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 67,
+            "numero1": 2.6,
+            "top6": 23.1,
+            "bas6": 24.9
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.5,
+            "numero1": 2.2,
+            "top6": 23.1,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 2.5,
+            "top6": 23,
+            "bas6": 25.1
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 2.2,
+            "top6": 23,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.9,
+            "numero1": 2.4,
+            "top6": 22.9,
+            "bas6": 25.7
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 66.7,
+            "numero1": 2.5,
+            "top6": 22.8,
+            "bas6": 25
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.2,
+            "numero1": 2.1,
+            "top6": 22.7,
+            "bas6": 25.4
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.3,
+            "numero1": 2.1,
+            "top6": 22.6,
+            "bas6": 24.8
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 2.3,
+            "top6": 22.6,
+            "bas6": 25.4
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 66.6,
+            "numero1": 2.3,
+            "top6": 22.4,
+            "bas6": 25.6
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.7,
+            "numero1": 2.2,
+            "top6": 20.6,
+            "bas6": 22
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 58.5,
+            "numero1": 2.1,
+            "top6": 20.2,
+            "bas6": 21.7
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 58.2,
+            "numero1": 2.1,
+            "top6": 20.1,
+            "bas6": 21.8
+          }
+        ]
+      },
+      "complet": {
+        "ecartTop6": {
+          "min": 0,
+          "max": 100
+        },
+        "candidats": [
+          {
+            "candidat": "Jean-Luc Mélenchon",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 100,
+            "bas6": 0
+          },
+          {
+            "candidat": "François Ruffin",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 100,
+            "bas6": 0
+          },
+          {
+            "candidat": "Fabien Roussel",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 100,
+            "bas6": 0
+          },
+          {
+            "candidat": "Nicolas Dupont-Aignan",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 100,
+            "top6": 100,
+            "bas6": 0
+          },
+          {
+            "candidat": "Jean Lassalle",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 100,
+            "bas6": 0
+          },
+          {
+            "candidat": "Marine Tondelier",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 50.4,
+            "bas6": 0
+          },
+          {
+            "candidat": "Delphine Batho",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 49.6,
+            "bas6": 0
+          },
+          {
+            "candidat": "Antoine Mikolajczak",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.2
+          },
+          {
+            "candidat": "Raphaël Glucksmann",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Édouard Philippe",
+            "aSiege": true,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Gabriel Attal",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Marine Le Pen",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Bruno Retailleau",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Éric Zemmour",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.3
+          },
+          {
+            "candidat": "Nathalie Arthaud",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 55
+          },
+          {
+            "candidat": "François Asselineau",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.7
+          },
+          {
+            "candidat": "David Lisnard",
+            "aSiege": false,
+            "propositions": 7,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.9
+          },
+          {
+            "candidat": "Mira Markovic",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.2
+          },
+          {
+            "candidat": "Anasse Kazib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.6
+          },
+          {
+            "candidat": "Florian Philippot",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.4
+          },
+          {
+            "candidat": "Selma Labib",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Karim Bouamrane",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.5
+          },
+          {
+            "candidat": "Olivier Becht",
+            "aSiege": true,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 0
+          },
+          {
+            "candidat": "Natacha Polony",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.7
+          },
+          {
+            "candidat": "Xavier Bertrand",
+            "aSiege": false,
+            "propositions": 8,
+            "classe": 100,
+            "numero1": 0,
+            "top6": 0,
+            "bas6": 54.6
+          }
+        ]
+      }
+    }
+  }
+}
