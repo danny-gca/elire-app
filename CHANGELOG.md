@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/danny-gca/elire-app/compare/v1.3.0...v1.4.0) (2026-10-24)
+
+
+### Nouveautés
+
+* nouveau type de question multi candidat pour éviter la redondance ([#32](https://github.com/danny-gca/elire-app/issues/32)) ([98115d8](https://github.com/danny-gca/elire-app/commit/98115d855f35e0c35a2a50023ab89fb338cd2832))
+
 ## [1.3.0](https://github.com/danny-gca/elire-app/compare/v1.2.0...v1.3.0) (2026-10-20)
 
 
