@@ -72,11 +72,12 @@
       shot.style.height = `${h * scale}px`;
       shot.style.setProperty('--radius', `${Math.round(w * scale * 0.09)}px`);
     };
-    window.frameReady = document.fonts.ready.then(() => {
-      layout();
-      shot.src = p.get('shot') ?? '../images/screenshots/iphone-6.3/2-voter.png';
+    window.frameReady = document.fonts.ready.then(layout);
+    // La capture est posée par le script (jamais lue dans l'URL de la page).
+    window.setShot = (url) => {
+      shot.src = url;
       return shot.decode();
-    });
+    };
   </script>
 </body>
 </html>

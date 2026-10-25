@@ -235,10 +235,11 @@ async function frame(device, dir) {
   const out = path.join(OUT, 'apple', device.dir);
   fs.mkdirSync(out, { recursive: true });
   for (const [i, shot] of SHOTS.entries()) {
-    const params = new URLSearchParams({ w: device.width, h: device.height, shot: pathToFileURL(path.join(dir, `${shot.name}.png`)).href, title: shot.title, sub: shot.sub, icon: shot.icon, marker: markerOf(i)[1] });
+    const params = new URLSearchParams({ w: device.width, h: device.height, title: shot.title, sub: shot.sub, icon: shot.icon, marker: markerOf(i)[1] });
+    const shotUrl = JSON.stringify(pathToFileURL(path.join(dir, `${shot.name}.png`)).href);
     await send('Page.navigate', { url: `${pathToFileURL(FRAME).href}?${params}` });
     await sleep(500);
-    const box = await send('Runtime.evaluate', { expression: 'window.frameReady.then(() => { const t = document.querySelector(".tip"); return [t.offsetWidth, t.offsetHeight]; })', awaitPromise: true, returnByValue: true });
+    const box = await send('Runtime.evaluate', { expression: `window.frameReady.then(() => window.setShot(${shotUrl})).then(() => { const t = document.querySelector('.tip'); return [t.offsetWidth, t.offsetHeight]; })`, awaitPromise: true, returnByValue: true });
     const [width, height] = box.result.result.value;
     // Hasard rejoué à l'identique : le même gribouillis d'une génération à l'autre.
     let seed = i + 1;
