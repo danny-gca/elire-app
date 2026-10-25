@@ -108,7 +108,8 @@ const ANON = {
   cands: dataset.candidats.map((c, i) => ({ id: c.id, nom: c.nom, initiales: c.avatar, parti: c.parti, couleur: c.couleurParti, lettre: String.fromCharCode(65 + i) })),
   grey: '#C9CED3',
 };
-const anonymize = `((anon) => {
+// Exécutée dans la page (call), avec ANON en argument.
+function anonymize(anon) {
   const swap = new Map();
   anon.cands.forEach((c) => {
     swap.set(c.nom, 'Candidat ' + c.lettre);
@@ -151,7 +152,7 @@ const anonymize = `((anon) => {
     if (party.has(cs.backgroundColor)) el.style.backgroundColor = anon.grey;
   }
   return true;
-})(${JSON.stringify(ANON)})`;
+}
 
 // Serveur de l'export, sous le même chemin que sur GitHub Pages ; une route sans extension sert sa page .html (ou [id].html).
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.ttf': 'font/ttf', '.json': 'application/json', '.ico': 'image/x-icon', '.m4a': 'audio/mp4', '.webp': 'image/webp' };
@@ -198,6 +199,12 @@ ws.onmessage = (e) => {
   }
 };
 const send = (method, params = {}) => new Promise((r) => { const i = ++id; pending.set(i, r); ws.send(JSON.stringify({ id: i, method, params })); });
+// Exécute fn dans la page, les arguments passés par CDP : aucun code construit par concaténation.
+const call = async (fn, ...args) => {
+  const page = await send('Runtime.evaluate', { expression: 'window' });
+  const res = await send('Runtime.callFunctionOn', { objectId: page.result.result.objectId, functionDeclaration: fn.toString(), arguments: args.map((value) => ({ value })), awaitPromise: true, returnByValue: true });
+  return res.result.result.value;
+};
 const origin = `http://127.0.0.1:${PORT}${BASE}`;
 const goto = async (route, motion = false) => {
   await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: motion ? 'no-preference' : 'reduce' }] });
@@ -217,9 +224,9 @@ for (const device of DEVICES) {
   for (const [i, shot] of SHOTS.entries()) {
     const votes = state(shot.first, !shot.onboarding, markerOf(i)[0]);
     await goto('/mentions-legales');
-    await send('Runtime.evaluate', { expression: `localStorage.clear(); localStorage.setItem('elire-votes', ${JSON.stringify(votes)}); localStorage.setItem('elire-tutos', ${JSON.stringify(tutos)});` });
+    await call((v, t) => { localStorage.clear(); localStorage.setItem('elire-votes', v); localStorage.setItem('elire-tutos', t); }, votes, tutos);
     await goto(shot.route, shot.motion);
-    await send('Runtime.evaluate', { expression: anonymize });
+    await call(anonymize, ANON);
     await sleep(300);
     const image = await send('Page.captureScreenshot', { format: 'png' });
     fs.writeFileSync(path.join(dir, `${shot.name}.png`), Buffer.from(image.result.data, 'base64'));
@@ -236,16 +243,15 @@ async function frame(device, dir) {
   fs.mkdirSync(out, { recursive: true });
   for (const [i, shot] of SHOTS.entries()) {
     const params = new URLSearchParams({ w: device.width, h: device.height, title: shot.title, sub: shot.sub, icon: shot.icon, marker: markerOf(i)[1] });
-    const shotUrl = JSON.stringify(pathToFileURL(path.join(dir, `${shot.name}.png`)).href);
+    const shotUrl = pathToFileURL(path.join(dir, `${shot.name}.png`)).href;
     await send('Page.navigate', { url: `${pathToFileURL(FRAME).href}?${params}` });
     await sleep(500);
-    const box = await send('Runtime.evaluate', { expression: `window.frameReady.then(() => window.setShot(${shotUrl})).then(() => { const t = document.querySelector('.tip'); return [t.offsetWidth, t.offsetHeight]; })`, awaitPromise: true, returnByValue: true });
-    const [width, height] = box.result.result.value;
+    const [width, height] = await call((url) => window.frameReady.then(() => window.setShot(url)).then(() => { const t = document.querySelector('.tip'); return [t.offsetWidth, t.offsetHeight]; }), shotUrl);
     // Hasard rejoué à l'identique : le même gribouillis d'une génération à l'autre.
     let seed = i + 1;
     const random = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
     const { d } = scribblePath(width, height, random);
-    await send('Runtime.evaluate', { expression: `document.getElementById('scribble').setAttribute('d', ${JSON.stringify(d)})` });
+    await call((path) => document.getElementById('scribble').setAttribute('d', path), d);
     await sleep(200);
     const image = await send('Page.captureScreenshot', { format: 'png' });
     fs.writeFileSync(path.join(out, `${shot.name}.png`), Buffer.from(image.result.data, 'base64'));
