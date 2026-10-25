@@ -9,6 +9,7 @@
     "userInterfaceStyle": "light",
     "ios": {
       "icon": "./assets/images/icon.png",
+      "supportsTablet": true,
       "bundleIdentifier": "fr.elire.app",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false

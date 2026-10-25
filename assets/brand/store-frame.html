@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Capture App Store mise en scène : l'encart Astuce de l'app au-dessus d'une vraie capture, sur la page Seyès du Classement. -->
+<!-- Rendue par scripts/build-screenshots.mjs (paramètres dans l'URL : w, h, shot, title, sub, icon, marker), qui trace aussi le gribouillis. -->
+<html lang="fr">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  @font-face { font-family: Atkinson; src: url(../fonts/AtkinsonHyperlegibleNext-Medium.ttf); font-weight: 500; }
+  @font-face { font-family: Atkinson; src: url(../fonts/AtkinsonHyperlegibleNext-SemiBold.ttf); font-weight: 600; }
+  @font-face { font-family: Ionicons; src: url(../../node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf); }
+  html, body { margin: 0; overflow: hidden; color: #1C1E21; }
+  /* Grille Seyès de cahier.tsx : ligne fine tous les 8 pt, forte tous les 32 pt, verticales tous les 32 pt. */
+  body {
+    background-color: #F6F7F5;
+    background-image:
+      linear-gradient(to right, #D5D9DD 1px, transparent 1px),
+      linear-gradient(to bottom, #D5D9DD 1px, transparent 1px),
+      linear-gradient(to bottom, #E8EBED 1px, transparent 1px);
+    background-size: 32px 32px, 32px 32px, 8px 8px;
+    background-position: 32px 32px, 0 32px, 0 8px;
+  }
+  .stage { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; }
+  /* L'encart du tuto (tuto-layer.tsx + ui/tip.tsx) à sa taille d'origine, agrandi d'un bloc par --k. */
+  .card { position: relative; width: var(--tip-w); background: #FFFFFF; border-radius: 14px; box-shadow: 0 0 0 0.5px #D5D9DD; transform-origin: top center; transform: scale(var(--k)); }
+  .tip { position: relative; display: flex; gap: 12px; align-items: flex-start; padding: 12px; }
+  .tip svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .icon { position: relative; flex: none; width: 32px; height: 32px; border-radius: 16px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font: 18px/1 Ionicons; }
+  .text { position: relative; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-height: 32px; }
+  .title { font: 600 13px/18px Atkinson; }
+  .sub { font: 500 13px/18px Atkinson; }
+  /* La capture entière, bords d'écran arrondis, posée sur la page. */
+  .shot { display: block; border-radius: var(--radius); box-shadow: 0 0 0 1px #D5D9DD, 0 18px 40px rgba(28, 30, 33, 0.14); }
+</style>
+<body>
+  <div class="stage">
+    <div class="card">
+      <div class="tip">
+        <svg><path id="scribble" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" /></svg>
+        <div class="icon" id="icon"></div>
+        <div class="text">
+          <div class="title" id="title">Notez la mesure, pas la personne.</div>
+          <div class="sub" id="sub">L'auteur reste masqué jusqu'à votre vote.</div>
+        </div>
+      </div>
+    </div>
+    <img class="shot" id="shot" alt="" />
+  </div>
+  <script>
+    const p = new URLSearchParams(location.search);
+    const w = Number(p.get('w') ?? 402);
+    const h = Number(p.get('h') ?? 874);
+    // Échelle de l'encart : x1,5 sur iPhone, x2,6 au plus sur iPad, pour garder de la place à la capture.
+    const k = Math.min(2.6, Math.max(1.5, 1.5 + (w - 400) / 600));
+    const gap = 16 * k;
+    const tipW = Math.min(560, (w * 0.92) / k);
+    document.body.style.cssText += `;width:${w}px;height:${h}px`;
+    document.documentElement.style.cssText = `--k:${k};--tip-w:${tipW}px`;
+    document.getElementById('title').textContent = p.get('title') ?? document.getElementById('title').textContent;
+    document.getElementById('sub').textContent = p.get('sub') ?? document.getElementById('sub').textContent;
+    document.getElementById('icon').textContent = String.fromCodePoint(Number(p.get('icon') ?? 61889));
+    document.getElementById('scribble').setAttribute('stroke', p.get('marker') ?? 'rgba(234, 219, 63, 0.7)');
+    const card = document.querySelector('.card');
+    const shot = document.getElementById('shot');
+    // L'encart agrandi garde sa place d'origine : on la lui rend, puis la capture prend toute la hauteur restante.
+    const layout = () => {
+      const tipH = card.offsetHeight * k;
+      card.style.marginTop = `${gap * 1.5}px`;
+      card.style.marginBottom = `${tipH - card.offsetHeight + gap * 1.5}px`;
+      const free = h - gap * 1.5 - tipH - gap * 1.5 - gap * 2;
+      const scale = Math.min(free / h, 0.86);
+      shot.style.width = `${w * scale}px`;
+      shot.style.height = `${h * scale}px`;
+      shot.style.setProperty('--radius', `${Math.round(w * scale * 0.09)}px`);
+    };
+    window.frameReady = document.fonts.ready.then(() => {
+      layout();
+      shot.src = p.get('shot') ?? '../images/screenshots/iphone-6.3/2-voter.png';
+      return shot.decode();
+    });
+  </script>
+</body>
+</html>

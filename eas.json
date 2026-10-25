@@ -20,7 +20,9 @@
       "android": {
         "track": "alpha"
       },
-      "ios": {}
+      "ios": {
+        "ascAppId": "6826817464"
+      }
     }
   }
 }
