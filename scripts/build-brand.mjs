@@ -1,4 +1,4 @@
-// Génère les SVG et PNG de la marque (icône, icône Play Store 512, Android adaptative, favicon, splash, bannière Play Store) depuis assets/brand/mark.svg et mark-monochrome.svg, avec Chrome sans interface.
+// Génère les SVG et PNG de la marque (icône, icône Play Store 512, Android adaptative, favicon, splash, bannières Play Store et App Store) depuis assets/brand/mark.svg et mark-monochrome.svg, avec Chrome sans interface.
 // Usage : node scripts/build-brand.mjs (google-chrome requis)
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -77,15 +77,23 @@ for (const v of VARIANTS) {
   console.log(`✅ ${v.svg}`);
 }
 
-// Bannière du Play Store (1024 x 500) : une page HTML qui reprend l'icône et les polices de l'app, sur fond opaque (PNG sans transparence).
+// Bannières : une page HTML qui reprend l'icône et les polices de l'app, sur fond opaque (PNG sans transparence, exigé par les deux stores).
+// Play Store 1024 x 500 ; App Store : en-tête 21:9 et résultats de recherche 3:2, rendus à l'échelle 2, sur la page Seyès, texte centré.
+const BANNERS = [
+  { file: 'feature-graphic.png', width: 1024, height: 500, scale: 1, apple: false },
+  { file: 'app-store-header.png', width: 1920, height: 823, scale: 2, apple: true },
+  { file: 'app-store-search.png', width: 1920, height: 1280, scale: 2, apple: true },
+];
 await send('Emulation.setDefaultBackgroundColorOverride', {});
-await send('Emulation.setDeviceMetricsOverride', { width: 1024, height: 500, deviceScaleFactor: 1, mobile: false });
-await send('Page.navigate', { url: `file://${path.join(BRAND, 'feature-graphic.html')}` });
-await sleep(800);
-await send('Runtime.evaluate', { expression: 'document.fonts.ready.then(() => true)', awaitPromise: true });
-const banner = await send('Page.captureScreenshot', { format: 'png', clip: { x: 0, y: 0, width: 1024, height: 500, scale: 1 } });
-fs.writeFileSync(path.join(IMAGES, 'feature-graphic.png'), Buffer.from(banner.result.data, 'base64'));
-console.log('✅ feature-graphic.html');
+for (const b of BANNERS) {
+  await send('Emulation.setDeviceMetricsOverride', { width: b.width, height: b.height, deviceScaleFactor: b.scale, mobile: false });
+  await send('Page.navigate', { url: `file://${path.join(BRAND, 'feature-graphic.html')}?w=${b.width}&h=${b.height}&apple=${b.apple ? 1 : 0}` });
+  await sleep(800);
+  await send('Runtime.evaluate', { expression: 'document.fonts.ready.then(() => true)', awaitPromise: true });
+  const banner = await send('Page.captureScreenshot', { format: 'png', clip: { x: 0, y: 0, width: b.width, height: b.height, scale: 1 } });
+  fs.writeFileSync(path.join(IMAGES, b.file), Buffer.from(banner.result.data, 'base64'));
+  console.log(`✅ ${b.file} (${b.width * b.scale} x ${b.height * b.scale})`);
+}
 ws.close();
 const exited = new Promise((resolve) => chrome.once('exit', resolve));
 chrome.kill();
