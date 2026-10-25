@@ -11,7 +11,7 @@ Guide synthétique pour déployer les versions mobiles sur le Google Play Store 
 ## 2. Comptes et accès nécessaires
 - Créez un compte gratuit sur [Expo](https://expo.dev/signup) pour héberger la compilation cloud et stocker les certificats.
 - Ouvrez un compte développeur sur [Google Play Console](https://play.google.com/console/signup) (frais unique de 25 $ à vie) et téléchargez une clé de compte de service Google Cloud.
-- Souscrivez plus tard au [programme Apple Developer](https://developer.apple.com/programs/enroll/) (99 $/an, reporté pour le moment) pour publier sur l'App Store.
+- Souscrivez au [programme Apple Developer](https://developer.apple.com/programs/enroll/) (99 $/an) pour publier sur l'App Store et TestFlight.
 - Exécutez `npx eas-cli credentials` en local une première fois pour lier vos comptes et générer les profils de signature.
 
 ## 3. Secrets de CI
