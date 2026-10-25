@@ -12,7 +12,9 @@
       "supportsTablet": true,
       "bundleIdentifier": "fr.elire.app",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleDevelopmentRegion": "fr",
+        "CFBundleAllowMixedLocalizations": true
       }
     },
     "android": {
@@ -61,6 +63,9 @@
         }
       ]
     ],
+    "locales": {
+      "fr": "./languages/fr.json"
+    },
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true,
