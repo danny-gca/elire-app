@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/danny-gca/elire-app/compare/v1.4.0...v1.5.0) (2026-10-25)
+
+
+### Nouveautés
+
+* new workflow for iOs build ([#35](https://github.com/danny-gca/elire-app/issues/35)) ([6c8ba0f](https://github.com/danny-gca/elire-app/commit/6c8ba0f2605385ee2ece7ecceee63e24ebed1af0))
+
 ## [1.4.0](https://github.com/danny-gca/elire-app/compare/v1.3.0...v1.4.0) (2026-10-24)
 
 
