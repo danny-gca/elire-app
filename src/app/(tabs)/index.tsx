@@ -59,8 +59,6 @@ export default function VoterScreen() {
   const castVote = useVotesStore((s) => s.castVote);
   const castLoiVote = useVotesStore((s) => s.castLoiVote);
   const propositionVotes = usePropositionVotes();
-  const questionsChanged = useVotesStore((s) => s.questionsChanged);
-  const dismissQuestionsChanged = useVotesStore((s) => s.dismissQuestionsChanged);
 
   const [lastId, setLastId] = useState<string | null>(null);
   const [editing, setEditing] = useState<string | null>(null);
@@ -299,12 +297,6 @@ export default function VoterScreen() {
 
       {/* La feuille au milieu de l'espace libre : une question courte reste près des boutons. */}
       <View style={styles.stage}>
-        {questionsChanged && !pause && (
-          <View style={styles.notice} accessibilityLiveRegion="polite">
-            <Text style={[Type.body, styles.ink]}>Les questions ont changé : vos votes repartent de zéro.</Text>
-            <Button label="Compris" onPress={dismissQuestionsChanged} />
-          </View>
-        )}
         {pause ? (
           <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/cahier')} onContinue={() => setPausedAt(opinions)} />
         ) : currentEnjeu ? (
@@ -925,15 +917,6 @@ const styles = StyleSheet.create({
   reveal: {
     marginTop: Spacing.two,
     gap: Spacing.two,
-  },
-  notice: {
-    gap: Spacing.two,
-    marginBottom: Spacing.two,
-    padding: Spacing.two,
-    backgroundColor: Colors.sheet,
-    borderRadius: Radius.large,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: Colors.rule,
   },
   result: {
     backgroundColor: Colors.sheet,
