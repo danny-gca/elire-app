@@ -39,6 +39,7 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 9. **Type de source** (`type_source`) : `programme_2027` (programme, site, livret, tract ou manifeste de campagne 2027), `programme_anterieur` (programme d'une élection passée : 2017, 2022, 2024), `prise_de_position` (interview, discours, article, communiqué, réseau social, ou acte de ministre comme une circulaire). Affiché dans « En savoir plus » et le détail : il ne pèse pas dans le score.
 10. **Enjeux communs** : une proposition n'entre dans un enjeu que si elle porte la même idée (`pour`) ou dit explicitement l'inverse (`contre` : supprimer, quitter, démanteler) ; un silence n'est jamais une position. Une proposition dans un enjeu au plus, au moins 2 candidats, une position par candidat, le thème de l'enjeu pour toutes. Le build bloque sinon.
 11. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
+12. **Questions directes et sans double négation** : toute question posée à l'aveugle (`lois.json`, `enjeux.json`) doit être formulée de façon directe et affirmative sur le fond. Interdiction stricte des tournures de rejet procédural (ex: « Rejet de... ») et des doubles négations où voter « Contre » reviendrait à être favorable à la mesure. Voter « Pour » doit signifier sans ambiguïté soutenir la mesure. Si le scrutin parlementaire officiel était une motion de rejet, la question et les positions des candidats doivent être normalisées sur le fond.
 
 ### Entrée d'un candidat
 

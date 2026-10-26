@@ -66,6 +66,7 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 **Loi et votes** (`data/lois.json`)
 - `sourceOfficielleUrl` : la page du scrutin (Assemblée `assemblee-nationale.fr/dyn/<législature>/scrutins/<n>`, Sénat, Parlement européen), pas un article.
 - Date, statut, nature exacts ; `resume` factuel, sans qualificatif.
+- `question` : directe, affirmative, sans double négation ni tournure de rejet procédural (ex. pas de « Rejet de... »). Répondre « Pour » doit signifier sans ambiguïté vouloir la mesure sur le fond.
 - `individuel` seulement si le candidat siégeait à cette date et apparaît dans l'analyse nominative.
 - `groupe_parti` : la position majoritaire de son groupe dans l'analyse par groupe, avec `groupe` (sigle à la date) et `groupeNom`. Si le parti n'avait aucun élu ni groupe dans cette chambre à cette date, le vote est **retiré**.
 - `explication` : un fait (« a voté pour avec son groupe »), jamais une opinion (« coup de force », « courageux »).

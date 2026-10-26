@@ -373,6 +373,8 @@ Une palette d'encre sur papier froid, sans couleur institutionnelle ni partisane
 
 **The Written Value Rule.** Une note s'écrit en toutes lettres avec son signe : Impossible −2, Contre −1, Pour +1, Parfait +2, avec le vrai signe moins (U+2212) ; « Je ne sais pas » s'écrit sans signe, en graphite. Chiffres, numéros et compteurs en chiffres tabulaires.
 
+**The Affirmative Question Rule.** Une question de scrutin ou d'enjeu est toujours directe et affirmative sur le fond. Interdiction des doubles négations et des tournures de rejet procédural (ex. pas de « Rejet de... » où Contre voudrait dire soutenir la mesure) : voter Pour doit signifier sans ambiguïté vouloir la mesure.
+
 ## Layout
 
 Une colonne centrée de 720px max avec 16px de marge latérale, sur fond papier. Le rythme suit une grille de 8pt (4, 8, 16, 24, 32) ; les intertitres de section prennent 24px au-dessus. Les cibles tactiles font 44pt au minimum (48 sur Android) ; les boutons de l'échelle de vote 60pt de haut.
