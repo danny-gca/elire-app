@@ -4,6 +4,7 @@
 
 - textes : à revérifier pour éviter les doubles négations
 - onboarding : quand on vote, ça passe a la page suivante (et naturellement pareil pour chaque action, pour ne pas se sentir "piéger")
+- garder un seul "signaler une erreur"
 
 ## Calendrier
 
