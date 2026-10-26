@@ -1,5 +1,10 @@
 # Todolist
 
+## à faire
+
+- textes : à revérifier pour éviter les doubles négations
+- onboarding : quand on vote, ça passe a la page suivante (et naturellement pareil pour chaque action, pour ne pas se sentir "piéger")
+
 ## Calendrier
 
 Les dates annoncées sont aussi dans `data/candidats.json` (`programme.annonce`) : le build les rappelle une fois passées.
@@ -21,7 +26,7 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 ## Données à valider
 
 - Les 17 questions communes (`data/enjeux.json`), surtout : prix-minimum-agricole (jl-1), normes-agricoles (xb-7), budget-defense (db-3, et sl-3 en contre), temps-de-travail (br-3 en contre), peines-planchers (br-1).
-- Types de source discutables : jlm et nda en programme 2027 ; br-7, br-8 et np-6 en programme 2027 ; ez-2 en programme précédent ; fa-1, fa-2 et ga-* en prise de position.
+- Types de source discutables : jlm et nda en programme 2027 ; br-7, br-8 et np-6 en programme 2027 ; ez-2 en programme précédent ; fa-1, fa-2 et ga-\* en prise de position.
 - prop-ez-8 : citation lue sur une page en image (couche texte du PDF illisible).
 - prop-na-3 : page imprimée 11 ou 12 ?
 - Titres plus larges que leur citation : prop-dl-5, prop-fr-6 ; « soignants exclus » de prop-nda-3 à préciser.
