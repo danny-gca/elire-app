@@ -350,7 +350,6 @@ export default function VoterScreen() {
                     <View {...infoTarget}>
                       <MoreInfo
                         itemId={current.id}
-                        kind="proposition"
                         text={current.contexte}
                         source={TYPE_SOURCE_LABELS[current.typeSource]}
                         terms={[current.titre, current.description]}
@@ -499,7 +498,6 @@ function LoiBallot({
             footer={
               <MoreInfo
                 itemId={loi.id}
-                kind="scrutin"
                 nature={loi.nature}
                 text={loi.enjeu}
                 terms={[loi.question]}
@@ -583,7 +581,6 @@ function EnjeuBallot({
                 <View {...infoTarget}>
                   <MoreInfo
                     itemId={enjeu.id}
-                    kind="question"
                     text={enjeu.enjeu}
                     terms={[enjeu.question]}
                     tab={tab}
@@ -761,8 +758,9 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
         style={({ pressed }) => [styles.lastRow, pressed && { backgroundColor: Colors.pressed }]}>
         {/* « Je ne sais pas » n'est pas une marque : fond neutre. */}
         <CountdownFill remaining={fill} color={votes[id] === UNSURE && !loi ? Colors.ruleSoft : Markers[marker].solid} />
+        {/* Le « ! » penché de Caveat déborde de sa chasse et le natif le rogne : insécables avant et après lui. */}
         <Text style={[Type.note, styles.lastNote, styles.ink]} numberOfLines={1}>
-          A voté !
+          A voté{'\u00A0'}!{'\u00A0'}
         </Text>
         <Text style={[Type.label, styles.ink, styles.lastTitle]} numberOfLines={1}>
           {title}

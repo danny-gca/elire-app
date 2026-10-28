@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-28T13:21:33.508Z",
+    "generatedAt": "2026-10-28T15:53:08.896Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
@@ -946,7 +946,7 @@
       "ref": "P-676",
       "candidatId": "anasse-kazib",
       "thematiqueId": "international",
-      "titre": "Retirer les troupes françaises déployées à l'étranger",
+      "titre": "Retirer les troupes françaises déployées à l'étranger et les rapatrier en France",
       "description": "« Retrait des troupes françaises à l'étranger. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
@@ -957,7 +957,7 @@
       "ref": "P-495",
       "candidatId": "anasse-kazib",
       "thematiqueId": "securite",
-      "titre": "Dissoudre les corps spéciaux de police",
+      "titre": "Dissoudre les corps spéciaux de la police en France",
       "description": "« Dissolution des corps spéciaux de police. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
@@ -1196,7 +1196,7 @@
       "ref": "P-331",
       "candidatId": "david-lisnard",
       "thematiqueId": "education",
-      "titre": "Laisser les chefs d'établissement recruter leurs enseignants",
+      "titre": "Laisser chaque chef d'établissement recruter lui-même les enseignants de son école",
       "description": "« la liberté donnée aux chefs d'établissement de recruter leurs équipes pédagogiques »",
       "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/education/",
       "typeSource": "programme_2027",
@@ -1424,7 +1424,7 @@
       "ref": "P-203",
       "candidatId": "edouard-philippe",
       "thematiqueId": "societe",
-      "titre": "Diviser par deux l'immigration en France",
+      "titre": "Diviser par deux le nombre d'étrangers qui viennent s'installer en France",
       "description": "« Un objectif clair : diviser par deux l'immigration dans notre pays. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
       "typeSource": "programme_2027",
@@ -1447,7 +1447,7 @@
       "ref": "P-243",
       "candidatId": "eric-zemmour",
       "thematiqueId": "education",
-      "titre": "Rétablir l'uniforme à l'école publique",
+      "titre": "Rétablir le port obligatoire de l'uniforme pour les élèves de l'école publique",
       "description": "« the return of the uniforms in state schools »",
       "sourceUrl": "https://connexionfrance.com/article/French-news/Far-right-French-election-candidate-calls-for-state-school-uniforms",
       "dateDeclaration": "2022-01-10",
@@ -1733,7 +1733,7 @@
       "ref": "P-245",
       "candidatId": "francois-asselineau",
       "thematiqueId": "international",
-      "titre": "Sortir complètement de l'Alliance atlantique (OTAN)",
+      "titre": "Faire sortir complètement la France de l'Alliance atlantique (OTAN)",
       "description": "« et de l'Otan par l'article 13 dès mon installation à l'Elysée »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-asselineau-s-estime-seul-candidat-du-frexit-58556",
       "dateDeclaration": "2017-04-10",
@@ -1747,7 +1747,7 @@
       "ref": "P-426",
       "candidatId": "francois-asselineau",
       "thematiqueId": "institutions",
-      "titre": "Créer le référendum d'initiative citoyenne (RIC)",
+      "titre": "Créer le référendum d'initiative citoyenne (RIC), déclenché par les électeurs eux-mêmes",
       "description": "« Créer le Référendum d'initiative citoyenne (RIC) »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
       "typeSource": "programme_anterieur",
@@ -1860,7 +1860,7 @@
       "ref": "P-545",
       "candidatId": "francois-ruffin",
       "thematiqueId": "economie",
-      "titre": "Rétablir l'impôt sur la fortune (ISF)",
+      "titre": "Rétablir l'impôt sur la fortune (ISF), payé chaque année par les plus riches",
       "description": "« Rendez l'ISF d'abord, monsieur le Président ! »",
       "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QG1383.pdf",
       "dateDeclaration": "2018-11-14",
@@ -2221,7 +2221,7 @@
       "ref": "P-325",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "international",
-      "titre": "Augmenter l'effort de défense de la France",
+      "titre": "Augmenter l'effort de défense de la France, avec plus de moyens pour l'armée",
       "description": "« La dissuasion ne dissuade que si elle est crédible et nos soldats méritent les moyens de leur mission. J'augmenterai l'effort de défense. »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
       "typeSource": "programme_2027",
@@ -2513,7 +2513,7 @@
       "ref": "P-458",
       "candidatId": "mira-markovic",
       "thematiqueId": "agriculture",
-      "titre": "Sortir de l'élevage intensif",
+      "titre": "Mettre fin à l'élevage intensif des animaux en France",
       "description": "« la sortie de l’élevage intensif »",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
       "dateDeclaration": "2026-10-02",
@@ -2987,7 +2987,7 @@
       "ref": "P-492",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "numerique",
-      "titre": "Interdire la publicité ciblée sur les plateformes",
+      "titre": "Interdire la publicité ciblée sur les grandes plateformes numériques et les réseaux sociaux",
       "description": "« Nous nous attaquerons au cœur du business model de ces plateformes en interdisant la publicité ciblée »",
       "sourceUrl": "https://ouragan.cd/2026/06/notre-ennemi-cest-elon-musk-sam-altman-zhang-yiming-affirme-glucksmann",
       "dateDeclaration": "2026-06-13",
@@ -3047,7 +3047,7 @@
       "ref": "P-301",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "sante",
-      "titre": "Créer un service public européen du médicament",
+      "titre": "Créer un service public européen du médicament pour garantir les approvisionnements",
       "description": "« En créant un service public du médicament pour répondre aux besoins de santé des Européens, garantir les approvisionnements et des prix justes. »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
       "dateDeclaration": "2024-05-15",
@@ -3147,7 +3147,7 @@
       "ref": "P-405",
       "candidatId": "selma-labib",
       "thematiqueId": "institutions",
-      "titre": "Accorder le droit de vote aux étrangers",
+      "titre": "Accorder le droit de vote aux étrangers qui vivent en France",
       "description": "« Nous insistons aussi sur le droit de vote des étrangers [...] : la lutte pour l'égalité des droits permet d'unifier le monde du travail »",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/dans-le-matin-dalgerie-selma-labib-porte-parole-du-npa-revolutionnaires-cest-nous-qui-travaillons-cest-nous-qui-decidons",
       "dateDeclaration": "2026-03-01",
@@ -6687,7 +6687,7 @@
       "thematiqueId": "education",
       "nature": "projet_loi",
       "titre": "Projet de loi pour une école de la confiance",
-      "question": "Faut-il rendre l'instruction obligatoire dès 3 ans ?",
+      "question": "Faut-il avancer l'âge de l'instruction obligatoire de 6 ans à 3 ans ?",
       "enjeu": "Instruction obligatoire à partir de 3 ans au lieu de 6, obligation de formation jusqu'à 18 ans et réorganisation de la formation des enseignants.",
       "resume": "Adopté en première lecture par 353 voix contre 171.",
       "chambre": "assemblee_nationale",
@@ -6901,7 +6901,7 @@
     {
       "id": "nouveaux-reacteurs",
       "thematiqueId": "environnement",
-      "question": "Construire de nouveaux réacteurs nucléaires",
+      "question": "Construire de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà",
       "enjeu": "Lancer la construction de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà.",
       "positions": [
         {
@@ -6935,7 +6935,7 @@
     {
       "id": "referendum-initiative-citoyenne",
       "thematiqueId": "institutions",
-      "question": "Créer un référendum d'initiative citoyenne",
+      "question": "Permettre aux citoyens de déclencher eux-mêmes un référendum en réunissant assez de signatures",
       "enjeu": "Permettre aux électeurs de déclencher eux-mêmes un référendum en réunissant assez de signatures, sans passer par le président ni le Parlement.",
       "positions": [
         {
@@ -6956,7 +6956,7 @@
     {
       "id": "quitter-otan",
       "thematiqueId": "international",
-      "question": "Quitter l'Alliance atlantique (OTAN)",
+      "question": "Faire sortir la France de l'Alliance atlantique (OTAN), l'alliance militaire avec les États-Unis",
       "enjeu": "Faire sortir la France de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
       "positions": [
         {
@@ -6981,7 +6981,7 @@
     {
       "id": "quitter-union-europeenne",
       "thematiqueId": "international",
-      "question": "Quitter l'Union européenne",
+      "question": "Faire sortir la France de l'Union européenne et de ses règles communes",
       "enjeu": "Faire sortir la France de l'Union européenne et de ses règles communes, comme l'a fait le Royaume-Uni.",
       "positions": [
         {
@@ -6998,7 +6998,7 @@
     {
       "id": "budget-defense",
       "thematiqueId": "international",
-      "question": "Augmenter le budget de la défense",
+      "question": "Consacrer chaque année plus d'argent public à l'armée et à la défense du pays",
       "enjeu": "Consacrer davantage d'argent public à l'armée et à la défense du pays.",
       "positions": [
         {
@@ -7023,7 +7023,7 @@
     {
       "id": "impot-fortune",
       "thematiqueId": "economie",
-      "question": "Rétablir un impôt sur la fortune",
+      "question": "Rétablir un impôt payé chaque année sur le patrimoine des plus riches",
       "enjeu": "Taxer à nouveau chaque année le patrimoine des plus riches, comme l'impôt de solidarité sur la fortune remplacé en 2018.",
       "positions": [
         {
@@ -7040,7 +7040,7 @@
     {
       "id": "taxes-carburants",
       "thematiqueId": "economie",
-      "question": "Baisser les taxes sur les carburants",
+      "question": "Baisser les taxes sur l'essence et le gazole pour faire baisser leur prix à la pompe",
       "enjeu": "Réduire la TVA ou les taxes payées sur l'essence et le gazole pour faire baisser leur prix à la pompe.",
       "positions": [
         {
@@ -7061,7 +7061,7 @@
     {
       "id": "reculer-retraite",
       "thematiqueId": "economie",
-      "question": "Reculer l'âge de départ à la retraite",
+      "question": "Relever l'âge légal de départ à la retraite, pour partir plus tard qu'aujourd'hui",
       "enjeu": "Repousser l'âge légal à partir duquel on peut partir à la retraite.",
       "positions": [
         {
@@ -7078,7 +7078,7 @@
     {
       "id": "regulariser-sans-papiers",
       "thematiqueId": "societe",
-      "question": "Régulariser tous les sans-papiers",
+      "question": "Donner un titre de séjour à tous les étrangers qui vivent en France sans autorisation",
       "enjeu": "Donner un titre de séjour à toutes les personnes étrangères qui vivent en France sans autorisation.",
       "positions": [
         {
@@ -7116,7 +7116,7 @@
     {
       "id": "recrutement-enseignants",
       "thematiqueId": "education",
-      "question": "Laisser les chefs d'établissement recruter leurs enseignants",
+      "question": "Laisser chaque chef d'établissement choisir ses enseignants, au lieu de l'affectation nationale",
       "enjeu": "Confier le choix des professeurs au directeur ou au principal de chaque école, plutôt qu'à l'affectation nationale.",
       "positions": [
         {
@@ -7133,7 +7133,7 @@
     {
       "id": "uniforme-ecole",
       "thematiqueId": "education",
-      "question": "Imposer l'uniforme à l'école",
+      "question": "Faire porter un uniforme, la même tenue pour tous, aux élèves de l'école publique",
       "enjeu": "Faire porter la même tenue à tous les élèves de l'école publique, tout de suite ou après une expérimentation.",
       "positions": [
         {
@@ -7150,7 +7150,7 @@
     {
       "id": "peines-planchers",
       "thematiqueId": "securite",
-      "question": "Instaurer des peines minimales obligatoires",
+      "question": "Fixer pour certaines infractions une peine minimale que le juge doit prononcer",
       "enjeu": "Fixer, pour certaines infractions, une peine minimale que le juge doit en principe prononcer (peines planchers).",
       "positions": [
         {
@@ -7167,7 +7167,7 @@
     {
       "id": "soins-rembourses",
       "thematiqueId": "sante",
-      "question": "Rembourser à 100 % tous les soins prescrits",
+      "question": "Rembourser à 100 % par la Sécurité sociale tous les soins prescrits par un médecin",
       "enjeu": "Faire prendre en charge en entier par la Sécurité sociale les soins prescrits par un médecin, sans reste à payer.",
       "positions": [
         {
@@ -7609,7 +7609,9 @@
         "prop-ep-1"
       ],
       "lois": [],
-      "enjeux": []
+      "enjeux": [
+        "reculer-retraite"
+      ]
     },
     {
       "id": "normes-europeennes-importations",

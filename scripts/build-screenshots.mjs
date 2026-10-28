@@ -47,8 +47,11 @@ const markerOf = (i) => MARKERS[i % MARKERS.length];
 
 // Votes de démo : propositions seules réparties par candidat, quelques questions communes et scrutins, 103 avis (pas un multiple de 10 : pas de bilan à l'écran).
 // Une proposition rattachée à une question commune n'est pas votable seule : le store l'écarterait.
-const NEXT_PROPOSITION = 'prop-mm-2';
-const NEXT_LOI = 'mineurs-reseaux-sociaux-2026';
+// Une question commune et un scrutin qui ont un repère, des mots et des liens : les 4 onglets d'explications à l'écran.
+const NEXT_PROPOSITION = 'reculer-retraite';
+const NEXT_LOI = 'debat-accord-ue-mercosur-2024';
+// Largeur à partir de laquelle un onglet est ouvert : la tablette a la place de montrer son contenu.
+const WIDE = 600;
 const VALUES = [2, 1, -1, 2, -2, 1, -1, 1];
 const LOI_VALUES = ['pour', 'contre', 'abstention', 'pour'];
 const solo = dataset.propositions.filter((p) => !p.enjeuId);
@@ -66,7 +69,7 @@ for (let round = 0; voted.length < 93; round++) {
     }
   }
 }
-voted.push(...dataset.enjeux.slice(0, 5).map((e) => e.id));
+voted.push(...dataset.enjeux.map((e) => e.id).filter((id) => id !== NEXT_PROPOSITION).slice(0, 5));
 const votedLois = dataset.lois.map((l) => l.id).filter((id) => id !== NEXT_LOI).slice(0, 5);
 const votes = Object.fromEntries(voted.map((id, i) => [id, VALUES[i % VALUES.length]]));
 const loiVotes = Object.fromEntries(votedLois.map((id, i) => [id, LOI_VALUES[i % LOI_VALUES.length]]));
@@ -94,8 +97,8 @@ const tutos = JSON.stringify({ state: { seen: (Array.isArray(TUTOS) ? TUTOS : Ob
 const SHOTS = [
   // La présentation n'apparaît qu'au bout de son fondu : capturée avec les animations.
   { name: '1-presentation', route: '/onboarding', first: NEXT_PROPOSITION, onboarding: true, motion: true, title: 'Faites-vous votre avis.', sub: 'Sans savoir qui parle.', icon: 61889 },
-  { name: '2-voter', route: '/', first: NEXT_PROPOSITION, title: 'Jugez la mesure, pas l’auteur.', sub: 'Son nom reste masqué.', icon: 62184 },
-  { name: '3-scrutin', route: '/', first: NEXT_LOI, title: 'Votez comme au Parlement.', sub: 'Comparez-vous aux vrais votes des élus.', icon: 62390 },
+  { name: '2-voter', route: '/', first: NEXT_PROPOSITION, open: 'Contexte', title: 'Jugez la mesure, pas l’auteur.', sub: 'Son nom reste masqué.', icon: 62184 },
+  { name: '3-scrutin', route: '/', first: NEXT_LOI, open: 'Précisions', title: 'Votez comme au Parlement.', sub: 'Comparez-vous aux vrais votes des élus.', icon: 62390 },
   { name: '4-classement', route: '/cahier', first: NEXT_PROPOSITION, title: 'De qui êtes-vous proche ?', sub: 'Le classement s’affine à chaque avis.', icon: 62693 },
   { name: '5-lois', route: '/lois', first: NEXT_PROPOSITION, title: 'Retrouvez chaque scrutin.', sub: 'Et la position de chaque candidat.', icon: 62132 },
   { name: '6-explorer', route: '/explore', first: NEXT_PROPOSITION, title: 'Explorez par thème.', sub: 'Chaque proposition avec sa source.', icon: 62084 },
@@ -152,6 +155,20 @@ function anonymize(anon) {
     if (party.has(cs.backgroundColor)) el.style.backgroundColor = anon.grey;
   }
   return true;
+}
+
+// Exécutée dans la page : ouvre l'onglet d'explications, puis remonte en haut pour garder la question à l'écran.
+function openTab(label) {
+  const tab = [...document.querySelectorAll('[role="button"]')].find((el) => el.getAttribute('aria-label') === label);
+  tab?.click();
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      document.querySelectorAll('*').forEach((el) => {
+        if (el.scrollTop > 0 && getComputedStyle(el).overflowY !== 'visible') el.scrollTop = 0;
+      });
+      resolve(!!tab);
+    }, 400)
+  );
 }
 
 // Serveur de l'export, sous le même chemin que sur GitHub Pages ; une route sans extension sert sa page .html (ou [id].html).
@@ -226,6 +243,10 @@ for (const device of DEVICES) {
     await goto('/mentions-legales');
     await call((v, t) => { localStorage.clear(); localStorage.setItem('elire-votes', v); localStorage.setItem('elire-tutos', t); }, votes, tutos);
     await goto(shot.route, shot.motion);
+    if (shot.open && device.width >= WIDE) {
+      await call(openTab, shot.open);
+      await sleep(800);
+    }
     await call(anonymize, ANON);
     await sleep(300);
     const image = await send('Page.captureScreenshot', { format: 'png' });

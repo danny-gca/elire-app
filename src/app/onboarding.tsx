@@ -461,7 +461,7 @@ function EraserDemo({
         ]}
       >
         <Text style={[Type.note, styles.ink, styles.noShrink]} numberOfLines={1}>
-          A voté !
+          A voté{"\u00A0"}!{"\u00A0"}
         </Text>
         <Text style={[Type.label, styles.ink, styles.flex]} numberOfLines={1}>
           {EXAMPLE.titre}

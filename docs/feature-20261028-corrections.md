@@ -715,6 +715,55 @@ Règle du skill : une explication est un fait, jamais une opinion. 22 explicatio
 
 Suggestion de l'agent, hors feature : archiver sur Wayback les sources `programme_2027`, qui changent (cas de `prop-ep-3` et `prop-nda-6`).
 
+## 8. Captures des stores et derniers correctifs (2026-10-28)
+
+- **Captures régénérées** (`scripts/build-screenshots.mjs`, 7 écrans × 7 formats, et `explorer.webp` du site). Voter montre la question commune `reculer-retraite` et le scrutin Mercosur, qui ont les 4 onglets. Sur tablette (600 pt et plus), un onglet est ouvert : « En clair » pour Voter, « Le vote » pour le scrutin. Sur téléphone, onglets fermés.
+- **Repère `retraites`** rattaché aussi à la question commune `reculer-retraite` : elle gagne « En clair ».
+- **Onglets** : écart de 8 pt au lieu de 12, pour que les 4 tiennent sur une ligne sur un téléphone de 360 pt (Android).
+- **« A voté ! » sans « ! » en natif** [Danny] : espace normale remplacée par une espace insécable (U+00A0) dans « A voté ! » (Voter, onboarding) et « J'ai voté à tout ! » (`ALL_VOTED_TEXT`). Cause probable : en natif, la largeur mesurée du texte (police Caveat) est arrondie un peu trop court, la ligne se coupe à la dernière espace, avant le « ! », et `numberOfLines={1}` cache la deuxième ligne. Le web n'arrondit pas pareil. L'espace fine insécable (U+202F) n'est pas dans Caveat : elle s'afficherait en carré vide. **À vérifier sur un vrai téléphone.**
+- **« ! » rogné, suite** [Danny] : le « ! » penché de Caveat déborde de sa chasse, et le natif rogne le texte à sa boîte (le `paddingRight` n'y change rien). Une insécable ajoutée **après** le « ! » lui fait place : « A voté ! » (Voter, onboarding) et `AllVotedNote` (la constante partagée reste sans espace de fin). **À vérifier sur un vrai téléphone.**
+- **Onglets « En savoir plus », retouche** [Danny] : 8 pt de plus sous le trait de la carte et 4 pt sous la rangée ; le surligneur couvre l'onglet entier (libellé et flèche), se pose de gauche à droite et la flèche pivote en 220 ms (`InfoTabButton` dans `more-info.tsx`, rien si animations réduites).
+
 ## Hors feature
 
 - `legal.ts`, paragraphe d'indépendance (6 négations dans une phrase) : correct mais lourd. À reprendre lors de la relecture par l'avocat (`todo.md`, « Aspects légaux »), pas avant.
+
+## 9. Questions lisibles d'un coup d'œil
+
+**Constat** [Danny] : « Reculer l'âge de départ à la retraite » ne dit ni dans quel sens ni vers où. La question doit se suffire, sans ouvrir les tiroirs.
+
+**Fait**
+- Tiroirs à la place des onglets (`more-info.tsx`) : Contexte, Précisions, Glossaire, Liens et sources. Précisions liste, pour une question commune, chaque proposition rattachée (titre et contexte, sans nom) ; ses sources vont dans Liens et sources. Captures dans `docs/feature-20261028-corrections/v4/`.
+- Règle 13 de CONTRIBUTING et contrôle du build (`checkLength`, `MIN_WORDS` dans `src/lib/wording.ts`) : 8 mots au moins pour un titre de proposition et une question commune, 10 pour une question de scrutin. Avertissement, bloquant en `--strict`. 28 textes signalés.
+
+**Reformulations appliquées** [validées par Danny] : build `--strict` sans avertissement, `check-sources` sans erreur sur les 10 candidats touchés (`prop-ep-4` et `prop-ez-8` restent à lire, inchangés). Captures des stores régénérées.
+
+| id | Aujourd'hui | Proposé |
+|---|---|---|
+| reculer-retraite | Reculer l'âge de départ à la retraite | Relever l'âge légal de départ à la retraite, pour partir plus tard qu'aujourd'hui |
+| nouveaux-reacteurs | Construire de nouveaux réacteurs nucléaires | Construire de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà |
+| referendum-initiative-citoyenne | Créer un référendum d'initiative citoyenne | Permettre aux citoyens de déclencher eux-mêmes un référendum en réunissant assez de signatures |
+| quitter-otan | Quitter l'Alliance atlantique (OTAN) | Faire sortir la France de l'Alliance atlantique (OTAN), l'alliance militaire avec les États-Unis |
+| quitter-union-europeenne | Quitter l'Union européenne | Faire sortir la France de l'Union européenne et de ses règles communes |
+| budget-defense | Augmenter le budget de la défense | Consacrer chaque année plus d'argent public à l'armée et à la défense du pays |
+| impot-fortune | Rétablir un impôt sur la fortune | Rétablir un impôt payé chaque année sur le patrimoine des plus riches |
+| taxes-carburants | Baisser les taxes sur les carburants | Baisser les taxes sur l'essence et le gazole pour faire baisser leur prix à la pompe |
+| regulariser-sans-papiers | Régulariser tous les sans-papiers | Donner un titre de séjour à tous les étrangers qui vivent en France sans autorisation |
+| recrutement-enseignants | Laisser les chefs d'établissement recruter leurs enseignants | Laisser chaque chef d'établissement choisir ses enseignants, au lieu de l'affectation nationale |
+| uniforme-ecole | Imposer l'uniforme à l'école | Faire porter un uniforme, la même tenue pour tous, aux élèves de l'école publique |
+| peines-planchers | Instaurer des peines minimales obligatoires | Fixer pour certaines infractions une peine minimale que le juge doit prononcer |
+| soins-rembourses | Rembourser à 100 % tous les soins prescrits | Rembourser à 100 % par la Sécurité sociale tous les soins prescrits par un médecin |
+| ecole-de-la-confiance-2019 | Faut-il rendre l'instruction obligatoire dès 3 ans ? | Faut-il avancer l'âge de l'instruction obligatoire de 6 ans à 3 ans ? |
+| prop-ak-6 | Retirer les troupes françaises déployées à l'étranger | Retirer les troupes françaises déployées à l'étranger et les rapatrier en France |
+| prop-ak-7 | Dissoudre les corps spéciaux de police | Dissoudre les corps spéciaux de la police en France (la source ne dit pas lesquels) |
+| prop-dl-3 | Laisser les chefs d'établissement recruter leurs enseignants | Laisser chaque chef d'établissement recruter lui-même les enseignants de son école |
+| prop-ep-8 | Diviser par deux l'immigration en France | Diviser par deux le nombre d'étrangers qui viennent s'installer en France |
+| prop-ez-2 | Rétablir l'uniforme à l'école publique | Rétablir le port obligatoire de l'uniforme pour les élèves de l'école publique |
+| prop-fa-2 | Sortir complètement de l'Alliance atlantique (OTAN) | Faire sortir complètement la France de l'Alliance atlantique (OTAN) |
+| prop-fa-3 | Créer le référendum d'initiative citoyenne (RIC) | Créer le référendum d'initiative citoyenne (RIC), déclenché par les électeurs eux-mêmes |
+| prop-fr-5 | Rétablir l'impôt sur la fortune (ISF) | Rétablir l'impôt sur la fortune (ISF), payé chaque année par les plus riches |
+| prop-kb-2 | Augmenter l'effort de défense de la France | Augmenter l'effort de défense de la France, avec plus de moyens pour l'armée |
+| prop-mm-2 | Sortir de l'élevage intensif | Mettre fin à l'élevage intensif des animaux en France |
+| prop-rg-3 | Interdire la publicité ciblée sur les plateformes | Interdire la publicité ciblée sur les grandes plateformes numériques et les réseaux sociaux |
+| prop-rg-8 | Créer un service public européen du médicament | Créer un service public européen du médicament pour garantir les approvisionnements |
+| prop-sl-8 | Accorder le droit de vote aux étrangers | Accorder le droit de vote aux étrangers qui vivent en France |

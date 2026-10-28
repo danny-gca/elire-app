@@ -8,7 +8,7 @@ import { z } from 'zod';
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
 import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
-import { negativeWording } from '../src/lib/wording.ts';
+import { MIN_WORDS, negativeWording, wordCount } from '../src/lib/wording.ts';
 import {
   CandidatSourceSchema,
   EnjeuSourceSchema,
@@ -102,6 +102,13 @@ function checkWording(text: string, where: string, vote = false) {
   const reason = negativeWording(text, vote);
   if (reason) {
     warnings.push(`${where} : tournure négative (${reason}), à reformuler : « ${text} »`);
+  }
+}
+
+function checkLength(text: string, min: number, where: string) {
+  const count = wordCount(text);
+  if (count < min) {
+    warnings.push(`${where} : ${count} mots, ${min} au moins pour se lire d'un coup d'œil : « ${text} »`);
   }
 }
 
@@ -240,6 +247,7 @@ function main() {
       checkAnonymous(`${row.titre} ${row.description} ${row.contexte}`, anonymity, where);
       checkAcronyms(row.titre, [row.description, row.contexte], glossarySigles, usedSigles, where);
       checkWording(row.titre, where);
+      checkLength(row.titre, MIN_WORDS.titre, where);
       checkPreciseUrl(row.source_url, where);
       propositions.push({
         id: row.id,
@@ -270,6 +278,7 @@ function main() {
     checkAnonymous(`${loi.question} ${loi.enjeu}`, anonymity, `lois.json ${loi.id}`);
     checkAcronyms(loi.question, [loi.enjeu], glossarySigles, usedSigles, `lois.json ${loi.id}`);
     checkWording(loi.question, `lois.json ${loi.id}`, true);
+    checkLength(loi.question, MIN_WORDS.scrutin, `lois.json ${loi.id}`);
     for (const [candidatId, vote] of Object.entries(loi.votes)) {
       if (!candidatIds.has(candidatId)) {
         errors.push(`lois.json ${loi.id} : candidat inconnu "${candidatId}"`);
@@ -290,6 +299,7 @@ function main() {
     checkAnonymous(`${e.question} ${e.enjeu}`, anonymity, where);
     checkAcronyms(e.question, [e.enjeu], glossarySigles, usedSigles, where);
     checkWording(e.question, where);
+    checkLength(e.question, MIN_WORDS.question, where);
   }
 
   // Repères : un sujet par entrée, chaque élément dans un repère au plus, lu à l'aveugle comme le reste.

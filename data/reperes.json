@@ -29,7 +29,8 @@
       { "titre": "Retraite par répartition", "url": "https://fr.wikipedia.org/wiki/Retraite_par_r%C3%A9partition", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Retraite par capitalisation", "url": "https://fr.wikipedia.org/wiki/Retraite_par_capitalisation", "editeur": "Wikipédia", "media": "article" }
     ],
-    "propositions": ["prop-ep-1"]
+    "propositions": ["prop-ep-1"],
+    "enjeux": ["reculer-retraite"]
   },
   {
     "id": "normes-europeennes-importations",
