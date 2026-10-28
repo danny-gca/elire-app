@@ -53,6 +53,12 @@ import { useVotesStore } from "@/store/votes-store";
 
 // Le temps de lire une page avant la suivante, montré par le trait du haut.
 const STORY_MS = 15000;
+// Après un essai réussi (couleur, vote), le temps de voir son geste avant la page suivante.
+const TRY_NEXT_MS = 1200;
+// Après « Ouvrir la source », le temps de lire le message.
+const SOURCE_NEXT_MS = 1800;
+// Après la fermeture de la feuille de la gomme (qui se ferme seule après le vote).
+const SHEET_NEXT_MS = 600;
 
 type Demo = "picker" | "vote" | "eraser" | "source" | "groupe" | "start";
 
@@ -151,8 +157,17 @@ export default function OnboardingScreen() {
     }
   };
 
+  // Essai terminé : la page tourne seule après ce délai (`at` relance le délai à chaque nouveau geste).
+  const [soon, setSoon] = useState<{ ms: number; at: number } | null>(null);
+  const nextSoon = (ms: number) => {
+    if (!screenReader) {
+      setSoon({ ms, at: Date.now() });
+    }
+  };
+
   const goTo = (next: number) => {
     setHeld(false);
+    setSoon(null);
     setIndex(Math.max(0, Math.min(STORIES.length - 1, next)));
   };
 
@@ -189,19 +204,21 @@ export default function OnboardingScreen() {
     [onSwipe],
   );
 
+  // Après un essai, le trait du haut se remplit vite : on voit que la page va tourner.
   useEffect(() => {
     progress.value = 0;
-    if (!autoplay || last) {
+    if (last || (!soon && !autoplay)) {
       progress.value = 1;
       return;
     }
+    const ms = soon?.ms ?? STORY_MS;
     progress.value = withTiming(1, {
-      duration: STORY_MS,
+      duration: ms,
       easing: Easing.linear,
     });
-    const timer = setTimeout(() => goTo(index + 1), STORY_MS);
+    const timer = setTimeout(() => goTo(index + 1), ms);
     return () => clearTimeout(timer);
-  }, [index, autoplay, last, progress]);
+  }, [index, autoplay, last, progress, soon]);
 
   const story = STORIES[index];
   // Avant le choix, la page du surligneur ne surligne rien ; ensuite, chaque titre porte la couleur choisie.
@@ -323,15 +340,36 @@ export default function OnboardingScreen() {
               {...({ onPointerDown: () => setHeld(true) } as object)}
             >
               {story.demo === "picker" && (
-                <MarkerPicker selected={picked} onSelect={setPicked} />
+                <MarkerPicker
+                  selected={picked}
+                  onSelect={(m) => {
+                    setPicked(m);
+                    nextSoon(TRY_NEXT_MS);
+                  }}
+                />
               )}
               {story.demo === "vote" && (
-                <VoteDemo vote={example.vote} onVote={voteExample} />
+                <VoteDemo
+                  vote={example.vote}
+                  onVote={(v) => {
+                    voteExample(v);
+                    nextSoon(TRY_NEXT_MS);
+                  }}
+                />
               )}
               {story.demo === "eraser" && (
-                <EraserDemo vote={example.vote} onVote={voteExample} />
+                <EraserDemo
+                  vote={example.vote}
+                  onVote={voteExample}
+                  onDone={() => nextSoon(SHEET_NEXT_MS)}
+                />
               )}
-              {story.demo === "source" && <SourceDemo vote={example.vote} />}
+              {story.demo === "source" && (
+                <SourceDemo
+                  vote={example.vote}
+                  onDone={() => nextSoon(SOURCE_NEXT_MS)}
+                />
+              )}
             </View>
           )}
           <Text
@@ -399,12 +437,16 @@ function VoteDemo({
 function EraserDemo({
   vote,
   onVote,
+  onDone,
 }: {
   vote?: VoteValue;
   onVote: (vote: VoteValue) => void;
+  /** La feuille se ferme après un vote corrigé. */
+  onDone: () => void;
 }) {
   const marker = useVotesStore((s) => s.marker);
   const [editing, setEditing] = useState(false);
+  const [changed, setChanged] = useState(false);
   return (
     <>
       <Pressable
@@ -435,12 +477,20 @@ function EraserDemo({
       <EditVoteSheet
         id={null}
         visible={editing}
-        onClose={() => setEditing(false)}
+        onClose={() => {
+          setEditing(false);
+          if (changed) {
+            onDone();
+          }
+        }}
         example={{
           titre: EXAMPLE.titre,
           description: EXAMPLE.description,
           value: vote,
-          onVote,
+          onVote: (v) => {
+            setChanged(true);
+            onVote(v);
+          },
         }}
       />
     </>
@@ -448,7 +498,7 @@ function EraserDemo({
 }
 
 // Une ligne d'Explorer (fictive) : auteur et votre note visibles, la source au toucher.
-function SourceDemo({ vote }: { vote?: VoteValue }) {
+function SourceDemo({ vote, onDone }: { vote?: VoteValue; onDone: () => void }) {
   const marker = useVotesStore((s) => s.marker);
   const [open, setOpen] = useState(false);
   const [tried, setTried] = useState(false);
@@ -470,7 +520,10 @@ function SourceDemo({ vote }: { vote?: VoteValue }) {
           <Button
             label="Ouvrir la source · exemple.fr"
             icon="open-outline"
-            onPress={() => setTried(true)}
+            onPress={() => {
+              setTried(true);
+              onDone();
+            }}
           />
           {tried && (
             <Animated.Text

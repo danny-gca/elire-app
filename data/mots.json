@@ -1,0 +1,17 @@
+[
+  { "mot": "Mercosur", "definition": "Marché commun du Sud : union de pays d'Amérique du Sud créée en 1991 (Brésil, Argentine, Uruguay, Paraguay, et Bolivie depuis 2024)." },
+  { "mot": "libre-échange", "definition": "Commerce entre pays sans droits de douane ni quotas, ou presque. Un accord de libre-échange fixe ces règles entre les pays qui le signent." },
+  { "mot": "droits de douane", "variantes": ["droit de douane"], "definition": "Taxe payée sur un produit qui entre dans un pays. La baisser rend les produits importés moins chers." },
+  { "mot": "ratification", "variantes": ["ratifier", "ratifié", "ratifiée"], "definition": "Approbation officielle d'un traité déjà signé, par le Parlement de chaque pays ou de l'Union, pour qu'il s'applique en entier." },
+  { "mot": "âge légal", "definition": "Âge à partir duquel on peut partir à la retraite. Partir à cet âge ne garantit pas une pension complète." },
+  { "mot": "cotisation", "variantes": ["cotisations", "cotiser"], "definition": "Part du salaire versée pour payer les retraites. Après assez d'années cotisées, on touche une pension sans réduction." },
+  { "mot": "annuité", "variantes": ["annuités"], "definition": "Ici, une année de cotisation : « 45 annuités » veut dire 45 années de cotisation." },
+  { "mot": "capitalisation", "definition": "Retraite par capitalisation : chacun épargne pour sa propre retraite, placée sur les marchés financiers. La pension dépend de ce qui a été épargné." },
+  { "mot": "retraite par répartition", "variantes": ["par répartition"], "definition": "Les cotisations des actifs paient aussitôt les pensions des retraités. C'est le système principal en France." },
+  { "mot": "carrière longue", "variantes": ["carrières longues"], "definition": "Dispositif qui permet à ceux qui ont commencé à travailler jeunes de partir avant l'âge légal." },
+  { "mot": "directive", "variantes": ["directives"], "definition": "Texte de l'Union européenne qui fixe un objectif ; chaque pays choisit comment l'écrire dans sa propre loi." },
+  { "mot": "transposition", "variantes": ["transposer"], "definition": "Fait d'écrire une directive européenne dans la loi d'un pays." },
+  { "mot": "surtransposition", "variantes": ["surtranspositions"], "definition": "Transposition qui va plus loin que la directive : le pays ajoute des règles plus strictes que le minimum européen." },
+  { "mot": "clause miroir", "variantes": ["clauses miroirs"], "definition": "Règle d'un accord commercial qui impose aux produits importés les mêmes normes de production qu'aux produits européens." },
+  { "mot": "excuse de minorité", "definition": "Règle qui réduit la peine d'un mineur par rapport à celle d'un adulte pour les mêmes faits ; le juge peut l'écarter dans certains cas." }
+]

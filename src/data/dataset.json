@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-24T02:02:06.768Z",
+    "generatedAt": "2026-10-28T13:21:33.508Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
-    "propositionsCount": 197,
+    "propositionsCount": 196,
     "loisCount": 42,
     "enjeuxCount": 17
   },
@@ -72,7 +72,7 @@
         "election": "européennes 2024",
         "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
       },
-      "siteWeb": "https://placepublique.org"
+      "siteWeb": "https://place-publique.eu"
     },
     {
       "id": "les-ecologistes",
@@ -500,7 +500,7 @@
       "candidature": {
         "statut": "declaree",
         "date": "2026-07-07",
-        "sourceUrl": "https://fr.euronews.com/my-europe/2026/07/07/je-suis-candidate-a-lelection-presidentielle-annonce-marine-le-pen-sur-tf1"
+        "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
       },
       "programme": {
         "statut": "aucun"
@@ -1088,7 +1088,7 @@
       "ref": "P-604",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "securite",
-      "titre": "Faire de l'excuse de minorité, qui réduit les peines des mineurs, l'exception et non la règle",
+      "titre": "Faire de l'excuse de minorité l'exception et non la règle",
       "description": "« Aujourd'hui, l'excuse de minorité est la règle, demain elle doit devenir l'exception » ; « Il faut réformer profondément la justice des mineurs »",
       "sourceUrl": "https://www.europe1.fr/node/669464",
       "dateDeclaration": "2025-03-25",
@@ -1177,7 +1177,7 @@
       "sourceUrl": "https://www.maire-info.com/congr%C3%A8s-de-l'amf/david-lisnard--les-crises-ont-demontre-la-solidite-de-l'echelon-communal--article-30199",
       "dateDeclaration": "2025-11-14",
       "typeSource": "prise_de_position",
-      "contexte": "Interview avant le Congrès des maires. Les collectivités prendraient des règlements aujourd'hui fixés par l'État, sauf dans les domaines régaliens (sécurité, justice, défense). Mesure présentée comme possible sans réviser la Constitution, avec une autonomie financière et fiscale."
+      "contexte": "Interview avant le Congrès des maires. Les collectivités prendraient des règlements aujourd'hui fixés par l'État, sauf dans les domaines régaliens. Mesure présentée comme possible sans réviser la Constitution, avec une autonomie financière et fiscale."
     },
     {
       "id": "prop-dl-2",
@@ -1220,8 +1220,8 @@
       "ref": "P-693",
       "candidatId": "david-lisnard",
       "thematiqueId": "logement",
-      "titre": "Assouplir la règle « zéro artificialisation nette » et laisser les communes décider où construire",
-      "description": "« on a créé, avec le ZAN, un dispositif si complexe qu'il est inapplicable localement, inéquitable »",
+      "titre": "Assouplir la règle « zéro artificialisation nette », jugée inapplicable localement",
+      "description": "« on a créé, avec le ZAN, un dispositif si complexe qu'il est inapplicable localement, inéquitable » ; « La proposition de loi Trace vise à assouplir le dispositif du ZAN »",
       "sourceUrl": "https://www.ffbatiment.fr/revues-guides/bam/79-juin-2025/liberer-acte-construire-entretien-avec-david-lisnard-maire-cannes",
       "dateDeclaration": "2025-06-02",
       "typeSource": "prise_de_position",
@@ -1243,7 +1243,7 @@
       "ref": "P-698",
       "candidatId": "david-lisnard",
       "thematiqueId": "agriculture",
-      "titre": "Ne plus durcir les normes européennes en France et imposer les mêmes règles aux produits importés",
+      "titre": "S'en tenir aux normes européennes en France et imposer les mêmes règles aux produits importés",
       "description": "« Nous proposons d'en finir avec les surtranspositions françaises [...] et la mise en œuvre de clauses miroirs obligatoires pour les produits importés. »",
       "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/agriculture/",
       "typeSource": "programme_2027",
@@ -1367,7 +1367,7 @@
       "candidatId": "edouard-philippe",
       "thematiqueId": "environnement",
       "titre": "Relancer le nucléaire, développer les renouvelables et passer massivement à l'électricité",
-      "description": "« Assurer notre souveraineté énergétique en relançant le nucléaire, en développant les renouvelables et en électrifiant massivement nos usages. »",
+      "description": "« Assurer notre souveraineté énergétique en relançant le nucléaire (lancement de 8 EPR supplémentaires en plus des 6 déjà prévus), en développant les renouvelables et en électrifiant massivement nos usages. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
       "typeSource": "programme_2027",
       "contexte": "Site de campagne, priorité « Pour une France plus conquérante ». Objectif affiché : la souveraineté énergétique. L'action climatique viserait d'abord ce qui réduit vraiment les émissions, comme le fret de marchandises."
@@ -1377,8 +1377,8 @@
       "ref": "P-570",
       "candidatId": "edouard-philippe",
       "thematiqueId": "education",
-      "titre": "Laisser les chefs d'établissement choisir et évaluer les enseignants et imposer l'uniforme",
-      "description": "« Faire des chefs d'établissements les véritables patrons de l'école [...] d'imposer l'uniforme, [...] de choisir et d'évaluer les enseignants. »",
+      "titre": "Laisser les chefs d'établissement imposer l'uniforme et participer au recrutement et à l'évaluation de leur équipe",
+      "description": "« Faire des chefs d'établissements les véritables patrons de l'école : liberté [...] d'imposer l'uniforme, de fixer les règles de discipline, de participer au recrutement et à l'évaluation de leur équipe. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
       "typeSource": "programme_2027",
       "contexte": "Site de campagne, priorité « Pour une France plus attentive à ses enfants ». Les chefs d'établissement fixeraient aussi la discipline ; les rémunérations des professeurs seraient augmentées."
@@ -1388,7 +1388,7 @@
       "ref": "P-575",
       "candidatId": "edouard-philippe",
       "thematiqueId": "travail",
-      "titre": "Donner le maximum de liberté aux entreprises sur le temps de travail",
+      "titre": "Donner le maximum de liberté dans l'entreprise sur le temps de travail",
       "description": "« Je pense que faire les 35 heures était une erreur. » ; « donner le maximum de libertés dans l'entreprise »",
       "sourceUrl": "https://www.planet.fr/faut-il-mettre-fin-aux-35-heures-retailleau-pour-edouard-philippe-contre.2999403.817022.html",
       "dateDeclaration": "2026-08-30",
@@ -1575,12 +1575,12 @@
       "ref": "P-837",
       "candidatId": "fabien-roussel",
       "thematiqueId": "agriculture",
-      "titre": "Permettre à l'État de fixer des prix minimums pour les produits agricoles",
-      "description": "« sur le modèle du coefficient multiplicateur existant pour le secteur des fruits et légumes »",
+      "titre": "Permettre à l'État de fixer des prix planchers agricoles en cas de prix trop bas",
+      "description": "« En cas de prix trop bas, l'État aurait le pouvoir d'intervenir pour définir des prix planchers, sur le modèle du coefficient multiplicateur existant pour le secteur des fruits et légumes »",
       "sourceUrl": "https://www.terre-net.fr/actualite-agricole/politique-syndicalisme/article/fabien-roussel-parti-communiste-presente-son-programme-agricole-205-202534.html",
       "dateDeclaration": "2021-10-06",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme agricole rapporté par Terre-net. Modèle cité : le coefficient multiplicateur des fruits et légumes, qui encadre l'écart entre prix payé au producteur et prix de vente. Prix négociés chaque année par filière, en public, entre producteurs et grande distribution.",
+      "contexte": "Programme agricole rapporté par Terre-net. Modèle cité : le coefficient multiplicateur des fruits et légumes. Prix négociés chaque année par filière, en public, entre producteurs et grande distribution.",
       "enjeuId": "prix-minimum-agricole",
       "sens": "pour"
     },
@@ -1875,7 +1875,7 @@
       "candidatId": "francois-ruffin",
       "thematiqueId": "education",
       "titre": "Plafonner les classes à 20 élèves, à l'essai pendant 3 ans dans certaines académies",
-      "description": "« le nombre total des élèves scolarisés au sein d'une classe des écoles préélémentaires et élémentaires [...] des lycées professionnels [...] ne peut être supérieur à vingt »",
+      "description": "« À titre expérimental, pour une durée de trois ans, le Gouvernement peut, dans des académies qu'il identifie [...], décider que le nombre total des élèves scolarisés au sein d'une classe [...] ne peut être supérieur à vingt »",
       "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1481/CION-CEDU/AC370.pdf",
       "dateDeclaration": "2019-01-25",
       "typeSource": "prise_de_position",
@@ -1970,7 +1970,7 @@
       "ref": "P-864",
       "candidatId": "gabriel-attal",
       "thematiqueId": "agriculture",
-      "titre": "Ne plus ajouter de règles françaises en plus des normes européennes pour les agriculteurs",
+      "titre": "S'en tenir aux normes européennes pour les agriculteurs",
       "description": "« Lutter contre la surtransposition »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/produire-et-proteger-des-nouvelles-mesures-pour-lagriculture-francaise",
       "dateDeclaration": "2024-02-01",
@@ -2070,7 +2070,7 @@
       "ref": "P-310",
       "candidatId": "jean-lassalle",
       "thematiqueId": "environnement",
-      "titre": "Interdire tout projet éolien que le maire n'a pas validé après avoir consulté les habitants",
+      "titre": "Soumettre tout projet éolien à l'accord du maire, après consultation des habitants",
       "description": "« Stopper l’éolien. Il convient dès à présent d’interdire les projets éoliens non validés par les maires, après consultation des habitants. »",
       "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
       "dateDeclaration": "2022-02-25",
@@ -2184,7 +2184,7 @@
       "ref": "P-401",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "environnement",
-      "titre": "Inscrire dans la Constitution qu'on ne prélève pas plus à la nature qu'elle ne peut reconstituer",
+      "titre": "Inscrire dans la Constitution la « règle verte » : prélever au plus ce que la nature peut reconstituer",
       "description": "« Inscrire dans la Constitution le principe de la “ règle verte ”, selon laquelle on ne prélève pas davantage à la nature que ce qu'elle est en état de reconstituer »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
       "dateDeclaration": "2025-02-18",
@@ -2281,7 +2281,7 @@
       "ref": "P-330",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "agriculture",
-      "titre": "Ne pas imposer aux agriculteurs français des règles qu'on n'exige pas des producteurs étrangers",
+      "titre": "Imposer aux agriculteurs français les mêmes règles qu'aux producteurs étrangers",
       "description": "« Je veux une transition juste : [...] qui protège nos agriculteurs, sans leur imposer des règles que nous refusons d'exiger de ceux qui nous nourrissent depuis l'étranger. »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
       "typeSource": "programme_2027",
@@ -2675,7 +2675,7 @@
       "sourceUrl": "https://www.youtube.com/watch?v=B8deNFh-EE0",
       "dateDeclaration": "2026-06-22",
       "typeSource": "prise_de_position",
-      "contexte": "Texte d'une vidéo publiée sur sa chaîne YouTube, avant le lancement de son mouvement. La protection contre la chaleur deviendrait un enjeu de service public ; plan étendu aux maisons de retraite, administrations et logements sociaux (climatisation raisonnée, isolation...)."
+      "contexte": "Texte d'une vidéo publiée sur sa chaîne YouTube. La protection contre la chaleur deviendrait un enjeu de service public ; plan étendu aux maisons de retraite, administrations et logements sociaux (climatisation raisonnée, isolation...)."
     },
     {
       "id": "prop-np-8",
@@ -2827,7 +2827,7 @@
       "ref": "P-377",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "agriculture",
-      "titre": "Réserver 80 % des achats des cantines et de la restauration collective publique aux produits français",
+      "titre": "Réserver aux producteurs français jusqu'à 80 % des commandes publiques, dont les cantines",
       "description": "« Réserver aux producteurs français 50% puis progressivement 80% des commandes publiques, notamment des cantines scolaires et de la restauration collective »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/agriculture/",
       "typeSource": "programme_2027",
@@ -2843,19 +2843,6 @@
       "sourceUrl": "https://www.debout-la-france.fr/projet/sciences-souverainete-industrielle/",
       "typeSource": "programme_2027",
       "contexte": "Programme, volet sciences et numérique, mesures 8 et 12. Prévoit aussi un cloud français souverain, de sortir du projet européen GAIA-X et de sécuriser les systèmes de l'État et de l'armée par le logiciel libre."
-    },
-    {
-      "id": "prop-nda-6",
-      "ref": "P-739",
-      "candidatId": "nicolas-dupont-aignan",
-      "thematiqueId": "economie",
-      "titre": "Rétablir un impôt sur les très grandes fortunes, hors résidence principale",
-      "description": "« Rétablir un impôt sur les très grandes fortunes en excluant la résidence principale »",
-      "sourceUrl": "https://www.debout-la-france.fr/projet/economie-travail/",
-      "typeSource": "programme_2027",
-      "contexte": "Programme, volet économie. Les investissements dans des entreprises produisant en France seraient déductibles.",
-      "enjeuId": "impot-fortune",
-      "sens": "pour"
     },
     {
       "id": "prop-nda-7",
@@ -3210,7 +3197,7 @@
       "ref": "P-372",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "environnement",
-      "titre": "Ne pas taxer les voitures électriques",
+      "titre": "Exonérer les voitures électriques de toute nouvelle taxe",
       "description": "« Avec moi, il n'y aura pas de taxation des voitures électriques [...] Il ne s'agit pas de piéger les Français comme on l'a fait avec le gasoil. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/08/presidentielle-2027-xavier-bertrand-un-non-candidat-en-campagne-lopinion/",
       "dateDeclaration": "2026-08-19",
@@ -4122,8 +4109,8 @@
       "thematiqueId": "agriculture",
       "nature": "declaration_gouvernement",
       "titre": "Rejet de l'accord commercial de libre-échange UE-Mercosur",
-      "question": "Faut-il que la France refuse, en l'état, l'accord de libre-échange entre l'Union européenne et le Mercosur ?",
-      "enjeu": "Le gouvernement demande aux députés de soutenir son opposition à l'accord commercial négocié entre l'Union européenne et les pays du Mercosur (Brésil, Argentine, Uruguay, Paraguay).",
+      "question": "Faut-il que la France bloque l'accord de libre-échange avec l'Amérique du Sud (Mercosur), tel qu'il a été négocié ?",
+      "enjeu": "L'accord baisserait les droits de douane entre l'Union européenne et quatre pays d'Amérique du Sud : plus de voitures et de machines européennes vendues là-bas, plus de viande, de sucre et de soja importés ici.",
       "resume": "Vote solennel de l'Assemblée nationale validant l'opposition de la France à l'accord de libre-échange entre l'Union européenne et les pays du Mercosur (485 voix pour le rejet, 69 contre).",
       "chambre": "assemblee_nationale",
       "dateVote": "2024-11-26",
@@ -4797,7 +4784,7 @@
           "typeVote": "groupe_parti",
           "groupe": "RENEW",
           "groupeNom": "Renew Europe",
-          "explication": "Les députés européens Renaissance ont massivement voté pour ce pacte négocié sous présidence française.",
+          "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "edouard-philippe": {
@@ -4805,13 +4792,13 @@
           "typeVote": "groupe_parti",
           "groupe": "RENEW",
           "groupeNom": "Renew Europe",
-          "explication": "Horizons soutient le renforcement des contrôles aux frontières extérieures européennes.",
+          "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "raphael-glucksmann": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "Député européen, a voté contre les textes principaux du pacte, dénonçant un recul sur l'accueil digne et le respect des droits humains.",
+          "explication": "Député européen, a voté contre les principaux textes du pacte.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "marine-le-pen": {
@@ -4819,7 +4806,7 @@
           "typeVote": "groupe_parti",
           "groupe": "ID",
           "groupeNom": "Identité et démocratie",
-          "explication": "Les eurodéputés du Rassemblement National ont voté contre, dénonçant une submersion migratoire organisée par Bruxelles.",
+          "explication": "Les eurodéputés du groupe Identité et démocratie ont voté contre, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "jean-luc-melenchon": {
@@ -4827,7 +4814,7 @@
           "typeVote": "groupe_parti",
           "groupe": "GUE/NGL",
           "groupeNom": "La Gauche au Parlement européen - GUE/NGL",
-          "explication": "Les eurodéputés LFI ont voté contre l'enfermement aux frontières et l'externalisation de l'asile.",
+          "explication": "Les eurodéputés du groupe de la Gauche (GUE/NGL) ont voté contre, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "marine-tondelier": {
@@ -4835,7 +4822,7 @@
           "typeVote": "groupe_parti",
           "groupe": "Verts/ALE",
           "groupeNom": "Les Verts/Alliance libre européenne",
-          "explication": "Les eurodéputés écologistes ont rejeté un texte sécuritaire attentatoire aux conventions internationales.",
+          "explication": "Les eurodéputés Verts/ALE ont voté contre, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "bruno-retailleau": {
@@ -4960,7 +4947,7 @@
         "bruno-retailleau": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "Président du groupe LR au Sénat, a voté contre pour protéger les éleveurs bovins français de distorsions de concurrence.",
+          "explication": "Président du groupe Les Républicains au Sénat, a voté contre.",
           "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
         },
         "fabien-roussel": {
@@ -4968,7 +4955,7 @@
           "typeVote": "groupe_parti",
           "groupe": "CRCE-K",
           "groupeNom": "Communiste Républicain Citoyen et Écologiste - Kanaky",
-          "explication": "Le groupe communiste a initié l'examen du texte pour faire échec à un accord destructeur pour l'agriculture.",
+          "explication": "Le groupe communiste, qui a fait inscrire le texte à l'ordre du jour, a voté contre.",
           "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
         },
         "marine-tondelier": {
@@ -4976,7 +4963,7 @@
           "typeVote": "groupe_parti",
           "groupe": "GEST",
           "groupeNom": "Écologiste - Solidarité et Territoires",
-          "explication": "Les sénateurs écologistes ont voté contre un accord climaticide stimulant le commerce transocéanique polluant.",
+          "explication": "Les sénateurs écologistes ont voté contre.",
           "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
         },
         "gabriel-attal": {
@@ -4984,7 +4971,7 @@
           "typeVote": "groupe_parti",
           "groupe": "RDPI",
           "groupeNom": "Rassemblement des démocrates, progressistes et indépendants",
-          "explication": "Le camp présidentiel a défendu un traité bénéfique pour les exportations industrielles, viticoles et agricoles françaises.",
+          "explication": "Les sénateurs du groupe présidentiel (RDPI) ont voté pour.",
           "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
         }
       },
@@ -5102,7 +5089,7 @@
         "raphael-glucksmann": {
           "position": "pour",
           "typeVote": "individuel",
-          "explication": "Député européen Place Publique, a voté pour une régulation éthique protégeant la démocratie et les créateurs.",
+          "explication": "Député européen, a voté pour.",
           "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
         },
         "gabriel-attal": {
@@ -5110,7 +5097,7 @@
           "typeVote": "groupe_parti",
           "groupe": "RENEW",
           "groupeNom": "Renew Europe",
-          "explication": "La délégation Renew Europe a soutenu ce compromis historique alliant innovation et protection citoyenne.",
+          "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
         },
         "marine-tondelier": {
@@ -5118,7 +5105,7 @@
           "typeVote": "groupe_parti",
           "groupe": "Verts/ALE",
           "groupeNom": "Les Verts/Alliance libre européenne",
-          "explication": "Les Verts européens ont soutenu l'encadrement strict de l'IA et l'interdiction de la biométrie intrusive.",
+          "explication": "Les eurodéputés Verts/ALE ont voté pour, en majorité.",
           "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
         },
         "marine-le-pen": {
@@ -6054,14 +6041,6 @@
       "statut": "adoptee",
       "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
       "votes": {
-        "edouard-philippe": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "HOR",
-          "groupeNom": "Horizons et apparentés",
-          "explication": "Le groupe Horizons a voté pour la réforme, Édouard Philippe plaidant même pour un report à 65 ans.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
-        },
         "bruno-retailleau": {
           "position": "pour",
           "typeVote": "individuel",
@@ -6073,25 +6052,25 @@
           "typeVote": "groupe_parti",
           "groupe": "LFI-NUPES",
           "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale",
-          "explication": "Le groupe La France Insoumise s'est opposé frontalement au texte avec dépôt de motions de censure et proposition de retraite à 60 ans.",
+          "explication": "74 députés LFI-NUPES ont voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "marine-le-pen": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "A voté contre en tant que députée du Pas-de-Calais et a déposé une motion de censure contre le gouvernement.",
+          "explication": "Députée du Pas-de-Calais, a voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "francois-ruffin": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "Député de la Somme, a voté contre le texte et activement contesté l'usage de l'article 49.3.",
+          "explication": "Député de la Somme, a voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "fabien-roussel": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "A voté contre le report de l'âge légal et défendu le maintien de la retraite à 60 ans à taux plein.",
+          "explication": "Député du Nord, a voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "marine-tondelier": {
@@ -6099,7 +6078,7 @@
           "typeVote": "groupe_parti",
           "groupe": "ECOLO",
           "groupeNom": "Écologiste - NUPES",
-          "explication": "Les Écologistes ont unanimement voté contre à l'Assemblée et au Sénat.",
+          "explication": "22 députés écologistes ont voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "raphael-glucksmann": {
@@ -6107,19 +6086,19 @@
           "typeVote": "groupe_parti",
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)",
-          "explication": "Place Publique et les députés socialistes alliés ont rejeté le recul de l'âge légal et soutenu les manifestations syndicales.",
+          "explication": "31 députés socialistes ont voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "nicolas-dupont-aignan": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "Député de l'Essonne, a voté contre la réforme et cosigné la motion de censure transpartisane.",
+          "explication": "Député de l'Essonne, a voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         },
         "delphine-batho": {
           "position": "contre",
           "typeVote": "individuel",
-          "explication": "A voté pour la motion de censure déposée après le recours au 49.3 sur la réforme.",
+          "explication": "Députée des Deux-Sèvres, a voté la motion de censure contre la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
         }
       },
@@ -6940,7 +6919,7 @@
       "id": "eoliennes",
       "thematiqueId": "environnement",
       "question": "Arrêter les nouveaux projets éoliens et démanteler les éoliennes déjà installées",
-      "enjeu": "Ne plus autoriser de nouvelles éoliennes et démonter, progressivement ou non, celles qui produisent déjà de l'électricité.",
+      "enjeu": "Interdire les nouvelles éoliennes et démonter, progressivement ou non, celles déjà en service.",
       "positions": [
         {
           "propositionId": "prop-fp-4",
@@ -7049,10 +7028,6 @@
       "positions": [
         {
           "propositionId": "prop-fr-5",
-          "sens": "pour"
-        },
-        {
-          "propositionId": "prop-nda-6",
           "sens": "pour"
         },
         {
@@ -7226,8 +7201,8 @@
     {
       "id": "normes-agricoles",
       "thematiqueId": "agriculture",
-      "question": "Ne plus imposer aux agriculteurs des règles plus strictes que celles de l'Europe",
-      "enjeu": "Supprimer ou ne plus ajouter les normes françaises qui vont au-delà de ce que l'Union européenne exige de tous ses agriculteurs.",
+      "question": "Limiter les règles imposées aux agriculteurs à celles de l'Europe",
+      "enjeu": "Supprimer les normes françaises qui vont au-delà de ce que l'Union européenne exige, et ne plus en ajouter.",
       "positions": [
         {
           "propositionId": "prop-ga-6",
@@ -7480,6 +7455,183 @@
       "sigle": "ZAN",
       "forme": "Zéro artificialisation nette",
       "definition": "Objectif de ne plus réduire les espaces naturels et agricoles d'ici 2050."
+    }
+  ],
+  "mots": [
+    {
+      "mot": "Mercosur",
+      "definition": "Marché commun du Sud : union de pays d'Amérique du Sud créée en 1991 (Brésil, Argentine, Uruguay, Paraguay, et Bolivie depuis 2024)."
+    },
+    {
+      "mot": "libre-échange",
+      "definition": "Commerce entre pays sans droits de douane ni quotas, ou presque. Un accord de libre-échange fixe ces règles entre les pays qui le signent."
+    },
+    {
+      "mot": "droits de douane",
+      "variantes": [
+        "droit de douane"
+      ],
+      "definition": "Taxe payée sur un produit qui entre dans un pays. La baisser rend les produits importés moins chers."
+    },
+    {
+      "mot": "ratification",
+      "variantes": [
+        "ratifier",
+        "ratifié",
+        "ratifiée"
+      ],
+      "definition": "Approbation officielle d'un traité déjà signé, par le Parlement de chaque pays ou de l'Union, pour qu'il s'applique en entier."
+    },
+    {
+      "mot": "âge légal",
+      "definition": "Âge à partir duquel on peut partir à la retraite. Partir à cet âge ne garantit pas une pension complète."
+    },
+    {
+      "mot": "cotisation",
+      "variantes": [
+        "cotisations",
+        "cotiser"
+      ],
+      "definition": "Part du salaire versée pour payer les retraites. Après assez d'années cotisées, on touche une pension sans réduction."
+    },
+    {
+      "mot": "annuité",
+      "variantes": [
+        "annuités"
+      ],
+      "definition": "Ici, une année de cotisation : « 45 annuités » veut dire 45 années de cotisation."
+    },
+    {
+      "mot": "capitalisation",
+      "definition": "Retraite par capitalisation : chacun épargne pour sa propre retraite, placée sur les marchés financiers. La pension dépend de ce qui a été épargné."
+    },
+    {
+      "mot": "retraite par répartition",
+      "variantes": [
+        "par répartition"
+      ],
+      "definition": "Les cotisations des actifs paient aussitôt les pensions des retraités. C'est le système principal en France."
+    },
+    {
+      "mot": "carrière longue",
+      "variantes": [
+        "carrières longues"
+      ],
+      "definition": "Dispositif qui permet à ceux qui ont commencé à travailler jeunes de partir avant l'âge légal."
+    },
+    {
+      "mot": "directive",
+      "variantes": [
+        "directives"
+      ],
+      "definition": "Texte de l'Union européenne qui fixe un objectif ; chaque pays choisit comment l'écrire dans sa propre loi."
+    },
+    {
+      "mot": "transposition",
+      "variantes": [
+        "transposer"
+      ],
+      "definition": "Fait d'écrire une directive européenne dans la loi d'un pays."
+    },
+    {
+      "mot": "surtransposition",
+      "variantes": [
+        "surtranspositions"
+      ],
+      "definition": "Transposition qui va plus loin que la directive : le pays ajoute des règles plus strictes que le minimum européen."
+    },
+    {
+      "mot": "clause miroir",
+      "variantes": [
+        "clauses miroirs"
+      ],
+      "definition": "Règle d'un accord commercial qui impose aux produits importés les mêmes normes de production qu'aux produits européens."
+    },
+    {
+      "mot": "excuse de minorité",
+      "definition": "Règle qui réduit la peine d'un mineur par rapport à celle d'un adulte pour les mêmes faits ; le juge peut l'écarter dans certains cas."
+    }
+  ],
+  "reperes": [
+    {
+      "id": "accord-ue-mercosur",
+      "thematiqueId": "agriculture",
+      "titre": "L'accord avec le Mercosur",
+      "aujourdhui": "Le Mercosur réunit le Brésil, l'Argentine, l'Uruguay et le Paraguay, rejoints par la Bolivie en 2024. Négocié depuis 1999 avec l'Union européenne, l'accord a été signé le 17 janvier 2026 et s'applique à titre provisoire depuis le 1er mai 2026.",
+      "enDebat": "Les uns y voient des ventes en plus pour l'industrie, le vin et le fromage européens. Les autres craignent pour les agriculteurs une concurrence de produits faits avec des règles sanitaires et environnementales moins strictes.",
+      "aJour": "2026-10-28",
+      "liens": [
+        {
+          "titre": "Le Mercosur",
+          "url": "https://fr.wikipedia.org/wiki/Mercosur",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'accord de libre-échange entre le Mercosur et l'Union européenne",
+          "url": "https://fr.wikipedia.org/wiki/Accord_de_libre-%C3%A9change_entre_le_Mercosur_et_l%27Union_europ%C3%A9enne",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "debat-accord-ue-mercosur-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "retraites",
+      "thematiqueId": "economie",
+      "titre": "Les retraites",
+      "aujourdhui": "En France, la retraite fonctionne surtout par répartition : les cotisations des actifs paient les pensions du moment. La réforme de 2023 relève l'âge légal de 62 à 64 ans ; le budget de la Sécurité sociale pour 2026 suspend ce recul jusqu'en janvier 2028.",
+      "enDebat": "Le débat porte sur l'âge de départ, la durée de cotisation et une part de capitalisation, où chacun épargne pour sa propre retraite. Les uns y voient un complément utile, les autres un risque lié aux marchés financiers.",
+      "aJour": "2026-10-28",
+      "liens": [
+        {
+          "titre": "Retraite par répartition",
+          "url": "https://fr.wikipedia.org/wiki/Retraite_par_r%C3%A9partition",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Retraite par capitalisation",
+          "url": "https://fr.wikipedia.org/wiki/Retraite_par_capitalisation",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ep-1"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "normes-europeennes-importations",
+      "thematiqueId": "agriculture",
+      "titre": "Les normes européennes et les importations",
+      "aujourdhui": "Une directive européenne fixe un objectif ; chaque pays l'écrit ensuite dans sa loi (la transposition), parfois avec des règles plus strictes. Les produits importés respectent les normes sanitaires européennes, mais pas toujours les règles de production imposées aux agriculteurs européens.",
+      "enDebat": "Les uns veulent s'en tenir au minimum européen et imposer les mêmes règles aux produits importés. Les autres rappellent que ces règles protègent la santé et l'environnement, et que leur respect hors d'Europe est difficile à contrôler.",
+      "aJour": "2026-10-28",
+      "liens": [
+        {
+          "titre": "Surtransposition",
+          "url": "https://fr.wikipedia.org/wiki/Surtransposition",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-dl-8"
+      ],
+      "lois": [],
+      "enjeux": []
     }
   ]
 }

@@ -22,17 +22,46 @@ const norm = (s) =>
     .replace(/[’‘`´]/g, "'")
     .replace(/[«»“”"]/g, '')
     .replace(/[  \s]+/g, ' ')
+    // Tirets et césures de PDF (« ré- duction ») : retirés des deux côtés, la comparaison reste juste.
+    .replace(/[-‐‑–—]\s?/g, '')
+    // Espace laissé par une balise avant la ponctuation (« ordre , notamment »).
+    .replace(/ ([,.;:!?)])/g, '$1')
+    .replace(/\( /g, '(')
     .toLowerCase()
     .trim();
 
+const ENTITIES = { nbsp: ' ', amp: '&', apos: "'", quot: '"', lt: '<', gt: '>', rsquo: "'", lsquo: "'", laquo: '«', raquo: '»', hellip: '…', ndash: '–', mdash: '—', oelig: 'œ', OElig: 'Œ', euro: '€' };
+const ACCENTS = { acute: '́', grave: '̀', circ: '̂', uml: '̈', cedil: '̧', tilde: '̃' };
+
+// &eacute; &Agrave; &ccedil; : lettre et accent ; les autres par la table, les numériques par leur code.
+function decodeEntities(text) {
+  return text.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (_, name) => {
+    if (name[0] === '#') {
+      const code = name[1].toLowerCase() === 'x' ? parseInt(name.slice(2), 16) : parseInt(name.slice(1), 10);
+      return Number.isFinite(code) ? String.fromCodePoint(code) : ' ';
+    }
+    if (ENTITIES[name]) return ENTITIES[name];
+    const accent = /^([a-z])(acute|grave|circ|uml|cedil|tilde)$/i.exec(name);
+    return accent ? (accent[1] + ACCENTS[accent[2]]).normalize('NFC') : ' ';
+  });
+}
+
+// Texte hors du HTML visible : description de la page, et description d'une vidéo YouTube (JSON).
+function metaText(html) {
+  const parts = [...html.matchAll(/<meta[^>]+(?:name|property)=["'](?:description|og:description)["'][^>]+content=["']([^"']*)["']/gi)].map((m) => m[1]);
+  for (const m of html.matchAll(/"shortDescription":"((?:[^"\\]|\\.)*)"/g)) {
+    try {
+      parts.push(JSON.parse(`"${m[1]}"`));
+    } catch {
+      // Description illisible : ignorée.
+    }
+  }
+  return parts.join(' ');
+}
+
 function htmlToText(html) {
-  return html
-    .replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;|&#160;/g, ' ')
-    .replace(/&#8217;|&rsquo;|&apos;|&#39;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/&[a-z]+;|&#\d+;/g, ' ');
+  const visible = html.replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ');
+  return decodeEntities(`${visible} ${metaText(html)}`);
 }
 
 async function fetchText(url) {

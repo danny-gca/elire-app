@@ -15,7 +15,7 @@ import { Hemicycle } from '@/components/hemicycle';
 import { LoiDetail } from '@/components/loi-detail';
 import { LoiVoteScale } from '@/components/loi-vote-scale';
 import { Marked } from '@/components/marked';
-import { MoreInfo } from '@/components/more-info';
+import { MoreInfo, type InfoTab } from '@/components/more-info';
 import { PropositionRow } from '@/components/proposition-row';
 import { PropositionSheet } from '@/components/proposition-sheet';
 import { ScrutinStamp } from '@/components/scrutin-stamp';
@@ -62,8 +62,8 @@ export default function VoterScreen() {
 
   const [lastId, setLastId] = useState<string | null>(null);
   const [editing, setEditing] = useState<string | null>(null);
-  // « En savoir plus » ouvert sur cette proposition : la citation se déplie aussi.
-  const [infoFor, setInfoFor] = useState<string | null>(null);
+  // Onglet d'explications ouvert sur cette proposition : la citation se déplie aussi.
+  const [info, setInfo] = useState<{ id: string; tab: InfoTab } | null>(null);
   // Scrutin tout juste voté : reste affiché le temps de lire l'hémicycle.
   const [revealId, setRevealId] = useState<string | null>(null);
   // Geste du vote sur une proposition : trait sur le bouton, trait sur le titre, puis la feuille remonte.
@@ -241,15 +241,28 @@ export default function VoterScreen() {
     />
   ) : null;
 
-  // « En savoir plus » ouvert : l'écran descend jusqu'au texte.
-  const showInfo = () => scrollRef.current?.scrollToEnd({ animated: true });
+  // Onglet ouvert : la rangée d'onglets remonte en haut de l'écran, son contenu juste dessous.
+  const showInfo = (target: View | null) => {
+    const scroll = scrollRef.current;
+    const inner = scroll?.getInnerViewNode();
+    if (!scroll || !target || inner == null) {
+      scroll?.scrollToEnd({ animated: !reducedMotion });
+      return;
+    }
+    target.measureLayout(
+      inner,
+      (_x, y) => scroll.scrollTo({ y: Math.max(0, y - Spacing.five), animated: !reducedMotion }),
+      () => scroll.scrollToEnd({ animated: !reducedMotion })
+    );
+  };
 
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
 
   // Le tuto des premières fois (src/constants/tutos.json) : chaque étape une seule fois, l'app en pause.
   const calm = !pause && !hold && !loiLeaving;
   useTuto('arrivee', calm && (!!current || !!currentEnjeu) && votedCount === 0);
-  useTuto('enjeu', calm && !!currentEnjeu && !enjeuRevealed);
+  // Pas sur la toute première question : les astuces d'arrivée passent d'abord, sans en enchaîner trois.
+  useTuto('enjeu', calm && !!currentEnjeu && !enjeuRevealed && votedCount > 0);
   useTuto('premier-vote', calm && !!lastId && !revealId);
   useTuto('scrutin', calm && !!currentLoi && !loiRevealed);
   useTuto('scrutin-vote', calm && loiRevealed && loiFlow.step === 'hemicycle');
@@ -329,20 +342,25 @@ export default function VoterScreen() {
               <Leaving key={current.id} leaving={hold?.phase === 'leaving'} style={styles.sheetWrap}>
                 <PropositionSheet
                   proposition={current}
-                  quoteOpen={infoFor === current.id}
+                  quoteOpen={info?.id === current.id}
                   sweep={hold && hold.phase !== 'button' && hold.value !== UNSURE ? marker : undefined}
-                  thematique={getThematique(current.thematiqueId)}>
-                  <View {...infoTarget}>
-                    <MoreInfo
-                      text={current.contexte}
-                      source={TYPE_SOURCE_LABELS[current.typeSource]}
-                      terms={[current.titre, current.description, current.contexte]}
-                      open={infoFor === current.id}
-                      onToggle={(open) => setInfoFor(open ? current.id : null)}
-                      onOpen={showInfo}
-                    />
-                  </View>
-                </PropositionSheet>
+                  thematique={getThematique(current.thematiqueId)}
+                  onWord={() => setInfo({ id: current.id, tab: 'mots' })}
+                  footer={
+                    <View {...infoTarget}>
+                      <MoreInfo
+                        itemId={current.id}
+                        kind="proposition"
+                        text={current.contexte}
+                        source={TYPE_SOURCE_LABELS[current.typeSource]}
+                        terms={[current.titre, current.description]}
+                        tab={info?.id === current.id ? info.tab : null}
+                        onTab={(tab) => setInfo(tab ? { id: current.id, tab } : null)}
+                        onOpen={showInfo}
+                      />
+                    </View>
+                  }
+                />
               </Leaving>
 
             </>
@@ -450,12 +468,13 @@ function LoiBallot({
   leaving: boolean;
   step: LoiStep;
   holdProps: object;
-  onInfoOpen: () => void;
+  onInfoOpen: (target: View | null) => void;
   /** L'hémicycle s'ouvre sous la question : l'écran défile jusqu'à lui une fois posé. */
   onRevealLayout: () => void;
 }) {
   const marker = useMarkOf(loi.id);
   const [detail, setDetail] = useState(false);
+  const [tab, setTab] = useState<InfoTab | null>(null);
   const hemicycleTarget = useTutoTarget('hemicycle');
   // Lecteur d'écran : le coup de tampon se dit, après l'annonce du vote précédent.
   useEffect(() => {
@@ -475,9 +494,21 @@ function LoiBallot({
             banner={`${CHAMBRE_LABELS[loi.chambre]} · ${loi.dateVote.slice(0, 4)}`}
             sweep={revealed && step !== 'button' ? marker : undefined}
             proposition={{ ref: loi.ref, thematiqueId: loi.thematiqueId, titre: loi.question }}
-            thematique={getThematique(loi.thematiqueId)}>
-            <MoreInfo text={loi.enjeu} terms={[loi.question, loi.enjeu]} onOpen={onInfoOpen} />
-          </PropositionSheet>
+            thematique={getThematique(loi.thematiqueId)}
+            onWord={() => setTab('mots')}
+            footer={
+              <MoreInfo
+                itemId={loi.id}
+                kind="scrutin"
+                nature={loi.nature}
+                text={loi.enjeu}
+                terms={[loi.question]}
+                tab={tab}
+                onTab={setTab}
+                onOpen={onInfoOpen}
+              />
+            }
+          />
         </View>
 
         {revealed && value && step === 'hemicycle' && (
@@ -528,12 +559,15 @@ function EnjeuBallot({
   leaving: boolean;
   step: LoiStep;
   holdProps: object;
-  onInfoOpen: () => void;
+  onInfoOpen: (target: View | null) => void;
   onRevealLayout: () => void;
 }) {
   const marker = useMarkOf(enjeu.id);
   const reducedMotion = useReducedMotion();
   const frameTarget = useTutoTarget('enjeu-cadre');
+  // Première question commune : l'astuce d'arrivée montre ses onglets.
+  const infoTarget = useTutoTarget('en-savoir-plus');
+  const [tab, setTab] = useState<InfoTab | null>(null);
   return (
     <Leaving leaving={leaving}>
       <View {...holdProps}>
@@ -543,9 +577,22 @@ function EnjeuBallot({
               kind="Question commune"
               sweep={revealed && step !== 'button' && value !== UNSURE ? marker : undefined}
               proposition={{ ref: enjeu.ref, thematiqueId: enjeu.thematiqueId, titre: enjeu.question }}
-              thematique={getThematique(enjeu.thematiqueId)}>
-              <MoreInfo text={enjeu.enjeu} terms={[enjeu.question, enjeu.enjeu]} onOpen={onInfoOpen} />
-            </PropositionSheet>
+              thematique={getThematique(enjeu.thematiqueId)}
+              onWord={() => setTab('mots')}
+              footer={
+                <View {...infoTarget}>
+                  <MoreInfo
+                    itemId={enjeu.id}
+                    kind="question"
+                    text={enjeu.enjeu}
+                    terms={[enjeu.question]}
+                    tab={tab}
+                    onTab={setTab}
+                    onOpen={onInfoOpen}
+                  />
+                </View>
+              }
+            />
           </EnjeuFrame>
         </View>
         {revealed && value !== undefined && step === 'hemicycle' && (

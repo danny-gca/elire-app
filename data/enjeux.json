@@ -13,7 +13,7 @@
     "id": "eoliennes",
     "thematiqueId": "environnement",
     "question": "Arrêter les nouveaux projets éoliens et démanteler les éoliennes déjà installées",
-    "enjeu": "Ne plus autoriser de nouvelles éoliennes et démonter, progressivement ou non, celles qui produisent déjà de l'électricité.",
+    "enjeu": "Interdire les nouvelles éoliennes et démonter, progressivement ou non, celles déjà en service.",
     "positions": [
       { "propositionId": "prop-fp-4", "sens": "pour" },
       { "propositionId": "prop-mlp-7", "sens": "pour" }
@@ -71,7 +71,6 @@
     "enjeu": "Taxer à nouveau chaque année le patrimoine des plus riches, comme l'impôt de solidarité sur la fortune remplacé en 2018.",
     "positions": [
       { "propositionId": "prop-fr-5", "sens": "pour" },
-      { "propositionId": "prop-nda-6", "sens": "pour" },
       { "propositionId": "prop-mt-7", "sens": "pour" }
     ]
   },
@@ -170,8 +169,8 @@
   {
     "id": "normes-agricoles",
     "thematiqueId": "agriculture",
-    "question": "Ne plus imposer aux agriculteurs des règles plus strictes que celles de l'Europe",
-    "enjeu": "Supprimer ou ne plus ajouter les normes françaises qui vont au-delà de ce que l'Union européenne exige de tous ses agriculteurs.",
+    "question": "Limiter les règles imposées aux agriculteurs à celles de l'Europe",
+    "enjeu": "Supprimer les normes françaises qui vont au-delà de ce que l'Union européenne exige, et ne plus en ajouter.",
     "positions": [
       { "propositionId": "prop-ga-6", "sens": "pour" },
       { "propositionId": "prop-xb-7", "sens": "pour" }

@@ -5,6 +5,7 @@ import Svg, { Circle, Path, Rect } from 'react-native-svg';
 
 import { STAMP_DONE_MS, STAMP_IMPACT_MS } from '@/components/scrutin-stamp';
 
+import { GlossaryText } from '@/components/glossary-text';
 import { SweepText } from '@/components/sweep-text';
 import { ThemeMark } from '@/components/theme-mark';
 import { Colors, MarginWidth, Numeric, Radius, Spacing, Type, type MarkerId } from '@/constants/theme';
@@ -25,6 +26,10 @@ interface PropositionSheetProps {
   stamp?: boolean;
   thematique?: Thematique;
   children?: React.ReactNode;
+  /** Bas de la feuille, sur toute sa largeur sous la marge : les onglets d'explications. */
+  footer?: React.ReactNode;
+  /** Toucher un mot souligné du titre ou de la citation ; sans rappel, rien n'est souligné. */
+  onWord?: (mot: string) => void;
 }
 
 const VERTICAL_LABEL_LENGTH = 220;
@@ -129,7 +134,7 @@ function Contour({ delay = 0 }: { delay?: number }) {
 }
 
 // La feuille du cahier : marge graphite (numéro, thème) et corps de la proposition.
-export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen = false, banner, sweep, stamp = false, thematique, children }: PropositionSheetProps) {
+export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen = false, banner, sweep, stamp = false, thematique, children, footer, onWord }: PropositionSheetProps) {
   const scrutin = kind === 'Scrutin';
   const reducedMotion = useReducedMotion();
   const stamped = stamp && !reducedMotion;
@@ -159,20 +164,32 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
         )}
       </View>
       <View style={styles.body}>
-        <SweepText marker={sweep} style={[Type.display, styles.title]} selectable>
-          {proposition.titre}
-        </SweepText>
+        {/* Pendant le geste du vote, le surligneur balaie le titre : plus de mots soulignés. */}
+        {sweep ? (
+          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable>
+            {proposition.titre}
+          </SweepText>
+        ) : (
+          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable>
+            {proposition.titre}
+          </GlossaryText>
+        )}
         {proposition.description ? (
-          <Text style={[Type.body, styles.description]} numberOfLines={quoteOpen ? undefined : 2} selectable>
+          <GlossaryText style={[Type.body, styles.description]} onWord={onWord} numberOfLines={quoteOpen ? undefined : 2} selectable>
             {proposition.description}
-          </Text>
+          </GlossaryText>
         ) : null}
         {children}
       </View>
     </View>
   );
   if (!scrutin) {
-    return <View style={styles.sheet}>{row}</View>;
+    return (
+      <View style={styles.sheet}>
+        {row}
+        {footer}
+      </View>
+    );
   }
   // Un vrai scrutin se distingue d'une proposition : en-tête encre à l'hémicycle et contour tracé ; la salle est dans le fond de Voter.
   return (
@@ -188,6 +205,7 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
         )}
       </Animated.View>
       {row}
+      {footer}
       <Contour delay={stamped ? STAMP_DONE_MS : 0} />
     </View>
   );

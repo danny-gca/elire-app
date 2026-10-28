@@ -1,0 +1,51 @@
+import { Fragment } from 'react';
+import { Platform, StyleSheet, Text, type AccessibilityRole, type StyleProp, type TextStyle } from 'react-native';
+
+import { Colors } from '@/constants/theme';
+import { wordSpans } from '@/lib/glossary';
+import { mots } from '@/services/dataset';
+
+interface GlossaryTextProps {
+  children: string;
+  style?: StyleProp<TextStyle>;
+  /** Toucher un mot souligné : ouvre sa définition. Sans rappel, rien n'est souligné. */
+  onWord?: (mot: string) => void;
+  numberOfLines?: number;
+  selectable?: boolean;
+  accessibilityRole?: AccessibilityRole;
+}
+
+// Web : un bouton serait un bloc qui casse la ligne (« ( » seul en fin de ligne) ; un lien reste dans le texte.
+const WORD_ROLE: AccessibilityRole = Platform.OS === 'web' ? 'link' : 'button';
+
+// Les mots du glossaire soulignés au crayon (pointillé graphite) : l'app annote, le lecteur surligne.
+export function GlossaryText({ children, style, onWord, numberOfLines, selectable, accessibilityRole }: GlossaryTextProps) {
+  const spans = onWord ? wordSpans(children, mots) : [];
+  const tail = spans.length > 0 ? spans[spans.length - 1].end : 0;
+  return (
+    <Text style={style} numberOfLines={numberOfLines} selectable={selectable} accessibilityRole={accessibilityRole}>
+      {spans.map((span, i) => (
+        <Fragment key={span.start}>
+          {children.slice(i === 0 ? 0 : spans[i - 1].end, span.start)}
+          <Text
+            style={styles.word}
+            onPress={() => onWord?.(span.mot)}
+            accessibilityRole={WORD_ROLE}
+            accessibilityHint="Ouvre sa définition dans « Les mots »">
+            {children.slice(span.start, span.end)}
+          </Text>
+        </Fragment>
+      ))}
+      {children.slice(tail)}
+    </Text>
+  );
+}
+
+const styles = StyleSheet.create({
+  // Android ne dessine pas le pointillé : trait plein, même sens.
+  word: {
+    textDecorationLine: 'underline',
+    textDecorationStyle: 'dotted',
+    textDecorationColor: Colors.graphite,
+  },
+});

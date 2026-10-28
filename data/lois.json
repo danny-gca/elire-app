@@ -843,8 +843,8 @@
     "thematiqueId": "agriculture",
     "nature": "declaration_gouvernement",
     "titre": "Rejet de l'accord commercial de libre-échange UE-Mercosur",
-    "question": "Faut-il que la France refuse, en l'état, l'accord de libre-échange entre l'Union européenne et le Mercosur ?",
-    "enjeu": "Le gouvernement demande aux députés de soutenir son opposition à l'accord commercial négocié entre l'Union européenne et les pays du Mercosur (Brésil, Argentine, Uruguay, Paraguay).",
+    "question": "Faut-il que la France bloque l'accord de libre-échange avec l'Amérique du Sud (Mercosur), tel qu'il a été négocié ?",
+    "enjeu": "L'accord baisserait les droits de douane entre l'Union européenne et quatre pays d'Amérique du Sud : plus de voitures et de machines européennes vendues là-bas, plus de viande, de sucre et de soja importés ici.",
     "resume": "Vote solennel de l'Assemblée nationale validant l'opposition de la France à l'accord de libre-échange entre l'Union européenne et les pays du Mercosur (485 voix pour le rejet, 69 contre).",
     "chambre": "assemblee_nationale",
     "dateVote": "2024-11-26",
@@ -1408,7 +1408,7 @@
       "gabriel-attal": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Les députés européens Renaissance ont massivement voté pour ce pacte négocié sous présidence française.",
+        "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "RENEW",
         "groupeNom": "Renew Europe"
@@ -1416,7 +1416,7 @@
       "edouard-philippe": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Horizons soutient le renforcement des contrôles aux frontières extérieures européennes.",
+        "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "RENEW",
         "groupeNom": "Renew Europe"
@@ -1424,13 +1424,13 @@
       "raphael-glucksmann": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "Député européen, a voté contre les textes principaux du pacte, dénonçant un recul sur l'accueil digne et le respect des droits humains.",
+        "explication": "Député européen, a voté contre les principaux textes du pacte.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
       },
       "marine-le-pen": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés du Rassemblement National ont voté contre, dénonçant une submersion migratoire organisée par Bruxelles.",
+        "explication": "Les eurodéputés du groupe Identité et démocratie ont voté contre, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "ID",
         "groupeNom": "Identité et démocratie"
@@ -1438,7 +1438,7 @@
       "jean-luc-melenchon": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés LFI ont voté contre l'enfermement aux frontières et l'externalisation de l'asile.",
+        "explication": "Les eurodéputés du groupe de la Gauche (GUE/NGL) ont voté contre, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "GUE/NGL",
         "groupeNom": "La Gauche au Parlement européen - GUE/NGL"
@@ -1446,7 +1446,7 @@
       "marine-tondelier": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés écologistes ont rejeté un texte sécuritaire attentatoire aux conventions internationales.",
+        "explication": "Les eurodéputés Verts/ALE ont voté contre, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "Verts/ALE",
         "groupeNom": "Les Verts/Alliance libre européenne"
@@ -1672,13 +1672,13 @@
       "bruno-retailleau": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "Président du groupe LR au Sénat, a voté contre pour protéger les éleveurs bovins français de distorsions de concurrence.",
+        "explication": "Président du groupe Les Républicains au Sénat, a voté contre.",
         "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
       },
       "fabien-roussel": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Le groupe communiste a initié l'examen du texte pour faire échec à un accord destructeur pour l'agriculture.",
+        "explication": "Le groupe communiste, qui a fait inscrire le texte à l'ordre du jour, a voté contre.",
         "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
         "groupe": "CRCE-K",
         "groupeNom": "Communiste Républicain Citoyen et Écologiste - Kanaky"
@@ -1686,7 +1686,7 @@
       "marine-tondelier": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les sénateurs écologistes ont voté contre un accord climaticide stimulant le commerce transocéanique polluant.",
+        "explication": "Les sénateurs écologistes ont voté contre.",
         "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
         "groupe": "GEST",
         "groupeNom": "Écologiste - Solidarité et Territoires"
@@ -1694,7 +1694,7 @@
       "gabriel-attal": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Le camp présidentiel a défendu un traité bénéfique pour les exportations industrielles, viticoles et agricoles françaises.",
+        "explication": "Les sénateurs du groupe présidentiel (RDPI) ont voté pour.",
         "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
         "groupe": "RDPI",
         "groupeNom": "Rassemblement des démocrates, progressistes et indépendants"
@@ -1812,13 +1812,13 @@
       "raphael-glucksmann": {
         "position": "pour",
         "typeVote": "individuel",
-        "explication": "Député européen Place Publique, a voté pour une régulation éthique protégeant la démocratie et les créateurs.",
+        "explication": "Député européen, a voté pour.",
         "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
       },
       "gabriel-attal": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "La délégation Renew Europe a soutenu ce compromis historique alliant innovation et protection citoyenne.",
+        "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
         "groupe": "RENEW",
         "groupeNom": "Renew Europe"
@@ -1826,7 +1826,7 @@
       "marine-tondelier": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Les Verts européens ont soutenu l'encadrement strict de l'IA et l'interdiction de la biométrie intrusive.",
+        "explication": "Les eurodéputés Verts/ALE ont voté pour, en majorité.",
         "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
         "groupe": "Verts/ALE",
         "groupeNom": "Les Verts/Alliance libre européenne"
@@ -2753,14 +2753,6 @@
     "statut": "adoptee",
     "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
     "votes": {
-      "edouard-philippe": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Le groupe Horizons a voté pour la réforme, Édouard Philippe plaidant même pour un report à 65 ans.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
-        "groupe": "HOR",
-        "groupeNom": "Horizons et apparentés"
-      },
       "bruno-retailleau": {
         "position": "pour",
         "typeVote": "individuel",
@@ -2770,7 +2762,7 @@
       "jean-luc-melenchon": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Le groupe La France Insoumise s'est opposé frontalement au texte avec dépôt de motions de censure et proposition de retraite à 60 ans.",
+        "explication": "74 députés LFI-NUPES ont voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
         "groupe": "LFI-NUPES",
         "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
@@ -2778,25 +2770,25 @@
       "marine-le-pen": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "A voté contre en tant que députée du Pas-de-Calais et a déposé une motion de censure contre le gouvernement.",
+        "explication": "Députée du Pas-de-Calais, a voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       },
       "francois-ruffin": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "Député de la Somme, a voté contre le texte et activement contesté l'usage de l'article 49.3.",
+        "explication": "Député de la Somme, a voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       },
       "fabien-roussel": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "A voté contre le report de l'âge légal et défendu le maintien de la retraite à 60 ans à taux plein.",
+        "explication": "Député du Nord, a voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       },
       "marine-tondelier": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les Écologistes ont unanimement voté contre à l'Assemblée et au Sénat.",
+        "explication": "22 députés écologistes ont voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
         "groupe": "ECOLO",
         "groupeNom": "Écologiste - NUPES"
@@ -2804,7 +2796,7 @@
       "raphael-glucksmann": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Place Publique et les députés socialistes alliés ont rejeté le recul de l'âge légal et soutenu les manifestations syndicales.",
+        "explication": "31 députés socialistes ont voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l'intergroupe NUPES)"
@@ -2812,13 +2804,13 @@
       "nicolas-dupont-aignan": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "Député de l'Essonne, a voté contre la réforme et cosigné la motion de censure transpartisane.",
+        "explication": "Député de l'Essonne, a voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       },
       "delphine-batho": {
         "position": "contre",
         "typeVote": "individuel",
-        "explication": "A voté pour la motion de censure déposée après le recours au 49.3 sur la réforme.",
+        "explication": "Députée des Deux-Sèvres, a voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       }
     }

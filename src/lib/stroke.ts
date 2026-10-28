@@ -182,6 +182,9 @@ export function loopPath(
   return { d, length };
 }
 
+// Au-delà, le bombé ne grandit plus (±6px).
+const MAX_BOW_LENGTH = 270;
+
 /** Cadre à main levée autour d'un rectangle (0,0)-(w,h) : 4 côtés, du haut dans le sens des aiguilles, qui dépassent aux coins. */
 export function frameSides(width: number, height: number, random: () => number = Math.random): [number, number][][] {
   const corners: [number, number][] = [
@@ -195,8 +198,8 @@ export function frameSides(width: number, height: number, random: () => number =
     const len = Math.hypot(x1 - x0, y1 - y0);
     const [ux, uy] = [(x1 - x0) / len, (y1 - y0) / len];
     const [o0, o1] = [between(random, 6, 12), between(random, 6, 12)];
-    // Bombé proportionnel au côté : ±3px sur un bouton, un peu plus sur une feuille.
-    const bow = between(random, -0.022, 0.022) * len;
+    // Bombé proportionnel au côté (±3px sur un bouton), plafonné : une feuille très haute reste dans la marge de dessin.
+    const bow = between(random, -0.022, 0.022) * Math.min(len, MAX_BOW_LENGTH);
     return Array.from({ length: 9 }, (_, k) => {
       const t = k / 8;
       const d = -o0 + (len + o0 + o1) * t;

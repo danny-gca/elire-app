@@ -112,6 +112,19 @@ describe('frameSides', () => {
     expect(bottom[0][0]).toBeGreaterThan(200);
     expect(left[left.length - 1][1]).toBeLessThan(0);
   });
+
+  it('reste dans la marge de dessin (16 px) même sur une feuille très haute', () => {
+    for (const random of [() => 0, () => 0.999, Math.random]) {
+      for (const [width, height] of [[343, 1400], [720, 2400], [80, 40]]) {
+        frameSides(width, height, random).flat().forEach(([x, y]) => {
+          expect(x).toBeGreaterThanOrEqual(-16);
+          expect(x).toBeLessThanOrEqual(width + 16);
+          expect(y).toBeGreaterThanOrEqual(-16);
+          expect(y).toBeLessThanOrEqual(height + 16);
+        });
+      }
+    }
+  });
 });
 
 describe('polyline', () => {

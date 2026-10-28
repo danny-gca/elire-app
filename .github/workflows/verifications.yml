@@ -27,3 +27,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+
+  # Un lien mort (404, domaine disparu) fait refuser l'app par Google Play et l'App Store. Les sites anti-robot restent « à lire », sans échec.
+  liens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check:links

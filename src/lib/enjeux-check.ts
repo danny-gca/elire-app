@@ -44,6 +44,10 @@ export function checkEnjeux(enjeux: readonly EnjeuInput[], propositions: readonl
     if (candidats.size < 2) {
       errors.push(`${where} : au moins 2 candidats attendus`);
     }
+    // Que des « contre » : la question est posée à l'envers, personne ne la porte.
+    if (!enjeu.positions.some((p) => p.sens === 'pour')) {
+      errors.push(`${where} : au moins une position « pour » attendue`);
+    }
   }
   return errors;
 }

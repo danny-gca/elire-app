@@ -62,6 +62,7 @@
     "build:data:strict": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON ./scripts/build-data.ts --strict",
     "test": "jest",
     "typecheck": "tsc --noEmit",
+    "check:links": "node .claude/skills/verifier-donnees/scripts/check-links.mjs",
     "check": "npm run build:data && git diff --exit-code src/data/dataset.json && npm run typecheck && npm run lint && npm test"
   },
   "private": true,

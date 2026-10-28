@@ -48,6 +48,16 @@ export const NATURE_LABELS: Record<NatureLoi, string> = {
   texte_europeen: 'Texte européen',
 };
 
+// Ce que le vote fait, en une phrase : lu à l'aveugle, sans nom ni résultat.
+export const NATURE_EXPLAINED: Record<NatureLoi, string> = {
+  projet_loi: 'Un texte proposé par le gouvernement. Adopté, il devient une loi.',
+  proposition_loi: 'Un texte proposé par des députés ou des sénateurs. Adopté, il devient une loi.',
+  motion_censure: 'Adoptée, elle oblige le gouvernement à démissionner.',
+  declaration_gouvernement: 'Le gouvernement présente sa position, puis demande aux députés de la soutenir. Ce vote ne crée pas de loi.',
+  resolution: 'Un avis voté par les députés ou les sénateurs. Il ne crée pas de loi.',
+  texte_europeen: "Un texte voté au Parlement européen. Adopté, il fixe des règles pour toute l'Union européenne.",
+};
+
 export const STATUT_LABELS: Record<StatutLoi, string> = {
   adoptee: 'Adoptée',
   rejetee: 'Rejetée',

@@ -21,3 +21,54 @@ export function unexplainedInTitle(title: string): string[] {
   const outsideParentheses = title.replace(/\([^)]*\)/g, ' ');
   return acronymsIn(outsideParentheses).filter((a) => !EVERYDAY_ACRONYMS.includes(a));
 }
+
+/** Un mot du glossaire et ses formes fléchies (data/mots.json). */
+export interface WordEntry {
+  mot: string;
+  variantes?: string[];
+}
+
+/** Un mot repéré dans un texte : position et entrée du glossaire. */
+export interface WordSpan {
+  start: number;
+  end: number;
+  mot: string;
+}
+
+const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// Toutes les formes, la plus longue d'abord (« clause miroir » avant « clause »), en mot entier et sans casse.
+function formsOf(words: readonly WordEntry[]) {
+  return words
+    .flatMap((w) => [w.mot, ...(w.variantes ?? [])].map((form) => ({ form, mot: w.mot })))
+    .sort((a, b) => b.form.length - a.form.length)
+    .map(({ form, mot }) => ({ mot, re: new RegExp(`(?<![\\p{L}\\p{N}-])${escape(form)}(?![\\p{L}\\p{N}-])`, 'giu') }));
+}
+
+/** Mots du glossaire dans un texte, première occurrence de chacun, sans chevauchement, dans l'ordre du texte. */
+export function wordSpans(text: string, words: readonly WordEntry[]): WordSpan[] {
+  const spans: WordSpan[] = [];
+  for (const { mot, re } of formsOf(words)) {
+    if (spans.some((s) => s.mot === mot)) {
+      continue;
+    }
+    for (const m of text.matchAll(re)) {
+      const start = m.index ?? 0;
+      const end = start + m[0].length;
+      if (!spans.some((s) => start < s.end && end > s.start)) {
+        spans.push({ start, end, mot });
+        break;
+      }
+    }
+  }
+  return spans.sort((a, b) => a.start - b.start);
+}
+
+/** Mots du glossaire présents dans des textes, dans l'ordre de première apparition, sans doublon. */
+export function wordsIn(texts: readonly (string | undefined)[], words: readonly WordEntry[]): string[] {
+  const found = new Set<string>();
+  for (const text of texts) {
+    wordSpans(text ?? '', words).forEach((s) => found.add(s.mot));
+  }
+  return [...found];
+}
