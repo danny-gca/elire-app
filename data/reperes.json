@@ -1,0 +1,47 @@
+[
+  {
+    "id": "accord-ue-mercosur",
+    "thematiqueId": "agriculture",
+    "titre": "L'accord avec le Mercosur",
+    "aujourdhui": "Le Mercosur réunit le Brésil, l'Argentine, l'Uruguay et le Paraguay, rejoints par la Bolivie en 2024. Négocié depuis 1999 avec l'Union européenne, l'accord a été signé le 17 janvier 2026 et s'applique à titre provisoire depuis le 1er mai 2026.",
+    "enDebat": "Les uns y voient des ventes en plus pour l'industrie, le vin et le fromage européens. Les autres craignent pour les agriculteurs une concurrence de produits faits avec des règles sanitaires et environnementales moins strictes.",
+    "aJour": "2026-10-28",
+    "liens": [
+      { "titre": "Le Mercosur", "url": "https://fr.wikipedia.org/wiki/Mercosur", "editeur": "Wikipédia", "media": "article" },
+      {
+        "titre": "L'accord de libre-échange entre le Mercosur et l'Union européenne",
+        "url": "https://fr.wikipedia.org/wiki/Accord_de_libre-%C3%A9change_entre_le_Mercosur_et_l%27Union_europ%C3%A9enne",
+        "editeur": "Wikipédia",
+        "media": "article",
+        "aveugle": false
+      }
+    ],
+    "lois": ["debat-accord-ue-mercosur-2024"]
+  },
+  {
+    "id": "retraites",
+    "thematiqueId": "economie",
+    "titre": "Les retraites",
+    "aujourdhui": "En France, la retraite fonctionne surtout par répartition : les cotisations des actifs paient les pensions du moment. La réforme de 2023 relève l'âge légal de 62 à 64 ans ; le budget de la Sécurité sociale pour 2026 suspend ce recul jusqu'en janvier 2028.",
+    "enDebat": "Le débat porte sur l'âge de départ, la durée de cotisation et une part de capitalisation, où chacun épargne pour sa propre retraite. Les uns y voient un complément utile, les autres un risque lié aux marchés financiers.",
+    "aJour": "2026-10-28",
+    "liens": [
+      { "titre": "Retraite par répartition", "url": "https://fr.wikipedia.org/wiki/Retraite_par_r%C3%A9partition", "editeur": "Wikipédia", "media": "article" },
+      { "titre": "Retraite par capitalisation", "url": "https://fr.wikipedia.org/wiki/Retraite_par_capitalisation", "editeur": "Wikipédia", "media": "article" }
+    ],
+    "propositions": ["prop-ep-1"],
+    "enjeux": ["reculer-retraite"]
+  },
+  {
+    "id": "normes-europeennes-importations",
+    "thematiqueId": "agriculture",
+    "titre": "Les normes européennes et les importations",
+    "aujourdhui": "Une directive européenne fixe un objectif ; chaque pays l'écrit ensuite dans sa loi (la transposition), parfois avec des règles plus strictes. Les produits importés respectent les normes sanitaires européennes, mais pas toujours les règles de production imposées aux agriculteurs européens.",
+    "enDebat": "Les uns veulent s'en tenir au minimum européen et imposer les mêmes règles aux produits importés. Les autres rappellent que ces règles protègent la santé et l'environnement, et que leur respect hors d'Europe est difficile à contrôler.",
+    "aJour": "2026-10-28",
+    "liens": [
+      { "titre": "Surtransposition", "url": "https://fr.wikipedia.org/wiki/Surtransposition", "editeur": "Wikipédia", "media": "article" }
+    ],
+    "propositions": ["prop-dl-8"]
+  }
+]

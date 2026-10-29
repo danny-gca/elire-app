@@ -20,17 +20,12 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 
 ## Données à valider
 
-- Les 17 questions communes (`data/enjeux.json`), surtout : prix-minimum-agricole (jl-1), normes-agricoles (xb-7), budget-defense (db-3, et sl-3 en contre), temps-de-travail (br-3 en contre), peines-planchers (br-1).
-- Types de source discutables : jlm et nda en programme 2027 ; br-7, br-8 et np-6 en programme 2027 ; ez-2 en programme précédent ; fa-1, fa-2 et ga-* en prise de position.
+- Les 17 questions communes (`data/enjeux.json`), surtout : prix-minimum-agricole (jl-1), budget-defense (db-3, et sl-3 en contre), temps-de-travail (br-3 en contre), peines-planchers (br-1).
+- Types de source discutables : jlm et nda en programme 2027 ; br-7, br-8 et np-6 en programme 2027 ; ez-2 en programme précédent ; fa-1, fa-2 et ga-\* en prise de position.
 - prop-ez-8 : citation lue sur une page en image (couche texte du PDF illisible).
 - prop-na-3 : page imprimée 11 ou 12 ?
-- Titres plus larges que leur citation : prop-dl-5, prop-fr-6 ; « soignants exclus » de prop-nda-3 à préciser.
 - Thème de l'immigration à harmoniser : prop-ep-8 et prop-sl-4 en société, prop-nda-1 en sécurité.
 - Sources plus récentes à étudier : page « projet » de Natacha Polony (natachapolony2027.fr/projet, douze chantiers), brochure de Nathalie Arthaud du 2026-08-25.
-
-## Liens
-
-- 9 liens refusent les robots (403, 406 ou 202), sans être morts : ministère de l'Intérieur (résultats des élections), info.gouv.fr, Légifrance, Parlement européen, Euronews. Le vérificateur de Google Play étant un robot, chercher pour chacun une page officielle équivalente sans blocage.
 
 ## Choix à trancher
 
@@ -42,15 +37,6 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 - Portraits libres manquants (l'app affiche les initiales en attendant) : Antoine Mikolajczak, Mira Markovic (nom d'usage « Douchka Markovic »), Selma Labib. Rien de libre sur Commons, Wikidata ni Flickr (recherche du 2026-10-15).
 - Écrire à chaque équipe de campagne (contact sur son site) pour un portrait sous CC BY 4.0, idéalement déposé sur Wikimedia Commons, puis l'ajouter dans `assets/images/candidates/` et `src/constants/credits.ts`. Message type :
   > Bonjour, je développe élire, une application gratuite et neutre de comparaison des candidats à la présidentielle 2027. Chaque candidat y figure avec un portrait sous licence libre, crédité. Pourriez-vous nous fournir un portrait de [Prénom Nom] sous licence CC BY 4.0, avec le nom du photographe à créditer (le plus simple : le publier sur Wikimedia Commons) ? Sans photo libre, la candidate apparaît avec ses initiales, comme tout candidat dans ce cas. Merci.
-
-## Dev
-
-- Petits points relevés à la revue des questions communes, à faire si besoin :
-  - une question commune à une seule position donne une erreur qui nomme un numéro, pas l'id ;
-  - tests manquants (fin des votes sans question commune, proposition liée jamais seule dans l'ordre, migration du store) ;
-  - aucun contrôle « au moins un pour » ;
-  - le cadre dessiné peut dépasser sur une feuille très haute ;
-  - deux astuces peuvent s'enchaîner si la première question est commune.
 
 ## Aspects légaux
 

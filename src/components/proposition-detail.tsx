@@ -27,7 +27,9 @@ function domainOf(url: string) {
 // Contenu de la feuille « source et contexte ».
 export function PropositionDetail({ proposition, anonymous = false, onOpenCandidate }: PropositionDetailProps) {
   const auteur = anonymous ? undefined : getCandidat(proposition.candidatId);
-  const report = reportUrl(proposition.ref, proposition.titre);
+  const enjeu = proposition.enjeuId ? getEnjeu(proposition.enjeuId) : undefined;
+  // Un seul signalement : il cite aussi la question commune, qui peut être la source de l'erreur.
+  const report = reportUrl(enjeu ? `${proposition.ref}, ${enjeu.ref}` : proposition.ref, proposition.titre);
 
   return (
     <View style={styles.root}>
@@ -63,7 +65,7 @@ export function PropositionDetail({ proposition, anonymous = false, onOpenCandid
       )}
 
       {!anonymous && <MyVoteRow id={proposition.id} kind="proposition" pendingNote="Pas encore voté : elle arrivera dans Voter" />}
-      {!anonymous && proposition.enjeuId && <SharedQuestion enjeu={getEnjeu(proposition.enjeuId)} />}
+      {!anonymous && <SharedQuestion enjeu={enjeu} />}
 
       {anonymous && (
         <Text style={[Type.label, styles.muted]}>L’auteur reste masqué tant que vous votez.</Text>
@@ -84,7 +86,6 @@ function SharedQuestion({ enjeu }: { enjeu?: Enjeu }) {
   if (!enjeu) {
     return null;
   }
-  const report = reportUrl(enjeu.ref, enjeu.question);
   return (
     <View style={styles.block}>
       <Text style={[Type.labelStrong, styles.muted]}>Question commune {enjeu.ref}</Text>
@@ -112,7 +113,6 @@ function SharedQuestion({ enjeu }: { enjeu?: Enjeu }) {
         );
       })}
       <Text style={[Type.label, styles.muted]}>Votre note sur la question compte pour chacun : à l’inverse pour qui est contre.</Text>
-      {report && <Button label="Signaler une erreur sur la question" variant="quiet" onPress={() => Linking.openURL(report)} />}
     </View>
   );
 }

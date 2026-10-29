@@ -4,8 +4,9 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Brand } from '@/components/brand';
 import { BottomBarContext } from '@/components/screen';
+import { TabMark } from '@/components/tab-mark';
 import { TAB_ICONS } from '@/constants/tab-icons';
-import { Colors, Markers, MaxContentWidth, Spacing, Type } from '@/constants/theme';
+import { Colors, MaxContentWidth, Spacing, Type } from '@/constants/theme';
 import { buzz } from '@/lib/sound';
 import { useVotesStore } from '@/store/votes-store';
 
@@ -82,10 +83,7 @@ function TabButton({ children, icon, wide, isFocused, onPress, ...props }: TabBu
         accessibilityIgnoresInvertColors
       />
       <View>
-        {/* L'onglet actif : son libellé est surligné de biais avec le feutre du lecteur. */}
-        {isFocused && (
-          <View style={[styles.mark, { backgroundColor: Markers[marker].soft }]} />
-        )}
+        {isFocused && <TabMark marker={marker} />}
         <Text style={[isFocused ? Type.labelStrong : Type.label, { color }]}>
           {children}
         </Text>
@@ -167,14 +165,5 @@ const styles = StyleSheet.create({
     gap: 6,
     paddingHorizontal: 14,
     minHeight: 56,
-  },
-  mark: {
-    position: 'absolute',
-    top: 6,
-    bottom: -1,
-    left: -5,
-    right: -5,
-    borderRadius: 3,
-    transform: [{ rotate: '-3deg' }],
   },
 });

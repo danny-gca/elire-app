@@ -7,14 +7,17 @@ import { z } from 'zod';
 
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
-import { acronymsIn, unexplainedInTitle } from '../src/lib/glossary.ts';
+import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
+import { MIN_WORDS, negativeWording, wordCount } from '../src/lib/wording.ts';
 import {
   CandidatSourceSchema,
   EnjeuSourceSchema,
   GlossaireEntrySchema,
   LoiSourceSchema,
+  MotSchema,
   PartiSchema,
   PropositionCsvSchema,
+  RepereSchema,
   ThematiqueSchema,
   type Candidat,
   type Enjeu,
@@ -43,7 +46,10 @@ function parseArray<T extends z.ZodType>(schema: T, data: unknown, label: string
   const result = z.array(schema).safeParse(data);
   if (!result.success) {
     for (const issue of result.error.issues) {
-      errors.push(`${label} [${issue.path.join('.')}] ${issue.message}`);
+      // L'id de l'élément plutôt que son rang seul : « enjeux.json eoliennes [3.positions] ».
+      const index = issue.path[0];
+      const item = Array.isArray(data) && typeof index === 'number' ? (data[index] as { id?: unknown } | undefined)?.id : undefined;
+      errors.push(`${label}${typeof item === 'string' ? ` ${item}` : ''} [${issue.path.join('.')}] ${issue.message}`);
     }
     return [];
   }
@@ -88,6 +94,21 @@ function checkAnonymous(text: string, terms: RegExp[], where: string) {
   const hit = terms.find((t) => t.test(text));
   if (hit) {
     errors.push(`${where} : nom de candidat ou de parti visible en vote à l'aveugle ("${text.match(hit)?.[0]}")`);
+  }
+}
+
+// Noté « Contre », un texte négatif donne une double négation (CONTRIBUTING, règle 12).
+function checkWording(text: string, where: string, vote = false) {
+  const reason = negativeWording(text, vote);
+  if (reason) {
+    warnings.push(`${where} : tournure négative (${reason}), à reformuler : « ${text} »`);
+  }
+}
+
+function checkLength(text: string, min: number, where: string) {
+  const count = wordCount(text);
+  if (count < min) {
+    warnings.push(`${where} : ${count} mots, ${min} au moins pour se lire d'un coup d'œil : « ${text} »`);
   }
 }
 
@@ -157,8 +178,8 @@ function previousGeneratedAt(content: object): string | undefined {
     return undefined;
   }
   const { metadata, ...previous } = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
-  const { partis, thematiques, candidats, propositions, lois, enjeux, glossaire } = previous;
-  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, enjeux, glossaire }) === JSON.stringify(content);
+  const { partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes } = previous;
+  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes }) === JSON.stringify(content);
   return same ? metadata?.generatedAt : undefined;
 }
 
@@ -170,6 +191,8 @@ function main() {
   const sourceEnjeux = parseArray(EnjeuSourceSchema, readJson('enjeux.json'), 'enjeux.json');
   const glossaire = parseArray(GlossaireEntrySchema, readJson('glossaire.json'), 'glossaire.json');
   const glossarySigles = new Set(glossaire.map((g) => g.sigle));
+  const mots = parseArray(MotSchema, readJson('mots.json'), 'mots.json');
+  const reperes = parseArray(RepereSchema, readJson('reperes.json'), 'reperes.json');
   const usedSigles = new Set<string>();
   const refs = loadRefs();
 
@@ -178,6 +201,7 @@ function main() {
   checkUniqueIds(rawCandidats, 'candidats.json');
   checkUniqueIds(sourceLois, 'lois.json');
   checkUniqueIds(sourceEnjeux, 'enjeux.json');
+  checkUniqueIds(reperes, 'reperes.json');
 
   const partisById = new Map(partis.map((p) => [p.id, p]));
   const thematiqueIds = new Set(thematiques.map((t) => t.id));
@@ -222,6 +246,8 @@ function main() {
       checkText(`${row.titre} ${row.description} ${row.contexte}`, where);
       checkAnonymous(`${row.titre} ${row.description} ${row.contexte}`, anonymity, where);
       checkAcronyms(row.titre, [row.description, row.contexte], glossarySigles, usedSigles, where);
+      checkWording(row.titre, where);
+      checkLength(row.titre, MIN_WORDS.titre, where);
       checkPreciseUrl(row.source_url, where);
       propositions.push({
         id: row.id,
@@ -251,6 +277,8 @@ function main() {
     checkText(`${loi.titre} ${loi.question} ${loi.enjeu} ${loi.resume}`, `lois.json ${loi.id}`);
     checkAnonymous(`${loi.question} ${loi.enjeu}`, anonymity, `lois.json ${loi.id}`);
     checkAcronyms(loi.question, [loi.enjeu], glossarySigles, usedSigles, `lois.json ${loi.id}`);
+    checkWording(loi.question, `lois.json ${loi.id}`, true);
+    checkLength(loi.question, MIN_WORDS.scrutin, `lois.json ${loi.id}`);
     for (const [candidatId, vote] of Object.entries(loi.votes)) {
       if (!candidatIds.has(candidatId)) {
         errors.push(`lois.json ${loi.id} : candidat inconnu "${candidatId}"`);
@@ -270,6 +298,60 @@ function main() {
     checkText(`${e.question} ${e.enjeu}`, where);
     checkAnonymous(`${e.question} ${e.enjeu}`, anonymity, where);
     checkAcronyms(e.question, [e.enjeu], glossarySigles, usedSigles, where);
+    checkWording(e.question, where);
+    checkLength(e.question, MIN_WORDS.question, where);
+  }
+
+  // Repères : un sujet par entrée, chaque élément dans un repère au plus, lu à l'aveugle comme le reste.
+  const known = { propositions: new Set(propositions.map((p) => p.id)), lois: new Set(lois.map((l) => l.id)), enjeux: new Set(enjeux.map((e) => e.id)) };
+  const placed = new Map<string, string>();
+  for (const r of reperes) {
+    const where = `reperes.json ${r.id}`;
+    if (!thematiqueIds.has(r.thematiqueId)) {
+      errors.push(`${where} : thématique inconnue "${r.thematiqueId}"`);
+    }
+    for (const kind of ['propositions', 'lois', 'enjeux'] as const) {
+      for (const itemId of r[kind]) {
+        if (!known[kind].has(itemId)) {
+          errors.push(`${where} : ${kind} inconnu "${itemId}"`);
+        }
+        if (placed.has(itemId)) {
+          errors.push(`${where} : "${itemId}" est déjà dans le repère ${placed.get(itemId)}`);
+        }
+        placed.set(itemId, r.id);
+      }
+    }
+    if (r.propositions.length + r.lois.length + r.enjeux.length === 0) {
+      warnings.push(`${where} : repère rattaché à aucun élément`);
+    }
+    const texts = [r.titre, r.aujourdhui, r.enDebat, ...r.liens.map((l) => l.titre)];
+    checkText(texts.join(' '), where);
+    checkAnonymous(texts.join(' '), anonymity, where);
+    checkAcronyms(r.titre, [r.aujourdhui, r.enDebat], glossarySigles, usedSigles, where);
+    r.liens.forEach((l) => checkPreciseUrl(l.url, `${where} ${l.titre}`));
+  }
+
+  // Mots : définis une fois, employés quelque part dans les textes lus à l'aveugle.
+  const blindTexts = [
+    ...propositions.flatMap((p) => [p.titre, p.description, p.contexte]),
+    ...lois.flatMap((l) => [l.question, l.enjeu]),
+    ...enjeux.flatMap((e) => [e.question, e.enjeu]),
+    ...reperes.flatMap((r) => [r.titre, r.aujourdhui, r.enDebat]),
+  ];
+  const usedWords = new Set(wordsIn(blindTexts, mots));
+  const seenWords = new Set<string>();
+  for (const m of mots) {
+    const where = `mots.json ${m.mot}`;
+    checkText(m.definition, where);
+    for (const form of [m.mot, ...(m.variantes ?? [])].map((f) => f.toLowerCase())) {
+      if (seenWords.has(form)) {
+        errors.push(`${where} : forme en double "${form}"`);
+      }
+      seenWords.add(form);
+    }
+    if (!usedWords.has(m.mot)) {
+      warnings.push(`${where} : mot employé nulle part`);
+    }
   }
 
   glossaire.forEach((g) => {
@@ -294,7 +376,7 @@ function main() {
     process.exit(1);
   }
 
-  const content = { partis, thematiques, candidats, propositions, lois, enjeux, glossaire };
+  const content = { partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes };
   const dataset = {
     metadata: {
       generatedAt: previousGeneratedAt(content) ?? new Date().toISOString(),
@@ -312,6 +394,8 @@ function main() {
     lois,
     enjeux,
     glossaire,
+    mots,
+    reperes,
   };
 
   fs.writeFileSync(REFS_FILE, JSON.stringify(refs, null, 2) + '\n', 'utf-8');
@@ -320,7 +404,7 @@ function main() {
 
   console.log(
     `✅ ${partis.length} partis, ${candidats.length} candidats, ${thematiques.length} thématiques, ` +
-      `${propositions.length} propositions, ${lois.length} lois, ${enjeux.length} enjeux, ${glossaire.length} sigles -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
+      `${propositions.length} propositions, ${lois.length} lois, ${enjeux.length} enjeux, ${glossaire.length} sigles, ${mots.length} mots, ${reperes.length} repères -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
   );
 }
 

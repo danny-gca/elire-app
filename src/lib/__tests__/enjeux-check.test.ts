@@ -24,6 +24,7 @@ describe('checkEnjeux', () => {
     ['deux positions du même candidat', [enjeu('e1', [['p1', 'pour'], ['p3', 'pour'], ['p2', 'pour']])]],
     ['thème différent', [enjeu('e1', [['p1', 'pour'], ['p4', 'pour']])]],
     ['thème inconnu', [enjeu('e1', [['p1', 'pour'], ['p2', 'pour']], 'zzz')]],
+    ['aucune position « pour »', [enjeu('e1', [['p1', 'contre'], ['p2', 'contre']])]],
   ])('refuse : %s', (_, enjeux) => {
     const errors = checkEnjeux(enjeux, props, themes);
     expect(errors.length).toBeGreaterThan(0);

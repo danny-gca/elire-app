@@ -48,10 +48,15 @@ for (const f of fs.readdirSync(constDir).filter((f) => f.endsWith('.ts'))) {
   });
 }
 
-async function check(url) {
+async function check(url, retried = false) {
   try {
     const res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'fr' }, redirect: 'follow', signal: AbortSignal.timeout(30000) });
     await res.body?.cancel();
+    // 429 : trop de requêtes en même temps (web.archive.org), pas un lien mort ; un second essai, espacé.
+    if (res.status === 429 && !retried) {
+      await new Promise((r) => setTimeout(r, 5000 + Math.random() * 5000));
+      return check(url, true);
+    }
     return { status: res.status, finalUrl: res.url };
   } catch (e) {
     return { status: 0, error: String(e.cause?.code ?? e.message ?? e) };
@@ -68,15 +73,22 @@ const level = (r) => {
 
 const urls = [...links.keys()];
 const results = new Map();
+// web.archive.org limite les requêtes simultanées (429) : ses liens passent un par un, après les autres.
+const sequential = (u) => new URL(u).hostname === 'web.archive.org';
+const parallel = urls.filter((u) => !sequential(u));
 let next = 0;
 await Promise.all(
   Array.from({ length: CONCURRENCY }, async () => {
-    while (next < urls.length) {
-      const url = urls[next++];
+    while (next < parallel.length) {
+      const url = parallel[next++];
       results.set(url, await check(url));
     }
   }),
 );
+for (const url of urls.filter(sequential)) {
+  results.set(url, await check(url));
+  await new Promise((r) => setTimeout(r, 2000));
+}
 
 const counts = { OK: 0, 'A LIRE': 0, ERREUR: 0 };
 for (const lvl of ['ERREUR', 'A LIRE', ...(showAll ? ['OK'] : [])]) {

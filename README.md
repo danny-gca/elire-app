@@ -26,6 +26,7 @@ Une application gratuite et neutre pour savoir de quels candidats à la préside
 - **Neutre** : pendant le vote, les propositions sont anonymes et tirées au hasard.
 - **Équitable** : chaque candidat a le même nombre de propositions visé et les mêmes règles de source.
 - **Sourcé** : chaque proposition cite mot pour mot un document précis, avec son lien.
+- **Limpide** : questions directes et affirmatives, sans double négation ni piège de rejet procédural.
 - **Privé** : vos votes ne quittent jamais votre appareil et s'effacent en deux appuis.
 - **Corrigeable** : chaque élément porte un numéro (`P-531`, `L-28`) pour signaler une erreur en un appui.
 

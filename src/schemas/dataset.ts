@@ -166,6 +166,41 @@ export const GlossaireEntrySchema = z.object({
   definition: z.string().min(1).max(160).optional(),
 });
 
+// Un mot difficile (data/mots.json), repéré dans les textes sans casse, en mot entier, avec ses formes fléchies.
+export const MotSchema = z.object({
+  mot: z.string().min(2),
+  variantes: z.array(z.string().min(2)).optional(),
+  definition: z.string().min(1).max(160),
+});
+
+// Un lien neutre : sur le sujet, jamais sur la mesure ni sur le scrutin précis.
+export const LienSchema = z.object({
+  titre: z.string().min(1).max(90),
+  url,
+  editeur: z.string().min(1),
+  media: z.enum(['article', 'video', 'audio']),
+  /** En minutes, pour une vidéo ou un son. */
+  duree: z.number().int().positive().optional(),
+  /** Faux : le lien nomme l'auteur ou donne le résultat, masqué pendant le vote. */
+  aveugle: z.boolean().default(true),
+});
+
+// Une entrée de data/reperes.json : un sujet expliqué une fois, le même pour tous les candidats.
+export const RepereSchema = z.object({
+  id,
+  thematiqueId: id,
+  titre: z.string().min(1).max(60),
+  /** Faits datés : ce qui existe. */
+  aujourdhui: z.string().min(1).max(300),
+  /** Les options, sans nom, symétriques. */
+  enDebat: z.string().min(1).max(300),
+  aJour: isoDate,
+  liens: z.array(LienSchema).max(3).default([]),
+  propositions: z.array(id).default([]),
+  lois: z.array(id).default([]),
+  enjeux: z.array(id).default([]),
+});
+
 export const DatasetSchema = z.object({
   metadata: z.object({
     generatedAt: z.string(),
@@ -183,6 +218,8 @@ export const DatasetSchema = z.object({
   lois: z.array(LoiSchema),
   enjeux: z.array(EnjeuSchema),
   glossaire: z.array(GlossaireEntrySchema),
+  mots: z.array(MotSchema),
+  reperes: z.array(RepereSchema),
 });
 
 export type Parti = z.infer<typeof PartiSchema>;
@@ -203,4 +240,7 @@ export type TypeVote = z.infer<typeof TypeVoteSchema>;
 export type VoteCandidatLoi = z.infer<typeof VoteCandidatLoiSchema>;
 export type Loi = z.infer<typeof LoiSchema>;
 export type GlossaireEntry = z.infer<typeof GlossaireEntrySchema>;
+export type Mot = z.infer<typeof MotSchema>;
+export type Lien = z.infer<typeof LienSchema>;
+export type Repere = z.infer<typeof RepereSchema>;
 export type Dataset = z.infer<typeof DatasetSchema>;

@@ -17,7 +17,7 @@ const PAD = 16;
 export function EnjeuFrame({ animate, children }: { animate: boolean; children: React.ReactNode }) {
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
   const [colors] = useState(() => fisherYates(MARKER_IDS).map((id) => Markers[id].solid));
-  // Tirage figé : la feuille qui grandit (« En savoir plus ») garde le même cadre.
+  // Tirage figé : la feuille qui grandit (un onglet ouvert) garde le même cadre.
   const [draws] = useState(() => Array.from({ length: 12 }, Math.random));
   const progress = useSharedValue(animate ? 0 : 1);
   useEffect(() => {

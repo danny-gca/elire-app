@@ -49,6 +49,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 3. Rigueur des faits : distinction stricte entre promesse de campagne et vote parlementaire effectif, et entre vote individuel et vote de groupe.
 4. Entrée d'un candidat : candidature déclarée ou désignée, avec une source datée ; même nombre de propositions pour tous.
 5. Clarté et calme : l'utilisateur doit repartir avec le sentiment de s'être fait son avis, sans pression.
+6. Clarté cognitive des questions : questions formulées de façon directe et affirmative. Interdiction absolue des doubles négations et des tournures de rejet procédural (ex: « Rejet de... » où voter « Contre » reviendrait à être pour la mesure). Répondre « Pour » doit toujours signifier sans ambiguïté le soutien au fond de la mesure.
 
 ## Accessibility & Inclusion
 
