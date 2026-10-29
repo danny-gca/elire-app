@@ -244,16 +244,20 @@ export default function VoterScreen() {
   // Onglet ouvert : la rangée d'onglets remonte en haut de l'écran, son contenu juste dessous.
   const showInfo = (target: View | null) => {
     const scroll = scrollRef.current;
-    const inner = scroll?.getInnerViewNode();
-    if (!scroll || !target || inner == null) {
+    if (!scroll || !target) {
       scroll?.scrollToEnd({ animated: !reducedMotion });
       return;
     }
-    target.measureLayout(
-      inner,
-      (_x, y) => scroll.scrollTo({ y: Math.max(0, y - Spacing.five), animated: !reducedMotion }),
-      () => scroll.scrollToEnd({ animated: !reducedMotion })
-    );
+    const relativeTo = (scroll as unknown as { getScrollResponder?: () => { getInnerViewNode?: () => unknown } }).getScrollResponder?.()?.getInnerViewNode?.() ?? scroll;
+    try {
+      target.measureLayout(
+        relativeTo as View,
+        (_x, y) => scroll.scrollTo({ y: Math.max(0, y - Spacing.five), animated: !reducedMotion }),
+        () => scroll.scrollToEnd({ animated: !reducedMotion })
+      );
+    } catch {
+      scroll.scrollToEnd({ animated: !reducedMotion });
+    }
   };
 
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
@@ -500,7 +504,7 @@ function LoiBallot({
                 itemId={loi.id}
                 nature={loi.nature}
                 text={loi.enjeu}
-                terms={[loi.question]}
+                terms={[loi.question, loi.titre]}
                 tab={tab}
                 onTab={setTab}
                 onOpen={onInfoOpen}

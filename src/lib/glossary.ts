@@ -35,6 +35,10 @@ export interface WordSpan {
   mot: string;
 }
 
+export interface SigleEntry {
+  sigle: string;
+}
+
 const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // Toutes les formes, la plus longue d'abord (« clause miroir » avant « clause »), en mot entier et sans casse.
@@ -58,6 +62,27 @@ export function wordSpans(text: string, words: readonly WordEntry[]): WordSpan[]
       if (!spans.some((s) => start < s.end && end > s.start)) {
         spans.push({ start, end, mot });
         break;
+      }
+    }
+  }
+  return spans.sort((a, b) => a.start - b.start);
+}
+
+/** Mots de vocabulaire (sans casse) et sigles du glossaire (en capitales) repérés dans un texte. */
+export function glossarySpans(
+  text: string,
+  words: readonly WordEntry[],
+  sigles: readonly SigleEntry[] = []
+): WordSpan[] {
+  const spans = wordSpans(text, words);
+  const knownSigles = new Set(sigles.map((s) => s.sigle));
+  for (const match of text.matchAll(ACRONYM)) {
+    const sigle = match[0];
+    if (knownSigles.has(sigle) && !spans.some((s) => s.mot === sigle)) {
+      const start = match.index ?? 0;
+      const end = start + sigle.length;
+      if (!spans.some((s) => start < s.end && end > s.start)) {
+        spans.push({ start, end, mot: sigle });
       }
     }
   }
