@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/danny-gca/elire-app/compare/v1.6.0...v1.7.0) (2026-10-29)
+
+
+### Nouveautés
+
+* **voter:** tourner la page à chaque vote et rouvrir la question entière avec la gomme ([#41](https://github.com/danny-gca/elire-app/issues/41)) ([7f15070](https://github.com/danny-gca/elire-app/commit/7f1507061dc4af744078d4777c4fa6a96226a97c))
+
 ## [1.6.0](https://github.com/danny-gca/elire-app/compare/v1.5.0...v1.6.0) (2026-10-29)
 
 
