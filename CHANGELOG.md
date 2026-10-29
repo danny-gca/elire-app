@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/danny-gca/elire-app/compare/v1.5.0...v1.6.0) (2026-10-29)
+
+
+### Nouveautés
+
+* new release pelase ([e0195a5](https://github.com/danny-gca/elire-app/commit/e0195a54af3408eadde756476a3020071e38f7a2))
+
 ## [1.5.0](https://github.com/danny-gca/elire-app/compare/v1.4.0...v1.5.0) (2026-10-25)
 
 
