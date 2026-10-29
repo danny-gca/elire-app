@@ -13,5 +13,10 @@
   { "mot": "transposition", "variantes": ["transposer"], "definition": "Fait d'écrire une directive européenne dans la loi d'un pays." },
   { "mot": "surtransposition", "variantes": ["surtranspositions"], "definition": "Transposition qui va plus loin que la directive : le pays ajoute des règles plus strictes que le minimum européen." },
   { "mot": "clause miroir", "variantes": ["clauses miroirs"], "definition": "Règle d'un accord commercial qui impose aux produits importés les mêmes normes de production qu'aux produits européens." },
-  { "mot": "excuse de minorité", "definition": "Règle qui réduit la peine d'un mineur par rapport à celle d'un adulte pour les mêmes faits ; le juge peut l'écarter dans certains cas." }
+  { "mot": "excuse de minorité", "definition": "Règle qui réduit la peine d'un mineur par rapport à celle d'un adulte pour les mêmes faits ; le juge peut l'écarter dans certains cas." },
+  { "mot": "nasse", "variantes": ["nasses"], "definition": "Technique de maintien de l'ordre : les forces de l'ordre encerclent un groupe de manifestants et l'empêchent de sortir pendant un temps." },
+  { "mot": "peine plancher", "variantes": ["peines planchers", "peines plancher"], "definition": "Peine minimale fixée par la loi pour certaines infractions, souvent en cas de récidive : le juge ne peut descendre en dessous que dans les cas prévus." },
+  { "mot": "décote", "definition": "Réduction de la pension de retraite quand on part sans avoir cotisé assez d'années pour une retraite à taux plein." },
+  { "mot": "centre éducatif fermé", "variantes": ["centres éducatifs fermés"], "definition": "Établissement où un juge place un mineur délinquant à la place de la prison : il y suit un programme éducatif et ne peut en sortir sans autorisation." },
+  { "mot": "convention citoyenne", "variantes": ["conventions citoyennes"], "definition": "Assemblée de citoyens tirés au sort, chargée d'étudier une question et de faire des propositions au gouvernement ou au Parlement." }
 ]

@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-29T00:11:35.289Z",
+    "generatedAt": "2026-10-29T17:03:47.584Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
     "propositionsCount": 196,
     "loisCount": 42,
-    "enjeuxCount": 17
+    "enjeuxCount": 16
   },
   "partis": [
     {
@@ -890,7 +890,7 @@
       "description": "« SMIC à 2000 € net, revalorisation de toutes les allocations, augmentation des salaires de 500 €, indexation sur l'inflation. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures, le programme complet est en cours d'élaboration). Les salaires seraient aussi indexés sur l'inflation, donc relevés quand les prix montent, et toutes les allocations revalorisées."
+      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures, le programme complet est en cours d'élaboration). Le dépliant ne dit pas si les 500 euros sont nets ou bruts, ni par mois. Les salaires seraient aussi indexés sur l'inflation et toutes les allocations revalorisées."
     },
     {
       "id": "prop-ak-2",
@@ -1050,7 +1050,7 @@
       "ref": "P-685",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "securite",
-      "titre": "Revoir la doctrine du maintien de l'ordre, notamment les nasses et les armes dangereuses",
+      "titre": "Revoir le maintien de l'ordre en manifestation, notamment les nasses et les armes dangereuses",
       "description": "« Revoir en profondeur la doctrine du maintien de l'ordre, notamment les nasses et l'utilisation d'armes dangereuses. »",
       "sourceUrl": "https://parti-equinoxe.fr/notre-plan-pour-sortir-de-la-violence/",
       "dateDeclaration": "2026-10-15",
@@ -1067,7 +1067,7 @@
       "sourceUrl": "https://parti-equinoxe.fr/proteger-les-animaux-lenvironnement-et-nos-eleveurs/",
       "dateDeclaration": "2026-10-08",
       "typeSource": "prise_de_position",
-      "contexte": "Article du parti sur l'élevage et l'alimentation. But : rendre l'alimentation saine plus abordable. Prévoit aussi un repas végétarien de plus par semaine à la cantine et d'étendre les expériences locales de sécurité sociale de l'alimentation."
+      "contexte": "Article du parti sur l'élevage et l'alimentation. But : rendre l'alimentation saine plus abordable ; le texte ne précise ni les produits visés ni le fonctionnement du bonus-malus (taxe, aide). Prévoit aussi un repas végétarien de plus par semaine à la cantine."
     },
     {
       "id": "prop-br-1",
@@ -1150,7 +1150,7 @@
       "ref": "P-143",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "education",
-      "titre": "Augmenter le salaire des professeurs de 135 euros nets par mois en début de carrière, jusqu'à 300",
+      "titre": "Augmenter le salaire des professeurs de 135 euros nets par mois en début de carrière, 300 en milieu",
       "description": "« 135 euros nets de plus par mois en début de carrière, jusqu'à 300 euros en milieu, sur le traitement des professeurs, pas les primes. »",
       "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/09/LR_Ecole_vF.pdf",
       "typeSource": "programme_2027",
@@ -1321,7 +1321,7 @@
       "sourceUrl": "https://www.generationecologie.fr/2025/12/09/120-ans-de-la-loi-du-9-decembre-1905-donnons-de-nouveaux-moyens-aux-defenseurs-de-la-laicite/",
       "dateDeclaration": "2025-12-09",
       "typeSource": "prise_de_position",
-      "contexte": "Communiqué du parti pour les 120 ans de la loi de 1905. Demande aussi que les atteintes à la laïcité à l'école donnent lieu à des explications et, si nécessaire, à des sanctions exemplaires."
+      "contexte": "Communiqué du parti pour les 120 ans de la loi de 1905. Menaces citées : intimidations et cyberharcèlement visant notamment les enseignants, terrorisme islamiste. Demande aussi des sanctions exemplaires, après explication, contre les atteintes à la laïcité à l'école."
     },
     {
       "id": "prop-db-7",
@@ -1535,12 +1535,12 @@
       "ref": "P-842",
       "candidatId": "fabien-roussel",
       "thematiqueId": "travail",
-      "titre": "Porter le SMIC à 1 500 euros net",
-      "description": "« une hausse du Smic qui sera porté à 1500 euros net »",
-      "sourceUrl": "https://www.publicsenat.fr/article/politique/presidentielle-fabien-roussel-presente-180-propositions-pour-une-france-des-jours",
+      "titre": "Augmenter le SMIC pour atteindre rapidement 1 500 euros net par mois",
+      "description": "« Le smic horaire sera augmenté pour atteindre rapidement 1 500 euros net par mois (soit 1 923 euros brut) »",
+      "sourceUrl": "https://web.archive.org/web/20221231143452id_/https://www.fabienroussel2022.fr/1_un_mouvement_d_augmentation_g_n_rale_des_salaires_des_minima_sociaux_et_des_pensions_sera_engag",
       "dateDeclaration": "2022-01-24",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022 (180 propositions), rapporté par Public Sénat. Prévoit aussi une hausse générale des grilles de salaires, la semaine de 32 heures et la retraite à 60 ans."
+      "contexte": "Programme présidentiel 2022, site de campagne (copie d'archive). Prévoit aussi des pensions d'au moins 1 200 euros net, une hausse de 30 % des salaires de la fonction publique et une négociation pour relever toute la grille des salaires."
     },
     {
       "id": "prop-fro-2",
@@ -1561,12 +1561,12 @@
       "ref": "P-304",
       "candidatId": "fabien-roussel",
       "thematiqueId": "sante",
-      "titre": "Rembourser à 100 % par la Sécurité sociale tous les soins prescrits",
-      "description": "« il n'y aura plus besoin d'organismes complémentaires »",
+      "titre": "Prendre intégralement en charge tous les soins prescrits par les professionnels de santé",
+      "description": "« Tout ce qui est prescrit par les professionnels de santé dans le cadre réglementaire sera intégralement pris en charge avec un mécanisme de tiers payant »",
       "sourceUrl": "https://medecine-generale.lequotidiendumedecin.fr/actus-medicales/politique-de-sante/fabien-roussel-je-veux-creer-un-service-public-du-grand-age",
       "dateDeclaration": "2022-04-08",
       "typeSource": "prise_de_position",
-      "contexte": "Interview dans Le Quotidien du Médecin. Les mutuelles deviendraient inutiles et le patient n'avancerait plus les frais (tiers payant) ; mise en place par étapes, en commençant par les priorités médicales et sociales.",
+      "contexte": "Interview dans Le Quotidien du Médecin. Un seul organisme, la Sécurité sociale via l'Assurance maladie, couvrirait tous les besoins ; mise en place par étapes, en commençant par les priorités médicales et sociales ; à terme, plus besoin de complémentaires.",
       "enjeuId": "soins-rembourses",
       "sens": "pour"
     },
@@ -1580,9 +1580,7 @@
       "sourceUrl": "https://www.terre-net.fr/actualite-agricole/politique-syndicalisme/article/fabien-roussel-parti-communiste-presente-son-programme-agricole-205-202534.html",
       "dateDeclaration": "2021-10-06",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme agricole rapporté par Terre-net. Modèle cité : le coefficient multiplicateur des fruits et légumes. Prix négociés chaque année par filière, en public, entre producteurs et grande distribution.",
-      "enjeuId": "prix-minimum-agricole",
-      "sens": "pour"
+      "contexte": "Programme agricole rapporté par Terre-net. Modèle cité : le coefficient multiplicateur des fruits et légumes. Prix négociés chaque année par filière, en public, entre producteurs et grande distribution."
     },
     {
       "id": "prop-fro-5",
@@ -1690,7 +1688,7 @@
       "description": "« Les lois restreignant la liberté d'expression doivent être supprimées. »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Livret programme, édition 2026-2027, p. 22, volet libertés individuelles et publiques. Le texte dénonce aussi le règlement européen sur les services numériques, accusé de servir à censurer des contenus sur les plateformes."
+      "contexte": "Livret programme, édition 2026-2027, p. 22, volet libertés individuelles et publiques. Aucune loi française n'est citée ; le texte vise surtout le règlement européen sur les services numériques, accusé de servir à censurer des contenus sur les plateformes."
     },
     {
       "id": "prop-fp-7",
@@ -1719,7 +1717,7 @@
       "ref": "P-788",
       "candidatId": "francois-asselineau",
       "thematiqueId": "international",
-      "titre": "Sortir de l'Union européenne dès l'élection, par l'article 50",
+      "titre": "Faire sortir la France de l'Union européenne dès l'élection, par l'article 50",
       "description": "« de sortir de l'UE par la mise en oeuvre de l'article 50 [...] dès mon installation à l'Elysée »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-asselineau-s-estime-seul-candidat-du-frexit-58556",
       "dateDeclaration": "2017-04-10",
@@ -2013,9 +2011,7 @@
       "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1175/AN/967.pdf",
       "dateDeclaration": "2018-09-10",
       "typeSource": "prise_de_position",
-      "contexte": "Amendement déposé à l'Assemblée nationale sur la loi EGALIM. Le prix payé aux producteurs serait construit à partir d'indicateurs publics de leurs coûts de production.",
-      "enjeuId": "prix-minimum-agricole",
-      "sens": "pour"
+      "contexte": "Amendement déposé à l'Assemblée nationale sur la loi EGALIM. Le prix payé aux producteurs serait construit à partir d'indicateurs publics de leurs coûts de production."
     },
     {
       "id": "prop-jl-2",
@@ -2034,7 +2030,7 @@
       "ref": "P-305",
       "candidatId": "jean-lassalle",
       "thematiqueId": "institutions",
-      "titre": "Compter le vote blanc comme un suffrage exprimé",
+      "titre": "Compter le vote blanc comme un suffrage exprimé à l'élection présidentielle",
       "description": "« Les bulletins blancs sont décomptés séparément et entrent en compte pour la détermination des suffrages exprimés lors du premier et du second tour. »",
       "sourceUrl": "https://www.assemblee-nationale.fr/15/pdf/propositions/pion3896.pdf",
       "dateDeclaration": "2021-02-17",
@@ -2058,7 +2054,7 @@
       "ref": "P-491",
       "candidatId": "jean-lassalle",
       "thematiqueId": "education",
-      "titre": "Créer un service national universel, militaire ou civil, de septembre à juin",
+      "titre": "Créer un service national universel pour les jeunes majeurs, militaire ou civil, de septembre à juin",
       "description": "« Créer un Service national universel, militaire ou civil, du 15 septembre au 15 juin. »",
       "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
       "dateDeclaration": "2022-02-25",
@@ -2163,7 +2159,7 @@
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
       "dateDeclaration": "2025-02-18",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, p. 58. Prévoit aussi d'interdire les expulsions sans relogement et de limiter les locations de courte durée (type Airbnb) à 60 jours par an."
+      "contexte": "Programme, édition 2025, p. 58. Construction pendant cinq ans ; loyers encadrés partout et à la baisse dans les grandes villes. Prévoit aussi d'interdire les expulsions sans relogement et de limiter les locations de courte durée (type Airbnb) à 60 jours par an."
     },
     {
       "id": "prop-jlm-6",
@@ -2358,7 +2354,7 @@
       "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
       "dateDeclaration": "2022-02-04",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022 en 22 mesures, mesure 11, p. 5. Le référendum d'initiative citoyenne permet aux citoyens de déclencher un vote par pétition ; à la proportionnelle, les sièges sont répartis selon le score de chaque liste."
+      "contexte": "Programme présidentiel 2022 en 22 mesures, mesure 11, p. 5. Le référendum d'initiative citoyenne permet aux citoyens de déclencher un vote par pétition ; à la proportionnelle, les sièges sont répartis selon le score de chaque liste. Les élections concernées ne sont pas précisées."
     },
     {
       "id": "prop-mlp-6",
@@ -2456,7 +2452,7 @@
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
       "dateDeclaration": "2026-07-13",
       "typeSource": "programme_2027",
-      "contexte": "Programme 2027, p. 21."
+      "contexte": "Programme 2027, p. 21, mesure pour sortir un million de personnes par an de la précarité énergétique : 500 000 rénovations performantes par an via MaPrimeRénov', démarches simplifiées et guichet unique d'accompagnement. Éco-prêt à taux zéro élargi aux classes moyennes."
     },
     {
       "id": "prop-mt-6",
@@ -2475,12 +2471,12 @@
       "ref": "P-722",
       "candidatId": "marine-tondelier",
       "thematiqueId": "economie",
-      "titre": "Taxer à 2 % les fortunes de plus de 100 millions et rétablir l'impôt sur la fortune, avec volet climat",
+      "titre": "Taxer à 2 % les patrimoines de plus de 100 millions d'euros et rétablir l'impôt sur la fortune",
       "description": "« Mettre en place une taxe Zucman de 2 % au-delà de 100 millions d'euros de patrimoine. [...] Rétablir l'Impôt sur la Fortune (ISF) en lui ajoutant une composante climatique »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
       "dateDeclaration": "2026-07-13",
       "typeSource": "programme_2027",
-      "contexte": "Programme 2027, p. 66. La composante climatique vise à orienter le patrimoine vers des actifs verts ; prévoit aussi d'étendre l'exit tax pour maintenir une contribution des exilés fiscaux qui s'installent hors de France.",
+      "contexte": "Programme 2027, p. 66. L'impôt sur la fortune rétabli aurait une composante climatique pour orienter le patrimoine vers des actifs verts ; prévoit aussi d'étendre l'exit tax pour maintenir une contribution des exilés fiscaux qui s'installent hors de France.",
       "enjeuId": "impot-fortune",
       "sens": "pour"
     },
@@ -2554,7 +2550,7 @@
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
       "dateDeclaration": "2022-03-29",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme national 2022, p. 26 (dernier programme national, pas de programme 2027 publié). Les clauses miroirs exigent pour les produits importés une protection animale au moins aussi élevée qu'en France (p. 23)."
+      "contexte": "Programme national 2022, p. 26 (dernier programme national, pas de programme 2027 publié). Exemples cités : élevage intensif et industriel, pêche industrielle. Les clauses miroirs exigent pour les produits importés une protection animale au moins aussi élevée qu'en France (p. 23)."
     },
     {
       "id": "prop-mm-6",
@@ -2566,7 +2562,7 @@
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2024/05/programme-europeennes-2024.pdf",
       "dateDeclaration": "2024-05-28",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 7 (dernier programme publié, pas de programme 2027). Mesure européenne ; prévoit aussi d'aider les pêcheurs à se reconvertir grâce aux subventions européennes de la pêche."
+      "contexte": "Programme des européennes 2024, p. 7 (dernier programme publié, pas de programme 2027). Le programme rappelle que la pêche est pilotée au niveau de l'Union ; prévoit aussi d'aider les pêcheurs à se reconvertir grâce aux subventions européennes de la pêche."
     },
     {
       "id": "prop-mm-7",
@@ -2694,7 +2690,7 @@
       "ref": "P-348",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "travail",
-      "titre": "Augmenter les salaires, allocations et pensions et les indexer sur les prix",
+      "titre": "Augmenter massivement les salaires, allocations et pensions et les indexer sur les prix",
       "description": "« Nous devons imposer une augmentation massive des salaires, des allocations et des pensions et leur indexation sur la hausse des prix »",
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
       "dateDeclaration": "2026-06-26",
@@ -2897,7 +2893,7 @@
       "description": "« Cette refondation démocratique passera tout d'abord par la reconnaissance du vote blanc [...]. Nous instaurerons également un véritable référendum d'initiative citoyenne »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-democratique-territoriale/",
       "typeSource": "programme_2027",
-      "contexte": "Site de campagne, page « Le pacte démocratique et territorial ». Le référendum permettrait à chacun de saisir directement l'Assemblée nationale ; les départements pourraient aussi fusionner en provinces."
+      "contexte": "Site de campagne, page « Le pacte démocratique et territorial ». Le vote blanc serait reconnu pour que l'abstention ne soit plus le seul recours, sans dire s'il compterait dans les suffrages exprimés. Le référendum permettrait de saisir directement l'Assemblée nationale."
     },
     {
       "id": "prop-ob-4",
@@ -3004,7 +3000,7 @@
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
       "dateDeclaration": "2024-05-15",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 22, mesure 184. Inclut la révision des directives européennes sur les marchés publics ; les aides d'État seraient aussi soumises à des critères écologiques."
+      "contexte": "Programme des européennes 2024, p. 22, mesure 184, chapitre « Pour une Europe sociale ». Inclut la révision des directives européennes sur les marchés publics, pour garantir le respect du droit du travail et des droits syndicaux."
     },
     {
       "id": "prop-rg-5",
@@ -3261,9 +3257,9 @@
       "thematiqueId": "numerique",
       "nature": "proposition_loi",
       "titre": "Loi visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux (texte de la commission mixte paritaire)",
-      "question": "Faut-il interdire les réseaux sociaux aux moins de 15 ans sans l'accord d'un parent ?",
-      "enjeu": "Les moins de 15 ans ne pourraient plus s'inscrire sur un réseau social sans l'accord d'au moins un parent ; les plateformes devraient vérifier l'âge de leurs utilisateurs.",
-      "resume": "Texte de compromis adopté par 279 voix contre 81.",
+      "question": "Faut-il interdire l'accès aux réseaux sociaux aux moins de 15 ans, même avec l'accord d'un parent ?",
+      "enjeu": "Contrairement à la loi de 2023, les réseaux sociaux seraient interdits aux moins de 15 ans même avec l'accord d'un parent (sauf encyclopédies et sites éducatifs en ligne). Le portable serait aussi interdit au lycée.",
+      "resume": "Texte de compromis adopté par 279 voix contre 81. Le Conseil constitutionnel a ensuite censuré l'interdiction des réseaux sociaux (article 1er).",
       "chambre": "assemblee_nationale",
       "dateVote": "2026-07-21",
       "statut": "adoptee",
@@ -4298,7 +4294,7 @@
       "nature": "proposition_loi",
       "titre": "Régulation des meublés de tourisme et locations Airbnb (Loi Le Meur)",
       "question": "Faut-il donner plus de pouvoirs aux maires pour limiter les locations touristiques de type Airbnb ?",
-      "enjeu": "Les maires pourraient encadrer les locations touristiques ; leur avantage fiscal serait réduit et elles devraient respecter les règles de performance énergétique (DPE).",
+      "enjeu": "Les communes pourraient limiter à 90 jours par an (au lieu de 120) la location d'une résidence principale aux touristes. Abattement fiscal réduit (30 % ou 50 % au lieu de 50 % ou 71 %), DPE minimal exigé.",
       "resume": "Renforcement des pouvoirs des maires pour encadrer les meublés touristiques, abaissement des niches fiscales locatives et extension des obligations de performance énergétique (DPE).",
       "chambre": "assemblee_nationale",
       "dateVote": "2024-11-07",
@@ -4392,7 +4388,7 @@
       "nature": "proposition_loi",
       "titre": "Proposition de loi d'abrogation de la retraite à 64 ans (Niche RN)",
       "question": "Faut-il annuler la réforme qui a reculé l'âge de départ à la retraite de 62 à 64 ans ?",
-      "enjeu": "Texte visant à revenir sur la réforme de 2023, qui a reculé l'âge légal de départ de 62 à 64 ans.",
+      "enjeu": "L'âge légal de départ reviendrait de 64 à 62 ans, et la durée de cotisation pour une retraite à taux plein de 43 à 42 années, en annulant les dernières réformes.",
       "resume": "Texte déposé lors de la niche parlementaire du Rassemblement National visant à annuler le recul de l'âge légal de départ à la retraite à 64 ans. Rejeté par 197 voix contre 119.",
       "chambre": "assemblee_nationale",
       "dateVote": "2024-10-31",
@@ -4937,7 +4933,7 @@
       "nature": "projet_loi",
       "titre": "Rejet de la ratification du traité commercial UE-Canada (CETA)",
       "question": "Faut-il ratifier l'accord commercial entre l'Union européenne et le Canada (CETA) ?",
-      "enjeu": "Le Sénat vote l'article qui autorise la ratification, c'est-à-dire l'approbation définitive par la France, de cet accord de libre-échange déjà appliqué en partie depuis 2017.",
+      "enjeu": "Le Sénat vote l'article qui autorise la ratification (l'approbation définitive) de l'accord de libre-échange avec le Canada : moins de droits de douane, marchés publics ouverts. Appliqué en partie depuis 2017.",
       "resume": "Vote historique au Sénat rejetant par 211 voix contre 44 l'article 1er ratifiant l'accord commercial CETA, via une alliance transpartisane entre sénateurs de droite et de gauche protégeant l'élevage.",
       "chambre": "senat",
       "dateVote": "2024-03-21",
@@ -5308,8 +5304,8 @@
       "nature": "projet_loi",
       "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
       "question": "Faut-il durcir les règles de l'immigration et faciliter l'expulsion des étrangers condamnés ?",
-      "enjeu": "La régularisation et l'accès aux aides sociales seraient plus stricts, les étrangers condamnés plus faciles à expulser, et le droit d'asile serait réformé.",
-      "resume": "Texte durcissant les conditions de régularisation et d'accès aux prestations sociales, facilitant les expulsions d'étrangers condamnés et réformant le droit d'asile.",
+      "enjeu": "Aides au logement et allocations familiales après 5 ans de résidence (ou 30 mois de travail) pour les étrangers hors Union européenne, nombre d'admis fixé par le Parlement, expulsion facilitée des condamnés.",
+      "resume": "Texte durcissant les conditions de régularisation et d'accès aux prestations sociales, facilitant les expulsions d'étrangers condamnés et réformant le droit d'asile. Le Conseil constitutionnel a ensuite censuré 35 de ses 86 articles, dont la condition de résidence pour les aides et le nombre d'admis fixé par le Parlement.",
       "chambre": "assemblee_nationale",
       "dateVote": "2023-12-19",
       "statut": "adoptee",
@@ -6034,7 +6030,7 @@
       "nature": "projet_loi",
       "titre": "Réforme des retraites : recul de l'âge légal à 64 ans",
       "question": "Faut-il reculer l'âge légal de départ à la retraite de 62 à 64 ans ?",
-      "enjeu": "Réforme des retraites : âge légal porté progressivement à 64 ans et allongement accéléré de la durée de cotisation.",
+      "enjeu": "Réforme des retraites : âge légal porté progressivement de 62 à 64 ans, et 43 années de cotisation exigées plus tôt pour une retraite à taux plein.",
       "resume": "Projet de loi de financement rectificative de la sécurité sociale pour 2023 prévoyant le relèvement progressif de l'âge légal de départ de 62 à 64 ans et l'accélération de l'allongement de la durée de cotisation.",
       "chambre": "assemblee_nationale",
       "dateVote": "2023-03-20",
@@ -6902,7 +6898,7 @@
       "id": "nouveaux-reacteurs",
       "thematiqueId": "environnement",
       "question": "Construire de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà",
-      "enjeu": "Lancer la construction de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà.",
+      "enjeu": "Lancer en France la construction de réacteurs nucléaires de nouvelle génération (EPR), en plus de ceux qui fonctionnent déjà.",
       "positions": [
         {
           "propositionId": "prop-ez-7",
@@ -7180,23 +7176,6 @@
         }
       ],
       "ref": "E-15"
-    },
-    {
-      "id": "prix-minimum-agricole",
-      "thematiqueId": "agriculture",
-      "question": "Garantir aux agriculteurs un prix minimum pour leurs produits",
-      "enjeu": "Empêcher que les agriculteurs vendent leur production en dessous d'un prix fixé à partir de ce qu'elle leur coûte.",
-      "positions": [
-        {
-          "propositionId": "prop-fro-4",
-          "sens": "pour"
-        },
-        {
-          "propositionId": "prop-jl-1",
-          "sens": "pour"
-        }
-      ],
-      "ref": "E-16"
     },
     {
       "id": "normes-agricoles",
@@ -7550,6 +7529,39 @@
     {
       "mot": "excuse de minorité",
       "definition": "Règle qui réduit la peine d'un mineur par rapport à celle d'un adulte pour les mêmes faits ; le juge peut l'écarter dans certains cas."
+    },
+    {
+      "mot": "nasse",
+      "variantes": [
+        "nasses"
+      ],
+      "definition": "Technique de maintien de l'ordre : les forces de l'ordre encerclent un groupe de manifestants et l'empêchent de sortir pendant un temps."
+    },
+    {
+      "mot": "peine plancher",
+      "variantes": [
+        "peines planchers",
+        "peines plancher"
+      ],
+      "definition": "Peine minimale fixée par la loi pour certaines infractions, souvent en cas de récidive : le juge ne peut descendre en dessous que dans les cas prévus."
+    },
+    {
+      "mot": "décote",
+      "definition": "Réduction de la pension de retraite quand on part sans avoir cotisé assez d'années pour une retraite à taux plein."
+    },
+    {
+      "mot": "centre éducatif fermé",
+      "variantes": [
+        "centres éducatifs fermés"
+      ],
+      "definition": "Établissement où un juge place un mineur délinquant à la place de la prison : il y suit un programme éducatif et ne peut en sortir sans autorisation."
+    },
+    {
+      "mot": "convention citoyenne",
+      "variantes": [
+        "conventions citoyennes"
+      ],
+      "definition": "Assemblée de citoyens tirés au sort, chargée d'étudier une question et de faire des propositions au gouvernement ou au Parlement."
     }
   ],
   "reperes": [

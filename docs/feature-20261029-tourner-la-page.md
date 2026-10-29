@@ -6,7 +6,7 @@ Légende : **[Danny]** = demandé tel quel, **[Proposition]** = ma proposition, 
 
 | Lot | Sujet | État |
 | --- | --- | --- |
-| 1 | Passe sur les précisions : titres et contextes trop secs | [Décidé] |
+| 1 | Passe sur les précisions : titres et contextes trop secs | [Fait], détail dans `docs/precisions-20261029.md` |
 | 2 | Graphie du parti de Delphine Batho : celle de Wikipédia | [Décidé], rien à changer dans les données |
 | 3 | Voter : glisser pour revenir sur la question précédente, une seule fois | [Fait], à tester sur téléphone |
 | 4 | Voter : la page du cahier se tourne à chaque vote | [Fait], à essayer sur téléphone |
@@ -32,7 +32,7 @@ Ce que Danny a corrigé à la main dans `dccd1ba` (titres lus à l'aveugle) :
 
 Le point commun : le titre ne se comprend pas seul. On ne sait pas où, qui décide, ni l'ampleur.
 
-**Critères de la passe** [Décidé], à ajouter à la règle 13 de `CONTRIBUTING.md` une fois validés :
+**Critères de la passe** [Fait], ajoutés à la règle 13 de `CONTRIBUTING.md` :
 
 1. **Où et qui** : le titre dit qui agit et sur quel périmètre (« en France », « chaque école », « l'État »), quand ce n'est pas évident.
 2. **L'ampleur** : un chiffre a sa base (net ou brut, par mois, d'ici quand, « jusqu'à »).
@@ -42,6 +42,8 @@ Le point commun : le titre ne se comprend pas seul. On ne sait pas où, qui déc
 6. **Garde-fou** : la règle 6 (titre fidèle) prime. On précise ce que la source dit déjà ; on n'ajoute ni chiffre, ni portée, ni condition qu'elle ne contient pas.
 
 **Méthode** : skill `verifier-donnees`, candidat par candidat (196 propositions), puis les 42 scrutins et les 17 questions communes. Je propose les réécritures dans un tableau avant / après, Danny valide, puis j'écris dans les CSV et JSON et je lance `npm run build:data:strict`. Un premier scan mécanique ne suffit pas (1 seul titre sous 45 caractères, 11 contextes sous 130) : c'est une relecture, pas un compteur.
+
+**[Fait] le 2026-10-29** : 21 réécritures appliquées (dont `prop-mt-7` et le CETA raccourcis), 5 mots ajoutés à `mots.json`, 11 cas douteux tranchés après recherche. Résultat le plus lourd : l'enjeu `prix-minimum-agricole` est supprimé (`prop-jl-1` n'y avait pas sa place), et l'enjeu de `mineurs-reseaux-sociaux-2026` était faux. Détail dans `docs/precisions-20261029.md`.
 
 ## 2. Graphie du parti de Delphine Batho
 
@@ -61,7 +63,6 @@ Le point commun : le titre ne se comprend pas seul. On ne sait pas où, qui déc
 - Même réponse ou glissé inverse : son de page, pas de nouvelle fête.
 - Relecture impeccable (2026-10-29), corrigé : le glissé ne s'annule plus en route (id stable, page à moitié revenue retirée si le geste est annulé) ; scrutin et question commune ramenés dans leur état révélé, sans tampon rejoué ; « A voté ! » caché sans être démonté ; « Réduire les animations » activé en cours de route ; flèches seulement quand Voter est à l'écran, hors champ et sans touche de modification (l'échelle de vote a été réincluse en 6.4).
 - Ajouts de la relecture : **retour Android** (`BackHandler`) qui fait le cran s'il est possible, sinon le comportement habituel (une question ramenée puis retour = on quitte, comme avant : pas de boucle) ; **focus du lecteur d'écran** sur le titre de la page visible après un retour ou un départ.
-
 
 **[Danny]** Après un vote, on ne voit pas toujours que la question a changé. Les gens veulent revenir dessus et essaient de glisser, sans penser à la gomme « A voté ! » en bas. Glisser sur la page Voter ramène à la question précédente, avec le vote déjà posé. Une seule fois. Rien dans le tuto, l'onboarding ni les astuces.
 
@@ -96,7 +97,6 @@ Le point commun : le titre ne se comprend pas seul. On ne sait pas où, qui déc
 - Pas d'ombre sur la page du dessous : seules les feuilles de la page qui tourne prennent un voile d'encre (14 % au plus, `PageVeil`), jamais les marges ni le cadre d'une question commune, pour rester dans la règle du cahier plat.
 - La zone garde la hauteur de la page qui tourne quand elle est plus haute que la suivante : la page ne saute plus en cours de tour.
 - Pendant le tour (420 ms), un toucher sur l'échelle de la question suivante est ignoré.
-
 
 **[Danny]** Essayer une animation de page de cahier qui se tourne à chaque vote. Elle expliquerait aussi qu'on peut revenir en arrière.
 
@@ -265,6 +265,6 @@ C'est un état affiché, pas une astuce : le geste d'entrée n'est toujours anno
 
 ## Documentation à mettre à jour
 
-- `CONTRIBUTING.md` : critères du lot 1.
+- `CONTRIBUTING.md` : critères du lot 1 (fait, règle 13).
 - `PRODUCT.md` et `DESIGN.md` : retour à la question précédente, page qui se tourne, page complète derrière la gomme.
 - `todo.md` : Batho retiré. Les portraits restent à demander aux équipes : pas de logo de parti en repli (décidé le 2026-10-29).
