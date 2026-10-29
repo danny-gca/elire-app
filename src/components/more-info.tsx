@@ -43,7 +43,6 @@ import { useVotesStore } from "@/store/votes-store";
 
 const bySigle = new Map(glossaire.map((g) => [g.sigle, g]));
 const byMot = new Map(mots.map((m) => [m.mot, m]));
-const siteOf = (url: string) => url.match(/^https?:\/\/(?:www\.)?([^/]+)/)?.[1] ?? url;
 
 export type InfoTab = "clair" | "mesure" | "mots" | "liens";
 
@@ -69,6 +68,8 @@ interface MoreInfoProps {
   onTab: (tab: InfoTab | null) => void;
   /** Le contenu vient de s'afficher : l'écran peut défiler jusqu'au tiroir ouvert. */
   onOpen?: (target: View | null) => void;
+  /** Tiroirs que la feuille montre déjà ailleurs (feuille de la gomme). */
+  omit?: InfoTab[];
 }
 
 // Les tiroirs du bas de la feuille, un par ligne : un seul ouvert à la fois, rien sur l'auteur ni le résultat.
@@ -81,6 +82,7 @@ export function MoreInfo({
   tab,
   onTab,
   onOpen,
+  omit = [],
 }: MoreInfoProps) {
   const reader = useVotesStore((s) => s.marker);
   const openRef = useRef<View>(null);
@@ -89,13 +91,13 @@ export function MoreInfo({
   // Pendant le vote : seulement les liens qui ne trahissent ni l'auteur ni le résultat.
   const liens = repere?.liens.filter((l) => l.aveugle !== false) ?? [];
   const explained = nature ? NATURE_EXPLAINED[nature] : undefined;
-  // Question commune : ce que propose chaque candidat, sans son nom ; sa source peut le trahir, la précision compte plus.
+  // Question commune : ce que propose chaque candidat, sans son nom ; le lien s'ouvre, mais son site (souvent celui du parti) n'est pas écrit.
   const proposals = propositions.filter((p) => p.enjeuId === itemId);
   const links = [
     ...proposals.map((p) => ({
       titre: p.titre,
       url: p.sourceUrl,
-      meta: `${siteOf(p.sourceUrl)} · ${TYPE_SOURCE_LABELS[p.typeSource].toLowerCase()}`,
+      meta: TYPE_SOURCE_LABELS[p.typeSource],
     })),
     ...liens.map((l) => ({
       titre: l.titre,
@@ -116,7 +118,7 @@ export function MoreInfo({
   const words = wordsIn(texts, mots).flatMap((m) => byMot.get(m) ?? []);
 
   const origin = nature ? NATURE_LABELS[nature] : source;
-  const tabs: { id: InfoTab; label: string }[] = [
+  const allTabs: { id: InfoTab; label: string }[] = [
     ...(repere ? [{ id: "clair" as const, label: "Contexte" }] : []),
     { id: "mesure", label: "Précisions" },
     ...(sigles.length + words.length > 0
@@ -126,6 +128,7 @@ export function MoreInfo({
       ? [{ id: "liens" as const, label: "Liens et sources" }]
       : []),
   ];
+  const tabs = allTabs.filter((t) => !omit.includes(t.id));
   const onWord = () => onTab("mots");
   const open = tabs.some((t) => t.id === tab) ? tab : null;
 

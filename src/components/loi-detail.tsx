@@ -1,15 +1,17 @@
 import { useMemo } from 'react';
 import { Linking, StyleSheet, Text, View } from 'react-native';
 
+import { Hemicycle } from '@/components/hemicycle';
 import { MyVoteRow } from '@/components/my-vote-row';
 import { Button } from '@/components/ui/button';
 import { VoteRow } from '@/components/vote-row';
 import { reportUrl } from '@/constants/app';
-import { Colors, Numeric, Spacing, Type } from '@/constants/theme';
+import { Colors, Markers, Numeric, Spacing, Type } from '@/constants/theme';
 import { CHAMBRE_LABELS, NATURE_LABELS, STATUT_LABELS, formatDate } from '@/lib/format';
 import { fisherYates } from '@/lib/shuffle';
 import type { Loi, PositionVote } from '@/schemas/dataset';
 import { getCandidat } from '@/services/dataset';
+import { useMarkOf, useVotesStore } from '@/store/votes-store';
 
 const ORDER: Record<PositionVote, number> = { pour: 0, abstention: 1, contre: 2 };
 
@@ -17,15 +19,21 @@ interface LoiDetailProps {
   loi: Loi;
   /** Sur une fiche candidat : sa position d'abord, puis les autres. */
   candidatId?: string;
+  /** Vote à l'aveugle : l'hémicycle sans nom à la place des positions des candidats. */
+  anonymous?: boolean;
+  /** Sous l'échelle de la gomme : sans la question ni la ligne « Moi », déjà au-dessus. */
+  underVote?: boolean;
 }
 
 function domainOf(url: string) {
   return new URL(url).hostname.replace(/^www\./, '');
 }
 
-// Contenu de la feuille d'un scrutin : le texte, votre vote (modifiable), les positions des candidats, la source.
-export function LoiDetail({ loi, candidatId }: LoiDetailProps) {
+// Contenu de la feuille d'un scrutin : le texte, votre vote (modifiable), les positions des candidats (ou l'hémicycle sans nom), la source.
+export function LoiDetail({ loi, candidatId, anonymous = false, underVote = false }: LoiDetailProps) {
   const report = reportUrl(loi.ref, loi.titre);
+  const value = useVotesStore((s) => s.loiVotes[loi.id]);
+  const marker = useMarkOf(loi.id);
   // Groupés par position ; dans chaque groupe, un ordre tiré au hasard à chaque ouverture : personne n'est toujours en tête.
   const entries = useMemo(
     () =>
@@ -48,20 +56,31 @@ export function LoiDetail({ loi, candidatId }: LoiDetailProps) {
         {loi.resume}
       </Text>
 
-      <View style={styles.block}>
-        <Text style={[Type.labelStrong, styles.muted]}>La question posée</Text>
-        <Text style={[Type.body, styles.ink]} selectable>
-          {loi.question}
-        </Text>
-      </View>
+      {!underVote && (
+        <View style={styles.block}>
+          <Text style={[Type.labelStrong, styles.muted]}>La question posée</Text>
+          <Text style={[Type.body, styles.ink]} selectable>
+            {loi.question}
+          </Text>
+        </View>
+      )}
 
-      <View style={styles.block}>
-        <Text style={[Type.labelStrong, styles.muted]}>Les votes</Text>
-        <MyVoteRow id={loi.id} kind="loi" pendingNote="Pas encore voté : il arrivera dans Voter" />
-        {entries.map(([id, v]) => (
-          <VoteRow key={id} vote={v} candidat={getCandidat(id)} />
-        ))}
-      </View>
+      {anonymous ? (
+        value && (
+          <View style={styles.block}>
+            <Text style={[Type.labelStrong, styles.muted]}>Les votes</Text>
+            <Hemicycle loi={loi} user={value} markColor={Markers[marker].solid} />
+          </View>
+        )
+      ) : (
+        <View style={styles.block}>
+          <Text style={[Type.labelStrong, styles.muted]}>Les votes</Text>
+          {!underVote && <MyVoteRow id={loi.id} kind="loi" pendingNote="Pas encore voté : il arrivera dans Voter" />}
+          {entries.map(([id, v]) => (
+            <VoteRow key={id} vote={v} candidat={getCandidat(id)} />
+          ))}
+        </View>
+      )}
 
       <Button
         label={`Ouvrir le scrutin officiel · ${domainOf(loi.sourceOfficielleUrl)}`}

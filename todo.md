@@ -30,7 +30,6 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 ## Choix à trancher
 
 - Étiquette de Natacha Polony et Olivier Becht, avec une règle commune à tous : leur mouvement de campagne (que Wikipédia présente comme un slogan) ou leur étiquette d'origine ?
-- Graphie du parti de Delphine Batho : celle de Wikipédia (« Génération écologie », gardée) ou celle du parti (« Génération Écologie »).
 
 ## Portraits
 

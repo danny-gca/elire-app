@@ -7,6 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { CelebrationLayer } from '@/components/celebration';
 import { Colors, MaxContentWidth, MinTarget, Radius, Spacing, Type } from '@/constants/theme';
+import { revealOffset } from '@/lib/sheet-reveal';
 
 interface SheetProps {
   visible: boolean;
@@ -15,7 +16,7 @@ interface SheetProps {
   children: React.ReactNode;
 }
 
-// Fait défiler la feuille juste assez pour montrer un élément qui vient de s'ouvrir (une échelle de vote).
+// Fait défiler la feuille jusqu'à un élément qui vient de s'ouvrir (une échelle, un tiroir) : `revealOffset`.
 const RevealContext = createContext<(target: View | null) => void>(() => {});
 export const useSheetReveal = () => useContext(RevealContext);
 
@@ -41,10 +42,10 @@ export function Sheet({ visible, title, onClose, children }: SheetProps) {
     }
     target.measureLayout(inner.current, (_x, y, _w, h) => {
       // Le contenu commence après la marge du haut ; un peu d'air sous l'élément.
-      const bottom = Spacing.two + y + h + Spacing.three;
       const { offset, height: seen } = view.current;
-      if (bottom > offset + seen) {
-        scroll.current?.scrollTo({ y: bottom - seen, animated: true });
+      const to = revealOffset({ top: Spacing.two + y, height: h, offset, seen, airBelow: Spacing.three, airAbove: Spacing.one });
+      if (to !== null) {
+        scroll.current?.scrollTo({ y: to, animated: true });
       }
     });
   }, []);

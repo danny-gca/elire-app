@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Platform, StyleSheet, Text, View, type StyleProp, type TextLayoutLine, type TextStyle } from 'react-native';
+import { Platform, StyleSheet, Text, View, type AccessibilityProps, type StyleProp, type TextLayoutLine, type TextStyle } from 'react-native';
 import Animated, { Easing, type SharedValue, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 import { Markers, type MarkerId } from '@/constants/theme';
@@ -14,29 +14,32 @@ interface SweepTextProps {
   /** Faux quand le texte n'est qu'une partie d'un titre déjà annoncé. */
   header?: boolean;
   selectable?: boolean;
+  /** Gestes sans bouton visible, offerts au lecteur d'écran. */
+  actions?: Pick<AccessibilityProps, 'accessibilityActions' | 'onAccessibilityAction'>;
+  textRef?: React.Ref<Text>;
 }
 
 // Le trait balaie le texte de gauche à droite, ligne après ligne (web : global.css [data-sweep]).
-export function SweepText({ children, marker, style, header = true, selectable }: SweepTextProps) {
+export function SweepText({ children, marker, style, header = true, selectable, actions, textRef }: SweepTextProps) {
   const role = header ? 'header' : undefined;
   if (!marker) {
     return (
-      <Text style={style} accessibilityRole={role} selectable={selectable}>
+      <Text ref={textRef} style={style} accessibilityRole={role} selectable={selectable} {...actions}>
         {children}
       </Text>
     );
   }
   if (Platform.OS === 'web') {
     return (
-      <Text style={style} accessibilityRole={role} selectable={selectable}>
+      <Text ref={textRef} style={style} accessibilityRole={role} selectable={selectable} {...actions}>
         <Text {...({ dataSet: { sweep: marker } } as object)}>{children}</Text>
       </Text>
     );
   }
-  return <NativeSweep marker={marker} style={style} header={header} selectable={selectable}>{children}</NativeSweep>;
+  return <NativeSweep marker={marker} style={style} header={header} selectable={selectable} actions={actions} textRef={textRef}>{children}</NativeSweep>;
 }
 
-function NativeSweep({ children, marker, style, header, selectable }: Required<Pick<SweepTextProps, 'marker'>> & SweepTextProps) {
+function NativeSweep({ children, marker, style, header, selectable, actions, textRef }: Required<Pick<SweepTextProps, 'marker'>> & SweepTextProps) {
   const role = header ? 'header' : undefined;
   const [lines, setLines] = useState<TextLayoutLine[]>([]);
   const progress = useSharedValue(0);
@@ -62,7 +65,7 @@ function NativeSweep({ children, marker, style, header, selectable }: Required<P
           color={Markers[marker].soft}
         />
       ))}
-      <Text style={style} accessibilityRole={role} selectable={selectable} onTextLayout={(e) => setLines(e.nativeEvent.lines)}>
+      <Text ref={textRef} style={style} accessibilityRole={role} selectable={selectable} onTextLayout={(e) => setLines(e.nativeEvent.lines)} {...actions}>
         {children}
       </Text>
     </View>
