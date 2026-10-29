@@ -40,4 +40,4 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 
 ## Aspects légaux
 
-- Relecture des mentions légales et de la page Méthode et corrections par un avocat.
+- Relecture des mentions légales et de la page Méthode et corrections par un avocat
