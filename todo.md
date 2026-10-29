@@ -20,17 +20,18 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 
 ## Données à valider
 
-- Les 17 questions communes (`data/enjeux.json`), surtout : prix-minimum-agricole (jl-1), budget-defense (db-3, et sl-3 en contre), temps-de-travail (br-3 en contre), peines-planchers (br-1).
+- Les 16 questions communes (`data/enjeux.json`), surtout : budget-defense (db-3, et sl-3 en contre), temps-de-travail (br-3 en contre), peines-planchers (br-1).
 - Types de source discutables : jlm et nda en programme 2027 ; br-7, br-8 et np-6 en programme 2027 ; ez-2 en programme précédent ; fa-1, fa-2 et ga-\* en prise de position.
 - prop-ez-8 : citation lue sur une page en image (couche texte du PDF illisible).
 - prop-na-3 : page imprimée 11 ou 12 ?
+- prop-fro-4 : la citation est une phrase du journaliste de Terre-net, pas une parole du candidat. Chercher la source du candidat.
+- prop-nda-3 : préciser « faute de vaccin Covid » dans le titre ? Seule sa proposition de loi n° 26 de 2022 le dit, pas la page du programme.
 - Thème de l'immigration à harmoniser : prop-ep-8 et prop-sl-4 en société, prop-nda-1 en sécurité.
 - Sources plus récentes à étudier : page « projet » de Natacha Polony (natachapolony2027.fr/projet, douze chantiers), brochure de Nathalie Arthaud du 2026-08-25.
 
 ## Choix à trancher
 
 - Étiquette de Natacha Polony et Olivier Becht, avec une règle commune à tous : leur mouvement de campagne (que Wikipédia présente comme un slogan) ou leur étiquette d'origine ?
-- Graphie du parti de Delphine Batho : celle de Wikipédia (« Génération écologie », gardée) ou celle du parti (« Génération Écologie »).
 
 ## Portraits
 

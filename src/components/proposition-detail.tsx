@@ -17,6 +17,8 @@ interface PropositionDetailProps {
   proposition: Proposition;
   /** Masque l'auteur (vote à l'aveugle). */
   anonymous?: boolean;
+  /** Sous l'échelle de la gomme : sans le titre, la citation ni la ligne « Moi », déjà au-dessus. */
+  underVote?: boolean;
   onOpenCandidate?: () => void;
 }
 
@@ -25,7 +27,7 @@ function domainOf(url: string) {
 }
 
 // Contenu de la feuille « source et contexte ».
-export function PropositionDetail({ proposition, anonymous = false, onOpenCandidate }: PropositionDetailProps) {
+export function PropositionDetail({ proposition, anonymous = false, underVote = false, onOpenCandidate }: PropositionDetailProps) {
   const auteur = anonymous ? undefined : getCandidat(proposition.candidatId);
   const enjeu = proposition.enjeuId ? getEnjeu(proposition.enjeuId) : undefined;
   // Un seul signalement : il cite aussi la question commune, qui peut être la source de l'erreur.
@@ -33,12 +35,16 @@ export function PropositionDetail({ proposition, anonymous = false, onOpenCandid
 
   return (
     <View style={styles.root}>
-      <Text style={[Type.bodyStrong, styles.title]} selectable>
-        {proposition.titre}
-      </Text>
-      <Text style={[Type.body, styles.text]} selectable>
-        {proposition.description}
-      </Text>
+      {!underVote && (
+        <>
+          <Text style={[Type.bodyStrong, styles.title]} selectable>
+            {proposition.titre}
+          </Text>
+          <Text style={[Type.body, styles.text]} selectable>
+            {proposition.description}
+          </Text>
+        </>
+      )}
 
       <View style={styles.block}>
         <Text style={[Type.labelStrong, styles.muted]}>Contexte</Text>
@@ -64,16 +70,18 @@ export function PropositionDetail({ proposition, anonymous = false, onOpenCandid
         </Link>
       )}
 
-      {!anonymous && <MyVoteRow id={proposition.id} kind="proposition" pendingNote="Pas encore voté : elle arrivera dans Voter" />}
+      {!anonymous && !underVote && <MyVoteRow id={proposition.id} kind="proposition" pendingNote="Pas encore voté : elle arrivera dans Voter" />}
       {!anonymous && <SharedQuestion enjeu={enjeu} />}
 
       {anonymous && (
         <Text style={[Type.label, styles.muted]}>L’auteur reste masqué tant que vous votez.</Text>
       )}
 
+      {/* À l'aveugle, le site de la source (souvent celui du parti) n'est pas écrit. */}
       <Button
-        label={`Ouvrir la source · ${domainOf(proposition.sourceUrl)}`}
+        label={anonymous ? 'Ouvrir la source' : `Ouvrir la source · ${domainOf(proposition.sourceUrl)}`}
         icon="open-outline"
+        accessibilityHint={anonymous ? 'Le site de la source peut dévoiler l’auteur' : undefined}
         onPress={() => Linking.openURL(proposition.sourceUrl)}
       />
       {report && <Button label="Signaler une erreur" variant="quiet" onPress={() => Linking.openURL(report)} />}
@@ -82,16 +90,18 @@ export function PropositionDetail({ proposition, anonymous = false, onOpenCandid
 }
 
 // La question commune et la position de chaque candidat, avec son nom : hors vote à l'aveugle seulement.
-function SharedQuestion({ enjeu }: { enjeu?: Enjeu }) {
+export function SharedQuestion({ enjeu, withQuestion = true }: { enjeu?: Enjeu; withQuestion?: boolean }) {
   if (!enjeu) {
     return null;
   }
   return (
     <View style={styles.block}>
       <Text style={[Type.labelStrong, styles.muted]}>Question commune {enjeu.ref}</Text>
-      <Text style={[Type.bodyStrong, styles.title]} selectable>
-        {enjeu.question}
-      </Text>
+      {withQuestion && (
+        <Text style={[Type.bodyStrong, styles.title]} selectable>
+          {enjeu.question}
+        </Text>
+      )}
       {enjeu.positions.map((pos) => {
         const p = byId.get(pos.propositionId);
         const candidat = p && getCandidat(p.candidatId);

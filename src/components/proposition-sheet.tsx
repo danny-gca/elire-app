@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Animated, { Easing, useAnimatedProps, useAnimatedStyle, useReducedMotion, useSharedValue, withDelay, withTiming } from 'react-native-reanimated';
+import { Platform, StyleSheet, Text, View, type AccessibilityProps } from 'react-native';
+import Animated, { Easing, useAnimatedProps, useAnimatedStyle, useReducedMotion, useSharedValue, withDelay, withTiming, type SharedValue } from 'react-native-reanimated';
 import Svg, { Circle, Path, Rect } from 'react-native-svg';
 
 import { STAMP_DONE_MS, STAMP_IMPACT_MS } from '@/components/scrutin-stamp';
 
 import { GlossaryText } from '@/components/glossary-text';
+import { PageVeil } from '@/components/page-veil';
 import { SweepText } from '@/components/sweep-text';
 import { ThemeMark } from '@/components/theme-mark';
 import { Colors, MarginWidth, Numeric, Radius, Spacing, Type, type MarkerId } from '@/constants/theme';
@@ -30,7 +31,17 @@ interface PropositionSheetProps {
   footer?: React.ReactNode;
   /** Toucher un mot souligné du titre ou de la citation ; sans rappel, rien n'est souligné. */
   onWord?: (mot: string) => void;
+  /** Gestes sans bouton visible (revenir à la question précédente), portés par le titre pour le lecteur d'écran. */
+  titleActions?: Pick<AccessibilityProps, 'accessibilityActions' | 'onAccessibilityAction'>;
+  /** Le titre, pour y poser le focus du lecteur d'écran. */
+  titleRef?: React.Ref<Text>;
+  /** Page qui tourne : la feuille prend un voile d'encre. */
+  veil?: SharedValue<number>;
+  /** Pendant le tour : coins carrés côté reliure, la page n'est pas une carte qui se retourne. */
+  bound?: boolean;
 }
+
+type TitleProps = Pick<AccessibilityProps, 'accessibilityActions' | 'onAccessibilityAction'>;
 
 const VERTICAL_LABEL_LENGTH = 220;
 const VERTICAL_TOP = Spacing.three + 18 + Spacing.one + 32 + Spacing.two;
@@ -134,7 +145,9 @@ function Contour({ delay = 0 }: { delay?: number }) {
 }
 
 // La feuille du cahier : marge graphite (numéro, thème) et corps de la proposition.
-export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen = false, banner, sweep, stamp = false, thematique, children, footer, onWord }: PropositionSheetProps) {
+export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen = false, banner, sweep, stamp = false, thematique, children, footer, onWord, titleActions, titleRef, veil, bound = false }: PropositionSheetProps) {
+  // Web : le titre reçoit le focus après un retour (tabIndex -1, hors de l'ordre de tabulation).
+  const titleProps = { ...titleActions, ...(Platform.OS === 'web' ? { tabIndex: -1, dataSet: { focusTitle: '' } } : null) } as TitleProps;
   const scrutin = kind === 'Scrutin';
   const reducedMotion = useReducedMotion();
   const stamped = stamp && !reducedMotion;
@@ -166,11 +179,11 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
       <View style={styles.body}>
         {/* Pendant le geste du vote, le surligneur balaie le titre : plus de mots soulignés. */}
         {sweep ? (
-          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable>
+          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable actions={titleProps} textRef={titleRef}>
             {proposition.titre}
           </SweepText>
         ) : (
-          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable>
+          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable actions={titleProps} textRef={titleRef}>
             {proposition.titre}
           </GlossaryText>
         )}
@@ -185,15 +198,16 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
   );
   if (!scrutin) {
     return (
-      <View style={styles.sheet}>
+      <View style={[styles.sheet, bound && styles.bound]}>
         {row}
         {footer}
+        <PageVeil turn={veil} bound={bound} />
       </View>
     );
   }
   // Un vrai scrutin se distingue d'une proposition : en-tête encre à l'hémicycle et contour tracé ; la salle est dans le fond de Voter.
   return (
-    <View style={styles.sheet}>
+    <View style={[styles.sheet, bound && styles.bound]}>
       <Animated.View {...bannerTarget} style={[styles.banner, imprintStyle]}>
         <StampInk />
         <HemicycleMark color={Colors.paper} />
@@ -207,6 +221,7 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
       {row}
       {footer}
       <Contour delay={stamped ? STAMP_DONE_MS : 0} />
+      <PageVeil turn={veil} bound={bound} />
     </View>
   );
 }
@@ -218,6 +233,10 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.rule,
     overflow: 'hidden',
+  },
+  bound: {
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
   },
   row: {
     flexDirection: 'row',

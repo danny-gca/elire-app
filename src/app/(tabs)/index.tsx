@@ -1,8 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
-import { AccessibilityInfo, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import Animated, { cancelAnimation, Easing, FadeIn, FadeOut, Keyframe, useAnimatedStyle, useDerivedValue, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { AccessibilityInfo, BackHandler, findNodeHandle, Platform, Pressable, ScrollView, StyleSheet, Text, View, type AccessibilityProps, type LayoutChangeEvent } from 'react-native';
+import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
+import Animated, { cancelAnimation, Easing, FadeIn, FadeOut, Keyframe, ReduceMotion, useAnimatedStyle, useDerivedValue, useReducedMotion, useSharedValue, withTiming, type SharedValue } from 'react-native-reanimated';
+import { scheduleOnRN } from 'react-native-worklets';
 
 import { BUTTON_STROKE_MS } from '@/components/button-stroke';
 import { CountdownFill } from '@/components/countdown-fill';
@@ -15,7 +17,9 @@ import { Hemicycle } from '@/components/hemicycle';
 import { LoiDetail } from '@/components/loi-detail';
 import { LoiVoteScale } from '@/components/loi-vote-scale';
 import { Marked } from '@/components/marked';
+import { announce, LiveRegion } from '@/components/live-region';
 import { MoreInfo, type InfoTab } from '@/components/more-info';
+import { PageVeil } from '@/components/page-veil';
 import { PropositionRow } from '@/components/proposition-row';
 import { PropositionSheet } from '@/components/proposition-sheet';
 import { ScrutinStamp } from '@/components/scrutin-stamp';
@@ -30,6 +34,7 @@ import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { loiChoice, voteChoice } from '@/constants/votes';
 import { CHAMBRE_LABELS, STATUT_LABELS, TYPE_SOURCE_LABELS, formatDate } from '@/lib/format';
+import { hardwareBack, pageTurnSettles, previousQuestion } from '@/lib/page-turn';
 import { CLASSEMENT_THRESHOLD, isPause, nextMilestone, opinionCount, rankedCount, type Milestone } from '@/lib/progress';
 import { MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, scoreCandidat, UNSURE, type LoiVoteValue, type VoteValue } from '@/lib/scoring';
 import { buzz, playSound } from '@/lib/sound';
@@ -48,8 +53,25 @@ const LEAVE_MS = 320;
 const LAST_VOTE_MS = 10000;
 // Après un scrutin, le temps de lire l'hémicycle et le résultat, puis la suite part seule comme pour une proposition.
 const AUTO_NEXT_MS = 5000;
+// Essai : la page du cahier se tourne à chaque vote ; faux, la feuille remonte vers « A voté ! » comme avant.
+const PAGE_TURN = true;
+// La page se soulève doucement puis retombe de l'autre côté de la reliure.
+const TURN_MS = 420;
+const TURN_EASING = Easing.bezier(0.45, 0, 0.2, 1);
+// Perspective lointaine : la page se soulève vers le lecteur sans grossir au point de sortir de l'écran.
+const PERSPECTIVE = 2000;
+// Doigt lâché : la page finit son chemin, plus vite qu'un tour entier.
+const SETTLE_MS = 240;
+// Marge avant de finir le tour sans l'animation, si ses images n'arrivent pas.
+const SAFETY_MS = 200;
+// Rien ne démarre à moins de 24 pt du bord de l'écran : le retour système d'Android y vit (la colonne a déjà 16 pt de gouttière).
+const EDGE_SLOP = 8;
 
 type Phase = 'button' | 'title' | 'leaving';
+// Page posée par-dessus la question en cours : celle qui tourne après un vote, ou la précédente ramenée d'un geste.
+type Over = { id: string; mode: 'turn' | 'peek' | 'back'; top: number; revealed?: boolean };
+type Role = 'flow' | 'over';
+type TitleActions = Pick<AccessibilityProps, 'accessibilityActions' | 'onAccessibilityAction'>;
 
 export default function VoterScreen() {
   const router = useRouter();
@@ -72,8 +94,46 @@ export default function VoterScreen() {
   // Pause passée par « 10 questions de plus » : elle ne revient qu'à la dizaine suivante.
   const [pausedAt, setPausedAt] = useState<number | null>(null);
   const marker = useVotesStore((s) => s.marker);
+  const marks = useVotesStore((s) => s.marks);
   const reducedMotion = useReducedMotion();
   const scrollRef = useRef<ScrollView>(null);
+  const [over, setOver] = useState<Over | null>(null);
+  // 0 : la page posée est à plat ; 1 : elle a tourné vers la gauche, hors de vue.
+  const turn = useSharedValue(0);
+  // Haut de la page du flux : la page posée par-dessus s'y aligne.
+  const [flowTop, setFlowTop] = useState(0);
+  const [overSize, setOverSize] = useState({ id: '', height: 0 });
+  const [stageWidth, setStageWidth] = useState(0);
+  const tutoActive = useTutoActive();
+  const [flowTitle, setFlowTitle] = useState<Text | null>(null);
+  const [overTitle, setOverTitle] = useState<Text | null>(null);
+  // Lecteur d'écran : après un départ ou un geste annulé, le focus revient au titre de la question en cours.
+  const focusTitle = (delay = 0) => {
+    setTimeout(() => focusOn(flowTitle), delay + 50);
+  };
+
+  const endTurn = (id: string) => setOver((o) => (o?.id === id && o.mode === 'turn' ? null : o));
+  // La page votée (ou ramenée) tourne autour de sa reliure et laisse voir la question suivante, déjà dessous.
+  const turnAway = (id: string, revealed = false) => {
+    if (reducedMotion) {
+      turn.set(0);
+      setOver(null);
+      return;
+    }
+    setOver((o) => ({ id, mode: 'turn', top: o?.id === id ? o.top : flowTop, revealed }));
+    turn.set(0);
+    turn.set(withTiming(1, { duration: TURN_MS, easing: TURN_EASING }, (done) => {
+      if (done) {
+        scheduleOnRN(endTurn, id);
+      }
+    }));
+    // Onglet en arrière-plan, images gelées : la page part quand même, le vote suivant n'attend pas l'animation.
+    setTimeout(() => endTurn(id), TURN_MS + SAFETY_MS);
+  };
+  const turnAwayRef = useRef(turnAway);
+  useEffect(() => {
+    turnAwayRef.current = turnAway;
+  });
 
   useEffect(() => {
     if (!hold) {
@@ -86,11 +146,18 @@ export default function VoterScreen() {
       if (next) {
         if (next === 'leaving') {
           playSound('feuille');
+          if (PAGE_TURN) {
+            turnAwayRef.current(hold.id);
+            setLastId(hold.id);
+            setHold(null);
+            return;
+          }
         }
         setHold({ ...hold, phase: next });
       } else {
         setLastId(hold.id);
         setHold(null);
+        setOver((o) => (o?.id === hold.id ? null : o));
       }
     }, delay);
     return () => clearTimeout(timer);
@@ -103,7 +170,20 @@ export default function VoterScreen() {
     }
   }, [revealId]);
 
-  const currentId = revealId ?? hold?.id ?? selectNextId({ votes, loiVotes, order });
+  const nextId = selectNextId({ votes, loiVotes, order });
+  // Question ramenée d'un geste : c'est elle qu'on vote, la question en cours attend dessous.
+  const back = over?.mode === 'back' ? over.id : null;
+  const currentId = back ?? revealId ?? hold?.id ?? nextId;
+  const flowId = back ? nextId : currentId;
+  // La page ramenée repart vers la question en cours : même réponse, glissé inverse ou flèche droite.
+  const canForward = !!back && !hold && !revealId && !tutoActive && !editing;
+  const goForward = () => {
+    if (back && canForward) {
+      playSound('feuille');
+      turnAway(back);
+      focusTitle(reducedMotion ? 0 : TURN_MS);
+    }
+  };
   const current = currentId ? byId.get(currentId) : undefined;
   const currentLoi = currentId ? loisById.get(currentId) : undefined;
   const currentEnjeu = currentId ? getEnjeu(currentId) : undefined;
@@ -130,47 +210,68 @@ export default function VoterScreen() {
   }, [pause, finished, reducedMotion]);
 
   const handleVote = (value: VoteValue) => {
-    if (!current) {
+    if (!current || (over && over.mode !== 'back')) {
+      return;
+    }
+    // Question ramenée, même réponse : la page repart sans rien changer.
+    if (back === current.id && votes[current.id] === value) {
+      goForward();
       return;
     }
     castVote(current.id, value);
     playSound('trait');
     buzz('light');
-    AccessibilityInfo.announceForAccessibility(`Vote enregistré : ${voteChoice(value)?.label ?? ''}`);
+    announce(`Vote enregistré : ${voteChoice(value)?.label ?? ''}`);
     if (reducedMotion) {
       setLastId(current.id);
+      setOver(null);
     } else {
       setHold({ id: current.id, value, phase: 'button' });
     }
   };
 
   const handleLoiVote = (value: LoiVoteValue) => {
-    if (!currentLoi) {
+    if (!currentLoi || (over && over.mode !== 'back')) {
+      return;
+    }
+    if (back === currentLoi.id && loiVotes[currentLoi.id] === value) {
+      goForward();
       return;
     }
     castLoiVote(currentLoi.id, value);
     playSound('trait');
     setRevealId(currentLoi.id);
-    AccessibilityInfo.announceForAccessibility(`Vote enregistré : ${loiChoice(value)?.label ?? ''}`);
+    announce(`Vote enregistré : ${loiChoice(value)?.label ?? ''}`);
   };
 
   // Question commune : même échelle qu'une proposition, puis l'écran sans nom, comme après un scrutin.
   const handleEnjeuVote = (value: VoteValue) => {
-    if (!currentEnjeu) {
+    if (!currentEnjeu || (over && over.mode !== 'back')) {
+      return;
+    }
+    if (back === currentEnjeu.id && votes[currentEnjeu.id] === value) {
+      goForward();
       return;
     }
     castVote(currentEnjeu.id, value);
     playSound('trait');
     buzz('light');
     setRevealId(currentEnjeu.id);
-    AccessibilityInfo.announceForAccessibility(`Vote enregistré : ${voteChoice(value)?.label ?? ''}`);
+    announce(`Vote enregistré : ${voteChoice(value)?.label ?? ''}`);
   };
 
   const handleNext = () => {
+    if (PAGE_TURN && revealId) {
+      turnAway(revealId, true);
+      setLastId(revealId);
+      setRevealId(null);
+      return;
+    }
     const done = () => {
       setLoiLeaving(false);
       setLastId(revealId);
       setRevealId(null);
+      setOver(null);
     };
     if (reducedMotion) {
       done();
@@ -182,7 +283,6 @@ export default function VoterScreen() {
 
   const loiRevealed = !!currentLoi && revealId === currentLoi.id;
   const enjeuRevealed = !!currentEnjeu && revealId === currentEnjeu.id;
-  const tutoActive = useTutoActive();
   const loiFlow = useLoiFlow({
     id: currentLoi?.id ?? currentEnjeu?.id,
     revealed: loiRevealed || enjeuRevealed,
@@ -212,7 +312,7 @@ export default function VoterScreen() {
         value={enjeuValue}
         onVote={handleEnjeuVote}
         disabled={enjeuRevealed}
-        stroke={enjeuRevealed && enjeuValue !== undefined ? { value: enjeuValue, color: Markers[enjeuMarker].soft } : undefined}
+        stroke={(enjeuRevealed || back === currentEnjeu.id) && enjeuValue !== undefined ? { value: enjeuValue, color: Markers[enjeuMarker].soft } : undefined}
       />
     )
   ) : currentLoi ? (
@@ -229,15 +329,21 @@ export default function VoterScreen() {
         value={loiValue}
         onVote={handleLoiVote}
         disabled={loiRevealed}
-        stroke={loiRevealed && loiValue ? { value: loiValue, color: Markers[loiMarker].soft } : undefined}
+        stroke={(loiRevealed || back === currentLoi.id) && loiValue ? { value: loiValue, color: Markers[loiMarker].soft } : undefined}
       />
     )
   ) : current ? (
     <VoteScale
-      value={hold?.value}
+      value={hold?.value ?? (back === current.id ? votes[current.id] : undefined)}
       onVote={handleVote}
       disabled={!!hold}
-      stroke={hold ? { value: hold.value, color: Markers[marker].soft } : undefined}
+      stroke={
+        hold
+          ? { value: hold.value, color: Markers[marker].soft }
+          : back === current.id && votes[current.id] !== undefined
+            ? { value: votes[current.id], color: Markers[marks[current.id] ?? marker].soft }
+            : undefined
+      }
     />
   ) : null;
 
@@ -263,7 +369,7 @@ export default function VoterScreen() {
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
 
   // Le tuto des premières fois (src/constants/tutos.json) : chaque étape une seule fois, l'app en pause.
-  const calm = !pause && !hold && !loiLeaving;
+  const calm = !pause && !hold && !loiLeaving && !over;
   useTuto('arrivee', calm && (!!current || !!currentEnjeu) && votedCount === 0);
   // Pas sur la toute première question : les astuces d'arrivée passent d'abord, sans en enchaîner trois.
   useTuto('enjeu', calm && !!currentEnjeu && !enjeuRevealed && votedCount > 0);
@@ -273,6 +379,262 @@ export default function VoterScreen() {
   useTuto('vote-3', calm && !revealId && opinions >= 3);
   const voteTarget = useTutoTarget('vote-boutons');
   const infoTarget = useTutoTarget('en-savoir-plus');
+
+  // Retour d'un cran, sans bouton ni astuce : un geste de page, la flèche gauche sur le web, une action pour le lecteur d'écran.
+  const backTarget = previousQuestion({
+    lastId,
+    shownId: currentId,
+    revisiting: !!over,
+    busy: pause || finished || !!hold || !!revealId || loiLeaving || tutoActive || !!editing,
+  });
+  // Question ramenée posée, par l'animation, le minuteur de secours ou d'un coup : une fois, page à plat, son de page.
+  useEffect(() => {
+    if (!back) {
+      return;
+    }
+    turn.set(0);
+    playSound('feuille');
+    buzz('light');
+  }, [back, turn]);
+  // Le focus va à son titre une fois monté, puis l'annonce suit (VoiceOver couperait une annonce partie avant le focus).
+  useEffect(() => {
+    if (!back || hold || revealId || !overTitle) {
+      return;
+    }
+    // En mode réduit, après le fondu : une page encore en train d'apparaître ne prend pas le focus sur le web.
+    const timer = setTimeout(() => {
+      focusOn(overTitle);
+      announce('Question précédente');
+    }, reducedMotion ? 160 : 0);
+    return () => clearTimeout(timer);
+  }, [back, hold, revealId, overTitle, reducedMotion]);
+  // Réduire les animations : la question en cours reste visible le temps que la page ramenée finisse son fondu.
+  const [coverReady, setCoverReady] = useState<Over | null>(null);
+  useEffect(() => {
+    if (!back || !reducedMotion) {
+      return;
+    }
+    const timer = setTimeout(() => setCoverReady(over), 150);
+    return () => clearTimeout(timer);
+  }, [back, over, reducedMotion]);
+  const peek = (id: string) => setOver({ id, mode: 'peek', top: flowTop });
+  const dropOver = (id: string) => {
+    setOver((o) => (o?.id === id ? null : o));
+    focusTitle();
+  };
+  // Geste annulé : seule une page en train de revenir s'en va, jamais une page déjà posée.
+  const dropPeek = (id: string) => setOver((o) => (o?.id === id && o.mode === 'peek' ? null : o));
+  const settleBack = (id: string) => setOver((o) => (o?.id === id ? { ...o, mode: 'back' } : o));
+  const goBack = () => {
+    const id = backTarget;
+    if (!id) {
+      return;
+    }
+    if (reducedMotion) {
+      turn.set(0);
+      setOver({ id, mode: 'back', top: flowTop });
+      return;
+    }
+    peek(id);
+    turn.set(1);
+    turn.set(withTiming(0, { duration: TURN_MS, easing: TURN_EASING }, (done) => {
+      if (done) {
+        scheduleOnRN(settleBack, id);
+      }
+    }));
+    // Même filet de sécurité : la page ramenée se pose, sans rester bloquée en route.
+    setTimeout(() => setOver((o) => (o?.id === id && o.mode === 'peek' ? { ...o, mode: 'back' } : o)), TURN_MS + SAFETY_MS);
+  };
+  // Retour Android déjà servi à repartir depuis ce vote : le suivant n'est plus intercepté.
+  const [spentFor, setSpentFor] = useState<string | null>(null);
+  const onHardwareBack = () => {
+    const moving = (!!over && over.mode !== 'back') || !!hold || (!!back && !!revealId);
+    const action = hardwareBack({ canBack: !!backTarget, canForward, spent: spentFor === lastId, moving });
+    if (action === 'forward') {
+      setSpentFor(lastId);
+      goForward();
+    } else if (action === 'back') {
+      goBack();
+    }
+    return action !== null;
+  };
+  const keysRef = useRef({ goBack, goForward, onHardwareBack });
+  useEffect(() => {
+    keysRef.current = { goBack, goForward, onHardwareBack };
+  });
+  useFocusEffect(
+    useCallback(() => {
+      if (Platform.OS === 'android') {
+        // Retour système : un cran en arrière, puis repartir, sinon le comportement habituel.
+        const sub = BackHandler.addEventListener('hardwareBackPress', () => keysRef.current.onHardwareBack());
+        return () => sub.remove();
+      }
+      if (Platform.OS !== 'web') {
+        return;
+      }
+      const onKey = (e: KeyboardEvent) => {
+        const target = e.target as HTMLElement | null;
+        // Les flèches gardent leur rôle dans un champ ; sur l'échelle de vote, elles tournent la page aussi.
+        if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey || e.defaultPrevented || target?.closest?.('input, textarea, [contenteditable]')) {
+          return;
+        }
+        if (e.key === 'ArrowLeft') {
+          keysRef.current.goBack();
+        } else if (e.key === 'ArrowRight') {
+          keysRef.current.goForward();
+        }
+      };
+      window.addEventListener('keydown', onKey);
+      return () => window.removeEventListener('keydown', onKey);
+    }, []),
+  );
+
+  // Doigt de gauche à droite : la page précédente revient par-dessus en suivant le doigt ; à l'envers, la page ramenée repart.
+  // Web : pas de glissé à la souris (il sélectionnerait le texte), la flèche gauche le remplace.
+  const forward = canForward;
+  // La page en route garde son id : poser `over` ne doit pas couper le geste en cours.
+  const dragId = (over?.mode === 'peek' ? over.id : forward ? back : backTarget) ?? '';
+  const width = Math.max(stageWidth, 1);
+  const reduced = reducedMotion;
+  const pan = Gesture.Pan()
+    .enabled(Platform.OS !== 'web' && !!dragId)
+    .activeOffsetX(forward ? -24 : 24)
+    .failOffsetY([-16, 16])
+    .hitSlop({ left: -EDGE_SLOP })
+    .onStart(() => {
+      if (!forward && !reduced) {
+        turn.set(1);
+        scheduleOnRN(peek, dragId);
+      }
+    })
+    .onUpdate((e) => {
+      if (reduced) {
+        return;
+      }
+      // Le bord de la page reste sous le doigt : l'angle suit la distance parcourue.
+      const travel = Math.min(1, Math.max(0, (forward ? -e.translationX : e.translationX) / width));
+      const angle = (Math.acos(forward ? 1 - travel : travel) * 2) / Math.PI;
+      turn.set(angle);
+    })
+    .onEnd((e, success) => {
+      const settled = success && pageTurnSettles(forward ? -e.translationX : e.translationX, width, forward ? -e.velocityX : e.velocityX);
+      // Réduire les animations : la page change d'un coup, sans suivre le doigt.
+      if (reduced) {
+        if (settled) {
+          scheduleOnRN(forward ? goForward : goBack);
+        }
+        return;
+      }
+      const target = forward === settled ? 1 : 0;
+      turn.set(withTiming(target, { duration: SETTLE_MS, easing: Easing.out(Easing.cubic) }, (done) => {
+        if (!done) {
+          return;
+        }
+        if (!forward) {
+          scheduleOnRN(settled ? settleBack : dropPeek, dragId);
+        } else if (settled) {
+          scheduleOnRN(dropOver, dragId);
+          scheduleOnRN(playSound, 'feuille');
+        }
+      }));
+    })
+    .onFinalize((_, success) => {
+      if (!success && !forward) {
+        scheduleOnRN(dropPeek, dragId);
+      }
+    });
+  const titleActions = (role: Role): TitleActions | undefined =>
+    role === 'flow' && backTarget
+      ? { accessibilityActions: [{ name: 'back', label: 'Revenir à la question précédente' }], onAccessibilityAction: goBack }
+      : role === 'over' && canForward
+        ? { accessibilityActions: [{ name: 'forward', label: 'Revenir à la question en cours' }], onAccessibilityAction: goForward }
+        : undefined;
+
+  // Le titre d'une page votée garde son trait ; pendant le geste du vote, le surligneur le balaie.
+  const sweepOf = (id: string) => {
+    if (hold?.id === id) {
+      return hold.phase !== 'button' && hold.value !== UNSURE ? marker : undefined;
+    }
+    return id !== nextId && votes[id] !== undefined && votes[id] !== UNSURE ? (marks[id] ?? marker) : undefined;
+  };
+
+  const revealLayout = () => scrollRef.current?.scrollToEnd({ animated: true });
+  // Le contenu d'une page, dans le flux ou posée par-dessus : même composant, la page garde son état en changeant de place.
+  const pageFor = (id: string, role: Role) => {
+    const frozen = role === 'over' && over?.mode === 'turn';
+    const bound = role === 'over' && over?.mode !== 'back';
+    const active = id === currentId;
+    const enjeu = getEnjeu(id);
+    if (enjeu) {
+      return (
+        <EnjeuBallot
+          enjeu={enjeu}
+          value={votes[id]}
+          revealed={frozen ? !!over?.revealed : revealId === id || (role === 'over' && back === id)}
+          leaving={PAGE_TURN ? false : loiLeaving}
+          step={active && revealId === id ? loiFlow.step : 'hemicycle'}
+          holdProps={active ? loiFlow.holdProps : {}}
+          onInfoOpen={showInfo}
+          onRevealLayout={revealLayout}
+          titleActions={titleActions(role)}
+          titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
+          veil={role === 'over' ? turn : undefined}
+          bound={bound}
+        />
+      );
+    }
+    const loi = loisById.get(id);
+    if (loi) {
+      return (
+        <LoiBallot
+          loi={loi}
+          value={loiVotes[id]}
+          revealed={frozen ? !!over?.revealed : revealId === id || (role === 'over' && back === id)}
+          leaving={PAGE_TURN ? false : loiLeaving}
+          step={active && revealId === id ? loiFlow.step : 'hemicycle'}
+          holdProps={active ? loiFlow.holdProps : {}}
+          onInfoOpen={showInfo}
+          onRevealLayout={revealLayout}
+          titleActions={titleActions(role)}
+          titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
+          veil={role === 'over' ? turn : undefined}
+          bound={bound}
+        />
+      );
+    }
+    const p = byId.get(id);
+    if (!p) {
+      return null;
+    }
+    return (
+      <Leaving leaving={!PAGE_TURN && hold?.id === id && hold.phase === 'leaving'} style={styles.sheetWrap}>
+        <PropositionSheet
+          proposition={p}
+          quoteOpen={info?.id === p.id}
+          sweep={sweepOf(p.id)}
+          thematique={getThematique(p.thematiqueId)}
+          onWord={() => setInfo({ id: p.id, tab: 'mots' })}
+          titleActions={titleActions(role)}
+          titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
+          veil={role === 'over' ? turn : undefined}
+          bound={bound}
+          footer={
+            <View {...(role === 'flow' ? infoTarget : null)}>
+              <MoreInfo
+                itemId={p.id}
+                text={p.contexte}
+                source={TYPE_SOURCE_LABELS[p.typeSource]}
+                terms={[p.titre, p.description]}
+                tab={info?.id === p.id ? info.tab : null}
+                onTab={(tab) => setInfo(tab ? { id: p.id, tab } : null)}
+                onOpen={showInfo}
+              />
+            </View>
+          }
+        />
+      </Leaving>
+    );
+  };
 
   if (finished) {
     return (
@@ -284,7 +646,8 @@ export default function VoterScreen() {
           onShare={opinions >= CLASSEMENT_THRESHOLD && ranked > 0 ? () => router.navigate({ pathname: '/cahier', params: { partager: '1' } }) : undefined}
           counter={counter}
         />
-        <EditVoteSheet id={editing} onClose={() => setEditing(null)} />
+        {/* Écran de fin : les noms sont déjà là, la gomme les montre aussi. */}
+        <EditVoteSheet id={editing} blind={false} onClose={() => setEditing(null)} />
       </>
     );
   }
@@ -292,7 +655,7 @@ export default function VoterScreen() {
   return (
     <Screen
       scrollRef={scrollRef}
-      backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id} /> : null}
+      backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id || back === currentLoi.id} /> : null}
       header={
         // Barre fixe : le palier à gauche, les candidats classés à droite, sur une seule piste de progression.
         <View style={styles.bar}>
@@ -303,7 +666,14 @@ export default function VoterScreen() {
         </View>
       }
       // « A voté ! » flotte au-dessus des boutons, là où on vient de voter : son départ ne fait rien bouger.
-      overlay={lastId && !revealId ? <LastVote key={lastId} id={lastId} paused={editing === lastId || tutoActive} onPress={() => setEditing(lastId)} /> : null}
+      overlay={
+        lastId && !revealId ? (
+          <>
+            <LastVote key={lastId} id={lastId} hidden={!!back} paused={editing === lastId || tutoActive || !!back} onPress={() => setEditing(lastId)} />
+            {back && <BackStatus onForward={goForward} disabled={!canForward} />}
+          </>
+        ) : null
+      }
       footer={
         dock && (
           <View {...voteTarget} style={!nextStep && styles.dock}>
@@ -313,66 +683,46 @@ export default function VoterScreen() {
       }>
 
       {/* La feuille au milieu de l'espace libre : une question courte reste près des boutons. */}
-      <View style={styles.stage}>
-        {pause ? (
-          <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/cahier')} onContinue={() => setPausedAt(opinions)} />
-        ) : currentEnjeu ? (
-          <EnjeuBallot
-            key={currentEnjeu.id}
-            enjeu={currentEnjeu}
-            value={enjeuValue}
-            revealed={enjeuRevealed}
-            leaving={loiLeaving}
-            step={loiFlow.step}
-            holdProps={loiFlow.holdProps}
-            onInfoOpen={showInfo}
-            onRevealLayout={() => scrollRef.current?.scrollToEnd({ animated: true })}
-          />
-        ) : currentLoi ? (
-          <LoiBallot
-            key={currentLoi.id}
-            loi={currentLoi}
-            value={loiValue}
-            revealed={loiRevealed}
-            leaving={loiLeaving}
-            step={loiFlow.step}
-            holdProps={loiFlow.holdProps}
-            onInfoOpen={showInfo}
-            onRevealLayout={() => scrollRef.current?.scrollToEnd({ animated: true })}
-          />
-        ) : (
-          current && (
-            <>
-              <Leaving key={current.id} leaving={hold?.phase === 'leaving'} style={styles.sheetWrap}>
-                <PropositionSheet
-                  proposition={current}
-                  quoteOpen={info?.id === current.id}
-                  sweep={hold && hold.phase !== 'button' && hold.value !== UNSURE ? marker : undefined}
-                  thematique={getThematique(current.thematiqueId)}
-                  onWord={() => setInfo({ id: current.id, tab: 'mots' })}
-                  footer={
-                    <View {...infoTarget}>
-                      <MoreInfo
-                        itemId={current.id}
-                        text={current.contexte}
-                        source={TYPE_SOURCE_LABELS[current.typeSource]}
-                        terms={[current.titre, current.description]}
-                        tab={info?.id === current.id ? info.tab : null}
-                        onTab={(tab) => setInfo(tab ? { id: current.id, tab } : null)}
-                        onOpen={showInfo}
-                      />
-                    </View>
-                  }
-                />
-              </Leaving>
+      <GestureHandlerRootView style={styles.stageRoot}>
+        <GestureDetector gesture={pan}>
+          <View
+            // Page posée plus haute que la question dessous : la zone garde sa hauteur, rien ne saute pendant le tour.
+            style={[styles.stage, over && overSize.id === over.id && { minHeight: over.top + overSize.height }]}
+            onLayout={(e) => setStageWidth(e.nativeEvent.layout.width)}>
+            {pause ? (
+              <PauseCard key="pause" opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/cahier')} onContinue={() => setPausedAt(opinions)} />
+            ) : (
+              flowId && (
+                <Page
+                  key={flowId}
+                  turn={turn}
+                  fade={reducedMotion}
+                  covered={!!over && (!reducedMotion || coverReady === over)}
+                  interactive={!back}
+                  onLayout={(e: LayoutChangeEvent) => setFlowTop(e.nativeEvent.layout.y)}>
+                  {pageFor(flowId, 'flow')}
+                </Page>
+              )
+            )}
+            {over && (
+              <Page
+                key={over.id}
+                turn={turn}
+                fade={reducedMotion}
+                over
+                top={over.top}
+                interactive={over.mode === 'back'}
+                onLayout={(e: LayoutChangeEvent) => setOverSize({ id: over.id, height: e.nativeEvent.layout.height })}>
+                {pageFor(over.id, 'over')}
+              </Page>
+            )}
+          </View>
+        </GestureDetector>
+      </GestureHandlerRootView>
 
-            </>
-          )
-        )}
-
-      </View>
-
-      <EditVoteSheet id={editing} onClose={() => setEditing(null)} />
+      {/* Pendant le vote : la page de la question, sans aucun nom. */}
+      <EditVoteSheet id={editing} blind onClose={() => setEditing(null)} />
+      <LiveRegion />
     </Screen>
   );
 }
@@ -390,7 +740,53 @@ function Leaving({ leaving, style, children }: { leaving: boolean; style?: objec
     transform: [{ translateY: -56 * progress.value }, { scale: 1 - 0.06 * progress.value }],
   }));
   return (
-    <Animated.View entering={FadeIn.duration(220)} style={[style, animated]}>
+    <Animated.View entering={PAGE_TURN ? undefined : FadeIn.duration(220)} style={[style, animated]}>
+      {children}
+    </Animated.View>
+  );
+}
+
+// L'opacité reste permise quand les animations sont réduites : un fondu court, sans mouvement.
+const FADE_IN = FadeIn.duration(150).reduceMotion(ReduceMotion.Never);
+const FADE_OUT = FadeOut.duration(150).reduceMotion(ReduceMotion.Never);
+
+// Une page du cahier : à plat dans le flux, ou posée par-dessus et tournée autour de sa reliure, le bord gauche.
+function Page({
+  turn,
+  fade = false,
+  over = false,
+  top = 0,
+  covered = false,
+  interactive,
+  onLayout,
+  children,
+}: {
+  turn: SharedValue<number>;
+  /** Réduire les animations : la question change en fondu de 150 ms, sans rotation. */
+  fade?: boolean;
+  over?: boolean;
+  top?: number;
+  /** Une page est posée par-dessus : à plat, elle cache celle-ci. */
+  covered?: boolean;
+  interactive: boolean;
+  onLayout: (e: LayoutChangeEvent) => void;
+  children: React.ReactNode;
+}) {
+  const style = useAnimatedStyle(() =>
+    over
+      ? { opacity: turn.get() > 0.97 ? 0 : 1, transform: [{ perspective: PERSPECTIVE }, { rotateY: `${-90 * turn.get()}deg` }] }
+      : { opacity: covered && turn.get() < 0.04 ? 0 : 1, transform: [{ perspective: PERSPECTIVE }, { rotateY: '0deg' }] },
+  );
+  return (
+    <Animated.View
+      entering={fade ? FADE_IN : undefined}
+      exiting={fade ? FADE_OUT : undefined}
+      onLayout={onLayout}
+      pointerEvents={interactive ? 'auto' : 'none'}
+      accessibilityElementsHidden={!interactive}
+      importantForAccessibility={interactive ? 'auto' : 'no-hide-descendants'}
+      aria-hidden={!interactive}
+      style={[over && [styles.over, { top }], style]}>
       {children}
     </Animated.View>
   );
@@ -464,6 +860,10 @@ function LoiBallot({
   holdProps,
   onInfoOpen,
   onRevealLayout,
+  titleActions,
+  titleRef,
+  veil,
+  bound = false,
 }: {
   loi: Loi;
   value?: LoiVoteValue;
@@ -474,6 +874,11 @@ function LoiBallot({
   onInfoOpen: (target: View | null) => void;
   /** L'hémicycle s'ouvre sous la question : l'écran défile jusqu'à lui une fois posé. */
   onRevealLayout: () => void;
+  titleActions?: TitleActions;
+  titleRef?: React.Ref<Text>;
+  /** Page qui tourne : ses feuilles prennent un voile d'encre. */
+  veil?: SharedValue<number>;
+  bound?: boolean;
 }) {
   const marker = useMarkOf(loi.id);
   const [detail, setDetail] = useState(false);
@@ -481,7 +886,7 @@ function LoiBallot({
   const hemicycleTarget = useTutoTarget('hemicycle');
   // Lecteur d'écran : le coup de tampon se dit, après l'annonce du vote précédent.
   useEffect(() => {
-    const timer = setTimeout(() => AccessibilityInfo.announceForAccessibility('Scrutin réel du Parlement'), 900);
+    const timer = setTimeout(() => announce('Scrutin réel du Parlement'), 900);
     return () => clearTimeout(timer);
   }, []);
 
@@ -499,6 +904,10 @@ function LoiBallot({
             proposition={{ ref: loi.ref, thematiqueId: loi.thematiqueId, titre: loi.question }}
             thematique={getThematique(loi.thematiqueId)}
             onWord={() => setTab('mots')}
+            titleActions={titleActions}
+            titleRef={titleRef}
+            veil={veil}
+            bound={bound}
             footer={
               <MoreInfo
                 itemId={loi.id}
@@ -521,7 +930,7 @@ function LoiBallot({
               accessibilityRole="button"
               accessibilityLabel={`${loi.titre}, ${loi.ref}`}
               accessibilityHint="Ouvre le détail du scrutin"
-              style={({ pressed }) => [styles.result, pressed && { backgroundColor: Colors.pressed }]}>
+              style={({ pressed }) => [styles.result, bound && styles.bound, pressed && { backgroundColor: Colors.pressed }]}>
               <Hemicycle loi={loi} user={value} markColor={Markers[marker].solid} />
               <View style={styles.outcome}>
                 <View style={styles.outcomeText}>
@@ -533,12 +942,13 @@ function LoiBallot({
                 </View>
                 <Ionicons name="chevron-forward" size={16} color={Colors.graphite} />
               </View>
+              <PageVeil turn={veil} bound={bound} />
             </Pressable>
           </View>
         )}
       </View>
       <Sheet visible={detail} title={loi.ref} onClose={() => setDetail(false)}>
-        {detail && <LoiDetail loi={loi} />}
+        {detail && <LoiDetail loi={loi} anonymous />}
       </Sheet>
     </Leaving>
   );
@@ -554,6 +964,10 @@ function EnjeuBallot({
   holdProps,
   onInfoOpen,
   onRevealLayout,
+  titleActions,
+  titleRef,
+  veil,
+  bound = false,
 }: {
   enjeu: Enjeu;
   value?: VoteValue;
@@ -563,6 +977,11 @@ function EnjeuBallot({
   holdProps: object;
   onInfoOpen: (target: View | null) => void;
   onRevealLayout: () => void;
+  titleActions?: TitleActions;
+  titleRef?: React.Ref<Text>;
+  /** Page qui tourne : ses feuilles prennent un voile d'encre. */
+  veil?: SharedValue<number>;
+  bound?: boolean;
 }) {
   const marker = useMarkOf(enjeu.id);
   const reducedMotion = useReducedMotion();
@@ -581,6 +1000,10 @@ function EnjeuBallot({
               proposition={{ ref: enjeu.ref, thematiqueId: enjeu.thematiqueId, titre: enjeu.question }}
               thematique={getThematique(enjeu.thematiqueId)}
               onWord={() => setTab('mots')}
+              titleActions={titleActions}
+              titleRef={titleRef}
+              veil={veil}
+              bound={bound}
               footer={
                 <View {...infoTarget}>
                   <MoreInfo
@@ -598,7 +1021,7 @@ function EnjeuBallot({
         </View>
         {revealed && value !== undefined && step === 'hemicycle' && (
           <Animated.View entering={reducedMotion ? undefined : FadeIn.duration(FRAME_DRAW_MS / 2)} style={styles.reveal} onLayout={onRevealLayout}>
-            <EnjeuReveal enjeu={enjeu} value={value} />
+            <EnjeuReveal enjeu={enjeu} value={value} veil={veil} bound={bound} />
           </Animated.View>
         )}
       </View>
@@ -709,8 +1132,42 @@ const LAST_VOTE_ENTER = new Keyframe({
   100: { opacity: 1, transform: [{ translateY: 0 }], easing: Easing.out(Easing.exp) },
 }).duration(320);
 
+// Pose le focus du lecteur d'écran sur un titre ; sur le web, le focus du clavier (titre en tabIndex -1).
+function focusOn(title: Text | null) {
+  if (!title) {
+    return;
+  }
+  if (Platform.OS === 'web') {
+    (title as unknown as HTMLElement).focus?.();
+    return;
+  }
+  const node = findNodeHandle(title);
+  if (node) {
+    AccessibilityInfo.setAccessibilityFocus(node);
+  }
+}
+
+// Sur la question ramenée : où l'on est, et la sortie. Un état affiché, pas une astuce : le geste n'est annoncé nulle part.
+function BackStatus({ onForward, disabled }: { onForward: () => void; disabled: boolean }) {
+  const reducedMotion = useReducedMotion();
+  return (
+    <Animated.View entering={reducedMotion ? FADE_IN : LAST_VOTE_ENTER} style={[styles.last, styles.backRow]}>
+      <Text style={[Type.label, styles.muted, styles.backLabel]}>Question précédente</Text>
+      <Pressable
+        onPress={onForward}
+        disabled={disabled}
+        accessibilityRole="button"
+        accessibilityLabel="Revenir à la question en cours"
+        hitSlop={{ top: 0, bottom: 0, left: Spacing.one, right: Spacing.one }}
+        style={({ pressed }) => [styles.backLink, pressed && { backgroundColor: Colors.pressed }]}>
+        <Text style={[Type.labelStrong, styles.link]}>Revenir à la question en cours</Text>
+      </Pressable>
+    </Animated.View>
+  );
+}
+
 // Signature : le surligneur remplit la ligne de gauche à droite, puis se retire avec le temps qui reste pour corriger.
-function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPress: () => void }) {
+function LastVote({ id, paused, hidden = false, onPress }: { id: string; paused: boolean; hidden?: boolean; onPress: () => void }) {
   const votes = useVotesStore((s) => s.votes);
   const loiVotes = useVotesStore((s) => s.loiVotes);
   const reducedMotion = useReducedMotion();
@@ -752,7 +1209,12 @@ function LastVote({ id, paused, onPress }: { id: string; paused: boolean; onPres
     <Animated.View
       entering={reducedMotion ? undefined : LAST_VOTE_ENTER}
       exiting={reducedMotion ? undefined : FadeOut.duration(220)}
-      style={styles.last}>
+      // Question ramenée : « A voté ! » s'efface sans se démonter, il ne rejoue pas son entrée au retour.
+      pointerEvents={hidden ? 'none' : 'auto'}
+      accessibilityElementsHidden={hidden}
+      importantForAccessibility={hidden ? 'no-hide-descendants' : 'auto'}
+      aria-hidden={hidden}
+      style={[styles.last, hidden && styles.hidden]}>
       <Pressable
         {...target}
         onPress={onPress}
@@ -928,9 +1390,56 @@ const styles = StyleSheet.create({
   bar: {
     gap: Spacing.half,
   },
+  stageRoot: {
+    flexGrow: 1,
+  },
   stage: {
     flexGrow: 1,
     justifyContent: 'center',
+  },
+  // La page posée tourne autour de son bord gauche, comme la reliure d'un cahier.
+  over: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    transformOrigin: 'left center',
+    backfaceVisibility: 'hidden',
+  },
+  // Caché sans se démonter : sort du flux, la ligne d'état prend sa place.
+  hidden: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    opacity: 0,
+  },
+  // Une ligne dès 375 pt ; police agrandie, la sortie passe dessous plutôt que d'être coupée.
+  backRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    columnGap: Spacing.half,
+    minHeight: 44,
+    paddingLeft: 12,
+  },
+  backLabel: {
+    paddingVertical: Spacing.half,
+  },
+  backLink: {
+    minHeight: 44,
+    justifyContent: 'center',
+    paddingHorizontal: Spacing.one,
+    borderRadius: Radius.medium,
+  },
+  link: {
+    color: Colors.ink,
+    textDecorationLine: 'underline',
+    textDecorationColor: Colors.graphite,
+  },
+  // Pendant le tour : coins carrés côté reliure.
+  bound: {
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
   },
   // Les candidats classés, sur une pastille neutre : un autre chiffre que le palier.
   panels: {

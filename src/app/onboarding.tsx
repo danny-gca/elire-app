@@ -476,6 +476,7 @@ function EraserDemo({
       </Pressable>
       <EditVoteSheet
         id={null}
+        blind
         visible={editing}
         onClose={() => {
           setEditing(false);

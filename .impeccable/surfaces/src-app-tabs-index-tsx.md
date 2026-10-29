@@ -25,7 +25,7 @@ FIRST VIEWPORT: Voter. Barre compacte fixe (pas de grand titre, l'onglet le dit)
 
 FORM: Cahier Seyès / copie double, candidat 4 de la liste ordonnée ; raises : mots-repères collants (lexique), états qui restylent la ligne (tableau à palettes), mobilier identique par candidat + panneau électoral numéroté pour le Classement (catalogue + choix utilisateur), deux tailles de texte (indicateur), numéros stables P-xxx / L-xx (pochette), jaune réservé aux marques (signalétique). Seed key 287847d2.
 
-Signature move: le trait de surligneur. Au vote, un trait tiré au hasard sur le bouton choisi (droit, diagonal ou ondulé, parfois hors du cadre), puis le titre est balayé de gauche à droite et la feuille remonte se ranger en « Dernier vote » (coupé si Réduire les animations) ; le trait garde sa couleur et réapparaît partout où la proposition est citée.
+Signature move: le trait de surligneur. Au vote, un trait tiré au hasard sur le bouton choisi (droit, diagonal ou ondulé, parfois hors du cadre), puis le titre est balayé de gauche à droite et la page du cahier se tourne autour de sa reliure, le bord gauche, sur la question suivante déjà dessous, pendant que « A voté ! » apparaît (coupé si Réduire les animations) ; le même geste, à l'envers, ramène la question précédente d'un cran, sans être annoncé ; le trait garde sa couleur et réapparaît partout où la proposition est citée.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 

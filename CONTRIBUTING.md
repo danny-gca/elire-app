@@ -40,7 +40,12 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 10. **Enjeux communs** : une proposition n'entre dans un enjeu que si elle porte la même idée (`pour`) ou dit explicitement l'inverse (`contre` : supprimer, quitter, démanteler) ; un silence n'est jamais une position. Une proposition dans un enjeu au plus, au moins 2 candidats, une position par candidat, le thème de l'enjeu pour toutes. Le build bloque sinon.
 11. **Votes au Parlement** : `individuel` seulement si le candidat a voté lui-même ; sinon `groupe_parti` avec le groupe (`groupe`, `groupeNom`).
 12. **Questions directes et sans double négation** : toute question posée à l'aveugle (`lois.json`, `enjeux.json`) doit être formulée de façon directe et affirmative sur le fond. Interdiction stricte des tournures de rejet procédural (ex: « Rejet de... ») et des doubles négations où voter « Contre » reviendrait à être favorable à la mesure. Voter « Pour » doit signifier sans ambiguïté soutenir la mesure. Si le scrutin parlementaire officiel était une motion de rejet, la question et les positions des candidats doivent être normalisées sur le fond.
-13. **Lisible d'un coup d'œil** : un titre de proposition et une question commune font au moins 8 mots, une question de scrutin au moins 10 (`MIN_WORDS` dans `src/lib/wording.ts`). On doit y lire le sens du changement (plus, moins, plus tard, à qui) sans ouvrir les tiroirs : « Reculer l'âge de départ à la retraite » ne dit ni dans quel sens ni pour qui. Le build le signale, et bloque en `--strict`.
+13. **Lisible d'un coup d'œil** : un titre de proposition et une question commune font au moins 8 mots, une question de scrutin au moins 10 (`MIN_WORDS` dans `src/lib/wording.ts`). On doit y lire le sens du changement (plus, moins, plus tard, à qui) sans ouvrir les tiroirs : « Reculer l'âge de départ à la retraite » ne dit ni dans quel sens ni pour qui. Le build le signale, et bloque en `--strict`. On vérifie aussi, sans jamais dépasser la source (règle 6) :
+    - **où et qui** : le titre dit qui agit et sur quel périmètre (« en France », « chaque école », « l'État ») quand ce n'est pas évident ;
+    - **l'ampleur** : un chiffre a sa base (net ou brut, par mois, d'ici quand, « jusqu'à ») ; si la source ne la donne pas, le contexte le dit (« le dépliant ne dit pas si les 500 euros sont nets ou bruts ») ;
+    - **le mot seul** : un terme métier (nasse, décote, peine plancher) est dit en clair ou ajouté à `data/mots.json` ;
+    - **le contexte** donne les modalités absentes du titre, pas seulement la page ;
+    - **l'enjeu** d'un scrutin dit ce que le texte change concrètement (chiffres, et ce qu'il ajoute à un texte voisin déjà voté), pas seulement son nom.
 
 ### Entrée d'un candidat
 

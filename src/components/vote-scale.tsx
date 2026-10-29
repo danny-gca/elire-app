@@ -26,10 +26,13 @@ export function VoteScale({ value, onVote, disabled, stroke }: VoteScaleProps) {
         key={choice.value}
         onPress={(e) => onVote(choice.value, pointOf(e))}
         disabled={disabled}
-        accessibilityRole="radio"
+        accessibilityRole="button"
         accessibilityLabel={choice.sign ? `${choice.label}, ${choice.sign}` : choice.label}
         accessibilityHint={wide ? 'Passe la question sans compter dans le score' : undefined}
+        // Des boutons, pas des radios : les flèches tournent la page au lieu de passer d'un choix à l'autre.
         accessibilityState={{ selected, disabled: !!disabled }}
+        // Web : react-native-web ne lit plus accessibilityState, le choix passe par aria-pressed.
+        aria-pressed={selected}
         style={({ pressed }) => [
           styles.option,
           wide && styles.unsure,
@@ -46,7 +49,7 @@ export function VoteScale({ value, onVote, disabled, stroke }: VoteScaleProps) {
     );
   };
   return (
-    <View style={styles.root} accessibilityRole="radiogroup" accessibilityLabel="Votre avis">
+    <View style={styles.root} role="group" accessibilityLabel="Votre avis">
       <View style={styles.row}>{VOTE_CHOICES.map((choice) => option(choice))}</View>
       {option(UNSURE_CHOICE, true)}
     </View>

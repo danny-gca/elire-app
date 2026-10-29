@@ -24,9 +24,12 @@ export function LoiVoteScale({ value, onVote, disabled, stroke }: LoiVoteScalePr
         key={choice.value}
         onPress={(e) => onVote(choice.value, pointOf(e))}
         disabled={disabled}
-        accessibilityRole="radio"
+        accessibilityRole="button"
         accessibilityLabel={choice.label}
+        // Des boutons, pas des radios : les flèches tournent la page au lieu de passer d'un choix à l'autre.
         accessibilityState={{ selected, disabled: !!disabled }}
+        // Web : react-native-web ne lit plus accessibilityState, le choix passe par aria-pressed.
+        aria-pressed={selected}
         style={({ pressed }) => [
           styles.option,
           wide && styles.wide,
@@ -42,7 +45,7 @@ export function LoiVoteScale({ value, onVote, disabled, stroke }: LoiVoteScalePr
     );
   };
   return (
-    <View style={styles.root} accessibilityRole="radiogroup" accessibilityLabel="Votre vote sur ce texte">
+    <View style={styles.root} role="group" accessibilityLabel="Votre vote sur ce texte">
       <View style={styles.row}>{[CONTRE, POUR].map((c) => option(c))}</View>
       {option(ABSTENTION, true)}
     </View>

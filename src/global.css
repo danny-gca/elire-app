@@ -28,6 +28,11 @@ html[data-marker='bleu'] ::selection { background: rgba(169, 211, 245, 0.55); }
   outline-offset: 2px;
 }
 
+/* Titre qui reçoit le focus après un retour : il n'est pas une commande, pas d'anneau. */
+[data-focus-title]:focus-visible {
+  outline: none;
+}
+
 input, textarea {
   caret-color: #1C1E21;
   -webkit-user-select: text;

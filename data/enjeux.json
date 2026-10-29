@@ -3,7 +3,7 @@
     "id": "nouveaux-reacteurs",
     "thematiqueId": "environnement",
     "question": "Construire de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà",
-    "enjeu": "Lancer la construction de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà.",
+    "enjeu": "Lancer en France la construction de réacteurs nucléaires de nouvelle génération (EPR), en plus de ceux qui fonctionnent déjà.",
     "positions": [
       { "propositionId": "prop-ez-7", "sens": "pour" },
       { "propositionId": "prop-fro-2", "sens": "pour" }
@@ -154,16 +154,6 @@
     "positions": [
       { "propositionId": "prop-fro-3", "sens": "pour" },
       { "propositionId": "prop-jlm-8", "sens": "pour" }
-    ]
-  },
-  {
-    "id": "prix-minimum-agricole",
-    "thematiqueId": "agriculture",
-    "question": "Garantir aux agriculteurs un prix minimum pour leurs produits",
-    "enjeu": "Empêcher que les agriculteurs vendent leur production en dessous d'un prix fixé à partir de ce qu'elle leur coûte.",
-    "positions": [
-      { "propositionId": "prop-fro-4", "sens": "pour" },
-      { "propositionId": "prop-jl-1", "sens": "pour" }
     ]
   },
   {
