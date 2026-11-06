@@ -2,6 +2,7 @@
   {
     "id": "mineurs-reseaux-sociaux-2026",
     "thematiqueId": "numerique",
+    "sujetId": "reseaux-sociaux",
     "nature": "proposition_loi",
     "titre": "Loi visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux (texte de la commission mixte paritaire)",
     "question": "Faut-il interdire l'accès aux réseaux sociaux aux moins de 15 ans, même avec l'accord d'un parent ?",
@@ -97,6 +98,7 @@
   {
     "id": "aide-a-mourir-2026",
     "thematiqueId": "sante",
+    "sujetId": "fin-de-vie",
     "nature": "proposition_loi",
     "titre": "Proposition de loi relative au droit à l'aide à mourir (lecture définitive)",
     "question": "Faut-il créer un droit à l'aide à mourir pour les malades incurables en fin de vie qui le demandent ?",
@@ -190,6 +192,7 @@
   {
     "id": "plfss-2026",
     "thematiqueId": "economie",
+    "sujetId": "retraites",
     "nature": "projet_loi",
     "titre": "Projet de loi de financement de la sécurité sociale pour 2026 (lecture définitive)",
     "question": "Faut-il adopter le budget de la Sécurité sociale 2026, qui suspend la réforme des retraites jusqu'en 2028 ?",
@@ -283,6 +286,7 @@
   {
     "id": "confiance-gouvernement-2025",
     "thematiqueId": "institutions",
+    "sujetId": "depenses-dette",
     "nature": "declaration_gouvernement",
     "titre": "Vote de confiance sur la déclaration de politique générale du Gouvernement de M. François Bayrou",
     "question": "Faut-il accorder la confiance au gouvernement sur son plan de réduction de la dette publique ?",
@@ -376,6 +380,7 @@
   {
     "id": "loi-contraintes-agriculteurs-2025",
     "thematiqueId": "agriculture",
+    "sujetId": "pesticides",
     "nature": "proposition_loi",
     "titre": "Loi visant à lever les contraintes à l'exercice du métier d'agriculteur (texte de la commission mixte paritaire)",
     "question": "Faut-il réautoriser un insecticide interdit et assouplir les règles pour les élevages et l'irrigation ?",
@@ -469,6 +474,7 @@
   {
     "id": "antisemitisme-enseignement-superieur-2025",
     "thematiqueId": "education",
+    "sujetId": "etudiants",
     "nature": "proposition_loi",
     "titre": "Loi relative à la lutte contre l'antisémitisme dans l'enseignement supérieur (texte de la commission mixte paritaire)",
     "question": "Faut-il renforcer la prévention et les sanctions contre l'antisémitisme et le racisme à l'université ?",
@@ -556,6 +562,7 @@
   {
     "id": "programmation-energie-climat-2025",
     "thematiqueId": "environnement",
+    "sujetId": "eolien-solaire",
     "nature": "proposition_loi",
     "titre": "Proposition de loi portant programmation nationale pour l'énergie et le climat pour les années 2025 à 2035",
     "question": "Faut-il adopter le plan énergie-climat 2025-2035, modifié pour geler les nouveaux projets éoliens et solaires ?",
@@ -649,6 +656,7 @@
   {
     "id": "loi-narcotrafic-2025",
     "thematiqueId": "securite",
+    "sujetId": "trafic-de-drogue",
     "nature": "proposition_loi",
     "titre": "Loi visant à sortir la France du piège du narcotrafic (texte de la commission mixte paritaire)",
     "question": "Faut-il créer un parquet spécialisé et des prisons de haute sécurité contre le trafic de drogue ?",
@@ -710,7 +718,7 @@
         "groupeNom": "Horizons & Indépendants"
       },
       "marine-tondelier": {
-        "position": "contre",
+        "position": "abstention",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 0 pour, 4 contre, 25 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
@@ -744,6 +752,7 @@
   {
     "id": "motion-censure-barnier-2024",
     "thematiqueId": "institutions",
+    "sujetId": "parlement-gouvernement",
     "nature": "motion_censure",
     "titre": "Motion de censure contre le gouvernement Michel Barnier (PLFSS 2025)",
     "question": "Faut-il renverser le gouvernement, qui a fait passer sans vote le budget de la Sécurité sociale 2025 ?",
@@ -841,6 +850,7 @@
   {
     "id": "debat-accord-ue-mercosur-2024",
     "thematiqueId": "agriculture",
+    "sujetId": "accord-ue-mercosur",
     "nature": "declaration_gouvernement",
     "titre": "Rejet de l'accord commercial de libre-échange UE-Mercosur",
     "question": "Faut-il que la France bloque l'accord de libre-échange avec l'Amérique du Sud (Mercosur), tel qu'il a été négocié ?",
@@ -934,6 +944,7 @@
   {
     "id": "rejet-recettes-plf-2025",
     "thematiqueId": "economie",
+    "sujetId": "impots-patrimoine",
     "nature": "projet_loi",
     "titre": "Rejet de la partie recettes du Projet de Loi de Finances 2025",
     "question": "Faut-il voter les impôts du budget 2025, modifiés pour rétablir l'impôt sur la fortune et taxer les superprofits ?",
@@ -1027,6 +1038,7 @@
   {
     "id": "regulation-meubles-tourisme-airbnb-2024",
     "thematiqueId": "logement",
+    "sujetId": "logements-vacants-loyers",
     "nature": "proposition_loi",
     "titre": "Régulation des meublés de tourisme et locations Airbnb (Loi Le Meur)",
     "question": "Faut-il donner plus de pouvoirs aux maires pour limiter les locations touristiques de type Airbnb ?",
@@ -1118,89 +1130,9 @@
     }
   },
   {
-    "id": "abrogation-retraite-64-ans-2024",
-    "thematiqueId": "travail",
-    "nature": "proposition_loi",
-    "titre": "Proposition de loi d'abrogation de la retraite à 64 ans (Niche RN)",
-    "question": "Faut-il annuler la réforme qui a reculé l'âge de départ à la retraite de 62 à 64 ans ?",
-    "enjeu": "L'âge légal de départ reviendrait de 64 à 62 ans, et la durée de cotisation pour une retraite à taux plein de 43 à 42 années, en annulant les dernières réformes.",
-    "resume": "Texte déposé lors de la niche parlementaire du Rassemblement National visant à annuler le recul de l'âge légal de départ à la retraite à 64 ans. Rejeté par 197 voix contre 119.",
-    "chambre": "assemblee_nationale",
-    "dateVote": "2024-10-31",
-    "statut": "rejetee",
-    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-    "votes": {
-      "marine-le-pen": {
-        "position": "pour",
-        "typeVote": "individuel",
-        "explication": "A voté pour.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
-      },
-      "fabien-roussel": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 9 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-        "groupe": "GDR",
-        "groupeNom": "Gauche Démocrate et Républicaine"
-      },
-      "gabriel-attal": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
-      },
-      "bruno-retailleau": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 13 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-        "groupe": "DR",
-        "groupeNom": "Droite Républicaine"
-      },
-      "edouard-philippe": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 19 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-        "groupe": "HOR",
-        "groupeNom": "Horizons & Indépendants"
-      },
-      "marine-tondelier": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 26 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "raphael-glucksmann": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 1 pour, 51 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-        "groupe": "SOC",
-        "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217"
-      },
-      "olivier-becht": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 58 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/217",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
-      }
-    }
-  },
-  {
     "id": "loi-orientation-agricole-2024",
     "thematiqueId": "agriculture",
+    "sujetId": "statut-agriculture",
     "nature": "projet_loi",
     "titre": "Loi d'orientation pour la souveraineté alimentaire et le renouvellement agricole",
     "question": "Faut-il faire de l'agriculture un « intérêt général majeur » et faciliter l'installation des jeunes agriculteurs ?",
@@ -1300,6 +1232,7 @@
   {
     "id": "degel-corps-electoral-nouvelle-caledonie-2024",
     "thematiqueId": "institutions",
+    "sujetId": "nouvelle-caledonie",
     "nature": "projet_loi",
     "titre": "Réforme constitutionnelle sur le dégel du corps électoral en Nouvelle-Calédonie",
     "question": "Faut-il ouvrir les élections provinciales de Nouvelle-Calédonie aux habitants installés depuis au moins 10 ans ?",
@@ -1395,6 +1328,7 @@
   {
     "id": "pacte-asile-migration-ue-2024",
     "thematiqueId": "international",
+    "sujetId": "immigration-asile",
     "nature": "texte_europeen",
     "titre": "Pacte européen sur la migration et l'asile",
     "question": "Faut-il adopter des règles européennes pour répartir les demandeurs d'asile et filtrer les arrivées aux frontières ?",
@@ -1463,6 +1397,7 @@
   {
     "id": "loi-sren-numerique-2024",
     "thematiqueId": "numerique",
+    "sujetId": "reseaux-sociaux",
     "nature": "projet_loi",
     "titre": "Loi visant à sécuriser et réguler l'espace numérique (Loi SREN)",
     "question": "Faut-il pouvoir bannir des réseaux sociaux les auteurs de cyberharcèlement et vérifier l'âge sur les sites pour adultes ?",
@@ -1564,6 +1499,7 @@
   {
     "id": "ppl-interdiction-pfas-2024",
     "thematiqueId": "environnement",
+    "sujetId": "polluants-eternels",
     "nature": "proposition_loi",
     "titre": "Interdiction des polluants éternels (PFAS) dans les biens de consommation",
     "question": "Faut-il interdire les polluants éternels (PFAS) dans les cosmétiques et les vêtements dès 2026 ?",
@@ -1657,53 +1593,9 @@
     }
   },
   {
-    "id": "rejet-ceta-senat-2024",
-    "thematiqueId": "agriculture",
-    "nature": "projet_loi",
-    "titre": "Rejet de la ratification du traité commercial UE-Canada (CETA)",
-    "question": "Faut-il ratifier l'accord commercial entre l'Union européenne et le Canada (CETA) ?",
-    "enjeu": "Le Sénat vote l'article qui autorise la ratification (l'approbation définitive) de l'accord de libre-échange avec le Canada : moins de droits de douane, marchés publics ouverts. Appliqué en partie depuis 2017.",
-    "resume": "Vote historique au Sénat rejetant par 211 voix contre 44 l'article 1er ratifiant l'accord commercial CETA, via une alliance transpartisane entre sénateurs de droite et de gauche protégeant l'élevage.",
-    "chambre": "senat",
-    "dateVote": "2024-03-21",
-    "statut": "rejetee",
-    "sourceOfficielleUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
-    "votes": {
-      "bruno-retailleau": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "Président du groupe Les Républicains au Sénat, a voté contre.",
-        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html"
-      },
-      "fabien-roussel": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Le groupe communiste, qui a fait inscrire le texte à l'ordre du jour, a voté contre.",
-        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
-        "groupe": "CRCE-K",
-        "groupeNom": "Communiste Républicain Citoyen et Écologiste - Kanaky"
-      },
-      "marine-tondelier": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Les sénateurs écologistes ont voté contre.",
-        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
-        "groupe": "GEST",
-        "groupeNom": "Écologiste - Solidarité et Territoires"
-      },
-      "gabriel-attal": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Les sénateurs du groupe présidentiel (RDPI) ont voté pour.",
-        "sourceUrl": "https://www.senat.fr/scrutin-public/2023/scr2023-159.html",
-        "groupe": "RDPI",
-        "groupeNom": "Rassemblement des démocrates, progressistes et indépendants"
-      }
-    }
-  },
-  {
     "id": "ppl-anti-fast-fashion-2024",
     "thematiqueId": "environnement",
+    "sujetId": "mode-ultra-ephemere",
     "nature": "proposition_loi",
     "titre": "Régulation environnementale de l'industrie textile et de la Fast-Fashion",
     "question": "Faut-il taxer la mode ultra-éphémère (fast fashion) et interdire sa publicité ?",
@@ -1799,6 +1691,7 @@
   {
     "id": "reglement-europeen-ia-act-2024",
     "thematiqueId": "numerique",
+    "sujetId": "intelligence-artificielle",
     "nature": "texte_europeen",
     "titre": "Règlement européen sur l'Intelligence Artificielle (AI Act)",
     "question": "Faut-il encadrer l'intelligence artificielle en Europe selon son niveau de risque ?",
@@ -1843,6 +1736,7 @@
   {
     "id": "accord-securite-ukraine-2024",
     "thematiqueId": "international",
+    "sujetId": "ukraine",
     "nature": "declaration_gouvernement",
     "titre": "Accord bilatéral de sécurité et soutien militaire à l'Ukraine",
     "question": "Faut-il approuver l'accord de sécurité avec l'Ukraine, qui prévoit 3 milliards d'euros d'aide militaire en 2024 ?",
@@ -1942,6 +1836,7 @@
   {
     "id": "loi-constitutionnelle-ivg-2024",
     "thematiqueId": "societe",
+    "sujetId": "bioethique",
     "nature": "projet_loi",
     "titre": "Inscription de l'interruption volontaire de grossesse (IVG) dans la Constitution",
     "question": "Faut-il inscrire dans la Constitution la liberté de recourir à l'IVG ?",
@@ -2025,6 +1920,7 @@
   {
     "id": "loi-immigration-2023",
     "thematiqueId": "securite",
+    "sujetId": "immigration-asile",
     "nature": "projet_loi",
     "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
     "question": "Faut-il durcir les règles de l'immigration et faciliter l'expulsion des étrangers condamnés ?",
@@ -2118,6 +2014,7 @@
   {
     "id": "loi-valletoux-acces-soins-2023",
     "thematiqueId": "sante",
+    "sujetId": "acces-aux-soins",
     "nature": "proposition_loi",
     "titre": "Loi pour l'amélioration de l'accès aux soins et la lutte contre les déserts médicaux",
     "question": "Pour lutter contre les déserts médicaux, faut-il limiter l'intérim et élargir les missions des soignants non médecins ?",
@@ -2203,6 +2100,7 @@
   {
     "id": "loi-plein-emploi-france-travail-2023",
     "thematiqueId": "travail",
+    "sujetId": "rsa",
     "nature": "projet_loi",
     "titre": "Loi pour le plein emploi : création de France Travail et conditionnement du RSA",
     "question": "Faut-il demander 15 heures d'activité par semaine aux allocataires du RSA ?",
@@ -2294,6 +2192,7 @@
   {
     "id": "loi-programmation-militaire-2024-2030",
     "thematiqueId": "international",
+    "sujetId": "defense",
     "nature": "projet_loi",
     "titre": "Loi de programmation militaire 2024-2030 (413 milliards d'euros)",
     "question": "Faut-il consacrer 413 milliards d'euros aux armées de 2024 à 2030 ?",
@@ -2381,95 +2280,9 @@
     }
   },
   {
-    "id": "loi-majorite-numerique-2023",
-    "thematiqueId": "numerique",
-    "nature": "proposition_loi",
-    "titre": "Instauration de la majorité numérique à 15 ans et régulation des réseaux sociaux",
-    "question": "Faut-il exiger l'accord des parents pour qu'un moins de 15 ans s'inscrive sur un réseau social ?",
-    "enjeu": "Les réseaux sociaux devraient vérifier l'âge de leurs utilisateurs et obtenir une autorisation parentale avant 15 ans.",
-    "resume": "Loi imposant aux plateformes de réseaux sociaux (TikTok, Snapchat, Instagram) de vérifier l'âge des internautes et d'exiger une autorisation parentale pour les mineurs de moins de 15 ans.",
-    "chambre": "assemblee_nationale",
-    "dateVote": "2023-06-28",
-    "statut": "adoptee",
-    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-    "votes": {
-      "jean-luc-melenchon": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 21 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "LFI-NUPES",
-        "groupeNom": "La France insoumise - Nouvelle Union Populaire écologique et sociale"
-      },
-      "marine-le-pen": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 36 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "RN",
-        "groupeNom": "Rassemblement National"
-      },
-      "fabien-roussel": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 4 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "GDR-NUPES",
-        "groupeNom": "Gauche démocrate et républicaine - NUPES"
-      },
-      "gabriel-attal": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 61 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "RE",
-        "groupeNom": "Renaissance"
-      },
-      "bruno-retailleau": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 18 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "LR",
-        "groupeNom": "Les Républicains"
-      },
-      "edouard-philippe": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "HOR",
-        "groupeNom": "Horizons et apparentés"
-      },
-      "marine-tondelier": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 5 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
-      },
-      "raphael-glucksmann": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 4 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "SOC",
-        "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 5 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2075",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
-      }
-    }
-  },
-  {
     "id": "relance-nucleaire-epr-2023",
     "thematiqueId": "environnement",
+    "sujetId": "nucleaire",
     "nature": "projet_loi",
     "titre": "Loi d'accélération des procédures pour la relance du nucléaire (6 EPR2)",
     "question": "Faut-il simplifier les procédures pour construire rapidement 6 nouveaux réacteurs nucléaires ?",
@@ -2563,6 +2376,7 @@
   {
     "id": "loi-anti-squat-kasbarian-2023",
     "thematiqueId": "logement",
+    "sujetId": "squat-impayes",
     "nature": "proposition_loi",
     "titre": "Loi visant à protéger les logements contre l'occupation illicite (Loi Kasbarian-Bergé)",
     "question": "Faut-il tripler les peines contre le squat et accélérer l'expulsion des locataires qui ne paient pas ?",
@@ -2656,6 +2470,7 @@
   {
     "id": "videosurveillance-ia-jo-2024",
     "thematiqueId": "securite",
+    "sujetId": "surveillance",
     "nature": "projet_loi",
     "titre": "Expérimentation de la vidéosurveillance algorithmique et IA (Loi JO 2024)",
     "question": "Faut-il tester des caméras de surveillance avec intelligence artificielle dans l'espace public ?",
@@ -2743,6 +2558,7 @@
   {
     "id": "loi-retraites-2023",
     "thematiqueId": "economie",
+    "sujetId": "retraites",
     "nature": "projet_loi",
     "titre": "Réforme des retraites : recul de l'âge légal à 64 ans",
     "question": "Faut-il reculer l'âge légal de départ à la retraite de 62 à 64 ans ?",
@@ -2818,6 +2634,7 @@
   {
     "id": "repas-etudiant-1-euro-2023",
     "thematiqueId": "education",
+    "sujetId": "etudiants",
     "nature": "proposition_loi",
     "titre": "Proposition de loi instaurant le repas CROUS à 1 euro pour tous les étudiants",
     "question": "Faut-il étendre le repas à 1 euro au restaurant universitaire à tous les étudiants ?",
@@ -2911,6 +2728,7 @@
   {
     "id": "loi-energies-renouvelables-2023",
     "thematiqueId": "environnement",
+    "sujetId": "eolien-solaire",
     "nature": "projet_loi",
     "titre": "Accélération de la production d'énergies renouvelables",
     "question": "Faut-il simplifier les procédures pour développer le solaire et l'éolien ?",
@@ -3006,6 +2824,7 @@
   {
     "id": "climat-resilience-2021",
     "thematiqueId": "environnement",
+    "sujetId": "climat-emissions",
     "nature": "projet_loi",
     "titre": "Projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
     "question": "Faut-il interdire certains vols intérieurs et la location des logements les plus mal isolés ?",
@@ -3079,6 +2898,7 @@
   {
     "id": "principes-republique-2021",
     "thematiqueId": "societe",
+    "sujetId": "laicite",
     "nature": "projet_loi",
     "titre": "Projet de loi confortant le respect des principes de la République",
     "question": "Faut-il encadrer l'instruction en famille et renforcer le contrôle des associations et des cultes ?",
@@ -3158,6 +2978,7 @@
   {
     "id": "securite-globale-2020",
     "thematiqueId": "securite",
+    "sujetId": "surveillance",
     "nature": "proposition_loi",
     "titre": "Proposition de loi relative à la sécurité globale",
     "question": "Faut-il pénaliser la diffusion malveillante d'images de policiers et autoriser les drones de surveillance ?",
@@ -3237,6 +3058,7 @@
   {
     "id": "bioethique-pma-2019",
     "thematiqueId": "societe",
+    "sujetId": "bioethique",
     "nature": "projet_loi",
     "titre": "Projet de loi relatif à la bioéthique (première lecture)",
     "question": "Faut-il ouvrir la procréation médicalement assistée (PMA) aux couples de femmes et aux femmes seules ?",
@@ -3310,6 +3132,7 @@
   {
     "id": "ratification-ceta-an-2019",
     "thematiqueId": "international",
+    "sujetId": "accords-libre-echange",
     "nature": "projet_loi",
     "titre": "Projet de loi autorisant la ratification de l'accord économique et commercial global UE-Canada (CETA)",
     "question": "Faut-il ratifier l'accord commercial entre l'Union européenne et le Canada (CETA) ?",
@@ -3389,6 +3212,7 @@
   {
     "id": "ecole-de-la-confiance-2019",
     "thematiqueId": "education",
+    "sujetId": "apprentissages-ecole",
     "nature": "projet_loi",
     "titre": "Projet de loi pour une école de la confiance",
     "question": "Faut-il avancer l'âge de l'instruction obligatoire de 6 ans à 3 ans ?",
@@ -3456,6 +3280,7 @@
   {
     "id": "loi-asile-immigration-2018",
     "thematiqueId": "securite",
+    "sujetId": "immigration-asile",
     "nature": "projet_loi",
     "titre": "Projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie",
     "question": "Faut-il accélérer le traitement des demandes d'asile et allonger la rétention des étrangers en situation irrégulière ?",
@@ -3529,6 +3354,7 @@
   {
     "id": "ordonnances-travail-2017",
     "thematiqueId": "travail",
+    "sujetId": "contrat-licenciement",
     "nature": "projet_loi",
     "titre": "Projet de loi ratifiant les ordonnances pour le renforcement du dialogue social",
     "question": "Faut-il plafonner les indemnités pour licenciement abusif et donner la priorité aux accords d'entreprise ?",
@@ -3594,6 +3420,776 @@
         "typeVote": "individuel",
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
+      }
+    }
+  },
+  {
+    "id": "etiquetage-origine-aliments-2025",
+    "thematiqueId": "agriculture",
+    "sujetId": "origine-des-aliments",
+    "nature": "proposition_loi",
+    "titre": "Article premier de la proposition de loi visant à rendre systématique l'information du consommateur sur l'origine des denrées alimentaires par le moyen de l'étiquetage (première lecture)",
+    "question": "Faut-il obliger à indiquer sur l'étiquette le pays d'origine de tous les produits alimentaires, bruts ou transformés ?",
+    "enjeu": "Pays d'origine affiché pour tout produit agricole, alimentaire ou de la mer, brut ou transformé, ainsi que l'origine de l'ingrédient principal et de tout ingrédient pesant 10 % ou plus du produit.",
+    "resume": "Article premier rejeté par 162 voix contre 149 ; le texte, vidé, a ensuite été rejeté par 174 voix contre 149.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2025-10-30",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 1 pour, 38 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 2 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 15 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 1 pour, 4 contre, 2 abstentions.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 20 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 47 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 20 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 43 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "nationalisation-arcelormittal-2026",
+    "thematiqueId": "economie",
+    "sujetId": "etat-actionnaire",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi visant à la nationalisation d'ArcelorMittal France afin de préserver la souveraineté industrielle de la France (deuxième lecture)",
+    "question": "Faut-il que l'État rachète toutes les actions d'ArcelorMittal France pour garder une production d'acier en France ?",
+    "enjeu": "L'État deviendrait propriétaire d'ArcelorMittal France, environ 15 400 salariés sur une quarantaine de sites dont les hauts-fourneaux de Dunkerque et Fos-sur-Mer ; une commission fixerait le prix.",
+    "resume": "Adoptée par 106 voix contre 49, en deuxième lecture après un rejet au Sénat.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-06-11",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 45 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380"
+      },
+      "marine-le-pen": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 45 abstentions.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 2 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 7 contre, 2 abstentions.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 25 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "holding-audiovisuel-public-2025",
+    "thematiqueId": "societe",
+    "sujetId": "culture-audiovisuel",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi relative à la réforme de l'audiovisuel public et à la souveraineté audiovisuelle (première lecture)",
+    "question": "Faut-il réunir France Télévisions, Radio France et l'Institut national de l'audiovisuel sous une même direction ?",
+    "enjeu": "Création au 1er janvier 2026 d'une société détenue à 100 % par l'État, France Médias, qui coiffe France Télévisions, Radio France et l'Institut national de l'audiovisuel, avec un président unique.",
+    "resume": "Rejetée d'emblée : motion de rejet préalable adoptée par 94 voix contre 38.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2025-06-30",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 37 pour, 0 contre, donc contre la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 16 pour, 0 contre, donc contre la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 2 pour, 0 contre, donc contre la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté contre la motion de rejet, donc pour la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 0 pour, 6 contre, donc pour la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 0 pour, 5 contre, donc pour la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 22 pour, 0 contre, donc contre la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 14 pour, 0 contre, donc contre la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 22 pour, 0 contre, donc contre la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur la motion de rejet : 0 pour, 22 contre, donc pour la réforme.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "presomption-legitime-defense-2026",
+    "thematiqueId": "securite",
+    "sujetId": "police-maintien-ordre",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre, dans l'exercice de leurs fonctions (première lecture)",
+    "question": "Faut-il présumer qu'un policier ou un gendarme qui fait usage de son arme a agi dans le cadre autorisé ?",
+    "enjeu": "Tir présumé absolument nécessaire et proportionné, sauf preuve contraire ; nouveau cas de tir autorisé pour empêcher un nouveau meurtre qui vient d'être tenté ou commis.",
+    "resume": "Adoptée par 313 voix contre 199.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-07-07",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 69 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 17 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 48 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 31 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 29 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 62 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 29 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 55 pour, 12 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "jeunes-majeurs-protection-enfance-2026",
+    "thematiqueId": "societe",
+    "sujetId": "enfance-famille",
+    "nature": "proposition_loi",
+    "titre": "Article premier de la proposition de loi pour protéger durablement les jeunes majeurs de l'aide sociale à l'enfance et de la protection judiciaire de la jeunesse (première lecture)",
+    "question": "Faut-il accompagner de plein droit jusqu'à 25 ans les jeunes majeurs sortis de la protection de l'enfance ?",
+    "enjeu": "Aide aux jeunes majeurs de l'aide sociale à l'enfance ou suivis par la justice des mineurs portée de 21 à 25 ans, de droit, sans condition de ressources, même sous obligation de quitter le territoire.",
+    "resume": "Article premier adopté par 121 voix contre 88 ; la discussion a ensuite été renvoyée à une prochaine séance, sans vote sur l'ensemble.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-29",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 65 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 57 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 6 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 12 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 3 abstentions.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 24 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 26 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 24 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 12 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "surtaxe-grandes-entreprises-2027",
+    "thematiqueId": "economie",
+    "sujetId": "impots-entreprises",
+    "nature": "projet_loi",
+    "titre": "Amendements de suppression de l'article 15 (examen prioritaire), « Mise à contribution des grandes entreprises », du projet de loi de finances pour 2027 (première lecture)",
+    "question": "Faut-il prolonger en 2027 la surtaxe d'impôt sur les bénéfices des très grandes entreprises, à un taux réduit ?",
+    "enjeu": "Troisième année de surtaxe pour les entreprises d'au moins 1,5 milliard d'euros de chiffre d'affaires, environ 400 : taux abaissés, recette ramenée de 7 à 5 milliards d'euros selon le ministre.",
+    "resume": "Rejetée : amendements de suppression adoptés par 79 voix contre 77.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-27",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 24 contre, 0 abstention, donc pour la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 48 pour, 0 contre, 0 abstention, donc contre la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 5 contre, 0 abstention, donc pour la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 14 pour, 2 contre, 2 abstentions, donc contre la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 4 pour, 7 contre, 0 abstention, donc pour la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 5 pour, 1 contre, 1 abstention, donc contre la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 16 contre, 0 abstention, donc pour la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 18 contre, 0 abstention, donc pour la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 16 contre, 0 abstention, donc pour la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 14 pour, 2 contre, 2 abstentions, donc contre la surtaxe.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "abattement-pensions-retraite-2027",
+    "thematiqueId": "economie",
+    "sujetId": "retraites",
+    "nature": "projet_loi",
+    "titre": "Amendements de suppression de l'article 3, « Réduction à 3 000 € du plafond de l'abattement d'impôt sur le revenu en faveur des bénéficiaires de pensions de retraite », du projet de loi de finances pour 2027 (première lecture)",
+    "question": "Faut-il abaisser de 4 439 à 3 000 euros le plafond de l'abattement fiscal de 10 % sur les pensions de retraite ?",
+    "enjeu": "Les retraités déduisent 10 % de leurs pensions du revenu imposable, jusqu'à 4 439 euros ; plafond ramené à 3 000 euros, d'où plus d'impôt au-delà. Pensions d'invalidité et alimentaires non touchées.",
+    "resume": "Rejetée : amendements de suppression adoptés par 116 voix contre 30.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-15",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 25 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 50 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 4 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 12 contre, 0 abstention, donc pour la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 5 pour, 1 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 8 contre, 0 abstention, donc pour la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 6 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 15 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 6 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 12 contre, 0 abstention, donc pour la baisse du plafond.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      }
+    }
+  },
+  {
+    "id": "contribution-budget-europeen-2027",
+    "thematiqueId": "international",
+    "sujetId": "union-europeenne",
+    "nature": "projet_loi",
+    "titre": "Article 55 (examen prioritaire) du projet de loi de finances pour 2027 : évaluation du prélèvement opéré sur les recettes de l'État au titre de la participation de la France au budget de l'Union européenne (première lecture)",
+    "question": "Faut-il verser 30,9 milliards d'euros au budget de l'Union européenne en 2027, soit 2,5 milliards de plus qu'en 2026 ?",
+    "enjeu": "Contribution de la France au budget européen fixée à 30,9 milliards d'euros pour 2027, hausse due selon le ministre aux paiements de fin de cycle budgétaire européen, au soutien à l'Ukraine et au plan de relance.",
+    "resume": "Article adopté par 111 voix contre 93 ; la première partie du budget a ensuite été rejetée le 4 novembre par 458 voix contre 0.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-14",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 52 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 30 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 9 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 9 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 25 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "olivier-becht": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 30 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
       }
     }
   }

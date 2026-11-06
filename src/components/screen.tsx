@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: Spacing.one,
   },
-  // Android et le web posent l'écran au-dessus des onglets ; sur iOS, ils le recouvrent.
+  // La barre d'onglets maison est sous l'écran sur toutes les plateformes : rien à réserver pour elle.
   footer: {
     paddingTop: Spacing.one,
-    paddingBottom: Spacing.one + (Platform.OS === 'ios' ? BottomTabInset : 0),
+    paddingBottom: Spacing.one,
   },
   column: screenStyles.column,
   fill: {

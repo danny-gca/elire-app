@@ -5,7 +5,10 @@ import path from 'node:path';
 import Papa from 'papaparse';
 import { z } from 'zod';
 
+import { contexteStats, thinContexte } from '../src/lib/contexte.ts';
+import { closeQuestions } from '../src/lib/doublons.ts';
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
+import { sujetGaps } from '../src/lib/sujets-check.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
 import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
 import { MIN_WORDS, negativeWording, wordCount } from '../src/lib/wording.ts';
@@ -17,7 +20,7 @@ import {
   MotSchema,
   PartiSchema,
   PropositionCsvSchema,
-  RepereSchema,
+  SujetSchema,
   ThematiqueSchema,
   type Candidat,
   type Enjeu,
@@ -31,9 +34,13 @@ const CSV_DIR = path.join(DATA_DIR, 'candidats');
 const OUTPUT_FILE = path.join(ROOT_DIR, 'src', 'data', 'dataset.json');
 const REFS_FILE = path.join(DATA_DIR, 'refs.json');
 const STRICT = process.argv.includes('--strict');
+const today = new Date().toISOString().slice(0, 10);
 
 // Élision sans apostrophe : "l énergie", "d achat", "qu il"
 const MISSING_APOSTROPHE = /(?<![\p{L}'’·])(?:[ldnsjmtc]|qu) (?=[aeiouyhàâäéèêëîïôöùûüœ])/iu;
+
+// Deux questions proches relues et gardées : elles ne demandent pas la même chose.
+const DistinctesSchema = z.object({ ids: z.tuple([z.string(), z.string()]), raison: z.string().min(1) });
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -178,8 +185,8 @@ function previousGeneratedAt(content: object): string | undefined {
     return undefined;
   }
   const { metadata, ...previous } = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
-  const { partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes } = previous;
-  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes }) === JSON.stringify(content);
+  const { partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, sujets } = previous;
+  const same = JSON.stringify({ partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, sujets }) === JSON.stringify(content);
   return same ? metadata?.generatedAt : undefined;
 }
 
@@ -192,7 +199,7 @@ function main() {
   const glossaire = parseArray(GlossaireEntrySchema, readJson('glossaire.json'), 'glossaire.json');
   const glossarySigles = new Set(glossaire.map((g) => g.sigle));
   const mots = parseArray(MotSchema, readJson('mots.json'), 'mots.json');
-  const reperes = parseArray(RepereSchema, readJson('reperes.json'), 'reperes.json');
+  const sujets = parseArray(SujetSchema, readJson('sujets.json'), 'sujets.json');
   const usedSigles = new Set<string>();
   const refs = loadRefs();
 
@@ -201,7 +208,8 @@ function main() {
   checkUniqueIds(rawCandidats, 'candidats.json');
   checkUniqueIds(sourceLois, 'lois.json');
   checkUniqueIds(sourceEnjeux, 'enjeux.json');
-  checkUniqueIds(reperes, 'reperes.json');
+  checkUniqueIds(sujets, 'sujets.json');
+  const sujetIds = new Set(sujets.map((s) => s.id));
 
   const partisById = new Map(partis.map((p) => [p.id, p]));
   const thematiqueIds = new Set(thematiques.map((t) => t.id));
@@ -254,6 +262,7 @@ function main() {
         ref: `P-${propositionNumber(refs, row.id)}`,
         candidatId,
         thematiqueId: row.thematique_id,
+        sujetId: row.sujet_id || undefined,
         titre: row.titre,
         description: row.description,
         sourceUrl: row.source_url,
@@ -302,33 +311,71 @@ function main() {
     checkLength(e.question, MIN_WORDS.question, where);
   }
 
-  // Repères : un sujet par entrée, chaque élément dans un repère au plus, lu à l'aveugle comme le reste.
-  const known = { propositions: new Set(propositions.map((p) => p.id)), lois: new Set(lois.map((l) => l.id)), enjeux: new Set(enjeux.map((e) => e.id)) };
-  const placed = new Map<string, string>();
-  for (const r of reperes) {
-    const where = `reperes.json ${r.id}`;
-    if (!thematiqueIds.has(r.thematiqueId)) {
-      errors.push(`${where} : thématique inconnue "${r.thematiqueId}"`);
+  // Sujets (onglet « Contexte ») : un contenu par sujet, chaque question pointe vers le sien ; lu à l'aveugle comme le reste.
+  const items = [
+    ...propositions.map((p) => ({ where: `proposition ${p.id}`, sujetId: p.sujetId })),
+    ...lois.map((l) => ({ where: `lois.json ${l.id}`, sujetId: l.sujetId })),
+    ...enjeux.map((e) => ({ where: `enjeux.json ${e.id}`, sujetId: e.sujetId })),
+  ];
+  for (const { where, sujetId } of items) {
+    if (sujetId && !sujetIds.has(sujetId)) {
+      errors.push(`${where} : sujet inconnu "${sujetId}"`);
     }
-    for (const kind of ['propositions', 'lois', 'enjeux'] as const) {
-      for (const itemId of r[kind]) {
-        if (!known[kind].has(itemId)) {
-          errors.push(`${where} : ${kind} inconnu "${itemId}"`);
-        }
-        if (placed.has(itemId)) {
-          errors.push(`${where} : "${itemId}" est déjà dans le repère ${placed.get(itemId)}`);
-        }
-        placed.set(itemId, r.id);
-      }
+  }
+  const usedSujets = new Set(items.map((i) => i.sujetId));
+  for (const s of sujets) {
+    const where = `sujets.json ${s.id}`;
+    if (!thematiqueIds.has(s.thematiqueId)) {
+      errors.push(`${where} : thématique inconnue "${s.thematiqueId}"`);
     }
-    if (r.propositions.length + r.lois.length + r.enjeux.length === 0) {
-      warnings.push(`${where} : repère rattaché à aucun élément`);
+    if (!usedSujets.has(s.id)) {
+      warnings.push(`${where} : sujet d'aucune question`);
     }
-    const texts = [r.titre, r.aujourdhui, r.enDebat, ...r.liens.map((l) => l.titre)];
+    const texts = [s.titre, s.aujourdhui, s.enDebat, ...s.liens.map((l) => l.titre)];
     checkText(texts.join(' '), where);
     checkAnonymous(texts.join(' '), anonymity, where);
-    checkAcronyms(r.titre, [r.aujourdhui, r.enDebat], glossarySigles, usedSigles, where);
-    r.liens.forEach((l) => checkPreciseUrl(l.url, `${where} ${l.titre}`));
+    checkAcronyms(s.titre, [s.aujourdhui, s.enDebat], glossarySigles, usedSigles, where);
+    s.liens.forEach((l) => checkPreciseUrl(l.url, `${where} ${l.titre}`));
+    sujetGaps(s, today).forEach((gap) => warnings.push(`${where} : ${gap}`));
+  }
+  for (const p of propositions.filter((x) => x.enjeuId && x.sujetId)) {
+    warnings.push(`proposition ${p.id} : dans la question commune ${p.enjeuId}, elle en prend le sujet ; vider sujet_id`);
+  }
+
+  // Une question posée deux fois sous deux formes (CONTRIBUTING, règle 14) : à fusionner, réécrire ou déclarer distincte.
+  const asked = [
+    ...propositions.filter((p) => !p.enjeuId).map((p) => ({ ref: p.ref, id: p.id, text: p.titre })),
+    ...enjeux.map((e) => ({ ref: e.ref, id: e.id, text: e.question })),
+    ...lois.map((l) => ({ ref: l.ref, id: l.id, text: l.question })),
+  ];
+  const refById = new Map(asked.map((q) => [q.id, q.ref]));
+  const distinctes = parseArray(DistinctesSchema, readJson('questions-distinctes.json'), 'questions-distinctes.json').flatMap(({ ids }) => {
+    const pair = ids.map((i) => refById.get(i));
+    ids.filter((i) => !refById.has(i)).forEach((i) => errors.push(`questions-distinctes.json : question inconnue ou dans un enjeu "${i}"`));
+    return pair[0] && pair[1] ? [[pair[0], pair[1]] as [string, string]] : [];
+  });
+  const byRef = new Map(asked.map((q) => [q.ref, q]));
+  for (const { a, b, score } of closeQuestions(asked, distinctes)) {
+    const [qa, qb] = [byRef.get(a)!, byRef.get(b)!];
+    warnings.push(`questions proches (${score.toFixed(2)}) ${a} ${qa.id} « ${qa.text} » / ${b} ${qb.id} « ${qb.text} »`);
+  }
+
+  // Onglet « Contexte » : chaque question posée a son sujet (CONTRIBUTING, règle 15).
+  const sujetOfItem = new Map([...propositions, ...lois, ...enjeux].map((x) => [x.id, x.sujetId]));
+  for (const { ref, id } of asked.filter((q) => !sujetOfItem.get(q.id))) {
+    warnings.push(`${ref} ${id} : aucun sujet, onglet « Contexte » vide (sujet_id ou sujetId)`);
+  }
+
+  // Des « Précisions » maigres face aux autres questions du même type.
+  const sujetsById = new Map(sujets.map((s) => [s.id, s]));
+  const contexteOf = (sujetId?: string) => (sujetId && sujetsById.has(sujetId) ? `${sujetsById.get(sujetId)!.aujourdhui} ${sujetsById.get(sujetId)!.enDebat}` : undefined);
+  const contexte = contexteStats([
+    ...propositions.filter((p) => !p.enjeuId).map((p) => ({ ref: p.id, kind: 'P' as const, precisions: p.contexte, sujet: contexteOf(p.sujetId) })),
+    ...enjeux.map((e) => ({ ref: e.id, kind: 'E' as const, precisions: e.enjeu, sujet: contexteOf(e.sujetId) })),
+    ...lois.map((l) => ({ ref: l.id, kind: 'L' as const, precisions: l.enjeu, sujet: contexteOf(l.sujetId) })),
+  ]);
+  for (const s of thinContexte(contexte)) {
+    warnings.push(`${refById.get(s.ref)} ${s.ref} : précisions maigres (${s.precisions} caractères utiles, ${s.part} % de la médiane), ajouter les modalités tirées de la source`);
   }
 
   // Mots : définis une fois, employés quelque part dans les textes lus à l'aveugle.
@@ -336,7 +383,7 @@ function main() {
     ...propositions.flatMap((p) => [p.titre, p.description, p.contexte]),
     ...lois.flatMap((l) => [l.question, l.enjeu]),
     ...enjeux.flatMap((e) => [e.question, e.enjeu]),
-    ...reperes.flatMap((r) => [r.titre, r.aujourdhui, r.enDebat]),
+    ...sujets.flatMap((s) => [s.titre, s.aujourdhui, s.enDebat]),
   ];
   const usedWords = new Set(wordsIn(blindTexts, mots));
   const seenWords = new Set<string>();
@@ -364,7 +411,7 @@ function main() {
       warnings.push(`glossaire.json ${g.sigle} : sigle employé nulle part`);
     }
   });
-  warnings.push(...programmeReminders(rawCandidats, new Date().toISOString().slice(0, 10)));
+  warnings.push(...programmeReminders(rawCandidats, today));
 
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
   if (warnings.length > 0) {
@@ -376,7 +423,7 @@ function main() {
     process.exit(1);
   }
 
-  const content = { partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes };
+  const content = { partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, sujets };
   const dataset = {
     metadata: {
       generatedAt: previousGeneratedAt(content) ?? new Date().toISOString(),
@@ -395,7 +442,7 @@ function main() {
     enjeux,
     glossaire,
     mots,
-    reperes,
+    sujets,
   };
 
   fs.writeFileSync(REFS_FILE, JSON.stringify(refs, null, 2) + '\n', 'utf-8');
@@ -404,7 +451,7 @@ function main() {
 
   console.log(
     `✅ ${partis.length} partis, ${candidats.length} candidats, ${thematiques.length} thématiques, ` +
-      `${propositions.length} propositions, ${lois.length} lois, ${enjeux.length} enjeux, ${glossaire.length} sigles, ${mots.length} mots, ${reperes.length} repères -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
+      `${propositions.length} propositions, ${lois.length} lois, ${enjeux.length} enjeux, ${glossaire.length} sigles, ${mots.length} mots, ${sujets.length} sujets -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
   );
 }
 

@@ -63,8 +63,8 @@ async function check(url, retried = false) {
   }
 }
 
-// Anti-robot (202/401/403/406/429), serveur saturé (5xx) ou délai dépassé : la page existe peut-être, à ouvrir à la main.
-const blocked = (s) => s === 0 || s >= 500 || [202, 401, 403, 406, 429].includes(s);
+// Anti-robot (202/401/403/406/429, ou 3xx restant après les redirections : défi JavaScript type Sucuri), serveur saturé (5xx) ou délai dépassé : à ouvrir à la main.
+const blocked = (s) => s === 0 || s >= 500 || (s >= 300 && s < 400) || [202, 401, 403, 406, 429].includes(s);
 const level = (r) => {
   if (r.status >= 200 && r.status < 300 && r.status !== 202) return 'OK';
   if (r.status === 0 && /ENOTFOUND|EAI_AGAIN|ECONNREFUSED/.test(r.error)) return 'ERREUR';

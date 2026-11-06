@@ -260,7 +260,16 @@
     "confiance-gouvernement-2025": 41,
     "plfss-2026": 42,
     "aide-a-mourir-2026": 43,
-    "mineurs-reseaux-sociaux-2026": 44
+    "mineurs-reseaux-sociaux-2026": 44,
+    "holding-audiovisuel-public-2025": 45,
+    "etiquetage-origine-aliments-2025": 46,
+    "nationalisation-arcelormittal-2026": 47,
+    "presomption-legitime-defense-2026": 48,
+    "double-frontiere-schengen-2026": 49,
+    "contribution-budget-europeen-2027": 50,
+    "abattement-pensions-retraite-2027": 51,
+    "surtaxe-grandes-entreprises-2027": 52,
+    "jeunes-majeurs-protection-enfance-2026": 53
   },
   "enjeux": {
     "nouveaux-reacteurs": 1,
