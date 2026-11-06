@@ -9,8 +9,7 @@
     "liens": [
       { "titre": "Le Mercosur", "url": "https://fr.wikipedia.org/wiki/Mercosur", "editeur": "Wikipédia", "media": "article" },
       { "titre": "L'accord de libre-échange entre le Mercosur et l'Union européenne", "url": "https://fr.wikipedia.org/wiki/Accord_de_libre-%C3%A9change_entre_le_Mercosur_et_l%27Union_europ%C3%A9enne", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "lois": ["debat-accord-ue-mercosur-2024"]
+    ]
   },
   {
     "id": "retraites",
@@ -22,10 +21,7 @@
     "liens": [
       { "titre": "Retraite par répartition", "url": "https://fr.wikipedia.org/wiki/Retraite_par_r%C3%A9partition", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Retraite par capitalisation", "url": "https://fr.wikipedia.org/wiki/Retraite_par_capitalisation", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-ep-1","prop-jlm-3"],
-    "lois": ["loi-retraites-2023","plfss-2026","abattement-pensions-retraite-2027"],
-    "enjeux": ["reculer-retraite"]
+    ]
   },
   {
     "id": "normes-europeennes-importations",
@@ -36,9 +32,7 @@
     "aJour": "2026-11-06",
     "liens": [
       { "titre": "Surtransposition", "url": "https://fr.wikipedia.org/wiki/Surtransposition", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-dl-8","prop-kb-7"],
-    "enjeux": ["normes-agricoles"]
+    ]
   },
   {
     "id": "accords-libre-echange",
@@ -50,9 +44,7 @@
     "liens": [
       { "titre": "La politique commerciale commune", "url": "https://fr.wikipedia.org/wiki/Politique_commerciale_commune", "editeur": "Wikipédia", "media": "article" },
       { "titre": "L'accord économique et commercial global avec le Canada", "url": "https://fr.wikipedia.org/wiki/Accord_%C3%A9conomique_et_commercial_global", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-fa-6","prop-mlp-3","prop-mm-5"],
-    "lois": ["ratification-ceta-an-2019"]
+    ]
   },
   {
     "id": "origine-des-aliments",
@@ -64,9 +56,7 @@
     "liens": [
       { "titre": "Origine des produits alimentaires : comment éviter les pièges", "url": "https://www.inc-conso.fr/content/origine-des-produits-alimentaires-comment-eviter-les-pieges-avec-la-dgccrf", "editeur": "Institut national de la consommation", "media": "article" },
       { "titre": "Obligation d'afficher l'origine des viandes au restaurant", "url": "https://www.service-public.gouv.fr/particuliers/actualites/A18108", "editeur": "Service-public.fr", "media": "article" }
-    ],
-    "propositions": ["prop-nda-4"],
-    "lois": ["etiquetage-origine-aliments-2025"]
+    ]
   },
   {
     "id": "revenu-agricole",
@@ -79,8 +69,7 @@
       { "titre": "La loi pour l'équilibre des relations commerciales agricoles (EGALIM)", "url": "https://fr.wikipedia.org/wiki/Loi_EGalim", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Les exploitants agricoles et le seuil de pauvreté", "url": "https://insee.fr/fr/statistiques/8376591", "editeur": "Insee", "media": "article" },
       { "titre": "La loi de 2021 sur la rémunération des agriculteurs : le compromis", "url": "https://www.publicsenat.fr/actualites/politique/egalim-2-senateurs-et-deputes-aboutissent-a-un-compromis-190681", "editeur": "Public Sénat", "media": "article" }
-    ],
-    "propositions": ["prop-fro-4","prop-fr-4","prop-jl-1","prop-jlm-4","prop-rg-7"]
+    ]
   },
   {
     "id": "politique-agricole-commune",
@@ -92,8 +81,7 @@
     "liens": [
       { "titre": "La politique agricole commune", "url": "https://fr.wikipedia.org/wiki/Politique_agricole_commune", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La réforme de la politique agricole commune : les principales mesures", "url": "https://www.publicsenat.fr/actualites/politique/la-reforme-de-la-pac-adoptee-par-le-parlement-europeen-les-principales-mesures", "editeur": "Public Sénat", "media": "article" }
-    ],
-    "propositions": ["prop-am-4","prop-db-7","prop-mt-3"]
+    ]
   },
   {
     "id": "pesticides",
@@ -105,9 +93,7 @@
     "liens": [
       { "titre": "Le plan Écophyto", "url": "https://fr.wikipedia.org/wiki/Plan_%C3%89cophyto", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Les néonicotinoïdes", "url": "https://fr.wikipedia.org/wiki/N%C3%A9onicotino%C3%AFde", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-db-8"],
-    "lois": ["loi-contraintes-agriculteurs-2025"]
+    ]
   },
   {
     "id": "elevage-peche",
@@ -120,8 +106,7 @@
       { "titre": "La consommation de viande en France en 2024", "url": "https://www.franceagrimer.fr/sites/default/files/2025-07/SYN-VIA-Conso%20viande%20Fce2024_0.pdf", "editeur": "Agreste", "media": "article" },
       { "titre": "Fiche filière pêche et aquaculture 2026", "url": "https://www.franceagrimer.fr/sites/default/files/2026-02/35_FICHE_FILIERE_PECHE_AQUA_2026.pdf", "editeur": "FranceAgriMer", "media": "article" },
       { "titre": "La politique commune de la pêche", "url": "https://fr.wikipedia.org/wiki/Politique_commune_de_la_p%C3%AAche", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-mm-2","prop-mm-6","prop-mm-8"]
+    ]
   },
   {
     "id": "statut-agriculture",
@@ -133,9 +118,7 @@
     "liens": [
       { "titre": "Les exploitants agricoles", "url": "https://www.insee.fr/fr/statistiques/7728869", "editeur": "Insee", "media": "article" },
       { "titre": "La Charte de l'environnement", "url": "https://fr.wikipedia.org/wiki/Charte_de_l%27environnement", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-br-8"],
-    "lois": ["loi-orientation-agricole-2024"]
+    ]
   },
   {
     "id": "smic-salaires",
@@ -147,8 +130,7 @@
     "liens": [
       { "titre": "Montant du SMIC", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2300", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Le salaire minimum interprofessionnel de croissance", "url": "https://fr.wikipedia.org/wiki/Salaire_minimum_interprofessionnel_de_croissance", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-ak-1","prop-sl-1","prop-fro-1","prop-na-1","prop-fr-1"]
+    ]
   },
   {
     "id": "impots-patrimoine",
@@ -160,10 +142,7 @@
     "liens": [
       { "titre": "Impôt sur la fortune immobilière", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F563", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "L'impôt sur la fortune immobilière", "url": "https://fr.wikipedia.org/wiki/Imp%C3%B4t_sur_la_fortune_immobili%C3%A8re", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-rg-2"],
-    "lois": ["rejet-recettes-plf-2025"],
-    "enjeux": ["impot-fortune"]
+    ]
   },
   {
     "id": "impots-entreprises",
@@ -175,9 +154,7 @@
     "liens": [
       { "titre": "L'impôt sur les sociétés en France", "url": "https://fr.wikipedia.org/wiki/Imp%C3%B4t_sur_les_soci%C3%A9t%C3%A9s_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Hausse de la taxe sur les transactions financières au 1er avril 2025", "url": "https://www.legifiscal.fr/actualites-fiscales/4078-hausse-taxe-transactions-financieres-1ier-avril-2025.html", "editeur": "Legifiscal", "media": "article" }
-    ],
-    "propositions": ["prop-ez-3","prop-am-7"],
-    "lois": ["surtaxe-grandes-entreprises-2027"]
+    ]
   },
   {
     "id": "aides-publiques-entreprises",
@@ -189,8 +166,7 @@
     "liens": [
       { "titre": "Rapport de la commission d'enquête sur les aides publiques aux entreprises", "url": "https://www.senat.fr/rap/r24-808-1/r24-808-1.html", "editeur": "Sénat", "media": "article" },
       { "titre": "211 milliards d'euros d'aides aux entreprises : sur quoi repose le calcul", "url": "https://www.publicsenat.fr/actualites/economie/211-milliards-deuros-daides-publiques-aux-entreprises-sur-quoi-repose-le-calcul-de-la-commission-denquete-du-senat", "editeur": "Public Sénat", "media": "article" }
-    ],
-    "propositions": ["prop-ga-7","prop-rg-4"]
+    ]
   },
   {
     "id": "depenses-dette",
@@ -202,9 +178,7 @@
     "liens": [
       { "titre": "La dette publique à la fin du deuxième trimestre 2026", "url": "https://www.insee.fr/fr/statistiques/9053525", "editeur": "Insee", "media": "article" },
       { "titre": "Les comptes des administrations publiques en 2025", "url": "https://www.insee.fr/fr/statistiques/8956575", "editeur": "Insee", "media": "article" }
-    ],
-    "propositions": ["prop-dl-2","prop-kb-8"],
-    "lois": ["confiance-gouvernement-2025"]
+    ]
   },
   {
     "id": "etat-actionnaire",
@@ -216,9 +190,7 @@
     "liens": [
       { "titre": "L'Agence des participations de l'État", "url": "https://fr.wikipedia.org/wiki/Agence_des_participations_de_l%27%C3%89tat", "editeur": "Wikipédia", "media": "article" },
       { "titre": "L'État actionnaire : entre nationalisations et privatisations", "url": "https://www.lafinancepourtous.com/decryptages/politiques-economiques/economie-francaise/comptes-publics/le-budget-de-letat/letat-actionnaire-entre-nationalisations-et-privatisations/", "editeur": "La finance pour tous", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-fa-4","prop-sl-7","prop-np-1"],
-    "lois": ["nationalisation-arcelormittal-2026"]
+    ]
   },
   {
     "id": "prix-energie-carburants",
@@ -230,9 +202,7 @@
     "liens": [
       { "titre": "Comment se forment les prix de l'essence et du gazole en France", "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/structuration-des-prix-de-lessence-et-du-gazole-en-france", "editeur": "Connaissance des Énergies", "media": "article" },
       { "titre": "Le bouclier tarifaire sur le gaz et l'électricité", "url": "https://www.connaissancedesenergies.org/energie/france/crise/bouclier-tarifaire", "editeur": "Connaissance des Énergies", "media": "article" }
-    ],
-    "propositions": ["prop-jlm-2","prop-xb-4"],
-    "enjeux": ["taxes-carburants"]
+    ]
   },
   {
     "id": "temps-de-travail",
@@ -245,9 +215,7 @@
       { "titre": "Durée du travail d'un salarié à temps plein", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1911", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Durée du travail en 2025", "url": "https://www.insee.fr/fr/statistiques/8733071", "editeur": "Insee", "media": "article" },
       { "titre": "La réforme des 35 heures en France", "url": "https://fr.wikipedia.org/wiki/R%C3%A9forme_des_35_heures_en_France", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-na-2","prop-sl-2","prop-ga-2","prop-ep-4"],
-    "enjeux": ["temps-de-travail"]
+    ]
   },
   {
     "id": "contrat-licenciement",
@@ -259,9 +227,7 @@
     "liens": [
       { "titre": "Statuts d'emploi en 2025", "url": "https://www.insee.fr/fr/statistiques/8733045", "editeur": "Insee", "media": "article" },
       { "titre": "Motifs du licenciement personnel d'un salarié du privé", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2835", "editeur": "Service-public.fr", "media": "article" }
-    ],
-    "propositions": ["prop-ob-2","prop-mt-4"],
-    "lois": ["ordonnances-travail-2017"]
+    ]
   },
   {
     "id": "conditions-de-travail",
@@ -274,8 +240,7 @@
       { "titre": "Le temps partiel en 2025", "url": "https://www.insee.fr/fr/statistiques/8733075", "editeur": "Insee", "media": "article" },
       { "titre": "Un salarié peut-il refuser de travailler face à un danger ?", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1136", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Fortes chaleurs : obligations de l'entreprise", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F39752", "editeur": "Service-public.fr", "media": "article" }
-    ],
-    "propositions": ["prop-fr-2","prop-kb-5"]
+    ]
   },
   {
     "id": "rsa",
@@ -288,8 +253,7 @@
       { "titre": "Suivi mensuel des prestations de solidarité, février 2026", "url": "https://drees.solidarites-sante.gouv.fr/communique-de-presse-jeux-de-donnees/jeux-de-donnees/260227-suivi-mensuel-prestations-de-solidarite", "editeur": "Ministère des Solidarités", "media": "article" },
       { "titre": "Le revenu de solidarité active", "url": "https://fr.wikipedia.org/wiki/Revenu_de_solidarit%C3%A9_active", "editeur": "Wikipédia", "media": "article", "aveugle": false },
       { "titre": "RSA : demandeur de 25 ans et plus", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19778", "editeur": "Service-public.fr", "media": "article", "aveugle": false }
-    ],
-    "lois": ["loi-plein-emploi-france-travail-2023"]
+    ]
   },
   {
     "id": "metier-enseignant",
@@ -301,9 +265,7 @@
     "liens": [
       { "titre": "Le salaire des enseignants en 2024", "url": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-36pdf-519727.pdf", "editeur": "Ministère de l'Éducation nationale", "media": "article" },
       { "titre": "Professeur des écoles", "url": "https://fr.wikipedia.org/wiki/Professeur_des_%C3%A9coles", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-br-7","prop-np-3","prop-np-4"],
-    "enjeux": ["recrutement-enseignants"]
+    ]
   },
   {
     "id": "uniforme-autorite",
@@ -315,9 +277,7 @@
     "liens": [
       { "titre": "L'Éducation nationale range l'uniforme au placard", "url": "https://www.banquedesterritoires.fr/leducation-nationale-range-luniforme-au-placard", "editeur": "Banque des Territoires", "media": "article" },
       { "titre": "L'uniforme scolaire", "url": "https://fr.wikipedia.org/wiki/Uniforme_scolaire", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-ep-3"],
-    "enjeux": ["uniforme-ecole"]
+    ]
   },
   {
     "id": "apprentissages-ecole",
@@ -329,9 +289,7 @@
     "liens": [
       { "titre": "Enseignement et apprentissage au niveau primaire en France", "url": "https://eurydice.eacea.ec.europa.eu/fr/eurypedia/france/enseignement-et-apprentissage-au-niveau-primaire", "editeur": "Eurydice, Commission européenne", "media": "article" },
       { "titre": "L'école élémentaire en France", "url": "https://fr.wikipedia.org/wiki/%C3%89cole_%C3%A9l%C3%A9mentaire_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-fp-5","prop-nda-8","prop-fr-6","prop-am-9"],
-    "lois": ["ecole-de-la-confiance-2019"]
+    ]
   },
   {
     "id": "etudiants",
@@ -344,9 +302,7 @@
       { "titre": "Prévisions des effectifs dans l'enseignement supérieur, 2025 et 2026", "url": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-10/nf-sies-2025-25-38057.pdf", "editeur": "Ministère de l'Enseignement supérieur", "media": "article" },
       { "titre": "Étudiant : bourse sur critères sociaux", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12214", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Parcoursup", "url": "https://fr.wikipedia.org/wiki/Parcoursup", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-sl-6","prop-ak-3"],
-    "lois": ["repas-etudiant-1-euro-2023","antisemitisme-enseignement-superieur-2025"]
+    ]
   },
   {
     "id": "culture-audiovisuel",
@@ -358,9 +314,7 @@
     "liens": [
       { "titre": "Rapport du Sénat sur les crédits de la culture pour 2026", "url": "https://www.senat.fr/rap/l25-139-37/l25-139-37_mono.html", "editeur": "Sénat", "media": "article" },
       { "titre": "La contribution à l'audiovisuel public", "url": "https://fr.wikipedia.org/wiki/Contribution_%C3%A0_l%27audiovisuel_public", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-xb-6","prop-xb-5"],
-    "lois": ["holding-audiovisuel-public-2025"]
+    ]
   },
   {
     "id": "service-national",
@@ -372,8 +326,7 @@
     "liens": [
       { "titre": "Service national : un engagement militaire de dix mois pour les jeunes", "url": "https://www.cidj.com/s-engager/s-engager-pour-une-cause/service-national-un-engagement-militaire-de-dix-mois-pour-les-jeunes", "editeur": "Centre d'information jeunesse", "media": "article" },
       { "titre": "Dossier de presse du service national", "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Dossier%20de%20presse_Service%20national.pdf", "editeur": "Ministère des Armées", "media": "article" }
-    ],
-    "propositions": ["prop-jl-5","prop-ep-6"]
+    ]
   },
   {
     "id": "condition-animale",
@@ -386,8 +339,7 @@
       { "titre": "L'animal domestique en droit français", "url": "https://fr.wikipedia.org/wiki/Animal_domestique_en_droit_fran%C3%A7ais", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La corrida", "url": "https://fr.wikipedia.org/wiki/Corrida", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La chasse en France", "url": "https://fr.wikipedia.org/wiki/Chasse_en_France", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-mm-7","prop-mm-1","prop-mm-3"]
+    ]
   },
   {
     "id": "nucleaire",
@@ -400,10 +352,7 @@
       { "titre": "Liste des réacteurs nucléaires en France", "url": "https://fr.wikipedia.org/wiki/Liste_des_r%C3%A9acteurs_nucl%C3%A9aires_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Bilan électrique 2025 : la production d'électricité", "url": "https://analysesetdonnees.rte-france.com/bilan-electrique-2025/production", "editeur": "RTE", "media": "article" },
       { "titre": "Le réacteur EPR2", "url": "https://fr.wikipedia.org/wiki/EPR2", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-am-1","prop-ep-2"],
-    "lois": ["relance-nucleaire-epr-2023"],
-    "enjeux": ["nouveaux-reacteurs"]
+    ]
   },
   {
     "id": "eolien-solaire",
@@ -416,10 +365,7 @@
       { "titre": "Bilan électrique 2025 : la production d'électricité", "url": "https://analysesetdonnees.rte-france.com/bilan-electrique-2025/production", "editeur": "RTE", "media": "article" },
       { "titre": "L'énergie éolienne en France", "url": "https://fr.wikipedia.org/wiki/%C3%89nergie_%C3%A9olienne_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false },
       { "titre": "L'énergie solaire en France", "url": "https://fr.wikipedia.org/wiki/%C3%89nergie_solaire_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-jl-6"],
-    "lois": ["loi-energies-renouvelables-2023","programmation-energie-climat-2025"],
-    "enjeux": ["eoliennes"]
+    ]
   },
   {
     "id": "climat-emissions",
@@ -431,9 +377,7 @@
     "liens": [
       { "titre": "Les émissions de gaz à effet de serre en France", "url": "https://fr.wikipedia.org/wiki/%C3%89missions_de_gaz_%C3%A0_effet_de_serre_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false },
       { "titre": "Le mécanisme d'ajustement carbone aux frontières", "url": "https://fr.wikipedia.org/wiki/M%C3%A9canisme_d%27ajustement_carbone_aux_fronti%C3%A8res", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-db-1","prop-jlm-7","prop-ob-1","prop-na-8","prop-rg-5"],
-    "lois": ["climat-resilience-2021"]
+    ]
   },
   {
     "id": "adaptation-chaleur",
@@ -446,8 +390,7 @@
       { "titre": "La canicule européenne de 2003", "url": "https://fr.wikipedia.org/wiki/Canicule_europ%C3%A9enne_de_2003", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le plan national d'adaptation au changement climatique", "url": "https://www.ecologie.gouv.fr/actualites/gouvernement-lance-nouveau-plan-national-dadaptation-changement-climatique", "editeur": "Ministère de la Transition écologique", "media": "article" },
       { "titre": "Catastrophe naturelle ou technologique : quelle indemnisation ?", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F3076", "editeur": "Service-public.fr", "media": "article" }
-    ],
-    "propositions": ["prop-np-7","prop-fr-7"]
+    ]
   },
   {
     "id": "sols-grands-projets",
@@ -459,8 +402,7 @@
     "liens": [
       { "titre": "Zéro artificialisation nette", "url": "https://fr.wikipedia.org/wiki/Z%C3%A9ro_artificialisation_nette", "editeur": "Wikipédia", "media": "article" },
       { "titre": "L'autoroute Castres-Toulouse (A69)", "url": "https://fr.wikipedia.org/wiki/Autoroute_A69_(France)", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-dl-5","prop-kb-6","prop-mt-1"]
+    ]
   },
   {
     "id": "polluants-eternels",
@@ -473,9 +415,7 @@
       { "titre": "Substances perfluoroalkylées et polyfluoroalkylées", "url": "https://www.eaufrance.fr/glossaire/substances-perfluoroalkylees-et-polyfluoroalkylees", "editeur": "Eaufrance", "media": "article" },
       { "titre": "Les PFAS, des substances chimiques persistantes", "url": "https://www.anses.fr/fr/content/pfas-substances-chimiques-persistantes", "editeur": "Anses", "media": "article", "aveugle": false },
       { "titre": "Les substances per- et polyfluoroalkylées", "url": "https://fr.wikipedia.org/wiki/Substances_per-_et_polyfluoroalkyl%C3%A9es", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-mt-2"],
-    "lois": ["ppl-interdiction-pfas-2024"]
+    ]
   },
   {
     "id": "mode-ultra-ephemere",
@@ -486,8 +426,7 @@
     "aJour": "2026-11-06",
     "liens": [
       { "titre": "La mode éphémère", "url": "https://fr.wikipedia.org/wiki/Mode_%C3%A9ph%C3%A9m%C3%A8re", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "lois": ["ppl-anti-fast-fashion-2024"]
+    ]
   },
   {
     "id": "referendum",
@@ -499,9 +438,7 @@
     "liens": [
       { "titre": "Le référendum d'initiative partagée", "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_d%27initiative_partag%C3%A9e", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le référendum en France", "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_en_France", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-mlp-5","prop-ob-3","prop-am-8"],
-    "enjeux": ["referendum-initiative-citoyenne"]
+    ]
   },
   {
     "id": "mode-de-scrutin",
@@ -513,8 +450,7 @@
     "liens": [
       { "titre": "Les élections législatives en France", "url": "https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le vote blanc", "url": "https://fr.wikipedia.org/wiki/Vote_blanc", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-jl-3","prop-mt-8"]
+    ]
   },
   {
     "id": "pouvoirs-du-president",
@@ -526,8 +462,7 @@
     "liens": [
       { "titre": "Le président de la République française", "url": "https://fr.wikipedia.org/wiki/Pr%C3%A9sident_de_la_R%C3%A9publique_fran%C3%A7aise", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le quinquennat présidentiel en France", "url": "https://fr.wikipedia.org/wiki/Quinquennat_pr%C3%A9sidentiel_en_France", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-jlm-1","prop-db-4","prop-fro-8","prop-ak-5","prop-xb-1"]
+    ]
   },
   {
     "id": "parlement-gouvernement",
@@ -539,9 +474,7 @@
     "liens": [
       { "titre": "Le Parlement français", "url": "https://fr.wikipedia.org/wiki/Parlement_fran%C3%A7ais", "editeur": "Wikipédia", "media": "article" },
       { "titre": "L'article 49 de la Constitution", "url": "https://fr.wikipedia.org/wiki/Article_49_de_la_Constitution_de_la_Cinqui%C3%A8me_R%C3%A9publique_fran%C3%A7aise", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-br-6"],
-    "lois": ["motion-censure-barnier-2024"]
+    ]
   },
   {
     "id": "pouvoirs-locaux",
@@ -554,8 +487,7 @@
       { "titre": "Article 72 de la Constitution", "url": "https://fr.wikipedia.org/wiki/Article_72_de_la_Constitution_de_la_Cinqui%C3%A8me_R%C3%A9publique_fran%C3%A7aise", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La décentralisation en France", "url": "https://fr.wikipedia.org/wiki/D%C3%A9centralisation_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Les collectivités territoriales en France", "url": "https://fr.wikipedia.org/wiki/Collectivit%C3%A9_territoriale_en_France", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-dl-1","prop-xb-2"]
+    ]
   },
   {
     "id": "transparence-vie-publique",
@@ -568,8 +500,7 @@
       { "titre": "La Haute Autorité pour la transparence de la vie publique", "url": "https://fr.wikipedia.org/wiki/Haute_Autorit%C3%A9_pour_la_transparence_de_la_vie_publique", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Les lanceurs d'alerte", "url": "https://fr.wikipedia.org/wiki/Lanceur_d%27alerte", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le droit du secret des affaires", "url": "https://fr.wikipedia.org/wiki/Droit_du_secret_des_affaires", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-fr-8","prop-np-6","prop-na-3"]
+    ]
   },
   {
     "id": "union-europeenne",
@@ -582,10 +513,7 @@
       { "titre": "L'Union européenne", "url": "https://fr.wikipedia.org/wiki/Union_europ%C3%A9enne", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La sortie du Royaume-Uni de l'Union européenne", "url": "https://fr.wikipedia.org/wiki/Retrait_du_Royaume-Uni_de_l%27Union_europ%C3%A9enne", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Qu'est-ce que la contribution française au budget de l'Union européenne ?", "url": "https://lcp.fr/actualites/budget-2027-qu-est-ce-que-la-contribution-francaise-au-budget-de-l-union-europeenne-qui", "editeur": "LCP", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-nda-7","prop-ez-4","prop-ob-5"],
-    "lois": ["contribution-budget-europeen-2027"],
-    "enjeux": ["quitter-union-europeenne"]
+    ]
   },
   {
     "id": "nouvelle-caledonie",
@@ -597,8 +525,7 @@
     "liens": [
       { "titre": "L'accord de Nouméa", "url": "https://fr.wikipedia.org/wiki/Accord_de_Noum%C3%A9a", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le référendum de 2021 sur l'indépendance de la Nouvelle-Calédonie", "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_de_2021_sur_l%27ind%C3%A9pendance_de_la_Nouvelle-Cal%C3%A9donie", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "lois": ["degel-corps-electoral-nouvelle-caledonie-2024"]
+    ]
   },
   {
     "id": "immigration-asile",
@@ -610,9 +537,7 @@
     "liens": [
       { "titre": "L'essentiel sur les immigrés et les étrangers", "url": "https://www.insee.fr/fr/statistiques/3633212", "editeur": "INSEE", "media": "article" },
       { "titre": "L'espace Schengen", "url": "https://fr.wikipedia.org/wiki/Espace_Schengen", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-ep-8","prop-nda-1"],
-    "lois": ["loi-immigration-2023","loi-asile-immigration-2018","pacte-asile-migration-ue-2024"]
+    ]
   },
   {
     "id": "expulsions",
@@ -624,8 +549,7 @@
     "liens": [
       { "titre": "Obligation de quitter le territoire français (OQTF)", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18362", "editeur": "Service-Public.fr", "media": "article" },
       { "titre": "Les résultats de la politique d'éloignement des étrangers sous OQTF (juin 2025)", "url": "https://www.assemblee-nationale.fr/dyn/17/documents/cion_lois/l17n813203444_document", "editeur": "Assemblée nationale", "media": "article" }
-    ],
-    "propositions": ["prop-br-5","prop-ez-1"]
+    ]
   },
   {
     "id": "droits-des-etrangers",
@@ -637,9 +561,7 @@
     "liens": [
       { "titre": "Le droit de vote des étrangers en France", "url": "https://fr.wikipedia.org/wiki/Droit_de_vote_des_%C3%A9trangers_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "L'essentiel sur les immigrés et les étrangers", "url": "https://www.insee.fr/fr/statistiques/3633212", "editeur": "INSEE", "media": "article" }
-    ],
-    "propositions": ["prop-sl-8"],
-    "enjeux": ["regulariser-sans-papiers"]
+    ]
   },
   {
     "id": "priorite-nationale",
@@ -652,8 +574,7 @@
       { "titre": "Un étranger peut-il toucher les prestations familiales ?", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2787", "editeur": "Service-Public.fr", "media": "article" },
       { "titre": "Comment obtenir un logement social ?", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F869", "editeur": "Service-Public.fr", "media": "article" },
       { "titre": "La préférence nationale", "url": "https://fr.wikipedia.org/wiki/Pr%C3%A9f%C3%A9rence_nationale", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-mlp-2","prop-mlp-6"]
+    ]
   },
   {
     "id": "defense",
@@ -665,10 +586,7 @@
     "liens": [
       { "titre": "Le Fonds européen de la défense", "url": "https://fr.wikipedia.org/wiki/Fonds_europ%C3%A9en_de_la_d%C3%A9fense", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Les ventes d'armes dans le monde de 2021 à 2025 (en anglais)", "url": "https://www.sipri.org/media/press-release/2026/global-arms-flows-jump-nearly-10-cent-european-demand-soars", "editeur": "Institut international de recherche sur la paix de Stockholm", "media": "article" }
-    ],
-    "propositions": ["prop-rg-1","prop-ak-6","prop-na-7"],
-    "lois": ["loi-programmation-militaire-2024-2030"],
-    "enjeux": ["budget-defense"]
+    ]
   },
   {
     "id": "otan",
@@ -680,9 +598,7 @@
     "liens": [
       { "titre": "L'Organisation du traité de l'Atlantique nord", "url": "https://fr.wikipedia.org/wiki/Organisation_du_trait%C3%A9_de_l%27Atlantique_nord", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le sommet de l'Alliance atlantique de 2025", "url": "https://fr.wikipedia.org/wiki/Sommet_de_l%27OTAN_de_2025", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-np-8"],
-    "enjeux": ["quitter-otan"]
+    ]
   },
   {
     "id": "ukraine",
@@ -694,8 +610,7 @@
     "liens": [
       { "titre": "L'invasion de l'Ukraine par la Russie", "url": "https://fr.wikipedia.org/wiki/Invasion_de_l%27Ukraine_par_la_Russie", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Que contient l'accord de sécurité signé entre la France et l'Ukraine ?", "url": "https://www.publicsenat.fr/actualites/international/que-contient-laccord-de-securite-signe-entre-la-france-et-lukraine-et-debattu-au-parlement", "editeur": "Public Sénat", "media": "article", "aveugle": false }
-    ],
-    "lois": ["accord-securite-ukraine-2024"]
+    ]
   },
   {
     "id": "logement-social",
@@ -708,8 +623,7 @@
       { "titre": "5,4 millions de logements sociaux en France au 1er janvier 2025", "url": "https://www.statistiques.developpement-durable.gouv.fr/54-millions-de-logements-locatifs-sociaux-en-france-au-1er-janvier-2025", "editeur": "Ministère de la Transition écologique", "media": "article" },
       { "titre": "La loi relative à la solidarité et au renouvellement urbains (SRU)", "url": "https://fr.wikipedia.org/wiki/Loi_relative_%C3%A0_la_solidarit%C3%A9_et_au_renouvellement_urbains", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Logement social : plus d'attributions en 2025, des millions de demandeurs en attente", "url": "https://www.banquedesterritoires.fr/logement-social-plus-dattributions-en-2025-mais-des-millions-de-demandeurs-toujours-en-attente", "editeur": "Banque des Territoires", "media": "article" }
-    ],
-    "propositions": ["prop-ez-5","prop-fro-5","prop-ga-8","prop-kb-4","prop-jlm-5"]
+    ]
   },
   {
     "id": "logements-vacants-loyers",
@@ -721,9 +635,7 @@
     "liens": [
       { "titre": "Le parc de logements en France au 1er janvier 2024", "url": "https://www.insee.fr/fr/statistiques/8251576", "editeur": "Insee", "media": "article" },
       { "titre": "Le contrôle des loyers", "url": "https://fr.wikipedia.org/wiki/Contr%C3%B4le_des_loyers", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-ak-8","prop-na-4"],
-    "lois": ["regulation-meubles-tourisme-airbnb-2024"]
+    ]
   },
   {
     "id": "renovation-energetique",
@@ -735,8 +647,7 @@
     "liens": [
       { "titre": "Le parc de logements par classe de performance énergétique au 1er janvier 2025", "url": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025", "editeur": "Ministère de la Transition écologique", "media": "article" },
       { "titre": "Passoire thermique", "url": "https://fr.wikipedia.org/wiki/Passoire_thermique", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-am-6","prop-fr-3","prop-mt-5"]
+    ]
   },
   {
     "id": "squat-impayes",
@@ -749,8 +660,7 @@
       { "titre": "Quand s'applique la trêve hivernale ?", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34736", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "L'expulsion d'un logement en droit français", "url": "https://fr.wikipedia.org/wiki/Expulsion_d%27un_immeuble_en_droit_civil_fran%C3%A7ais", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le squat en France", "url": "https://fr.wikipedia.org/wiki/Squat_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "lois": ["loi-anti-squat-kasbarian-2023"]
+    ]
   },
   {
     "id": "reseaux-sociaux",
@@ -762,9 +672,7 @@
     "liens": [
       { "titre": "Les nouvelles règles européennes pour protéger vos droits en ligne", "url": "https://commission.europa.eu/news-and-media/news/new-rules-protect-your-rights-and-activity-online-eu-2024-02-16_fr", "editeur": "Commission européenne", "media": "article" },
       { "titre": "Loi de 2023 visant à instaurer une majorité numérique", "url": "https://www.senat.fr/dossierleg/ppl22-389.html", "editeur": "Sénat", "media": "article" }
-    ],
-    "propositions": ["prop-ga-3","prop-rg-3"],
-    "lois": ["mineurs-reseaux-sociaux-2026","loi-sren-numerique-2024"]
+    ]
   },
   {
     "id": "intelligence-artificielle",
@@ -776,9 +684,7 @@
     "liens": [
       { "titre": "Centre de données", "url": "https://fr.wikipedia.org/wiki/Centre_de_donn%C3%A9es", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Sommet de l'intelligence artificielle à Paris en 2025", "url": "https://www.banquedesterritoires.fr/sommet-de-lia-la-france-affirme-son-leadership", "editeur": "Banque des Territoires", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-db-2","prop-mt-6","prop-kb-1"],
-    "lois": ["reglement-europeen-ia-act-2024"]
+    ]
   },
   {
     "id": "souverainete-numerique",
@@ -790,8 +696,7 @@
     "liens": [
       { "titre": "SecNumCloud", "url": "https://fr.wikipedia.org/wiki/SecNumCloud", "editeur": "Wikipédia", "media": "article", "aveugle": false },
       { "titre": "Plateforme des données de santé", "url": "https://fr.wikipedia.org/wiki/Health_Data_Hub", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-fp-3","prop-nda-5"]
+    ]
   },
   {
     "id": "surveillance",
@@ -804,9 +709,7 @@
       { "titre": "Loi informatique et libertés", "url": "https://fr.wikipedia.org/wiki/Loi_informatique_et_libert%C3%A9s", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La vidéoprotection", "url": "https://www.cnil.fr/fr/la-videoprotection", "editeur": "Commission nationale de l'informatique et des libertés", "media": "article", "aveugle": false },
       { "titre": "La vidéosurveillance en France, des villes aux villages", "url": "https://linc.cnil.fr/la-videosurveillance-en-france-des-zones-urbaines-aux-zones-rurales", "editeur": "Commission nationale de l'informatique et des libertés", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-fa-5","prop-sl-5"],
-    "lois": ["videosurveillance-ia-jo-2024","securite-globale-2020"]
+    ]
   },
   {
     "id": "acces-aux-soins",
@@ -818,10 +721,7 @@
     "liens": [
       { "titre": "Les dépenses de santé en 2024", "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-infographie-documents-de-reference/250930-Panorama-depenses-de-sante", "editeur": "Drees", "media": "article" },
       { "titre": "Numerus clausus", "url": "https://fr.wikipedia.org/wiki/Numerus_clausus", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-dl-7","prop-jl-2","prop-ob-7","prop-ga-4"],
-    "lois": ["loi-valletoux-acces-soins-2023"],
-    "enjeux": ["soins-rembourses"]
+    ]
   },
   {
     "id": "hopital-public",
@@ -833,8 +733,7 @@
     "liens": [
       { "titre": "Les établissements de santé en 2024", "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-documents-de-reference/panoramas-de-la-drees/260520-Etablissements-de-sant%C3%A9-en-2024", "editeur": "Drees", "media": "article" },
       { "titre": "En 2024, la baisse du nombre de lits ralentit", "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/251113_ER_etablissements-de-sante", "editeur": "Drees", "media": "article" }
-    ],
-    "propositions": ["prop-fa-8","prop-mlp-8","prop-xb-8"]
+    ]
   },
   {
     "id": "medicaments",
@@ -847,8 +746,7 @@
       { "titre": "Les brevets pour les produits pharmaceutiques", "url": "https://www.inpi.fr/realiser-demarches/propriete-intellectuelle/cas-particulier-produits-pharmaceutiques", "editeur": "Institut national de la propriété industrielle", "media": "article" },
       { "titre": "Ruptures de stock de médicaments : ampleur et conséquences", "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/250327_ER_ruptures-de-stock-medicaments-declarees-par-les-industriels-ampleur-et-consequences", "editeur": "Drees", "media": "article" },
       { "titre": "Médicament générique", "url": "https://fr.wikipedia.org/wiki/M%C3%A9dicament_g%C3%A9n%C3%A9rique", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-na-5","prop-rg-8"]
+    ]
   },
   {
     "id": "vaccination",
@@ -860,8 +758,7 @@
     "liens": [
       { "titre": "Politique vaccinale de la France", "url": "https://fr.wikipedia.org/wiki/Politique_vaccinale_de_la_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Obligations vaccinales des professionnels : avis de 2023", "url": "https://www.has-sante.fr/jcms/p_3424589/fr/obligations-vaccinales-des-professionnels-la-has-publie-le-1er-volet-de-ses-travaux", "editeur": "Haute Autorité de santé", "media": "article" }
-    ],
-    "propositions": ["prop-fp-8","prop-nda-3"]
+    ]
   },
   {
     "id": "fin-de-vie",
@@ -874,8 +771,7 @@
       { "titre": "Directives anticipées : dernières volontés sur les soins en fin de vie", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F32010", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Convention citoyenne sur la fin de vie", "url": "https://fr.wikipedia.org/wiki/Convention_citoyenne_sur_la_fin_de_vie", "editeur": "Wikipédia", "media": "article", "aveugle": false },
       { "titre": "La loi de 2005 sur la fin de vie", "url": "https://fr.wikipedia.org/wiki/Loi_Leonetti", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "lois": ["aide-a-mourir-2026"]
+    ]
   },
   {
     "id": "alimentation-sante",
@@ -887,8 +783,7 @@
     "liens": [
       { "titre": "Nutri-Score", "url": "https://fr.wikipedia.org/wiki/Nutri-Score", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La taxe sur les boissons sucrées", "url": "https://fr.wikipedia.org/wiki/Taxe_soda", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-am-11"]
+    ]
   },
   {
     "id": "police-maintien-ordre",
@@ -901,9 +796,7 @@
       { "titre": "La police municipale en France", "url": "https://fr.wikipedia.org/wiki/Police_municipale_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La nasse en maintien de l'ordre", "url": "https://fr.wikipedia.org/wiki/Nasse_(maintien_de_l%27ordre)", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La légitime défense en droit français", "url": "https://fr.wikipedia.org/wiki/L%C3%A9gitime_d%C3%A9fense_en_droit_fran%C3%A7ais", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-ak-7","prop-am-10","prop-dl-4"],
-    "lois": ["presomption-legitime-defense-2026"]
+    ]
   },
   {
     "id": "justice-des-mineurs",
@@ -916,8 +809,7 @@
       { "titre": "Justice pénale des mineurs : mesures et peines encourues", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1837", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Le code de la justice pénale des mineurs", "url": "https://fr.wikipedia.org/wiki/Code_de_la_justice_p%C3%A9nale_des_mineurs", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le centre éducatif fermé", "url": "https://fr.wikipedia.org/wiki/Centre_%C3%A9ducatif_ferm%C3%A9", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-br-2","prop-ga-5","prop-np-5","prop-ob-4"]
+    ]
   },
   {
     "id": "peines-prisons",
@@ -929,9 +821,7 @@
     "liens": [
       { "titre": "Mesure de l'incarcération au 1er octobre 2026", "url": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf", "editeur": "Ministère de la Justice", "media": "article" },
       { "titre": "La peine plancher", "url": "https://fr.wikipedia.org/wiki/Peine_plancher", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-mlp-1","prop-fp-7","prop-fa-7"],
-    "enjeux": ["peines-planchers"]
+    ]
   },
   {
     "id": "trafic-de-drogue",
@@ -942,9 +832,7 @@
     "aJour": "2026-11-06",
     "liens": [
       { "titre": "Rapport du Sénat : sortir du piège du narcotrafic (2024)", "url": "https://www.senat.fr/notice-rapport/2023/r23-588-1-notice.html", "editeur": "Sénat", "media": "article" }
-    ],
-    "propositions": ["prop-br-4"],
-    "lois": ["loi-narcotrafic-2025"]
+    ]
   },
   {
     "id": "securite-civile",
@@ -957,8 +845,7 @@
       { "titre": "Le plan ORSEC", "url": "https://fr.wikipedia.org/wiki/Plan_ORSEC", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Les sapeurs-pompiers en France", "url": "https://fr.wikipedia.org/wiki/Sapeur-pompier_en_France", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La réserve communale de sécurité civile", "url": "https://fr.wikipedia.org/wiki/R%C3%A9serve_communale_de_s%C3%A9curit%C3%A9_civile", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-db-5","prop-mm-4"]
+    ]
   },
   {
     "id": "laicite",
@@ -971,9 +858,7 @@
       { "titre": "La loi de 2004 sur les signes religieux à l'école", "url": "https://fr.wikipedia.org/wiki/Loi_sur_les_signes_religieux_dans_les_%C3%A9coles_publiques_fran%C3%A7aises", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La loi de 2010 sur la dissimulation du visage", "url": "https://fr.wikipedia.org/wiki/Loi_interdisant_la_dissimulation_du_visage_dans_l%27espace_public", "editeur": "Wikipédia", "media": "article" },
       { "titre": "La loi de 1905 de séparation des Églises et de l'État", "url": "https://fr.wikipedia.org/wiki/Loi_de_s%C3%A9paration_des_%C3%89glises_et_de_l%27%C3%89tat", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "propositions": ["prop-db-6","prop-ez-6"],
-    "lois": ["principes-republique-2021"]
+    ]
   },
   {
     "id": "liberte-expression",
@@ -985,8 +870,7 @@
     "liens": [
       { "titre": "La loi de 1881 sur la liberté de la presse", "url": "https://fr.wikipedia.org/wiki/Loi_sur_la_libert%C3%A9_de_la_presse_du_29_juillet_1881", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le règlement européen sur les services numériques", "url": "https://fr.wikipedia.org/wiki/R%C3%A8glement_sur_les_services_num%C3%A9riques", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-fp-6"]
+    ]
   },
   {
     "id": "ruralite",
@@ -998,8 +882,7 @@
     "liens": [
       { "titre": "France services", "url": "https://fr.wikipedia.org/wiki/France_services", "editeur": "Wikipédia", "media": "article" },
       { "titre": "Le plan France Très Haut Débit", "url": "https://fr.wikipedia.org/wiki/Plan_France_Tr%C3%A8s_Haut_D%C3%A9bit", "editeur": "Wikipédia", "media": "article" }
-    ],
-    "propositions": ["prop-jl-4"]
+    ]
   },
   {
     "id": "enfance-famille",
@@ -1011,9 +894,7 @@
     "liens": [
       { "titre": "Allocations familiales", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F13213", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Accompagner les jeunes majeurs vers l'autonomie", "url": "https://solidarites.gouv.fr/accompagner-les-jeunes-majeurs-vers-lautonomie", "editeur": "Ministère des Solidarités", "media": "article" }
-    ],
-    "propositions": ["prop-kb-3","prop-ob-8"],
-    "lois": ["jeunes-majeurs-protection-enfance-2026"]
+    ]
   },
   {
     "id": "bioethique",
@@ -1026,8 +907,7 @@
       { "titre": "En 2024, 251 270 IVG ont eu lieu en France", "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/250925-ER-ivg-en-france-en-2024", "editeur": "Ministère de la Santé (statistiques)", "media": "article" },
       { "titre": "L'IVG en France", "url": "https://fr.wikipedia.org/wiki/Interruption_volontaire_de_grossesse_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false },
       { "titre": "La PMA en France", "url": "https://fr.wikipedia.org/wiki/Procr%C3%A9ation_m%C3%A9dicalement_assist%C3%A9e_en_France", "editeur": "Wikipédia", "media": "article", "aveugle": false }
-    ],
-    "lois": ["loi-constitutionnelle-ivg-2024","bioethique-pma-2019"]
+    ]
   },
   {
     "id": "egalite-salariale",
@@ -1040,7 +920,6 @@
       { "titre": "Les écarts de salaire entre femmes et hommes en 2024", "url": "https://insee.fr/fr/statistiques/8743657", "editeur": "Insee", "media": "article" },
       { "titre": "L'index de l'égalité professionnelle", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F35103", "editeur": "Service-public.fr", "media": "article" },
       { "titre": "Transparence salariale : le projet de loi présenté", "url": "https://entreprendre.service-public.gouv.fr/actualites/A19060", "editeur": "Service-public.fr", "media": "article" }
-    ],
-    "propositions": ["prop-rg-6"]
+    ]
   }
 ]

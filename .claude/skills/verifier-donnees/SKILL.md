@@ -77,11 +77,11 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - La `question` est neutre, anonyme, d'une idée ; l'`enjeu` ne reprend aucun chiffre propre à un candidat.
 - Une proposition qui mêle deux idées n'entre pas dans un enjeu.
 
-**Repère** (`data/reperes.json`)
+**Sujet** (`data/sujets.json`, onglet « Contexte »)
 - Chaque fait de `aujourdhui` est dans l'un de ses liens, ouvert et lu ; sinon il est **retiré**. Les chiffres sont datés.
 - `enDebat` est symétrique : chaque option a son argument, sans adjectif qui juge ni nom.
 - Il ne trahit ni l'auteur d'une proposition ni le résultat d'un scrutin rattaché ; un lien qui les donne porte `aveugle: false`.
-- Le build signale une question sans repère, un repère sans année, sans source lisible pendant le vote, ou relu il y a plus de 180 jours.
+- Le build signale une question sans sujet, un sujet d'aucune question, un sujet sans année, sans source lisible pendant le vote, ou relu il y a plus de 180 jours.
 
 ## 3. Corriger et consigner
 

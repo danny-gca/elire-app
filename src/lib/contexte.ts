@@ -10,8 +10,8 @@ export interface ContexteInput {
   kind: Kind;
   /** Proposition : son contexte ; scrutin ou question commune : son enjeu. */
   precisions: string;
-  /** Repère rattaché (« Aujourd'hui » et « En débat »), s'il y en a un. */
-  repere?: string;
+  /** Sujet de la question (« Aujourd'hui » et « En débat »), s'il y en a un. */
+  sujet?: string;
 }
 
 export interface ContexteStat {
@@ -19,7 +19,7 @@ export interface ContexteStat {
   kind: Kind;
   /** Caractères utiles des « Précisions » : sans la première phrase d'une proposition, qui ne nomme que le document. */
   precisions: number;
-  repere: number;
+  sujet: number;
   /** Précisions rapportées à la médiane de son type, en %. */
   part: number;
 }
@@ -51,7 +51,7 @@ export function contexteStats(items: readonly ContexteInput[]): ContexteStat[] {
   }
   return items.map((i, n) => {
     const m = medians.get(i.kind) || 1;
-    return { ref: i.ref, kind: i.kind, precisions: lengths[n], repere: i.repere?.length ?? 0, part: Math.round((lengths[n] / m) * 100) };
+    return { ref: i.ref, kind: i.kind, precisions: lengths[n], sujet: i.sujet?.length ?? 0, part: Math.round((lengths[n] / m) * 100) };
   });
 }
 

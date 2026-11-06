@@ -47,7 +47,7 @@ const markerOf = (i) => MARKERS[i % MARKERS.length];
 
 // Votes de démo : propositions seules réparties par candidat, quelques questions communes et scrutins, 103 avis (pas un multiple de 10 : pas de bilan à l'écran).
 // Une proposition rattachée à une question commune n'est pas votable seule : le store l'écarterait.
-// Une question commune et un scrutin qui ont un repère, des mots et des liens : les 4 onglets d'explications à l'écran.
+// Une question commune et un scrutin qui ont un sujet, des mots et des liens : les 4 onglets d'explications à l'écran.
 const NEXT_PROPOSITION = 'reculer-retraite';
 const NEXT_LOI = 'debat-accord-ue-mercosur-2024';
 // Largeur à partir de laquelle un onglet est ouvert : la tablette a la place de montrer son contenu.

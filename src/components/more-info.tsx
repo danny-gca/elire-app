@@ -34,7 +34,7 @@ import {
 import { acronymsIn, wordsIn } from "@/lib/glossary";
 import type { Lien, NatureLoi } from "@/schemas/dataset";
 import {
-  getRepere,
+  getSujet,
   glossaire,
   mots,
   propositions,
@@ -54,7 +54,7 @@ const MEDIA_LABELS: Record<Lien["media"], string> = {
 const DRAWER_MS = 220;
 
 interface MoreInfoProps {
-  /** Proposition, scrutin ou question commune : son repère, et la graine des couleurs. */
+  /** Proposition, scrutin ou question commune : son sujet, et la graine des couleurs. */
   itemId: string;
   /** Contexte de la proposition, ou enjeu du scrutin ou de la question. */
   text: string;
@@ -87,9 +87,9 @@ export function MoreInfo({
   const reader = useVotesStore((s) => s.marker);
   const openRef = useRef<View>(null);
   const reducedMotion = useReducedMotion();
-  const repere = getRepere(itemId);
+  const sujet = getSujet(itemId);
   // Pendant le vote : seulement les liens qui ne trahissent ni l'auteur ni le résultat.
-  const liens = repere?.liens.filter((l) => l.aveugle !== false) ?? [];
+  const liens = sujet?.liens.filter((l) => l.aveugle !== false) ?? [];
   const explained = nature ? NATURE_EXPLAINED[nature] : undefined;
   // Question commune : ce que propose chaque candidat, sans son nom ; le lien s'ouvre, mais son site (souvent celui du parti) n'est pas écrit.
   const proposals = propositions.filter((p) => p.enjeuId === itemId);
@@ -110,16 +110,16 @@ export function MoreInfo({
     text,
     explained,
     ...proposals.flatMap((p) => [p.titre, p.contexte]),
-    repere?.titre,
-    repere?.aujourdhui,
-    repere?.enDebat,
+    sujet?.titre,
+    sujet?.aujourdhui,
+    sujet?.enDebat,
   ];
   const sigles = acronymsIn(...texts).flatMap((s) => bySigle.get(s) ?? []);
   const words = wordsIn(texts, mots).flatMap((m) => byMot.get(m) ?? []);
 
   const origin = nature ? NATURE_LABELS[nature] : source;
   const allTabs: { id: InfoTab; label: string }[] = [
-    ...(repere ? [{ id: "clair" as const, label: "Contexte" }] : []),
+    ...(sujet ? [{ id: "clair" as const, label: "Contexte" }] : []),
     { id: "mesure", label: "Précisions" },
     ...(sigles.length + words.length > 0
       ? [{ id: "mots" as const, label: "Glossaire" }]
@@ -154,7 +154,7 @@ export function MoreInfo({
                 style={styles.body}
                 onLayout={() => onOpen?.(openRef.current)}
               >
-                {t.id === "clair" && repere && (
+                {t.id === "clair" && sujet && (
                   <>
                     <View style={styles.block}>
                       <Text style={[Type.labelStrong, styles.ink]}>
@@ -165,7 +165,7 @@ export function MoreInfo({
                         onWord={onWord}
                         selectable
                       >
-                        {repere.aujourdhui}
+                        {sujet.aujourdhui}
                       </GlossaryText>
                     </View>
                     <View style={styles.block}>
@@ -177,11 +177,11 @@ export function MoreInfo({
                         onWord={onWord}
                         selectable
                       >
-                        {repere.enDebat}
+                        {sujet.enDebat}
                       </GlossaryText>
                     </View>
                     <Text style={[Type.label, styles.muted]}>
-                      À jour au {formatDate(repere.aJour)}
+                      À jour au {formatDate(sujet.aJour)}
                     </Text>
                   </>
                 )}

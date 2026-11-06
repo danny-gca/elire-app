@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-06T16:31:32.445Z",
+    "generatedAt": "2026-11-06T16:44:39.148Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
@@ -878,6 +878,7 @@
       "ref": "P-857",
       "candidatId": "anasse-kazib",
       "thematiqueId": "economie",
+      "sujetId": "smic-salaires",
       "titre": "Porter le SMIC à 2 000 euros net et augmenter les salaires de 500 euros",
       "description": "« SMIC à 2000 € net, revalorisation de toutes les allocations, augmentation des salaires de 500 €, indexation sur l'inflation. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
@@ -902,6 +903,7 @@
       "ref": "P-319",
       "candidatId": "anasse-kazib",
       "thematiqueId": "education",
+      "sujetId": "etudiants",
       "titre": "Verser un revenu étudiant égal au SMIC, financé par le patronat",
       "description": "« Revenu étudiant à hauteur du SMIC, financé par le patronat. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
@@ -926,6 +928,7 @@
       "ref": "P-133",
       "candidatId": "anasse-kazib",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-du-president",
       "titre": "Remplacer la présidence, le Sénat et le Conseil constitutionnel par une assemblée unique",
       "description": "« nous revendiquons la fin de la Présidence de la République, du Sénat ou du Conseil constitutionnel, et la mise en place d'une assemblée unique, concentrant le pouvoir exécutif et législatif »",
       "sourceUrl": "https://www.revolutionpermanente.fr/Presidentielle-2027-Anasse-Kazib-veut-faire-entendre-la-voix-de-la-nouvelle-classe-ouvriere",
@@ -938,6 +941,7 @@
       "ref": "P-676",
       "candidatId": "anasse-kazib",
       "thematiqueId": "international",
+      "sujetId": "defense",
       "titre": "Retirer les troupes françaises déployées à l'étranger et les rapatrier en France",
       "description": "« Retrait des troupes françaises à l'étranger. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
@@ -949,6 +953,7 @@
       "ref": "P-495",
       "candidatId": "anasse-kazib",
       "thematiqueId": "securite",
+      "sujetId": "police-maintien-ordre",
       "titre": "Dissoudre les corps spéciaux de la police en France",
       "description": "« Dissolution des corps spéciaux de police. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
@@ -960,6 +965,7 @@
       "ref": "P-686",
       "candidatId": "anasse-kazib",
       "thematiqueId": "logement",
+      "sujetId": "logements-vacants-loyers",
       "titre": "Exproprier les logements vides, plafonner et geler les loyers",
       "description": "« Expropriation des logements vides, plafonnement et gel des loyers. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
@@ -971,6 +977,7 @@
       "ref": "P-531",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "environnement",
+      "sujetId": "nucleaire",
       "titre": "Financer de nouveaux réacteurs nucléaires (EPR) et de nouvelles éoliennes et centrales solaires",
       "description": "« Financer le déploiement à court terme de nouveaux réacteurs nucléaires [...] ainsi que de nouveaux moyens de production d'électricité renouvelable (éolien et solaire). »",
       "sourceUrl": "https://parti-equinoxe.fr/elections-legislatives-2024/programme-legislatives-2024-energie/",
@@ -983,6 +990,7 @@
       "ref": "P-888",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "agriculture",
+      "sujetId": "politique-agricole-commune",
       "titre": "Réformer la politique agricole commune (PAC) pour soutenir l'agroécologie",
       "description": "« Réformer la Politique agricole commune pour soutenir davantage les pratiques agroécologiques [...] »",
       "sourceUrl": "https://parti-equinoxe.fr/programme-europeennes-2024-agriculture/",
@@ -995,6 +1003,7 @@
       "ref": "P-526",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "logement",
+      "sujetId": "renovation-energetique",
       "titre": "Lancer un plan national pour rénover les bâtiments anciens et supprimer les passoires thermiques",
       "description": "« Lancer un plan national de rénovation des bâtiments anciens, visant à améliorer leur efficacité énergétique et à éliminer les passoires thermiques. »",
       "sourceUrl": "https://parti-equinoxe.fr/elections-legislatives-2024/programme-legislatives-2024-energie/",
@@ -1007,6 +1016,7 @@
       "ref": "P-345",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "economie",
+      "sujetId": "impots-entreprises",
       "titre": "Taxer à 0,3 % les transactions financières pour financer la transition écologique",
       "description": "« Taxer l'ensemble des transactions financières à hauteur de 0.3% pour dégager au moins 50 Mds d'euros afin de financer la transition écologique et lutter contre la spéculation. »",
       "sourceUrl": "https://parti-equinoxe.fr/programme-europeennes-2024-mesure-phare-9-finance/",
@@ -1019,6 +1029,7 @@
       "ref": "P-360",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "institutions",
+      "sujetId": "referendum",
       "titre": "Développer la démocratie directe et les conventions citoyennes",
       "description": "« [...] développer la démocratie directe et les conventions citoyennes. »",
       "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/07/Parti-equinoxe-Tracts.pdf",
@@ -1030,6 +1041,7 @@
       "ref": "P-180",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "education",
+      "sujetId": "apprentissages-ecole",
       "titre": "Faire commencer les cours à 9 heures au collège et au lycée",
       "description": "« Décaler l'heure de début des cours à 9h au collège et au lycée. »",
       "sourceUrl": "https://parti-equinoxe.fr/nos-reponses-aux-revendications-lyceennes/",
@@ -1042,6 +1054,7 @@
       "ref": "P-685",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "securite",
+      "sujetId": "police-maintien-ordre",
       "titre": "Revoir le maintien de l'ordre en manifestation, notamment les nasses et les armes dangereuses",
       "description": "« Revoir en profondeur la doctrine du maintien de l'ordre, notamment les nasses et l'utilisation d'armes dangereuses. »",
       "sourceUrl": "https://parti-equinoxe.fr/notre-plan-pour-sortir-de-la-violence/",
@@ -1054,6 +1067,7 @@
       "ref": "P-866",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "sante",
+      "sujetId": "alimentation-sante",
       "titre": "Renforcer le bonus-malus sur les produits alimentaires très transformés",
       "description": "« Amplifier le système de bonus-malus sur les produits très transformés pour permettre à l'alimentation saine d'être plus accessible. »",
       "sourceUrl": "https://parti-equinoxe.fr/proteger-les-animaux-lenvironnement-et-nos-eleveurs/",
@@ -1080,6 +1094,7 @@
       "ref": "P-604",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "securite",
+      "sujetId": "justice-des-mineurs",
       "titre": "Faire de l'excuse de minorité l'exception et non la règle",
       "description": "« Aujourd'hui, l'excuse de minorité est la règle, demain elle doit devenir l'exception » ; « Il faut réformer profondément la justice des mineurs »",
       "sourceUrl": "https://www.europe1.fr/node/669464",
@@ -1106,6 +1121,7 @@
       "ref": "P-862",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "logement",
+      "sujetId": "trafic-de-drogue",
       "titre": "Obliger les bailleurs à demander au juge la fin du bail des locataires liés au trafic de drogue",
       "description": "« enjoindre aux bailleurs sociaux et privés de saisir le juge judiciaire en résiliation du bail locatif »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/parlementaire/interdiction-de-paraitre-sur-des-points-de-deal-expulsion-locative-bruno-retailleau-transmet-une-nouvelle-circulaire-de-lutte-contre-le-narcotrafic-aux-prefets",
@@ -1118,6 +1134,7 @@
       "ref": "P-785",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "international",
+      "sujetId": "expulsions",
       "titre": "Conditionner les visas accordés à un pays à son accord pour reprendre ses ressortissants expulsés",
       "description": "« conditionner la politique de visas à la délivrance des laissez-passer consulaires »",
       "sourceUrl": "https://telquel.ma/instant-t/2024/10/02/bruno-retailleau-en-2023-la-france-a-delivre-au-maroc-238-750-visas-mais-na-obtenu-que-725-laissez-passer_1896520/",
@@ -1130,6 +1147,7 @@
       "ref": "P-324",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "institutions",
+      "sujetId": "parlement-gouvernement",
       "titre": "Réduire de 20 à 25 % le nombre de parlementaires",
       "description": "« le chiffre de « 20/25% » de parlementaires en moins »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/reforme-constitutionnelle-il-faut-ecouter-le-senat-dit-retailleau-83384",
@@ -1142,6 +1160,7 @@
       "ref": "P-143",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "education",
+      "sujetId": "metier-enseignant",
       "titre": "Augmenter le salaire des professeurs de 135 euros nets par mois en début de carrière, 300 en milieu",
       "description": "« 135 euros nets de plus par mois en début de carrière, jusqu'à 300 euros en milieu, sur le traitement des professeurs, pas les primes. »",
       "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/09/LR_Ecole_vF.pdf",
@@ -1153,6 +1172,7 @@
       "ref": "P-594",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "agriculture",
+      "sujetId": "statut-agriculture",
       "titre": "Inscrire dans la Constitution l'agriculture comme intérêt fondamental de la Nation",
       "description": "« Réviser la Constitution pour y inscrire l'agriculture comme intérêt fondamental de la Nation »",
       "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/03/LR_Agriculture.pdf",
@@ -1164,6 +1184,7 @@
       "ref": "P-869",
       "candidatId": "david-lisnard",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-locaux",
       "titre": "Donner aux collectivités locales le pouvoir de fixer les règles, hors domaines régaliens",
       "description": "« transférer le pouvoir règlementaire - sauf dans le champ régalien - aux collectivités territoriales »",
       "sourceUrl": "https://www.maire-info.com/congr%C3%A8s-de-l'amf/david-lisnard--les-crises-ont-demontre-la-solidite-de-l'echelon-communal--article-30199",
@@ -1176,6 +1197,7 @@
       "ref": "P-512",
       "candidatId": "david-lisnard",
       "thematiqueId": "economie",
+      "sujetId": "depenses-dette",
       "titre": "Baisser les dépenses publiques de 80 milliards d'euros en un an, puis d'au moins 200 milliards",
       "description": "« 80 milliards d'euros dès la première année, puis une trajectoire d'au moins 200 milliards. »",
       "sourceUrl": "https://www.unenouvelleenergie.fr/questions/quelles-economies-david-lisnard-propose-t-il-et-ou-exactement/",
@@ -1201,6 +1223,7 @@
       "ref": "P-874",
       "candidatId": "david-lisnard",
       "thematiqueId": "securite",
+      "sujetId": "police-maintien-ordre",
       "titre": "Permettre aux communes volontaires d'armer leur police municipale",
       "description": "« permettre aux communes volontaires d'armer leur police municipale »",
       "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/securite/",
@@ -1212,6 +1235,7 @@
       "ref": "P-693",
       "candidatId": "david-lisnard",
       "thematiqueId": "logement",
+      "sujetId": "sols-grands-projets",
       "titre": "Assouplir la règle « zéro artificialisation nette », jugée inapplicable localement",
       "description": "« on a créé, avec le ZAN, un dispositif si complexe qu'il est inapplicable localement, inéquitable » ; « La proposition de loi Trace vise à assouplir le dispositif du ZAN »",
       "sourceUrl": "https://www.ffbatiment.fr/revues-guides/bam/79-juin-2025/liberer-acte-construire-entretien-avec-david-lisnard-maire-cannes",
@@ -1224,6 +1248,7 @@
       "ref": "P-155",
       "candidatId": "david-lisnard",
       "thematiqueId": "sante",
+      "sujetId": "acces-aux-soins",
       "titre": "Doubler le nombre d'étudiants en médecine d'ici 2030 et ouvrir tous les lieux de stage",
       "description": "« Nous voulons doubler le nombre d'étudiants en médecine d'ici 2030 [...] et ouvrir tous les lieux de stage, publics comme privés. »",
       "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/sante/",
@@ -1235,6 +1260,7 @@
       "ref": "P-698",
       "candidatId": "david-lisnard",
       "thematiqueId": "agriculture",
+      "sujetId": "normes-europeennes-importations",
       "titre": "S'en tenir aux normes européennes en France et imposer les mêmes règles aux produits importés",
       "description": "« Nous proposons d'en finir avec les surtranspositions françaises [...] et la mise en œuvre de clauses miroirs obligatoires pour les produits importés. »",
       "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/agriculture/",
@@ -1246,6 +1272,7 @@
       "ref": "P-335",
       "candidatId": "delphine-batho",
       "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
       "titre": "Diviser par deux la consommation d'énergie pour atteindre la neutralité carbone",
       "description": "« Il n'y a aucun scénario de neutralité carbone qui ne commence par diviser par deux la consommation d'énergie. »",
       "sourceUrl": "https://www.generationecologie.fr/2026/06/22/quelle-politique-energetique-pour-la-france/",
@@ -1258,6 +1285,7 @@
       "ref": "P-154",
       "candidatId": "delphine-batho",
       "thematiqueId": "numerique",
+      "sujetId": "intelligence-artificielle",
       "titre": "Soumettre au débat public la multiplication des data centers et le passage à la 6G",
       "description": "« Est-ce bien raisonnable [...] de se lancer sans débat dans la multiplication des data centers, ou encore dans la 6G après la 5G ? Autant de choix collectifs qui doivent être débattus. »",
       "sourceUrl": "https://www.generationecologie.fr/2026/06/22/quelle-politique-energetique-pour-la-france/",
@@ -1284,6 +1312,7 @@
       "ref": "P-340",
       "candidatId": "delphine-batho",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-du-president",
       "titre": "Abolir le présidentialisme, la prééminence du président sous la Ve République",
       "description": "« plus que le simple changement de l'occupant actuel de l'Élysée, nous devons porter l'abolition du présidentialisme. »",
       "sourceUrl": "https://www.generationecologie.fr/2025/10/14/preparer-lalternative-ecologiste-au-systeme-politique-en-place/",
@@ -1296,6 +1325,7 @@
       "ref": "P-159",
       "candidatId": "delphine-batho",
       "thematiqueId": "securite",
+      "sujetId": "securite-civile",
       "titre": "Créer un ministère de la résilience, de la protection civile et des situations d'urgence",
       "description": "« reconnaître la sécurité climatique comme une priorité nationale, dotée d'un ministère régalien de la résilience, de la protection civile et des situations d'urgence »",
       "sourceUrl": "https://www.generationecologie.fr/2026/05/27/canicule-vingt-ans-de-lecons-non-apprises/",
@@ -1308,6 +1338,7 @@
       "ref": "P-878",
       "candidatId": "delphine-batho",
       "thematiqueId": "societe",
+      "sujetId": "laicite",
       "titre": "Renforcer la protection des défenseurs de la laïcité",
       "description": "« il est urgent de renforcer la protection des actrices et acteurs défenseurs de la laïcité, en adaptant les moyens républicains à la réalité des menaces qu'elle doit désormais affronter. »",
       "sourceUrl": "https://www.generationecologie.fr/2025/12/09/120-ans-de-la-loi-du-9-decembre-1905-donnons-de-nouveaux-moyens-aux-defenseurs-de-la-laicite/",
@@ -1320,6 +1351,7 @@
       "ref": "P-697",
       "candidatId": "delphine-batho",
       "thematiqueId": "agriculture",
+      "sujetId": "politique-agricole-commune",
       "titre": "Réserver les aides agricoles européennes au bio, à l'agroécologie et à la sortie de l'élevage industriel",
       "description": "« [...] consacrer tous les moyens de la politique agricole commune à la transformation agroécologique, à la conversion à l'agriculture biologique, à la sortie des modes d'élevage industriels [...] »",
       "sourceUrl": "https://www.generationecologie.fr/2024/12/27/pour-un-etat-resilience/",
@@ -1332,6 +1364,7 @@
       "ref": "P-164",
       "candidatId": "delphine-batho",
       "thematiqueId": "sante",
+      "sujetId": "pesticides",
       "titre": "Interdire tous les pesticides et produits chimiques cancérigènes",
       "description": "« Tous les pesticides et produits chimiques cancérigènes doivent être interdits. »",
       "sourceUrl": "https://www.generationecologie.fr/2025/10/27/incidence-record-du-cancer-en-france-agir-enfin-sur-les-causes/",
@@ -1358,6 +1391,7 @@
       "ref": "P-389",
       "candidatId": "edouard-philippe",
       "thematiqueId": "environnement",
+      "sujetId": "nucleaire",
       "titre": "Relancer le nucléaire, développer les renouvelables et passer massivement à l'électricité",
       "description": "« Assurer notre souveraineté énergétique en relançant le nucléaire (lancement de 8 EPR supplémentaires en plus des 6 déjà prévus), en développant les renouvelables et en électrifiant massivement nos usages. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
@@ -1369,6 +1403,7 @@
       "ref": "P-570",
       "candidatId": "edouard-philippe",
       "thematiqueId": "education",
+      "sujetId": "uniforme-autorite",
       "titre": "Laisser les chefs d'établissement imposer l'uniforme et participer au recrutement et à l'évaluation de leur équipe",
       "description": "« Faire des chefs d'établissements les véritables patrons de l'école : liberté [...] d'imposer l'uniforme, de fixer les règles de discipline, de participer au recrutement et à l'évaluation de leur équipe. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
@@ -1380,6 +1415,7 @@
       "ref": "P-575",
       "candidatId": "edouard-philippe",
       "thematiqueId": "travail",
+      "sujetId": "temps-de-travail",
       "titre": "Donner le maximum de liberté dans l'entreprise sur le temps de travail",
       "description": "« Je pense que faire les 35 heures était une erreur. » ; « donner le maximum de libertés dans l'entreprise »",
       "sourceUrl": "https://www.planet.fr/faut-il-mettre-fin-aux-35-heures-retailleau-pour-edouard-philippe-contre.2999403.817022.html",
@@ -1392,6 +1428,7 @@
       "ref": "P-213",
       "candidatId": "edouard-philippe",
       "thematiqueId": "international",
+      "sujetId": "service-national",
       "titre": "Passer à 250 000 réservistes et 50 000 places de service militaire volontaire par an",
       "description": "« Porter le nombre de réservistes de 45 000 à 250 000 et le service militaire volontaire de 3 000 à 50 000 places par an. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
@@ -1416,6 +1453,7 @@
       "ref": "P-203",
       "candidatId": "edouard-philippe",
       "thematiqueId": "societe",
+      "sujetId": "immigration-asile",
       "titre": "Diviser par deux le nombre d'étrangers qui viennent s'installer en France",
       "description": "« Un objectif clair : diviser par deux l'immigration dans notre pays. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
@@ -1427,6 +1465,7 @@
       "ref": "P-962",
       "candidatId": "eric-zemmour",
       "thematiqueId": "securite",
+      "sujetId": "expulsions",
       "titre": "Expulser tous les délinquants étrangers, même ceux qui ne sont pas en prison",
       "description": "« Il faut renvoyer tous les délinquants étrangers, même ceux qui ne sont pas en prison »",
       "sourceUrl": "https://www.parismatch.be/actualites/monde/2026/09/18/eric-zemmour-confirme-sa-candidature-a-lelection-presidentielle-francaise-5CKEL6PZ4BDONOUKVHMMCG65NU/",
@@ -1453,6 +1492,7 @@
       "ref": "P-424",
       "candidatId": "eric-zemmour",
       "thematiqueId": "economie",
+      "sujetId": "impots-entreprises",
       "titre": "Baisser de 30 milliards d'euros les impôts de production des entreprises",
       "description": "« une baisse des impôts de production sur les entreprises, à hauteur de 30 milliards d'euros »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
@@ -1465,6 +1505,7 @@
       "ref": "P-957",
       "candidatId": "eric-zemmour",
       "thematiqueId": "institutions",
+      "sujetId": "union-europeenne",
       "titre": "Faire primer les nouvelles lois françaises sur les traités internationaux et européens",
       "description": "« supériorité des nouvelles lois nationales sur tous les textes internationaux et européens »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
@@ -1477,6 +1518,7 @@
       "ref": "P-238",
       "candidatId": "eric-zemmour",
       "thematiqueId": "logement",
+      "sujetId": "logement-social",
       "titre": "Supprimer le quota de logements sociaux imposé aux communes (loi SRU)",
       "description": "« la loi SRU sera abrogée et les étrangers interdits d'accès aux logements sociaux »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
@@ -1489,6 +1531,7 @@
       "ref": "P-419",
       "candidatId": "eric-zemmour",
       "thematiqueId": "societe",
+      "sujetId": "laicite",
       "titre": "Interdire le voile islamique et la kippa dans l'espace public",
       "description": "« Dans l'espace public oui »",
       "sourceUrl": "https://www.bfmtv.com/politique/elections/presidentielle/video-interdiction-du-voile-et-de-la-kippa-dans-l-espace-public-oui-repond-eric-zemmour-president-de-reconquete_VN-202609170912.html",
@@ -1527,6 +1570,7 @@
       "ref": "P-842",
       "candidatId": "fabien-roussel",
       "thematiqueId": "travail",
+      "sujetId": "smic-salaires",
       "titre": "Augmenter le SMIC pour atteindre rapidement 1 500 euros net par mois",
       "description": "« Le smic horaire sera augmenté pour atteindre rapidement 1 500 euros net par mois (soit 1 923 euros brut) »",
       "sourceUrl": "https://web.archive.org/web/20221231143452id_/https://www.fabienroussel2022.fr/1_un_mouvement_d_augmentation_g_n_rale_des_salaires_des_minima_sociaux_et_des_pensions_sera_engag",
@@ -1567,6 +1611,7 @@
       "ref": "P-837",
       "candidatId": "fabien-roussel",
       "thematiqueId": "agriculture",
+      "sujetId": "revenu-agricole",
       "titre": "Permettre à l'État de fixer des prix planchers agricoles en cas de prix trop bas",
       "description": "« En cas de prix trop bas, l'État aurait le pouvoir d'intervenir pour définir des prix planchers, sur le modèle du coefficient multiplicateur existant pour le secteur des fruits et légumes »",
       "sourceUrl": "https://www.terre-net.fr/actualite-agricole/politique-syndicalisme/article/fabien-roussel-parti-communiste-presente-son-programme-agricole-205-202534.html",
@@ -1579,6 +1624,7 @@
       "ref": "P-118",
       "candidatId": "fabien-roussel",
       "thematiqueId": "logement",
+      "sujetId": "logement-social",
       "titre": "Construire 200 000 logements sociaux par an, dont 60 000 très sociaux",
       "description": "« Atteindre 200 000 logements sociaux par an, dont 60 000 très sociaux. »",
       "sourceUrl": "https://edito.seloger.com/actualites/france/presidentielle-2027-propositions-de-fabien-roussel-logement-article-23785_2.html",
@@ -1604,6 +1650,7 @@
       "ref": "P-113",
       "candidatId": "fabien-roussel",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-du-president",
       "titre": "Supprimer l'élection du président au suffrage universel et le limiter à un rôle de représentation",
       "description": "« Le président de la République n'aura plus qu'un rôle de représentation de la nation et, pour en finir avec sa prééminence, son élection au suffrage universel sera supprimée. »",
       "sourceUrl": "https://d3n8a8pro7vhmx.cloudfront.net/fabienroussel2022/pages/217/attachments/original/1643038967/exe_la_france_des_jours_heureux_LIVRE_stc.pdf?1643038967",
@@ -1641,6 +1688,7 @@
       "ref": "P-733",
       "candidatId": "florian-philippot",
       "thematiqueId": "numerique",
+      "sujetId": "souverainete-numerique",
       "titre": "Héberger les données stratégiques sous contrôle public et sortir des géants du numérique (GAFAM) en 3 ans",
       "description": "« Toutes les données stratégiques doivent être hébergées sur des serveurs publics ou contrôlés par l'ANSSI. [...] Une sortie programmée des GAFAM en 3 ans est nécessaire. »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
@@ -1665,6 +1713,7 @@
       "ref": "P-815",
       "candidatId": "florian-philippot",
       "thematiqueId": "education",
+      "sujetId": "apprentissages-ecole",
       "titre": "Consacrer la moitié du temps scolaire en primaire à la maîtrise du français",
       "description": "« La moitié du temps scolaire en primaire doit être consacrée à la maîtrise du français. »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
@@ -1676,6 +1725,7 @@
       "ref": "P-634",
       "candidatId": "florian-philippot",
       "thematiqueId": "societe",
+      "sujetId": "liberte-expression",
       "titre": "Supprimer les lois qui restreignent la liberté d'expression",
       "description": "« Les lois restreignant la liberté d'expression doivent être supprimées. »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
@@ -1687,6 +1737,7 @@
       "ref": "P-557",
       "candidatId": "florian-philippot",
       "thematiqueId": "securite",
+      "sujetId": "peines-prisons",
       "titre": "Construire des dizaines de milliers de places de prison et expulser les détenus étrangers",
       "description": "« Construire les dizaines de milliers de places de prison qui manquent et expulser les prisonniers étrangers (ils représentent 25% du total des prisonniers). »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
@@ -1698,6 +1749,7 @@
       "ref": "P-729",
       "candidatId": "florian-philippot",
       "thematiqueId": "sante",
+      "sujetId": "vaccination",
       "titre": "Garantir à tous, soignants compris, la liberté de refuser un vaccin",
       "description": "« Assurer une liberté vaccinale pour tous les citoyens et les soignants. Aucune pression, discrimination ou menace ne doit peser sur ceux qui refusent un traitement médical, y compris un vaccin. »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
@@ -1750,6 +1802,7 @@
       "ref": "P-783",
       "candidatId": "francois-asselineau",
       "thematiqueId": "economie",
+      "sujetId": "etat-actionnaire",
       "titre": "Renationaliser EDF, le gaz, l'eau, La Poste, les autoroutes, la SNCF et la RATP",
       "description": "« Nous renationaliserons ou cesserons le processus de privatisation rampante et de dégradation de la qualité de service »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
@@ -1761,6 +1814,7 @@
       "ref": "P-964",
       "candidatId": "francois-asselineau",
       "thematiqueId": "numerique",
+      "sujetId": "surveillance",
       "titre": "Interdire dans la Constitution toute surveillance généralisée de la population",
       "description": "« l'interdiction constitutionnelle de toute surveillance généralisée de la population »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
@@ -1772,6 +1826,7 @@
       "ref": "P-421",
       "candidatId": "francois-asselineau",
       "thematiqueId": "agriculture",
+      "sujetId": "accords-libre-echange",
       "titre": "Sortir des traités de libre-échange déjà adoptés, comme celui avec le Canada (CETA)",
       "description": "« dénoncerons les traités transcontinentaux déjà adoptés tels que le CETA »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
@@ -1783,6 +1838,7 @@
       "ref": "P-602",
       "candidatId": "francois-asselineau",
       "thematiqueId": "securite",
+      "sujetId": "peines-prisons",
       "titre": "Augmenter de 20 % les budgets de la justice et de la police",
       "description": "« Nous augmenterons de 20% le budget de la justice et de 20% le budget de la police pour renforcer la chaîne pénale, afin que toute condamnation prononcée soit exécutée. »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
@@ -1794,6 +1850,7 @@
       "ref": "P-255",
       "candidatId": "francois-asselineau",
       "thematiqueId": "sante",
+      "sujetId": "hopital-public",
       "titre": "Rouvrir 30 000 lits dans l'hôpital public pendant le quinquennat",
       "description": "« Nous rouvrirons 30 000 lits dans l'hôpital public durant le quinquennat [...] »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
@@ -1805,6 +1862,7 @@
       "ref": "P-369",
       "candidatId": "francois-ruffin",
       "thematiqueId": "travail",
+      "sujetId": "smic-salaires",
       "titre": "Interdire qu'un salaire dépasse 20 fois un autre dans la même entreprise",
       "description": "« l'écart de rémunération [...] entre deux salariés ou entre un salarié et le dirigeant de la société ne peut excéder un rapport de un à vingt. »",
       "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1237/AN/2670.pdf",
@@ -1817,6 +1875,7 @@
       "ref": "P-912",
       "candidatId": "francois-ruffin",
       "thematiqueId": "sante",
+      "sujetId": "conditions-de-travail",
       "titre": "Créer un statut des travailleurs essentiels et mettre fin à leurs temps partiels subis",
       "description": "« reconnaître un statut des travailleurs et travailleuses essentielles » ; « mettre fin aux temps partiels subis par les salariés essentiels »",
       "sourceUrl": "https://nouspresident.fr/statut-travailleurs-essentiels/",
@@ -1828,6 +1887,7 @@
       "ref": "P-731",
       "candidatId": "francois-ruffin",
       "thematiqueId": "logement",
+      "sujetId": "renovation-energetique",
       "titre": "Atteindre 800 000 rénovations complètes de logements par an, avec un financement public",
       "description": "« atteindre progressivement 800 000 rénovations d'ampleur par an » ; « solutions de financement public pour les restes à charge »",
       "sourceUrl": "https://nouspresident.fr/travaillisme-ecologique/",
@@ -1839,6 +1899,7 @@
       "ref": "P-726",
       "candidatId": "francois-ruffin",
       "thematiqueId": "agriculture",
+      "sujetId": "revenu-agricole",
       "titre": "Protéger l'agriculture française par des quotas d'importation et des prix minimums",
       "description": "« Des protections à nos frontières, des quotas d'importation, des barrières douanières. » ; « que des prix minimums soient fixés pour les denrées agricoles les plus représentatives »",
       "sourceUrl": "https://nouspresident.fr/pour-une-exception-agriculturelle-francaise/",
@@ -1864,6 +1925,7 @@
       "ref": "P-188",
       "candidatId": "francois-ruffin",
       "thematiqueId": "education",
+      "sujetId": "apprentissages-ecole",
       "titre": "Plafonner les classes à 20 élèves, à l'essai pendant 3 ans dans certaines académies",
       "description": "« À titre expérimental, pour une durée de trois ans, le Gouvernement peut, dans des académies qu'il identifie [...], décider que le nombre total des élèves scolarisés au sein d'une classe [...] ne peut être supérieur à vingt »",
       "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1481/CION-CEDU/AC370.pdf",
@@ -1876,6 +1938,7 @@
       "ref": "P-907",
       "candidatId": "francois-ruffin",
       "thematiqueId": "environnement",
+      "sujetId": "adaptation-chaleur",
       "titre": "Créer une branche de la Sécurité sociale pour couvrir les dommages climatiques, après concertation",
       "description": "« nous lancerons un grand cycle de concertation sur l'organisation de la solidarité nationale, pour avancer vers la création d'une Sécurité climatique, nouvelle branche permanente de la Sécurité sociale »",
       "sourceUrl": "https://nouspresident.fr/plan-urgence-climat/",
@@ -1887,6 +1950,7 @@
       "ref": "P-902",
       "candidatId": "francois-ruffin",
       "thematiqueId": "institutions",
+      "sujetId": "transparence-vie-publique",
       "titre": "Interdire pendant dix ans aux ex-ministres et hauts fonctionnaires de faire du lobbying",
       "description": "« Dans les dix premières années suivant le départ du Gouvernement [...] Aucun ministre, conseiller ministériel ou haut fonctionnaire ne pourra aller faire des relations publiques, du conseil, du lobbying »",
       "sourceUrl": "https://nouspresident.fr/separation-argent-etat/",
@@ -1912,6 +1976,7 @@
       "ref": "P-688",
       "candidatId": "gabriel-attal",
       "thematiqueId": "travail",
+      "sujetId": "temps-de-travail",
       "titre": "Expérimenter la semaine en quatre jours, sans réduire le temps de travail, dans les administrations",
       "description": "« j'avais décidé d'expérimenter dans mon administration non pas la semaine de quatre jours, mais la semaine en quatre jours, sans réduction du temps de travail. »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
@@ -1924,6 +1989,7 @@
       "ref": "P-507",
       "candidatId": "gabriel-attal",
       "thematiqueId": "numerique",
+      "sujetId": "reseaux-sociaux",
       "titre": "Interdire les réseaux sociaux aux moins de 15 ans",
       "description": "« vise à interdire l'accès aux réseaux sociaux pour les moins de 15 ans et la suspension des comptes déjà existants, sous peine de sanctions financières. »",
       "sourceUrl": "https://lcp.fr/actualites/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-a-l-offensive-gabriel-attal-devance",
@@ -1936,6 +2002,7 @@
       "ref": "P-502",
       "candidatId": "gabriel-attal",
       "thematiqueId": "sante",
+      "sujetId": "acces-aux-soins",
       "titre": "Faire payer 5 euros pour chaque rendez-vous médical manqué sans prévenir",
       "description": "« un mécanisme sur les plateformes en ligne permettant une pénalité d'un montant de 5 euros pour rendez-vous non honoré. »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/des-actes-concrets-pour-la-sante",
@@ -1948,6 +2015,7 @@
       "ref": "P-321",
       "candidatId": "gabriel-attal",
       "thematiqueId": "securite",
+      "sujetId": "justice-des-mineurs",
       "titre": "Sanctionner par des travaux d'intérêt général les parents défaillants de mineurs délinquants",
       "description": "« les parents défaillants » ; « s'exposent à des mesures de travail d'intérêt général »",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/violence-des-mineurs-le-detail-des-propositions-de-gabriel-attal-pour-un-sursaut-dautorite",
@@ -1974,6 +2042,7 @@
       "ref": "P-683",
       "candidatId": "gabriel-attal",
       "thematiqueId": "economie",
+      "sujetId": "aides-publiques-entreprises",
       "titre": "Réformer les aides et baisses de cotisations concentrées sur les salaires au SMIC",
       "description": "« nous devons faire évoluer un système qui nous a conduits [...] à concentrer nos aides, nos exonérations au niveau du SMIC. [...] il faut “désmicardiser” la France. »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
@@ -1986,6 +2055,7 @@
       "ref": "P-678",
       "candidatId": "gabriel-attal",
       "thematiqueId": "logement",
+      "sujetId": "logement-social",
       "titre": "Proposer de compter une part des logements intermédiaires dans le quota de 25 % de logements sociaux",
       "description": "« Nous proposerons et nous mettrons en débat d'ajouter pour une part les logements intermédiaires accessibles à la classe moyenne dans ce calcul des 25 %. »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
@@ -1998,6 +2068,7 @@
       "ref": "P-667",
       "candidatId": "jean-lassalle",
       "thematiqueId": "agriculture",
+      "sujetId": "revenu-agricole",
       "titre": "Calculer le prix payé aux agriculteurs à partir de leurs coûts de production",
       "description": "« que les coûts de production des producteurs deviennent la base de la construction du prix »",
       "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1175/AN/967.pdf",
@@ -2010,6 +2081,7 @@
       "ref": "P-486",
       "candidatId": "jean-lassalle",
       "thematiqueId": "sante",
+      "sujetId": "acces-aux-soins",
       "titre": "Payer les études des soignants qui s'engagent 6 ans dans les territoires qui manquent de médecins",
       "description": "« Financer les études pour ceux qui s’engagent pour une durée de 6 ans dans les territoires déficitaires. »",
       "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
@@ -2022,6 +2094,7 @@
       "ref": "P-305",
       "candidatId": "jean-lassalle",
       "thematiqueId": "institutions",
+      "sujetId": "mode-de-scrutin",
       "titre": "Compter le vote blanc comme un suffrage exprimé à l'élection présidentielle",
       "description": "« Les bulletins blancs sont décomptés séparément et entrent en compte pour la détermination des suffrages exprimés lors du premier et du second tour. »",
       "sourceUrl": "https://www.assemblee-nationale.fr/15/pdf/propositions/pion3896.pdf",
@@ -2034,6 +2107,7 @@
       "ref": "P-672",
       "candidatId": "jean-lassalle",
       "thematiqueId": "societe",
+      "sujetId": "ruralite",
       "titre": "Maintenir ou créer écoles, transports, services de santé et réseaux internet dans les campagnes",
       "description": "« Désenclaver les campagnes par le maintien ou la création d’écoles, transports, services de santé, téléphonie, fibre optique et 4G partout sur le territoire »",
       "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
@@ -2046,6 +2120,7 @@
       "ref": "P-491",
       "candidatId": "jean-lassalle",
       "thematiqueId": "education",
+      "sujetId": "service-national",
       "titre": "Créer un service national universel pour les jeunes majeurs, militaire ou civil, de septembre à juin",
       "description": "« Créer un Service national universel, militaire ou civil, du 15 septembre au 15 juin. »",
       "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
@@ -2058,6 +2133,7 @@
       "ref": "P-310",
       "candidatId": "jean-lassalle",
       "thematiqueId": "environnement",
+      "sujetId": "eolien-solaire",
       "titre": "Soumettre tout projet éolien à l'accord du maire, après consultation des habitants",
       "description": "« Stopper l’éolien. Il convient dès à présent d’interdire les projets éoliens non validés par les maires, après consultation des habitants. »",
       "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
@@ -2098,6 +2174,7 @@
       "ref": "P-762",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-du-president",
       "titre": "Convoquer une Assemblée constituante pour passer à la 6e République",
       "description": "« Convoquer une Constituante pour passer à la 6e République »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
@@ -2110,6 +2187,7 @@
       "ref": "P-943",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "economie",
+      "sujetId": "prix-energie-carburants",
       "titre": "Bloquer les prix de l'alimentation, de l'énergie et du carburant",
       "description": "« Bloquer les prix des produits de première nécessité (alimentation, énergie, carburant) »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
@@ -2122,6 +2200,7 @@
       "ref": "P-224",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "travail",
+      "sujetId": "retraites",
       "titre": "Rétablir la retraite à 60 ans avec 40 années de cotisation et porter le SMIC à 1 600 euros net",
       "description": "« restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations [...] Augmenter immédiatement le SMIC à 1600 € net mensuel »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
@@ -2134,6 +2213,7 @@
       "ref": "P-757",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "agriculture",
+      "sujetId": "revenu-agricole",
       "titre": "Garantir des prix minimums aux agriculteurs et encadrer les marges des industriels et supermarchés",
       "description": "« Garantir des prix rémunérateurs aux producteurs par des prix planchers pour les agriculteurs, interdire les ventes à perte [...] encadrant les marges des industries agro-alimentaires et de la grande distribution »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
@@ -2146,6 +2226,7 @@
       "ref": "P-938",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "logement",
+      "sujetId": "logement-social",
       "titre": "Encadrer les loyers partout et construire 200 000 logements publics par an",
       "description": "« Construire 200 000 logements publics par an pendant cinq ans aux normes écologiques les plus ambitieuses [...] Encadrer les loyers partout sur le territoire et à la baisse dans les grandes villes »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
@@ -2172,6 +2253,7 @@
       "ref": "P-401",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
       "titre": "Inscrire dans la Constitution la « règle verte » : prélever au plus ce que la nature peut reconstituer",
       "description": "« Inscrire dans la Constitution le principe de la “ règle verte ”, selon laquelle on ne prélève pas davantage à la nature que ce qu'elle est en état de reconstituer »",
       "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
@@ -2198,6 +2280,7 @@
       "ref": "P-868",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "numerique",
+      "sujetId": "intelligence-artificielle",
       "titre": "Garder la maîtrise nationale de l'intelligence artificielle et en fixer les règles",
       "description": "« L'intelligence artificielle est déjà l’une des grandes révolutions économiques du siècle [...] Je veux que la France en garde la maîtrise, pour notre souveraineté, qu'elle en fixe les règles »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
@@ -2222,6 +2305,7 @@
       "ref": "P-506",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "societe",
+      "sujetId": "enfance-famille",
       "titre": "Faire de la protection des enfants contre les violences la grande cause nationale",
       "description": "« Notre grande cause nationale sera celle de la protection des enfants alors que plus de 160 000 enfants sont victimes de violences physiques, morales et sexuelles »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
@@ -2233,6 +2317,7 @@
       "ref": "P-511",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "logement",
+      "sujetId": "logement-social",
       "titre": "Créer un fonds d'État de 100 milliards d'euros pour combler le manque de logements",
       "description": "« un fonds souverain de 100 milliards d'euros qui serait financé, en grande partie, par l'impôt sur les fortunes immobilières [...] qu'on arrive à pallier le manque de 500 000 logements par an »",
       "sourceUrl": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/l-invite-politique-du-mercredi-24-juin-2026_8043938.html",
@@ -2245,6 +2330,7 @@
       "ref": "P-692",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "travail",
+      "sujetId": "conditions-de-travail",
       "titre": "Négocier secteur par secteur un droit des salariés à cesser le travail en cas de canicule",
       "description": "« Avec les syndicats, avec le patronat, avec les salariés, pour faire en sorte que [...] nous ayons un droit de retrait qui s'opère branche par branche, secteur par secteur. »",
       "sourceUrl": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/l-invite-politique-du-mercredi-24-juin-2026_8043938.html",
@@ -2257,6 +2343,7 @@
       "ref": "P-149",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "environnement",
+      "sujetId": "sols-grands-projets",
       "titre": "Imposer aux communes un minimum d'espaces végétalisés, comme pour les logements sociaux",
       "description": "« ce que je propose, c’est qu’au même titre que la loi SRU [...] je veux imposer une surface végétalisée au regard de la surface et de l’emprise foncière totale. »",
       "sourceUrl": "https://www.sudradio.fr/linvite-politique/karim-bouamrane-je-nirai-pas-a-la-primaire-du-parti-socialiste",
@@ -2269,6 +2356,7 @@
       "ref": "P-330",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "agriculture",
+      "sujetId": "normes-europeennes-importations",
       "titre": "Imposer aux agriculteurs français les mêmes règles qu'aux producteurs étrangers",
       "description": "« Je veux une transition juste : [...] qui protège nos agriculteurs, sans leur imposer des règles que nous refusons d'exiger de ceux qui nous nourrissent depuis l'étranger. »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
@@ -2280,6 +2368,7 @@
       "ref": "P-139",
       "candidatId": "karim-bouamrane",
       "thematiqueId": "economie",
+      "sujetId": "depenses-dette",
       "titre": "Simplifier l'action publique en réduisant les doublons administratifs et en allégeant les normes",
       "description": "« Nous simplifierons l'action publique. Nous réduirons les doublons administratifs. Nous mettrons fin aux superpositions inutiles. Nous allégerons les normes qui paralysent l'initiative et l'efficacité. »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
@@ -2291,6 +2380,7 @@
       "ref": "P-409",
       "candidatId": "marine-le-pen",
       "thematiqueId": "securite",
+      "sujetId": "peines-prisons",
       "titre": "Rétablir les peines planchers et supprimer les réductions de peine",
       "description": "« Rétablir les peines planchers pour que tout criminel et délinquant aient une sanction. Supprimer toute possibilité de réduction et d'aménagements de peine [...] »",
       "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
@@ -2303,6 +2393,7 @@
       "ref": "P-766",
       "candidatId": "marine-le-pen",
       "thematiqueId": "societe",
+      "sujetId": "priorite-nationale",
       "titre": "Réserver les allocations familiales aux familles dont au moins un parent est français",
       "description": "« en application du principe de priorité nationale évoqué plus haut, les allocations familiales seront réservées aux familles dont au moins un des deux parents est français. »",
       "sourceUrl": "https://web.archive.org/web/20220325180640id_/https://mlafrance.fr/pdfs/manifeste-m-la-france-programme-presidentiel.pdf",
@@ -2315,6 +2406,7 @@
       "ref": "P-947",
       "candidatId": "marine-le-pen",
       "thematiqueId": "agriculture",
+      "sujetId": "accords-libre-echange",
       "titre": "Exclure l'agriculture des accords de libre-échange et interdire les importations hors normes françaises",
       "description": "« Exclure l'agriculture des traités multilatéraux de libre-échange [...] Interdire les importations de produits agricoles ne respectant pas les normes de production françaises »",
       "sourceUrl": "https://web.archive.org/web/20220302095107id_/https://mlafrance.fr/pdfs/projet-l-agriculture.pdf",
@@ -2341,6 +2433,7 @@
       "ref": "P-233",
       "candidatId": "marine-le-pen",
       "thematiqueId": "institutions",
+      "sujetId": "referendum",
       "titre": "Instaurer le référendum d'initiative citoyenne et la proportionnelle",
       "description": "« Instaurer le Referendum d'Initiative Citoyenne et mettre en place la proportionnelle. »",
       "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
@@ -2353,6 +2446,7 @@
       "ref": "P-590",
       "candidatId": "marine-le-pen",
       "thematiqueId": "logement",
+      "sujetId": "priorite-nationale",
       "titre": "Donner la priorité aux Français pour les logements sociaux",
       "description": "« Assurer la priorité nationale d'accès au logement social et à l'emploi. »",
       "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
@@ -2379,6 +2473,7 @@
       "ref": "P-579",
       "candidatId": "marine-le-pen",
       "thematiqueId": "sante",
+      "sujetId": "hopital-public",
       "titre": "Lancer un plan d'urgence santé de 20 milliards d'euros et stopper les fermetures de lits et maternités",
       "description": "« Lancer un plan de soutien d'urgence pour la santé de 20 milliards d'euros. [...] Arrêter les fermetures des lits à l'hôpital public et des maternités. »",
       "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
@@ -2391,6 +2486,7 @@
       "ref": "P-908",
       "candidatId": "marine-tondelier",
       "thematiqueId": "environnement",
+      "sujetId": "sols-grands-projets",
       "titre": "Suspendre les grands chantiers d'infrastructure, dont l'autoroute A69 et la ligne Lyon-Turin",
       "description": "« Adopter un moratoire sur les grands projets inutiles et imposés comme le canal Seine-Nord Europe, l'autoroute A69, le TGV Lyon-Turin et les extensions d'aéroport. »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2403,6 +2499,7 @@
       "ref": "P-365",
       "candidatId": "marine-tondelier",
       "thematiqueId": "sante",
+      "sujetId": "polluants-eternels",
       "titre": "Interdire les polluants éternels (PFAS), d'abord dans l'alimentation, le textile et les cosmétiques",
       "description": "« Interdire l'ensemble des polluants éternels (PFAS) [...] interdiction immédiate pour la nourriture, le textile et les produits de beauté et sous 18 mois pour les autres. »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2415,6 +2512,7 @@
       "ref": "P-546",
       "candidatId": "marine-tondelier",
       "thematiqueId": "agriculture",
+      "sujetId": "politique-agricole-commune",
       "titre": "Lier les aides agricoles à des critères écologiques et sociaux, sans retour des néonicotinoïdes",
       "description": "« Appliquer des critères de conditionnalités écologiques et sociales dans l'attribution des soutiens publics. » ; « Empêcher toute tentative de réintroduction des néonicotinoïdes. »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2427,6 +2525,7 @@
       "ref": "P-903",
       "candidatId": "marine-tondelier",
       "thematiqueId": "travail",
+      "sujetId": "contrat-licenciement",
       "titre": "Garantir 2 ans de salaire à ceux qui perdent leur emploi à cause de la transition écologique",
       "description": "« Créer une Sécurité Sociale Professionnelle pour l'ensemble des travailleur·ses impactés par la transition écologique. Garantir un salaire équivalent en cas de perte d'emploi pendant deux ans »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2439,6 +2538,7 @@
       "ref": "P-184",
       "candidatId": "marine-tondelier",
       "thematiqueId": "logement",
+      "sujetId": "renovation-energetique",
       "titre": "Payer directement les travaux de rénovation des propriétaires à faible revenu",
       "description": "« Prendre en charge directement le coût des rénovations pour les propriétaires à faible revenu »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2451,6 +2551,7 @@
       "ref": "P-541",
       "candidatId": "marine-tondelier",
       "thematiqueId": "numerique",
+      "sujetId": "intelligence-artificielle",
       "titre": "Encadrer l'implantation des data centers et supprimer leur dispense d'études d'impact",
       "description": "« Encadrer l'implantation des data centers. Supprimer la possibilité de labelliser des data centers « projet d'intérêt national majeur » (PINM) les exonérant d'études d'impact. »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2477,6 +2578,7 @@
       "ref": "P-179",
       "candidatId": "marine-tondelier",
       "thematiqueId": "institutions",
+      "sujetId": "mode-de-scrutin",
       "titre": "Élire les députés à la proportionnelle intégrale, sans prime majoritaire, par région",
       "description": "« Instaurer la proportionnelle intégrale sans prime majoritaire aux élections législatives [...] à partir de circonscriptions régionales. »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
@@ -2489,6 +2591,7 @@
       "ref": "P-639",
       "candidatId": "mira-markovic",
       "thematiqueId": "institutions",
+      "sujetId": "condition-animale",
       "titre": "Créer un ministère indépendant de la Condition animale",
       "description": "« la création d’un ministère indépendant de la Condition animale »",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
@@ -2501,6 +2604,7 @@
       "ref": "P-458",
       "candidatId": "mira-markovic",
       "thematiqueId": "agriculture",
+      "sujetId": "elevage-peche",
       "titre": "Mettre fin à l'élevage intensif des animaux en France",
       "description": "« la sortie de l’élevage intensif »",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
@@ -2513,6 +2617,7 @@
       "ref": "P-277",
       "candidatId": "mira-markovic",
       "thematiqueId": "societe",
+      "sujetId": "condition-animale",
       "titre": "Mettre fin à des pratiques comme la chasse et la corrida",
       "description": "« la fin des pratiques cruelles comme la chasse et la corrida »",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
@@ -2525,6 +2630,7 @@
       "ref": "P-644",
       "candidatId": "mira-markovic",
       "thematiqueId": "securite",
+      "sujetId": "securite-civile",
       "titre": "Intégrer les animaux aux plans de secours de la sécurité civile (ORSEC)",
       "description": "« l’intégration des animaux aux plans de secours ORSEC »",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
@@ -2537,6 +2643,7 @@
       "ref": "P-463",
       "candidatId": "mira-markovic",
       "thematiqueId": "international",
+      "sujetId": "accords-libre-echange",
       "titre": "Interdire l'importation des produits issus de pratiques interdites en France",
       "description": "« Instaurer des clauses miroirs aux fins d’interdire l’importation de tous produits issus de pratiques interdites en France (élevage intensif et industriel, pêche industrielle…) »",
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
@@ -2549,6 +2656,7 @@
       "ref": "P-282",
       "candidatId": "mira-markovic",
       "thematiqueId": "environnement",
+      "sujetId": "elevage-peche",
       "titre": "Interdire d'ici 2030 la pêche industrielle, soit les navires de plus de 12 mètres",
       "description": "« Interdire à horizon 2030 la pêche industrielle et la plus destructrice, c’est-à-dire les navires de pêche de plus de 12 mètres. »",
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2024/05/programme-europeennes-2024.pdf",
@@ -2561,6 +2669,7 @@
       "ref": "P-101",
       "candidatId": "mira-markovic",
       "thematiqueId": "education",
+      "sujetId": "condition-animale",
       "titre": "Enseigner le respect des animaux et initier à l'éthologie dans tous les programmes scolaires",
       "description": "« Réintégrer et développer dans tous les programmes scolaires et dans toutes les filières un enseignement au respect des animaux, ainsi qu'une initiation à l'éthologie. »",
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
@@ -2573,6 +2682,7 @@
       "ref": "P-272",
       "candidatId": "mira-markovic",
       "thematiqueId": "sante",
+      "sujetId": "elevage-peche",
       "titre": "Réduire de 50 % en cinq ans la production et la consommation de protéines animales en France",
       "description": "« Réduire, en France, la production et la consommation de protéines animales de 50 % en 5 ans. »",
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2022/03/programme-national-2022.pdf",
@@ -2585,6 +2695,7 @@
       "ref": "P-795",
       "candidatId": "natacha-polony",
       "thematiqueId": "economie",
+      "sujetId": "etat-actionnaire",
       "titre": "Décréter un état d'urgence pour produire davantage en France",
       "description": "« décréter un état d'urgence de la production »",
       "sourceUrl": "https://www.lejdd.fr/politique/natacha-polony-lance-son-mouvement-politique-et-nexclut-rien-pour-2027-182412",
@@ -2611,6 +2722,7 @@
       "ref": "P-433",
       "candidatId": "natacha-polony",
       "thematiqueId": "education",
+      "sujetId": "metier-enseignant",
       "titre": "Augmenter de 20 à 30 % le salaire des enseignants en comptant toutes leurs missions",
       "description": "« On va se mettre d'accord avec eux pour dire : voilà, on va comptabiliser autre chose que simplement le temps passé devant les élèves [...] Et en échange, on augmente les salaires entre 20 et 30 %. »",
       "sourceUrl": "https://www.sudradio.fr/sud-radio/no-future-et-irresponsabilite-generalisee-les-declarations-chocs-et-les-solutions-de-natacha-polony-pour-les-lycees-et-leducation",
@@ -2623,6 +2735,7 @@
       "ref": "P-800",
       "candidatId": "natacha-polony",
       "thematiqueId": "education",
+      "sujetId": "metier-enseignant",
       "titre": "Adopter une loi de programmation sur dix ans pour l'Éducation nationale",
       "description": "« l'Éducation nationale a vécu des réformes absolument innombrables qui l'ont déstructurée. 8 ministres en 2 quinquennats. Il faut du temps long. Une loi de programmation de 10 ans. »",
       "sourceUrl": "https://www.sudradio.fr/sud-radio/no-future-et-irresponsabilite-generalisee-les-declarations-chocs-et-les-solutions-de-natacha-polony-pour-les-lycees-et-leducation",
@@ -2635,6 +2748,7 @@
       "ref": "P-619",
       "candidatId": "natacha-polony",
       "thematiqueId": "securite",
+      "sujetId": "justice-des-mineurs",
       "titre": "Recourir à des centres éducatifs fermés pour les jeunes qui commencent à dériver",
       "description": "« Je suis pour des centres éducatifs fermés qui fonctionnent réellement pour les jeunes qui commencent à dériver parce qu'il faut les sortir de leur milieu. »",
       "sourceUrl": "https://www.sudradio.fr/sud-radio/no-future-et-irresponsabilite-generalisee-les-declarations-chocs-et-les-solutions-de-natacha-polony-pour-les-lycees-et-leducation",
@@ -2647,6 +2761,7 @@
       "ref": "P-438",
       "candidatId": "natacha-polony",
       "thematiqueId": "institutions",
+      "sujetId": "transparence-vie-publique",
       "titre": "Protéger les lanceurs d'alerte et encadrer les allers-retours entre hauts postes publics et privé",
       "description": "« Nous lutterons contre les conflits d'intérêts. Nous protégerons les lanceurs d'alerte. Nous encadrerons strictement les passages entre fonctions publiques stratégiques et intérêts privés. »",
       "sourceUrl": "https://natachapolony2027.fr/natacha-polony/ma-vision",
@@ -2658,6 +2773,7 @@
       "ref": "P-257",
       "candidatId": "natacha-polony",
       "thematiqueId": "environnement",
+      "sujetId": "adaptation-chaleur",
       "titre": "Lancer un plan national pour protéger de la chaleur écoles, crèches et hôpitaux",
       "description": "« faire de la protection contre la chaleur un véritable enjeu de service public [...] Écoles, crèches, hôpitaux [...] doivent devenir les priorités d'un vaste plan national »",
       "sourceUrl": "https://www.youtube.com/watch?v=B8deNFh-EE0",
@@ -2670,6 +2786,7 @@
       "ref": "P-624",
       "candidatId": "natacha-polony",
       "thematiqueId": "international",
+      "sujetId": "otan",
       "titre": "Redéfinir la place de la France dans l'Alliance atlantique (OTAN)",
       "description": "« Cela implique également de redéfinir notre place dans l'OTAN »",
       "sourceUrl": "https://www.youtube.com/watch?v=OzjawIbJ8Zw",
@@ -2682,6 +2799,7 @@
       "ref": "P-348",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "travail",
+      "sujetId": "smic-salaires",
       "titre": "Augmenter massivement les salaires, allocations et pensions et les indexer sur les prix",
       "description": "« Nous devons imposer une augmentation massive des salaires, des allocations et des pensions et leur indexation sur la hausse des prix »",
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
@@ -2694,6 +2812,7 @@
       "ref": "P-705",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "economie",
+      "sujetId": "temps-de-travail",
       "titre": "Répartir le travail entre tous sans baisse de salaire, et ne licencier personne",
       "description": "« nous disons qu'il faut répartir le travail entre tous, sans diminution de salaire. »",
       "sourceUrl": "https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html",
@@ -2706,6 +2825,7 @@
       "ref": "P-886",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "institutions",
+      "sujetId": "transparence-vie-publique",
       "titre": "Supprimer le secret des affaires pour rendre publics les comptes des grandes entreprises",
       "description": "« Levée du secret commercial et du secret des affaires pour rendre publics les comptes de ces grandes entreprises, y compris ceux qui sont cachés ! »",
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
@@ -2718,6 +2838,7 @@
       "ref": "P-343",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "logement",
+      "sujetId": "logements-vacants-loyers",
       "titre": "Réquisitionner les logements et bureaux vacants pour loger sans-abri et mal-logés",
       "description": "« Réquisition des logements et des bureaux vacants »",
       "sourceUrl": "https://www.boursedescredits.com/actualite-election-presidentielle-programme-logement-nathalie-arthaud-2668.php",
@@ -2730,6 +2851,7 @@
       "ref": "P-524",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "sante",
+      "sujetId": "medicaments",
       "titre": "Supprimer les brevets et le secret commercial des laboratoires pharmaceutiques",
       "description": "« les travailleurs au pouvoir auraient démoli le monopole des trusts pharmaceutiques. Ils auraient supprimé le secret commercial et la sacro-sainte propriété intellectuelle des laboratoires. »",
       "sourceUrl": "https://journal.lutte-ouvriere.org/portail/brochures/publications-brochures-meeting-du-12-fevrier-paris-discours-de-nathalie-arthaud-207337.html",
@@ -2756,6 +2878,7 @@
       "ref": "P-162",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "international",
+      "sujetId": "defense",
       "titre": "Confisquer les bénéfices des marchands d'armes et des pétroliers pour financer hôpitaux et écoles",
       "description": "« Confiscation des bénéfices de ces profiteurs de guerre : les milliards pour les hôpitaux, les écoles, pas pour la guerre ! »",
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
@@ -2768,6 +2891,7 @@
       "ref": "P-519",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
       "titre": "Planifier entre pays la production d'énergie et l'usage de l'eau et de l'intelligence artificielle",
       "description": "« Urgence à organiser et rationaliser la production d'énergie, les usages de l'eau, de l'intelligence artificielle. Urgence à se coordonner entre pays [...] »",
       "sourceUrl": "https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html",
@@ -2780,6 +2904,7 @@
       "ref": "P-382",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "securite",
+      "sujetId": "immigration-asile",
       "titre": "Rétablir les contrôles aux frontières nationales en sortant de l'espace Schengen",
       "description": "« Rétablir le contrôle aux frontières en sortant de Schengen, en recrutant 10 000 agents spécialisés »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/immigration-et-assimilation/",
@@ -2804,6 +2929,7 @@
       "ref": "P-744",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "sante",
+      "sujetId": "vaccination",
       "titre": "Réintégrer les soignants exclus et rétablir leurs trimestres de retraite perdus",
       "description": "« réintégration des soignants exclus et rétablissement de leurs trimestres de retraite perdus »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/sante/",
@@ -2815,6 +2941,7 @@
       "ref": "P-377",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "agriculture",
+      "sujetId": "origine-des-aliments",
       "titre": "Réserver aux producteurs français jusqu'à 80 % des commandes publiques, dont les cantines",
       "description": "« Réserver aux producteurs français 50% puis progressivement 80% des commandes publiques, notamment des cantines scolaires et de la restauration collective »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/agriculture/",
@@ -2826,6 +2953,7 @@
       "ref": "P-558",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "numerique",
+      "sujetId": "souverainete-numerique",
       "titre": "Créer un moteur de recherche et des réseaux sociaux français",
       "description": "« Lancer notre propre moteur de recherche (un « google » francophone) et nos propres réseaux sociaux »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/sciences-souverainete-industrielle/",
@@ -2837,6 +2965,7 @@
       "ref": "P-920",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "international",
+      "sujetId": "union-europeenne",
       "titre": "Organiser un référendum sur le maintien de la France dans l'Union européenne",
       "description": "« Organiser un référendum sur l'appartenance de la France à l'Union européenne. »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/affaires-europeennes/",
@@ -2848,6 +2977,7 @@
       "ref": "P-554",
       "candidatId": "nicolas-dupont-aignan",
       "thematiqueId": "education",
+      "sujetId": "apprentissages-ecole",
       "titre": "Augmenter de 30 % les heures de français et de mathématiques à l'école primaire",
       "description": "« Augmenter de 30 % les heures consacrées au français et aux mathématiques. »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/instruction-publique/",
@@ -2859,6 +2989,7 @@
       "ref": "P-436",
       "candidatId": "olivier-becht",
       "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
       "titre": "Développer les carburants de synthèse pour sortir des énergies fossiles",
       "description": "« Cette révolution passera par le développement des carburants de synthèse [...]. Notre objectif est clair : sortir des énergies fossiles »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-energie/",
@@ -2870,6 +3001,7 @@
       "ref": "P-793",
       "candidatId": "olivier-becht",
       "thematiqueId": "travail",
+      "sujetId": "contrat-licenciement",
       "titre": "Créer un contrat de travail unique, à vie, avec un revenu jamais inférieur au salaire minimum",
       "description": "« le contrat unique. [...] un contrat de travail qui nous suit toute notre vie, transférable d'un établissement à un autre, qui nous garantit un revenu permanent jamais en deçà du salaire minimum »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-sociale/",
@@ -2881,6 +3013,7 @@
       "ref": "P-974",
       "candidatId": "olivier-becht",
       "thematiqueId": "institutions",
+      "sujetId": "referendum",
       "titre": "Reconnaître le vote blanc et instaurer un référendum d'initiative citoyenne",
       "description": "« Cette refondation démocratique passera tout d'abord par la reconnaissance du vote blanc [...]. Nous instaurerons également un véritable référendum d'initiative citoyenne »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-democratique-territoriale/",
@@ -2892,6 +3025,7 @@
       "ref": "P-431",
       "candidatId": "olivier-becht",
       "thematiqueId": "securite",
+      "sujetId": "justice-des-mineurs",
       "titre": "Créer des centres de redressement encadrés par des militaires pour les délinquants les plus durs",
       "description": "« Nous mettrons également en place des centres de redressement encadrés par des militaires, afin de permettre aux délinquants les plus durs de rembourser les dégâts causés à la société »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-securite/",
@@ -2903,6 +3037,7 @@
       "ref": "P-612",
       "candidatId": "olivier-becht",
       "thematiqueId": "international",
+      "sujetId": "union-europeenne",
       "titre": "Relancer l'Europe autour d'un noyau dur de six à huit États face aux États-Unis et à la Chine",
       "description": "« Je défends également une nouvelle dynamique européenne, autour d'un noyau dur de six, sept ou peut-être huit États capables de peser face aux États-Unis et à la Chine. »",
       "sourceUrl": "https://www.sudradio.fr/politique/olivier-becht-je-suis-candidat-a-lelection-presidentielle-et-jirai-jusquau-bout",
@@ -2929,6 +3064,7 @@
       "ref": "P-250",
       "candidatId": "olivier-becht",
       "thematiqueId": "sante",
+      "sujetId": "acces-aux-soins",
       "titre": "Garantir un médecin traitant et une pharmacie à moins de 30 minutes, consultation sous 48 heures",
       "description": "« il sera impératif qu'un médecin traitant et une pharmacie se trouvent à moins de trente minutes de chez soi, consultable sous 48 heures »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-sante/",
@@ -2940,6 +3076,7 @@
       "ref": "P-607",
       "candidatId": "olivier-becht",
       "thematiqueId": "societe",
+      "sujetId": "enfance-famille",
       "titre": "Verser des allocations dès le premier enfant et développer un réseau de crèches",
       "description": "« il est nécessaire de porter une nouvelle politique de natalité, ainsi qu'une nouvelle politique familiale, qui passeront par des allocations dès le premier enfant, et par un maillage de crèches [...] »",
       "sourceUrl": "https://becht2027.fr/projet-france/les-5-refondations/refondation-sociale/",
@@ -2951,6 +3088,7 @@
       "ref": "P-130",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "international",
+      "sujetId": "defense",
       "titre": "Créer un fonds européen de défense de 100 milliards d'euros",
       "description": "« En mettant en place un fonds européen de défense de 100 milliards d'euros financé par un emprunt commun pour investir dans nos industries de défense »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -2963,6 +3101,7 @@
       "ref": "P-311",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "economie",
+      "sujetId": "impots-patrimoine",
       "titre": "Créer en Europe un impôt minimum de 2 % sur les patrimoines de plus de 100 millions d'euros",
       "description": "« En instaurant une imposition minimale de 2% sur le patrimoine des centi-millionnaires et des milliardaires et en faisant passer la taxation des multinationales de 15% à 25 %. »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -2975,6 +3114,7 @@
       "ref": "P-492",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "numerique",
+      "sujetId": "reseaux-sociaux",
       "titre": "Interdire la publicité ciblée sur les grandes plateformes numériques et les réseaux sociaux",
       "description": "« Nous nous attaquerons au cœur du business model de ces plateformes en interdisant la publicité ciblée »",
       "sourceUrl": "https://ouragan.cd/2026/06/notre-ennemi-cest-elon-musk-sam-altman-zhang-yiming-affirme-glucksmann",
@@ -2987,6 +3127,7 @@
       "ref": "P-673",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "travail",
+      "sujetId": "aides-publiques-entreprises",
       "titre": "Conditionner toutes les aides et dépenses publiques à des critères sociaux",
       "description": "« Introduire une conditionnalité sociale forte dans toutes les dépenses et subventions publiques, y compris la révision des directives sur les marchés publics »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -2999,6 +3140,7 @@
       "ref": "P-854",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
       "titre": "Étendre la taxe carbone aux frontières de l'Europe aux produits et services en concurrence déloyale",
       "description": "« En généralisant le mécanisme d'ajustement carbone (taxe carbone) aux frontières de l'Union européenne à tous les produits et services qui causent une concurrence déloyale »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -3011,6 +3153,7 @@
       "ref": "P-135",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "societe",
+      "sujetId": "egalite-salariale",
       "titre": "Sanctionner les entreprises qui ne respectent pas l'égalité salariale entre femmes et hommes",
       "description": "« Réaliser l'égalité salariale entre les femmes et les hommes en sanctionnant financièrement les entreprises qui ne respectent pas le principe : « à travail égal, salaire égal ». »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -3023,6 +3166,7 @@
       "ref": "P-316",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "agriculture",
+      "sujetId": "revenu-agricole",
       "titre": "Garantir le revenu agricole par des prix planchers et sortir l'agriculture du libre-échange",
       "description": "« En garantissant le revenu des agriculteurs via des prix planchers rémunérateurs et en sortant l'agriculture du libre-échange pour la protéger de la concurrence déloyale. »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -3035,6 +3179,7 @@
       "ref": "P-301",
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "sante",
+      "sujetId": "medicaments",
       "titre": "Créer un service public européen du médicament pour garantir les approvisionnements",
       "description": "« En créant un service public du médicament pour répondre aux besoins de santé des Européens, garantir les approvisionnements et des prix justes. »",
       "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
@@ -3047,6 +3192,7 @@
       "ref": "P-939",
       "candidatId": "selma-labib",
       "thematiqueId": "economie",
+      "sujetId": "smic-salaires",
       "titre": "Augmenter salaires et pensions de 400 euros par mois, aucun revenu sous 2 000 euros net",
       "description": "« Il faut augmenter les salaires et les pensions de 400 euros par mois pour tous et toutes. Il ne faut pas un seul revenu sous les 2000 euros net. »",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/intervention-de-selma-labib-a-la-fete-de-lhumanite-2026",
@@ -3059,6 +3205,7 @@
       "ref": "P-220",
       "candidatId": "selma-labib",
       "thematiqueId": "travail",
+      "sujetId": "temps-de-travail",
       "titre": "Interdire les licenciements et baisser le temps de travail sans perte de salaire",
       "description": "« Imposer l'interdiction des licenciements, l'arrêt de toutes les suppressions d'emplois et la baisse du temps de travail sans perte de salaire, jusqu'à l'extinction du chômage »",
       "sourceUrl": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
@@ -3099,6 +3246,7 @@
       "ref": "P-763",
       "candidatId": "selma-labib",
       "thematiqueId": "numerique",
+      "sujetId": "surveillance",
       "titre": "Arrêter le fichage et la surveillance par drones ou analyse automatique des comportements",
       "description": "« exigeons l'arrêt du fichage des populations et de l'utilisation de technologies de surveillance comme les drones ou l'analyse automatique des comportements »",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/reponse-de-selma-labib-au-bureau-de-lacademie-des-sciences",
@@ -3111,6 +3259,7 @@
       "ref": "P-944",
       "candidatId": "selma-labib",
       "thematiqueId": "education",
+      "sujetId": "etudiants",
       "titre": "Supprimer Parcoursup, MonMaster et leurs mesures de sélection des étudiants",
       "description": "« Parcoursup, MonMaster et toutes leurs mesures de tri social raciste doivent dégager ! »",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/colere-lyceenne-et-etudiante-comment-developper-la-mobilisation",
@@ -3123,6 +3272,7 @@
       "ref": "P-225",
       "candidatId": "selma-labib",
       "thematiqueId": "environnement",
+      "sujetId": "etat-actionnaire",
       "titre": "Exproprier les grandes entreprises pour décider quoi produire, sous quelles contraintes écologiques",
       "description": "« Nous devons pour cela exproprier les grandes entreprises et prendre le pouvoir sur l'économie : que produit-on ? [...] En respectant quelles contraintes environnementales ? »",
       "sourceUrl": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
@@ -3135,6 +3285,7 @@
       "ref": "P-405",
       "candidatId": "selma-labib",
       "thematiqueId": "institutions",
+      "sujetId": "droits-des-etrangers",
       "titre": "Accorder le droit de vote aux étrangers qui vivent en France",
       "description": "« Nous insistons aussi sur le droit de vote des étrangers [...] : la lutte pour l'égalité des droits permet d'unifier le monde du travail »",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/dans-le-matin-dalgerie-selma-labib-porte-parole-du-npa-revolutionnaires-cest-nous-qui-travaillons-cest-nous-qui-decidons",
@@ -3147,6 +3298,7 @@
       "ref": "P-915",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-du-president",
       "titre": "Limiter le président à un seul mandat de cinq ans",
       "description": "« Je crois profondément à la logique d'un mandat unique de cinq ans. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/07/rencontres-economiques-daix-il-faut-une-republique-des-territoires-et-un-mandat-unique-pour-xavier-bertrand-la-provence/",
@@ -3159,6 +3311,7 @@
       "ref": "P-734",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-locaux",
       "titre": "Recentrer l'État sur justice, sécurité, immigration, défense et diplomatie ; le reste géré localement",
       "description": "« L'État central doit se concentrer [...] sur ses missions régaliennes : la justice, la sécurité, le contrôle de l'immigration, la défense et la diplomatie. Pour tout le reste, la gestion de la vie quotidienne doit être locale. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/07/rencontres-economiques-daix-il-faut-une-republique-des-territoires-et-un-mandat-unique-pour-xavier-bertrand-la-provence/",
@@ -3185,6 +3338,7 @@
       "ref": "P-372",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "environnement",
+      "sujetId": "prix-energie-carburants",
       "titre": "Exonérer les voitures électriques de toute nouvelle taxe",
       "description": "« Avec moi, il n'y aura pas de taxation des voitures électriques [...] Il ne s'agit pas de piéger les Français comme on l'a fait avec le gasoil. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/08/presidentielle-2027-xavier-bertrand-un-non-candidat-en-campagne-lopinion/",
@@ -3197,6 +3351,7 @@
       "ref": "P-191",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "societe",
+      "sujetId": "culture-audiovisuel",
       "titre": "Consacrer 1 % du budget de l'État à la culture d'ici 2032",
       "description": "« Si les Français me font confiance, en 2032, 1 % du budget de l'État sera consacré à la culture. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/08/je-my-prepare-pas-encore-officiellement-candidat-xavier-bertrand-pose-les-bases-de-son-projet-pour-la-presidentielle-avec-la-culture-en-toile-de-fond-var-matin/",
@@ -3209,6 +3364,7 @@
       "ref": "P-910",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "education",
+      "sujetId": "culture-audiovisuel",
       "titre": "Faire découvrir au moins une œuvre ou un spectacle à chaque élève, de l'école au lycée",
       "description": "« Il faut que, dans son parcours scolaire, de l'école jusqu'au lycée, il n'y ait pas un élève qui passe à côté d'une œuvre ou d'un spectacle. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/08/je-my-prepare-pas-encore-officiellement-candidat-xavier-bertrand-pose-les-bases-de-son-projet-pour-la-presidentielle-avec-la-culture-en-toile-de-fond-var-matin/",
@@ -3235,6 +3391,7 @@
       "ref": "P-745",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "sante",
+      "sujetId": "hopital-public",
       "titre": "Préparer avec les soignants une grande loi de santé sur plusieurs années",
       "description": "« cela doit se faire avec les professionnels de la santé, pas avec des méthodes technocratiques, punitives et irrespectueuses [...] nous proposons une grande loi pluriannuelle de santé. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/01/xavier-bertrand-on-ne-dirige-pas-un-pays-par-la-peur-le-parisien/",
@@ -3247,6 +3404,7 @@
     {
       "id": "jeunes-majeurs-protection-enfance-2026",
       "thematiqueId": "societe",
+      "sujetId": "enfance-famille",
       "nature": "proposition_loi",
       "titre": "Article premier de la proposition de loi pour protéger durablement les jeunes majeurs de l'aide sociale à l'enfance et de la protection judiciaire de la jeunesse (première lecture)",
       "question": "Faut-il accompagner de plein droit jusqu'à 25 ans les jeunes majeurs sortis de la protection de l'enfance ?",
@@ -3343,6 +3501,7 @@
     {
       "id": "surtaxe-grandes-entreprises-2027",
       "thematiqueId": "economie",
+      "sujetId": "impots-entreprises",
       "nature": "projet_loi",
       "titre": "Amendements de suppression de l'article 15 (examen prioritaire), « Mise à contribution des grandes entreprises », du projet de loi de finances pour 2027 (première lecture)",
       "question": "Faut-il prolonger en 2027 la surtaxe d'impôt sur les bénéfices des très grandes entreprises, à un taux réduit ?",
@@ -3439,6 +3598,7 @@
     {
       "id": "abattement-pensions-retraite-2027",
       "thematiqueId": "economie",
+      "sujetId": "retraites",
       "nature": "projet_loi",
       "titre": "Amendements de suppression de l'article 3, « Réduction à 3 000 € du plafond de l'abattement d'impôt sur le revenu en faveur des bénéficiaires de pensions de retraite », du projet de loi de finances pour 2027 (première lecture)",
       "question": "Faut-il abaisser de 4 439 à 3 000 euros le plafond de l'abattement fiscal de 10 % sur les pensions de retraite ?",
@@ -3535,6 +3695,7 @@
     {
       "id": "contribution-budget-europeen-2027",
       "thematiqueId": "international",
+      "sujetId": "union-europeenne",
       "nature": "projet_loi",
       "titre": "Article 55 (examen prioritaire) du projet de loi de finances pour 2027 : évaluation du prélèvement opéré sur les recettes de l'État au titre de la participation de la France au budget de l'Union européenne (première lecture)",
       "question": "Faut-il verser 30,9 milliards d'euros au budget de l'Union européenne en 2027, soit 2,5 milliards de plus qu'en 2026 ?",
@@ -3631,6 +3792,7 @@
     {
       "id": "mineurs-reseaux-sociaux-2026",
       "thematiqueId": "numerique",
+      "sujetId": "reseaux-sociaux",
       "nature": "proposition_loi",
       "titre": "Loi visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux (texte de la commission mixte paritaire)",
       "question": "Faut-il interdire l'accès aux réseaux sociaux aux moins de 15 ans, même avec l'accord d'un parent ?",
@@ -3727,6 +3889,7 @@
     {
       "id": "aide-a-mourir-2026",
       "thematiqueId": "sante",
+      "sujetId": "fin-de-vie",
       "nature": "proposition_loi",
       "titre": "Proposition de loi relative au droit à l'aide à mourir (lecture définitive)",
       "question": "Faut-il créer un droit à l'aide à mourir pour les malades incurables en fin de vie qui le demandent ?",
@@ -3821,6 +3984,7 @@
     {
       "id": "presomption-legitime-defense-2026",
       "thematiqueId": "securite",
+      "sujetId": "police-maintien-ordre",
       "nature": "proposition_loi",
       "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre, dans l'exercice de leurs fonctions (première lecture)",
       "question": "Faut-il présumer qu'un policier ou un gendarme qui fait usage de son arme a agi dans le cadre autorisé ?",
@@ -3919,6 +4083,7 @@
     {
       "id": "nationalisation-arcelormittal-2026",
       "thematiqueId": "economie",
+      "sujetId": "etat-actionnaire",
       "nature": "proposition_loi",
       "titre": "Proposition de loi visant à la nationalisation d'ArcelorMittal France afin de préserver la souveraineté industrielle de la France (deuxième lecture)",
       "question": "Faut-il que l'État rachète toutes les actions d'ArcelorMittal France pour garder une production d'acier en France ?",
@@ -4021,6 +4186,7 @@
     {
       "id": "plfss-2026",
       "thematiqueId": "economie",
+      "sujetId": "retraites",
       "nature": "projet_loi",
       "titre": "Projet de loi de financement de la sécurité sociale pour 2026 (lecture définitive)",
       "question": "Faut-il adopter le budget de la Sécurité sociale 2026, qui suspend la réforme des retraites jusqu'en 2028 ?",
@@ -4115,6 +4281,7 @@
     {
       "id": "etiquetage-origine-aliments-2025",
       "thematiqueId": "agriculture",
+      "sujetId": "origine-des-aliments",
       "nature": "proposition_loi",
       "titre": "Article premier de la proposition de loi visant à rendre systématique l'information du consommateur sur l'origine des denrées alimentaires par le moyen de l'étiquetage (première lecture)",
       "question": "Faut-il obliger à indiquer sur l'étiquette le pays d'origine de tous les produits alimentaires, bruts ou transformés ?",
@@ -4207,6 +4374,7 @@
     {
       "id": "confiance-gouvernement-2025",
       "thematiqueId": "institutions",
+      "sujetId": "depenses-dette",
       "nature": "declaration_gouvernement",
       "titre": "Vote de confiance sur la déclaration de politique générale du Gouvernement de M. François Bayrou",
       "question": "Faut-il accorder la confiance au gouvernement sur son plan de réduction de la dette publique ?",
@@ -4301,6 +4469,7 @@
     {
       "id": "loi-contraintes-agriculteurs-2025",
       "thematiqueId": "agriculture",
+      "sujetId": "pesticides",
       "nature": "proposition_loi",
       "titre": "Loi visant à lever les contraintes à l'exercice du métier d'agriculteur (texte de la commission mixte paritaire)",
       "question": "Faut-il réautoriser un insecticide interdit et assouplir les règles pour les élevages et l'irrigation ?",
@@ -4395,6 +4564,7 @@
     {
       "id": "antisemitisme-enseignement-superieur-2025",
       "thematiqueId": "education",
+      "sujetId": "etudiants",
       "nature": "proposition_loi",
       "titre": "Loi relative à la lutte contre l'antisémitisme dans l'enseignement supérieur (texte de la commission mixte paritaire)",
       "question": "Faut-il renforcer la prévention et les sanctions contre l'antisémitisme et le racisme à l'université ?",
@@ -4483,6 +4653,7 @@
     {
       "id": "holding-audiovisuel-public-2025",
       "thematiqueId": "societe",
+      "sujetId": "culture-audiovisuel",
       "nature": "proposition_loi",
       "titre": "Proposition de loi relative à la réforme de l'audiovisuel public et à la souveraineté audiovisuelle (première lecture)",
       "question": "Faut-il réunir France Télévisions, Radio France et l'Institut national de l'audiovisuel sous une même direction ?",
@@ -4577,6 +4748,7 @@
     {
       "id": "programmation-energie-climat-2025",
       "thematiqueId": "environnement",
+      "sujetId": "eolien-solaire",
       "nature": "proposition_loi",
       "titre": "Proposition de loi portant programmation nationale pour l'énergie et le climat pour les années 2025 à 2035",
       "question": "Faut-il adopter le plan énergie-climat 2025-2035, modifié pour geler les nouveaux projets éoliens et solaires ?",
@@ -4671,6 +4843,7 @@
     {
       "id": "loi-narcotrafic-2025",
       "thematiqueId": "securite",
+      "sujetId": "trafic-de-drogue",
       "nature": "proposition_loi",
       "titre": "Loi visant à sortir la France du piège du narcotrafic (texte de la commission mixte paritaire)",
       "question": "Faut-il créer un parquet spécialisé et des prisons de haute sécurité contre le trafic de drogue ?",
@@ -4767,6 +4940,7 @@
     {
       "id": "motion-censure-barnier-2024",
       "thematiqueId": "institutions",
+      "sujetId": "parlement-gouvernement",
       "nature": "motion_censure",
       "titre": "Motion de censure contre le gouvernement Michel Barnier (PLFSS 2025)",
       "question": "Faut-il renverser le gouvernement, qui a fait passer sans vote le budget de la Sécurité sociale 2025 ?",
@@ -4865,6 +5039,7 @@
     {
       "id": "debat-accord-ue-mercosur-2024",
       "thematiqueId": "agriculture",
+      "sujetId": "accord-ue-mercosur",
       "nature": "declaration_gouvernement",
       "titre": "Rejet de l'accord commercial de libre-échange UE-Mercosur",
       "question": "Faut-il que la France bloque l'accord de libre-échange avec l'Amérique du Sud (Mercosur), tel qu'il a été négocié ?",
@@ -4959,6 +5134,7 @@
     {
       "id": "rejet-recettes-plf-2025",
       "thematiqueId": "economie",
+      "sujetId": "impots-patrimoine",
       "nature": "projet_loi",
       "titre": "Rejet de la partie recettes du Projet de Loi de Finances 2025",
       "question": "Faut-il voter les impôts du budget 2025, modifiés pour rétablir l'impôt sur la fortune et taxer les superprofits ?",
@@ -5053,6 +5229,7 @@
     {
       "id": "regulation-meubles-tourisme-airbnb-2024",
       "thematiqueId": "logement",
+      "sujetId": "logements-vacants-loyers",
       "nature": "proposition_loi",
       "titre": "Régulation des meublés de tourisme et locations Airbnb (Loi Le Meur)",
       "question": "Faut-il donner plus de pouvoirs aux maires pour limiter les locations touristiques de type Airbnb ?",
@@ -5147,6 +5324,7 @@
     {
       "id": "loi-orientation-agricole-2024",
       "thematiqueId": "agriculture",
+      "sujetId": "statut-agriculture",
       "nature": "projet_loi",
       "titre": "Loi d'orientation pour la souveraineté alimentaire et le renouvellement agricole",
       "question": "Faut-il faire de l'agriculture un « intérêt général majeur » et faciliter l'installation des jeunes agriculteurs ?",
@@ -5247,6 +5425,7 @@
     {
       "id": "degel-corps-electoral-nouvelle-caledonie-2024",
       "thematiqueId": "institutions",
+      "sujetId": "nouvelle-caledonie",
       "nature": "projet_loi",
       "titre": "Réforme constitutionnelle sur le dégel du corps électoral en Nouvelle-Calédonie",
       "question": "Faut-il ouvrir les élections provinciales de Nouvelle-Calédonie aux habitants installés depuis au moins 10 ans ?",
@@ -5343,6 +5522,7 @@
     {
       "id": "loi-sren-numerique-2024",
       "thematiqueId": "numerique",
+      "sujetId": "reseaux-sociaux",
       "nature": "projet_loi",
       "titre": "Loi visant à sécuriser et réguler l'espace numérique (Loi SREN)",
       "question": "Faut-il pouvoir bannir des réseaux sociaux les auteurs de cyberharcèlement et vérifier l'âge sur les sites pour adultes ?",
@@ -5445,6 +5625,7 @@
     {
       "id": "pacte-asile-migration-ue-2024",
       "thematiqueId": "international",
+      "sujetId": "immigration-asile",
       "nature": "texte_europeen",
       "titre": "Pacte européen sur la migration et l'asile",
       "question": "Faut-il adopter des règles européennes pour répartir les demandeurs d'asile et filtrer les arrivées aux frontières ?",
@@ -5514,6 +5695,7 @@
     {
       "id": "ppl-interdiction-pfas-2024",
       "thematiqueId": "environnement",
+      "sujetId": "polluants-eternels",
       "nature": "proposition_loi",
       "titre": "Interdiction des polluants éternels (PFAS) dans les biens de consommation",
       "question": "Faut-il interdire les polluants éternels (PFAS) dans les cosmétiques et les vêtements dès 2026 ?",
@@ -5610,6 +5792,7 @@
     {
       "id": "ppl-anti-fast-fashion-2024",
       "thematiqueId": "environnement",
+      "sujetId": "mode-ultra-ephemere",
       "nature": "proposition_loi",
       "titre": "Régulation environnementale de l'industrie textile et de la Fast-Fashion",
       "question": "Faut-il taxer la mode ultra-éphémère (fast fashion) et interdire sa publicité ?",
@@ -5706,6 +5889,7 @@
     {
       "id": "reglement-europeen-ia-act-2024",
       "thematiqueId": "numerique",
+      "sujetId": "intelligence-artificielle",
       "nature": "texte_europeen",
       "titre": "Règlement européen sur l'Intelligence Artificielle (AI Act)",
       "question": "Faut-il encadrer l'intelligence artificielle en Europe selon son niveau de risque ?",
@@ -5751,6 +5935,7 @@
     {
       "id": "accord-securite-ukraine-2024",
       "thematiqueId": "international",
+      "sujetId": "ukraine",
       "nature": "declaration_gouvernement",
       "titre": "Accord bilatéral de sécurité et soutien militaire à l'Ukraine",
       "question": "Faut-il approuver l'accord de sécurité avec l'Ukraine, qui prévoit 3 milliards d'euros d'aide militaire en 2024 ?",
@@ -5851,6 +6036,7 @@
     {
       "id": "loi-constitutionnelle-ivg-2024",
       "thematiqueId": "societe",
+      "sujetId": "bioethique",
       "nature": "projet_loi",
       "titre": "Inscription de l'interruption volontaire de grossesse (IVG) dans la Constitution",
       "question": "Faut-il inscrire dans la Constitution la liberté de recourir à l'IVG ?",
@@ -5935,6 +6121,7 @@
     {
       "id": "loi-immigration-2023",
       "thematiqueId": "securite",
+      "sujetId": "immigration-asile",
       "nature": "projet_loi",
       "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
       "question": "Faut-il durcir les règles de l'immigration et faciliter l'expulsion des étrangers condamnés ?",
@@ -6029,6 +6216,7 @@
     {
       "id": "loi-valletoux-acces-soins-2023",
       "thematiqueId": "sante",
+      "sujetId": "acces-aux-soins",
       "nature": "proposition_loi",
       "titre": "Loi pour l'amélioration de l'accès aux soins et la lutte contre les déserts médicaux",
       "question": "Pour lutter contre les déserts médicaux, faut-il limiter l'intérim et élargir les missions des soignants non médecins ?",
@@ -6115,6 +6303,7 @@
     {
       "id": "loi-plein-emploi-france-travail-2023",
       "thematiqueId": "travail",
+      "sujetId": "rsa",
       "nature": "projet_loi",
       "titre": "Loi pour le plein emploi : création de France Travail et conditionnement du RSA",
       "question": "Faut-il demander 15 heures d'activité par semaine aux allocataires du RSA ?",
@@ -6207,6 +6396,7 @@
     {
       "id": "loi-programmation-militaire-2024-2030",
       "thematiqueId": "international",
+      "sujetId": "defense",
       "nature": "projet_loi",
       "titre": "Loi de programmation militaire 2024-2030 (413 milliards d'euros)",
       "question": "Faut-il consacrer 413 milliards d'euros aux armées de 2024 à 2030 ?",
@@ -6297,6 +6487,7 @@
     {
       "id": "relance-nucleaire-epr-2023",
       "thematiqueId": "environnement",
+      "sujetId": "nucleaire",
       "nature": "projet_loi",
       "titre": "Loi d'accélération des procédures pour la relance du nucléaire (6 EPR2)",
       "question": "Faut-il simplifier les procédures pour construire rapidement 6 nouveaux réacteurs nucléaires ?",
@@ -6391,6 +6582,7 @@
     {
       "id": "loi-anti-squat-kasbarian-2023",
       "thematiqueId": "logement",
+      "sujetId": "squat-impayes",
       "nature": "proposition_loi",
       "titre": "Loi visant à protéger les logements contre l'occupation illicite (Loi Kasbarian-Bergé)",
       "question": "Faut-il tripler les peines contre le squat et accélérer l'expulsion des locataires qui ne paient pas ?",
@@ -6485,6 +6677,7 @@
     {
       "id": "videosurveillance-ia-jo-2024",
       "thematiqueId": "securite",
+      "sujetId": "surveillance",
       "nature": "projet_loi",
       "titre": "Expérimentation de la vidéosurveillance algorithmique et IA (Loi JO 2024)",
       "question": "Faut-il tester des caméras de surveillance avec intelligence artificielle dans l'espace public ?",
@@ -6573,6 +6766,7 @@
     {
       "id": "loi-retraites-2023",
       "thematiqueId": "economie",
+      "sujetId": "retraites",
       "nature": "projet_loi",
       "titre": "Réforme des retraites : recul de l'âge légal à 64 ans",
       "question": "Faut-il reculer l'âge légal de départ à la retraite de 62 à 64 ans ?",
@@ -6649,6 +6843,7 @@
     {
       "id": "repas-etudiant-1-euro-2023",
       "thematiqueId": "education",
+      "sujetId": "etudiants",
       "nature": "proposition_loi",
       "titre": "Proposition de loi instaurant le repas CROUS à 1 euro pour tous les étudiants",
       "question": "Faut-il étendre le repas à 1 euro au restaurant universitaire à tous les étudiants ?",
@@ -6743,6 +6938,7 @@
     {
       "id": "loi-energies-renouvelables-2023",
       "thematiqueId": "environnement",
+      "sujetId": "eolien-solaire",
       "nature": "projet_loi",
       "titre": "Accélération de la production d'énergies renouvelables",
       "question": "Faut-il simplifier les procédures pour développer le solaire et l'éolien ?",
@@ -6839,6 +7035,7 @@
     {
       "id": "climat-resilience-2021",
       "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
       "nature": "projet_loi",
       "titre": "Projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
       "question": "Faut-il interdire certains vols intérieurs et la location des logements les plus mal isolés ?",
@@ -6913,6 +7110,7 @@
     {
       "id": "principes-republique-2021",
       "thematiqueId": "societe",
+      "sujetId": "laicite",
       "nature": "projet_loi",
       "titre": "Projet de loi confortant le respect des principes de la République",
       "question": "Faut-il encadrer l'instruction en famille et renforcer le contrôle des associations et des cultes ?",
@@ -6993,6 +7191,7 @@
     {
       "id": "securite-globale-2020",
       "thematiqueId": "securite",
+      "sujetId": "surveillance",
       "nature": "proposition_loi",
       "titre": "Proposition de loi relative à la sécurité globale",
       "question": "Faut-il pénaliser la diffusion malveillante d'images de policiers et autoriser les drones de surveillance ?",
@@ -7073,6 +7272,7 @@
     {
       "id": "bioethique-pma-2019",
       "thematiqueId": "societe",
+      "sujetId": "bioethique",
       "nature": "projet_loi",
       "titre": "Projet de loi relatif à la bioéthique (première lecture)",
       "question": "Faut-il ouvrir la procréation médicalement assistée (PMA) aux couples de femmes et aux femmes seules ?",
@@ -7147,6 +7347,7 @@
     {
       "id": "ratification-ceta-an-2019",
       "thematiqueId": "international",
+      "sujetId": "accords-libre-echange",
       "nature": "projet_loi",
       "titre": "Projet de loi autorisant la ratification de l'accord économique et commercial global UE-Canada (CETA)",
       "question": "Faut-il ratifier l'accord commercial entre l'Union européenne et le Canada (CETA) ?",
@@ -7227,6 +7428,7 @@
     {
       "id": "ecole-de-la-confiance-2019",
       "thematiqueId": "education",
+      "sujetId": "apprentissages-ecole",
       "nature": "projet_loi",
       "titre": "Projet de loi pour une école de la confiance",
       "question": "Faut-il avancer l'âge de l'instruction obligatoire de 6 ans à 3 ans ?",
@@ -7295,6 +7497,7 @@
     {
       "id": "loi-asile-immigration-2018",
       "thematiqueId": "securite",
+      "sujetId": "immigration-asile",
       "nature": "projet_loi",
       "titre": "Projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie",
       "question": "Faut-il accélérer le traitement des demandes d'asile et allonger la rétention des étrangers en situation irrégulière ?",
@@ -7369,6 +7572,7 @@
     {
       "id": "ordonnances-travail-2017",
       "thematiqueId": "travail",
+      "sujetId": "contrat-licenciement",
       "nature": "projet_loi",
       "titre": "Projet de loi ratifiant les ordonnances pour le renforcement du dialogue social",
       "question": "Faut-il plafonner les indemnités pour licenciement abusif et donner la priorité aux accords d'entreprise ?",
@@ -7443,6 +7647,7 @@
     {
       "id": "nouveaux-reacteurs",
       "thematiqueId": "environnement",
+      "sujetId": "nucleaire",
       "question": "Construire de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà",
       "enjeu": "Lancer en France la construction de réacteurs nucléaires de nouvelle génération (EPR), en plus de ceux qui fonctionnent déjà.",
       "positions": [
@@ -7460,6 +7665,7 @@
     {
       "id": "eoliennes",
       "thematiqueId": "environnement",
+      "sujetId": "eolien-solaire",
       "question": "Arrêter les nouveaux projets éoliens et démanteler les éoliennes déjà installées",
       "enjeu": "Interdire les nouvelles éoliennes et démonter, progressivement ou non, celles déjà en service.",
       "positions": [
@@ -7477,6 +7683,7 @@
     {
       "id": "referendum-initiative-citoyenne",
       "thematiqueId": "institutions",
+      "sujetId": "referendum",
       "question": "Permettre aux citoyens de déclencher eux-mêmes un référendum en réunissant assez de signatures",
       "enjeu": "Permettre aux électeurs de déclencher eux-mêmes un référendum en réunissant assez de signatures, sans passer par le président ni le Parlement.",
       "positions": [
@@ -7498,6 +7705,7 @@
     {
       "id": "quitter-otan",
       "thematiqueId": "international",
+      "sujetId": "otan",
       "question": "Faire sortir la France de l'Alliance atlantique (OTAN), l'alliance militaire avec les États-Unis",
       "enjeu": "Faire sortir la France de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
       "positions": [
@@ -7523,6 +7731,7 @@
     {
       "id": "quitter-union-europeenne",
       "thematiqueId": "international",
+      "sujetId": "union-europeenne",
       "question": "Faire sortir la France de l'Union européenne et de ses règles communes",
       "enjeu": "Faire sortir la France de l'Union européenne et de ses règles communes, comme l'a fait le Royaume-Uni.",
       "positions": [
@@ -7540,6 +7749,7 @@
     {
       "id": "budget-defense",
       "thematiqueId": "international",
+      "sujetId": "defense",
       "question": "Consacrer chaque année plus d'argent public à l'armée et à la défense du pays",
       "enjeu": "Consacrer davantage d'argent public à l'armée et à la défense du pays.",
       "positions": [
@@ -7565,6 +7775,7 @@
     {
       "id": "impot-fortune",
       "thematiqueId": "economie",
+      "sujetId": "impots-patrimoine",
       "question": "Rétablir un impôt payé chaque année sur le patrimoine des plus riches",
       "enjeu": "Taxer à nouveau chaque année le patrimoine des plus riches, comme l'impôt de solidarité sur la fortune remplacé en 2018.",
       "positions": [
@@ -7582,6 +7793,7 @@
     {
       "id": "taxes-carburants",
       "thematiqueId": "economie",
+      "sujetId": "prix-energie-carburants",
       "question": "Baisser les taxes sur l'essence et le gazole pour faire baisser leur prix à la pompe",
       "enjeu": "Réduire la TVA ou les taxes payées sur l'essence et le gazole pour faire baisser leur prix à la pompe.",
       "positions": [
@@ -7603,6 +7815,7 @@
     {
       "id": "reculer-retraite",
       "thematiqueId": "economie",
+      "sujetId": "retraites",
       "question": "Relever l'âge légal de départ à la retraite, pour partir plus tard qu'aujourd'hui",
       "enjeu": "Repousser l'âge légal à partir duquel on peut partir à la retraite.",
       "positions": [
@@ -7620,6 +7833,7 @@
     {
       "id": "regulariser-sans-papiers",
       "thematiqueId": "societe",
+      "sujetId": "droits-des-etrangers",
       "question": "Donner un titre de séjour à tous les étrangers qui vivent en France sans autorisation",
       "enjeu": "Donner un titre de séjour à toutes les personnes étrangères qui vivent en France sans autorisation.",
       "positions": [
@@ -7641,6 +7855,7 @@
     {
       "id": "temps-de-travail",
       "thematiqueId": "travail",
+      "sujetId": "temps-de-travail",
       "question": "Réduire le temps de travail sans baisse de salaire",
       "enjeu": "Travailler moins d'heures par semaine ou par an, en gardant le même salaire.",
       "positions": [
@@ -7658,6 +7873,7 @@
     {
       "id": "recrutement-enseignants",
       "thematiqueId": "education",
+      "sujetId": "metier-enseignant",
       "question": "Laisser chaque chef d'établissement choisir ses enseignants, au lieu de l'affectation nationale",
       "enjeu": "Confier le choix des professeurs au directeur ou au principal de chaque école, plutôt qu'à l'affectation nationale.",
       "positions": [
@@ -7675,6 +7891,7 @@
     {
       "id": "uniforme-ecole",
       "thematiqueId": "education",
+      "sujetId": "uniforme-autorite",
       "question": "Faire porter un uniforme, la même tenue pour tous, aux élèves de l'école publique",
       "enjeu": "Faire porter la même tenue à tous les élèves de l'école publique, tout de suite ou après une expérimentation.",
       "positions": [
@@ -7692,6 +7909,7 @@
     {
       "id": "peines-planchers",
       "thematiqueId": "securite",
+      "sujetId": "peines-prisons",
       "question": "Fixer pour certaines infractions une peine minimale que le juge doit prononcer",
       "enjeu": "Fixer, pour certaines infractions, une peine minimale que le juge doit en principe prononcer (peines planchers).",
       "positions": [
@@ -7709,6 +7927,7 @@
     {
       "id": "soins-rembourses",
       "thematiqueId": "sante",
+      "sujetId": "acces-aux-soins",
       "question": "Rembourser à 100 % par la Sécurité sociale tous les soins prescrits par un médecin",
       "enjeu": "Faire prendre en charge en entier par la Sécurité sociale les soins prescrits par un médecin, sans reste à payer.",
       "positions": [
@@ -7726,6 +7945,7 @@
     {
       "id": "normes-agricoles",
       "thematiqueId": "agriculture",
+      "sujetId": "normes-europeennes-importations",
       "question": "Limiter les règles imposées aux agriculteurs à celles de l'Europe",
       "enjeu": "Supprimer les normes françaises qui vont au-delà de ce que l'Union européenne exige, et ne plus en ajouter.",
       "positions": [
@@ -8345,7 +8565,7 @@
       "definition": "Impôt ajouté pour un temps à un impôt existant, ici sur les bénéfices des plus grandes entreprises."
     }
   ],
-  "reperes": [
+  "sujets": [
     {
       "id": "accord-ue-mercosur",
       "thematiqueId": "agriculture",
@@ -8368,12 +8588,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "debat-accord-ue-mercosur-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "retraites",
@@ -8397,18 +8612,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ep-1",
-        "prop-jlm-3"
-      ],
-      "lois": [
-        "loi-retraites-2023",
-        "plfss-2026",
-        "abattement-pensions-retraite-2027"
-      ],
-      "enjeux": [
-        "reculer-retraite"
       ]
     },
     {
@@ -8426,14 +8629,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-dl-8",
-        "prop-kb-7"
-      ],
-      "lois": [],
-      "enjeux": [
-        "normes-agricoles"
       ]
     },
     {
@@ -8458,16 +8653,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-fa-6",
-        "prop-mlp-3",
-        "prop-mm-5"
-      ],
-      "lois": [
-        "ratification-ceta-an-2019"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "origine-des-aliments",
@@ -8491,14 +8677,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-nda-4"
-      ],
-      "lois": [
-        "etiquetage-origine-aliments-2025"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "revenu-agricole",
@@ -8529,16 +8708,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fro-4",
-        "prop-fr-4",
-        "prop-jl-1",
-        "prop-jlm-4",
-        "prop-rg-7"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "politique-agricole-commune",
@@ -8562,14 +8732,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-am-4",
-        "prop-db-7",
-        "prop-mt-3"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "pesticides",
@@ -8593,14 +8756,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-db-8"
-      ],
-      "lois": [
-        "loi-contraintes-agriculteurs-2025"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "elevage-peche",
@@ -8631,14 +8787,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-mm-2",
-        "prop-mm-6",
-        "prop-mm-8"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "statut-agriculture",
@@ -8662,14 +8811,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-br-8"
-      ],
-      "lois": [
-        "loi-orientation-agricole-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "smic-salaires",
@@ -8693,16 +8835,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-ak-1",
-        "prop-sl-1",
-        "prop-fro-1",
-        "prop-na-1",
-        "prop-fr-1"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "impots-patrimoine",
@@ -8726,15 +8859,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-rg-2"
-      ],
-      "lois": [
-        "rejet-recettes-plf-2025"
-      ],
-      "enjeux": [
-        "impot-fortune"
       ]
     },
     {
@@ -8759,15 +8883,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ez-3",
-        "prop-am-7"
-      ],
-      "lois": [
-        "surtaxe-grandes-entreprises-2027"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "aides-publiques-entreprises",
@@ -8791,13 +8907,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ga-7",
-        "prop-rg-4"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "depenses-dette",
@@ -8821,15 +8931,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-dl-2",
-        "prop-kb-8"
-      ],
-      "lois": [
-        "confiance-gouvernement-2025"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "etat-actionnaire",
@@ -8853,16 +8955,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-fa-4",
-        "prop-sl-7",
-        "prop-np-1"
-      ],
-      "lois": [
-        "nationalisation-arcelormittal-2026"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "prix-energie-carburants",
@@ -8886,14 +8979,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-jlm-2",
-        "prop-xb-4"
-      ],
-      "lois": [],
-      "enjeux": [
-        "taxes-carburants"
       ]
     },
     {
@@ -8925,16 +9010,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-na-2",
-        "prop-sl-2",
-        "prop-ga-2",
-        "prop-ep-4"
-      ],
-      "lois": [],
-      "enjeux": [
-        "temps-de-travail"
       ]
     },
     {
@@ -8959,15 +9034,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ob-2",
-        "prop-mt-4"
-      ],
-      "lois": [
-        "ordonnances-travail-2017"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "conditions-de-travail",
@@ -8998,13 +9065,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fr-2",
-        "prop-kb-5"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "rsa",
@@ -9035,12 +9096,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "loi-plein-emploi-france-travail-2023"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "metier-enseignant",
@@ -9064,15 +9120,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-br-7",
-        "prop-np-3",
-        "prop-np-4"
-      ],
-      "lois": [],
-      "enjeux": [
-        "recrutement-enseignants"
       ]
     },
     {
@@ -9097,13 +9144,6 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-ep-3"
-      ],
-      "lois": [],
-      "enjeux": [
-        "uniforme-ecole"
       ]
     },
     {
@@ -9128,17 +9168,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-fp-5",
-        "prop-nda-8",
-        "prop-fr-6",
-        "prop-am-9"
-      ],
-      "lois": [
-        "ecole-de-la-confiance-2019"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "etudiants",
@@ -9169,16 +9199,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-sl-6",
-        "prop-ak-3"
-      ],
-      "lois": [
-        "repas-etudiant-1-euro-2023",
-        "antisemitisme-enseignement-superieur-2025"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "culture-audiovisuel",
@@ -9202,15 +9223,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-xb-6",
-        "prop-xb-5"
-      ],
-      "lois": [
-        "holding-audiovisuel-public-2025"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "service-national",
@@ -9234,13 +9247,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-jl-5",
-        "prop-ep-6"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "condition-animale",
@@ -9271,14 +9278,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-mm-7",
-        "prop-mm-1",
-        "prop-mm-3"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "nucleaire",
@@ -9309,16 +9309,6 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-am-1",
-        "prop-ep-2"
-      ],
-      "lois": [
-        "relance-nucleaire-epr-2023"
-      ],
-      "enjeux": [
-        "nouveaux-reacteurs"
       ]
     },
     {
@@ -9350,16 +9340,6 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-jl-6"
-      ],
-      "lois": [
-        "loi-energies-renouvelables-2023",
-        "programmation-energie-climat-2025"
-      ],
-      "enjeux": [
-        "eoliennes"
       ]
     },
     {
@@ -9384,18 +9364,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-db-1",
-        "prop-jlm-7",
-        "prop-ob-1",
-        "prop-na-8",
-        "prop-rg-5"
-      ],
-      "lois": [
-        "climat-resilience-2021"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "adaptation-chaleur",
@@ -9426,13 +9395,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-np-7",
-        "prop-fr-7"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "sols-grands-projets",
@@ -9456,14 +9419,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-dl-5",
-        "prop-kb-6",
-        "prop-mt-1"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "polluants-eternels",
@@ -9494,14 +9450,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-mt-2"
-      ],
-      "lois": [
-        "ppl-interdiction-pfas-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "mode-ultra-ephemere",
@@ -9518,12 +9467,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "ppl-anti-fast-fashion-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "referendum",
@@ -9547,15 +9491,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-mlp-5",
-        "prop-ob-3",
-        "prop-am-8"
-      ],
-      "lois": [],
-      "enjeux": [
-        "referendum-initiative-citoyenne"
       ]
     },
     {
@@ -9580,13 +9515,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-jl-3",
-        "prop-mt-8"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "pouvoirs-du-president",
@@ -9610,16 +9539,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-jlm-1",
-        "prop-db-4",
-        "prop-fro-8",
-        "prop-ak-5",
-        "prop-xb-1"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "parlement-gouvernement",
@@ -9643,14 +9563,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-br-6"
-      ],
-      "lois": [
-        "motion-censure-barnier-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "pouvoirs-locaux",
@@ -9681,13 +9594,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-dl-1",
-        "prop-xb-2"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "transparence-vie-publique",
@@ -9718,14 +9625,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fr-8",
-        "prop-np-6",
-        "prop-na-3"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "union-europeenne",
@@ -9756,17 +9656,6 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-nda-7",
-        "prop-ez-4",
-        "prop-ob-5"
-      ],
-      "lois": [
-        "contribution-budget-europeen-2027"
-      ],
-      "enjeux": [
-        "quitter-union-europeenne"
       ]
     },
     {
@@ -9791,12 +9680,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "degel-corps-electoral-nouvelle-caledonie-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "immigration-asile",
@@ -9820,17 +9704,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ep-8",
-        "prop-nda-1"
-      ],
-      "lois": [
-        "loi-immigration-2023",
-        "loi-asile-immigration-2018",
-        "pacte-asile-migration-ue-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "expulsions",
@@ -9854,13 +9728,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-br-5",
-        "prop-ez-1"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "droits-des-etrangers",
@@ -9884,13 +9752,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-sl-8"
-      ],
-      "lois": [],
-      "enjeux": [
-        "regulariser-sans-papiers"
       ]
     },
     {
@@ -9922,13 +9783,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-mlp-2",
-        "prop-mlp-6"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "defense",
@@ -9952,17 +9807,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-rg-1",
-        "prop-ak-6",
-        "prop-na-7"
-      ],
-      "lois": [
-        "loi-programmation-militaire-2024-2030"
-      ],
-      "enjeux": [
-        "budget-defense"
       ]
     },
     {
@@ -9987,13 +9831,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-np-8"
-      ],
-      "lois": [],
-      "enjeux": [
-        "quitter-otan"
       ]
     },
     {
@@ -10018,12 +9855,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "accord-securite-ukraine-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "logement-social",
@@ -10054,16 +9886,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ez-5",
-        "prop-fro-5",
-        "prop-ga-8",
-        "prop-kb-4",
-        "prop-jlm-5"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "logements-vacants-loyers",
@@ -10087,15 +9910,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ak-8",
-        "prop-na-4"
-      ],
-      "lois": [
-        "regulation-meubles-tourisme-airbnb-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "renovation-energetique",
@@ -10119,14 +9934,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-am-6",
-        "prop-fr-3",
-        "prop-mt-5"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "squat-impayes",
@@ -10157,12 +9965,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "loi-anti-squat-kasbarian-2023"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "reseaux-sociaux",
@@ -10186,16 +9989,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-ga-3",
-        "prop-rg-3"
-      ],
-      "lois": [
-        "mineurs-reseaux-sociaux-2026",
-        "loi-sren-numerique-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "intelligence-artificielle",
@@ -10219,16 +10013,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-db-2",
-        "prop-mt-6",
-        "prop-kb-1"
-      ],
-      "lois": [
-        "reglement-europeen-ia-act-2024"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "souverainete-numerique",
@@ -10252,13 +10037,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fp-3",
-        "prop-nda-5"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "surveillance",
@@ -10289,16 +10068,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-fa-5",
-        "prop-sl-5"
-      ],
-      "lois": [
-        "videosurveillance-ia-jo-2024",
-        "securite-globale-2020"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "acces-aux-soins",
@@ -10322,18 +10092,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-dl-7",
-        "prop-jl-2",
-        "prop-ob-7",
-        "prop-ga-4"
-      ],
-      "lois": [
-        "loi-valletoux-acces-soins-2023"
-      ],
-      "enjeux": [
-        "soins-rembourses"
       ]
     },
     {
@@ -10358,14 +10116,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fa-8",
-        "prop-mlp-8",
-        "prop-xb-8"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "medicaments",
@@ -10396,13 +10147,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-na-5",
-        "prop-rg-8"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "vaccination",
@@ -10426,13 +10171,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fp-8",
-        "prop-nda-3"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "fin-de-vie",
@@ -10463,12 +10202,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "aide-a-mourir-2026"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "alimentation-sante",
@@ -10492,12 +10226,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-am-11"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "police-maintien-ordre",
@@ -10528,16 +10257,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-ak-7",
-        "prop-am-10",
-        "prop-dl-4"
-      ],
-      "lois": [
-        "presomption-legitime-defense-2026"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "justice-des-mineurs",
@@ -10568,15 +10288,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-br-2",
-        "prop-ga-5",
-        "prop-np-5",
-        "prop-ob-4"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "peines-prisons",
@@ -10600,15 +10312,6 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-mlp-1",
-        "prop-fp-7",
-        "prop-fa-7"
-      ],
-      "lois": [],
-      "enjeux": [
-        "peines-planchers"
       ]
     },
     {
@@ -10626,14 +10329,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-br-4"
-      ],
-      "lois": [
-        "loi-narcotrafic-2025"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "securite-civile",
@@ -10664,13 +10360,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-db-5",
-        "prop-mm-4"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "laicite",
@@ -10701,15 +10391,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [
-        "prop-db-6",
-        "prop-ez-6"
-      ],
-      "lois": [
-        "principes-republique-2021"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "liberte-expression",
@@ -10733,12 +10415,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-fp-6"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "ruralite",
@@ -10762,12 +10439,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-jl-4"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     },
     {
       "id": "enfance-famille",
@@ -10791,15 +10463,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-kb-3",
-        "prop-ob-8"
-      ],
-      "lois": [
-        "jeunes-majeurs-protection-enfance-2026"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "bioethique",
@@ -10830,13 +10494,7 @@
           "media": "article",
           "aveugle": false
         }
-      ],
-      "propositions": [],
-      "lois": [
-        "loi-constitutionnelle-ivg-2024",
-        "bioethique-pma-2019"
-      ],
-      "enjeux": []
+      ]
     },
     {
       "id": "egalite-salariale",
@@ -10867,12 +10525,7 @@
           "media": "article",
           "aveugle": true
         }
-      ],
-      "propositions": [
-        "prop-rg-6"
-      ],
-      "lois": [],
-      "enjeux": []
+      ]
     }
   ]
 }

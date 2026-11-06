@@ -2,6 +2,7 @@
   {
     "id": "nouveaux-reacteurs",
     "thematiqueId": "environnement",
+    "sujetId": "nucleaire",
     "question": "Construire de nouveaux réacteurs nucléaires en France, en plus de ceux qui fonctionnent déjà",
     "enjeu": "Lancer en France la construction de réacteurs nucléaires de nouvelle génération (EPR), en plus de ceux qui fonctionnent déjà.",
     "positions": [
@@ -12,6 +13,7 @@
   {
     "id": "eoliennes",
     "thematiqueId": "environnement",
+    "sujetId": "eolien-solaire",
     "question": "Arrêter les nouveaux projets éoliens et démanteler les éoliennes déjà installées",
     "enjeu": "Interdire les nouvelles éoliennes et démonter, progressivement ou non, celles déjà en service.",
     "positions": [
@@ -22,6 +24,7 @@
   {
     "id": "referendum-initiative-citoyenne",
     "thematiqueId": "institutions",
+    "sujetId": "referendum",
     "question": "Permettre aux citoyens de déclencher eux-mêmes un référendum en réunissant assez de signatures",
     "enjeu": "Permettre aux électeurs de déclencher eux-mêmes un référendum en réunissant assez de signatures, sans passer par le président ni le Parlement.",
     "positions": [
@@ -33,6 +36,7 @@
   {
     "id": "quitter-otan",
     "thematiqueId": "international",
+    "sujetId": "otan",
     "question": "Faire sortir la France de l'Alliance atlantique (OTAN), l'alliance militaire avec les États-Unis",
     "enjeu": "Faire sortir la France de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
     "positions": [
@@ -45,6 +49,7 @@
   {
     "id": "quitter-union-europeenne",
     "thematiqueId": "international",
+    "sujetId": "union-europeenne",
     "question": "Faire sortir la France de l'Union européenne et de ses règles communes",
     "enjeu": "Faire sortir la France de l'Union européenne et de ses règles communes, comme l'a fait le Royaume-Uni.",
     "positions": [
@@ -55,6 +60,7 @@
   {
     "id": "budget-defense",
     "thematiqueId": "international",
+    "sujetId": "defense",
     "question": "Consacrer chaque année plus d'argent public à l'armée et à la défense du pays",
     "enjeu": "Consacrer davantage d'argent public à l'armée et à la défense du pays.",
     "positions": [
@@ -67,6 +73,7 @@
   {
     "id": "impot-fortune",
     "thematiqueId": "economie",
+    "sujetId": "impots-patrimoine",
     "question": "Rétablir un impôt payé chaque année sur le patrimoine des plus riches",
     "enjeu": "Taxer à nouveau chaque année le patrimoine des plus riches, comme l'impôt de solidarité sur la fortune remplacé en 2018.",
     "positions": [
@@ -77,6 +84,7 @@
   {
     "id": "taxes-carburants",
     "thematiqueId": "economie",
+    "sujetId": "prix-energie-carburants",
     "question": "Baisser les taxes sur l'essence et le gazole pour faire baisser leur prix à la pompe",
     "enjeu": "Réduire la TVA ou les taxes payées sur l'essence et le gazole pour faire baisser leur prix à la pompe.",
     "positions": [
@@ -88,6 +96,7 @@
   {
     "id": "reculer-retraite",
     "thematiqueId": "economie",
+    "sujetId": "retraites",
     "question": "Relever l'âge légal de départ à la retraite, pour partir plus tard qu'aujourd'hui",
     "enjeu": "Repousser l'âge légal à partir duquel on peut partir à la retraite.",
     "positions": [
@@ -98,6 +107,7 @@
   {
     "id": "regulariser-sans-papiers",
     "thematiqueId": "societe",
+    "sujetId": "droits-des-etrangers",
     "question": "Donner un titre de séjour à tous les étrangers qui vivent en France sans autorisation",
     "enjeu": "Donner un titre de séjour à toutes les personnes étrangères qui vivent en France sans autorisation.",
     "positions": [
@@ -109,6 +119,7 @@
   {
     "id": "temps-de-travail",
     "thematiqueId": "travail",
+    "sujetId": "temps-de-travail",
     "question": "Réduire le temps de travail sans baisse de salaire",
     "enjeu": "Travailler moins d'heures par semaine ou par an, en gardant le même salaire.",
     "positions": [
@@ -119,6 +130,7 @@
   {
     "id": "recrutement-enseignants",
     "thematiqueId": "education",
+    "sujetId": "metier-enseignant",
     "question": "Laisser chaque chef d'établissement choisir ses enseignants, au lieu de l'affectation nationale",
     "enjeu": "Confier le choix des professeurs au directeur ou au principal de chaque école, plutôt qu'à l'affectation nationale.",
     "positions": [
@@ -129,6 +141,7 @@
   {
     "id": "uniforme-ecole",
     "thematiqueId": "education",
+    "sujetId": "uniforme-autorite",
     "question": "Faire porter un uniforme, la même tenue pour tous, aux élèves de l'école publique",
     "enjeu": "Faire porter la même tenue à tous les élèves de l'école publique, tout de suite ou après une expérimentation.",
     "positions": [
@@ -139,6 +152,7 @@
   {
     "id": "peines-planchers",
     "thematiqueId": "securite",
+    "sujetId": "peines-prisons",
     "question": "Fixer pour certaines infractions une peine minimale que le juge doit prononcer",
     "enjeu": "Fixer, pour certaines infractions, une peine minimale que le juge doit en principe prononcer (peines planchers).",
     "positions": [
@@ -149,6 +163,7 @@
   {
     "id": "soins-rembourses",
     "thematiqueId": "sante",
+    "sujetId": "acces-aux-soins",
     "question": "Rembourser à 100 % par la Sécurité sociale tous les soins prescrits par un médecin",
     "enjeu": "Faire prendre en charge en entier par la Sécurité sociale les soins prescrits par un médecin, sans reste à payer.",
     "positions": [
@@ -159,6 +174,7 @@
   {
     "id": "normes-agricoles",
     "thematiqueId": "agriculture",
+    "sujetId": "normes-europeennes-importations",
     "question": "Limiter les règles imposées aux agriculteurs à celles de l'Europe",
     "enjeu": "Supprimer les normes françaises qui vont au-delà de ce que l'Union européenne exige, et ne plus en ajouter.",
     "positions": [

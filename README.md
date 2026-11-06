@@ -47,7 +47,7 @@ Tout est dans [data/](data/), sous licence libre, lisible directement sur GitHub
 
 - **Propositions** : un fichier par candidat, affiché en tableau par GitHub (liste ci-dessous).
 - **Scrutins** : [lois.json](data/lois.json), 47 votes réels à l'Assemblée, au Sénat et au Parlement européen, de 2017 à 2026.
-- **Contexte** : [reperes.json](data/reperes.json), 75 sujets expliqués (ce qui existe aujourd'hui, ce qui est en débat, et leurs sources) ; chaque question en a un.
+- **Contexte** : [sujets.json](data/sujets.json), 75 sujets expliqués (ce qui existe aujourd'hui, ce qui est en débat, et leurs sources) ; chaque question en a un.
 - **Candidats** : [candidats.json](data/candidats.json), avec la source datée de chaque candidature.
 - **Partis** : [partis.json](data/partis.json), avec leur nuance officielle du ministère de l'Intérieur.
 - **Thèmes** : [thematiques.json](data/thematiques.json), les 12 thèmes de l'app.

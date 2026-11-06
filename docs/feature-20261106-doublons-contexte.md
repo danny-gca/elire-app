@@ -157,11 +157,13 @@ Signalés sur iPhone, non reproductibles sur le web. Corrigés dans le code, **�
 **Avant** : 3 questions sur 220 avaient l'onglet « Contexte ». **Après** : les 220, réparties en 75 sujets (`data/reperes.json`), un sujet par question.
 
 - Chaque repère : « Aujourd'hui » (faits datés et chiffrés), « En débat » (options sans nom, symétriques), 1 à 3 liens neutres qui en sont les sources (171 liens, tous joignables le 2026-11-06 ; 33 masqués pendant le vote parce qu'ils donnent un résultat ou un nom). Longueur médiane : 561 caractères, contre une ou deux phrases avant.
-- Preuves : [feature-20261106-sources-reperes.md](feature-20261106-sources-reperes.md), chaque fait avec la page lue qui le contient.
-- Contrôles du build (`src/lib/reperes-check.ts`, règle 15) : question sans repère, repère sans année, sans source lisible pendant le vote, ou relu il y a plus de 180 jours. Bloquant en `--strict`.
+- Preuves : [feature-20261106-sources-sujets.md](feature-20261106-sources-sujets.md), chaque fait avec la page lue qui le contient.
+- Contrôles du build (`src/lib/sujets-check.ts`, règle 15) : question sans sujet, sujet d'aucune question, sujet sans année, sans source lisible pendant le vote, ou relu il y a plus de 180 jours. Bloquant en `--strict`.
 - Ton : « Les autres rappellent que... » donnait raison à un camp ; remplacé par « estiment que », « mettent en avant ».
 - Résultats des scrutins : les repères décrivent le cadre sans dire l'issue du texte voté. Exception assumée, à valider : la règle en vigueur quand elle découle d'un texte posé (retraites à 64 ans, impôt sur la fortune immobilière).
 
 À relire en priorité (sujets sensibles) : immigration-asile, expulsions, droits-des-etrangers, priorite-nationale, laicite, bioethique, justice-des-mineurs, parlement-gouvernement, defense, ukraine.
 
 Chiffres à confirmer quand la source définitive paraît : budget 2026 de la culture (3,75 milliards, projet) et des armées (57,1 milliards, projet) ; contribution au budget européen (sources divergentes) ; effectifs des sapeurs-pompiers (2021).
+
+**Structure (2026-11-06, [Danny])** : le lien va désormais de la question vers son sujet, comme pour le thème. `data/reperes.json` devient `data/sujets.json` et ne garde que le contenu (titre, aujourd'hui, en débat, liens) ; chaque question porte `sujet_id` (CSV des candidats) ou `sujetId` (`lois.json`, `enjeux.json`). Une proposition d'une question commune prend le sujet de la question. Le build refuse un sujet inconnu, signale une question sans sujet et un sujet d'aucune question ; un test vérifie que chaque proposition, scrutin et question commune a son onglet « Contexte » dans l'app (`getSujet`).

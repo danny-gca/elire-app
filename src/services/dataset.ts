@@ -1,10 +1,10 @@
 import raw from '@/data/dataset.json';
-import type { Dataset, Enjeu, Loi, Repere, VoteCandidatLoi } from '@/schemas/dataset';
+import type { Dataset, Enjeu, Loi, Sujet, VoteCandidatLoi } from '@/schemas/dataset';
 
 // Données publiques embarquées dans le bundle : accès synchrone, déjà validées par build:data.
 const dataset = raw as unknown as Dataset;
 
-export const { metadata, partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, reperes } = dataset;
+export const { metadata, partis, thematiques, candidats, propositions, lois, enjeux, glossaire, mots, sujets } = dataset;
 /** Propositions posées seules dans Voter ; les autres passent par leur enjeu. */
 export const soloPropositions = propositions.filter((p) => !p.enjeuId);
 /** Ce qu'on vote dans Voter, hors scrutins : une proposition seule ou un enjeu. */
@@ -15,11 +15,19 @@ export function getEnjeu(id: string): Enjeu | undefined {
   return enjeuxById.get(id);
 }
 
-// Chaque proposition, scrutin ou question commune a au plus un repère (contrôlé au build).
-const reperesByItem = new Map(reperes.flatMap((r) => [...r.propositions, ...r.lois, ...r.enjeux].map((itemId) => [itemId, r] as const)));
+// Chaque proposition, scrutin ou question commune pointe vers son sujet (sujetId, contrôlé au build).
+const sujetsById = new Map(sujets.map((s) => [s.id, s]));
+// Une proposition d'une question commune prend le sujet de la question.
+const sujetIdByItem = new Map<string, string | undefined>([
+  ...lois.map((l) => [l.id, l.sujetId] as const),
+  ...enjeux.map((e) => [e.id, e.sujetId] as const),
+  ...propositions.map((p) => [p.id, p.sujetId ?? (p.enjeuId ? enjeuxById.get(p.enjeuId)?.sujetId : undefined)] as const),
+]);
 
-export function getRepere(itemId: string): Repere | undefined {
-  return reperesByItem.get(itemId);
+/** Sujet de l'onglet « Contexte » d'une proposition, d'un scrutin ou d'une question commune. */
+export function getSujet(itemId: string): Sujet | undefined {
+  const sujetId = sujetIdByItem.get(itemId);
+  return sujetId ? sujetsById.get(sujetId) : undefined;
 }
 
 const candidatsById = new Map(candidats.map((c) => [c.id, c]));

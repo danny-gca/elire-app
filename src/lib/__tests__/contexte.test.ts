@@ -17,7 +17,7 @@ describe('contexteStats', () => {
     { ref: 'a', kind: 'P', precisions: 'Programme, p. 2. ' + 'X'.repeat(100) },
     { ref: 'b', kind: 'P', precisions: 'Programme, p. 2. ' + 'X'.repeat(100) },
     { ref: 'c', kind: 'P', precisions: 'Programme, p. 2. ' + 'X'.repeat(20) },
-    { ref: 'd', kind: 'L', precisions: 'y'.repeat(50), repere: 'Aujourd’hui En débat' },
+    { ref: 'd', kind: 'L', precisions: 'y'.repeat(50), sujet: 'Aujourd’hui En débat' },
   ]);
 
   it('rapporte chaque question à la médiane de son type', () => {
@@ -27,7 +27,7 @@ describe('contexteStats', () => {
       ['c', 20, 20],
       ['d', 50, 100],
     ]);
-    expect(stats[3].repere).toBeGreaterThan(0);
+    expect(stats[3].sujet).toBeGreaterThan(0);
   });
 
   it('signale les précisions sous la moitié de la médiane', () => {

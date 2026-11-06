@@ -29,11 +29,12 @@ Un programme 2022 reste utilisable tant qu'aucun programme 2027 n'est publié ; 
 `data/candidats/<candidat-id>.csv`, en-tête :
 
 ```
-id,thematique_id,titre,description,source_url,date_declaration,type_source,contexte
+id,thematique_id,sujet_id,titre,description,source_url,date_declaration,type_source,contexte
 ```
 
 - `id` : `prop-<initiales>-<n>` (ex. `prop-mt-7`), jamais réutilisé.
 - `thematique_id` : un id de `data/thematiques.json`.
+- `sujet_id` : un id de `data/sujets.json` (section « Rattacher une question à son sujet »).
 - `titre` : la mesure, courte et neutre.
 - `description` : citation exacte « … », coupures `[...]`.
 - `source_url` : le document précis ; `date_declaration` : `AAAA-MM-JJ` ou vide si la source n'est pas datée.
@@ -62,9 +63,9 @@ Une question neutre qui réunit des propositions de plusieurs candidats (`data/e
 4. Écrire l'objet : `id` (kebab-case), `thematiqueId` (celui de toutes ses propositions), `question` (130 caractères au plus, anonyme, formulée comme le changement que propose le plus de candidats), `enjeu` (ce que tranche la question, 220 caractères au plus, sans chiffre propre à un candidat), `positions` : `{ "propositionId": "prop-…", "sens": "pour" | "contre" }`, au moins 2 candidats différents, une position par candidat.
 5. Une proposition n'est que dans un enjeu ; les numéros `E-xx` sont attribués par le build.
 
-## Ajouter ou compléter un repère
+## Rattacher une question à son sujet
 
-Toute question posée (proposition seule, question commune, scrutin) doit avoir un repère (`data/reperes.json`, onglet « Contexte » ; CONTRIBUTING, règle 15). Une nouvelle question rejoint le repère de son sujet ; sinon, on crée le repère.
+Toute question posée porte l'id de son sujet (`data/sujets.json`, onglet « Contexte » ; CONTRIBUTING, règle 15) : `sujet_id` dans le CSV (vide pour une proposition d'une question commune, qui prend celui de la question), `sujetId` dans `lois.json` et `enjeux.json`. Une nouvelle question reprend un sujet existant ; sinon, on crée le sujet.
 
 - `titre` (60 caractères au plus), `aujourdhui` (faits datés et chiffrés, 300 au plus), `enDebat` (options sans nom, symétriques, 300 au plus), `aJour`, 1 à 3 `liens` neutres (vie-publique.fr, service-public.gouv.fr, Wikipédia, INSEE, sites officiels) qui contiennent chaque fait de `aujourdhui`.
 - Ni l'auteur d'une proposition ni le résultat d'un scrutin du sujet ; un lien qui les donne porte `"aveugle": false`, et il en reste au moins un sans.

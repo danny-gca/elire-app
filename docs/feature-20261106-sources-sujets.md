@@ -1,6 +1,6 @@
-# Sources des repères (2026-11-06)
+# Sources des sujets (2026-11-06)
 
-Chaque fait de « Aujourd'hui », suivi de la page lue qui le contient. Les textes publiés sont dans `data/reperes.json` ; ce relevé sert à les vérifier.
+Chaque fait de « Aujourd'hui », suivi de la page lue qui le contient. Les textes publiés sont dans `data/sujets.json` ; ce relevé sert à les vérifier.
 
 ### Sources du lot 1
 

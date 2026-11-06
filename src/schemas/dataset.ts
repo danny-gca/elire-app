@@ -77,6 +77,8 @@ export const TypeSourceSchema = z.enum(['programme_2027', 'programme_anterieur',
 export const PropositionCsvSchema = z.object({
   id,
   thematique_id: id,
+  /** Sujet de data/sujets.json (onglet « Contexte ») ; vide pour une proposition d'une question commune. */
+  sujet_id: id.or(z.literal('')),
   titre: z.string().min(1),
   description: z.string().min(1),
   source_url: url,
@@ -94,6 +96,7 @@ export const PropositionSchema = z.object({
   ref,
   candidatId: id,
   thematiqueId: id,
+  sujetId: id.optional(),
   titre: z.string().min(1),
   description: z.string().min(1),
   sourceUrl: url,
@@ -109,6 +112,8 @@ export const PropositionSchema = z.object({
 export const EnjeuSourceSchema = z.object({
   id,
   thematiqueId: id,
+  /** Sujet de data/sujets.json (onglet « Contexte »). */
+  sujetId: id.optional(),
   question: z.string().min(1).max(130),
   enjeu: z.string().min(1).max(220),
   positions: z.array(z.object({ propositionId: id, sens: SensSchema })).min(2),
@@ -143,6 +148,8 @@ export const VoteCandidatLoiSchema = z.object({
 export const LoiSourceSchema = z.object({
   id,
   thematiqueId: id,
+  /** Sujet de data/sujets.json (onglet « Contexte »). */
+  sujetId: id.optional(),
   nature: NatureLoiSchema,
   titre: z.string().min(1),
   /** Posée en vote à l'aveugle : ni nom, ni parti, ni résultat ; « pour » = la position « pour » du scrutin. */
@@ -185,8 +192,8 @@ export const LienSchema = z.object({
   aveugle: z.boolean().default(true),
 });
 
-// Une entrée de data/reperes.json : un sujet expliqué une fois, le même pour tous les candidats.
-export const RepereSchema = z.object({
+// Une entrée de data/sujets.json : un sujet expliqué une fois (onglet « Contexte »), le même pour toutes ses questions.
+export const SujetSchema = z.object({
   id,
   thematiqueId: id,
   titre: z.string().min(1).max(60),
@@ -196,9 +203,6 @@ export const RepereSchema = z.object({
   enDebat: z.string().min(1).max(300),
   aJour: isoDate,
   liens: z.array(LienSchema).max(3).default([]),
-  propositions: z.array(id).default([]),
-  lois: z.array(id).default([]),
-  enjeux: z.array(id).default([]),
 });
 
 export const DatasetSchema = z.object({
@@ -219,7 +223,7 @@ export const DatasetSchema = z.object({
   enjeux: z.array(EnjeuSchema),
   glossaire: z.array(GlossaireEntrySchema),
   mots: z.array(MotSchema),
-  reperes: z.array(RepereSchema),
+  sujets: z.array(SujetSchema),
 });
 
 export type Parti = z.infer<typeof PartiSchema>;
@@ -242,5 +246,5 @@ export type Loi = z.infer<typeof LoiSchema>;
 export type GlossaireEntry = z.infer<typeof GlossaireEntrySchema>;
 export type Mot = z.infer<typeof MotSchema>;
 export type Lien = z.infer<typeof LienSchema>;
-export type Repere = z.infer<typeof RepereSchema>;
+export type Sujet = z.infer<typeof SujetSchema>;
 export type Dataset = z.infer<typeof DatasetSchema>;

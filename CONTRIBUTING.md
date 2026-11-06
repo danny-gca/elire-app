@@ -19,11 +19,12 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 
 | Fichier | Contenu |
 |---|---|
-| `data/candidats/<candidat-id>.csv` | Propositions d'un candidat : `id, thematique_id, titre, description, source_url, date_declaration, type_source, contexte` |
+| `data/candidats/<candidat-id>.csv` | Propositions d'un candidat : `id, thematique_id, sujet_id, titre, description, source_url, date_declaration, type_source, contexte` |
 | `data/lois.json` | Scrutins et position de chaque candidat ; `question` et `enjeu` sont lus pendant le vote à l'aveugle (sans nom ni résultat, « Pour » = la position « pour » du scrutin) |
 | `data/enjeux.json` | Questions communes : une `question` neutre (et son `enjeu`) qui réunit des propositions de plusieurs candidats, chacune `pour` ou `contre` ; procédure dans le skill `collecter-donnees` |
 | `data/glossaire.json` | Sigles des textes lus à l'aveugle : `sigle`, `forme` développée, `definition` d'une phrase (affichés dans « En savoir plus ») |
 | `data/candidats.json`, `partis.json`, `thematiques.json` | Référentiels |
+| `data/sujets.json` | Un sujet par entrée (onglet « Contexte ») : `titre`, `aujourdhui`, `enDebat`, `aJour`, `liens` ; chaque question y renvoie par son `sujet_id` ou `sujetId` (règle 15) |
 | `data/questions-distinctes.json` | Paires de questions proches relues et gardées, avec leur raison (règle 14) |
 | `data/refs.json` | Numéros stables, géré par le build : ne pas éditer |
 
@@ -49,7 +50,7 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
     - **l'enjeu** d'un scrutin dit ce que le texte change concrètement (chiffres, et ce qu'il ajoute à un texte voisin déjà voté), pas seulement son nom.
 
     Le build signale aussi les « Précisions » maigres : moins de la moitié de la médiane de leur type (`src/lib/contexte.ts`).14. **Une question une seule fois** : deux questions du paquet (proposition seule, question commune, scrutin) qui se lisent comme la même donnent le sentiment d'y avoir déjà répondu. Le build signale les paires trop proches (`src/lib/doublons.ts`) : on les regroupe dans une question commune, on réécrit l'une pour dire ce qui la distingue, ou on retire la moins utile. Une paire relue et gardée va dans `data/questions-distinctes.json`, avec sa raison.
-15. **Un contexte pour chaque question** : chaque question posée (proposition seule, question commune, scrutin) est rattachée à un repère de `data/reperes.json`, l'onglet « Contexte ». Un repère par sujet, partagé par toutes ses questions : `aujourdhui`, des faits datés et chiffrés tirés de ses liens (au moins une année) ; `enDebat`, les options sans nom et symétriques ; 1 à 3 liens neutres qui en sont les sources, dont au moins un lisible pendant le vote ; `aJour` relu depuis moins de 180 jours (`src/lib/reperes-check.ts`). Il ne dit ni l'auteur d'une proposition ni le résultat d'un scrutin du sujet. Le build signale tout manque, et bloque en `--strict`.
+15. **Un contexte pour chaque question** : chaque question posée porte l'id de son sujet (`sujet_id` dans le CSV d'un candidat, `sujetId` dans `lois.json` et `enjeux.json`), comme son thème. Le sujet, dans `data/sujets.json`, est l'onglet « Contexte », partagé par toutes ses questions ; une proposition d'une question commune prend le sujet de la question (`sujet_id` vide). Un sujet : `aujourdhui`, des faits datés et chiffrés tirés de ses liens (au moins une année) ; `enDebat`, les options sans nom et symétriques ; 1 à 3 liens neutres qui en sont les sources, dont au moins un lisible pendant le vote ; `aJour` relu depuis moins de 180 jours (`src/lib/sujets-check.ts`). Il ne dit ni l'auteur d'une proposition ni le résultat d'un scrutin du sujet. Le build signale tout manque, et bloque en `--strict`.
 
 ### Entrée d'un candidat
 
