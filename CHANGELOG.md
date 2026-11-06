@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/danny-gca/elire-app/compare/v1.7.0...v1.8.0) (2026-11-06)
+
+
+### Nouveautés
+
+* améliorations des contextes, scrutins et correctifs divers ([#44](https://github.com/danny-gca/elire-app/issues/44)) ([470be48](https://github.com/danny-gca/elire-app/commit/470be488ccd1842163e712703c8007ec5a86506f))
+
 ## [1.7.0](https://github.com/danny-gca/elire-app/compare/v1.6.0...v1.7.0) (2026-10-29)
 
 
