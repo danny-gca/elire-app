@@ -12,6 +12,7 @@ import {
 import Animated, {
   Easing,
   FadeIn,
+  ReduceMotion,
   useAnimatedStyle,
   useReducedMotion,
   useSharedValue,
@@ -212,9 +213,11 @@ export default function OnboardingScreen() {
       return;
     }
     const ms = soon?.ms ?? STORY_MS;
+    // Compte à rebours, pas un mouvement : il reste visible avec « Réduire les animations ».
     progress.value = withTiming(1, {
       duration: ms,
       easing: Easing.linear,
+      reduceMotion: ReduceMotion.Never,
     });
     const timer = setTimeout(() => goTo(index + 1), ms);
     return () => clearTimeout(timer);

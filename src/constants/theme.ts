@@ -91,9 +91,10 @@ function font(name: FontName, fallback: 'serif' | 'sans' | 'hand'): string {
 
 // Literata pour les titres, Atkinson Hyperlegible Next pour la lecture, Caveat pour les annotations du lecteur.
 // Deux tailles de lecture (17 et 13) ; 34 et 24 seulement pour le titre d'écran et le titre de proposition.
+// iOS : sous la hauteur naturelle de Literata (1,49 em), la ligne de base tombe au bas du cadre et les jambages sont rognés.
 export const Type = {
-  screenTitle: { fontFamily: font('Literata-Bold', 'serif'), fontSize: 34, lineHeight: 40, letterSpacing: -0.3 },
-  display: { fontFamily: font('Literata-SemiBold', 'serif'), fontSize: 24, lineHeight: 32, letterSpacing: -0.2 },
+  screenTitle: { fontFamily: font('Literata-Bold', 'serif'), fontSize: 34, lineHeight: Platform.OS === 'ios' ? 51 : 40, letterSpacing: -0.3 },
+  display: { fontFamily: font('Literata-SemiBold', 'serif'), fontSize: 24, lineHeight: Platform.OS === 'ios' ? 36 : 32, letterSpacing: -0.2 },
   body: { fontFamily: font('AtkinsonHyperlegibleNext-Regular', 'sans'), fontSize: 17, lineHeight: 24 },
   bodyStrong: { fontFamily: font('AtkinsonHyperlegibleNext-SemiBold', 'sans'), fontSize: 17, lineHeight: 24 },
   label: { fontFamily: font('AtkinsonHyperlegibleNext-Medium', 'sans'), fontSize: 13, lineHeight: 18 },

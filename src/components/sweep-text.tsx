@@ -65,7 +65,7 @@ function NativeSweep({ children, marker, style, header, selectable, actions, tex
           color={Markers[marker].soft}
         />
       ))}
-      <Text ref={textRef} style={style} accessibilityRole={role} selectable={selectable} onTextLayout={(e) => setLines(e.nativeEvent.lines)} {...actions}>
+      <Text ref={textRef} style={[style, styles.wrap]} accessibilityRole={role} selectable={selectable} onTextLayout={(e) => setLines(e.nativeEvent.lines)} {...actions}>
         {children}
       </Text>
     </View>
@@ -90,5 +90,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderRadius: 2,
     transformOrigin: 'left center',
+  },
+  // Largeur imposée : iOS a laissé le titre de l'onboarding sur une seule ligne, hors de l'écran.
+  wrap: {
+    width: '100%',
   },
 });

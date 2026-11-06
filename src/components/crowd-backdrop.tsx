@@ -136,8 +136,8 @@ export const CrowdBackdrop = memo(function CrowdBackdrop({ quiet = false }: { qu
       style={StyleSheet.absoluteFill}
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants">
-      {/* Les fondus passent par une texture : le grand dessin n'est pas recalculé à chaque image. */}
-      <Animated.View style={[StyleSheet.absoluteFill, levelStyle]} renderToHardwareTextureAndroid shouldRasterizeIOS>
+      {/* Android : fondus en texture. iOS compose déjà l'opacité seul ; rastérisée, la salle y assombrissait le fond. */}
+      <Animated.View style={[StyleSheet.absoluteFill, levelStyle]} renderToHardwareTextureAndroid>
         <Svg width={size.width} height={size.height}>
           {/* La salle s'efface vers le haut : l'en-tête reste net. */}
           <Defs>

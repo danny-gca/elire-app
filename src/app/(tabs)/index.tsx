@@ -51,6 +51,8 @@ const TOTAL = questions.length + lois.length;
 const LEAVE_MS = 320;
 // « A voté ! » reste le temps de corriger d'un geste, puis s'efface (la gomme reste partout ailleurs).
 const LAST_VOTE_MS = 10000;
+// Un compte à rebours n'est pas un mouvement : sans ça, « Réduire les animations » le vide d'un coup (« A voté ! » sans surligneur).
+const COUNTDOWN = ReduceMotion.Never;
 // Après un scrutin, le temps de lire l'hémicycle et le résultat, puis la suite part seule comme pour une proposition.
 const AUTO_NEXT_MS = 5000;
 // Essai : la page du cahier se tourne à chaque vote ; faux, la feuille remonte vers « A voté ! » comme avant.
@@ -833,7 +835,7 @@ function useLoiFlow({
       return;
     }
     remaining.value = 1;
-    remaining.value = withTiming(0, { duration: AUTO_NEXT_MS, easing: Easing.linear });
+    remaining.value = withTiming(0, { duration: AUTO_NEXT_MS, easing: Easing.linear, reduceMotion: COUNTDOWN });
     const timer = setTimeout(() => nextRef.current(), AUTO_NEXT_MS);
     return () => clearTimeout(timer);
   }, [autoNext, remaining]);
@@ -1187,7 +1189,7 @@ function LastVote({ id, paused, hidden = false, onPress }: { id: string; paused:
     if (paused) {
       return;
     }
-    remaining.value = withTiming(0, { duration: LAST_VOTE_MS, easing: Easing.linear });
+    remaining.value = withTiming(0, { duration: LAST_VOTE_MS, easing: Easing.linear, reduceMotion: COUNTDOWN });
     const timer = setTimeout(() => setShown(false), LAST_VOTE_MS);
     return () => clearTimeout(timer);
   }, [paused, remaining]);
