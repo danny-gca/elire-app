@@ -12,11 +12,7 @@
     },
     "programme": {
       "statut": "partiel",
-      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/07/Parti-equinoxe-Tracts.pdf",
-      "annonce": {
-        "date": "2026-11-02",
-        "sourceUrl": "https://parti-equinoxe.fr/presidentielle-2027/"
-      }
+      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle.pdf"
     }
   },
   {
@@ -83,11 +79,7 @@
     "programme": {
       "statut": "complet",
       "url": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "date": "2025-02-18",
-      "annonce": {
-        "date": "2026-11-06",
-        "sourceUrl": "https://melenchon2027.fr/programme/decouvrir/"
-      }
+      "date": "2025-02-18"
     }
   },
   {

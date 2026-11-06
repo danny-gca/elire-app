@@ -24,6 +24,7 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 | `data/enjeux.json` | Questions communes : une `question` neutre (et son `enjeu`) qui réunit des propositions de plusieurs candidats, chacune `pour` ou `contre` ; procédure dans le skill `collecter-donnees` |
 | `data/glossaire.json` | Sigles des textes lus à l'aveugle : `sigle`, `forme` développée, `definition` d'une phrase (affichés dans « En savoir plus ») |
 | `data/candidats.json`, `partis.json`, `thematiques.json` | Référentiels |
+| `data/questions-distinctes.json` | Paires de questions proches relues et gardées, avec leur raison (règle 14) |
 | `data/refs.json` | Numéros stables, géré par le build : ne pas éditer |
 
 ### Règles de sourçage
@@ -46,6 +47,8 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
     - **le mot seul** : un terme métier (nasse, décote, peine plancher) est dit en clair ou ajouté à `data/mots.json` ;
     - **le contexte** donne les modalités absentes du titre, pas seulement la page ;
     - **l'enjeu** d'un scrutin dit ce que le texte change concrètement (chiffres, et ce qu'il ajoute à un texte voisin déjà voté), pas seulement son nom.
+
+    Le build signale aussi les « Précisions » maigres : moins de la moitié de la médiane de leur type (`src/lib/contexte.ts`).14. **Une question une seule fois** : deux questions du paquet (proposition seule, question commune, scrutin) qui se lisent comme la même donnent le sentiment d'y avoir déjà répondu. Le build signale les paires trop proches (`src/lib/doublons.ts`) : on les regroupe dans une question commune, on réécrit l'une pour dire ce qui la distingue, ou on retire la moins utile. Une paire relue et gardée va dans `data/questions-distinctes.json`, avec sa raison.
 
 ### Entrée d'un candidat
 

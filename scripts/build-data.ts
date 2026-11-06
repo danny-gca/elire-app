@@ -5,6 +5,8 @@ import path from 'node:path';
 import Papa from 'papaparse';
 import { z } from 'zod';
 
+import { contexteStats, thinContexte } from '../src/lib/contexte.ts';
+import { closeQuestions } from '../src/lib/doublons.ts';
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
 import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
@@ -34,6 +36,9 @@ const STRICT = process.argv.includes('--strict');
 
 // Élision sans apostrophe : "l énergie", "d achat", "qu il"
 const MISSING_APOSTROPHE = /(?<![\p{L}'’·])(?:[ldnsjmtc]|qu) (?=[aeiouyhàâäéèêëîïôöùûüœ])/iu;
+
+// Deux questions proches relues et gardées : elles ne demandent pas la même chose.
+const DistinctesSchema = z.object({ ids: z.tuple([z.string(), z.string()]), raison: z.string().min(1) });
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -329,6 +334,35 @@ function main() {
     checkAnonymous(texts.join(' '), anonymity, where);
     checkAcronyms(r.titre, [r.aujourdhui, r.enDebat], glossarySigles, usedSigles, where);
     r.liens.forEach((l) => checkPreciseUrl(l.url, `${where} ${l.titre}`));
+  }
+
+  // Une question posée deux fois sous deux formes (CONTRIBUTING, règle 14) : à fusionner, réécrire ou déclarer distincte.
+  const asked = [
+    ...propositions.filter((p) => !p.enjeuId).map((p) => ({ ref: p.ref, id: p.id, text: p.titre })),
+    ...enjeux.map((e) => ({ ref: e.ref, id: e.id, text: e.question })),
+    ...lois.map((l) => ({ ref: l.ref, id: l.id, text: l.question })),
+  ];
+  const refById = new Map(asked.map((q) => [q.id, q.ref]));
+  const distinctes = parseArray(DistinctesSchema, readJson('questions-distinctes.json'), 'questions-distinctes.json').flatMap(({ ids }) => {
+    const pair = ids.map((i) => refById.get(i));
+    ids.filter((i) => !refById.has(i)).forEach((i) => errors.push(`questions-distinctes.json : question inconnue ou dans un enjeu "${i}"`));
+    return pair[0] && pair[1] ? [[pair[0], pair[1]] as [string, string]] : [];
+  });
+  const byRef = new Map(asked.map((q) => [q.ref, q]));
+  for (const { a, b, score } of closeQuestions(asked, distinctes)) {
+    const [qa, qb] = [byRef.get(a)!, byRef.get(b)!];
+    warnings.push(`questions proches (${score.toFixed(2)}) ${a} ${qa.id} « ${qa.text} » / ${b} ${qb.id} « ${qb.text} »`);
+  }
+
+  // Carnet de contexte : des « Précisions » maigres face aux autres questions du même type.
+  const repereOf = new Map(reperes.flatMap((r) => [...r.propositions, ...r.lois, ...r.enjeux].map((id) => [id, `${r.aujourdhui} ${r.enDebat}`])));
+  const contexte = contexteStats([
+    ...propositions.filter((p) => !p.enjeuId).map((p) => ({ ref: p.id, kind: 'P' as const, precisions: p.contexte, repere: repereOf.get(p.id) })),
+    ...enjeux.map((e) => ({ ref: e.id, kind: 'E' as const, precisions: e.enjeu, repere: repereOf.get(e.id) })),
+    ...lois.map((l) => ({ ref: l.id, kind: 'L' as const, precisions: l.enjeu, repere: repereOf.get(l.id) })),
+  ]);
+  for (const s of thinContexte(contexte)) {
+    warnings.push(`${refById.get(s.ref)} ${s.ref} : précisions maigres (${s.precisions} caractères utiles, ${s.part} % de la médiane), ajouter les modalités tirées de la source`);
   }
 
   // Mots : définis une fois, employés quelque part dans les textes lus à l'aveugle.
