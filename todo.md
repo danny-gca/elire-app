@@ -13,6 +13,7 @@ Les dates annoncées sont aussi dans `data/candidats.json` (`programme.annonce`)
 - Fin 2026 : déclaration formelle annoncée par Xavier Bertrand (« à la fin de l'année ») ; décision de Jean Lassalle annoncée « à l'automne ».
 - 2027-02-07 au plus tard : décret de convocation, puis ouverture des parrainages ; clôture le 2027-03-12 à 18 h ([Toute l'Europe](https://www.touteleurope.eu/vie-politique-des-etats-membres/presidentielle-2027-calendrier-dates-inscription-candidats-vote/)).
 - Avant le premier tour : arrêt de la Cour de cassation sur le pourvoi de Marine Le Pen (éligible depuis l'arrêt d'appel du 2026-07-07).
+- 2027-05-05 : relire les 75 repères (`data/reperes.json`), 180 jours après leur écriture ; le build le rappelle.
 - 2027-03-16 (au plus tard le 26) : liste officielle du Conseil constitutionnel. Passer chaque candidat retenu en statut officiel, retirer les autres. Premier tour le 2027-04-18, second le 2027-05-02.
 - Les autres : dès la publication de leur programme 2027, mettre à jour de la même façon (propositions ajoutées ou remplacées, sources revérifiées, `contexte` daté).
 
@@ -34,6 +35,7 @@ Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
 - prop-nda-3 : préciser « faute de vaccin Covid » dans le titre ? Seule sa proposition de loi n° 26 de 2022 le dit, pas la page du programme.
 - Thème de l'immigration à harmoniser : prop-ep-8 et prop-sl-4 en société, prop-nda-1 en sécurité.
 - Questions proches et contexte maigre signalés par le build : arbitrages dans `docs/feature-20261106-doublons-contexte.md`.
+- Repères sensibles à relire (immigration, priorité nationale, laïcité, IVG et PMA, justice des mineurs, défense, Ukraine) et chiffres de projets de budget à confirmer : section 5 du même document.
 
 ## Choix à trancher
 

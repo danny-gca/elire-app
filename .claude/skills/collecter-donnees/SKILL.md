@@ -62,6 +62,14 @@ Une question neutre qui réunit des propositions de plusieurs candidats (`data/e
 4. Écrire l'objet : `id` (kebab-case), `thematiqueId` (celui de toutes ses propositions), `question` (130 caractères au plus, anonyme, formulée comme le changement que propose le plus de candidats), `enjeu` (ce que tranche la question, 220 caractères au plus, sans chiffre propre à un candidat), `positions` : `{ "propositionId": "prop-…", "sens": "pour" | "contre" }`, au moins 2 candidats différents, une position par candidat.
 5. Une proposition n'est que dans un enjeu ; les numéros `E-xx` sont attribués par le build.
 
+## Ajouter ou compléter un repère
+
+Toute question posée (proposition seule, question commune, scrutin) doit avoir un repère (`data/reperes.json`, onglet « Contexte » ; CONTRIBUTING, règle 15). Une nouvelle question rejoint le repère de son sujet ; sinon, on crée le repère.
+
+- `titre` (60 caractères au plus), `aujourdhui` (faits datés et chiffrés, 300 au plus), `enDebat` (options sans nom, symétriques, 300 au plus), `aJour`, 1 à 3 `liens` neutres (vie-publique.fr, service-public.gouv.fr, Wikipédia, INSEE, sites officiels) qui contiennent chaque fait de `aujourdhui`.
+- Ni l'auteur d'une proposition ni le résultat d'un scrutin du sujet ; un lien qui les donne porte `"aveugle": false`, et il en reste au moins un sans.
+- Chaque fait est lu dans sa source avant d'être écrit.
+
 ## Terminer
 
 1. `npm run build:data:strict`, puis `npm run check`.

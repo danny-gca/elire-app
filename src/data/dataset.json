@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-06T15:43:41.931Z",
+    "generatedAt": "2026-11-06T16:31:32.445Z",
     "partisCount": 25,
     "candidatsCount": 25,
     "thematiquesCount": 12,
@@ -8399,9 +8399,14 @@
         }
       ],
       "propositions": [
-        "prop-ep-1"
+        "prop-ep-1",
+        "prop-jlm-3"
       ],
-      "lois": [],
+      "lois": [
+        "loi-retraites-2023",
+        "plfss-2026",
+        "abattement-pensions-retraite-2027"
+      ],
       "enjeux": [
         "reculer-retraite"
       ]
@@ -8410,9 +8415,9 @@
       "id": "normes-europeennes-importations",
       "thematiqueId": "agriculture",
       "titre": "Les normes européennes et les importations",
-      "aujourdhui": "Une directive européenne fixe un objectif ; chaque pays l'écrit ensuite dans sa loi (la transposition), parfois avec des règles plus strictes. Les produits importés respectent les normes sanitaires européennes, mais pas toujours les règles de production imposées aux agriculteurs européens.",
+      "aujourdhui": "Une directive européenne fixe un objectif ; chaque pays l'écrit dans sa loi (la transposition), parfois en plus strict : depuis 2017, ce choix doit être validé par le Premier ministre. Les produits importés respectent les normes sanitaires européennes, pas toujours les règles de production.",
       "enDebat": "Les uns veulent s'en tenir au minimum européen et imposer les mêmes règles aux produits importés. Les autres rappellent que ces règles protègent la santé et l'environnement, et que leur respect hors d'Europe est difficile à contrôler.",
-      "aJour": "2026-10-28",
+      "aJour": "2026-11-06",
       "liens": [
         {
           "titre": "Surtransposition",
@@ -8423,7 +8428,2448 @@
         }
       ],
       "propositions": [
-        "prop-dl-8"
+        "prop-dl-8",
+        "prop-kb-7"
+      ],
+      "lois": [],
+      "enjeux": [
+        "normes-agricoles"
+      ]
+    },
+    {
+      "id": "accords-libre-echange",
+      "thematiqueId": "international",
+      "titre": "Les accords de libre-échange",
+      "aujourdhui": "Le commerce avec le reste du monde relève de l'Union européenne seule : la Commission négocie les accords pour les 27 pays. L'accord avec le Canada (CETA), signé en 2016, s'applique à titre provisoire depuis le 21 septembre 2017, pour plus de 90 % de ses règles.",
+      "enDebat": "Les uns veulent sortir de ces accords, ou en retirer l'agriculture, et refuser les produits faits selon des pratiques interdites en France. Les autres y voient des ventes en plus pour les entreprises françaises et des prix plus bas, et misent sur des règles à négocier dans chaque accord.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La politique commerciale commune",
+          "url": "https://fr.wikipedia.org/wiki/Politique_commerciale_commune",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'accord économique et commercial global avec le Canada",
+          "url": "https://fr.wikipedia.org/wiki/Accord_%C3%A9conomique_et_commercial_global",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-fa-6",
+        "prop-mlp-3",
+        "prop-mm-5"
+      ],
+      "lois": [
+        "ratification-ceta-an-2019"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "origine-des-aliments",
+      "thematiqueId": "agriculture",
+      "titre": "L'origine des aliments",
+      "aujourdhui": "L'étiquette doit donner l'origine des viandes préemballées, fruits et légumes, poissons, miel, huile d'olive, œufs et vin. Depuis 2020, un produit qui affiche une origine doit dire si ses ingrédients principaux viennent d'ailleurs. Depuis février 2025, les restaurants affichent celle des viandes.",
+      "enDebat": "Les uns veulent connaître l'origine de tous les aliments, même transformés, et réserver aux producteurs français une grande part des repas des cantines. Les autres craignent des coûts en plus pour les fabricants et les communes, et invoquent les règles européennes de libre concurrence.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Origine des produits alimentaires : comment éviter les pièges",
+          "url": "https://www.inc-conso.fr/content/origine-des-produits-alimentaires-comment-eviter-les-pieges-avec-la-dgccrf",
+          "editeur": "Institut national de la consommation",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Obligation d'afficher l'origine des viandes au restaurant",
+          "url": "https://www.service-public.gouv.fr/particuliers/actualites/A18108",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-nda-4"
+      ],
+      "lois": [
+        "etiquetage-origine-aliments-2025"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "revenu-agricole",
+      "thematiqueId": "agriculture",
+      "titre": "Le revenu des agriculteurs",
+      "aujourdhui": "Depuis 2018, le prix payé aux agriculteurs part de leurs coûts de production et des prix du marché. Depuis 2021, la part des matières agricoles n'est plus négociable entre industriels et supermarchés. En 2020, 17,7 % des exploitants étaient sous le seuil de pauvreté, contre 14,4 % des Français.",
+      "enDebat": "Les uns veulent des prix minimums fixés par l'État, des marges encadrées et moins d'importations, pour garantir un revenu. Les autres craignent des prix plus chers en magasin et des ventes perdues à l'étranger, et préfèrent renforcer les contrats entre agriculteurs et acheteurs.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La loi pour l'équilibre des relations commerciales agricoles (EGALIM)",
+          "url": "https://fr.wikipedia.org/wiki/Loi_EGalim",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les exploitants agricoles et le seuil de pauvreté",
+          "url": "https://insee.fr/fr/statistiques/8376591",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La loi de 2021 sur la rémunération des agriculteurs : le compromis",
+          "url": "https://www.publicsenat.fr/actualites/politique/egalim-2-senateurs-et-deputes-aboutissent-a-un-compromis-190681",
+          "editeur": "Public Sénat",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fro-4",
+        "prop-fr-4",
+        "prop-jl-1",
+        "prop-jlm-4",
+        "prop-rg-7"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "politique-agricole-commune",
+      "thematiqueId": "agriculture",
+      "titre": "La politique agricole commune",
+      "aujourdhui": "Créée en 1962, la politique agricole commune pèse un tiers du budget européen : 387 milliards d'euros jusqu'en 2027. La France en reçoit le plus. Les aides sont surtout versées à l'hectare ; depuis 2023, au moins 20 % des aides directes paient des pratiques bonnes pour l'environnement.",
+      "enDebat": "Les uns veulent réserver ces aides au bio, à l'agroécologie et aux fermes qui emploient le plus, sous conditions écologiques et sociales. Les autres craignent de fragiliser les exploitations qui en dépendent, et veulent garder des aides simples, liées aux surfaces cultivées.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La politique agricole commune",
+          "url": "https://fr.wikipedia.org/wiki/Politique_agricole_commune",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La réforme de la politique agricole commune : les principales mesures",
+          "url": "https://www.publicsenat.fr/actualites/politique/la-reforme-de-la-pac-adoptee-par-le-parlement-europeen-les-principales-mesures",
+          "editeur": "Public Sénat",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-am-4",
+        "prop-db-7",
+        "prop-mt-3"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "pesticides",
+      "thematiqueId": "agriculture",
+      "titre": "Les pesticides",
+      "aujourdhui": "Une loi de 2016 a interdit les néonicotinoïdes, des insecticides, à partir de septembre 2018, avec des dérogations pour la betterave jusqu'en 2023. Le plan pour réduire de moitié l'usage des pesticides entre 2008 et 2018 a été reporté à 2025, puis 2030 ; en 2023, cet usage restait au niveau de 2009.",
+      "enDebat": "Les uns veulent interdire tous les pesticides liés au cancer et ne plus accorder de dérogation, pour la santé et la nature. Les autres veulent permettre certains produits quand il n'existe pas d'autre solution, pour ne pas perdre des récoltes face aux concurrents étrangers.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le plan Écophyto",
+          "url": "https://fr.wikipedia.org/wiki/Plan_%C3%89cophyto",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les néonicotinoïdes",
+          "url": "https://fr.wikipedia.org/wiki/N%C3%A9onicotino%C3%AFde",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-db-8"
+      ],
+      "lois": [
+        "loi-contraintes-agriculteurs-2025"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "elevage-peche",
+      "thematiqueId": "agriculture",
+      "titre": "L'élevage et la pêche",
+      "aujourdhui": "En 2024, chaque habitant a consommé en moyenne 85 kilos de viande (en poids de carcasse), un peu plus qu'en 2023. En 2023, la France hexagonale comptait 4 240 navires de pêche, dont 3 411 de moins de 12 mètres. Les quantités à pêcher par espèce sont fixées au niveau européen.",
+      "enDebat": "Les uns veulent sortir de l'élevage intensif, réduire de moitié la viande produite et mangée, et réserver la pêche aux petits bateaux, pour les animaux et la planète. Les autres craignent pour les emplois des éleveurs et des pêcheurs et pour les prix, et préfèrent changer les pratiques peu à peu.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La consommation de viande en France en 2024",
+          "url": "https://www.franceagrimer.fr/sites/default/files/2025-07/SYN-VIA-Conso%20viande%20Fce2024_0.pdf",
+          "editeur": "Agreste",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Fiche filière pêche et aquaculture 2026",
+          "url": "https://www.franceagrimer.fr/sites/default/files/2026-02/35_FICHE_FILIERE_PECHE_AQUA_2026.pdf",
+          "editeur": "FranceAgriMer",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La politique commune de la pêche",
+          "url": "https://fr.wikipedia.org/wiki/Politique_commune_de_la_p%C3%AAche",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-mm-2",
+        "prop-mm-6",
+        "prop-mm-8"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "statut-agriculture",
+      "thematiqueId": "agriculture",
+      "titre": "La place de l'agriculture dans la loi",
+      "aujourdhui": "En 2020, 496 365 personnes dirigeaient une exploitation agricole en métropole, 18 % de moins qu'en 2010 ; la moitié des exploitations a un exploitant de 55 ans ou plus. Depuis 2005, la Charte de l'environnement, de valeur constitutionnelle, impose le principe de précaution face aux risques graves.",
+      "enDebat": "Les uns veulent donner à l'agriculture une place plus haute dans le droit, pour que les juges en tiennent compte face aux règles environnementales et pour aider les jeunes à s'installer. Les autres craignent un recul de la protection de l'eau, des sols et de la santé, et un droit moins clair.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les exploitants agricoles",
+          "url": "https://www.insee.fr/fr/statistiques/7728869",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La Charte de l'environnement",
+          "url": "https://fr.wikipedia.org/wiki/Charte_de_l%27environnement",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-br-8"
+      ],
+      "lois": [
+        "loi-orientation-agricole-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "smic-salaires",
+      "thematiqueId": "travail",
+      "titre": "Le SMIC et les salaires",
+      "aujourdhui": "Le SMIC existe depuis 1970. Depuis le 1er juin 2026, il vaut 12,31 euros brut de l'heure, soit 1 867,02 euros brut par mois à temps plein (environ 1 478 euros net). Il est relevé chaque 1er janvier, et en cours d'année dès que les prix montent d'au moins 2 %.",
+      "enDebat": "Les uns veulent une forte hausse du SMIC et des salaires, suivant les prix, et limiter les écarts de paie dans une entreprise, pour mieux vivre de son travail. Les autres craignent pour l'emploi et les petites entreprises, et préfèrent baisser les cotisations pour augmenter le salaire net.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Montant du SMIC",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2300",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le salaire minimum interprofessionnel de croissance",
+          "url": "https://fr.wikipedia.org/wiki/Salaire_minimum_interprofessionnel_de_croissance",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-ak-1",
+        "prop-sl-1",
+        "prop-fro-1",
+        "prop-na-1",
+        "prop-fr-1"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "impots-patrimoine",
+      "thematiqueId": "economie",
+      "titre": "Les impôts sur le patrimoine",
+      "aujourdhui": "Depuis 2018, l'impôt sur la fortune immobilière a remplacé l'ISF : il ne porte que sur l'immobilier, au-delà de 1,3 million d'euros net par foyer. En 2022, près de 164 000 foyers l'ont payé, pour 2,1 milliards d'euros ; l'ISF avait rapporté environ 5 milliards en 2017.",
+      "enDebat": "Les uns veulent taxer à nouveau chaque année tout le patrimoine des plus riches, en France ou à l'échelle de l'Europe, au nom de la justice. Les autres craignent le départ des fortunes et des investissements, et estiment que ces fortunes sont surtout faites d'entreprises.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Impôt sur la fortune immobilière",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F563",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'impôt sur la fortune immobilière",
+          "url": "https://fr.wikipedia.org/wiki/Imp%C3%B4t_sur_la_fortune_immobili%C3%A8re",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-rg-2"
+      ],
+      "lois": [
+        "rejet-recettes-plf-2025"
+      ],
+      "enjeux": [
+        "impot-fortune"
+      ]
+    },
+    {
+      "id": "impots-entreprises",
+      "thematiqueId": "economie",
+      "titre": "Les impôts des entreprises",
+      "aujourdhui": "Depuis 2022, l'impôt sur les bénéfices des sociétés est de 25 % (15 % sur les premiers 42 500 euros des PME). Le budget 2025 y a ajouté une surtaxe pour les plus grandes, prolongée en 2026. Depuis avril 2025, acheter des actions de grandes sociétés françaises est taxé à 0,4 %.",
+      "enDebat": "Les uns veulent baisser les impôts payés même sans bénéfice, comme ceux sur la production, pour garder des usines et des emplois en France. Les autres veulent faire payer plus les grandes entreprises et les échanges financiers, pour financer l'écologie et freiner la spéculation.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'impôt sur les sociétés en France",
+          "url": "https://fr.wikipedia.org/wiki/Imp%C3%B4t_sur_les_soci%C3%A9t%C3%A9s_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Hausse de la taxe sur les transactions financières au 1er avril 2025",
+          "url": "https://www.legifiscal.fr/actualites-fiscales/4078-hausse-taxe-transactions-financieres-1ier-avril-2025.html",
+          "editeur": "Legifiscal",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ez-3",
+        "prop-am-7"
+      ],
+      "lois": [
+        "surtaxe-grandes-entreprises-2027"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "aides-publiques-entreprises",
+      "thematiqueId": "economie",
+      "titre": "Les aides publiques aux entreprises",
+      "aujourdhui": "Selon une commission d'enquête du Sénat (juillet 2025), les aides publiques aux entreprises ont atteint au moins 211 milliards d'euros en 2023, dont 75 milliards de baisses de cotisations sociales. Depuis 2026, la baisse générale des cotisations patronales vaut pour les salaires jusqu'à 3 SMIC.",
+      "enDebat": "Les uns veulent lier toutes les aides à des critères sociaux et revoir les baisses de cotisations centrées sur le SMIC, qu'ils accusent de freiner les salaires. Les autres y voient un soutien à l'emploi peu qualifié et à la compétitivité, et craignent qu'une réforme coûte des emplois.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Rapport de la commission d'enquête sur les aides publiques aux entreprises",
+          "url": "https://www.senat.fr/rap/r24-808-1/r24-808-1.html",
+          "editeur": "Sénat",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "211 milliards d'euros d'aides aux entreprises : sur quoi repose le calcul",
+          "url": "https://www.publicsenat.fr/actualites/economie/211-milliards-deuros-daides-publiques-aux-entreprises-sur-quoi-repose-le-calcul-de-la-commission-denquete-du-senat",
+          "editeur": "Public Sénat",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ga-7",
+        "prop-rg-4"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "depenses-dette",
+      "thematiqueId": "economie",
+      "titre": "La dépense publique et la dette",
+      "aujourdhui": "Fin juin 2026, la dette publique atteint 3 595,5 milliards d'euros, soit 119 % de la richesse produite en un an dans le pays. En 2025, les dépenses publiques ont représenté 57,2 % de cette richesse, et le déficit 152,5 milliards d'euros, soit 5,1 %.",
+      "enDebat": "Les uns veulent baisser fortement la dépense, supprimer des agences et des doublons, et freiner certaines prestations, pour réduire la dette. Les autres craignent pour les services publics et les plus modestes, et préfèrent de nouvelles recettes ou un effort plus lent.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La dette publique à la fin du deuxième trimestre 2026",
+          "url": "https://www.insee.fr/fr/statistiques/9053525",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les comptes des administrations publiques en 2025",
+          "url": "https://www.insee.fr/fr/statistiques/8956575",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-dl-2",
+        "prop-kb-8"
+      ],
+      "lois": [
+        "confiance-gouvernement-2025"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "etat-actionnaire",
+      "thematiqueId": "economie",
+      "titre": "L'État dans les entreprises",
+      "aujourdhui": "Depuis 2004, une agence de l'État gère ses parts dans 83 entreprises, dont 12 cotées en Bourse, d'une valeur estimée à 179,5 milliards d'euros au 30 juin 2024. Les privatisations ont commencé en 1986. L'État détient de nouveau tout le capital d'EDF depuis juin 2023.",
+      "enDebat": "Les uns veulent que l'État possède davantage d'entreprises, pour garder en France des usines et des services essentiels. Les autres préfèrent qu'il agisse par les règles, les aides ou les achats publics, et jugent ces rachats trop coûteux pour les finances publiques.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'Agence des participations de l'État",
+          "url": "https://fr.wikipedia.org/wiki/Agence_des_participations_de_l%27%C3%89tat",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'État actionnaire : entre nationalisations et privatisations",
+          "url": "https://www.lafinancepourtous.com/decryptages/politiques-economiques/economie-francaise/comptes-publics/le-budget-de-letat/letat-actionnaire-entre-nationalisations-et-privatisations/",
+          "editeur": "La finance pour tous",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-fa-4",
+        "prop-sl-7",
+        "prop-np-1"
+      ],
+      "lois": [
+        "nationalisation-arcelormittal-2026"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "prix-energie-carburants",
+      "thematiqueId": "economie",
+      "titre": "Le prix de l'énergie et des carburants",
+      "aujourdhui": "Au 30 octobre 2026, les taxes font 42,3 % du prix du gazole et 48,7 % du sans-plomb 95 : l'accise, fixe par litre (60,8 centimes pour le gazole), et la TVA à 20 %. Lors de la flambée de 2022, l'État a gelé le prix réglementé du gaz et limité à 4 % la hausse de celui de l'électricité.",
+      "enDebat": "Les uns veulent baisser les taxes ou bloquer les prix de l'énergie, et ne pas taxer les voitures électriques, pour protéger le pouvoir d'achat. Les autres mettent en avant le coût pour les finances publiques et préfèrent des aides ciblées et des taxes qui poussent à consommer moins de pétrole.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Comment se forment les prix de l'essence et du gazole en France",
+          "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/structuration-des-prix-de-lessence-et-du-gazole-en-france",
+          "editeur": "Connaissance des Énergies",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le bouclier tarifaire sur le gaz et l'électricité",
+          "url": "https://www.connaissancedesenergies.org/energie/france/crise/bouclier-tarifaire",
+          "editeur": "Connaissance des Énergies",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-jlm-2",
+        "prop-xb-4"
+      ],
+      "lois": [],
+      "enjeux": [
+        "taxes-carburants"
+      ]
+    },
+    {
+      "id": "temps-de-travail",
+      "thematiqueId": "travail",
+      "titre": "Le temps de travail",
+      "aujourdhui": "La durée légale du travail est de 35 heures par semaine dans toutes les entreprises depuis 2002, soit 1 607 heures par an ; au-delà, ce sont des heures supplémentaires. En 2025, les salariés à temps complet travaillaient en moyenne 38,9 heures par semaine.",
+      "enDebat": "Les uns veulent réduire le temps de travail sans baisse de salaire, pour partager l'emploi et mieux vivre. D'autres proposent les mêmes heures sur quatre jours. D'autres encore veulent laisser chaque entreprise fixer ses horaires, et jugent qu'il faut travailler plus pour produire plus.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Durée du travail d'un salarié à temps plein",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1911",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Durée du travail en 2025",
+          "url": "https://www.insee.fr/fr/statistiques/8733071",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La réforme des 35 heures en France",
+          "url": "https://fr.wikipedia.org/wiki/R%C3%A9forme_des_35_heures_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-na-2",
+        "prop-sl-2",
+        "prop-ga-2",
+        "prop-ep-4"
+      ],
+      "lois": [],
+      "enjeux": [
+        "temps-de-travail"
+      ]
+    },
+    {
+      "id": "contrat-licenciement",
+      "thematiqueId": "travail",
+      "titre": "Le contrat de travail et le licenciement",
+      "aujourdhui": "En 2025, 72,8 % des personnes en emploi sont en CDI ou fonctionnaires, 7,6 % en contrat à durée déterminée et 1,8 % en intérim. Un licenciement doit reposer sur une cause réelle et sérieuse ; sinon, le salarié peut saisir le conseil de prud'hommes, qui peut sanctionner l'employeur.",
+      "enDebat": "Les uns veulent mieux protéger les salariés, par un contrat qui suit la personne toute sa vie ou un salaire garanti après une perte d'emploi. Les autres veulent des règles plus souples et des coûts de licenciement prévisibles, pour que les employeurs osent embaucher.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Statuts d'emploi en 2025",
+          "url": "https://www.insee.fr/fr/statistiques/8733045",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Motifs du licenciement personnel d'un salarié du privé",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2835",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ob-2",
+        "prop-mt-4"
+      ],
+      "lois": [
+        "ordonnances-travail-2017"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "conditions-de-travail",
+      "thematiqueId": "travail",
+      "titre": "Les conditions de travail",
+      "aujourdhui": "En 2025, 4,3 millions de salariés (17,6 %) sont à temps partiel ; 21,3 % d'entre eux n'ont pas trouvé de temps complet. Face à un danger grave et imminent, un salarié peut arrêter le travail : c'est le droit de retrait. Depuis 2025, en vigilance canicule, l'employeur doit adapter horaires et pauses.",
+      "enDebat": "Les uns veulent de nouveaux droits fixés par la loi : un statut pour les métiers essentiels, la fin du temps partiel subi, le droit d'arrêter le travail par forte chaleur. Les autres préfèrent des règles négociées secteur par secteur, et craignent des coûts trop lourds pour les employeurs.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le temps partiel en 2025",
+          "url": "https://www.insee.fr/fr/statistiques/8733075",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Un salarié peut-il refuser de travailler face à un danger ?",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1136",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Fortes chaleurs : obligations de l'entreprise",
+          "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F39752",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fr-2",
+        "prop-kb-5"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "rsa",
+      "thematiqueId": "travail",
+      "titre": "Le RSA",
+      "aujourdhui": "Le RSA existe depuis juin 2009 pour les personnes de 25 ans et plus aux faibles ressources ; il est surtout financé par les départements. En 2026, il est de 651,69 euros par mois pour une personne seule. Fin décembre 2025, 1,84 million de foyers le touchaient.",
+      "enDebat": "Les uns veulent demander aux allocataires des heures d'activité chaque semaine, pour les rapprocher de l'emploi et lier l'aide à un effort. Les autres craignent du travail sans vrai salaire et des coupures d'aide, et préfèrent un meilleur accompagnement et une aide plus haute.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Suivi mensuel des prestations de solidarité, février 2026",
+          "url": "https://drees.solidarites-sante.gouv.fr/communique-de-presse-jeux-de-donnees/jeux-de-donnees/260227-suivi-mensuel-prestations-de-solidarite",
+          "editeur": "Ministère des Solidarités",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le revenu de solidarité active",
+          "url": "https://fr.wikipedia.org/wiki/Revenu_de_solidarit%C3%A9_active",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "RSA : demandeur de 25 ans et plus",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19778",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "loi-plein-emploi-france-travail-2023"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "metier-enseignant",
+      "thematiqueId": "education",
+      "titre": "Le métier d'enseignant",
+      "aujourdhui": "En 2024, un enseignant titulaire de l'Éducation nationale gagne en moyenne 3 090 euros nets par mois, primes comprises, 6,4 % de plus qu'en 2023. Les titulaires sont recrutés par concours ; les contractuels, embauchés sans concours, font 8 % des enseignants.",
+      "enDebat": "Les uns veulent d'abord hausser les salaires et donner à l'école des moyens stables sur dix ans, pour attirer des candidats. Les autres veulent laisser chaque chef d'établissement choisir ses professeurs pour former des équipes, et lier les hausses de salaire à plus de missions.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le salaire des enseignants en 2024",
+          "url": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-36pdf-519727.pdf",
+          "editeur": "Ministère de l'Éducation nationale",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Professeur des écoles",
+          "url": "https://fr.wikipedia.org/wiki/Professeur_des_%C3%A9coles",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-br-7",
+        "prop-np-3",
+        "prop-np-4"
+      ],
+      "lois": [],
+      "enjeux": [
+        "recrutement-enseignants"
+      ]
+    },
+    {
+      "id": "uniforme-autorite",
+      "thematiqueId": "education",
+      "titre": "L'uniforme à l'école",
+      "aujourdhui": "Depuis 1968, l'école publique en métropole ne peut plus imposer l'uniforme, sauf exceptions ; il est obligatoire en Martinique, en Guadeloupe et en Guyane. Une tenue unique a été testée de 2024 à 2026 dans 97 écoles, 14 collèges et 4 lycées volontaires ; l'État y a mis fin en 2026.",
+      "enDebat": "Les uns veulent l'imposer, ou laisser chaque chef d'établissement le faire, pour effacer les écarts de marques et renforcer l'autorité de l'école. Les autres doutent de ses effets sur le climat et les résultats, pointent son coût, et préfèrent laisser les familles habiller leurs enfants.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'Éducation nationale range l'uniforme au placard",
+          "url": "https://www.banquedesterritoires.fr/leducation-nationale-range-luniforme-au-placard",
+          "editeur": "Banque des Territoires",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'uniforme scolaire",
+          "url": "https://fr.wikipedia.org/wiki/Uniforme_scolaire",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-ep-3"
+      ],
+      "lois": [],
+      "enjeux": [
+        "uniforme-ecole"
+      ]
+    },
+    {
+      "id": "apprentissages-ecole",
+      "thematiqueId": "education",
+      "titre": "Ce qu'on apprend à l'école",
+      "aujourdhui": "À l'école élémentaire, les élèves ont 24 heures de cours par semaine, soit 864 heures par an. Depuis un arrêté de 2015, dans les trois premières années, 10 heures vont au français et 5 aux mathématiques ; dans les deux dernières, 8 heures au français et 5 aux mathématiques.",
+      "enDebat": "Les uns veulent recentrer l'école sur le français et le calcul, avec plus d'heures et des examens. Les autres veulent d'abord des classes plus petites ou des horaires adaptés au rythme des enfants. Le débat porte aussi sur l'âge à partir duquel l'instruction est obligatoire.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Enseignement et apprentissage au niveau primaire en France",
+          "url": "https://eurydice.eacea.ec.europa.eu/fr/eurypedia/france/enseignement-et-apprentissage-au-niveau-primaire",
+          "editeur": "Eurydice, Commission européenne",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'école élémentaire en France",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89cole_%C3%A9l%C3%A9mentaire_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-fp-5",
+        "prop-nda-8",
+        "prop-fr-6",
+        "prop-am-9"
+      ],
+      "lois": [
+        "ecole-de-la-confiance-2019"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "etudiants",
+      "thematiqueId": "education",
+      "titre": "Les études supérieures",
+      "aujourdhui": "À la rentrée 2024, la France a dépassé pour la première fois 3 millions d'étudiants. Depuis 2018, l'entrée dans le supérieur passe par la plateforme Parcoursup : 1 046 000 candidats en 2026. En 2026-2027, la bourse sur critères sociaux va de 1 454 à 6 335 euros par an.",
+      "enDebat": "Les uns veulent aider tous les étudiants sans condition, par un revenu ou des repas à bas prix, et ouvrir les études sans sélection. Les autres préfèrent cibler les plus modestes et garder une sélection selon les places. Le débat porte aussi sur l'antisémitisme et le racisme à l'université.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Prévisions des effectifs dans l'enseignement supérieur, 2025 et 2026",
+          "url": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-10/nf-sies-2025-25-38057.pdf",
+          "editeur": "Ministère de l'Enseignement supérieur",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Étudiant : bourse sur critères sociaux",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12214",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Parcoursup",
+          "url": "https://fr.wikipedia.org/wiki/Parcoursup",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-sl-6",
+        "prop-ak-3"
+      ],
+      "lois": [
+        "repas-etudiant-1-euro-2023",
+        "antisemitisme-enseignement-superieur-2025"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "culture-audiovisuel",
+      "thematiqueId": "societe",
+      "titre": "La culture et l'audiovisuel public",
+      "aujourdhui": "Le projet de budget 2026 prévoyait 3,75 milliards d'euros pour la culture, 4,3 % de moins qu'en 2025. Depuis 2022, la redevance télé est supprimée : l'audiovisuel public est financé par une part de la TVA. Le pass Culture donne 150 euros aux jeunes de 18 ans.",
+      "enDebat": "Les uns veulent hausser le budget de la culture pour l'ouvrir à tous, les autres le contenir face au déficit. Pour l'audiovisuel public, les uns veulent réunir télé et radio sous une même direction face aux plateformes, les autres craignent pour l'indépendance et la diversité des chaînes.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Rapport du Sénat sur les crédits de la culture pour 2026",
+          "url": "https://www.senat.fr/rap/l25-139-37/l25-139-37_mono.html",
+          "editeur": "Sénat",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La contribution à l'audiovisuel public",
+          "url": "https://fr.wikipedia.org/wiki/Contribution_%C3%A0_l%27audiovisuel_public",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-xb-6",
+        "prop-xb-5"
+      ],
+      "lois": [
+        "holding-audiovisuel-public-2025"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "service-national",
+      "thematiqueId": "education",
+      "titre": "Le service national et la réserve",
+      "aujourdhui": "Le service militaire obligatoire est suspendu depuis 1996 ; le service national universel a été supprimé le 1er janvier 2026. Un service militaire volontaire de 10 mois débute à l'automne 2026 avec environ 3 000 jeunes, 10 000 visés en 2030. En 2025, les armées comptaient 44 400 réservistes.",
+      "enDebat": "Les uns veulent un service pour tous les jeunes, militaire ou civil, ou beaucoup plus de réservistes, pour renforcer la défense et brasser la société. Les autres jugent cela coûteux et difficile à encadrer, et préfèrent un engagement volontaire limité aux besoins réels des armées.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Service national : un engagement militaire de dix mois pour les jeunes",
+          "url": "https://www.cidj.com/s-engager/s-engager-pour-une-cause/service-national-un-engagement-militaire-de-dix-mois-pour-les-jeunes",
+          "editeur": "Centre d'information jeunesse",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Dossier de presse du service national",
+          "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Dossier%20de%20presse_Service%20national.pdf",
+          "editeur": "Ministère des Armées",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-jl-5",
+        "prop-ep-6"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "condition-animale",
+      "thematiqueId": "societe",
+      "titre": "La condition animale",
+      "aujourdhui": "Depuis 2015, le Code civil dit que les animaux sont des « êtres vivants doués de sensibilité », mais ils restent soumis au régime des biens. La corrida est permise là où une tradition locale ininterrompue existe. En 2023, la France comptait 963 571 permis de chasse validés.",
+      "enDebat": "Les uns veulent mieux protéger les animaux : un ministère dédié, des cours à l'école, la fin de la chasse et de la corrida. Les autres y voient des traditions locales, mettent en avant le rôle de la chasse pour réguler la faune et jugent les règles actuelles suffisantes.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'animal domestique en droit français",
+          "url": "https://fr.wikipedia.org/wiki/Animal_domestique_en_droit_fran%C3%A7ais",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La corrida",
+          "url": "https://fr.wikipedia.org/wiki/Corrida",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La chasse en France",
+          "url": "https://fr.wikipedia.org/wiki/Chasse_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-mm-7",
+        "prop-mm-1",
+        "prop-mm-3"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "nucleaire",
+      "thematiqueId": "environnement",
+      "titre": "Le nucléaire",
+      "aujourdhui": "La France compte 57 réacteurs nucléaires dans 18 centrales ; ils ont fourni 68,1 % de son électricité en 2025. Six réacteurs EPR2 sont prévus à Penly, Gravelines et Bugey, le premier pour 2035 à 2037. En 2025, la Cour des comptes estimait leur coût entre 67 et 80 milliards d'euros.",
+      "enDebat": "Les uns veulent de nouveaux réacteurs pour une électricité stable, qui émet peu de CO2 et ne dépend pas du gaz importé. Les autres pointent le coût, les retards des chantiers et les déchets, et préfèrent miser davantage sur l'éolien et le solaire.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Liste des réacteurs nucléaires en France",
+          "url": "https://fr.wikipedia.org/wiki/Liste_des_r%C3%A9acteurs_nucl%C3%A9aires_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Bilan électrique 2025 : la production d'électricité",
+          "url": "https://analysesetdonnees.rte-france.com/bilan-electrique-2025/production",
+          "editeur": "RTE",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le réacteur EPR2",
+          "url": "https://fr.wikipedia.org/wiki/EPR2",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-am-1",
+        "prop-ep-2"
+      ],
+      "lois": [
+        "relance-nucleaire-epr-2023"
+      ],
+      "enjeux": [
+        "nouveaux-reacteurs"
+      ]
+    },
+    {
+      "id": "eolien-solaire",
+      "thematiqueId": "environnement",
+      "titre": "L'éolien et le solaire",
+      "aujourdhui": "En 2024, les éoliennes ont produit 8,7 % de l'électricité en France. En 2025, le solaire en a produit 6 %, en hausse de 33 % sur un an. Le premier parc éolien en mer tourne depuis 2022 au large de Saint-Nazaire.",
+      "enDebat": "Les uns veulent accélérer l'éolien et le solaire, rapides à installer et sans émissions, et réduire les délais des projets. Les autres veulent les freiner ou les soumettre à l'accord des maires et des habitants, à cause des paysages, du bruit et d'une production qui dépend du vent et du soleil.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Bilan électrique 2025 : la production d'électricité",
+          "url": "https://analysesetdonnees.rte-france.com/bilan-electrique-2025/production",
+          "editeur": "RTE",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'énergie éolienne en France",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89nergie_%C3%A9olienne_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "L'énergie solaire en France",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89nergie_solaire_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-jl-6"
+      ],
+      "lois": [
+        "loi-energies-renouvelables-2023",
+        "programmation-energie-climat-2025"
+      ],
+      "enjeux": [
+        "eoliennes"
+      ]
+    },
+    {
+      "id": "climat-emissions",
+      "thematiqueId": "environnement",
+      "titre": "Le climat et les émissions",
+      "aujourdhui": "En 2024, la France a émis 369 millions de tonnes de gaz à effet de serre, dont 34 % par les transports. Avec l'Union européenne, elle vise -55 % d'ici 2030 par rapport à 1990, puis la neutralité carbone en 2050. Depuis 2026, l'Union fait payer le carbone de certains produits importés, comme l'acier.",
+      "enDebat": "Les uns veulent aller plus vite : consommer moins d'énergie, planifier, inscrire des limites dans la Constitution, taxer le carbone importé. Les autres misent sur l'innovation, comme les carburants de synthèse, et craignent que trop de contraintes pèsent sur le pouvoir d'achat et l'industrie.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les émissions de gaz à effet de serre en France",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89missions_de_gaz_%C3%A0_effet_de_serre_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "Le mécanisme d'ajustement carbone aux frontières",
+          "url": "https://fr.wikipedia.org/wiki/M%C3%A9canisme_d%27ajustement_carbone_aux_fronti%C3%A8res",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-db-1",
+        "prop-jlm-7",
+        "prop-ob-1",
+        "prop-na-8",
+        "prop-rg-5"
+      ],
+      "lois": [
+        "climat-resilience-2021"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "adaptation-chaleur",
+      "thematiqueId": "environnement",
+      "titre": "S'adapter aux canicules et aux catastrophes",
+      "aujourdhui": "La canicule d'août 2003 a fait environ 15 000 morts en plus en France. Depuis mars 2025, un plan de 52 mesures prépare le pays à 4 degrés de plus en 2100. En 2025, le fonds de prévention des risques naturels a 300 millions d'euros. L'assurance couvre les catastrophes naturelles reconnues par l'État.",
+      "enDebat": "Les uns veulent un grand plan public : protéger de la chaleur écoles, crèches et hôpitaux, et créer une branche de la Sécurité sociale pour les dégâts du climat. Les autres préfèrent renforcer l'assurance et les aides existantes, en mettant en avant le coût pour les finances publiques.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La canicule européenne de 2003",
+          "url": "https://fr.wikipedia.org/wiki/Canicule_europ%C3%A9enne_de_2003",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le plan national d'adaptation au changement climatique",
+          "url": "https://www.ecologie.gouv.fr/actualites/gouvernement-lance-nouveau-plan-national-dadaptation-changement-climatique",
+          "editeur": "Ministère de la Transition écologique",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Catastrophe naturelle ou technologique : quelle indemnisation ?",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F3076",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-np-7",
+        "prop-fr-7"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "sols-grands-projets",
+      "thematiqueId": "environnement",
+      "titre": "Les sols et les grands chantiers",
+      "aujourdhui": "La France vise zéro artificialisation nette en 2050 ; d'ici 2031, consommer deux fois moins d'espaces naturels qu'entre 2011 et 2021. De 2006 à 2016, 165 hectares étaient artificialisés par jour. L'autoroute Castres-Toulouse, stoppée en justice en février 2025, a été autorisée en appel fin 2025.",
+      "enDebat": "Les uns veulent assouplir ces règles, jugées trop complexes pour les communes, et mener à bien les grands chantiers utiles aux territoires. Les autres veulent protéger les sols, imposer plus de nature en ville et suspendre de grands projets routiers et ferroviaires, jugés coûteux pour la nature.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Zéro artificialisation nette",
+          "url": "https://fr.wikipedia.org/wiki/Z%C3%A9ro_artificialisation_nette",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'autoroute Castres-Toulouse (A69)",
+          "url": "https://fr.wikipedia.org/wiki/Autoroute_A69_(France)",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-dl-5",
+        "prop-kb-6",
+        "prop-mt-1"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "polluants-eternels",
+      "thematiqueId": "environnement",
+      "titre": "Les polluants éternels (PFAS)",
+      "aujourdhui": "Les PFAS sont des milliers de produits chimiques qui se dégradent très peu : on les appelle polluants éternels. Depuis janvier 2026, l'eau du robinet est contrôlée pour 20 PFAS dont la somme doit rester sous 0,1 microgramme par litre. En 2023, cinq pays ont proposé de les limiter dans toute l'Union.",
+      "enDebat": "Les uns veulent les interdire vite et largement, d'abord dans la nourriture, les vêtements et les cosmétiques, au nom de la santé. Les autres préfèrent une interdiction progressive décidée au niveau européen, car ces produits servent dans l'industrie et n'ont pas toujours de remplaçant.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Substances perfluoroalkylées et polyfluoroalkylées",
+          "url": "https://www.eaufrance.fr/glossaire/substances-perfluoroalkylees-et-polyfluoroalkylees",
+          "editeur": "Eaufrance",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les PFAS, des substances chimiques persistantes",
+          "url": "https://www.anses.fr/fr/content/pfas-substances-chimiques-persistantes",
+          "editeur": "Anses",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "Les substances per- et polyfluoroalkylées",
+          "url": "https://fr.wikipedia.org/wiki/Substances_per-_et_polyfluoroalkyl%C3%A9es",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-mt-2"
+      ],
+      "lois": [
+        "ppl-interdiction-pfas-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "mode-ultra-ephemere",
+      "thematiqueId": "environnement",
+      "titre": "La mode ultra-éphémère",
+      "aujourdhui": "En 2025, 3,6 milliards de pièces textiles neuves ont été vendues en France, en hausse de 1,5 % sur un an. Certaines enseignes renouvellent leurs collections jusqu'à 36 fois par an. En Europe, 4 millions de tonnes de textile sont jetées chaque année.",
+      "enDebat": "Les uns veulent taxer ces vêtements très bon marché et interdire leur publicité, pour réduire les déchets et protéger les marques françaises. Les autres craignent de priver les ménages modestes de vêtements à petit prix et doutent qu'une taxe nationale change les habitudes d'achat.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La mode éphémère",
+          "url": "https://fr.wikipedia.org/wiki/Mode_%C3%A9ph%C3%A9m%C3%A8re",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "ppl-anti-fast-fashion-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "referendum",
+      "thematiqueId": "institutions",
+      "titre": "Le référendum et la démocratie directe",
+      "aujourdhui": "Le président peut soumettre une loi au référendum, sur proposition du gouvernement ou des deux assemblées ; le dernier référendum national date de 2005. Depuis 2015, 185 parlementaires soutenus par un dixième des électeurs (4,7 millions) peuvent en lancer un : ce seuil n'a jamais été atteint.",
+      "enDebat": "Les uns veulent que les citoyens puissent lancer eux-mêmes un référendum par pétition, et réunir plus souvent des conventions citoyennes. Les autres craignent des votes sous le coup de l'émotion ou contre des droits fondamentaux, et préfèrent que les lois restent faites par les élus.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le référendum d'initiative partagée",
+          "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_d%27initiative_partag%C3%A9e",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le référendum en France",
+          "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-mlp-5",
+        "prop-ob-3",
+        "prop-am-8"
+      ],
+      "lois": [],
+      "enjeux": [
+        "referendum-initiative-citoyenne"
+      ]
+    },
+    {
+      "id": "mode-de-scrutin",
+      "thematiqueId": "institutions",
+      "titre": "Le vote blanc et la proportionnelle",
+      "aujourdhui": "Les 577 députés sont élus au scrutin majoritaire à deux tours, un par circonscription ; seule exception, la proportionnelle en 1986. Depuis 2014, les votes blancs sont comptés à part, mais pas dans les suffrages exprimés. Au second tour de la présidentielle 2022, ils ont fait 6,37 % des votants.",
+      "enDebat": "Les uns veulent la proportionnelle, pour que les sièges reflètent les voix, et compter le vote blanc pour mesurer le refus des candidats. Les autres défendent le scrutin actuel, qui donne plus souvent une majorité claire, et craignent qu'un vote blanc compté rende l'élection difficile à conclure.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les élections législatives en France",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le vote blanc",
+          "url": "https://fr.wikipedia.org/wiki/Vote_blanc",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-jl-3",
+        "prop-mt-8"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "pouvoirs-du-president",
+      "thematiqueId": "institutions",
+      "titre": "Le président et la Ve République",
+      "aujourdhui": "Le président est élu au suffrage universel direct depuis 1962. Approuvé par référendum en 2000, son mandat dure cinq ans depuis 2002, et depuis 2008 il ne peut en faire que deux de suite. Il nomme le Premier ministre et peut dissoudre l'Assemblée nationale.",
+      "enDebat": "Les uns veulent réduire le rôle du président, voire changer de Constitution, pour donner plus de poids au Parlement ou aux citoyens. Les autres jugent qu'un président fort, élu par tous, assure la stabilité du pays, quitte à le limiter à un seul mandat pour qu'il ne pense pas à sa réélection.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le président de la République française",
+          "url": "https://fr.wikipedia.org/wiki/Pr%C3%A9sident_de_la_R%C3%A9publique_fran%C3%A7aise",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le quinquennat présidentiel en France",
+          "url": "https://fr.wikipedia.org/wiki/Quinquennat_pr%C3%A9sidentiel_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-jlm-1",
+        "prop-db-4",
+        "prop-fro-8",
+        "prop-ak-5",
+        "prop-xb-1"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "parlement-gouvernement",
+      "thematiqueId": "institutions",
+      "titre": "Le Parlement face au gouvernement",
+      "aujourdhui": "Il y a 577 députés et 348 sénateurs. Avec l'article 49.3, utilisé une centaine de fois depuis 1958, le gouvernement fait adopter un texte sans vote, sauf si une motion de censure obtient la majorité absolue des députés. Depuis 2009, il ne sert qu'aux budgets et à un autre texte par session.",
+      "enDebat": "Les uns veulent moins de parlementaires, mieux équipés, et voient dans le 49.3 un outil pour faire passer un budget sans majorité. Les autres craignent d'éloigner les élus des campagnes, et voient dans le 49.3 un moyen de se passer du vote des députés, que seule la censure peut arrêter.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le Parlement français",
+          "url": "https://fr.wikipedia.org/wiki/Parlement_fran%C3%A7ais",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'article 49 de la Constitution",
+          "url": "https://fr.wikipedia.org/wiki/Article_49_de_la_Constitution_de_la_Cinqui%C3%A8me_R%C3%A9publique_fran%C3%A7aise",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-br-6"
+      ],
+      "lois": [
+        "motion-censure-barnier-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "pouvoirs-locaux",
+      "thematiqueId": "institutions",
+      "titre": "Ce que décident l'État et les collectivités",
+      "aujourdhui": "Depuis 1982, le préfet ne contrôle plus les décisions des élus locaux qu'après coup. Depuis 2003, la Constitution donne aux collectivités un pouvoir réglementaire pour leurs compétences, dans le cadre de la loi, et le droit d'expérimenter. Depuis 2015, seules les communes agissent partout.",
+      "enDebat": "Les uns veulent garder à l'État la justice, la police, la défense et la diplomatie, et confier le reste aux élus locaux, plus proches des besoins. Les autres craignent des règles différentes d'un territoire à l'autre et des écarts entre territoires riches et pauvres.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Article 72 de la Constitution",
+          "url": "https://fr.wikipedia.org/wiki/Article_72_de_la_Constitution_de_la_Cinqui%C3%A8me_R%C3%A9publique_fran%C3%A7aise",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La décentralisation en France",
+          "url": "https://fr.wikipedia.org/wiki/D%C3%A9centralisation_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les collectivités territoriales en France",
+          "url": "https://fr.wikipedia.org/wiki/Collectivit%C3%A9_territoriale_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-dl-1",
+        "prop-xb-2"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "transparence-vie-publique",
+      "thematiqueId": "institutions",
+      "titre": "Le lobbying et la transparence",
+      "aujourdhui": "Depuis 2013, une Haute Autorité vérifie le patrimoine des élus et, pendant trois ans, le passage des anciens ministres vers le privé. En 2025, elle a rendu 641 avis sur ces passages et compte 3 526 lobbies inscrits. Les lanceurs d'alerte sont protégés depuis 2016, le secret des affaires depuis 2018.",
+      "enDebat": "Les uns veulent interdire plus longtemps aux anciens ministres et hauts fonctionnaires de travailler pour des intérêts privés, et rendre publics les comptes des grandes entreprises. Les autres jugent les contrôles actuels suffisants et veulent protéger les secrets industriels face à la concurrence.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La Haute Autorité pour la transparence de la vie publique",
+          "url": "https://fr.wikipedia.org/wiki/Haute_Autorit%C3%A9_pour_la_transparence_de_la_vie_publique",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les lanceurs d'alerte",
+          "url": "https://fr.wikipedia.org/wiki/Lanceur_d%27alerte",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le droit du secret des affaires",
+          "url": "https://fr.wikipedia.org/wiki/Droit_du_secret_des_affaires",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fr-8",
+        "prop-np-6",
+        "prop-na-3"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "union-europeenne",
+      "thematiqueId": "international",
+      "titre": "La France dans l'Union européenne",
+      "aujourdhui": "Membre fondateur en 1957, la France est l'un des 27 pays de l'Union ; le Royaume-Uni en est sorti en 2020. La Constitution place les traités au-dessus des lois, même votées après (Conseil d'État, 1989). La France a versé 23 milliards d'euros à l'Union en 2025 ; 28,8 sont prévus en 2026.",
+      "enDebat": "Les uns veulent sortir de l'Union, ou faire passer les lois françaises avant ses règles, pour décider seuls et garder l'argent versé. Les autres veulent rester, voire avancer avec quelques pays, pour peser face aux grandes puissances et garder le marché commun.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'Union européenne",
+          "url": "https://fr.wikipedia.org/wiki/Union_europ%C3%A9enne",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La sortie du Royaume-Uni de l'Union européenne",
+          "url": "https://fr.wikipedia.org/wiki/Retrait_du_Royaume-Uni_de_l%27Union_europ%C3%A9enne",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Qu'est-ce que la contribution française au budget de l'Union européenne ?",
+          "url": "https://lcp.fr/actualites/budget-2027-qu-est-ce-que-la-contribution-francaise-au-budget-de-l-union-europeenne-qui",
+          "editeur": "LCP",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-nda-7",
+        "prop-ez-4",
+        "prop-ob-5"
+      ],
+      "lois": [
+        "contribution-budget-europeen-2027"
+      ],
+      "enjeux": [
+        "quitter-union-europeenne"
+      ]
+    },
+    {
+      "id": "nouvelle-caledonie",
+      "thematiqueId": "institutions",
+      "titre": "La Nouvelle-Calédonie",
+      "aujourdhui": "Selon l'accord de Nouméa de 1998, les habitants arrivés après cette date ne votent pas aux élections provinciales ; la Constitution a figé cette liste en 2007. Trois référendums (2018, 2020, 2021) ont rejeté l'indépendance. Des émeutes ont éclaté en mai 2024. L'archipel compte 264 596 habitants.",
+      "enDebat": "Les uns veulent ouvrir ces élections aux habitants installés depuis longtemps, au nom de l'égalité devant le vote. Les autres veulent garder une liste restreinte, pour protéger la place du peuple kanak, premier peuple de l'archipel, et l'esprit des accords.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'accord de Nouméa",
+          "url": "https://fr.wikipedia.org/wiki/Accord_de_Noum%C3%A9a",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le référendum de 2021 sur l'indépendance de la Nouvelle-Calédonie",
+          "url": "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rendum_de_2021_sur_l%27ind%C3%A9pendance_de_la_Nouvelle-Cal%C3%A9donie",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "degel-corps-electoral-nouvelle-caledonie-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "immigration-asile",
+      "thematiqueId": "securite",
+      "titre": "L'immigration et l'asile",
+      "aujourdhui": "En 2025, la France a délivré 384 230 premiers titres de séjour, dont 118 000 pour études, et reçu 151 665 demandes d'asile. Les immigrés sont 8 millions, 11,6 % des habitants. L'espace Schengen supprime depuis 1995 les contrôles entre 29 pays ; la France en a rétabli fin 2015, renouvelés depuis.",
+      "enDebat": "Les uns veulent réduire fortement les arrivées, limiter le regroupement familial et contrôler à nouveau toutes les frontières, pour mieux choisir qui entre. Les autres mettent en avant le droit d'asile, les besoins de main-d'œuvre et les échanges permis par la libre circulation en Europe.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'essentiel sur les immigrés et les étrangers",
+          "url": "https://www.insee.fr/fr/statistiques/3633212",
+          "editeur": "INSEE",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'espace Schengen",
+          "url": "https://fr.wikipedia.org/wiki/Espace_Schengen",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ep-8",
+        "prop-nda-1"
+      ],
+      "lois": [
+        "loi-immigration-2023",
+        "loi-asile-immigration-2018",
+        "pacte-asile-migration-ue-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "expulsions",
+      "thematiqueId": "securite",
+      "titre": "Les expulsions d'étrangers",
+      "aujourdhui": "En 2024, environ 130 000 obligations de quitter le territoire (OQTF) ont été prononcées et 15 000 exécutées, une sur dix. En 2023, 30 % seulement des laissez-passer demandés aux consulats des pays d'origine ont été délivrés à temps. En 2025, 24 985 étrangers ont été éloignés, dont 15 569 de force.",
+      "enDebat": "Les uns veulent renvoyer tous les étrangers condamnés et réduire les visas des pays qui refusent de reprendre leurs ressortissants. Les autres mettent en avant les droits de la défense et la vie familiale protégés par les juges, et craignent des tensions avec des pays partenaires.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Obligation de quitter le territoire français (OQTF)",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18362",
+          "editeur": "Service-Public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les résultats de la politique d'éloignement des étrangers sous OQTF (juin 2025)",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/documents/cion_lois/l17n813203444_document",
+          "editeur": "Assemblée nationale",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-br-5",
+        "prop-ez-1"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "droits-des-etrangers",
+      "thematiqueId": "societe",
+      "titre": "Le séjour et les droits des étrangers",
+      "aujourdhui": "Depuis 1992, les citoyens de l'Union européenne qui vivent en France votent aux municipales et aux européennes ; les autres étrangers ne votent pas. En 2025, 28 610 étrangers sans titre de séjour ont été régularisés. Environ 500 000 personnes seraient sans titre, d'après l'aide médicale d'État.",
+      "enDebat": "Les uns veulent régulariser les étrangers qui vivent et travaillent ici et leur donner le droit de vote, au nom de l'égalité. Les autres veulent réserver le vote aux citoyens et limiter les régularisations, pour ne pas encourager l'entrée sans autorisation.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le droit de vote des étrangers en France",
+          "url": "https://fr.wikipedia.org/wiki/Droit_de_vote_des_%C3%A9trangers_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'essentiel sur les immigrés et les étrangers",
+          "url": "https://www.insee.fr/fr/statistiques/3633212",
+          "editeur": "INSEE",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-sl-8"
+      ],
+      "lois": [],
+      "enjeux": [
+        "regulariser-sans-papiers"
+      ]
+    },
+    {
+      "id": "priorite-nationale",
+      "thematiqueId": "societe",
+      "titre": "La priorité nationale",
+      "aujourdhui": "Les étrangers en séjour régulier touchent les allocations familiales et accèdent au logement social sans condition de nationalité. En 1990, le Conseil constitutionnel leur a reconnu l'égalité en matière sociale ; en 2024, il a refusé un référendum sur une priorité nationale pour les aides sociales.",
+      "enDebat": "Les uns veulent réserver certaines aides et le logement social aux Français, en l'inscrivant dans la Constitution. Les autres y voient une rupture avec l'égalité de traitement et estiment que les étrangers en règle paient aussi impôts et cotisations.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Un étranger peut-il toucher les prestations familiales ?",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2787",
+          "editeur": "Service-Public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Comment obtenir un logement social ?",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F869",
+          "editeur": "Service-Public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La préférence nationale",
+          "url": "https://fr.wikipedia.org/wiki/Pr%C3%A9f%C3%A9rence_nationale",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-mlp-2",
+        "prop-mlp-6"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "defense",
+      "thematiqueId": "international",
+      "titre": "La défense et les armées",
+      "aujourdhui": "En 2025, la France consacre 2,25 % de sa richesse nationale à la défense. Le projet de budget 2026 prévoit 57,1 milliards d'euros pour les armées, 6,7 de plus qu'en 2025. De 2021 à 2025, elle est le deuxième vendeur d'armes au monde. Un fonds européen de la défense a 8 milliards pour 2021-2027.",
+      "enDebat": "Les uns veulent dépenser plus pour l'armée et pour une défense européenne commune, face au retour de la guerre en Europe. Les autres veulent réduire ces dépenses, rapatrier les soldats déployés à l'étranger et mettre l'argent dans les hôpitaux et les écoles.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le Fonds européen de la défense",
+          "url": "https://fr.wikipedia.org/wiki/Fonds_europ%C3%A9en_de_la_d%C3%A9fense",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les ventes d'armes dans le monde de 2021 à 2025 (en anglais)",
+          "url": "https://www.sipri.org/media/press-release/2026/global-arms-flows-jump-nearly-10-cent-european-demand-soars",
+          "editeur": "Institut international de recherche sur la paix de Stockholm",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-rg-1",
+        "prop-ak-6",
+        "prop-na-7"
+      ],
+      "lois": [
+        "loi-programmation-militaire-2024-2030"
+      ],
+      "enjeux": [
+        "budget-defense"
+      ]
+    },
+    {
+      "id": "otan",
+      "thematiqueId": "international",
+      "titre": "L'Alliance atlantique (OTAN)",
+      "aujourdhui": "Créée en 1949, l'Alliance atlantique réunit 32 pays, dont la Suède depuis 2024. La France a quitté son commandement militaire intégré en 1966 et l'a rejoint en 2009. En juin 2025, les membres ont visé 5 % de leur richesse pour la défense et la sécurité d'ici 2035, dont 3,5 % pour les armées.",
+      "enDebat": "Les uns veulent quitter l'alliance ou s'en éloigner, pour décider seuls de la politique étrangère sans dépendre des États-Unis. Les autres y voient une protection mutuelle utile face aux menaces, et un moyen de peser sur les choix communs.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'Organisation du traité de l'Atlantique nord",
+          "url": "https://fr.wikipedia.org/wiki/Organisation_du_trait%C3%A9_de_l%27Atlantique_nord",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le sommet de l'Alliance atlantique de 2025",
+          "url": "https://fr.wikipedia.org/wiki/Sommet_de_l%27OTAN_de_2025",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-np-8"
+      ],
+      "lois": [],
+      "enjeux": [
+        "quitter-otan"
+      ]
+    },
+    {
+      "id": "ukraine",
+      "thematiqueId": "international",
+      "titre": "La guerre en Ukraine",
+      "aujourdhui": "La Russie a envahi l'Ukraine le 24 février 2022 ; la guerre dure encore en octobre 2026. La France a aidé l'Ukraine pour 1,7 milliard d'euros en 2022 et 2,1 milliards en 2023. Le 16 février 2024, les deux pays ont signé un accord de sécurité de dix ans, avec jusqu'à 3 milliards d'aide en 2024.",
+      "enDebat": "Les uns veulent continuer à livrer des armes et soutenir l'entrée de l'Ukraine dans l'Union, pour arrêter la Russie et protéger l'Europe. Les autres veulent réduire cette aide, qui coûte cher, et pousser plutôt à des négociations de paix, de peur d'une guerre plus large.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "L'invasion de l'Ukraine par la Russie",
+          "url": "https://fr.wikipedia.org/wiki/Invasion_de_l%27Ukraine_par_la_Russie",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Que contient l'accord de sécurité signé entre la France et l'Ukraine ?",
+          "url": "https://www.publicsenat.fr/actualites/international/que-contient-laccord-de-securite-signe-entre-la-france-et-lukraine-et-debattu-au-parlement",
+          "editeur": "Public Sénat",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "accord-securite-ukraine-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "logement-social",
+      "thematiqueId": "logement",
+      "titre": "Le logement social",
+      "aujourdhui": "Au 1er janvier 2025, la France compte 5,4 millions de logements sociaux ; 71 300 ont été loués pour la première fois en 2024. Fin 2025, 4,1 millions de demandes attendent, pour 394 000 logements attribués dans l'année. Depuis 2000, la loi SRU impose 20 à 25 % de logements sociaux à des communes.",
+      "enDebat": "Les uns veulent construire beaucoup plus de logements sociaux, avec l'argent de l'État ou d'un impôt sur les grandes fortunes, et encadrer les loyers. Les autres veulent laisser les communes décider, assouplir ou supprimer le quota de la loi SRU, ou y compter des logements pour la classe moyenne.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "5,4 millions de logements sociaux en France au 1er janvier 2025",
+          "url": "https://www.statistiques.developpement-durable.gouv.fr/54-millions-de-logements-locatifs-sociaux-en-france-au-1er-janvier-2025",
+          "editeur": "Ministère de la Transition écologique",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La loi relative à la solidarité et au renouvellement urbains (SRU)",
+          "url": "https://fr.wikipedia.org/wiki/Loi_relative_%C3%A0_la_solidarit%C3%A9_et_au_renouvellement_urbains",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Logement social : plus d'attributions en 2025, des millions de demandeurs en attente",
+          "url": "https://www.banquedesterritoires.fr/logement-social-plus-dattributions-en-2025-mais-des-millions-de-demandeurs-toujours-en-attente",
+          "editeur": "Banque des Territoires",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ez-5",
+        "prop-fro-5",
+        "prop-ga-8",
+        "prop-kb-4",
+        "prop-jlm-5"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "logements-vacants-loyers",
+      "thematiqueId": "logement",
+      "titre": "Les logements vides et les loyers",
+      "aujourdhui": "En 2024, la France compte 3,1 millions de logements vides, soit 8 % des logements, dont plus d'un million depuis plus d'un an. Les loyers sont encadrés à Paris depuis 2019, à Lille depuis 2020, puis à Montpellier et Bordeaux depuis 2022 : un loyer ne peut pas dépasser un plafond fixé par arrêté.",
+      "enDebat": "Les uns veulent remettre sur le marché les logements vides ou loués aux touristes, par la réquisition, l'impôt ou des règles locales, et bloquer les loyers. Les autres défendent le droit des propriétaires et craignent que ces contraintes les poussent à ne plus louer, ce qui réduirait l'offre.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le parc de logements en France au 1er janvier 2024",
+          "url": "https://www.insee.fr/fr/statistiques/8251576",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le contrôle des loyers",
+          "url": "https://fr.wikipedia.org/wiki/Contr%C3%B4le_des_loyers",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ak-8",
+        "prop-na-4"
+      ],
+      "lois": [
+        "regulation-meubles-tourisme-airbnb-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "renovation-energetique",
+      "thematiqueId": "logement",
+      "titre": "La rénovation des logements",
+      "aujourdhui": "Au 1er janvier 2025, 3,9 millions de résidences principales sont des passoires thermiques, classées F ou G par le DPE, soit 12,7 % du parc. Depuis 2025, un logement classé G ne peut plus être mis en location ; la loi de 2021 prévoit la même règle pour F en 2028 et pour E en 2034.",
+      "enDebat": "Les uns veulent que l'État paie une plus grande part des travaux, surtout pour les ménages modestes, afin de rénover vite et en grand. Les autres mettent en avant le coût pour les finances publiques et préfèrent des aides ciblées, des prêts et plus de délais pour les propriétaires.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le parc de logements par classe de performance énergétique au 1er janvier 2025",
+          "url": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025",
+          "editeur": "Ministère de la Transition écologique",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Passoire thermique",
+          "url": "https://fr.wikipedia.org/wiki/Passoire_thermique",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-am-6",
+        "prop-fr-3",
+        "prop-mt-5"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "squat-impayes",
+      "thematiqueId": "logement",
+      "titre": "Le squat et les loyers impayés",
+      "aujourdhui": "Un locataire qui ne paie plus ne peut être expulsé que sur décision de justice, et jamais pendant la trêve hivernale (1er novembre-31 mars), qui ne protège pas les squatteurs. Depuis 2020, le préfet peut faire évacuer un logement squatté, résidence principale ou secondaire, sans passer par un juge.",
+      "enDebat": "Les uns veulent punir plus durement le squat et expulser plus vite les locataires qui ne paient pas, pour protéger les propriétaires et les inciter à louer. Les autres craignent que des familles en difficulté se retrouvent à la rue et veulent d'abord aider à payer le loyer et reloger.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Quand s'applique la trêve hivernale ?",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34736",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'expulsion d'un logement en droit français",
+          "url": "https://fr.wikipedia.org/wiki/Expulsion_d%27un_immeuble_en_droit_civil_fran%C3%A7ais",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le squat en France",
+          "url": "https://fr.wikipedia.org/wiki/Squat_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "loi-anti-squat-kasbarian-2023"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "reseaux-sociaux",
+      "thematiqueId": "numerique",
+      "titre": "Les réseaux sociaux et les mineurs",
+      "aujourdhui": "Depuis 2024, une règle européenne interdit de montrer aux mineurs des publicités choisies selon leur profil ; pour les adultes, elles restent permises, sauf sur des données sensibles. Une loi de 2023 fixe à 15 ans l'âge pour s'inscrire sans accord parental ; en 2025, aucun décret ne l'appliquait.",
+      "enDebat": "Les uns veulent interdire les réseaux sociaux aux plus jeunes et la publicité ciblée, pour protéger la santé et la vie privée. Les autres préfèrent laisser ce choix aux parents, doutent qu'on puisse vérifier l'âge sans ficher tout le monde et estiment que la publicité paie des services gratuits.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les nouvelles règles européennes pour protéger vos droits en ligne",
+          "url": "https://commission.europa.eu/news-and-media/news/new-rules-protect-your-rights-and-activity-online-eu-2024-02-16_fr",
+          "editeur": "Commission européenne",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Loi de 2023 visant à instaurer une majorité numérique",
+          "url": "https://www.senat.fr/dossierleg/ppl22-389.html",
+          "editeur": "Sénat",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-ga-3",
+        "prop-rg-3"
+      ],
+      "lois": [
+        "mineurs-reseaux-sociaux-2026",
+        "loi-sren-numerique-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "intelligence-artificielle",
+      "thematiqueId": "numerique",
+      "titre": "L'intelligence artificielle et les data centers",
+      "aujourdhui": "En 2025, la France compte 322 centres de données (data centers), ce qui la place au sixième rang mondial. En février 2025, lors d'un sommet à Paris, 109 milliards d'euros d'investissements privés dans l'intelligence artificielle ont été annoncés, et l'État a repéré 35 sites pour de nouveaux centres.",
+      "enDebat": "Les uns veulent attirer ces centres et ces investissements, pour que la France reste dans la course et fixe elle-même les règles de l'intelligence artificielle. Les autres demandent d'abord un débat public, des règles sur l'eau et l'électricité consommées et un encadrement des risques de ces outils.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Centre de données",
+          "url": "https://fr.wikipedia.org/wiki/Centre_de_donn%C3%A9es",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Sommet de l'intelligence artificielle à Paris en 2025",
+          "url": "https://www.banquedesterritoires.fr/sommet-de-lia-la-france-affirme-son-leadership",
+          "editeur": "Banque des Territoires",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-db-2",
+        "prop-mt-6",
+        "prop-kb-1"
+      ],
+      "lois": [
+        "reglement-europeen-ia-act-2024"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "souverainete-numerique",
+      "thematiqueId": "numerique",
+      "titre": "La souveraineté numérique",
+      "aujourdhui": "Depuis 2016, l'ANSSI, agence de cybersécurité, délivre le label SecNumCloud au stockage en ligne ; depuis 2022, il impose d'échapper aux lois hors d'Europe. Les données de santé pour la recherche sont chez Microsoft depuis 2019 ; en 2026, une entreprise française a été choisie pour les héberger.",
+      "enDebat": "Les uns veulent confier les données publiques à des acteurs français ou européens et créer des outils nationaux, pour échapper aux lois étrangères. Les autres estiment que les géants américains offrent souvent des services plus avancés et moins chers, et qu'en changer prend du temps et coûte cher.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "SecNumCloud",
+          "url": "https://fr.wikipedia.org/wiki/SecNumCloud",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "Plateforme des données de santé",
+          "url": "https://fr.wikipedia.org/wiki/Health_Data_Hub",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fp-3",
+        "prop-nda-5"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "surveillance",
+      "thematiqueId": "numerique",
+      "titre": "La surveillance et les libertés",
+      "aujourdhui": "Depuis 1978, une loi encadre les fichiers de données personnelles, sous le contrôle de la Commission nationale de l'informatique et des libertés. Depuis 1995, les caméras sur la voie publique sont permises : le préfet les autorise pour 5 ans et les images sont gardées un mois au plus.",
+      "enDebat": "Les uns veulent plus de caméras et de nouveaux outils, comme l'analyse automatique des images, pour prévenir les crimes et aider la police. Les autres craignent une surveillance de toute la population, des erreurs et des abus, et veulent inscrire des limites fortes, jusque dans la Constitution.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Loi informatique et libertés",
+          "url": "https://fr.wikipedia.org/wiki/Loi_informatique_et_libert%C3%A9s",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La vidéoprotection",
+          "url": "https://www.cnil.fr/fr/la-videoprotection",
+          "editeur": "Commission nationale de l'informatique et des libertés",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "La vidéosurveillance en France, des villes aux villages",
+          "url": "https://linc.cnil.fr/la-videosurveillance-en-france-des-zones-urbaines-aux-zones-rurales",
+          "editeur": "Commission nationale de l'informatique et des libertés",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-fa-5",
+        "prop-sl-5"
+      ],
+      "lois": [
+        "videosurveillance-ia-jo-2024",
+        "securite-globale-2020"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "acces-aux-soins",
+      "thematiqueId": "sante",
+      "titre": "L'accès aux soins",
+      "aujourdhui": "Une loi de 2019 a supprimé le nombre national fixe d'étudiants en médecine (le numerus clausus) : chaque faculté fixe désormais ses places en deuxième année. En 2024, la Sécurité sociale et l'État paient 79,4 % des soins et des médicaments, les mutuelles 12,8 % et les ménages 7,8 %.",
+      "enDebat": "Pour attirer des soignants là où ils manquent, les uns misent sur la formation et des aides, les autres sur des obligations pour les médecins et plus de tâches pour les autres soignants. Sur le coût, certains veulent que la Sécurité sociale paie tout, d'autres veulent responsabiliser les patients.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les dépenses de santé en 2024",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-infographie-documents-de-reference/250930-Panorama-depenses-de-sante",
+          "editeur": "Drees",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Numerus clausus",
+          "url": "https://fr.wikipedia.org/wiki/Numerus_clausus",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-dl-7",
+        "prop-jl-2",
+        "prop-ob-7",
+        "prop-ga-4"
+      ],
+      "lois": [
+        "loi-valletoux-acces-soins-2023"
+      ],
+      "enjeux": [
+        "soins-rembourses"
+      ]
+    },
+    {
+      "id": "hopital-public",
+      "thematiqueId": "sante",
+      "titre": "L'hôpital public",
+      "aujourdhui": "Fin 2024, hôpitaux et cliniques comptent 367 100 lits où l'on peut passer la nuit, 2 300 de moins en un an, et 91 000 places pour des soins sans nuit sur place. Les lits baissent chaque année, ces places augmentent. On compte 1 330 hôpitaux publics.",
+      "enDebat": "Les uns veulent rouvrir des lits, arrêter les fermetures et ajouter des milliards au budget de l'hôpital public. Les autres estiment que l'argent public est limité et que les soins sans nuit à l'hôpital progressent ; ils préfèrent une réforme planifiée sur plusieurs années avec les soignants.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les établissements de santé en 2024",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-documents-de-reference/panoramas-de-la-drees/260520-Etablissements-de-sant%C3%A9-en-2024",
+          "editeur": "Drees",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "En 2024, la baisse du nombre de lits ralentit",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/251113_ER_etablissements-de-sante",
+          "editeur": "Drees",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fa-8",
+        "prop-mlp-8",
+        "prop-xb-8"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "medicaments",
+      "thematiqueId": "sante",
+      "titre": "Les médicaments",
+      "aujourdhui": "Un brevet protège un nouveau médicament pendant 20 ans à partir de son dépôt ; ensuite, d'autres peuvent le copier : ce sont les génériques. Fin 2024, environ 400 références de médicaments étaient en rupture de stock en France, deux fois moins qu'au pic de l'hiver 2022-2023 (environ 800).",
+      "enDebat": "Les uns veulent limiter les brevets et créer un service public, en France ou en Europe, pour produire les médicaments et éviter les pénuries. Les autres jugent que les brevets financent la recherche de nouveaux traitements et préfèrent aider les laboratoires à produire en Europe.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les brevets pour les produits pharmaceutiques",
+          "url": "https://www.inpi.fr/realiser-demarches/propriete-intellectuelle/cas-particulier-produits-pharmaceutiques",
+          "editeur": "Institut national de la propriété industrielle",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Ruptures de stock de médicaments : ampleur et conséquences",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/250327_ER_ruptures-de-stock-medicaments-declarees-par-les-industriels-ampleur-et-consequences",
+          "editeur": "Drees",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Médicament générique",
+          "url": "https://fr.wikipedia.org/wiki/M%C3%A9dicament_g%C3%A9n%C3%A9rique",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-na-5",
+        "prop-rg-8"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "vaccination",
+      "thematiqueId": "sante",
+      "titre": "L'obligation vaccinale",
+      "aujourdhui": "Depuis 2018, 11 vaccins sont obligatoires pour les enfants, contre 3 avant. Les soignants exposés doivent aussi être vaccinés, par exemple contre l'hépatite B. Le vaccin contre le Covid-19 a été obligatoire pour les soignants et les pompiers du 5 août 2021 au 15 mai 2023.",
+      "enDebat": "Les uns veulent laisser chacun libre de refuser un vaccin, soignants compris, sans sanction, et réintégrer avec leurs droits ceux qui ont été écartés. Les autres jugent que l'obligation protège les malades et les plus fragiles, et qu'elle a fait reculer des maladies graves.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Politique vaccinale de la France",
+          "url": "https://fr.wikipedia.org/wiki/Politique_vaccinale_de_la_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Obligations vaccinales des professionnels : avis de 2023",
+          "url": "https://www.has-sante.fr/jcms/p_3424589/fr/obligations-vaccinales-des-professionnels-la-has-publie-le-1er-volet-de-ses-travaux",
+          "editeur": "Haute Autorité de santé",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fp-8",
+        "prop-nda-3"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "fin-de-vie",
+      "thematiqueId": "sante",
+      "titre": "La fin de vie",
+      "aujourdhui": "Depuis 2005, l'acharnement thérapeutique est interdit. Depuis 2016, un malade en fin de vie peut demander à être endormi jusqu'au décès, et ses directives anticipées s'imposent au médecin. En 2023, une convention de 184 citoyens tirés au sort s'est prononcée à 75,6 % pour une aide active à mourir.",
+      "enDebat": "Les uns veulent permettre à un malade incurable qui souffre de demander une substance pour mourir, au nom de la liberté de choisir sa fin. Les autres craignent des pressions sur les personnes fragiles et veulent d'abord développer les soins palliatifs, qui soulagent sans hâter la mort.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Directives anticipées : dernières volontés sur les soins en fin de vie",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F32010",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Convention citoyenne sur la fin de vie",
+          "url": "https://fr.wikipedia.org/wiki/Convention_citoyenne_sur_la_fin_de_vie",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "La loi de 2005 sur la fin de vie",
+          "url": "https://fr.wikipedia.org/wiki/Loi_Leonetti",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "aide-a-mourir-2026"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "alimentation-sante",
+      "thematiqueId": "sante",
+      "titre": "L'alimentation et la santé",
+      "aujourdhui": "Depuis 2017, le Nutri-Score, une note de A à E sur l'emballage, indique la qualité nutritionnelle d'un aliment. Il reste volontaire pour les fabricants et son calcul est plus sévère depuis 2024. Depuis 2018, la taxe sur les boissons sucrées dépend de leur taux de sucre.",
+      "enDebat": "Les uns veulent taxer davantage les produits trop sucrés, trop salés ou très transformés et aider les aliments sains, pour la santé de tous. Les autres craignent une hausse des prix pour les ménages modestes et préfèrent informer et éduquer.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Nutri-Score",
+          "url": "https://fr.wikipedia.org/wiki/Nutri-Score",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La taxe sur les boissons sucrées",
+          "url": "https://fr.wikipedia.org/wiki/Taxe_soda",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-am-11"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "police-maintien-ordre",
+      "thematiqueId": "securite",
+      "titre": "La police et le maintien de l'ordre",
+      "aujourdhui": "Depuis 2017, une même règle fixe les cas où policiers et gendarmes peuvent tirer, en cas d'absolue nécessité et de façon strictement proportionnée. En 2025, 56 % des policiers municipaux sont armés, sur demande du maire et avec l'accord du préfet. La nasse est encadrée depuis 2021.",
+      "enDebat": "Les uns veulent plus de moyens pour les forces de l'ordre : armer les polices municipales, mieux protéger en justice les agents qui tirent. Les autres veulent mieux encadrer leur action : règles plus strictes en manifestation, contrôle indépendant, fin de certaines unités.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La police municipale en France",
+          "url": "https://fr.wikipedia.org/wiki/Police_municipale_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La nasse en maintien de l'ordre",
+          "url": "https://fr.wikipedia.org/wiki/Nasse_(maintien_de_l%27ordre)",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La légitime défense en droit français",
+          "url": "https://fr.wikipedia.org/wiki/L%C3%A9gitime_d%C3%A9fense_en_droit_fran%C3%A7ais",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-ak-7",
+        "prop-am-10",
+        "prop-dl-4"
+      ],
+      "lois": [
+        "presomption-legitime-defense-2026"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "justice-des-mineurs",
+      "thematiqueId": "securite",
+      "titre": "La justice des mineurs",
+      "aujourdhui": "Depuis 2021, un code à part juge les mineurs. Avant 13 ans, l'enfant est présumé sans discernement. Un mineur risque au plus la moitié de la peine d'un adulte (excuse de minorité) ; dès 16 ans, le juge peut l'écarter à titre exceptionnel. Les centres éducatifs fermés existent depuis 2002.",
+      "enDebat": "Les uns veulent être plus fermes : excuse de minorité plus rare, centres fermés ou encadrés par des militaires, sanctions pour les parents défaillants. Les autres misent sur l'éducation et le suivi, car un enfant n'est pas un adulte, et craignent que l'enfermement nourrisse la récidive.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Justice pénale des mineurs : mesures et peines encourues",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1837",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le code de la justice pénale des mineurs",
+          "url": "https://fr.wikipedia.org/wiki/Code_de_la_justice_p%C3%A9nale_des_mineurs",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le centre éducatif fermé",
+          "url": "https://fr.wikipedia.org/wiki/Centre_%C3%A9ducatif_ferm%C3%A9",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-br-2",
+        "prop-ga-5",
+        "prop-np-5",
+        "prop-ob-4"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "peines-prisons",
+      "thematiqueId": "securite",
+      "titre": "Les peines et les prisons",
+      "aujourdhui": "Au 1er octobre 2026, les prisons comptent 90 937 détenus pour 63 452 places, soit 143 détenus pour 100 places. Les peines planchers, des peines minimales pour les récidivistes, ont existé de 2007 à 2014 ; le juge pouvait y déroger en motivant sa décision.",
+      "enDebat": "Les uns veulent des peines plus sûres et plus lourdes : peines minimales, moins de réductions de peine, plus de places de prison. Les autres veulent que le juge adapte la peine à chaque cas, avec des solutions hors de la prison pour limiter la surpopulation et la récidive.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Mesure de l'incarcération au 1er octobre 2026",
+          "url": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf",
+          "editeur": "Ministère de la Justice",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La peine plancher",
+          "url": "https://fr.wikipedia.org/wiki/Peine_plancher",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-mlp-1",
+        "prop-fp-7",
+        "prop-fa-7"
+      ],
+      "lois": [],
+      "enjeux": [
+        "peines-planchers"
+      ]
+    },
+    {
+      "id": "trafic-de-drogue",
+      "thematiqueId": "securite",
+      "titre": "Le trafic de drogue",
+      "aujourdhui": "Selon un rapport du Sénat de mai 2024, le trafic de drogue rapporte au moins 3,5 milliards d'euros par an en France, avec environ 3 000 points de deal. Les saisies de cocaïne ont été multipliées par cinq en dix ans.",
+      "enDebat": "Les uns veulent des moyens spéciaux : procureurs dédiés, prisons plus sûres pour les trafiquants, expulsion de leur logement, fermeture des commerces liés au trafic. Les autres craignent pour les libertés et les familles, et veulent aussi agir sur la consommation, la prévention et la santé.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Rapport du Sénat : sortir du piège du narcotrafic (2024)",
+          "url": "https://www.senat.fr/notice-rapport/2023/r23-588-1-notice.html",
+          "editeur": "Sénat",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-br-4"
+      ],
+      "lois": [
+        "loi-narcotrafic-2025"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "securite-civile",
+      "thematiqueId": "securite",
+      "titre": "La sécurité civile",
+      "aujourdhui": "Les plans de secours ORSEC existent depuis 1952 ; une loi de 2004 les a refondus. En 2021, la France comptait 252 700 sapeurs-pompiers, dont 78 % de volontaires. Les communes peuvent aussi créer une réserve de bénévoles pour aider en cas de crise.",
+      "enDebat": "Les uns veulent réorganiser la réponse aux crises, plus fréquentes avec le climat : un ministère dédié, plus de réserves communales, les animaux pris en compte dans les secours. Les autres préfèrent renforcer l'organisation actuelle, autour des préfets et des pompiers, sans nouvelle structure.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Le plan ORSEC",
+          "url": "https://fr.wikipedia.org/wiki/Plan_ORSEC",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les sapeurs-pompiers en France",
+          "url": "https://fr.wikipedia.org/wiki/Sapeur-pompier_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La réserve communale de sécurité civile",
+          "url": "https://fr.wikipedia.org/wiki/R%C3%A9serve_communale_de_s%C3%A9curit%C3%A9_civile",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-db-5",
+        "prop-mm-4"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "laicite",
+      "thematiqueId": "societe",
+      "titre": "La laïcité et les religions",
+      "aujourdhui": "Depuis 1905, la République assure la liberté de conscience et le libre exercice des cultes, sans en reconnaître ni en subventionner aucun. Depuis 2004, les signes religieux ostensibles sont interdits aux élèves des écoles publiques. Depuis 2011, cacher son visage dans l'espace public est interdit.",
+      "enDebat": "Les uns veulent plus de règles et de contrôles : limiter les signes religieux dans l'espace public, surveiller associations et financements des cultes. Les autres estiment que la laïcité impose la neutralité à l'État, pas aux citoyens, et craignent une atteinte à la liberté de culte.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La loi de 2004 sur les signes religieux à l'école",
+          "url": "https://fr.wikipedia.org/wiki/Loi_sur_les_signes_religieux_dans_les_%C3%A9coles_publiques_fran%C3%A7aises",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La loi de 2010 sur la dissimulation du visage",
+          "url": "https://fr.wikipedia.org/wiki/Loi_interdisant_la_dissimulation_du_visage_dans_l%27espace_public",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "La loi de 1905 de séparation des Églises et de l'État",
+          "url": "https://fr.wikipedia.org/wiki/Loi_de_s%C3%A9paration_des_%C3%89glises_et_de_l%27%C3%89tat",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [
+        "prop-db-6",
+        "prop-ez-6"
+      ],
+      "lois": [
+        "principes-republique-2021"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "liberte-expression",
+      "thematiqueId": "societe",
+      "titre": "La liberté d'expression",
+      "aujourdhui": "Depuis 1881, on peut publier sans autorisation, mais la loi punit la diffamation, l'injure et, depuis 1972, la provocation à la haine raciale ou religieuse. Depuis février 2024, un règlement européen oblige les plateformes à retirer les contenus illégaux signalés, sous peine d'amende.",
+      "enDebat": "Les uns veulent supprimer des limites à la liberté d'expression et le contrôle des plateformes, qu'ils jugent proches de la censure. Les autres estiment ces règles nécessaires contre la haine, le harcèlement et la désinformation en ligne.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "La loi de 1881 sur la liberté de la presse",
+          "url": "https://fr.wikipedia.org/wiki/Loi_sur_la_libert%C3%A9_de_la_presse_du_29_juillet_1881",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le règlement européen sur les services numériques",
+          "url": "https://fr.wikipedia.org/wiki/R%C3%A8glement_sur_les_services_num%C3%A9riques",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-fp-6"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "ruralite",
+      "thematiqueId": "societe",
+      "titre": "Les services publics à la campagne",
+      "aujourdhui": "Depuis 2019, les espaces France services aident aux démarches (emploi, retraite, santé, logement). En septembre 2024, on en comptait 2 840, chacun à moins de 30 minutes des habitants. Fin 2024, le déploiement de la fibre optique était achevé à près de 91 %.",
+      "enDebat": "Les uns veulent garder ou rouvrir écoles, transports, soins et réseaux dans chaque territoire, même si cela coûte cher. Les autres préfèrent regrouper les services pour mieux les équiper, et développer les démarches en ligne et les services qui se déplacent.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "France services",
+          "url": "https://fr.wikipedia.org/wiki/France_services",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Le plan France Très Haut Débit",
+          "url": "https://fr.wikipedia.org/wiki/Plan_France_Tr%C3%A8s_Haut_D%C3%A9bit",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-jl-4"
+      ],
+      "lois": [],
+      "enjeux": []
+    },
+    {
+      "id": "enfance-famille",
+      "thematiqueId": "societe",
+      "titre": "L'enfance et la famille",
+      "aujourdhui": "Les allocations familiales sont versées à partir de 2 enfants : en 2026, 152,25 euros par mois pour 2 enfants, sous un plafond de revenus. Depuis une loi de 2022, les jeunes sortis de l'aide sociale à l'enfance sans ressources ni soutien familial suffisants sont accompagnés jusqu'à 21 ans.",
+      "enDebat": "Les uns veulent aider plus tôt et plus longtemps : allocations dès le premier enfant, plus de crèches, jeunes suivis jusqu'à 25 ans, protection de l'enfance en grande cause nationale. Les autres soulignent le coût pour l'État et les départements, et préfèrent cibler les familles les plus aidées.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Allocations familiales",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F13213",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Accompagner les jeunes majeurs vers l'autonomie",
+          "url": "https://solidarites.gouv.fr/accompagner-les-jeunes-majeurs-vers-lautonomie",
+          "editeur": "Ministère des Solidarités",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-kb-3",
+        "prop-ob-8"
+      ],
+      "lois": [
+        "jeunes-majeurs-protection-enfance-2026"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "bioethique",
+      "thematiqueId": "societe",
+      "titre": "L'IVG et la procréation",
+      "aujourdhui": "Le cadre légal de l'IVG date de 1975 ; depuis 2022, le délai est de 14 semaines de grossesse. En 2024, 251 270 IVG ont eu lieu en France. La procréation médicalement assistée (PMA) est encadrée par les lois de bioéthique depuis 1994 ; en 2022, elle a permis près de 27 000 naissances.",
+      "enDebat": "Sur l'IVG, les uns veulent protéger ce droit au plus haut niveau, les autres jugent la loi suffisante et défendent la liberté de conscience. Sur la PMA pour les couples de femmes et les femmes seules, les uns invoquent l'égalité, les autres le droit de l'enfant à avoir un père.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "En 2024, 251 270 IVG ont eu lieu en France",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/250925-ER-ivg-en-france-en-2024",
+          "editeur": "Ministère de la Santé (statistiques)",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'IVG en France",
+          "url": "https://fr.wikipedia.org/wiki/Interruption_volontaire_de_grossesse_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "La PMA en France",
+          "url": "https://fr.wikipedia.org/wiki/Procr%C3%A9ation_m%C3%A9dicalement_assist%C3%A9e_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": false
+        }
+      ],
+      "propositions": [],
+      "lois": [
+        "loi-constitutionnelle-ivg-2024",
+        "bioethique-pma-2019"
+      ],
+      "enjeux": []
+    },
+    {
+      "id": "egalite-salariale",
+      "thematiqueId": "societe",
+      "titre": "L'égalité salariale femmes-hommes",
+      "aujourdhui": "En 2024, dans le privé, les femmes gagnent 14 % de moins que les hommes à temps de travail égal, 3,6 % à emploi comparable. Les entreprises d'au moins 50 salariés publient une note d'égalité sur 100. Un projet de loi doit transposer la directive européenne de 2023 sur la transparence des salaires.",
+      "enDebat": "Les uns veulent des sanctions financières plus fortes contre les entreprises où les écarts persistent. Les autres préfèrent accompagner les entreprises, et estiment qu'une part de l'écart vient des métiers et du temps partiel, pas seulement des salaires à poste égal.",
+      "aJour": "2026-11-06",
+      "liens": [
+        {
+          "titre": "Les écarts de salaire entre femmes et hommes en 2024",
+          "url": "https://insee.fr/fr/statistiques/8743657",
+          "editeur": "Insee",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "L'index de l'égalité professionnelle",
+          "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F35103",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Transparence salariale : le projet de loi présenté",
+          "url": "https://entreprendre.service-public.gouv.fr/actualites/A19060",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        }
+      ],
+      "propositions": [
+        "prop-rg-6"
       ],
       "lois": [],
       "enjeux": []

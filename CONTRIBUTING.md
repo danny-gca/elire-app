@@ -49,6 +49,7 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
     - **l'enjeu** d'un scrutin dit ce que le texte change concrètement (chiffres, et ce qu'il ajoute à un texte voisin déjà voté), pas seulement son nom.
 
     Le build signale aussi les « Précisions » maigres : moins de la moitié de la médiane de leur type (`src/lib/contexte.ts`).14. **Une question une seule fois** : deux questions du paquet (proposition seule, question commune, scrutin) qui se lisent comme la même donnent le sentiment d'y avoir déjà répondu. Le build signale les paires trop proches (`src/lib/doublons.ts`) : on les regroupe dans une question commune, on réécrit l'une pour dire ce qui la distingue, ou on retire la moins utile. Une paire relue et gardée va dans `data/questions-distinctes.json`, avec sa raison.
+15. **Un contexte pour chaque question** : chaque question posée (proposition seule, question commune, scrutin) est rattachée à un repère de `data/reperes.json`, l'onglet « Contexte ». Un repère par sujet, partagé par toutes ses questions : `aujourdhui`, des faits datés et chiffrés tirés de ses liens (au moins une année) ; `enDebat`, les options sans nom et symétriques ; 1 à 3 liens neutres qui en sont les sources, dont au moins un lisible pendant le vote ; `aJour` relu depuis moins de 180 jours (`src/lib/reperes-check.ts`). Il ne dit ni l'auteur d'une proposition ni le résultat d'un scrutin du sujet. Le build signale tout manque, et bloque en `--strict`.
 
 ### Entrée d'un candidat
 

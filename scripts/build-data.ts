@@ -8,6 +8,7 @@ import { z } from 'zod';
 import { contexteStats, thinContexte } from '../src/lib/contexte.ts';
 import { closeQuestions } from '../src/lib/doublons.ts';
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
+import { repereGaps, withoutRepere } from '../src/lib/reperes-check.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
 import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
 import { MIN_WORDS, negativeWording, wordCount } from '../src/lib/wording.ts';
@@ -33,6 +34,7 @@ const CSV_DIR = path.join(DATA_DIR, 'candidats');
 const OUTPUT_FILE = path.join(ROOT_DIR, 'src', 'data', 'dataset.json');
 const REFS_FILE = path.join(DATA_DIR, 'refs.json');
 const STRICT = process.argv.includes('--strict');
+const today = new Date().toISOString().slice(0, 10);
 
 // Élision sans apostrophe : "l énergie", "d achat", "qu il"
 const MISSING_APOSTROPHE = /(?<![\p{L}'’·])(?:[ldnsjmtc]|qu) (?=[aeiouyhàâäéèêëîïôöùûüœ])/iu;
@@ -334,6 +336,7 @@ function main() {
     checkAnonymous(texts.join(' '), anonymity, where);
     checkAcronyms(r.titre, [r.aujourdhui, r.enDebat], glossarySigles, usedSigles, where);
     r.liens.forEach((l) => checkPreciseUrl(l.url, `${where} ${l.titre}`));
+    repereGaps(r, today).forEach((gap) => warnings.push(`${where} : ${gap}`));
   }
 
   // Une question posée deux fois sous deux formes (CONTRIBUTING, règle 14) : à fusionner, réécrire ou déclarer distincte.
@@ -354,7 +357,12 @@ function main() {
     warnings.push(`questions proches (${score.toFixed(2)}) ${a} ${qa.id} « ${qa.text} » / ${b} ${qb.id} « ${qb.text} »`);
   }
 
-  // Carnet de contexte : des « Précisions » maigres face aux autres questions du même type.
+  // Onglet « Contexte » : chaque question posée a son repère (CONTRIBUTING, règle 15).
+  for (const id of withoutRepere(asked.map((q) => q.id), reperes)) {
+    warnings.push(`${refById.get(id)} ${id} : aucun repère, onglet « Contexte » vide (reperes.json)`);
+  }
+
+  // Des « Précisions » maigres face aux autres questions du même type.
   const repereOf = new Map(reperes.flatMap((r) => [...r.propositions, ...r.lois, ...r.enjeux].map((id) => [id, `${r.aujourdhui} ${r.enDebat}`])));
   const contexte = contexteStats([
     ...propositions.filter((p) => !p.enjeuId).map((p) => ({ ref: p.id, kind: 'P' as const, precisions: p.contexte, repere: repereOf.get(p.id) })),
@@ -398,7 +406,7 @@ function main() {
       warnings.push(`glossaire.json ${g.sigle} : sigle employé nulle part`);
     }
   });
-  warnings.push(...programmeReminders(rawCandidats, new Date().toISOString().slice(0, 10)));
+  warnings.push(...programmeReminders(rawCandidats, today));
 
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
   if (warnings.length > 0) {

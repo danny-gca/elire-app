@@ -151,3 +151,17 @@ Signalés sur iPhone, non reproductibles sur le web. Corrigés dans le code, **�
 | Animations réduites : « A voté ! » tout gris, illisible | Avec « Réduire les animations », Reanimated saute chaque `withTiming` à sa fin. Le compte à rebours de 10 s se vidait d'un coup, et le surligneur disparaissait | `ReduceMotion.Never` sur les comptes à rebours : « A voté ! », suite auto d'un scrutin (5 s), trait du haut de l'onboarding |
 | Onboarding : « vous jugez la mesure, pas la personne. » sort de l'écran sur une seule ligne | Cause non trouvée : rien n'empêche le retour à la ligne (espaces normales), et la mise en page est la même qu'Android. Seule la mesure du texte diffère sur iOS | `src/components/sweep-text.tsx` : le titre surligné prend `width: '100%'`, donc une largeur imposée. Correctif défensif |
 | Scrutins : fond un peu sombre derrière la salle (les petits bonhommes) | `shouldRasterizeIOS` sur le calque de la salle, ajouté le 2026-10-20. Seul élément propre à iOS dans ce décor | `src/components/crowd-backdrop.tsx` : rastérisation iOS retirée (iOS compose déjà l'opacité seul), texture Android gardée |
+
+## 5. Un contexte pour chaque question (onglet « Contexte »)
+
+**Avant** : 3 questions sur 220 avaient l'onglet « Contexte ». **Après** : les 220, réparties en 75 sujets (`data/reperes.json`), un sujet par question.
+
+- Chaque repère : « Aujourd'hui » (faits datés et chiffrés), « En débat » (options sans nom, symétriques), 1 à 3 liens neutres qui en sont les sources (171 liens, tous joignables le 2026-11-06 ; 33 masqués pendant le vote parce qu'ils donnent un résultat ou un nom). Longueur médiane : 561 caractères, contre une ou deux phrases avant.
+- Preuves : [feature-20261106-sources-reperes.md](feature-20261106-sources-reperes.md), chaque fait avec la page lue qui le contient.
+- Contrôles du build (`src/lib/reperes-check.ts`, règle 15) : question sans repère, repère sans année, sans source lisible pendant le vote, ou relu il y a plus de 180 jours. Bloquant en `--strict`.
+- Ton : « Les autres rappellent que... » donnait raison à un camp ; remplacé par « estiment que », « mettent en avant ».
+- Résultats des scrutins : les repères décrivent le cadre sans dire l'issue du texte voté. Exception assumée, à valider : la règle en vigueur quand elle découle d'un texte posé (retraites à 64 ans, impôt sur la fortune immobilière).
+
+À relire en priorité (sujets sensibles) : immigration-asile, expulsions, droits-des-etrangers, priorite-nationale, laicite, bioethique, justice-des-mineurs, parlement-gouvernement, defense, ukraine.
+
+Chiffres à confirmer quand la source définitive paraît : budget 2026 de la culture (3,75 milliards, projet) et des armées (57,1 milliards, projet) ; contribution au budget européen (sources divergentes) ; effectifs des sapeurs-pompiers (2021).
