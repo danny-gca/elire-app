@@ -285,5 +285,10 @@
     "sigle": "NF",
     "couleur": "#46B7FF",
     "siteWeb": "https://www.nousfrance.fr"
+  },
+  {
+    "id": "france-libre",
+    "nom": "France Libre",
+    "couleur": "#6B7280"
   }
 ]

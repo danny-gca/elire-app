@@ -43,7 +43,7 @@ export const CORRECTIONS: LegalSection[] = [
   {
     titre: 'Ce qui est publié',
     paragraphes: [
-      "Un candidat est ajouté quand sa candidature est déclarée ou désignée, avec une source datée. Chacun a le même nombre de propositions, choisies parmi les mesures centrales de son programme.",
+      "Un candidat est ajouté quand sa candidature est annoncée ou désignée, avec une source datée. Seule la liste du Conseil constitutionnel, publiée après la validation des 500 parrainages, rend une candidature officielle. Chacun a le même nombre de propositions, choisies parmi les mesures centrales de son programme.",
       "Chaque proposition est une citation exacte, avec son lien. Chaque scrutin est un vote public dont le résultat par député vient des données ouvertes de l'Assemblée, du Sénat ou du Parlement européen.",
       "Les titres résument la citation sans la déformer. élire ne donne aucune consigne de vote.",
     ],

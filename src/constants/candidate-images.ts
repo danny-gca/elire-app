@@ -12,7 +12,6 @@ export const CandidateImages: Record<string, ImageSourcePropType> = {
   'francois-asselineau': require('@/assets/images/candidates/francois-asselineau.jpg'),
   'francois-ruffin': require('@/assets/images/candidates/francois-ruffin.jpg'),
   'gabriel-attal': require('@/assets/images/candidates/gabriel-attal.jpg'),
-  'jean-lassalle': require('@/assets/images/candidates/jean-lassalle.jpg'),
   'jean-luc-melenchon': require('@/assets/images/candidates/jean-luc-melenchon.jpg'),
   'karim-bouamrane': require('@/assets/images/candidates/karim-bouamrane.jpg'),
   'marine-le-pen': require('@/assets/images/candidates/marine-le-pen.jpg'),
@@ -23,4 +22,6 @@ export const CandidateImages: Record<string, ImageSourcePropType> = {
   'olivier-becht': require('@/assets/images/candidates/olivier-becht.jpg'),
   'raphael-glucksmann': require('@/assets/images/candidates/raphael-glucksmann.jpg'),
   'xavier-bertrand': require('@/assets/images/candidates/xavier-bertrand.jpg'),
+  'teddy-riner': require('@/assets/images/candidates/teddy-riner.jpg'),
+  'francis-lalanne': require('@/assets/images/candidates/francis-lalanne.jpg'),
 };

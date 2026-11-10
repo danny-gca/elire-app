@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-06T16:44:39.148Z",
-    "partisCount": 25,
-    "candidatsCount": 25,
+    "generatedAt": "2026-11-10T08:53:48.354Z",
+    "partisCount": 26,
+    "candidatsCount": 27,
     "thematiquesCount": 12,
-    "propositionsCount": 196,
+    "propositionsCount": 191,
     "loisCount": 47,
     "enjeuxCount": 16
   },
@@ -295,6 +295,11 @@
       "sigle": "NF",
       "couleur": "#46B7FF",
       "siteWeb": "https://www.nousfrance.fr"
+    },
+    {
+      "id": "france-libre",
+      "nom": "France Libre",
+      "couleur": "#6B7280"
     }
   ],
   "thematiques": [
@@ -397,7 +402,7 @@
       },
       "programme": {
         "statut": "partiel",
-        "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle.pdf"
+        "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf"
       },
       "parti": "Équinoxe",
       "couleurParti": "#FFD412",
@@ -495,7 +500,9 @@
         "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
       },
       "programme": {
-        "statut": "aucun"
+        "statut": "partiel",
+        "url": "https://www.europe1.fr/politique/budget-2027-marine-le-pen-promet-140-milliards-deuros-nets-deconomies-dici-2032-pour-eviter-a-la-france-le-defaut-de-paiement-1126400",
+        "date": "2026-10-06"
       },
       "parti": "Rassemblement National",
       "couleurParti": "#0D47A1",
@@ -682,25 +689,6 @@
       "sigleParti": "NE"
     },
     {
-      "id": "jean-lassalle",
-      "nom": "Jean Lassalle",
-      "partiId": "resistons",
-      "avatar": "JL",
-      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jean_Lassalle.jpg/330px-Jean_Lassalle.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "biographie": "Président de Résistons !, ancien député des Pyrénées-Atlantiques.",
-      "candidature": {
-        "statut": "pressentie",
-        "date": "2026-07-10",
-        "sourceUrl": "https://www.europe1.fr/politique/presidentielle-jean-lassalle-lance-une-cagnotte-pour-financer-sa-candidature-970134"
-      },
-      "programme": {
-        "statut": "aucun"
-      },
-      "parti": "Résistons !",
-      "couleurParti": "#D97706",
-      "sigleParti": "RES"
-    },
-    {
       "id": "mira-markovic",
       "nom": "Mira Markovic",
       "partiId": "parti-animaliste",
@@ -825,12 +813,8 @@
         "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
       },
       "programme": {
-        "statut": "partiel",
-        "url": "https://becht2027.fr/projet-france/",
-        "annonce": {
-          "date": "2026-11-09",
-          "sourceUrl": "https://becht2027.fr/projet-france/le-livre/"
-        }
+        "statut": "complet",
+        "url": "https://becht2027.fr/projet-france/le-livre/"
       },
       "parti": "Projet France",
       "couleurParti": "#0546A5"
@@ -870,6 +854,55 @@
       "parti": "Nous France",
       "couleurParti": "#46B7FF",
       "sigleParti": "NF"
+    },
+    {
+      "id": "teddy-riner",
+      "nom": "Teddy Riner",
+      "avatar": "TR",
+      "biographie": "Judoka, quintuple champion olympique et onze fois champion du monde, candidat sans parti ni mouvement.",
+      "candidature": {
+        "statut": "declaree",
+        "date": "2026-11-09",
+        "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html"
+      },
+      "programme": {
+        "statut": "aucun"
+      },
+      "parti": "Indépendant",
+      "couleurParti": "#6B7280"
+    },
+    {
+      "id": "francis-lalanne",
+      "nom": "Francis Lalanne",
+      "partiId": "france-libre",
+      "avatar": "FL",
+      "biographie": "Auteur-compositeur-interprète, tête de liste aux élections européennes de 2024.",
+      "candidature": {
+        "statut": "declaree",
+        "date": "2026-08-19",
+        "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-chanteur-francis-lalanne-officiellement-candidat-premier-meeting-vendredi-a-paris_8153588.html"
+      },
+      "programme": {
+        "statut": "aucun"
+      },
+      "parti": "France Libre",
+      "couleurParti": "#6B7280"
+    },
+    {
+      "id": "sylvain-durif",
+      "nom": "Sylvain Durif",
+      "avatar": "SD",
+      "biographie": "Vidéaste et chef d'entreprise, candidat sans parti ni mouvement.",
+      "candidature": {
+        "statut": "declaree",
+        "date": "2026-08-23",
+        "sourceUrl": "https://www.sudradio.fr/politique/qui-est-ce-sylvain-durif-le-christ-cosmique-candidat-a-la-presidentielle-2027"
+      },
+      "programme": {
+        "statut": "aucun"
+      },
+      "parti": "Indépendant",
+      "couleurParti": "#6B7280"
     }
   ],
   "propositions": [
@@ -2064,112 +2097,6 @@
       "contexte": "Déclaration de politique générale. La loi SRU impose aux communes concernées un quart de logements sociaux ; les logements intermédiaires, pour la classe moyenne, y compteraient en partie. Prévoit aussi 30 000 logements en 3 ans dans 20 territoires."
     },
     {
-      "id": "prop-jl-1",
-      "ref": "P-667",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "agriculture",
-      "sujetId": "revenu-agricole",
-      "titre": "Calculer le prix payé aux agriculteurs à partir de leurs coûts de production",
-      "description": "« que les coûts de production des producteurs deviennent la base de la construction du prix »",
-      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1175/AN/967.pdf",
-      "dateDeclaration": "2018-09-10",
-      "typeSource": "prise_de_position",
-      "contexte": "Amendement déposé à l'Assemblée nationale sur la loi EGALIM. Le prix payé aux producteurs serait construit à partir d'indicateurs publics de leurs coûts de production."
-    },
-    {
-      "id": "prop-jl-2",
-      "ref": "P-486",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "sante",
-      "sujetId": "acces-aux-soins",
-      "titre": "Payer les études des soignants qui s'engagent 6 ans dans les territoires qui manquent de médecins",
-      "description": "« Financer les études pour ceux qui s’engagent pour une durée de 6 ans dans les territoires déficitaires. »",
-      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
-      "dateDeclaration": "2022-02-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 4. Prévoit aussi plus de places en faculté de médecine et un hôpital à moins de 40 minutes de route partout."
-    },
-    {
-      "id": "prop-jl-3",
-      "ref": "P-305",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "institutions",
-      "sujetId": "mode-de-scrutin",
-      "titre": "Compter le vote blanc comme un suffrage exprimé à l'élection présidentielle",
-      "description": "« Les bulletins blancs sont décomptés séparément et entrent en compte pour la détermination des suffrages exprimés lors du premier et du second tour. »",
-      "sourceUrl": "https://www.assemblee-nationale.fr/15/pdf/propositions/pion3896.pdf",
-      "dateDeclaration": "2021-02-17",
-      "typeSource": "prise_de_position",
-      "contexte": "Proposition de loi constitutionnelle déposée à l'Assemblée nationale. Si aucun candidat n'obtient la majorité absolue au second tour, blancs compris, l'élection serait annulée et refaite sous 35 jours."
-    },
-    {
-      "id": "prop-jl-4",
-      "ref": "P-672",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "societe",
-      "sujetId": "ruralite",
-      "titre": "Maintenir ou créer écoles, transports, services de santé et réseaux internet dans les campagnes",
-      "description": "« Désenclaver les campagnes par le maintien ou la création d’écoles, transports, services de santé, téléphonie, fibre optique et 4G partout sur le territoire »",
-      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
-      "dateDeclaration": "2022-02-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 8, partie sur les campagnes. Réseaux visés : téléphonie, fibre optique et 4G partout sur le territoire. La mesure ne donne ni calendrier ni budget ; la même partie prévoit 3 milliards d'euros pour les campagnes, déclarées grande cause nationale."
-    },
-    {
-      "id": "prop-jl-5",
-      "ref": "P-491",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "education",
-      "sujetId": "service-national",
-      "titre": "Créer un service national universel pour les jeunes majeurs, militaire ou civil, de septembre à juin",
-      "description": "« Créer un Service national universel, militaire ou civil, du 15 septembre au 15 juin. »",
-      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
-      "dateDeclaration": "2022-02-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 2. Ouvert aux jeunes majeurs, filles et garçons : rudiments du métier de soldat en version militaire, missions dans des associations, écoles ou collectivités en version civile. Ouvrirait la première annuité de retraite ; modalités fixées après étude d'impact."
-    },
-    {
-      "id": "prop-jl-6",
-      "ref": "P-310",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "environnement",
-      "sujetId": "eolien-solaire",
-      "titre": "Soumettre tout projet éolien à l'accord du maire, après consultation des habitants",
-      "description": "« Stopper l’éolien. Il convient dès à présent d’interdire les projets éoliens non validés par les maires, après consultation des habitants. »",
-      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
-      "dateDeclaration": "2022-02-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 3. Prévoit à la place de développer l'énergie solaire (production et stockage) et les énergies de la mer."
-    },
-    {
-      "id": "prop-jl-7",
-      "ref": "P-129",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "economie",
-      "titre": "Baisser la TVA sur les hydrocarbures de 20 % à 5,5 %",
-      "description": "« Baisser la TVA sur les hydrocarbures de 20% à 5,5%. »",
-      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
-      "dateDeclaration": "2022-02-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 6, partie sur la souveraineté économique. Prévoit aussi de porter le SMIC à 1 400 euros net, de maîtriser le prix de l'eau et de l'électricité et de rétablir l'impôt sur la fortune.",
-      "enjeuId": "taxes-carburants",
-      "sens": "pour"
-    },
-    {
-      "id": "prop-jl-8",
-      "ref": "P-392",
-      "candidatId": "jean-lassalle",
-      "thematiqueId": "international",
-      "titre": "Préparer le désengagement de la France de l'Alliance atlantique (OTAN)",
-      "description": "« Préparer notre désengagement de l'OTAN. »",
-      "sourceUrl": "https://resistons-france.fr/wp-content/uploads/2022/03/Programme-A4-V5-25_02_22.pdf",
-      "dateDeclaration": "2022-02-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 11, partie sur la défense et la diplomatie. Prévoit aussi de soumettre l'engagement ou le retrait des forces françaises dans un conflit à un référendum ou à un vote du Parlement, et de créer une Garde nationale.",
-      "enjeuId": "quitter-otan",
-      "sens": "pour"
-    },
-    {
       "id": "prop-jlm-1",
       "ref": "P-762",
       "candidatId": "jean-luc-melenchon",
@@ -2389,19 +2316,6 @@
       "contexte": "Programme présidentiel 2022 en 22 mesures, p. 2. Les peines planchers imposent une peine minimale ; plus aucune réduction ni aménagement de peine possible. Objectif : 85 000 places de prison en 2027."
     },
     {
-      "id": "prop-mlp-2",
-      "ref": "P-766",
-      "candidatId": "marine-le-pen",
-      "thematiqueId": "societe",
-      "sujetId": "priorite-nationale",
-      "titre": "Réserver les allocations familiales aux familles dont au moins un parent est français",
-      "description": "« en application du principe de priorité nationale évoqué plus haut, les allocations familiales seront réservées aux familles dont au moins un des deux parents est français. »",
-      "sourceUrl": "https://web.archive.org/web/20220325180640id_/https://mlafrance.fr/pdfs/manifeste-m-la-france-programme-presidentiel.pdf",
-      "dateDeclaration": "2022-03-25",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 8-9 et 28-29, partie sur la natalité. La « priorité nationale » serait inscrite dans la Constitution par référendum. La même partie prévoit une part fiscale pleine pour le deuxième enfant et un prêt à taux zéro aux jeunes couples."
-    },
-    {
       "id": "prop-mlp-3",
       "ref": "P-947",
       "candidatId": "marine-le-pen",
@@ -2429,32 +2343,6 @@
       "sens": "pour"
     },
     {
-      "id": "prop-mlp-5",
-      "ref": "P-233",
-      "candidatId": "marine-le-pen",
-      "thematiqueId": "institutions",
-      "sujetId": "referendum",
-      "titre": "Instaurer le référendum d'initiative citoyenne et la proportionnelle",
-      "description": "« Instaurer le Referendum d'Initiative Citoyenne et mettre en place la proportionnelle. »",
-      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
-      "dateDeclaration": "2022-02-04",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022 en 22 mesures, mesure 11, p. 5. Le référendum d'initiative citoyenne permet aux citoyens de déclencher un vote par pétition ; à la proportionnelle, les sièges sont répartis selon le score de chaque liste. Les élections concernées ne sont pas précisées."
-    },
-    {
-      "id": "prop-mlp-6",
-      "ref": "P-590",
-      "candidatId": "marine-le-pen",
-      "thematiqueId": "logement",
-      "sujetId": "priorite-nationale",
-      "titre": "Donner la priorité aux Français pour les logements sociaux",
-      "description": "« Assurer la priorité nationale d'accès au logement social et à l'emploi. »",
-      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
-      "dateDeclaration": "2022-02-04",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022 en 22 mesures, mesure 1, p. 2. La priorité nationale vaudrait aussi pour l'emploi. La même mesure réserve les aides sociales aux Français et conditionne les prestations de solidarité à 5 ans de travail en France."
-    },
-    {
       "id": "prop-mlp-7",
       "ref": "P-770",
       "candidatId": "marine-le-pen",
@@ -2469,17 +2357,56 @@
       "sens": "pour"
     },
     {
-      "id": "prop-mlp-8",
-      "ref": "P-579",
+      "id": "prop-mlp-9",
+      "ref": "P-760",
       "candidatId": "marine-le-pen",
-      "thematiqueId": "sante",
-      "sujetId": "hopital-public",
-      "titre": "Lancer un plan d'urgence santé de 20 milliards d'euros et stopper les fermetures de lits et maternités",
-      "description": "« Lancer un plan de soutien d'urgence pour la santé de 20 milliards d'euros. [...] Arrêter les fermetures des lits à l'hôpital public et des maternités. »",
-      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
-      "dateDeclaration": "2022-02-04",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022 en 22 mesures, mesure 14, p. 6. Prévoit aussi de revaloriser les salaires des soignants, des incitations financières contre les déserts médicaux et la suppression des agences régionales de santé."
+      "thematiqueId": "travail",
+      "sujetId": "retraites",
+      "titre": "Partir à 60 ans avec 40 annuités si l'on a commencé avant 20 ans, sinon progressivement à 62 ans avec 42",
+      "description": "« Elle permettrait à ceux qui ont commencé à travailler avant 20 ans de bénéficier d'un âge légal de départ à 60 ans avec 40 annuités. Et ceux qui ont commencé après 20 ans iraient progressivement jusqu'à 62 ans avec 42 annuités. »",
+      "sourceUrl": "https://www.europe1.fr/politique/en-direct-interdiction-du-voile-ia-exclusion-des-eleves-responsables-de-degradations-ce-quil-faut-retenir-de-linterview-de-marine-le-pen-dans-objectif-elysee-2027-1151948",
+      "dateDeclaration": "2026-10-15",
+      "typeSource": "prise_de_position",
+      "contexte": "Interview radio et télévisée rapportée par Europe 1. La mesure fait partie d'une nouvelle réforme des retraites annoncée pour le 17 novembre. Les annuités sont les années de cotisation ; l'âge légal est l'âge à partir duquel on peut partir."
+    },
+    {
+      "id": "prop-mlp-11",
+      "ref": "P-103",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "logement",
+      "sujetId": "priorite-nationale",
+      "titre": "Donner aux Français la priorité d'accès aux logements sociaux",
+      "description": "« donner la priorité d'accès au logement social aux Français »",
+      "sourceUrl": "https://www.cnews.fr/france/2026-09-13/presidentielle-2027-priorite-nationale-abrogation-de-la-loi-sru-ce-quil-faut",
+      "dateDeclaration": "2026-09-13",
+      "typeSource": "prise_de_position",
+      "contexte": "Discours de rentrée consacré au logement, rapporté par CNews. Même priorité pour les logements étudiants ; expulsion des « familles délinquantes » des logements sociaux et abrogation de la loi SRU, qui impose un minimum de logements sociaux à certaines communes."
+    },
+    {
+      "id": "prop-mlp-12",
+      "ref": "P-822",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "societe",
+      "sujetId": "laicite",
+      "titre": "Interdire le voile par décret dans les universités, sorties scolaires, fédérations sportives et bâtiments publics",
+      "description": "« L'objectif sera d'interdire le voile [...] par décret, tout de suite, juste après le vote de ce référendum, dans les universités, les sorties scolaires, les fédérations sportives, les bâtiments publics »",
+      "sourceUrl": "https://www.lagazettefrance.fr/article/interdiction-du-voile-le-pen-veut-le-faire-de-maniere-progressive",
+      "dateDeclaration": "2026-09-16",
+      "typeSource": "prise_de_position",
+      "contexte": "Interview télévisée rapportée par l'AFP. Le référendum porterait sur la lutte contre les idéologies islamistes : financements, mosquées radicales, imams, interdiction des Frères musulmans. Il suivrait un premier référendum, constitutionnel, sur l'immigration."
+    },
+    {
+      "id": "prop-mlp-14",
+      "ref": "P-108",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "institutions",
+      "sujetId": "mode-de-scrutin",
+      "titre": "Instaurer un mode de scrutin proportionnel avec une prime majoritaire",
+      "description": "« Nous établirons un mode de scrutin proportionnel avec une prime majoritaire »",
+      "sourceUrl": "https://actu.orange.fr/videos/politique/nous-etablirons-un-mode-de-scrutin-proportionnel-avec-une-prime-majoritaire-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle-CNT000002tnSdf.html",
+      "dateDeclaration": "2026-10-25",
+      "typeSource": "prise_de_position",
+      "contexte": "Extrait vidéo d'un discours au congrès d'un parti, diffusé par Orange Actualités. À la proportionnelle, les sièges suivent les voix ; la prime majoritaire ajoute des sièges à la liste arrivée en tête. La page ne précise pas l'élection concernée."
     },
     {
       "id": "prop-mt-1",
@@ -3292,6 +3219,45 @@
       "dateDeclaration": "2026-03-01",
       "typeSource": "prise_de_position",
       "contexte": "Interview au Matin d'Algérie, republiée sur le site de l'organisation, avant la désignation pour la présidentielle. Citée avec la régularisation des sans-papiers et la libre circulation ; le type d'élection concerné n'est pas précisé."
+    },
+    {
+      "id": "prop-tr-1",
+      "ref": "P-835",
+      "candidatId": "teddy-riner",
+      "thematiqueId": "economie",
+      "sujetId": "smic-salaires",
+      "titre": "Augmenter le salaire net en réduisant les charges sur les salaires",
+      "description": "« augmenter le salaire net, réduire l'écart avec le brut » ; « allégements de charges »",
+      "sourceUrl": "https://www.parismatch.be/actualites/people/2026/11/09/jai-pris-conscience-que-je-devais-apporter-ma-pierre-a-ledifice-le-judoka-teddy-riner-est-officiellement-candidat-a-la-presidentielle-francaise-25WU54Y6GFC3XET6O7WVJDDNSQ/",
+      "dateDeclaration": "2026-11-09",
+      "typeSource": "prise_de_position",
+      "contexte": "Entretien de déclaration de candidature rapporté par la presse. Moyen avancé : alléger les charges pesant sur les salaires pour réduire l'écart entre brut et net. Montant et financement non précisés à ce stade."
+    },
+    {
+      "id": "prop-tr-2",
+      "ref": "P-654",
+      "candidatId": "teddy-riner",
+      "thematiqueId": "travail",
+      "sujetId": "temps-de-travail",
+      "titre": "Permettre à ceux qui le veulent de travailler plus, sans supprimer les 35 heures",
+      "description": "« Je veux aussi permettre aux Français qui le veulent d'augmenter leurs revenus en travaillant plus. » ; « En sortant du carcan figé des 35 heures, mais sans le remettre en question »",
+      "sourceUrl": "https://www.parismatch.be/actualites/people/2026/11/09/jai-pris-conscience-que-je-devais-apporter-ma-pierre-a-ledifice-le-judoka-teddy-riner-est-officiellement-candidat-a-la-presidentielle-francaise-25WU54Y6GFC3XET6O7WVJDDNSQ/",
+      "dateDeclaration": "2026-11-09",
+      "typeSource": "prise_de_position",
+      "contexte": "Entretien de déclaration de candidature rapporté par la presse. La durée légale de 35 heures resterait la référence, avec plus de souplesse pour ceux qui veulent travailler davantage. Modalités non précisées à ce stade."
+    },
+    {
+      "id": "prop-tr-3",
+      "ref": "P-473",
+      "candidatId": "teddy-riner",
+      "thematiqueId": "travail",
+      "sujetId": "retraites",
+      "titre": "Adapter les retraites à la démographie, en gardant le système par répartition",
+      "description": "« en prenant compte de la démographie, tout en gardant notre système solidaire par répartition »",
+      "sourceUrl": "https://lcp.fr/actualites/le-judoka-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-de-2027-444920",
+      "dateDeclaration": "2026-11-09",
+      "typeSource": "prise_de_position",
+      "contexte": "Entretien de déclaration de candidature rapporté par la presse parlementaire. La réforme s'appuierait sur des critères de pénibilité et n'exclut pas une part de capitalisation. Âge de départ non précisé."
     },
     {
       "id": "prop-xb-1",
@@ -7133,12 +7099,6 @@
           "explication": "A voté contre.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
         },
-        "jean-lassalle": {
-          "position": "contre",
-          "typeVote": "individuel",
-          "explication": "A voté contre.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
-        },
         "marine-le-pen": {
           "position": "abstention",
           "typeVote": "individuel",
@@ -7214,12 +7174,6 @@
           "explication": "A voté contre.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
         },
-        "jean-lassalle": {
-          "position": "contre",
-          "typeVote": "individuel",
-          "explication": "A voté contre.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
-        },
         "marine-le-pen": {
           "position": "pour",
           "typeVote": "individuel",
@@ -7287,12 +7241,6 @@
           "position": "pour",
           "typeVote": "individuel",
           "explication": "A voté pour.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
-        },
-        "jean-lassalle": {
-          "position": "contre",
-          "typeVote": "individuel",
-          "explication": "A voté contre.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
         },
         "marine-le-pen": {
@@ -7370,12 +7318,6 @@
           "explication": "A voté contre.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
         },
-        "jean-lassalle": {
-          "position": "contre",
-          "typeVote": "individuel",
-          "explication": "A voté contre.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
-        },
         "marine-le-pen": {
           "position": "contre",
           "typeVote": "individuel",
@@ -7446,12 +7388,6 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
         },
         "francois-ruffin": {
-          "position": "contre",
-          "typeVote": "individuel",
-          "explication": "A voté contre.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
-        },
-        "jean-lassalle": {
           "position": "contre",
           "typeVote": "individuel",
           "explication": "A voté contre.",
@@ -7720,10 +7656,6 @@
         {
           "propositionId": "prop-jlm-6",
           "sens": "pour"
-        },
-        {
-          "propositionId": "prop-jl-8",
-          "sens": "pour"
         }
       ],
       "ref": "E-04"
@@ -7797,10 +7729,6 @@
       "question": "Baisser les taxes sur l'essence et le gazole pour faire baisser leur prix à la pompe",
       "enjeu": "Réduire la TVA ou les taxes payées sur l'essence et le gazole pour faire baisser leur prix à la pompe.",
       "positions": [
-        {
-          "propositionId": "prop-jl-7",
-          "sens": "pour"
-        },
         {
           "propositionId": "prop-mlp-4",
           "sens": "pour"

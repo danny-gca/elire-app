@@ -38,7 +38,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 
 ## Evidence on Hand
 
-- Données éditoriales : data/candidats/\*.csv (196 propositions vérifiées, 8 par candidat pour 21 d'entre eux, 25 candidats, chacun avec la source datée de sa candidature et le statut de son programme 2027 ; chaque proposition dit son type de source), data/enjeux.json (16 questions communes qui réunissent 39 propositions), data/lois.json (47 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen), data/sujets.json (75 sujets, l'onglet « Contexte » de chaque question : faits datés, options en débat, sources), data/mots.json (60 mots techniques expliqués).
+- Données éditoriales : data/candidats/\*.csv (191 propositions vérifiées, 8 par candidat pour 20 d'entre eux, 27 candidats, chacun avec la source datée de sa candidature et le statut de son programme 2027 ; chaque proposition dit son type de source), data/enjeux.json (16 questions communes qui réunissent 37 propositions), data/lois.json (47 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen), data/sujets.json (75 sujets, l'onglet « Contexte » de chaque question : faits datés, options en débat, sources), data/mots.json (60 mots techniques expliqués).
 - Qualité des sources : chaque proposition renvoie à un document précis qui la contient (vérification du 2026-10-13, docs/verification-donnees.md). Plusieurs mesures viennent de programmes 2022, faute de programme 2027 publié.
 - Charte graphique : src/constants/theme.ts, logo vectoriel assets/brand/mark.svg, contrat de direction .impeccable/surfaces/src-app-tabs-index-tsx.md.
 

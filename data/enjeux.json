@@ -42,8 +42,7 @@
     "positions": [
       { "propositionId": "prop-fro-7", "sens": "pour" },
       { "propositionId": "prop-fa-2", "sens": "pour" },
-      { "propositionId": "prop-jlm-6", "sens": "pour" },
-      { "propositionId": "prop-jl-8", "sens": "pour" }
+      { "propositionId": "prop-jlm-6", "sens": "pour" }
     ]
   },
   {
@@ -88,7 +87,6 @@
     "question": "Baisser les taxes sur l'essence et le gazole pour faire baisser leur prix à la pompe",
     "enjeu": "Réduire la TVA ou les taxes payées sur l'essence et le gazole pour faire baisser leur prix à la pompe.",
     "positions": [
-      { "propositionId": "prop-jl-7", "sens": "pour" },
       { "propositionId": "prop-mlp-4", "sens": "pour" },
       { "propositionId": "prop-np-2", "sens": "pour" }
     ]

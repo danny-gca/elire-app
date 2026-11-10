@@ -2921,12 +2921,6 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
       },
-      "jean-lassalle": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
-      },
       "marine-le-pen": {
         "position": "abstention",
         "typeVote": "individuel",
@@ -3001,12 +2995,6 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
       },
-      "jean-lassalle": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
-      },
       "marine-le-pen": {
         "position": "pour",
         "typeVote": "individuel",
@@ -3073,12 +3061,6 @@
         "position": "pour",
         "typeVote": "individuel",
         "explication": "A voté pour.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
-      },
-      "jean-lassalle": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
       },
       "marine-le-pen": {
@@ -3155,12 +3137,6 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
       },
-      "jean-lassalle": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
-      },
       "marine-le-pen": {
         "position": "contre",
         "typeVote": "individuel",
@@ -3230,12 +3206,6 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
       },
       "francois-ruffin": {
-        "position": "contre",
-        "typeVote": "individuel",
-        "explication": "A voté contre.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
-      },
-      "jean-lassalle": {
         "position": "contre",
         "typeVote": "individuel",
         "explication": "A voté contre.",

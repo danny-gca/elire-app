@@ -56,7 +56,7 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - Verdict : **confirmée**, **reformulée** (titre ou citation corrigés selon la source) ou **retirée** (introuvable).
 
 **Candidat** (`data/candidats.json`)
-- Candidature déclarée ou désignation officielle, avec une source datée ; sinon le signaler.
+- Candidature annoncée (`declaree`) ou désignée par le parti, avec une source datée ; sinon le signaler. `officielle` seulement si le candidat figure sur la liste publiée par le Conseil constitutionnel.
 - `programme` : `complet` seulement si un programme 2027 entier est publié (l'`url` y mène), `partiel` pour des premières mesures, un dépliant ou un site en cours, sinon `aucun` ; `date` seulement si la source la donne. Une publication annoncée à une date précise (programme complet, livret) va dans `annonce` (`date`, `sourceUrl` qui la cite) : une fois la date passée, le build la rappelle jusqu'à la mise à jour de `programme` et le retrait d'`annonce`.
 - Parti et biographie factuels et neutres.
 - Photo : fichier exact sur Wikimedia Commons sous CC0, CC BY ou CC BY-SA, crédité dans `src/constants/credits.ts`. « Tous droits réservés » : pas de photo, initiales.

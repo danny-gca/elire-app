@@ -218,8 +218,8 @@ function main() {
   thematiques.forEach((t) => checkText(t.titre + ' ' + t.description, `thematiques.json ${t.id}`));
 
   const candidats: Candidat[] = rawCandidats.map((c) => {
-    const parti = partisById.get(c.partiId);
-    if (!parti) {
+    const parti = c.partiId ? partisById.get(c.partiId) : undefined;
+    if (c.partiId && !parti) {
       errors.push(`candidats.json ${c.id} : parti inconnu "${c.partiId}"`);
     }
     checkText(c.biographie, `candidats.json ${c.id}`);

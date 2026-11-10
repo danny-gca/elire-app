@@ -58,7 +58,7 @@ Tout est dans [data/](data/), sous licence libre, lisible directement sur GitHub
 | Candidat | Parti | Propositions | Programme 2027 |
 | --- | --- | --- | --- |
 | [Anasse Kazib](data/candidats/anasse-kazib.csv) | RP | 8 | Partiel |
-| [Antoine Mikolajczak](data/candidats/antoine-mikolajczak.csv) | EQX | 8 | Partiel, complet annoncé le 2 novembre 2026 |
+| [Antoine Mikolajczak](data/candidats/antoine-mikolajczak.csv) | EQX | 8 | Partiel |
 | [Bruno Retailleau](data/candidats/bruno-retailleau.csv) | LR | 8 | Partiel |
 | [David Lisnard](data/candidats/david-lisnard.csv) | NE | 7 | Complet |
 | [Delphine Batho](data/candidats/delphine-batho.csv) | GE | 8 | Aucun |
@@ -66,21 +66,23 @@ Tout est dans [data/](data/), sous licence libre, lisible directement sur GitHub
 | [Éric Zemmour](data/candidats/eric-zemmour.csv) | REC | 8 | Aucun |
 | [Fabien Roussel](data/candidats/fabien-roussel.csv) | PCF | 7 | Aucun |
 | [Florian Philippot](data/candidats/florian-philippot.csv) | LP | 8 | Complet |
+| Francis Lalanne | France Libre | 0 | Aucun |
 | [François Asselineau](data/candidats/francois-asselineau.csv) | UPR | 8 | Aucun |
 | [François Ruffin](data/candidats/francois-ruffin.csv) | DEBOUT | 8 | Partiel |
 | [Gabriel Attal](data/candidats/gabriel-attal.csv) | REN | 8 | Aucun |
-| [Jean Lassalle](data/candidats/jean-lassalle.csv) | RES | 8 | Aucun |
 | [Jean-Luc Mélenchon](data/candidats/jean-luc-melenchon.csv) | LFI | 8 | Complet, nouvelle édition annoncée le 6 novembre 2026 |
 | [Karim Bouamrane](data/candidats/karim-bouamrane.csv) | FHuF | 8 | Partiel |
-| [Marine Le Pen](data/candidats/marine-le-pen.csv) | RN | 8 | Aucun |
+| [Marine Le Pen](data/candidats/marine-le-pen.csv) | RN | 8 | Partiel |
 | [Marine Tondelier](data/candidats/marine-tondelier.csv) | EELV | 8 | Complet |
 | [Mira Markovic](data/candidats/mira-markovic.csv) | PA | 8 | Aucun |
 | [Natacha Polony](data/candidats/natacha-polony.csv) | Nous sommes la France | 8 | Partiel |
 | [Nathalie Arthaud](data/candidats/nathalie-arthaud.csv) | LO | 8 | Partiel |
 | [Nicolas Dupont-Aignan](data/candidats/nicolas-dupont-aignan.csv) | DLF | 8 | Partiel |
-| [Olivier Becht](data/candidats/olivier-becht.csv) | Projet France | 8 | Partiel, complet annoncé le 9 novembre 2026 |
+| [Olivier Becht](data/candidats/olivier-becht.csv) | Projet France | 8 | Complet |
 | [Raphaël Glucksmann](data/candidats/raphael-glucksmann.csv) | PP-PS | 8 | Aucun |
 | [Selma Labib](data/candidats/selma-labib.csv) | NPA-R | 8 | Partiel |
+| Sylvain Durif | Indépendant | 0 | Aucun |
+| [Teddy Riner](data/candidats/teddy-riner.csv) | Indépendant | 3 | Aucun |
 | [Xavier Bertrand](data/candidats/xavier-bertrand.csv) | NF | 8 | Aucun |
 
 ## Une erreur ? Une idée ?

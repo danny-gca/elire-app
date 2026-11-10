@@ -12,7 +12,7 @@
     },
     "programme": {
       "statut": "partiel",
-      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle.pdf"
+      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf"
     }
   },
   {
@@ -95,7 +95,9 @@
       "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://www.europe1.fr/politique/budget-2027-marine-le-pen-promet-140-milliards-deuros-nets-deconomies-dici-2032-pour-eviter-a-la-france-le-defaut-de-paiement-1126400",
+      "date": "2026-10-06"
     }
   },
   {
@@ -252,22 +254,6 @@
     }
   },
   {
-    "id": "jean-lassalle",
-    "nom": "Jean Lassalle",
-    "partiId": "resistons",
-    "avatar": "JL",
-    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jean_Lassalle.jpg/330px-Jean_Lassalle.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Président de Résistons !, ancien député des Pyrénées-Atlantiques.",
-    "candidature": {
-      "statut": "pressentie",
-      "date": "2026-07-10",
-      "sourceUrl": "https://www.europe1.fr/politique/presidentielle-jean-lassalle-lance-une-cagnotte-pour-financer-sa-candidature-970134"
-    },
-    "programme": {
-      "statut": "aucun"
-    }
-  },
-  {
     "id": "mira-markovic",
     "nom": "Mira Markovic",
     "partiId": "parti-animaliste",
@@ -374,12 +360,8 @@
       "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
     },
     "programme": {
-      "statut": "partiel",
-      "url": "https://becht2027.fr/projet-france/",
-      "annonce": {
-        "date": "2026-11-09",
-        "sourceUrl": "https://becht2027.fr/projet-france/le-livre/"
-      }
+      "statut": "complet",
+      "url": "https://becht2027.fr/projet-france/le-livre/"
     }
   },
   {
@@ -408,6 +390,49 @@
       "statut": "declaree",
       "date": "2026-08-27",
       "sourceUrl": "https://lcp.fr/actualites/2027-figure-de-la-droite-xavier-bertrand-confirme-qu-il-sera-candidat-a-l-election"
+    },
+    "programme": {
+      "statut": "aucun"
+    }
+  },
+  {
+    "id": "teddy-riner",
+    "nom": "Teddy Riner",
+    "avatar": "TR",
+    "biographie": "Judoka, quintuple champion olympique et onze fois champion du monde, candidat sans parti ni mouvement.",
+    "candidature": {
+      "statut": "declaree",
+      "date": "2026-11-09",
+      "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html"
+    },
+    "programme": {
+      "statut": "aucun"
+    }
+  },
+  {
+    "id": "francis-lalanne",
+    "nom": "Francis Lalanne",
+    "partiId": "france-libre",
+    "avatar": "FL",
+    "biographie": "Auteur-compositeur-interprète, tête de liste aux élections européennes de 2024.",
+    "candidature": {
+      "statut": "declaree",
+      "date": "2026-08-19",
+      "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-chanteur-francis-lalanne-officiellement-candidat-premier-meeting-vendredi-a-paris_8153588.html"
+    },
+    "programme": {
+      "statut": "aucun"
+    }
+  },
+  {
+    "id": "sylvain-durif",
+    "nom": "Sylvain Durif",
+    "avatar": "SD",
+    "biographie": "Vidéaste et chef d'entreprise, candidat sans parti ni mouvement.",
+    "candidature": {
+      "statut": "declaree",
+      "date": "2026-08-23",
+      "sourceUrl": "https://www.sudradio.fr/politique/qui-est-ce-sylvain-durif-le-christ-cosmique-candidat-a-la-presidentielle-2027"
     },
     "programme": {
       "statut": "aucun"

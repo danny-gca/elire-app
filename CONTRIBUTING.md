@@ -55,7 +55,7 @@ Les données éditoriales sont dans `data/`, éditées à la main. `src/data/dat
 ### Entrée d'un candidat
 
 - Chaque candidat a un `programme` dans `data/candidats.json` : `complet` (programme 2027 publié en entier), `partiel` (premières mesures, dépliant, site en cours) ou `aucun` ; `url` obligatoire sauf pour `aucun`, `date` seulement si la source la donne. Une publication annoncée à une date précise (programme complet, livret) va dans `annonce` (`date`, `sourceUrl` qui la cite) : une fois la date passée, le build la rappelle jusqu'à la mise à jour de `programme` et le retrait d'`annonce`.
-- Un candidat entre quand sa candidature est **déclarée** (annonce publique par la personne) ou **désignée** (vote ou décision officielle de son parti), avec une source datée. « Pressenti » ou « envisage » ne suffit pas.
+- Un candidat entre quand sa candidature est **annoncée** (`declaree` : annonce publique par la personne) ou **désignée** (vote ou décision officielle de son parti), avec une source datée. « Pressenti » ou « envisage » ne suffit pas. Elle devient `officielle` (date et lien de la liste) seulement quand le Conseil constitutionnel publie la liste des candidats, après validation des 500 parrainages ; avant, aucune candidature n'est officielle.
 - Il sort s'il se retire ou s'il est remplacé ; ses propositions restent dans l'historique du dépôt.
 - Chaque nouveau candidat arrive avec le même nombre de propositions que les autres.
 

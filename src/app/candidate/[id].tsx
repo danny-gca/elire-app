@@ -123,8 +123,8 @@ export default function CandidateScreen() {
       ) : (
         <Text style={[Type.label, styles.muted]}>{programmeText(candidat.programme)}</Text>
       )}
-      {parti && (
-        <Pressable onPress={() => Linking.openURL(parti.siteWeb)} accessibilityRole="link" hitSlop={8} style={styles.link}>
+      {parti?.siteWeb && (
+        <Pressable onPress={() => Linking.openURL(parti.siteWeb!)} accessibilityRole="link" hitSlop={8} style={styles.link}>
           <Text style={[Type.labelStrong, styles.underline]}>Site du parti · {new URL(parti.siteWeb).hostname.replace(/^www\./, '')}</Text>
         </Pressable>
       )}
