@@ -179,5 +179,16 @@
       { "propositionId": "prop-ga-6", "sens": "pour" },
       { "propositionId": "prop-xb-7", "sens": "pour" }
     ]
+  },
+  {
+    "id": "economies-deficit",
+    "thematiqueId": "economie",
+    "sujetId": "depenses-dette",
+    "question": "Réduire fortement les dépenses publiques pour ramener le déficit sous 3 % de la richesse produite avant 2032",
+    "enjeu": "Le déficit public était de 5,1 % de la richesse produite en 2025 (152,5 milliards d'euros). Il s'agit de le ramener sous 3 % surtout en baissant les dépenses de l'État, des collectivités ou de la protection sociale.",
+    "positions": [
+      { "propositionId": "prop-ga-13", "sens": "pour" },
+      { "propositionId": "prop-mlp-15", "sens": "pour" }
+    ]
   }
 ]

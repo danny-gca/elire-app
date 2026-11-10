@@ -28,7 +28,9 @@
       "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://glucks2027.fr/revolution-ecologique/",
+      "date": "2026-11-09"
     }
   },
   {
@@ -79,8 +81,8 @@
     },
     "programme": {
       "statut": "complet",
-      "url": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "date": "2025-02-18"
+      "url": "https://melenchon2027.fr/programme/livre/",
+      "date": "2026-11-06"
     }
   },
   {
@@ -183,7 +185,8 @@
       "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://www.ericzemmour.fr/priorites"
     }
   },
   {
@@ -433,7 +436,7 @@
     "candidature": {
       "statut": "annoncee",
       "date": "2026-08-23",
-      "sourceUrl": "https://www.sudradio.fr/politique/qui-est-ce-sylvain-durif-le-christ-cosmique-candidat-a-la-presidentielle-2027"
+      "sourceUrl": "https://fr.wikipedia.org/wiki/Sylvain_Durif"
     },
     "programme": {
       "statut": "aucun"

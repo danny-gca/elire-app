@@ -231,7 +231,13 @@
     "prop-ga-11": 712,
     "prop-ga-12": 170,
     "prop-ga-13": 351,
-    "prop-ga-14": 708
+    "prop-ga-14": 708,
+    "prop-rg-9": 482,
+    "prop-rg-10": 242,
+    "prop-rg-11": 963,
+    "prop-ez-9": 414,
+    "prop-ez-10": 694,
+    "prop-mlp-15": 827
   },
   "lois": {
     "loi-energies-renouvelables-2023": 1,
@@ -305,6 +311,7 @@
     "peines-planchers": 14,
     "soins-rembourses": 15,
     "prix-minimum-agricole": 16,
-    "normes-agricoles": 17
+    "normes-agricoles": 17,
+    "economies-deficit": 18
   }
 }

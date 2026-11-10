@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-10T21:09:30.049Z",
+    "generatedAt": "2026-11-10T21:58:57.794Z",
     "partisCount": 26,
     "candidatsCount": 27,
     "thematiquesCount": 12,
     "propositionsCount": 195,
     "loisCount": 47,
-    "enjeuxCount": 16
+    "enjeuxCount": 17
   },
   "partis": [
     {
@@ -421,7 +421,9 @@
         "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
       },
       "programme": {
-        "statut": "aucun"
+        "statut": "partiel",
+        "url": "https://glucks2027.fr/revolution-ecologique/",
+        "date": "2026-11-09"
       },
       "parti": "Place Publique / PS",
       "couleurParti": "#D81B60",
@@ -481,8 +483,8 @@
       },
       "programme": {
         "statut": "complet",
-        "url": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-        "date": "2025-02-18"
+        "url": "https://melenchon2027.fr/programme/livre/",
+        "date": "2026-11-06"
       },
       "parti": "La France Insoumise",
       "couleurParti": "#C62828",
@@ -603,7 +605,8 @@
         "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
       },
       "programme": {
-        "statut": "aucun"
+        "statut": "partiel",
+        "url": "https://www.ericzemmour.fr/priorites"
       },
       "parti": "Reconquête",
       "couleurParti": "#1E1B4B",
@@ -897,7 +900,7 @@
       "candidature": {
         "statut": "annoncee",
         "date": "2026-08-23",
-        "sourceUrl": "https://www.sudradio.fr/politique/qui-est-ce-sylvain-durif-le-christ-cosmique-candidat-a-la-presidentielle-2027"
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Sylvain_Durif"
       },
       "programme": {
         "statut": "aucun"
@@ -1546,19 +1549,6 @@
       "sens": "pour"
     },
     {
-      "id": "prop-ez-3",
-      "ref": "P-424",
-      "candidatId": "eric-zemmour",
-      "thematiqueId": "economie",
-      "sujetId": "impots-entreprises",
-      "titre": "Baisser de 30 milliards d'euros les impôts de production des entreprises",
-      "description": "« une baisse des impôts de production sur les entreprises, à hauteur de 30 milliards d'euros »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
-      "dateDeclaration": "2022-03-23",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, rapporté par Public Sénat. Les impôts de production sont payés par les entreprises quel que soit leur bénéfice. Prévoit aussi d'exonérer d'impôt et de charges les heures supplémentaires."
-    },
-    {
       "id": "prop-ez-4",
       "ref": "P-957",
       "candidatId": "eric-zemmour",
@@ -1570,19 +1560,6 @@
       "dateDeclaration": "2022-03-23",
       "typeSource": "programme_anterieur",
       "contexte": "Programme présidentiel 2022, rapporté par Public Sénat. Une loi votée après un traité l'emporterait sur lui, ce qui permettrait d'appliquer d'autres mesures contraires au droit international, comme la fin du regroupement familial."
-    },
-    {
-      "id": "prop-ez-5",
-      "ref": "P-238",
-      "candidatId": "eric-zemmour",
-      "thematiqueId": "logement",
-      "sujetId": "logement-social",
-      "titre": "Supprimer le quota de logements sociaux imposé aux communes (loi SRU)",
-      "description": "« la loi SRU sera abrogée et les étrangers interdits d'accès aux logements sociaux »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
-      "dateDeclaration": "2022-03-23",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, rapporté par Public Sénat. La loi SRU oblige les communes concernées à avoir un minimum de logements sociaux ; le programme prévoit aussi d'interdire aux étrangers l'accès aux logements sociaux."
     },
     {
       "id": "prop-ez-6",
@@ -1622,6 +1599,30 @@
       "contexte": "Fiche programme défense de la présidentielle 2022, p. 1. Prévoit aussi de sortir du commandement militaire intégré de l'Alliance atlantique, de se doter à terme de 2 porte-avions et d'augmenter de 20 % la solde des militaires dès 2023.",
       "enjeuId": "budget-defense",
       "sens": "pour"
+    },
+    {
+      "id": "prop-ez-9",
+      "ref": "P-414",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "economie",
+      "sujetId": "smic-salaires",
+      "titre": "Supprimer la contribution sociale généralisée (CSG) pour augmenter de 10 % les revenus des actifs",
+      "description": "« 10 % de hausse de revenus pour tous les actifs avec la suppression de la CSG »",
+      "sourceUrl": "https://www.ericzemmour.fr/priorites",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, priorité sur la baisse des dépenses et des impôts. Prévoit aussi 40 centimes de baisse des taxes sur les carburants et la fin des droits de succession et de l'impôt sur la fortune."
+    },
+    {
+      "id": "prop-ez-10",
+      "ref": "P-694",
+      "candidatId": "eric-zemmour",
+      "thematiqueId": "logement",
+      "sujetId": "priorite-nationale",
+      "titre": "Réserver aux Français le logement social, les allocations familiales et les aides sociales non contributives",
+      "description": "« Réserver les aides sociales non-contributives, les allocations familiales et le logement social aux Français. »",
+      "sourceUrl": "https://www.ericzemmour.fr/priorites",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, priorité sur la préférence nationale. Prévoit aussi de supprimer l'aide médicale d'État, qui prend en charge les soins des étrangers en situation irrégulière."
     },
     {
       "id": "prop-fro-1",
@@ -2113,13 +2114,14 @@
       "ref": "P-351",
       "candidatId": "gabriel-attal",
       "thematiqueId": "economie",
-      "sujetId": "depenses-dette",
       "titre": "Ramener le déficit public sous 3 % avant 2032, avec 150 milliards d'euros d'économies",
       "description": "« Repasser sous les 3 % avant 2032 exige 150 milliards d'euros d'économies, dont les deux tiers sur les dépenses sociales. »",
       "sourceUrl": "https://attalpresident.fr/programme/mesures/deficit-sous-trois-pour-cent",
       "dateDeclaration": "2026-07-03",
       "typeSource": "programme_2027",
-      "contexte": "Site de campagne, mesure annoncée dans la presse. Le déficit devrait atteindre 5,4 % de la richesse produite en 2026 ; 20 milliards d'euros d'économies dès 2027, première étape avant l'équilibre."
+      "contexte": "Site de campagne, mesure annoncée dans la presse. Le déficit devrait atteindre 5,4 % de la richesse produite en 2026 ; 20 milliards d'euros d'économies dès 2027, première étape avant l'équilibre.",
+      "enjeuId": "economies-deficit",
+      "sens": "pour"
     },
     {
       "id": "prop-ga-14",
@@ -2142,10 +2144,10 @@
       "sujetId": "pouvoirs-du-president",
       "titre": "Convoquer une Assemblée constituante pour passer à la 6e République",
       "description": "« Convoquer une Constituante pour passer à la 6e République »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/fonder-la-6e-republique/chapitre1/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, chap. 1, p. 20-23. Une Assemblée constituante est chargée d'écrire une nouvelle Constitution. Prévoit aussi d'abolir les « votes forcés » comme l'article 49.3, de créer le référendum d'initiative citoyenne et de permettre de révoquer des élus."
+      "contexte": "Programme 2027, partie « Fonder la 6e République », chap. 1, mesure clé. Un référendum lancerait la Constituante, et son projet de Constitution serait soumis à référendum ; prévoit aussi d'abolir les « votes forcés » comme l'article 49.3 et de créer le référendum d'initiative citoyenne."
     },
     {
       "id": "prop-jlm-2",
@@ -2154,11 +2156,11 @@
       "thematiqueId": "economie",
       "sujetId": "prix-energie-carburants",
       "titre": "Bloquer les prix de l'alimentation, de l'énergie et du carburant",
-      "description": "« Bloquer les prix des produits de première nécessité (alimentation, énergie, carburant) »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "description": "« Bloquer et encadrer les prix des produits de première nécessité (alimentation, énergie, carburant) »",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/une-economie-au-service-des-besoins/chapitre2/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, chap. 9, p. 73, mesure clé de l'« état d'urgence sociale ». Prévoit aussi d'interdire la « réduflation » (moins de produit pour le même prix) et de renforcer le bouclier qualité-prix des outre-mer. Ne dit ni à quel niveau ni pour combien de temps."
+      "contexte": "Programme 2027, partie économie, chap. 2, mesure clé de l'« état d'urgence sociale ». Prévoit aussi d'interdire la « réduflation » (moins de produit pour le même prix) et de renforcer le bouclier qualité-prix des outre-mer. Ne dit ni à quel niveau ni pour combien de temps."
     },
     {
       "id": "prop-jlm-3",
@@ -2166,12 +2168,12 @@
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "travail",
       "sujetId": "retraites",
-      "titre": "Rétablir la retraite à 60 ans avec 40 années de cotisation et porter le SMIC à 1 600 euros net",
-      "description": "« restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations [...] Augmenter immédiatement le SMIC à 1600 € net mensuel »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "titre": "Rétablir la retraite à 60 ans à taux plein après 40 années de cotisation",
+      "description": "« [...] abaisser l'âge de départ jusqu'à restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations »",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre1/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, p. 72-73. Retraite à taux plein, donc sans décote, après 40 années de cotisation ; hausse immédiate du SMIC à 1 600 euros net par mois. Prévoit d'abord d'abroger la réforme des retraites de 2023."
+      "contexte": "Programme 2027, partie « Mettre en sécurité sociale », chap. 1, mesure clé. Abroge d'abord la réforme qui a porté l'âge de départ à 64 ans ; taux plein, donc sans décote. Prévoit aussi de porter les pensions d'une carrière complète au moins au niveau du SMIC revalorisé."
     },
     {
       "id": "prop-jlm-4",
@@ -2180,11 +2182,11 @@
       "thematiqueId": "agriculture",
       "sujetId": "revenu-agricole",
       "titre": "Garantir des prix minimums aux agriculteurs et encadrer les marges des industriels et supermarchés",
-      "description": "« Garantir des prix rémunérateurs aux producteurs par des prix planchers pour les agriculteurs, interdire les ventes à perte [...] encadrant les marges des industries agro-alimentaires et de la grande distribution »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "description": "« Garantir des prix rémunérateurs aux producteurs en instaurant des prix planchers pour les agriculteurs » ; « en encadrant les marges des industries agroalimentaires et de la grande distribution »",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/pour-une-bifurcation-ecologique-et-sociale/chapitre3/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, p. 98-101. Les prix planchers fixent un seuil sous lequel la production ne peut pas être achetée. Encadrement des marges de l'industrie agroalimentaire et de la grande distribution ; interdiction des ventes à perte."
+      "contexte": "Programme 2027, partie bifurcation écologique, chap. 3, mesure clé. Les prix planchers fixent un seuil sous lequel la production ne peut pas être achetée ; les prix alimentaires seraient plafonnés par des coefficients multiplicateurs."
     },
     {
       "id": "prop-jlm-5",
@@ -2192,12 +2194,12 @@
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "logement",
       "sujetId": "logement-social",
-      "titre": "Encadrer les loyers partout et construire 200 000 logements publics par an",
-      "description": "« Construire 200 000 logements publics par an pendant cinq ans aux normes écologiques les plus ambitieuses [...] Encadrer les loyers partout sur le territoire et à la baisse dans les grandes villes »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "titre": "Geler puis encadrer les loyers partout et construire 200 000 logements publics par an",
+      "description": "« Produire 200 000 logements publics par an et 30 000 logements jeunes pendant 5 ans aux normes écologiques les plus ambitieuses » ; « Geler les loyers le temps de déployer un encadrement des loyers partout sur le territoire et à la baisse dans les grandes villes »",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/fonder-la-6e-republique/chapitre3/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, p. 58. Construction pendant cinq ans ; loyers encadrés partout et à la baisse dans les grandes villes. Prévoit aussi d'interdire les expulsions sans relogement et de limiter les locations de courte durée (type Airbnb) à 60 jours par an."
+      "contexte": "Programme 2027, chap. « Garantir le droit au logement », mesure clé. Loyers encadrés à la baisse dans les grandes villes. Prévoit aussi d'interdire les expulsions sans relogement et de limiter les locations touristiques (type Airbnb) à 60 jours par an."
     },
     {
       "id": "prop-jlm-6",
@@ -2206,10 +2208,10 @@
       "thematiqueId": "international",
       "titre": "Quitter le commandement intégré de l'Alliance atlantique (OTAN), puis l'organisation elle-même",
       "description": "« Se retirer immédiatement du commandement intégré de l'OTAN puis, par étapes, de l'organisation elle-même »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/un-monde-ordonne/chapitre2/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, p. 116, chapitre « Une diplomatie altermondialiste pour la paix ». Retrait immédiat du commandement militaire intégré de l'Alliance, puis sortie de l'organisation par étapes.",
+      "contexte": "Programme 2027, partie « Un monde ordonné », chap. 2, mesure clé. Retrait immédiat du commandement militaire intégré de l'Alliance, puis sortie de l'organisation par étapes.",
       "enjeuId": "quitter-otan",
       "sens": "pour"
     },
@@ -2220,23 +2222,23 @@
       "thematiqueId": "environnement",
       "sujetId": "climat-emissions",
       "titre": "Inscrire dans la Constitution la « règle verte » : prélever au plus ce que la nature peut reconstituer",
-      "description": "« Inscrire dans la Constitution le principe de la “ règle verte ”, selon laquelle on ne prélève pas davantage à la nature que ce qu'elle est en état de reconstituer »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "description": "« Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage sur la nature que ce qu'elle est en état de reconstituer »",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/pour-une-bifurcation-ecologique-et-sociale/chapitre1/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, chap. 12 « Planification écologique », p. 90, mesure clé. Prévoit aussi de viser une baisse de 65 % des émissions en 2030 (au lieu de 50 %) et des lois cadres de planification écologique, nationale et locale."
+      "contexte": "Programme 2027, partie bifurcation écologique, chap. 1, mesure clé. Prévoit aussi une baisse de 65 % des émissions de gaz à effet de serre d'ici 2033 et des lois-cadres de planification écologique, nationale et locale."
     },
     {
       "id": "prop-jlm-8",
       "ref": "P-933",
       "candidatId": "jean-luc-melenchon",
       "thematiqueId": "sante",
-      "titre": "Rembourser à 100 % les soins prescrits en intégrant les mutuelles à la Sécurité sociale",
-      "description": "« Reconstruire le service public hospitalier et instaurer le “100 % Sécu” en remboursant à 100 % les soins de santé prescrits et en intégrant les mutuelles dans la Sécurité sociale »",
-      "sourceUrl": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "dateDeclaration": "2025-02-18",
+      "titre": "Rembourser à 100 % les soins prescrits en intégrant les complémentaires santé à la Sécurité sociale",
+      "description": "« Instaurer le « 100 % Sécu » en remboursant à 100 % les soins de santé prescrits et en intégrant les assurances maladie complémentaires dans la Sécurité sociale »",
+      "sourceUrl": "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre1/",
+      "dateDeclaration": "2026-11-06",
       "typeSource": "programme_2027",
-      "contexte": "Programme, édition 2025, chap. 15, p. 109, mesure clé. Prévoit aussi de rouvrir progressivement des urgences, des maternités et des maisons de retraite publiques à moins de trente minutes de chaque Français, et d'abroger la hausse des franchises médicales de 2024.",
+      "contexte": "Programme 2027, partie « Mettre en sécurité sociale », chap. 1, mesure clé. Prévoit aussi une cotisation sociale universelle, fusionnant les cotisations et la CSG, progressive selon les revenus et versée directement à la Sécurité sociale.",
       "enjeuId": "soins-rembourses",
       "sens": "pour"
     },
@@ -2354,19 +2356,6 @@
       "contexte": "Programme présidentiel 2022 en 22 mesures, p. 2. Les peines planchers imposent une peine minimale ; plus aucune réduction ni aménagement de peine possible. Objectif : 85 000 places de prison en 2027."
     },
     {
-      "id": "prop-mlp-3",
-      "ref": "P-947",
-      "candidatId": "marine-le-pen",
-      "thematiqueId": "agriculture",
-      "sujetId": "accords-libre-echange",
-      "titre": "Exclure l'agriculture des accords de libre-échange et interdire les importations hors normes françaises",
-      "description": "« Exclure l'agriculture des traités multilatéraux de libre-échange [...] Interdire les importations de produits agricoles ne respectant pas les normes de production françaises »",
-      "sourceUrl": "https://web.archive.org/web/20220302095107id_/https://mlafrance.fr/pdfs/projet-l-agriculture.pdf",
-      "dateDeclaration": "2022-02-28",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme 2022, livret agriculture, p. 10-12. L'agriculture serait retirée des traités multilatéraux de libre-échange, et les produits agricoles importés qui ne respectent pas les normes de production françaises seraient interdits."
-    },
-    {
       "id": "prop-mlp-4",
       "ref": "P-952",
       "candidatId": "marine-le-pen",
@@ -2445,6 +2434,20 @@
       "dateDeclaration": "2026-10-25",
       "typeSource": "prise_de_position",
       "contexte": "Extrait vidéo d'un discours au congrès d'un parti, diffusé par Orange Actualités. À la proportionnelle, les sièges suivent les voix ; la prime majoritaire ajoute des sièges à la liste arrivée en tête. La page ne précise pas l'élection concernée."
+    },
+    {
+      "id": "prop-mlp-15",
+      "ref": "P-827",
+      "candidatId": "marine-le-pen",
+      "thematiqueId": "economie",
+      "titre": "Réaliser 140 milliards d'euros d'économies nettes d'ici 2032, pour un déficit sous 3 % en 2030",
+      "description": "« 140 milliards d'euros nets d'économie »",
+      "sourceUrl": "https://www.europe1.fr/politique/140-milliards-deuros-deconomies-deficit-public-sous-les-3-ce-quil-faut-retenir-du-discours-de-marine-le-pen-qui-a-presente-le-contre-budget-2027-du-rn-1126400",
+      "dateDeclaration": "2026-10-06",
+      "typeSource": "prise_de_position",
+      "contexte": "Présentation du contre-budget du parti, rapportée par Europe 1 avec l'AFP. Économies comptées par rapport à 2026 ; équilibre primaire (hors charge de la dette) en 18 mois, baisse d'impôts de 30 milliards net sur le quinquennat et règle d'or budgétaire par référendum.",
+      "enjeuId": "economies-deficit",
+      "sens": "pour"
     },
     {
       "id": "prop-mt-1",
@@ -3061,32 +3064,6 @@
       "contexte": "Site de campagne, page « La refondation sociale », face à la baisse du nombre de naissances. Le maillage comprendrait aussi des relais d'assistantes maternelles et des structures périscolaires gratuites."
     },
     {
-      "id": "prop-rg-1",
-      "ref": "P-130",
-      "candidatId": "raphael-glucksmann",
-      "thematiqueId": "international",
-      "sujetId": "defense",
-      "titre": "Créer un fonds européen de défense de 100 milliards d'euros",
-      "description": "« En mettant en place un fonds européen de défense de 100 milliards d'euros financé par un emprunt commun pour investir dans nos industries de défense »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 4, mesures 4-5. Fonds financé par un emprunt européen commun pour investir dans les industries de défense."
-    },
-    {
-      "id": "prop-rg-2",
-      "ref": "P-311",
-      "candidatId": "raphael-glucksmann",
-      "thematiqueId": "economie",
-      "sujetId": "impots-patrimoine",
-      "titre": "Créer en Europe un impôt minimum de 2 % sur les patrimoines de plus de 100 millions d'euros",
-      "description": "« En instaurant une imposition minimale de 2% sur le patrimoine des centi-millionnaires et des milliardaires et en faisant passer la taxation des multinationales de 15% à 25 %. »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 40, mesure 315. Vise les centi-millionnaires (plus de 100 millions d'euros) et les milliardaires ; prévoit aussi de faire passer la taxation des multinationales de 15 % à 25 %."
-    },
-    {
       "id": "prop-rg-3",
       "ref": "P-492",
       "candidatId": "raphael-glucksmann",
@@ -3111,19 +3088,6 @@
       "dateDeclaration": "2024-05-15",
       "typeSource": "programme_anterieur",
       "contexte": "Programme des européennes 2024, p. 22, mesure 184, chapitre « Pour une Europe sociale ». Inclut la révision des directives européennes sur les marchés publics, pour garantir le respect du droit du travail et des droits syndicaux."
-    },
-    {
-      "id": "prop-rg-5",
-      "ref": "P-854",
-      "candidatId": "raphael-glucksmann",
-      "thematiqueId": "environnement",
-      "sujetId": "climat-emissions",
-      "titre": "Étendre la taxe carbone aux frontières de l'Europe aux produits et services en concurrence déloyale",
-      "description": "« En généralisant le mécanisme d'ajustement carbone (taxe carbone) aux frontières de l'Union européenne à tous les produits et services qui causent une concurrence déloyale »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 5-6, mesures 20, 21 et 23. Le mécanisme d'ajustement carbone aux frontières taxe les importations selon leurs émissions de CO2."
     },
     {
       "id": "prop-rg-6",
@@ -3163,6 +3127,45 @@
       "dateDeclaration": "2024-05-15",
       "typeSource": "programme_anterieur",
       "contexte": "Programme des européennes 2024, p. 8, mesures 47-48, volet souveraineté sanitaire. Prévoit aussi de soutenir la production de médicaments en Europe, qui importe 80 % des principes actifs des médicaments génériques."
+    },
+    {
+      "id": "prop-rg-9",
+      "ref": "P-482",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "economie",
+      "sujetId": "impots-patrimoine",
+      "titre": "Prélever une seule fois 50 milliards d'euros sur les plus hauts patrimoines pour le climat",
+      "description": "« notre contribution exceptionnelle pour l'investissement climatique sur les plus hauts patrimoines » ; « rapportera 50 milliards d'euros »",
+      "sourceUrl": "https://glucks2027.fr/wp-content/uploads/2026/11/livret_progr_revolution_ecologique_2027.pdf",
+      "dateDeclaration": "2026-11-09",
+      "typeSource": "programme_2027",
+      "contexte": "Livret de campagne sur l'écologie (100 premiers jours), p. 9. Recette d'une seule année, sur une infime minorité de foyers, versée à un fonds réservé à l'investissement dans la transition climatique."
+    },
+    {
+      "id": "prop-rg-10",
+      "ref": "P-242",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
+      "titre": "Investir 200 milliards d'euros d'argent public dans la transition écologique sur le quinquennat",
+      "description": "« Nous investirons, sur la durée du quinquennat, 200 milliards d'euros d'argent public. »",
+      "sourceUrl": "https://glucks2027.fr/wp-content/uploads/2026/11/livret_progr_revolution_ecologique_2027.pdf",
+      "dateDeclaration": "2026-11-09",
+      "typeSource": "programme_2027",
+      "contexte": "Livret de campagne sur l'écologie (100 premiers jours), p. 8. Prévoit aussi de déclarer l'état d'urgence écologique, d'inscrire l'écologie à l'article 1 de la Constitution et une loi de programmation écologique pluriannuelle."
+    },
+    {
+      "id": "prop-rg-11",
+      "ref": "P-963",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "international",
+      "sujetId": "defense",
+      "titre": "Lancer un emprunt européen commun de 500 milliards d'euros pour l'industrie de défense",
+      "description": "« Il faut lancer d'urgence un emprunt commun pour subventionner l'industrie de défense à hauteur des besoins, estimés par la commission elle-même à 500 milliards. »",
+      "sourceUrl": "https://raphaelglucksmann.kessel.media/posts/pst_be47d8a4ae504efbb6de3c62f6337008/defendre-leurope-la-france-et-notre-liberte",
+      "dateDeclaration": "2025-03-31",
+      "typeSource": "prise_de_position",
+      "contexte": "Lettre d'information publiée comme député européen, alors rapporteur du programme européen pour l'industrie de défense. Montant présenté comme les besoins estimés par la Commission européenne, pour que l'Europe assure elle-même sa sécurité."
     },
     {
       "id": "prop-sl-1",
@@ -7939,6 +7942,24 @@
         }
       ],
       "ref": "E-17"
+    },
+    {
+      "id": "economies-deficit",
+      "thematiqueId": "economie",
+      "sujetId": "depenses-dette",
+      "question": "Réduire fortement les dépenses publiques pour ramener le déficit sous 3 % de la richesse produite avant 2032",
+      "enjeu": "Le déficit public était de 5,1 % de la richesse produite en 2025 (152,5 milliards d'euros). Il s'agit de le ramener sous 3 % surtout en baissant les dépenses de l'État, des collectivités ou de la protection sociale.",
+      "positions": [
+        {
+          "propositionId": "prop-ga-13",
+          "sens": "pour"
+        },
+        {
+          "propositionId": "prop-mlp-15",
+          "sens": "pour"
+        }
+      ],
+      "ref": "E-18"
     }
   ],
   "glossaire": [
@@ -8519,6 +8540,120 @@
         "surtaxes"
       ],
       "definition": "Impôt ajouté pour un temps à un impôt existant, ici sur les bénéfices des plus grandes entreprises."
+    },
+    {
+      "mot": "déficit public",
+      "definition": "Écart, sur une année, entre ce que dépensent et ce que perçoivent l'État, les collectivités et la Sécurité sociale, quand ils dépensent plus."
+    },
+    {
+      "mot": "dette publique",
+      "definition": "Somme que doivent l'État, les collectivités et la Sécurité sociale à leurs prêteurs, accumulée au fil des déficits."
+    },
+    {
+      "mot": "dépenses publiques",
+      "variantes": [
+        "dépense publique"
+      ],
+      "definition": "Ce que dépensent l'État, les collectivités et la Sécurité sociale : salaires des agents, prestations, investissements, intérêts de la dette."
+    },
+    {
+      "mot": "richesse produite",
+      "definition": "Valeur de tout ce qui est produit dans le pays en un an, le produit intérieur brut (PIB). Sert à comparer déficit et dette entre pays."
+    },
+    {
+      "mot": "protection sociale",
+      "definition": "Aides contre les risques de la vie : retraites, santé, famille, chômage, logement, pauvreté. C'est la plus grande part des dépenses publiques."
+    },
+    {
+      "mot": "aides sociales non contributives",
+      "variantes": [
+        "aides sociales non-contributives"
+      ],
+      "definition": "Aides versées sans avoir cotisé pour y avoir droit, comme le RSA, à la différence des retraites ou des allocations chômage."
+    },
+    {
+      "mot": "allocations familiales",
+      "definition": "Somme versée chaque mois aux familles qui ont au moins deux enfants à charge."
+    },
+    {
+      "mot": "aide médicale d'État",
+      "definition": "Prise en charge des soins des étrangers en situation irrégulière vivant en France depuis plus de trois mois, sous conditions de ressources."
+    },
+    {
+      "mot": "droits de succession",
+      "definition": "Impôt payé par les héritiers sur ce qu'ils reçoivent au décès d'une personne, après un abattement selon le lien de parenté."
+    },
+    {
+      "mot": "impôt sur la fortune",
+      "variantes": [
+        "impôt de solidarité sur la fortune"
+      ],
+      "definition": "Impôt annuel sur le patrimoine des foyers les plus aisés. Supprimé en 2018 et remplacé par un impôt sur la seule fortune immobilière."
+    },
+    {
+      "mot": "règle d'or",
+      "definition": "Règle qui oblige l'État à équilibrer ses comptes ou à limiter son déficit, souvent inscrite dans la Constitution."
+    },
+    {
+      "mot": "équilibre primaire",
+      "definition": "Situation où les recettes publiques couvrent toutes les dépenses, sans compter les intérêts de la dette."
+    },
+    {
+      "mot": "comparution immédiate",
+      "definition": "Procédure qui permet de juger une personne le jour même ou peu après son arrestation, pour certains délits."
+    },
+    {
+      "mot": "récidiviste",
+      "variantes": [
+        "récidivistes"
+      ],
+      "definition": "Personne condamnée de nouveau pour une infraction identique ou proche, dans un délai fixé par la loi."
+    },
+    {
+      "mot": "salaire médian",
+      "definition": "Salaire qui partage les salariés en deux : la moitié gagne moins, l'autre moitié gagne plus."
+    },
+    {
+      "mot": "énergies fossiles",
+      "variantes": [
+        "énergie fossile"
+      ],
+      "definition": "Pétrole, gaz et charbon : énergies tirées du sous-sol qui rejettent des gaz à effet de serre quand on les brûle."
+    },
+    {
+      "mot": "Assemblée constituante",
+      "variantes": [
+        "Constituante"
+      ],
+      "definition": "Assemblée élue pour écrire une nouvelle Constitution."
+    },
+    {
+      "mot": "commandement intégré",
+      "definition": "Structure militaire commune de l'OTAN qui place des forces des pays membres sous un même commandement. La France y est revenue en 2009."
+    },
+    {
+      "mot": "taux plein",
+      "definition": "Retraite versée sans réduction, quand on a l'âge ou le nombre de trimestres requis."
+    },
+    {
+      "mot": "emprunt commun",
+      "definition": "Argent emprunté ensemble par les pays de l'Union européenne et remboursé en commun, comme pour le plan de relance de 2020."
+    },
+    {
+      "mot": "moratoire",
+      "definition": "Suspension, pour une durée donnée, d'un projet ou d'une décision."
+    },
+    {
+      "mot": "système à points",
+      "definition": "Sélection des étrangers admis à séjourner selon des critères qui rapportent des points (emploi, langue, diplômes), comme au Canada."
+    },
+    {
+      "mot": "assurances maladie complémentaires",
+      "variantes": [
+        "complémentaires santé",
+        "mutuelles"
+      ],
+      "definition": "Contrats (mutuelles, assurances) qui remboursent ce que la Sécurité sociale ne prend pas en charge."
     }
   ],
   "sujets": [
