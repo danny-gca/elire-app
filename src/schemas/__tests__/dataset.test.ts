@@ -18,7 +18,7 @@ describe('dataset.json', () => {
       nom: 'Sans Parti',
       avatar: 'SP',
       biographie: 'Bio.',
-      candidature: { statut: 'declaree', date: '2026-11-09', sourceUrl: 'https://exemple.fr' },
+      candidature: { statut: 'annoncee', date: '2026-11-09', sourceUrl: 'https://exemple.fr' },
       programme: { statut: 'aucun' },
     };
     expect(CandidatSourceSchema.safeParse(candidat).success).toBe(true);

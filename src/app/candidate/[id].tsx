@@ -19,6 +19,7 @@ import { ScoreCalcul } from '@/components/score-calcul';
 import { Colors, MinTarget, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { readableOn } from '@/lib/color';
 import { candidatureText, plural, programmeText } from '@/lib/format';
+import { manquePropositions } from '@/lib/propositions-count';
 import { MIN_VOTES_PER_CANDIDAT, scoreCandidat, scoreDetail } from '@/lib/scoring';
 import type { Loi, Proposition } from '@/schemas/dataset';
 import { getCandidat, getLoisByCandidat, getPropositionsByCandidat, lois, partis, propositions, thematiques } from '@/services/dataset';
@@ -200,6 +201,7 @@ export default function CandidateScreen() {
 
       {onglet === 'programme' ? (
         <View style={styles.section}>
+          {manquePropositions(props.length) && <Text style={[Type.label, styles.muted]}>{manquePropositions(props.length)}</Text>}
           {groups.map((g) => (
             <View key={g.theme.id} style={styles.group}>
               <View style={styles.groupHeader}>

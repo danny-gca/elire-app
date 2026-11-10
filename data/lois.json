@@ -1331,9 +1331,9 @@
     "sujetId": "immigration-asile",
     "nature": "texte_europeen",
     "titre": "Pacte européen sur la migration et l'asile",
-    "question": "Faut-il adopter des règles européennes pour répartir les demandeurs d'asile et filtrer les arrivées aux frontières ?",
-    "enjeu": "Les pays de l'Union européenne devraient être solidaires dans la répartition des demandeurs d'asile, et le filtrage des arrivées aux frontières extérieures de l'Union serait renforcé.",
-    "resume": "Ensemble de règlements européens organisant la solidarité obligatoire entre États membres pour la répartition des demandeurs d'asile et le filtrage renforcé aux frontières extérieures.",
+    "question": "Faut-il obliger chaque pays européen à aider à l'accueil des demandeurs d'asile et contrôler les arrivées irrégulières ?",
+    "enjeu": "Chaque pays de l'Union devrait aider à l'accueil des demandeurs d'asile : en recevoir, payer ou apporter un soutien. Les personnes entrées irrégulièrement passeraient des contrôles obligatoires (sécurité, santé).",
+    "resume": "Dix textes européens : chaque État doit participer, au choix par la relocalisation de demandeurs d'asile, une contribution financière ou un soutien opérationnel ; identification améliorée et contrôles obligatoires pour les personnes entrant irrégulièrement dans l'Union.",
     "chambre": "parlement_europeen",
     "dateVote": "2024-04-10",
     "statut": "adoptee",
@@ -1342,7 +1342,7 @@
       "gabriel-attal": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
+        "explication": "Les eurodéputés de son parti (groupe Renew Europe) ont voté pour les quatre textes principaux.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "RENEW",
         "groupeNom": "Renew Europe"
@@ -1350,7 +1350,7 @@
       "edouard-philippe": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
+        "explication": "Les eurodéputés de son parti (groupe Renew Europe) ont voté pour les quatre textes principaux.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "RENEW",
         "groupeNom": "Renew Europe"
@@ -1364,7 +1364,7 @@
       "marine-le-pen": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés du groupe Identité et démocratie ont voté contre, en majorité.",
+        "explication": "Les eurodéputés de son parti (groupe Identité et démocratie) ont voté contre les quatre textes principaux.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "ID",
         "groupeNom": "Identité et démocratie"
@@ -1372,7 +1372,7 @@
       "jean-luc-melenchon": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés du groupe de la Gauche (GUE/NGL) ont voté contre, en majorité.",
+        "explication": "Les eurodéputés de son parti (groupe de la Gauche) ont voté contre les quatre textes principaux, une abstention sur le retour à la frontière.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "GUE/NGL",
         "groupeNom": "La Gauche au Parlement européen - GUE/NGL"
@@ -1380,14 +1380,15 @@
       "marine-tondelier": {
         "position": "contre",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés Verts/ALE ont voté contre, en majorité.",
+        "explication": "Les eurodéputés de son parti (groupe Verts/ALE) ont voté contre les quatre textes principaux.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "Verts/ALE",
         "groupeNom": "Les Verts/Alliance libre européenne"
       },
       "bruno-retailleau": {
-        "position": "pour",
+        "position": "contre",
         "typeVote": "groupe_parti",
+        "explication": "Les eurodéputés de son parti (groupe PPE) ont voté contre la gestion de l'asile et les situations de crise, se sont abstenus sur le retour à la frontière et ont voté pour le filtrage.",
         "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html",
         "groupe": "PPE",
         "groupeNom": "Parti populaire européen (Démocrates-Chrétiens)"
@@ -1695,8 +1696,8 @@
     "nature": "texte_europeen",
     "titre": "Règlement européen sur l'Intelligence Artificielle (AI Act)",
     "question": "Faut-il encadrer l'intelligence artificielle en Europe selon son niveau de risque ?",
-    "enjeu": "Les règles imposées à chaque système d'intelligence artificielle dépendraient de son niveau de risque. La reconnaissance biométrique de masse (par exemple par le visage) serait interdite et les IA génératives encadrées.",
-    "resume": "Premier cadre mondial contraignant régulant les systèmes d'IA selon leurs niveaux de risque, interdisant la reconnaissance biométrique de masse et encadrant les IA génératives.",
+    "enjeu": "Les règles imposées à une IA dépendraient de son niveau de risque. Seraient interdites la collecte non ciblée d'images de visages et, sauf cas précis, l'identification biométrique par la police.",
+    "resume": "Règlement fixant des obligations aux systèmes d'IA selon leurs risques et leur impact : interdiction de la collecte non ciblée d'images faciales, identification biométrique par les services répressifs interdite sauf exceptions, transparence pour les IA à usage général.",
     "chambre": "parlement_europeen",
     "dateVote": "2024-03-13",
     "statut": "adoptee",
@@ -1706,28 +1707,29 @@
         "position": "pour",
         "typeVote": "individuel",
         "explication": "Député européen, a voté pour.",
-        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html"
       },
       "gabriel-attal": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
-        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+        "explication": "Les eurodéputés de son parti (groupe Renew Europe) ont voté pour.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html",
         "groupe": "RENEW",
         "groupeNom": "Renew Europe"
       },
       "marine-tondelier": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Les eurodéputés Verts/ALE ont voté pour, en majorité.",
-        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+        "explication": "Les eurodéputés de son parti (groupe Verts/ALE) ont voté pour, à 7 contre 2.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html",
         "groupe": "Verts/ALE",
         "groupeNom": "Les Verts/Alliance libre européenne"
       },
       "marine-le-pen": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/",
+        "explication": "Les eurodéputés de son parti (groupe Identité et démocratie) ont voté pour.",
+        "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html",
         "groupe": "ID",
         "groupeNom": "Identité et démocratie"
       }

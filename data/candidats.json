@@ -6,7 +6,7 @@
     "avatar": "AM",
     "biographie": "Ingénieur dans les énergies renouvelables, candidat officiel désigné par le parti Équinoxe.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-06-27",
       "sourceUrl": "https://www.sudradio.fr/sud-radio/presidentielle-2027-qui-sont-les-candidats-declares"
     },
@@ -23,7 +23,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg/330px-1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Député européen, essayiste et cofondateur de Place Publique.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-10-11",
       "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
     },
@@ -39,7 +39,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Edouard_Philippe_3x4_crop.jpg/330px-Edouard_Philippe_3x4_crop.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Maire du Havre, ancien Premier ministre et fondateur d'Horizons.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2024-09-03",
       "sourceUrl": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/havre/je-serai-candidat-a-la-prochaine-election-presidentielle-edouard-philippe-l-ancien-premier-ministre-et-maire-du-havre-officialise-sa-candidature-3026366.html"
     },
@@ -56,12 +56,13 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gabriel_Attal_2025_%28close_crop%29.jpg/330px-Gabriel_Attal_2025_%28close_crop%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Ancien Premier ministre et secrétaire général de Renaissance.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-05-22",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-officialise-sa-candidature-436721"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://attalpresident.fr/programme"
     }
   },
   {
@@ -72,7 +73,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg/330px-Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Fondateur de La France Insoumise, ancien sénateur et ministre.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-05-03",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-jean-luc-melenchon-officialise-sa-candidature-pour-2027-435851"
     },
@@ -90,7 +91,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/330px-Marine_Le_Pen_2025_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-07-07",
       "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
     },
@@ -108,7 +109,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Secrétaire nationale des Écologistes et élue municipale d'Hénin-Beaumont.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2025-12-08",
       "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
     },
@@ -126,7 +127,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg/330px-Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Ministre de l'Intérieur, ancien président du groupe LR au Sénat.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-04-19",
       "sourceUrl": "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-bruno-retailleau-largement-designe-candidat-par-les-adherents-du-parti-les-republicains_7949957.html"
     },
@@ -144,7 +145,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Fran%C3%A7ois_Ruffin_%28cropped%29.jpg/330px-Fran%C3%A7ois_Ruffin_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Député de la Somme, réalisateur et fondateur du mouvement Debout !",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-09-18",
       "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart"
     },
@@ -161,7 +162,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Roussel_Fabien_1.jpg/330px-Roussel_Fabien_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Secrétaire national du Parti Communiste Français et ancien député du Nord.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-09-06",
       "sourceUrl": "https://lcp.fr/actualites/fabien-roussel-officiellement-candidat-du-pcf-a-l-election-presidentielle-de-2027-441389"
     },
@@ -177,7 +178,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg/330px-Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Président de Reconquête, ancien journaliste et essayiste.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-09-17",
       "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
     },
@@ -193,7 +194,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Nathalie_Arthaud_%28LO%29_19-05-2024.jpg/330px-Nathalie_Arthaud_%28LO%29_19-05-2024.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2025-12-08",
       "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
     },
@@ -211,7 +212,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Fran%C3%A7ois_ASSELINEAU.jpg/330px-Fran%C3%A7ois_ASSELINEAU.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Président fondateur de l'Union Populaire Républicaine (UPR), haut fonctionnaire.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-03-21",
       "sourceUrl": "https://upr.fr/militantisme/19-ans-de-lupr-francois-asselineau-lance-sa-campagne-presidentielle-2027-et-nomme-marc-parigot-directeur-de-campagne/"
     },
@@ -227,7 +228,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg/330px-Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Président de Debout La France et député de l'Essonne.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2025-03-08",
       "sourceUrl": "https://www.lejdd.fr/politique/cette-presidentielle-sera-peut-etre-la-derniere-dun-peuple-libre-dupont-aignan-annonce-sa-candidature-pour-2027-155797"
     },
@@ -244,7 +245,7 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/330px-David_Lisnard_-_2013.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Maire de Cannes, président de l'Association des maires de France.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-03-31",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/le-maire-de-cannes-david-lisnard-annonce-sa-candidature-a-l-election-presidentielle-et-officialise-son-depart-des-republicains_7907063.html"
     },
@@ -260,7 +261,7 @@
     "avatar": "MM",
     "biographie": "Psychologue de formation, cofondatrice du Parti animaliste et ancienne conseillère de Paris (2014-2020).",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-10-02",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle"
     },
@@ -275,7 +276,7 @@
     "avatar": "AK",
     "biographie": "Cheminot et syndicaliste à SUD Rail, candidat de Révolution permanente.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-06-01",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-cheminot-anasse-kazib-annonce-sa-candidature_8040020.html"
     },
@@ -291,7 +292,7 @@
     "avatar": "FP",
     "biographie": "Ancien député européen et ancien vice-président du Front national, fondateur et président des Patriotes depuis 2017.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-05-09",
       "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
     },
@@ -307,7 +308,7 @@
     "avatar": "SL",
     "biographie": "Conductrice de bus en région parisienne et syndicaliste, tête de liste de son organisation aux élections européennes de 2024.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-06-17",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/communique-presidentielle-2027-selma-labib-une-candidature-ouvriere-et-revolutionnaire-soutenue-par-gael-quirante"
     },
@@ -324,7 +325,7 @@
     "avatar": "KB",
     "biographie": "Maire de Saint-Ouen-sur-Seine depuis 2020, membre du Parti socialiste et fondateur du mouvement La France Humaine et Forte.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-06-09",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-qui-est-karim-bouamrane-le-maire-socialiste-de-saint-ouen-et-nouveau"
     },
@@ -340,7 +341,7 @@
     "avatar": "DB",
     "biographie": "Députée des Deux-Sèvres, ancienne ministre de l'Écologie (2012-2013) et présidente de Génération écologie.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-06-06",
       "sourceUrl": "https://generationecologie.fr/wp-content/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
     },
@@ -355,7 +356,7 @@
     "avatar": "OB",
     "biographie": "Député du Haut-Rhin, ancien maire de Rixheim (2008-2017) et ancien ministre délégué au Commerce extérieur (2022-2024).",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-09-24",
       "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
     },
@@ -371,7 +372,7 @@
     "avatar": "NP",
     "biographie": "Journaliste et essayiste agrégée de lettres modernes, ancienne directrice de la rédaction de Marianne et directrice de la revue L'Audace !.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-10-14",
       "sourceUrl": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-mercredi-14-octobre-2026-3340206"
     },
@@ -387,7 +388,7 @@
     "avatar": "XB",
     "biographie": "Président de la région Hauts-de-France depuis 2016, ancien ministre de la Santé et du Travail, fondateur du mouvement Nous France.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-08-27",
       "sourceUrl": "https://lcp.fr/actualites/2027-figure-de-la-droite-xavier-bertrand-confirme-qu-il-sera-candidat-a-l-election"
     },
@@ -401,7 +402,7 @@
     "avatar": "TR",
     "biographie": "Judoka, quintuple champion olympique et onze fois champion du monde, candidat sans parti ni mouvement.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-11-09",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html"
     },
@@ -416,7 +417,7 @@
     "avatar": "FL",
     "biographie": "Auteur-compositeur-interprète, tête de liste aux élections européennes de 2024.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-08-19",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-chanteur-francis-lalanne-officiellement-candidat-premier-meeting-vendredi-a-paris_8153588.html"
     },
@@ -430,7 +431,7 @@
     "avatar": "SD",
     "biographie": "Vidéaste et chef d'entreprise, candidat sans parti ni mouvement.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-08-23",
       "sourceUrl": "https://www.sudradio.fr/politique/qui-est-ce-sylvain-durif-le-christ-cosmique-candidat-a-la-presidentielle-2027"
     },

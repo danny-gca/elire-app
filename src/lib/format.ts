@@ -16,8 +16,8 @@ export function candidatureText({ statut, date }: Candidature): string {
   switch (statut) {
     case 'officielle':
       return `Candidature officielle, liste du Conseil constitutionnel du ${jour}`;
-    case 'designee':
-      return `Candidature désignée par son parti le ${jour}`;
+    case 'investie':
+      return `Investiture de son parti le ${jour}`;
     case 'sous_condition':
       return `Candidature annoncée sous condition le ${jour}`;
     case 'pressentie':

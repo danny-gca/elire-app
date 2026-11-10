@@ -56,7 +56,7 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - Verdict : **confirmée**, **reformulée** (titre ou citation corrigés selon la source) ou **retirée** (introuvable).
 
 **Candidat** (`data/candidats.json`)
-- Candidature annoncée (`declaree`) ou désignée par le parti, avec une source datée ; sinon le signaler. `officielle` seulement si le candidat figure sur la liste publiée par le Conseil constitutionnel.
+- Candidature annoncée (`annoncee`) ou investie par le parti (`investie`), avec une source datée ; sinon le signaler. `officielle` seulement si le candidat figure sur la liste publiée par le Conseil constitutionnel.
 - `programme` : `complet` seulement si un programme 2027 entier est publié (l'`url` y mène), `partiel` pour des premières mesures, un dépliant ou un site en cours, sinon `aucun` ; `date` seulement si la source la donne. Une publication annoncée à une date précise (programme complet, livret) va dans `annonce` (`date`, `sourceUrl` qui la cite) : une fois la date passée, le build la rappelle jusqu'à la mise à jour de `programme` et le retrait d'`annonce`.
 - Parti et biographie factuels et neutres.
 - Photo : fichier exact sur Wikimedia Commons sous CC0, CC BY ou CC BY-SA, crédité dans `src/constants/credits.ts`. « Tous droits réservés » : pas de photo, initiales.
@@ -68,7 +68,7 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 - Date, statut, nature exacts ; `resume` factuel, sans qualificatif.
 - `question` : directe, affirmative, sans double négation ni tournure de rejet procédural (ex. pas de « Rejet de... »). Répondre « Pour » doit signifier sans ambiguïté vouloir la mesure sur le fond.
 - `individuel` seulement si le candidat siégeait à cette date et apparaît dans l'analyse nominative.
-- `groupe_parti` : la position majoritaire de son groupe dans l'analyse par groupe, avec `groupe` (sigle à la date) et `groupeNom`. Si le parti n'avait aucun élu ni groupe dans cette chambre à cette date, le vote est **retiré**.
+- `groupe_parti` : la position majoritaire des élus de son parti dans l'analyse nominative (au Parlement européen, la délégation française du parti, pas tout le groupe européen ; à l'Assemblée et au Sénat, son groupe quand il se confond avec le parti), avec `groupe` (sigle à la date) et `groupeNom`. Égalité ou pas de majorité nette : le vote est **retiré**. Si le parti n'avait aucun élu dans cette chambre à cette date, le vote est **retiré**.
 - `explication` : un fait (« a voté pour avec son groupe »), jamais une opinion (« coup de force », « courageux »).
 - Le `sourceUrl` du vote pointe vers le même scrutin.
 
@@ -87,7 +87,7 @@ Ouvrir chaque source (WebFetch, ou `pdftotext` pour un PDF) et vérifier :
 
 1. Corriger dans `data/`, puis `npm run build:data:strict` (doit passer) et `npm run check`.
 2. Ne jamais renuméroter : les références `P-xxx` / `L-xx` sont stables (`data/refs.json`).
-3. Ajouter une section datée dans `docs/verification-donnees.md` : comptes (confirmées, reformulées, retirées) et liste des changements, une ligne par élément.
+3. Ajouter en haut du tableau de `docs/verification-donnees.md` une ligne par élément relu (`Date | Réf | Élément | Verdict | Motif`), même confirmé ; jamais de nouvelle section ni de nouveau format.
 4. Si un ticket GitHub est à l'origine, citer sa référence et la source correcte dans la réponse.
 
 ## Neutralité

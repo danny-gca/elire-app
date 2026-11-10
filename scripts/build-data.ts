@@ -10,6 +10,7 @@ import { closeQuestions } from '../src/lib/doublons.ts';
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
 import { sujetGaps } from '../src/lib/sujets-check.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
+import { NB_PROPOSITIONS_PAR_CANDIDAT } from '../src/lib/propositions-count.ts';
 import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
 import { MIN_WORDS, negativeWording, wordCount } from '../src/lib/wording.ts';
 import {
@@ -412,6 +413,14 @@ function main() {
     }
   });
   warnings.push(...programmeReminders(rawCandidats, today));
+
+  // Sous le nombre visé : signalé sans bloquer, le candidat reste avec ce qui est publié.
+  for (const c of rawCandidats) {
+    const count = propositions.filter((p) => p.candidatId === c.id).length;
+    if (count < NB_PROPOSITIONS_PAR_CANDIDAT) {
+      console.log(`ℹ️  ${c.id} : ${count} proposition(s) sur ${NB_PROPOSITIONS_PAR_CANDIDAT}`);
+    }
+  }
 
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
   if (warnings.length > 0) {

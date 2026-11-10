@@ -35,9 +35,9 @@ export const ThematiqueSchema = z.object({
   description: z.string().min(1),
 });
 
-// Critère d'entrée (CONTRIBUTING.md) : candidature annoncée ou désignée, avec une source datée ; `officielle` une fois sur la liste du Conseil constitutionnel.
+// Critère d'entrée (CONTRIBUTING.md) : candidature annoncée ou investie par son parti, avec une source datée ; `officielle` une fois sur la liste du Conseil constitutionnel.
 export const CandidatureSchema = z.object({
-  statut: z.enum(['declaree', 'designee', 'sous_condition', 'pressentie', 'officielle']),
+  statut: z.enum(['annoncee', 'investie', 'sous_condition', 'pressentie', 'officielle']),
   date: isoDate,
   sourceUrl: url,
 });

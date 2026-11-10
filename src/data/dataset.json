@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-10T08:53:48.354Z",
+    "generatedAt": "2026-11-10T21:09:30.049Z",
     "partisCount": 26,
     "candidatsCount": 27,
     "thematiquesCount": 12,
-    "propositionsCount": 191,
+    "propositionsCount": 195,
     "loisCount": 47,
     "enjeuxCount": 16
   },
@@ -396,7 +396,7 @@
       "avatar": "AM",
       "biographie": "Ingénieur dans les énergies renouvelables, candidat officiel désigné par le parti Équinoxe.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-06-27",
         "sourceUrl": "https://www.sudradio.fr/sud-radio/presidentielle-2027-qui-sont-les-candidats-declares"
       },
@@ -416,7 +416,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg/330px-1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Député européen, essayiste et cofondateur de Place Publique.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-10-11",
         "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
       },
@@ -435,7 +435,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Edouard_Philippe_3x4_crop.jpg/330px-Edouard_Philippe_3x4_crop.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Maire du Havre, ancien Premier ministre et fondateur d'Horizons.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2024-09-03",
         "sourceUrl": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/havre/je-serai-candidat-a-la-prochaine-election-presidentielle-edouard-philippe-l-ancien-premier-ministre-et-maire-du-havre-officialise-sa-candidature-3026366.html"
       },
@@ -455,12 +455,13 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gabriel_Attal_2025_%28close_crop%29.jpg/330px-Gabriel_Attal_2025_%28close_crop%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Ancien Premier ministre et secrétaire général de Renaissance.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-05-22",
         "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-officialise-sa-candidature-436721"
       },
       "programme": {
-        "statut": "aucun"
+        "statut": "partiel",
+        "url": "https://attalpresident.fr/programme"
       },
       "parti": "Renaissance",
       "couleurParti": "#7B1FA2",
@@ -474,7 +475,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg/330px-Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Fondateur de La France Insoumise, ancien sénateur et ministre.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-05-03",
         "sourceUrl": "https://lcp.fr/actualites/presidentielle-jean-luc-melenchon-officialise-sa-candidature-pour-2027-435851"
       },
@@ -495,7 +496,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/330px-Marine_Le_Pen_2025_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-07-07",
         "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
       },
@@ -516,7 +517,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Secrétaire nationale des Écologistes et élue municipale d'Hénin-Beaumont.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2025-12-08",
         "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
       },
@@ -537,7 +538,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg/330px-Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Ministre de l'Intérieur, ancien président du groupe LR au Sénat.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-04-19",
         "sourceUrl": "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-bruno-retailleau-largement-designe-candidat-par-les-adherents-du-parti-les-republicains_7949957.html"
       },
@@ -558,7 +559,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Fran%C3%A7ois_Ruffin_%28cropped%29.jpg/330px-Fran%C3%A7ois_Ruffin_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Député de la Somme, réalisateur et fondateur du mouvement Debout !",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-09-18",
         "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart"
       },
@@ -578,7 +579,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Roussel_Fabien_1.jpg/330px-Roussel_Fabien_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Secrétaire national du Parti Communiste Français et ancien député du Nord.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-09-06",
         "sourceUrl": "https://lcp.fr/actualites/fabien-roussel-officiellement-candidat-du-pcf-a-l-election-presidentielle-de-2027-441389"
       },
@@ -597,7 +598,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg/330px-Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Président de Reconquête, ancien journaliste et essayiste.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-09-17",
         "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
       },
@@ -616,7 +617,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Nathalie_Arthaud_%28LO%29_19-05-2024.jpg/330px-Nathalie_Arthaud_%28LO%29_19-05-2024.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2025-12-08",
         "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
       },
@@ -637,7 +638,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Fran%C3%A7ois_ASSELINEAU.jpg/330px-Fran%C3%A7ois_ASSELINEAU.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Président fondateur de l'Union Populaire Républicaine (UPR), haut fonctionnaire.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-03-21",
         "sourceUrl": "https://upr.fr/militantisme/19-ans-de-lupr-francois-asselineau-lance-sa-campagne-presidentielle-2027-et-nomme-marc-parigot-directeur-de-campagne/"
       },
@@ -656,7 +657,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg/330px-Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Président de Debout La France et député de l'Essonne.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2025-03-08",
         "sourceUrl": "https://www.lejdd.fr/politique/cette-presidentielle-sera-peut-etre-la-derniere-dun-peuple-libre-dupont-aignan-annonce-sa-candidature-pour-2027-155797"
       },
@@ -676,7 +677,7 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/330px-David_Lisnard_-_2013.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Maire de Cannes, président de l'Association des maires de France.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-03-31",
         "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/le-maire-de-cannes-david-lisnard-annonce-sa-candidature-a-l-election-presidentielle-et-officialise-son-depart-des-republicains_7907063.html"
       },
@@ -695,7 +696,7 @@
       "avatar": "MM",
       "biographie": "Psychologue de formation, cofondatrice du Parti animaliste et ancienne conseillère de Paris (2014-2020).",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-10-02",
         "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle"
       },
@@ -713,7 +714,7 @@
       "avatar": "AK",
       "biographie": "Cheminot et syndicaliste à SUD Rail, candidat de Révolution permanente.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-06-01",
         "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-cheminot-anasse-kazib-annonce-sa-candidature_8040020.html"
       },
@@ -732,7 +733,7 @@
       "avatar": "FP",
       "biographie": "Ancien député européen et ancien vice-président du Front national, fondateur et président des Patriotes depuis 2017.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-05-09",
         "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
       },
@@ -751,7 +752,7 @@
       "avatar": "SL",
       "biographie": "Conductrice de bus en région parisienne et syndicaliste, tête de liste de son organisation aux élections européennes de 2024.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-06-17",
         "sourceUrl": "https://npa-revolutionnaires.org/articles/communique-presidentielle-2027-selma-labib-une-candidature-ouvriere-et-revolutionnaire-soutenue-par-gael-quirante"
       },
@@ -771,7 +772,7 @@
       "avatar": "KB",
       "biographie": "Maire de Saint-Ouen-sur-Seine depuis 2020, membre du Parti socialiste et fondateur du mouvement La France Humaine et Forte.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-06-09",
         "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-qui-est-karim-bouamrane-le-maire-socialiste-de-saint-ouen-et-nouveau"
       },
@@ -790,7 +791,7 @@
       "avatar": "DB",
       "biographie": "Députée des Deux-Sèvres, ancienne ministre de l'Écologie (2012-2013) et présidente de Génération écologie.",
       "candidature": {
-        "statut": "designee",
+        "statut": "investie",
         "date": "2026-06-06",
         "sourceUrl": "https://generationecologie.fr/wp-content/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
       },
@@ -808,7 +809,7 @@
       "avatar": "OB",
       "biographie": "Député du Haut-Rhin, ancien maire de Rixheim (2008-2017) et ancien ministre délégué au Commerce extérieur (2022-2024).",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-09-24",
         "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
       },
@@ -826,7 +827,7 @@
       "avatar": "NP",
       "biographie": "Journaliste et essayiste agrégée de lettres modernes, ancienne directrice de la rédaction de Marianne et directrice de la revue L'Audace !.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-10-14",
         "sourceUrl": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-mercredi-14-octobre-2026-3340206"
       },
@@ -844,7 +845,7 @@
       "avatar": "XB",
       "biographie": "Président de la région Hauts-de-France depuis 2016, ancien ministre de la Santé et du Travail, fondateur du mouvement Nous France.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-08-27",
         "sourceUrl": "https://lcp.fr/actualites/2027-figure-de-la-droite-xavier-bertrand-confirme-qu-il-sera-candidat-a-l-election"
       },
@@ -861,7 +862,7 @@
       "avatar": "TR",
       "biographie": "Judoka, quintuple champion olympique et onze fois champion du monde, candidat sans parti ni mouvement.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-11-09",
         "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html"
       },
@@ -878,7 +879,7 @@
       "avatar": "FL",
       "biographie": "Auteur-compositeur-interprète, tête de liste aux élections européennes de 2024.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-08-19",
         "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-chanteur-francis-lalanne-officiellement-candidat-premier-meeting-vendredi-a-paris_8153588.html"
       },
@@ -894,7 +895,7 @@
       "avatar": "SD",
       "biographie": "Vidéaste et chef d'entreprise, candidat sans parti ni mouvement.",
       "candidature": {
-        "statut": "declaree",
+        "statut": "annoncee",
         "date": "2026-08-23",
         "sourceUrl": "https://www.sudradio.fr/politique/qui-est-ce-sylvain-durif-le-christ-cosmique-candidat-a-la-presidentielle-2027"
       },
@@ -1169,11 +1170,11 @@
       "thematiqueId": "international",
       "sujetId": "expulsions",
       "titre": "Conditionner les visas accordés à un pays à son accord pour reprendre ses ressortissants expulsés",
-      "description": "« conditionner la politique de visas à la délivrance des laissez-passer consulaires »",
+      "description": "« politique de visas à la délivrance des laissez-passer »",
       "sourceUrl": "https://telquel.ma/instant-t/2024/10/02/bruno-retailleau-en-2023-la-france-a-delivre-au-maroc-238-750-visas-mais-na-obtenu-que-725-laissez-passer_1896520/",
       "dateDeclaration": "2024-10-02",
       "typeSource": "prise_de_position",
-      "contexte": "Interview au Figaro Magazine, rapportée par TelQuel. Pour renvoyer un étranger visé par une obligation de quitter le territoire (OQTF), son pays doit délivrer un laissez-passer consulaire. Exemple cité : 238 750 visas donnés au Maroc en 2023 pour 725 laissez-passer."
+      "contexte": "Interview au Figaro Magazine, rapportée par TelQuel : il veut conditionner la politique de visas aux laissez-passer consulaires, document indispensable pour renvoyer un étranger dans son pays d'origine. Exemple cité : 238 750 visas donnés au Maroc en 2023 pour 725 laissez-passer."
     },
     {
       "id": "prop-br-6",
@@ -1299,6 +1300,18 @@
       "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/agriculture/",
       "typeSource": "programme_2027",
       "contexte": "Programme agriculture du site de campagne. Fin des règles françaises plus strictes que les normes européennes (surtranspositions) ; les produits importés devraient respecter les mêmes règles (clauses miroirs), car « ce que nous interdisons ici ne doit plus être autorisé là-bas »."
+    },
+    {
+      "id": "prop-dl-9",
+      "ref": "P-517",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "societe",
+      "sujetId": "immigration-asile",
+      "titre": "Diviser par huit le nombre de titres de séjour délivrés aux étrangers",
+      "description": "« Diviser par huit la délivrance de titres de séjour »",
+      "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/immigration/",
+      "typeSource": "programme_2027",
+      "contexte": "Programme immigration du site de campagne. Prévoit aussi des quotas de main-d'œuvre qualifiée, un regroupement familial soumis à des ressources et à des tests d'intégration, et la fin de l'automaticité du droit du sol."
     },
     {
       "id": "prop-db-1",
@@ -1492,6 +1505,18 @@
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
       "typeSource": "programme_2027",
       "contexte": "Site de campagne, priorité « Pour une France plus sûre », volet frontières. Prévoit aussi de suspendre le regroupement familial pendant le quinquennat, des quotas pour l'immigration économique et de dénoncer l'accord de 1968 avec l'Algérie."
+    },
+    {
+      "id": "prop-ep-9",
+      "ref": "P-384",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "institutions",
+      "sujetId": "depenses-dette",
+      "titre": "Inscrire dans la Constitution, par référendum, une règle d'or limitant les déficits",
+      "description": "« Inscrire dans la Constitution une règle d'or de maîtrise des déficits via un référendum »",
+      "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, priorité « Pour une France plus prospère », volet comptes publics. Le déficit passerait de plus de 5 % à 2 % du produit intérieur brut à la fin du quinquennat ; un tiers des fonctionnaires partant à la retraite ne serait pas remplacé."
     },
     {
       "id": "prop-ez-1",
@@ -1689,6 +1714,19 @@
       "sourceUrl": "https://d3n8a8pro7vhmx.cloudfront.net/fabienroussel2022/pages/217/attachments/original/1643038967/exe_la_france_des_jours_heureux_LIVRE_stc.pdf?1643038967",
       "typeSource": "programme_anterieur",
       "contexte": "Programme présidentiel 2022, proposition 132, p. 107. Le Parlement primerait : l'Assemblée nationale investirait le Premier ministre et le gouvernement, le 49-3 (adoption d'une loi sans vote) serait abrogé et le président perdrait son immunité judiciaire."
+    },
+    {
+      "id": "prop-fro-9",
+      "ref": "P-294",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "economie",
+      "sujetId": "impots-patrimoine",
+      "titre": "Taxer les héritages les plus riches et exonérer ceux de moins de 200 000 euros",
+      "description": "« nous taxerons les héritages les plus riches et nous exonérerons les héritages des classes populaires, nous exonérerons les héritages en dessous de 200 000 € »",
+      "sourceUrl": "https://www.pcf.fr/fete_de_lhumanite_2026_discours_de_fabien_roussel",
+      "dateDeclaration": "2026-09-15",
+      "typeSource": "prise_de_position",
+      "contexte": "Discours de rentrée, texte publié par son parti. Mesure annoncée avec le rétablissement de l'impôt de solidarité sur la fortune et des cotisations sur les revenus financiers et les dividendes pour financer la Sécurité sociale et les retraites."
     },
     {
       "id": "prop-fp-1",
@@ -1996,105 +2034,105 @@
       "candidatId": "gabriel-attal",
       "thematiqueId": "education",
       "titre": "Expérimenter l'uniforme à l'école, puis le généraliser s'il fait ses preuves",
-      "description": "« nous déploierons l'expérimentation de l'uniforme à l'école, symbole d'égalité républicaine. [...] Si cette expérimentation est concluante, nous généraliserons l'uniforme en France à la rentrée 2026. »",
+      "description": "« nous déploierons l'expérimentation de l'uniforme à l'école, symbole d'égalité républicaine. »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
       "dateDeclaration": "2024-01-30",
       "typeSource": "prise_de_position",
-      "contexte": "Déclaration de politique générale devant l'Assemblée nationale, transcription publiée sur info.gouv.fr. L'uniforme, présenté comme un symbole d'égalité, serait généralisé à la rentrée 2026 si l'essai est concluant.",
+      "contexte": "Déclaration de politique générale devant l'Assemblée nationale, transcription publiée sur info.gouv.fr. Reprend l'annonce du Président de la République : l'uniforme serait généralisé en France à la rentrée 2026 si l'expérimentation est concluante.",
       "enjeuId": "uniforme-ecole",
       "sens": "pour"
-    },
-    {
-      "id": "prop-ga-2",
-      "ref": "P-688",
-      "candidatId": "gabriel-attal",
-      "thematiqueId": "travail",
-      "sujetId": "temps-de-travail",
-      "titre": "Expérimenter la semaine en quatre jours, sans réduire le temps de travail, dans les administrations",
-      "description": "« j'avais décidé d'expérimenter dans mon administration non pas la semaine de quatre jours, mais la semaine en quatre jours, sans réduction du temps de travail. »",
-      "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
-      "dateDeclaration": "2024-01-30",
-      "typeSource": "prise_de_position",
-      "contexte": "Déclaration de politique générale. La semaine en quatre jours garde le même nombre d'heures, réparties sur quatre jours ; elle serait testée dans les administrations de tous les ministères."
-    },
-    {
-      "id": "prop-ga-3",
-      "ref": "P-507",
-      "candidatId": "gabriel-attal",
-      "thematiqueId": "numerique",
-      "sujetId": "reseaux-sociaux",
-      "titre": "Interdire les réseaux sociaux aux moins de 15 ans",
-      "description": "« vise à interdire l'accès aux réseaux sociaux pour les moins de 15 ans et la suspension des comptes déjà existants, sous peine de sanctions financières. »",
-      "sourceUrl": "https://lcp.fr/actualites/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-a-l-offensive-gabriel-attal-devance",
-      "dateDeclaration": "2026-01-12",
-      "typeSource": "prise_de_position",
-      "contexte": "Proposition de loi soutenue par son groupe à l'Assemblée, rapportée par LCP. Prévoit aussi un couvre-feu numérique de 22 h à 8 h pour les 15-18 ans et l'interdiction du portable au lycée."
-    },
-    {
-      "id": "prop-ga-4",
-      "ref": "P-502",
-      "candidatId": "gabriel-attal",
-      "thematiqueId": "sante",
-      "sujetId": "acces-aux-soins",
-      "titre": "Faire payer 5 euros pour chaque rendez-vous médical manqué sans prévenir",
-      "description": "« un mécanisme sur les plateformes en ligne permettant une pénalité d'un montant de 5 euros pour rendez-vous non honoré. »",
-      "sourceUrl": "https://www.info.gouv.fr/actualite/des-actes-concrets-pour-la-sante",
-      "dateDeclaration": "2024-04-06",
-      "typeSource": "prise_de_position",
-      "contexte": "Annonce du gouvernement sur la santé, publiée sur info.gouv.fr, volet « responsabilisation ». Pénalité prévue par la loi dès 2024, via les plateformes de prise de rendez-vous en ligne, parmi des mesures pour libérer du temps médical."
-    },
-    {
-      "id": "prop-ga-5",
-      "ref": "P-321",
-      "candidatId": "gabriel-attal",
-      "thematiqueId": "securite",
-      "sujetId": "justice-des-mineurs",
-      "titre": "Sanctionner par des travaux d'intérêt général les parents défaillants de mineurs délinquants",
-      "description": "« les parents défaillants » ; « s'exposent à des mesures de travail d'intérêt général »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/violence-des-mineurs-le-detail-des-propositions-de-gabriel-attal-pour-un-sursaut-dautorite",
-      "dateDeclaration": "2024-04-18",
-      "typeSource": "prise_de_position",
-      "contexte": "Mesures contre la violence des mineurs, rapportées par Public Sénat. Le travail d'intérêt général est un travail non payé au service de la collectivité. La sanction serait plus lourde si l'acte de l'enfant découle de manquements répétés des parents."
     },
     {
       "id": "prop-ga-6",
       "ref": "P-864",
       "candidatId": "gabriel-attal",
       "thematiqueId": "agriculture",
-      "titre": "S'en tenir aux normes européennes pour les agriculteurs",
-      "description": "« Lutter contre la surtransposition »",
+      "titre": "Lutter contre les règles agricoles françaises plus strictes que les normes européennes",
+      "description": "« Lutter contre la surtransposition » ; « reprogrammer le calendrier européen et le calendrier français concernant l'examen de ré-homologation des produits phytosanitaires »",
       "sourceUrl": "https://www.info.gouv.fr/actualite/produire-et-proteger-des-nouvelles-mesures-pour-lagriculture-francaise",
       "dateDeclaration": "2024-02-01",
       "typeSource": "prise_de_position",
-      "contexte": "Mesures agricoles du gouvernement, publiées sur info.gouv.fr. La surtransposition consiste à ajouter des règles françaises plus strictes que les normes européennes ; prévoit de revoir le calendrier de ré-homologation des pesticides.",
+      "contexte": "Mesures agricoles du gouvernement, publiées sur info.gouv.fr. La surtransposition consiste à ajouter des règles françaises plus strictes que les normes européennes. Ce volet prévoit de revoir le calendrier de réexamen des pesticides et met à l'arrêt le plan Ecophyto, qui visait 50 % de pesticides en moins d'ici 2025.",
       "enjeuId": "normes-agricoles",
       "sens": "pour"
     },
     {
-      "id": "prop-ga-7",
-      "ref": "P-683",
+      "id": "prop-ga-9",
+      "ref": "P-497",
       "candidatId": "gabriel-attal",
-      "thematiqueId": "economie",
-      "sujetId": "aides-publiques-entreprises",
-      "titre": "Réformer les aides et baisses de cotisations concentrées sur les salaires au SMIC",
-      "description": "« nous devons faire évoluer un système qui nous a conduits [...] à concentrer nos aides, nos exonérations au niveau du SMIC. [...] il faut “désmicardiser” la France. »",
-      "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
-      "dateDeclaration": "2024-01-30",
-      "typeSource": "prise_de_position",
-      "contexte": "Déclaration de politique générale devant l'Assemblée nationale. But affiché : « désmicardiser », que moins de salariés restent payés au SMIC. Pour 100 euros de plus à un salarié au SMIC, l'employeur paie 238 euros de plus ; réforme dès le budget suivant."
+      "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
+      "titre": "Ramener la part des énergies fossiles de près de 60 % à 30 % de la consommation d'ici 2035",
+      "description": "« [...] ramener la part des énergies fossiles de près de 60 % à 30 % en 2035, avec une électricité décarbonée, abondante et moins chère. »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/plan-messmer-2",
+      "dateDeclaration": "2026-09-23",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée lors d'une conférence avec des économistes. Étapes : 40 % de fossiles en 2030, neutralité carbone en 2050 ; programme de 14 réacteurs EPR, un par an, et électricité du nouveau nucléaire autour de 75 euros le mégawattheure."
     },
     {
-      "id": "prop-ga-8",
-      "ref": "P-678",
+      "id": "prop-ga-10",
+      "ref": "P-532",
       "candidatId": "gabriel-attal",
-      "thematiqueId": "logement",
-      "sujetId": "logement-social",
-      "titre": "Proposer de compter une part des logements intermédiaires dans le quota de 25 % de logements sociaux",
-      "description": "« Nous proposerons et nous mettrons en débat d'ajouter pour une part les logements intermédiaires accessibles à la classe moyenne dans ce calcul des 25 %. »",
-      "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
-      "dateDeclaration": "2024-01-30",
-      "typeSource": "prise_de_position",
-      "contexte": "Déclaration de politique générale. La loi SRU impose aux communes concernées un quart de logements sociaux ; les logements intermédiaires, pour la classe moyenne, y compteraient en partie. Prévoit aussi 30 000 logements en 3 ans dans 20 territoires."
+      "thematiqueId": "travail",
+      "sujetId": "smic-salaires",
+      "titre": "Augmenter de 250 euros net par mois le salaire médian en supprimant des cotisations",
+      "description": "« 250 euros nets de plus par mois au niveau du salaire médian, l'équivalent d'un treizième mois pour les classes moyennes qui travaillent. » ; « Elle passe par la suppression de cotisations qui pèsent sur le travail »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/droit-au-brut",
+      "dateDeclaration": "2026-07-22",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée dans la presse régionale. Salaire médian de 2 200 euros net, hausse dès le début 2027, sans négociation salariale ; financée par des économies sur l'assurance chômage et les indemnités journalières."
+    },
+    {
+      "id": "prop-ga-11",
+      "ref": "P-712",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "societe",
+      "sujetId": "immigration-asile",
+      "titre": "Admettre les étrangers au séjour selon un système à points : emploi, logement, français",
+      "description": "« mettre en place une immigration choisie par système à points, inspirée du système canadien »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/immigration-systeme-a-points",
+      "dateDeclaration": "2026-05-30",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée en meeting. Critères : une offre d'emploi stable, un logement, parler français, connaître et respecter les valeurs du pays ; quotas votés tous les deux ans par le Parlement, priorité à l'immigration de travail."
+    },
+    {
+      "id": "prop-ga-12",
+      "ref": "P-170",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "numerique",
+      "sujetId": "intelligence-artificielle",
+      "titre": "Former 20 millions de salariés à l'intelligence artificielle d'ici 2030",
+      "description": "« former 20 millions de salariés à l'IA d'ici 2030, à tous les niveaux de qualification »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/vingt-millions-salaries-ia",
+      "dateDeclaration": "2026-06-18",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée à la radio. Dans les petites comme les grandes entreprises ; prévoit aussi un crédit d'impôt pour financer l'adoption de l'IA et une révision du règlement européen sur l'IA, jugé défavorable aux entreprises."
+    },
+    {
+      "id": "prop-ga-13",
+      "ref": "P-351",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "economie",
+      "sujetId": "depenses-dette",
+      "titre": "Ramener le déficit public sous 3 % avant 2032, avec 150 milliards d'euros d'économies",
+      "description": "« Repasser sous les 3 % avant 2032 exige 150 milliards d'euros d'économies, dont les deux tiers sur les dépenses sociales. »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/deficit-sous-trois-pour-cent",
+      "dateDeclaration": "2026-07-03",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée dans la presse. Le déficit devrait atteindre 5,4 % de la richesse produite en 2026 ; 20 milliards d'euros d'économies dès 2027, première étape avant l'équilibre."
+    },
+    {
+      "id": "prop-ga-14",
+      "ref": "P-708",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "securite",
+      "sujetId": "justice-des-mineurs",
+      "titre": "Juger les mineurs récidivistes en comparution immédiate, comme les adultes",
+      "description": "« instaurer la comparution immédiate pour les mineurs récidivistes, en menant à son terme la loi sur la justice des mineurs interrompue par la dissolution de 2024 »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/comparution-immediate-mineurs",
+      "dateDeclaration": "2026-06-10",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure présentée à la télévision. Un adulte pris en flagrant délit peut être jugé dans la journée ; une partie de la loi déjà votée a été censurée par le Conseil constitutionnel, et il se dit prêt à modifier la Constitution si nécessaire."
     },
     {
       "id": "prop-jlm-1",
@@ -2419,7 +2457,7 @@
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
       "dateDeclaration": "2026-07-13",
       "typeSource": "programme_2027",
-      "contexte": "Programme 2027, p. 24-25. Moratoire, c'est-à-dire suspension, visant aussi le canal Seine-Nord Europe et les extensions d'aéroport, ainsi que toute nouvelle capacité routière."
+      "contexte": "Programme 2027, p. 24-25. Moratoire, c'est-à-dire suspension, visant aussi le canal Seine-Nord Europe et les extensions d'aéroport, ainsi que la création de nouvelles routes, sauf exceptions outre-mer."
     },
     {
       "id": "prop-mt-2",
@@ -2453,12 +2491,12 @@
       "candidatId": "marine-tondelier",
       "thematiqueId": "travail",
       "sujetId": "contrat-licenciement",
-      "titre": "Garantir 2 ans de salaire à ceux qui perdent leur emploi à cause de la transition écologique",
-      "description": "« Créer une Sécurité Sociale Professionnelle pour l'ensemble des travailleur·ses impactés par la transition écologique. Garantir un salaire équivalent en cas de perte d'emploi pendant deux ans »",
+      "titre": "Garantir 2 ans de salaire aux salariés des secteurs les plus exposés à la transition écologique qui perdent leur emploi",
+      "description": "« Créer une Sécurité Sociale Professionnelle pour l'ensemble des travailleur·ses impactés par la transition écologique. Garantir un salaire équivalent en cas de perte d'emploi pendant deux ans dans les secteurs les plus exposés »",
       "sourceUrl": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
       "dateDeclaration": "2026-07-13",
       "typeSource": "programme_2027",
-      "contexte": "Programme 2027, p. 55. Mesure d'une « Sécurité sociale professionnelle » : en cas de perte d'emploi liée à la transition écologique, un salaire équivalent serait maintenu pendant deux ans."
+      "contexte": "Programme 2027, p. 55. Mesure d'une « Sécurité sociale professionnelle » : en cas de perte d'emploi, un salaire équivalent serait maintenu pendant deux ans dans les secteurs les plus exposés, cités en exemple : chauffeurs poids lourds, garages, raffineries."
     },
     {
       "id": "prop-mt-5",
@@ -2740,12 +2778,12 @@
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "economie",
       "sujetId": "temps-de-travail",
-      "titre": "Répartir le travail entre tous sans baisse de salaire, et ne licencier personne",
-      "description": "« nous disons qu'il faut répartir le travail entre tous, sans diminution de salaire. »",
+      "titre": "Quand une entreprise a moins de travail, raccourcir les horaires de tous plutôt que licencier",
+      "description": "« S'il y a moins de travail dans une entreprise [...] on réduit les horaires de tous, mais on ne licencie personne et on maintient les salaires. »",
       "sourceUrl": "https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html",
       "dateDeclaration": "2026-09-26",
       "typeSource": "prise_de_position",
-      "contexte": "Discours de meeting à Paris. Si le travail baisse dans une entreprise, on réduit les horaires de tous, « mais on ne licencie personne et on maintient les salaires »."
+      "contexte": "Discours de meeting à Paris. Mesure présentée comme « répartir le travail entre tous, sans diminution de salaire », y compris si l'intelligence artificielle fait une partie du travail. Les salaires seraient maintenus."
     },
     {
       "id": "prop-na-3",
@@ -2910,6 +2948,18 @@
       "sourceUrl": "https://www.debout-la-france.fr/projet/instruction-publique/",
       "typeSource": "programme_2027",
       "contexte": "Programme, volet éducation, mesures pour le primaire. Prévoit aussi le retour à la méthode syllabique pour la lecture et, en fin de primaire, un examen sur le modèle du certificat d'études conditionnant l'entrée au collège."
+    },
+    {
+      "id": "prop-nda-9",
+      "ref": "P-735",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "economie",
+      "sujetId": "prix-energie-carburants",
+      "titre": "Diviser par deux le prix de l'électricité dès la première année",
+      "description": "« Diviser par 2 le prix de l'électricité dès la première année »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/economie-travail/",
+      "typeSource": "programme_2027",
+      "contexte": "Programme, volet économie. En sortant du marché européen de fixation du prix de l'électricité, en rendant à EDF le monopole de la production et de la distribution, et avec un tarif national garanti de 10 centimes le kilowattheure."
     },
     {
       "id": "prop-ob-1",
@@ -5594,9 +5644,9 @@
       "sujetId": "immigration-asile",
       "nature": "texte_europeen",
       "titre": "Pacte européen sur la migration et l'asile",
-      "question": "Faut-il adopter des règles européennes pour répartir les demandeurs d'asile et filtrer les arrivées aux frontières ?",
-      "enjeu": "Les pays de l'Union européenne devraient être solidaires dans la répartition des demandeurs d'asile, et le filtrage des arrivées aux frontières extérieures de l'Union serait renforcé.",
-      "resume": "Ensemble de règlements européens organisant la solidarité obligatoire entre États membres pour la répartition des demandeurs d'asile et le filtrage renforcé aux frontières extérieures.",
+      "question": "Faut-il obliger chaque pays européen à aider à l'accueil des demandeurs d'asile et contrôler les arrivées irrégulières ?",
+      "enjeu": "Chaque pays de l'Union devrait aider à l'accueil des demandeurs d'asile : en recevoir, payer ou apporter un soutien. Les personnes entrées irrégulièrement passeraient des contrôles obligatoires (sécurité, santé).",
+      "resume": "Dix textes européens : chaque État doit participer, au choix par la relocalisation de demandeurs d'asile, une contribution financière ou un soutien opérationnel ; identification améliorée et contrôles obligatoires pour les personnes entrant irrégulièrement dans l'Union.",
       "chambre": "parlement_europeen",
       "dateVote": "2024-04-10",
       "statut": "adoptee",
@@ -5607,7 +5657,7 @@
           "typeVote": "groupe_parti",
           "groupe": "RENEW",
           "groupeNom": "Renew Europe",
-          "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
+          "explication": "Les eurodéputés de son parti (groupe Renew Europe) ont voté pour les quatre textes principaux.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "edouard-philippe": {
@@ -5615,7 +5665,7 @@
           "typeVote": "groupe_parti",
           "groupe": "RENEW",
           "groupeNom": "Renew Europe",
-          "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
+          "explication": "Les eurodéputés de son parti (groupe Renew Europe) ont voté pour les quatre textes principaux.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "raphael-glucksmann": {
@@ -5629,7 +5679,7 @@
           "typeVote": "groupe_parti",
           "groupe": "ID",
           "groupeNom": "Identité et démocratie",
-          "explication": "Les eurodéputés du groupe Identité et démocratie ont voté contre, en majorité.",
+          "explication": "Les eurodéputés de son parti (groupe Identité et démocratie) ont voté contre les quatre textes principaux.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "jean-luc-melenchon": {
@@ -5637,7 +5687,7 @@
           "typeVote": "groupe_parti",
           "groupe": "GUE/NGL",
           "groupeNom": "La Gauche au Parlement européen - GUE/NGL",
-          "explication": "Les eurodéputés du groupe de la Gauche (GUE/NGL) ont voté contre, en majorité.",
+          "explication": "Les eurodéputés de son parti (groupe de la Gauche) ont voté contre les quatre textes principaux, une abstention sur le retour à la frontière.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "marine-tondelier": {
@@ -5645,14 +5695,15 @@
           "typeVote": "groupe_parti",
           "groupe": "Verts/ALE",
           "groupeNom": "Les Verts/Alliance libre européenne",
-          "explication": "Les eurodéputés Verts/ALE ont voté contre, en majorité.",
+          "explication": "Les eurodéputés de son parti (groupe Verts/ALE) ont voté contre les quatre textes principaux.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         },
         "bruno-retailleau": {
-          "position": "pour",
+          "position": "contre",
           "typeVote": "groupe_parti",
           "groupe": "PPE",
           "groupeNom": "Parti populaire européen (Démocrates-Chrétiens)",
+          "explication": "Les eurodéputés de son parti (groupe PPE) ont voté contre la gestion de l'asile et les situations de crise, se sont abstenus sur le retour à la frontière et ont voté pour le filtrage.",
           "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-RCV_FR.html"
         }
       },
@@ -5859,8 +5910,8 @@
       "nature": "texte_europeen",
       "titre": "Règlement européen sur l'Intelligence Artificielle (AI Act)",
       "question": "Faut-il encadrer l'intelligence artificielle en Europe selon son niveau de risque ?",
-      "enjeu": "Les règles imposées à chaque système d'intelligence artificielle dépendraient de son niveau de risque. La reconnaissance biométrique de masse (par exemple par le visage) serait interdite et les IA génératives encadrées.",
-      "resume": "Premier cadre mondial contraignant régulant les systèmes d'IA selon leurs niveaux de risque, interdisant la reconnaissance biométrique de masse et encadrant les IA génératives.",
+      "enjeu": "Les règles imposées à une IA dépendraient de son niveau de risque. Seraient interdites la collecte non ciblée d'images de visages et, sauf cas précis, l'identification biométrique par la police.",
+      "resume": "Règlement fixant des obligations aux systèmes d'IA selon leurs risques et leur impact : interdiction de la collecte non ciblée d'images faciales, identification biométrique par les services répressifs interdite sauf exceptions, transparence pour les IA à usage général.",
       "chambre": "parlement_europeen",
       "dateVote": "2024-03-13",
       "statut": "adoptee",
@@ -5870,30 +5921,31 @@
           "position": "pour",
           "typeVote": "individuel",
           "explication": "Député européen, a voté pour.",
-          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html"
         },
         "gabriel-attal": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "RENEW",
           "groupeNom": "Renew Europe",
-          "explication": "Les eurodéputés Renew Europe ont voté pour, en majorité.",
-          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+          "explication": "Les eurodéputés de son parti (groupe Renew Europe) ont voté pour.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html"
         },
         "marine-tondelier": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "Verts/ALE",
           "groupeNom": "Les Verts/Alliance libre européenne",
-          "explication": "Les eurodéputés Verts/ALE ont voté pour, en majorité.",
-          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+          "explication": "Les eurodéputés de son parti (groupe Verts/ALE) ont voté pour, à 7 contre 2.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html"
         },
         "marine-le-pen": {
           "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "ID",
           "groupeNom": "Identité et démocratie",
-          "sourceUrl": "https://www.europarl.europa.eu/news/fr/press-room/20240308IPR19015/"
+          "explication": "Les eurodéputés de son parti (groupe Identité et démocratie) ont voté pour.",
+          "sourceUrl": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-RCV_FR.html"
         }
       },
       "ref": "L-16"
@@ -7955,11 +8007,6 @@
       "definition": "Principal producteur d'électricité en France, entreprise publique."
     },
     {
-      "sigle": "EGALIM",
-      "forme": "États généraux de l'alimentation",
-      "definition": "Nom de la loi de 2018 sur le prix payé aux agriculteurs et les relations commerciales agricoles."
-    },
-    {
       "sigle": "EPR",
       "forme": "Réacteur pressurisé européen",
       "definition": "Modèle récent de réacteur nucléaire de grande puissance."
@@ -8003,11 +8050,6 @@
       "sigle": "IVG",
       "forme": "Interruption volontaire de grossesse",
       "definition": "Avortement."
-    },
-    {
-      "sigle": "LCP",
-      "forme": "La Chaîne parlementaire",
-      "definition": "Chaîne de télévision de l'Assemblée nationale."
     },
     {
       "sigle": "OMS",
@@ -8331,13 +8373,6 @@
       "definition": "Document délivré par le pays d'origine d'un étranger sans passeport valable, nécessaire pour l'y renvoyer."
     },
     {
-      "mot": "part fiscale",
-      "variantes": [
-        "parts fiscales"
-      ],
-      "definition": "Unité du calcul de l'impôt sur le revenu selon la taille du foyer : plus un foyer a de parts, moins il paie d'impôt."
-    },
-    {
       "mot": "prix plancher",
       "variantes": [
         "prix planchers"
@@ -8400,13 +8435,6 @@
         "artificialisation"
       ],
       "definition": "Objectif de la loi pour 2050 : ne plus réduire, en bilan, les sols naturels, agricoles ou forestiers en les construisant ou en les bitumant."
-    },
-    {
-      "mot": "logement intermédiaire",
-      "variantes": [
-        "logements intermédiaires"
-      ],
-      "definition": "Logement au loyer plafonné, entre le logement social et le marché libre, destiné aux classes moyennes."
     },
     {
       "mot": "encadrement des loyers",
@@ -10339,30 +10367,6 @@
         {
           "titre": "Le règlement européen sur les services numériques",
           "url": "https://fr.wikipedia.org/wiki/R%C3%A8glement_sur_les_services_num%C3%A9riques",
-          "editeur": "Wikipédia",
-          "media": "article",
-          "aveugle": true
-        }
-      ]
-    },
-    {
-      "id": "ruralite",
-      "thematiqueId": "societe",
-      "titre": "Les services publics à la campagne",
-      "aujourdhui": "Depuis 2019, les espaces France services aident aux démarches (emploi, retraite, santé, logement). En septembre 2024, on en comptait 2 840, chacun à moins de 30 minutes des habitants. Fin 2024, le déploiement de la fibre optique était achevé à près de 91 %.",
-      "enDebat": "Les uns veulent garder ou rouvrir écoles, transports, soins et réseaux dans chaque territoire, même si cela coûte cher. Les autres préfèrent regrouper les services pour mieux les équiper, et développer les démarches en ligne et les services qui se déplacent.",
-      "aJour": "2026-11-06",
-      "liens": [
-        {
-          "titre": "France services",
-          "url": "https://fr.wikipedia.org/wiki/France_services",
-          "editeur": "Wikipédia",
-          "media": "article",
-          "aveugle": true
-        },
-        {
-          "titre": "Le plan France Très Haut Débit",
-          "url": "https://fr.wikipedia.org/wiki/Plan_France_Tr%C3%A8s_Haut_D%C3%A9bit",
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": true

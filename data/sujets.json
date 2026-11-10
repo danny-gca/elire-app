@@ -873,18 +873,6 @@
     ]
   },
   {
-    "id": "ruralite",
-    "thematiqueId": "societe",
-    "titre": "Les services publics à la campagne",
-    "aujourdhui": "Depuis 2019, les espaces France services aident aux démarches (emploi, retraite, santé, logement). En septembre 2024, on en comptait 2 840, chacun à moins de 30 minutes des habitants. Fin 2024, le déploiement de la fibre optique était achevé à près de 91 %.",
-    "enDebat": "Les uns veulent garder ou rouvrir écoles, transports, soins et réseaux dans chaque territoire, même si cela coûte cher. Les autres préfèrent regrouper les services pour mieux les équiper, et développer les démarches en ligne et les services qui se déplacent.",
-    "aJour": "2026-11-06",
-    "liens": [
-      { "titre": "France services", "url": "https://fr.wikipedia.org/wiki/France_services", "editeur": "Wikipédia", "media": "article" },
-      { "titre": "Le plan France Très Haut Débit", "url": "https://fr.wikipedia.org/wiki/Plan_France_Tr%C3%A8s_Haut_D%C3%A9bit", "editeur": "Wikipédia", "media": "article" }
-    ]
-  },
-  {
     "id": "enfance-famille",
     "thematiqueId": "societe",
     "titre": "L'enfance et la famille",

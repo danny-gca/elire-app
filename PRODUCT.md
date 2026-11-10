@@ -38,7 +38,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 
 ## Evidence on Hand
 
-- Données éditoriales : data/candidats/\*.csv (191 propositions vérifiées, 8 par candidat pour 20 d'entre eux, 27 candidats, chacun avec la source datée de sa candidature et le statut de son programme 2027 ; chaque proposition dit son type de source), data/enjeux.json (16 questions communes qui réunissent 37 propositions), data/lois.json (47 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen), data/sujets.json (75 sujets, l'onglet « Contexte » de chaque question : faits datés, options en débat, sources), data/mots.json (60 mots techniques expliqués).
+- Données éditoriales : data/candidats/\*.csv (195 propositions sourcées, 8 par candidat pour 24 d'entre eux, 27 candidats, chacun avec la source datée de sa candidature et le statut de son programme 2027 ; chaque proposition dit son type de source), data/enjeux.json (16 questions communes qui réunissent 37 propositions), data/lois.json (47 scrutins parlementaires réels vérifiés, de 2017 à 2026 : Assemblée, Sénat, Parlement européen), data/sujets.json (74 sujets, l'onglet « Contexte » de chaque question : faits datés, options en débat, sources), data/mots.json (58 mots techniques expliqués).
 - Qualité des sources : chaque proposition renvoie à un document précis qui la contient (vérification du 2026-10-13, docs/verification-donnees.md). Plusieurs mesures viennent de programmes 2022, faute de programme 2027 publié.
 - Charte graphique : src/constants/theme.ts, logo vectoriel assets/brand/mark.svg, contrat de direction .impeccable/surfaces/src-app-tabs-index-tsx.md.
 
@@ -47,7 +47,7 @@ Consultation sur mobile et web. Sessions courtes de vote à l'aveugle (découver
 1. Neutralité et équité absolue entre tous les candidats.
 2. Confidentialité totale : tout le calcul et les votes restent sur l'appareil.
 3. Rigueur des faits : distinction stricte entre promesse de campagne et vote parlementaire effectif, et entre vote individuel et vote de groupe.
-4. Entrée d'un candidat : candidature déclarée ou désignée, avec une source datée ; même nombre de propositions pour tous.
+4. Entrée d'un candidat : candidature annoncée ou investie par son parti, avec une source datée ; même nombre de propositions pour tous.
 5. Clarté et calme : l'utilisateur doit repartir avec le sentiment de s'être fait son avis, sans pression.
 6. Clarté cognitive des questions : questions formulées de façon directe et affirmative. Interdiction absolue des doubles négations et des tournures de rejet procédural (ex: « Rejet de... » où voter « Contre » reviendrait à être pour la mesure). Répondre « Pour » doit toujours signifier sans ambiguïté le soutien au fond de la mesure.
 

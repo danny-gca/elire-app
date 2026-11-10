@@ -513,7 +513,7 @@ Le même mobilier pour chaque candidat, seul le score change ; une seule touche 
 
 **Jauge de fiabilité :** sous la base du score, trois traits de 4px (6, 9 et 12px de haut, 2px d'écart, coins de 1), vides au filet et remplis d'encre selon le niveau (fragile 1, assez sûr 2, fiable 3), puis le niveau en 13 graphite à 6px. Lisible sans la couleur, la même sur chaque panneau ; absente tant que le candidat n'est pas classé. Sur la fiche, la même jauge suivie de son détail (« sur 5 propositions et 1 scrutin : assez de votes pour comparer »).
 
-**Candidature sur la fiche :** sous la biographie, un lien souligné en 13 semi-gras vers la source de la candidature, avec son statut et sa date (« Candidature déclarée le 22 mai 2026 », « désignée par son parti », « annoncée sous condition », « pressentie, pas encore déclarée »).
+**Candidature sur la fiche :** sous la biographie, un lien souligné en 13 semi-gras vers la source de la candidature, avec son statut et sa date (« Candidature annoncée le 22 mai 2026 », « Investiture de son parti le 3 juin 2026 », « annoncée sous condition », « pressentie, pas encore déclarée »).
 
 **Pas encore classés** (Cahier) : pas de panneau, une liste sur feuille blanche à filets (avatar de 36 à l'anneau du parti, nom en 17 semi-gras, parti en 13 graphite, « 1 / 2 notées » tabulaire à droite, chevron) : on ne les confond pas avec le panneau du Classement.
 

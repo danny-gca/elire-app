@@ -221,7 +221,17 @@
     "prop-mlp-9": 760,
     "prop-mlp-11": 103,
     "prop-mlp-12": 822,
-    "prop-mlp-14": 108
+    "prop-mlp-14": 108,
+    "prop-dl-9": 517,
+    "prop-ep-9": 384,
+    "prop-nda-9": 735,
+    "prop-fro-9": 294,
+    "prop-ga-9": 497,
+    "prop-ga-10": 532,
+    "prop-ga-11": 712,
+    "prop-ga-12": 170,
+    "prop-ga-13": 351,
+    "prop-ga-14": 708
   },
   "lois": {
     "loi-energies-renouvelables-2023": 1,
