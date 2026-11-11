@@ -12,7 +12,7 @@ export function previousQuestion({
   shownId?: string;
   /** Une question est déjà ramenée (ou une page tourne) : pas de deuxième cran. */
   revisiting: boolean;
-  /** Pause, fin, geste de vote, révélation ou tuto en cours. */
+  /** Fin, geste de vote, révélation ou tuto en cours (le bilan laisse revenir en arrière). */
   busy: boolean;
 }): string | null {
   if (!lastId || revisiting || busy || lastId === shownId) {
@@ -46,6 +46,11 @@ export function hardwareBack({
     return 'back';
   }
   return null;
+}
+
+/** Un vote attend seulement une page ramenée en plein geste ; la page votée qui finit de tourner n'avale plus le toucher. */
+export function voteBlocked(mode?: 'turn' | 'peek' | 'back'): boolean {
+  return mode === 'peek';
 }
 
 /** Lâcher le doigt : la page se rabat au-delà d'un tiers de la largeur, ou sur un geste vif. */
