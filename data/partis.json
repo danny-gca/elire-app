@@ -53,8 +53,7 @@
   },
   {
     "id": "place-publique",
-    "nom": "Place Publique / PS",
-    "sigle": "PP-PS",
+    "nom": "Place publique",
     "couleur": "#D81B60",
     "nuanceOfficielle": {
       "code": "LUG",
@@ -186,7 +185,7 @@
     "nom": "Nouvelle Énergie",
     "sigle": "NE",
     "couleur": "#2563EB",
-    "siteWeb": "https://nouvelleenergie.fr"
+    "siteWeb": "https://www.unenouvelleenergie.fr"
   },
   {
     "id": "parti-animaliste",

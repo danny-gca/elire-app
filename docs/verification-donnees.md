@@ -4,6 +4,61 @@ Registre des éléments relus contre leur source : une ligne par élément, la p
 
 | Date | Réf | Élément | Verdict | Motif |
 | --- | --- | --- | --- | --- |
+| 2026-11-11 | L-44 | mineurs-reseaux-sociaux-2026 | reformulée | Enjeu : « loi de 2023 » absente des sources ; exceptions exactes du texte adopté (encyclopédies, sites éducatifs ou scientifiques, logiciels libres). |
+| 2026-11-11 | L-43 | aide-a-mourir-2026 | reformulée | Question et enjeu : conditions du texte adopté (phase avancée ou terminale, souffrance réfractaire ou insupportable, souffrance psychique seule exclue). |
+| 2026-11-11 | L-42 | plfss-2026 | reformulée | Question et enjeu : « jusqu'en janvier 2028 » absent du texte ; l'article 105 fige l'âge à 62 ans et 9 mois (nés de 1963 à mars 1965). |
+| 2026-11-11 | L-41 | confiance-gouvernement-2025 | reformulée | Enjeu : la confiance portait sur « un seul point », le constat de la situation financière (compte rendu de séance). |
+| 2026-11-11 | L-40 | loi-contraintes-agriculteurs-2025 | reformulée | Question, enjeu, résumé : la dérogation et la censure visent tous les néonicotinoïdes, pas seulement l'acétamipride (décision 2025-891 DC). |
+| 2026-11-11 | L-37 | loi-narcotrafic-2025 | reformulée | Question et enjeu : « quartiers » de prison de haute sécurité (texte adopté). |
+| 2026-11-11 | L-28 | motion-censure-barnier-2024 | reformulée | Question, enjeu, résumé : le texte n'avait pas été adopté (rejeté par la censure) ; 185 signataires, majorité requise 288 ; explications « 0 pour, 0 contre » remplacées par « aucun député n'a voté la motion ». |
+| 2026-11-11 | L-27 | debat-accord-ue-mercosur-2024 | reformulée | Titre, question, enjeu, résumé : le vote portait sur la déclaration du Gouvernement (article 50-1), pas sur un « rejet » ; détails de l'accord non sourcés retirés. |
+| 2026-11-11 | L-26 | rejet-recettes-plf-2025 | reformulée | Titre, question, enjeu, résumé : pas de rétablissement de l'ISF ; impôt de 2 % au-delà d'un milliard et contribution sur les bénéfices exceptionnels (texte du 08/11/2024). |
+| 2026-11-11 | L-25 | regulation-meubles-tourisme-airbnb-2024 | reformulée | Titre officiel du scrutin n° 289 (sans marque ni nom propre). |
+| 2026-11-11 | L-23 | loi-orientation-agricole-2024 | reformulée | Titre officiel ; « règles d'aménagement assouplies » remplacé par la réduction des délais de recours (compte rendu). |
+| 2026-11-11 | L-22 | degel-corps-electoral-nouvelle-caledonie-2024 | reformulée | Enjeu : gel issu de la révision de 2007 (rapport n° 2611), natifs ajoutés ; résumé : « suspendu » non sourcé, remplacé par l'étape du Congrès ou du référendum. |
+| 2026-11-11 | L-20 | loi-sren-numerique-2024 | reformulée | Titre officiel du scrutin n° 3668 (texte de la commission mixte paritaire). |
+| 2026-11-11 | L-7 | relance-nucleaire-epr-2023 | reformulée | Titre, question, enjeu, résumé : « 6 EPR2 » absent de la loi ; elle vise les réacteurs près des sites existants et supprime l'objectif de 50 % et le plafond de 63,2 gigawatts. |
+| 2026-11-11 | L-19 | ppl-interdiction-pfas-2024 | reformulée | Enjeu et résumé : tous les PFAS, textiles d'habillement en 2026 et tous les textiles en 2030, redevance sur les rejets. |
+| 2026-11-11 | L-17 | ppl-anti-fast-fashion-2024 | reformulée | Titre, question, résumé : pénalité (5 euros en 2025, 10 en 2030) et non taxe ; marques citées retirées (absentes du texte). |
+| 2026-11-11 | L-15 | accord-securite-ukraine-2024 | reformulée | Question, enjeu, résumé : « jusqu'à » 3 milliards de soutien supplémentaire, artillerie et défense aérienne (texte de l'accord, elysee.fr). |
+| 2026-11-11 | L-13 | loi-immigration-2023 | reformulée | Enjeu : aides au logement après 3 mois de travail (non 30) ; résumé : 35 « articles ou parties d'articles » censurés sur 86. |
+| 2026-11-11 | L-12 | loi-valletoux-acces-soins-2023 | reformulée | Titre officiel ; intérim limité selon une durée minimale d'exercice, non « à la sortie d'école » ; qualificatif « strict » retiré. |
+| 2026-11-11 | L-10 | loi-plein-emploi-france-travail-2023 | reformulée | Enjeu et résumé : inscription automatique des demandeurs du RSA et de leur conjoint ; 15 heures minimum, réductibles. |
+| 2026-11-11 | L-9 | loi-programmation-militaire-2024-2030 | reformulée | Résumé : qualificatif « historique » retiré. |
+| 2026-11-11 | L-4 | videosurveillance-ia-jo-2024 | reformulée | Question, enjeu, résumé : article 7 seul, jusqu'au 31/12/2024, événements prédéterminés, sans reconnaissance faciale ; exemples non présents dans le texte retirés. |
+| 2026-11-11 | L-3 | loi-retraites-2023 | reformulée | Résumé : le scrutin est la motion de censure (278 voix pour, majorité requise 287), le texte est considéré comme adopté. |
+| 2026-11-11 | L-1 | loi-energies-renouvelables-2023 | reformulée | Résumé : zones d'accélération définies par les communes, non par les maires. |
+| 2026-11-11 | L-36 | climat-resilience-2021 | reformulée | Résumé complété : vols intérieurs, calendrier des logements G, F, E, zones à faibles émissions (texte adopté). |
+| 2026-11-11 | L-48 | presomption-legitime-defense-2026 | reformulée | Enjeu : le tir contre un « périple meurtrier » existait déjà ; le texte retire l'exigence d'uniforme (amendement n° 39). |
+| 2026-11-11 | L-52 | surtaxe-grandes-entreprises-2027 | reformulée | Enjeu complété : rétablissement de la contribution des grandes entreprises de transport maritime (exposé de l'article 15). |
+| 2026-11-11 | L-45 | holding-audiovisuel-public-2025 | reformulée | Titre : le scrutin porte sur la motion de rejet préalable. |
+| 2026-11-11 | L-32 | ratification-ceta-an-2019 | reformulée | Titre officiel : inclut l'accord de partenariat stratégique (première lecture). |
+| 2026-11-11 | L-35 | principes-republique-2021 | reformulée | Enjeu : « délit de séparatisme » remplacé par la définition du texte (menaces contre un agent public pour obtenir une dérogation) ; titre complété. |
+| 2026-11-11 | L-34 | securite-globale-2020 | reformulée | Enjeu : « dans le but manifeste » de porter atteinte à l'intégrité (article 24) ; titre complété. |
+| 2026-11-11 | L-31 | ecole-de-la-confiance-2019 | reformulée | Titre complété (première lecture). |
+| 2026-11-11 | L-30 | loi-asile-immigration-2018 | reformulée | Titre complété (première lecture). |
+| 2026-11-11 | L-29 | ordonnances-travail-2017 | reformulée | Titre complété (première lecture). |
+| 2026-11-11 | L-39 | antisemitisme-enseignement-superieur-2025 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-38 | programmation-energie-climat-2025 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-14 | loi-constitutionnelle-ivg-2024 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-2 | repas-etudiant-1-euro-2023 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-5 | loi-anti-squat-kasbarian-2023 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-33 | bioethique-pma-2019 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-46 | etiquetage-origine-aliments-2025 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-47 | nationalisation-arcelormittal-2026 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-53 | jeunes-majeurs-protection-enfance-2026 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-51 | abattement-pensions-retraite-2027 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | L-50 | contribution-budget-europeen-2027 | confirmée | Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. |
+| 2026-11-11 | - | candidats.json / eric-zemmour | corrigée | Candidature : 2026-09-17 -> 2026-11-10, déclaration officielle sur TF1 (Sud Radio) ; l'article du 17/09 précisait que ce n'était pas une déclaration formelle. |
+| 2026-11-11 | - | candidats.json / bruno-retailleau | corrigée | Biographie : plus ministre ; de retour au Sénat (Public Sénat, 12/11/2025), président de LR (01/10/2026). |
+| 2026-11-11 | - | candidats.json / nicolas-dupont-aignan | corrigée | Biographie : battu aux législatives de 2024 (Public Sénat), ancien député. |
+| 2026-11-11 | - | candidats.json / marine-tondelier | corrigée | Biographie : absente des 35 élus municipaux 2026 d'Hénin-Beaumont (ministère de l'Intérieur). |
+| 2026-11-11 | - | candidats.json / fabien-roussel | corrigée | Biographie : élu maire de Saint-Amand-les-Eaux le 22/03/2026 (bulletin municipal). |
+| 2026-11-11 | - | candidats.json / francois-ruffin | corrigée | Candidature : officialisée le 25/04/2026 à Lyon (Lyon Capitale), non le 18/09/2026 (article récapitulatif). |
+| 2026-11-11 | - | candidats.json / sylvain-durif | corrigée | Source RTL du 25/08/2026 (annonce du 23/08) au lieu de Wikipédia ; « chef d'entreprise » absent des sources, retiré. |
+| 2026-11-11 | - | candidats.json / delphine-batho | corrigée | Date du programme retirée : absente de la page. |
+| 2026-11-11 | - | partis.json / nouvelle-energie | corrigée | Site : nouvelleenergie.fr est un domaine parqué ; site du parti unenouvelleenergie.fr. |
+| 2026-11-11 | - | partis.json / place-publique | corrigée | Nom « Place publique » comme sur son site ; sigle PP-PS employé nulle part, retiré. |
 | 2026-11-11 | P-145 | prop-ga-1 | reformulée | Citation inexacte (« nous déploierons... » absent de la source) : remplacée par la phrase exacte du compte rendu officiel de l'Assemblée (2e séance du 30/01/2024), qui devient la source (info.gouv.fr ne donne qu'un résumé). |
 | 2026-11-11 | P-864 | prop-ga-6 | confirmée | PDF de la page info.gouv.fr (publiée le 01/02/2024) : citations et arrêt du plan Ecophyto exacts. |
 | 2026-11-11 | P-795 | prop-np-1 | confirmée | PDF de l'article du JDD du 02/09/2026 : citation, déficit commercial, priorité nationale dans la commande publique, Le Parisien et RTL exacts. |

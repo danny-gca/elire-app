@@ -110,7 +110,7 @@
     "partiId": "les-ecologistes",
     "avatar": "MT",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Secrétaire nationale des Écologistes et élue municipale d'Hénin-Beaumont.",
+    "biographie": "Secrétaire nationale des Écologistes.",
     "candidature": {
       "statut": "investie",
       "date": "2025-12-08",
@@ -128,7 +128,7 @@
     "partiId": "lr",
     "avatar": "BR",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg/330px-Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Ministre de l'Intérieur, ancien président du groupe LR au Sénat.",
+    "biographie": "Sénateur de la Vendée, président des Républicains et ancien ministre de l'Intérieur.",
     "candidature": {
       "statut": "investie",
       "date": "2026-04-19",
@@ -149,8 +149,8 @@
     "biographie": "Député de la Somme, réalisateur et fondateur du mouvement Debout !",
     "candidature": {
       "statut": "annoncee",
-      "date": "2026-09-18",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart"
+      "date": "2026-04-25",
+      "sourceUrl": "https://www.lyoncapitale.fr/actualite/a-lyon-francois-ruffin-lance-sa-campagne-presidentielle"
     },
     "programme": {
       "statut": "partiel",
@@ -163,7 +163,7 @@
     "partiId": "pcf",
     "avatar": "FRO",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Roussel_Fabien_1.jpg/330px-Roussel_Fabien_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Secrétaire national du Parti Communiste Français et ancien député du Nord.",
+    "biographie": "Secrétaire national du Parti Communiste Français, maire de Saint-Amand-les-Eaux et ancien député du Nord.",
     "candidature": {
       "statut": "investie",
       "date": "2026-09-06",
@@ -182,8 +182,8 @@
     "biographie": "Président de Reconquête, ancien journaliste et essayiste.",
     "candidature": {
       "statut": "annoncee",
-      "date": "2026-09-17",
-      "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
+      "date": "2026-11-10",
+      "sourceUrl": "https://www.sudradio.fr/societe/eric-zemmour-annonce-sa-candidature-a-la-presidentielle-pour-conserver-une-france-francaise"
     },
     "programme": {
       "statut": "partiel",
@@ -230,7 +230,7 @@
     "partiId": "debout-la-france",
     "avatar": "NDA",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg/330px-Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Président de Debout La France et député de l'Essonne.",
+    "biographie": "Président de Debout La France et ancien député de l'Essonne.",
     "candidature": {
       "statut": "annoncee",
       "date": "2025-03-08",
@@ -351,8 +351,7 @@
     },
     "programme": {
       "statut": "partiel",
-      "url": "https://delphinebatho.fr/priorites/",
-      "date": "2026-11-04"
+      "url": "https://delphinebatho.fr/priorites/"
     }
   },
   {
@@ -435,11 +434,11 @@
     "id": "sylvain-durif",
     "nom": "Sylvain Durif",
     "avatar": "SD",
-    "biographie": "Vidéaste et chef d'entreprise, candidat sans parti ni mouvement.",
+    "biographie": "Vidéaste web, candidat sans parti ni mouvement.",
     "candidature": {
       "statut": "annoncee",
       "date": "2026-08-23",
-      "sourceUrl": "https://fr.wikipedia.org/wiki/Sylvain_Durif"
+      "sourceUrl": "https://www.rtl.fr/actu/politique/christ-cosmique-grand-monarque-et-bientot-president-de-la-republique-le-videaste-complotiste-sylvain-durif-se-declare-candidat-a-l-election-de-2027-7900664715"
     },
     "programme": {
       "statut": "aucun"
