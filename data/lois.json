@@ -93,6 +93,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "a34957d8",
+      "note": "2026-11-11 reformulée : Enjeu : « loi de 2023 » absente des sources ; exceptions exactes du texte adopté (encyclopédies, sites éducatifs ou scientifiques, logiciels libres). // 2026-11-11 corrigée : Contre -> abstention : le groupe RN a voté 0 pour, 2 contre, 14 abstention(s) (scrutin n° 8431) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Contre -> pour : le groupe ECOS a voté 19 pour, 7 contre, 7 abstention(s) (scrutin n° 8431) ; l'explication donnait déjà ce décompte."
     }
   },
   {
@@ -187,6 +193,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "59cf25b8",
+      "note": "2026-11-11 reformulée : Question et enjeu : conditions du texte adopté (phase avancée ou terminale, souffrance réfractaire ou insupportable, souffrance psychique seule exclue). // 2026-11-11 corrigée : Abstention -> pour : le groupe GDR a voté 10 pour, 2 contre, 3 abstention(s) (scrutin n° 8280) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Pour -> contre : le groupe DR a voté 5 pour, 41 contre, 2 abstention(s) (scrutin n° 8280) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Abstention -> pour : le groupe SOC a voté 57 pour, 4 contre, 6 abstention(s) (scrutin n° 8280) ; l'explication donnait déjà ce décompte."
     }
   },
   {
@@ -281,6 +293,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "4f5c204b",
+      "note": "2026-11-11 reformulée : Question et enjeu : « jusqu'en janvier 2028 » absent du texte ; l'article 105 fige l'âge à 62 ans et 9 mois (nés de 1963 à mars 1965). // 2026-11-11 corrigée : Abstention -> contre : le groupe GDR a voté 1 pour, 10 contre, 2 abstention(s) (scrutin n° 4758) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Contre -> abstention : le groupe DR a voté 18 pour, 3 contre, 28 abstention(s) (scrutin n° 4758) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Pour -> abstention : le groupe HOR a voté 9 pour, 0 contre, 25 abstention(s) (scrutin n° 4758) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Contre -> abstention : le groupe ECOS a voté 2 pour, 9 contre, 27 abstention(s) (scrutin n° 4758) ; l'explication donnait déjà ce décompte."
     }
   },
   {
@@ -375,6 +393,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "0ba235bf",
+      "note": "2026-11-11 reformulée : Enjeu : la confiance portait sur « un seul point », le constat de la situation financière (compte rendu de séance). // 2026-11-11 corrigée : Abstention -> pour : le groupe DR a voté 27 pour, 13 contre, 9 abstention(s) (scrutin n° 3054) ; l'explication donnait déjà ce décompte."
     }
   },
   {
@@ -469,6 +493,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f98c38b8",
+      "note": "2026-11-11 reformulée : Question, enjeu, résumé : la dérogation et la censure visent tous les néonicotinoïdes, pas seulement l'acétamipride (décision 2025-891 DC). // 2026-11-11 corrigée : Abstention -> pour : le groupe HOR a voté 26 pour, 3 contre, 4 abstention(s) (scrutin n° 2957) ; l'explication donnait déjà ce décompte."
     }
   },
   {
@@ -557,6 +587,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "0548a068",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes. // 2026-11-11 corrigée : Pour -> contre : le groupe GDR a voté 3 pour, 12 contre, 0 abstention(s) (scrutin n° 2880) ; l'explication donnait déjà ce décompte. // 2026-11-11 corrigée : Abstention -> contre : le groupe ECOS a voté 4 pour, 11 contre, 7 abstention(s) (scrutin n° 2880) ; l'explication donnait déjà ce décompte."
     }
   },
   {
@@ -651,6 +687,12 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2653"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "885d3201",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -733,20 +775,18 @@
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
       },
-      "delphine-batho": {
-        "position": "abstention",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 4 contre, 25 abstentions.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
       "olivier-becht": {
         "position": "pour",
         "typeVote": "individuel",
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "81da1537",
+      "note": "2026-11-11 reformulée : Question et enjeu : « quartiers » de prison de haute sécurité (texte adopté)."
     }
   },
   {
@@ -836,15 +876,13 @@
         "typeVote": "individuel",
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
-      },
-      "olivier-becht": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Aucun député du groupe n'a voté la motion (seuls les votes pour une censure sont décomptés).",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "af94d15c",
+      "note": "2026-11-11 reformulée : Question, enjeu, résumé : le texte n'avait pas été adopté (rejeté par la censure) ; 185 signataires, majorité requise 288 ; explications « 0 pour, 0 contre » remplacées par « aucun député n'a voté la motion »."
     }
   },
   {
@@ -939,6 +977,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/456"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "4e559a0e",
+      "note": "2026-11-11 reformulée : Titre, question, enjeu, résumé : le vote portait sur la déclaration du Gouvernement (article 50-1), pas sur un « rejet » ; détails de l'accord non sourcés retirés."
     }
   },
   {
@@ -1033,6 +1077,12 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/438"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "5c0aa79d",
+      "note": "2026-11-11 reformulée : Titre, question, enjeu, résumé : pas de rétablissement de l'ISF ; impôt de 2 % au-delà d'un milliard et contribution sur les bénéfices exceptionnels (texte du 08/11/2024)."
     }
   },
   {
@@ -1110,23 +1160,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 38 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "4f6f9b8e",
+      "note": "2026-11-11 reformulée : Titre officiel du scrutin n° 289 (sans marque ni nom propre)."
     }
   },
   {
@@ -1227,6 +1267,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3966"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "8702ddbf",
+      "note": "2026-11-11 reformulée : Titre officiel ; « règles d'aménagement assouplies » remplacé par la réduction des délais de recours (compte rendu)."
     }
   },
   {
@@ -1309,20 +1355,18 @@
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
       },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 18 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
-      },
       "olivier-becht": {
         "position": "pour",
         "typeVote": "individuel",
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "4f3fad50",
+      "note": "2026-11-11 reformulée : Enjeu : gel issu de la révision de 2007 (rapport n° 2611), natifs ajoutés ; résumé : « suspendu » non sourcé, remplacé par l'étape du Congrès ou du référendum."
     }
   },
   {
@@ -1393,6 +1437,12 @@
         "groupe": "PPE",
         "groupeNom": "Parti populaire européen (Démocrates-Chrétiens)"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "1b8a1486",
+      "note": "2026-11-10 confirmée : Vote nominal du 10/04/2024 par délégation, 4 textes principaux : Renaissance et Horizons pour, RN, LFI et EELV contre. // 2026-11-10 corrigée : Pour -> contre (règle 11 : délégation du parti) : les 7 élus LR contre la gestion de l'asile et les crises, abstention sur le retour, pour le filtrage. // 2026-11-10 reformulée : Question, enjeu et résumé selon le communiqué : participation obligatoire mais au choix (relocalisation, contribution, soutien), dix textes, contrôles obligatoires."
     }
   },
   {
@@ -1478,23 +1528,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 72 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668",
-        "groupe": "RE",
-        "groupeNom": "Renaissance"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "87149c71",
+      "note": "2026-11-11 reformulée : Titre officiel du scrutin n° 3668 (texte de la commission mixte paritaire)."
     }
   },
   {
@@ -1574,23 +1614,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 56 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643",
-        "groupe": "RE",
-        "groupeNom": "Renaissance"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "63793b64",
+      "note": "2026-11-11 reformulée : Enjeu et résumé : tous les PFAS, textiles d'habillement en 2026 et tous les textiles en 2030, redevance sur les rejets."
     }
   },
   {
@@ -1670,23 +1700,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
         "groupe": "SOC-A",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 3 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 34 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508",
-        "groupe": "RE",
-        "groupeNom": "Renaissance"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "a198fa55",
+      "note": "2026-11-11 reformulée : Titre, question, résumé : pénalité (5 euros en 2025, 10 en 2030) et non taxe ; marques citées retirées (absentes du texte)."
     }
   },
   {
@@ -1733,6 +1753,12 @@
         "groupe": "ID",
         "groupeNom": "Identité et démocratie"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f8ac282c",
+      "note": "2026-11-10 confirmée : Vote nominal du 13/03/2024 par délégation : Renaissance 10-0, EELV 7-2, RN 17-0, pour. // 2026-11-10 reformulée : Votes sourcés par le communiqué (aucun vote par groupe) : source remplacée par le vote nominal. Enjeu et résumé : collecte non ciblée de visages interdite, identification biométrique par la police interdite sauf exceptions."
     }
   },
   {
@@ -1833,6 +1859,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3461"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "36dd7a70",
+      "note": "2026-11-11 reformulée : Question, enjeu, résumé : « jusqu'à » 3 milliards de soutien supplémentaire, artillerie et défense aérienne (texte de l'accord, elysee.fr)."
     }
   },
   {
@@ -1917,15 +1949,21 @@
         "explication": "A voté pour au Congrès.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/c1"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "24721366",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
     "id": "loi-immigration-2023",
-    "thematiqueId": "securite",
+    "thematiqueId": "societe",
     "sujetId": "immigration-asile",
     "nature": "projet_loi",
     "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
-    "question": "Faut-il durcir les règles de l'immigration et faciliter l'expulsion des étrangers condamnés ?",
+    "question": "Faut-il durcir les règles d'entrée et de séjour des étrangers en France ?",
     "enjeu": "Pour les étrangers hors Union européenne, allocations familiales après 5 ans de résidence ou 30 mois de travail (aides au logement : 3 mois), nombre d'admis fixé par le Parlement, expulsion facilitée des condamnés.",
     "resume": "Texte durcissant les conditions de régularisation et d'accès aux prestations sociales, facilitant les expulsions d'étrangers condamnés et réformant le droit d'asile. Le Conseil constitutionnel a ensuite censuré 35 articles ou parties d'articles sur 86, dont la condition de résidence pour les aides et le nombre d'admis fixé par le Parlement.",
     "chambre": "assemblee_nationale",
@@ -2011,6 +2049,12 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3213"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "69540cb8",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il durcir les règles d'entrée et de séjour des étrangers en France ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Enjeu : aides au logement après 3 mois de travail (non 30) ; résumé : 35 « articles ou parties d'articles » censurés sur 86."
     }
   },
   {
@@ -2019,7 +2063,7 @@
     "sujetId": "acces-aux-soins",
     "nature": "proposition_loi",
     "titre": "Loi visant à améliorer l'accès aux soins par l'engagement territorial des professionnels",
-    "question": "Pour lutter contre les déserts médicaux, faut-il limiter l'intérim et élargir les missions des soignants non médecins ?",
+    "question": "Pour lutter contre les déserts médicaux, faut-il limiter l'intérim des soignants en début de carrière ?",
     "enjeu": "L'intérim serait interdit aux soignants n'ayant pas exercé une durée minimale hors intérim, les non-médecins auraient des compétences élargies et les médecins seraient plus engagés dans l'offre de leur territoire.",
     "resume": "Encadrement de l'intérim des soignants n'ayant pas exercé une durée minimale hors intérim, élargissement des compétences des soignants non médecins et responsabilisation territoriale des praticiens.",
     "chambre": "assemblee_nationale",
@@ -2097,6 +2141,12 @@
         "explication": "S'est abstenue.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3206"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "e2688bfa",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Pour lutter contre les déserts médicaux, faut-il limiter l'intérim des soignants en début de carrière ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Titre officiel ; intérim limité selon une durée minimale d'exercice, non « à la sortie d'école » ; qualificatif « strict » retiré."
     }
   },
   {
@@ -2189,6 +2239,12 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2965"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "7e6f8f83",
+      "note": "2026-11-11 reformulée : Enjeu et résumé : inscription automatique des demandeurs du RSA et de leur conjoint ; 15 heures minimum, réductibles."
     }
   },
   {
@@ -2270,15 +2326,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
-      },
-      "delphine-batho": {
-        "position": "abstention",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 4 abstentions.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "e42ea9e0",
+      "note": "2026-11-11 reformulée : Résumé : qualificatif « historique » retiré."
     }
   },
   {
@@ -2373,6 +2427,12 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1533"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "fa4ef32e",
+      "note": "2026-11-11 reformulée : Titre, question, enjeu, résumé : « 6 EPR2 » absent de la loi ; elle vise les réacteurs près des sites existants et supprime l'objectif de 50 % et le plafond de 63,2 gigawatts."
     }
   },
   {
@@ -2381,7 +2441,7 @@
     "sujetId": "squat-impayes",
     "nature": "proposition_loi",
     "titre": "Loi visant à protéger les logements contre l'occupation illicite (Loi Kasbarian-Bergé)",
-    "question": "Faut-il tripler les peines contre le squat et accélérer l'expulsion des locataires qui ne paient pas ?",
+    "question": "Faut-il tripler les peines encourues pour le squat d'un logement ?",
     "enjeu": "Les peines pour occupation illégale d'un logement sont triplées ; les procédures d'expulsion en cas de loyers impayés sont accélérées.",
     "resume": "Triplement des peines pour les squatteurs de résidences principales ou secondaires, accélération des procédures d'expulsion des locataires en impayé de loyer.",
     "chambre": "assemblee_nationale",
@@ -2467,6 +2527,12 @@
         "explication": "A voté contre.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1361"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9bbe177e",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il tripler les peines encourues pour le squat d'un logement ? » (le reste dans l'enjeu). // 2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -2546,15 +2612,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "00c2eb87",
+      "note": "2026-11-11 reformulée : Question, enjeu, résumé : article 7 seul, jusqu'au 31/12/2024, événements prédéterminés, sans reconnaissance faciale ; exemples non présents dans le texte retirés."
     }
   },
   {
@@ -2631,6 +2695,12 @@
         "explication": "Députée des Deux-Sèvres, a voté la motion de censure contre la réforme.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1240"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "29bb497c",
+      "note": "2026-11-11 reformulée : Résumé : le scrutin est la motion de censure (278 voix pour, majorité requise 287), le texte est considéré comme adopté. // 2026-11-11 confirmée : Vote pour au Sénat, scrutin n° 251 du 16/03/2023 (texte de la commission mixte paritaire), liste nominative du groupe LR."
     }
   },
   {
@@ -2716,15 +2786,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931",
-        "groupe": "ECOLO",
-        "groupeNom": "Écologiste - NUPES"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "c5d4c387",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -2821,6 +2889,12 @@
         "explication": "S'est abstenue.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/823"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "4e5d6518",
+      "note": "2026-11-11 reformulée : Résumé : zones d'accélération définies par les communes, non par les maires."
     }
   },
   {
@@ -2829,7 +2903,7 @@
     "sujetId": "climat-emissions",
     "nature": "projet_loi",
     "titre": "Projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
-    "question": "Faut-il interdire certains vols intérieurs et la location des logements les plus mal isolés ?",
+    "question": "Faut-il interdire les vols intérieurs quand le même trajet se fait en train en moins de 2 h 30 ?",
     "enjeu": "Suppression des vols intérieurs quand le train fait le trajet en moins de 2 h 30, interdiction progressive de louer les passoires thermiques, zones à faibles émissions dans les grandes villes.",
     "resume": "Adopté en première lecture par 332 voix contre 77 : fin des vols intérieurs quand le train relie les deux villes en moins de 2 h 30, logements classés G non décents dès 2025, F en 2028, E en 2034, zones à faibles émissions avant fin 2024 dans les agglomérations de plus de 150 000 habitants.",
     "chambre": "assemblee_nationale",
@@ -2895,6 +2969,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3738"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6606e98c",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il interdire les vols intérieurs quand le même trajet se fait en train en moins de 2 h 30 ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Résumé complété : vols intérieurs, calendrier des logements G, F, E, zones à faibles émissions (texte adopté)."
     }
   },
   {
@@ -2903,8 +2983,8 @@
     "sujetId": "laicite",
     "nature": "projet_loi",
     "titre": "Projet de loi confortant le respect des principes de la République (première lecture)",
-    "question": "Faut-il encadrer l'instruction en famille et renforcer le contrôle des associations et des cultes ?",
-    "enjeu": "Instruction en famille soumise à autorisation, contrat d'engagement républicain des associations subventionnées, financement des cultes mieux contrôlé, délit de menaces contre un agent public pour obtenir une dérogation.",
+    "question": "Faut-il renforcer le contrôle de l'État sur les associations et le financement des cultes ?",
+    "enjeu": "Contrat d'engagement républicain des associations subventionnées, financement des cultes mieux contrôlé, instruction en famille soumise à autorisation, délit de menaces contre un agent public pour obtenir une dérogation.",
     "resume": "Adopté en première lecture par 347 voix contre 151.",
     "chambre": "assemblee_nationale",
     "dateVote": "2021-02-16",
@@ -2969,6 +3049,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3421"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "a310feb2",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il renforcer le contrôle de l'État sur les associations et le financement des cultes ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Enjeu : « délit de séparatisme » remplacé par la définition du texte (menaces contre un agent public pour obtenir une dérogation) ; titre complété."
     }
   },
   {
@@ -2977,8 +3063,8 @@
     "sujetId": "surveillance",
     "nature": "proposition_loi",
     "titre": "Proposition de loi relative à la sécurité globale (première lecture)",
-    "question": "Faut-il pénaliser la diffusion malveillante d'images de policiers et autoriser les drones de surveillance ?",
-    "enjeu": "Délit de diffusion de l'image d'un policier ou d'un gendarme en opération dans le but manifeste de porter atteinte à son intégrité, usage des drones et caméras piétons, pouvoirs élargis des polices municipales.",
+    "question": "Faut-il autoriser policiers et gendarmes à filmer avec des drones et des caméras portées sur eux ?",
+    "enjeu": "Usage des drones et des caméras piétons par les forces de l'ordre, délit de diffusion de l'image d'un policier ou d'un gendarme en opération pour porter atteinte à son intégrité, polices municipales renforcées.",
     "resume": "Adoptée en première lecture par 388 voix contre 104.",
     "chambre": "assemblee_nationale",
     "dateVote": "2020-11-24",
@@ -3043,6 +3129,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/3254"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "7e354012",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il autoriser policiers et gendarmes à filmer avec des drones et des caméras portées sur eux ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Enjeu : « dans le but manifeste » de porter atteinte à l'intégrité (article 24) ; titre complété."
     }
   },
   {
@@ -3111,6 +3203,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2146"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6f019fce",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -3121,10 +3219,10 @@
     "titre": "Projet de loi autorisant la ratification de l'accord économique et commercial global UE-Canada (CETA) et de l'accord de partenariat stratégique (première lecture)",
     "question": "Faut-il ratifier l'accord commercial entre l'Union européenne et le Canada (CETA) ?",
     "enjeu": "Ratification de l'accord de libre-échange avec le Canada : baisse des droits de douane et ouverture des marchés publics, déjà appliqué en partie depuis 2017.",
-    "resume": "Ratification adoptée par l'Assemblée nationale par 266 voix contre 213.",
+    "resume": "Ratification adoptée par l'Assemblée nationale par 266 voix contre 213. Le 21 mars 2024, le Sénat a supprimé du texte la ratification de l'accord avec le Canada et n'a gardé que celle de l'accord de partenariat stratégique ; l'Assemblée ne l'a pas réexaminé depuis.",
     "chambre": "assemblee_nationale",
     "dateVote": "2019-07-23",
-    "statut": "adoptee",
+    "statut": "en_cours",
     "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059",
     "votes": {
       "jean-luc-melenchon": {
@@ -3185,6 +3283,12 @@
         "explication": "S'est abstenu.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "e8aa1783",
+      "note": "2026-11-11 corrigée : Statut adoptee -> en_cours et résumé : le 21/03/2024 le Sénat a supprimé l'article 1er (ratification du CETA) et adopté l'article 2 (partenariat stratégique), T.A. n° 95 ; pas de suite à l'Assemblée. // 2026-11-11 reformulée : Titre officiel : inclut l'accord de partenariat stratégique (première lecture)."
     }
   },
   {
@@ -3247,15 +3351,21 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/1709"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "db409557",
+      "note": "2026-11-11 reformulée : Titre complété (première lecture)."
     }
   },
   {
     "id": "loi-asile-immigration-2018",
-    "thematiqueId": "securite",
+    "thematiqueId": "societe",
     "sujetId": "immigration-asile",
     "nature": "projet_loi",
     "titre": "Projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie (première lecture)",
-    "question": "Faut-il accélérer le traitement des demandes d'asile et allonger la rétention des étrangers en situation irrégulière ?",
+    "question": "Faut-il raccourcir les délais pour demander l'asile et pour traiter les dossiers ?",
     "enjeu": "Les délais pour demander l'asile et pour traiter les dossiers seraient raccourcis, la durée maximale de rétention avant expulsion passerait à 90 jours, et des mesures d'intégration seraient prévues pour les réfugiés.",
     "resume": "Adopté en première lecture par 228 voix contre 139.",
     "chambre": "assemblee_nationale",
@@ -3321,6 +3431,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/578"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "1fb0db1f",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il raccourcir les délais pour demander l'asile et pour traiter les dossiers ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Titre complété (première lecture)."
     }
   },
   {
@@ -3329,7 +3445,7 @@
     "sujetId": "contrat-licenciement",
     "nature": "projet_loi",
     "titre": "Projet de loi ratifiant les ordonnances pour le renforcement du dialogue social (première lecture)",
-    "question": "Faut-il plafonner les indemnités pour licenciement abusif et donner la priorité aux accords d'entreprise ?",
+    "question": "Faut-il plafonner les indemnités versées en cas de licenciement abusif ?",
     "enjeu": "Réforme du Code du travail : barème plafonnant les indemnités en cas de licenciement abusif, priorité aux accords d'entreprise sur de nombreux sujets, fusion des instances représentatives du personnel.",
     "resume": "Ratification adoptée en première lecture par 463 voix contre 74.",
     "chambre": "assemblee_nationale",
@@ -3393,6 +3509,12 @@
         "explication": "A voté pour.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/314"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "dc567ef3",
+      "note": "2026-11-11 reformulée : Question réduite à une idée : « Faut-il plafonner les indemnités versées en cas de licenciement abusif ? » (le reste dans l'enjeu). // 2026-11-11 reformulée : Titre complété (première lecture)."
     }
   },
   {
@@ -3468,23 +3590,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 20 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 43 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9318a2e8",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -3570,23 +3682,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "359c5019",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -3597,10 +3699,10 @@
     "titre": "Motion de rejet préalable de la proposition de loi relative à la réforme de l'audiovisuel public et à la souveraineté audiovisuelle (première lecture)",
     "question": "Faut-il réunir France Télévisions, Radio France et l'Institut national de l'audiovisuel sous une même direction ?",
     "enjeu": "Création au 1er janvier 2026 d'une société détenue à 100 % par l'État, France Médias, qui coiffe France Télévisions, Radio France et l'Institut national de l'audiovisuel, avec un président unique.",
-    "resume": "Rejetée d'emblée : motion de rejet préalable adoptée par 94 voix contre 38.",
+    "resume": "Rejetée d'emblée en première lecture : motion de rejet préalable adoptée par 94 voix contre 38. Le Sénat a de nouveau adopté le texte en deuxième lecture le 11 juillet 2025 ; l'Assemblée ne l'a pas réexaminé depuis.",
     "chambre": "assemblee_nationale",
     "dateVote": "2025-06-30",
-    "statut": "rejetee",
+    "statut": "en_cours",
     "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
     "votes": {
       "jean-luc-melenchon": {
@@ -3664,23 +3766,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe sur la motion de rejet : 22 pour, 0 contre, donc contre la réforme.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe sur la motion de rejet : 0 pour, 22 contre, donc pour la réforme.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "af95e968",
+      "note": "2026-11-11 corrigée : Statut rejetee -> en_cours : le Sénat a réadopté le texte en 2e lecture le 11/07/2025 (T.A. n° 175), 2e lecture à l'Assemblée non tenue (dossier législatif) ; résumé complété. // 2026-11-11 reformulée : Titre : le scrutin porte sur la motion de rejet préalable."
     }
   },
   {
@@ -3762,23 +3854,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 29 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 55 pour, 12 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "3d563078",
+      "note": "2026-11-11 reformulée : Enjeu : le tir contre un « périple meurtrier » existait déjà ; le texte retire l'exigence d'uniforme (amendement n° 39)."
     }
   },
   {
@@ -3858,23 +3940,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 24 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 0 pour, 12 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "602266ce",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -3954,23 +4026,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 16 contre, 0 abstention, donc pour la surtaxe.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 14 pour, 2 contre, 2 abstentions, donc contre la surtaxe.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d070aaf8",
+      "note": "2026-11-11 reformulée : Enjeu complété : rétablissement de la contribution des grandes entreprises de transport maritime (exposé de l'article 15)."
     }
   },
   {
@@ -4050,23 +4112,13 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
-        "position": "contre",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 6 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
-        "groupe": "ECOS",
-        "groupeNom": "Écologiste et Social"
-      },
-      "olivier-becht": {
-        "position": "pour",
-        "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 12 contre, 0 abstention, donc pour la baisse du plafond.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738",
-        "groupe": "EPR",
-        "groupeNom": "Ensemble pour la République"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9f434ad7",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
     }
   },
   {
@@ -4146,23 +4198,543 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
         "groupe": "SOC",
         "groupeNom": "Socialistes et apparentés"
-      },
-      "delphine-batho": {
+      }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "101ef4c2",
+      "note": "2026-11-11 confirmée : Titre, question, enjeu et résumé conformes au texte voté et à la page du scrutin ; votes recalculés par check-votes."
+    }
+  },
+  {
+    "id": "impot-plancher-patrimoine-2025",
+    "thematiqueId": "economie",
+    "sujetId": "impots-patrimoine",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi instaurant un impôt plancher de 2 % sur le patrimoine des ultra riches (première lecture)",
+    "question": "Faut-il que les patrimoines de plus de 100 millions d'euros paient chaque année au moins 2 % de leur valeur en impôts ?",
+    "enjeu": "Impôt plancher : un foyer dont le patrimoine dépasse 100 millions d'euros, entreprises comprises, paierait chaque année au moins 2 % de sa valeur, moins ses impôts sur le revenu et sur la fortune immobilière.",
+    "resume": "Adoptée par 116 voix contre 39, puis rejetée au Sénat le 12 juin 2025 (188 voix contre 129) : le texte attend une deuxième lecture. Selon le rapport du Sénat, 1 600 à 1 800 foyers seraient concernés ; les estimations de rendement vont de 2 à 25 milliards d'euros. La même mesure, proposée en amendement aux budgets 2026 et 2027, a été rejetée.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2025-02-20",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+    "votes": {
+      "jean-luc-melenchon": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "explication": "Position majoritaire du groupe : 37 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+      },
+      "marine-le-pen": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 28 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 5 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 7 contre, 3 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 38 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
         "groupe": "ECOS",
         "groupeNom": "Écologiste et Social"
       },
-      "olivier-becht": {
+      "raphael-glucksmann": {
         "position": "pour",
         "typeVote": "groupe_parti",
-        "explication": "Position majoritaire du groupe : 30 pour, 0 contre, 0 abstention.",
-        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725",
+        "explication": "Position majoritaire du groupe : 36 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      },
+      "delphine-batho": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+      }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "a4f7f58b",
+      "note": "2026-11-11 ajoutée : texte adopté TA 58 (seuil 100 M€, taux 2 %, impôts déduits), rapport Sénat n° 689 (1 600-1 800 foyers, 2-3 et 15-25 Md€), rejet Sénat scrutin 322, amendements rejetés AN 3300 et 8859 ; votes recoupés (check-votes)"
+    }
+  },
+  {
+    "id": "accompagnants-eleves-handicap-2026",
+    "thematiqueId": "education",
+    "sujetId": "eleves-handicap",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi créant un corps de fonctionnaires de catégorie B pour les accompagnants d'élèves en situation de handicap (première lecture)",
+    "question": "Faut-il que les accompagnants d'élèves handicapés deviennent des fonctionnaires de l'Éducation nationale, recrutés par concours ?",
+    "enjeu": "Les accompagnants, aujourd'hui contractuels, formeraient un corps de fonctionnaires de catégorie B ; ceux en poste au 1er septembre 2026 deviendraient stagiaires, avec un temps de travail dérogatoire fixé par décret.",
+    "resume": "Adoptée par 166 voix contre 16, avec 123 abstentions ; transmise au Sénat le 29 octobre 2026. Le texte renvoie à un décret le temps de travail et la rémunération ; ses auteurs veulent qu'un contrat de 24 heures par semaine, le plus courant, soit payé comme un temps plein.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-29",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 68 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+      },
+      "marine-le-pen": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 1 contre, 79 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 12 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 6 contre, 23 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
         "groupe": "EPR",
         "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 7 pour, 0 contre, 3 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "abstention",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 2 contre, 8 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 34 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 41 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
       }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "18f20dd4",
+      "note": "2026-11-11 ajoutée : texte adopté TA 360 (corps B, stagiaires au 1/9/2026, CDI sinon, temps de travail L. 611-1), exposé des motifs PPL 3171 (24 h payées comme un temps plein), Sénat ppl26-127 ; votes recoupés (check-votes)"
+    }
+  },
+  {
+    "id": "mineurs-isoles-2025",
+    "thematiqueId": "societe",
+    "sujetId": "mineurs-isoles",
+    "nature": "proposition_loi",
+    "titre": "Proposition de loi visant à protéger les mineurs isolés et à lutter contre le sans-abrisme (première lecture)",
+    "question": "Faut-il héberger un jeune étranger isolé qui se dit mineur jusqu'à ce que le juge ait définitivement tranché sur son âge ?",
+    "enjeu": "Le recours au juge d'un jeune non reconnu mineur suspendrait le refus de prise en charge : accueil d'urgence maintenu et scolarisation. Les examens osseux, dentaires et pubertaires pour estimer l'âge seraient interdits.",
+    "resume": "Adoptée par 144 voix contre 100 ; transmise au Sénat, qui ne l'a pas encore examinée. L'article qui créait un observatoire national du sans-abrisme a été supprimé en séance.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2025-12-11",
+    "statut": "en_cours",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 51 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 48 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 7 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+      },
+      "bruno-retailleau": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 6 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 10 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 23 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 63 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "59bf00b5",
+      "note": "2026-11-11 ajoutée : texte adopté TA 195 (recours suspensif, accueil maintenu, scolarisation, examens interdits, art. 2 supprimé), Sénat ppl25-216 sans examen ; votes recoupés (check-votes)"
+    }
+  },
+  {
+    "id": "accords-franco-algeriens-2025",
+    "thematiqueId": "societe",
+    "sujetId": "droits-des-etrangers",
+    "nature": "resolution",
+    "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens du 27 décembre 1968 (article 34-1 de la Constitution)",
+    "question": "Faut-il mettre fin à l'accord de 1968 qui facilite l'installation en France des ressortissants algériens ?",
+    "enjeu": "Résolution sans force obligatoire appelant à dénoncer l'accord de 1968 : titre de séjour de 10 ans après un an de mariage avec un Français (3 ans sinon), regroupement familial après 12 mois de présence (18 sinon).",
+    "resume": "Adoptée par 185 voix contre 184. Une résolution n'oblige pas le Gouvernement : selon sa réponse au Sénat du 3 septembre 2026, le ministère de l'Intérieur travaille à réviser l'accord, sans le dénoncer.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2025-10-30",
+    "statut": "adoptee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 52 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "francois-ruffin": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 6 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 3 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 26 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 17 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 32 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 53 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "737aed4d",
+      "note": "2026-11-11 ajoutée : résolution TA 177 (« Appelle les autorités en ayant la compétence à dénoncer »), rapport AN n° 1963 (10 ans après 1 an de mariage contre 3, regroupement 12 mois contre 18), réponse JO Sénat 03/09/2026 (révision engagée) ; votes recoupés (check-votes)"
+    }
+  },
+  {
+    "id": "schengen-double-frontiere-2026",
+    "thematiqueId": "societe",
+    "sujetId": "immigration-asile",
+    "nature": "resolution",
+    "titre": "Proposition de résolution visant à refonder l'espace Schengen en instaurant une double frontière nationale et européenne (article 34-1 de la Constitution)",
+    "question": "Faut-il contrôler les étrangers non européens à chaque passage d'une frontière entre deux pays de l'espace Schengen ?",
+    "enjeu": "Résolution sans force obligatoire : réviser le code frontières Schengen pour une frontière extérieure renforcée et des vérifications des ressortissants hors Union aux frontières intérieures, sans quitter Schengen.",
+    "resume": "Rejetée par 199 voix contre 144. La France contrôle déjà ses frontières intérieures par dérogations temporaires, notifiées depuis novembre 2015 et prolongées jusqu'au 30 avril 2027 ; le code Schengen révisé en 2024 limite en principe ces contrôles à deux ans pour une même menace.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-08",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 57 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 118 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "RN",
+        "groupeNom": "Rassemblement National"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 10 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "individuel",
+        "explication": "A voté contre.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 9 pour, 1 contre, 5 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 27 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 37 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "aee9a6ee",
+      "note": "2026-11-11 ajoutée : PPR 3119 (révision du code frontières, vérifications des seuls ressortissants de pays tiers, sans sortie de Schengen), liste Commission des notifications (France n° 50 en 2015, n° 510 jusqu'au 30/04/2027) ; votes recoupés (check-votes)"
+    }
+  },
+  {
+    "id": "commande-publique-france-2026",
+    "thematiqueId": "economie",
+    "sujetId": "commande-publique",
+    "nature": "resolution",
+    "titre": "Proposition de résolution visant à mobiliser la commande publique au service de l'emploi, de la production et de l'innovation en France (article 34-1 de la Constitution)",
+    "question": "Faut-il permettre aux acheteurs publics de donner la priorité aux offres produites ou réalisées en France ?",
+    "enjeu": "Résolution sans force obligatoire : permettre, sans l'imposer, de favoriser les offres dont l'emploi, la production ou l'innovation sont en France ; les règles de l'UE imposent l'égalité entre entreprises.",
+    "resume": "Rejetée par 187 voix contre 151. Le 9 septembre 2026, la Commission européenne a proposé de remplacer les directives sur les marchés publics par un règlement qui crée une préférence européenne, en cours de négociation.",
+    "chambre": "assemblee_nationale",
+    "dateVote": "2026-10-08",
+    "statut": "rejetee",
+    "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+    "votes": {
+      "jean-luc-melenchon": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 56 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "LFI-NFP",
+        "groupeNom": "La France insoumise - Nouveau Front Populaire"
+      },
+      "marine-le-pen": {
+        "position": "pour",
+        "typeVote": "individuel",
+        "explication": "A voté pour.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+      },
+      "fabien-roussel": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 9 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "GDR",
+        "groupeNom": "Gauche Démocrate et Républicaine"
+      },
+      "gabriel-attal": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 36 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "EPR",
+        "groupeNom": "Ensemble pour la République"
+      },
+      "bruno-retailleau": {
+        "position": "pour",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "DR",
+        "groupeNom": "Droite Républicaine"
+      },
+      "edouard-philippe": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "HOR",
+        "groupeNom": "Horizons & Indépendants"
+      },
+      "marine-tondelier": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 26 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "ECOS",
+        "groupeNom": "Écologiste et Social"
+      },
+      "raphael-glucksmann": {
+        "position": "contre",
+        "typeVote": "groupe_parti",
+        "explication": "Position majoritaire du groupe : 0 pour, 42 contre, 0 abstention.",
+        "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+        "groupe": "SOC",
+        "groupeNom": "Socialistes et apparentés"
+      }
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "2f2a7747",
+      "note": "2026-11-11 ajoutée : PPR 3115 (priorité facultative aux offres exécutées en France), note EPRS 796984 (proposition du 09/09/2026, préférence européenne) ; votes recoupés (check-votes)"
     }
   }
 ]

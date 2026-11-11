@@ -8,7 +8,8 @@
     "positions": [
       { "propositionId": "prop-ez-7", "sens": "pour" },
       { "propositionId": "prop-fro-2", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"586fd553","note":"ez-7 (14 EPR2) et fro-2 (20 EPR) : construire de nouveaux réacteurs, même idée."}
   },
   {
     "id": "eoliennes",
@@ -19,7 +20,8 @@
     "positions": [
       { "propositionId": "prop-fp-4", "sens": "pour" },
       { "propositionId": "prop-mlp-7", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"1f31f1c2","note":"fp-4 et mlp-7 : arrêt des nouveaux projets et démantèlement des éoliennes installées, mot pour mot."}
   },
   {
     "id": "referendum-initiative-citoyenne",
@@ -31,19 +33,21 @@
       { "propositionId": "prop-fp-2", "sens": "pour" },
       { "propositionId": "prop-fa-3", "sens": "pour" },
       { "propositionId": "prop-nda-2", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"ae06c9cb","note":"fp-2, fa-3, nda-2 : référendum déclenché par les électeurs (nda-2 : un million de signatures)."}
   },
   {
     "id": "quitter-otan",
     "thematiqueId": "international",
     "sujetId": "otan",
     "question": "Faire sortir la France de l'Alliance atlantique (OTAN), l'alliance militaire avec les États-Unis",
-    "enjeu": "Faire sortir la France de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
+    "enjeu": "Faire sortir la France, immédiatement ou par étapes, de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
     "positions": [
       { "propositionId": "prop-fro-7", "sens": "pour" },
       { "propositionId": "prop-fa-2", "sens": "pour" },
       { "propositionId": "prop-jlm-6", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"333a598e","note":"fa-2 sortie sous un an ; fro-7 et jlm-6 par étapes (commandement intégré d'abord) : enjeu précisé « immédiatement ou par étapes »."}
   },
   {
     "id": "quitter-union-europeenne",
@@ -54,7 +58,8 @@
     "positions": [
       { "propositionId": "prop-fa-1", "sens": "pour" },
       { "propositionId": "prop-fp-1", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"e8635f60","note":"fa-1 (article 50) et fp-1 (quitter l'UE et l'euro) : sortie de l'Union."}
   },
   {
     "id": "budget-defense",
@@ -67,7 +72,8 @@
       { "propositionId": "prop-kb-2", "sens": "pour" },
       { "propositionId": "prop-db-3", "sens": "pour" },
       { "propositionId": "prop-sl-3", "sens": "contre" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"0bb245e8","note":"ez-8, kb-2, db-3 (augmentation du budget soutenue) pour ; sl-3 contre (réaffecter le budget militaire)."}
   },
   {
     "id": "impot-fortune",
@@ -78,7 +84,8 @@
     "positions": [
       { "propositionId": "prop-fr-9", "sens": "pour" },
       { "propositionId": "prop-mt-7", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"76bc8c11","note":"2026-11-10 reformulée : prop-fr-5 (2018) remplacée par prop-fr-9 (taxe annuelle de 2 % au-delà de 100 millions, 2026), même sens « pour »."}
   },
   {
     "id": "taxes-carburants",
@@ -89,7 +96,8 @@
     "positions": [
       { "propositionId": "prop-mlp-4", "sens": "pour" },
       { "propositionId": "prop-np-2", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"21b7ad49","note":"mlp-4 (TVA 5,5 %) et np-2 (taxe flottante qui baisse quand le prix monte) : baisser les taxes sur les carburants."}
   },
   {
     "id": "reculer-retraite",
@@ -100,7 +108,8 @@
     "positions": [
       { "propositionId": "prop-ep-1", "sens": "pour" },
       { "propositionId": "prop-xb-3", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"ae3266c3","note":"ep-1 (65 ans) et xb-3 (repousser l'âge légal) : même idée."}
   },
   {
     "id": "regulariser-sans-papiers",
@@ -112,7 +121,8 @@
       { "propositionId": "prop-ak-4", "sens": "pour" },
       { "propositionId": "prop-na-6", "sens": "pour" },
       { "propositionId": "prop-sl-4", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"24489e4e","note":"ak-4, na-6, sl-4 réduites à la régularisation de tous les sans-papiers (liberté de circulation en contexte)."}
   },
   {
     "id": "temps-de-travail",
@@ -123,7 +133,8 @@
     "positions": [
       { "propositionId": "prop-ak-2", "sens": "pour" },
       { "propositionId": "prop-br-3", "sens": "contre" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"622ff341","note":"ak-2 (28 h sans baisse de salaire) pour ; br-3 contre : hausse de la durée annuelle de référence (1 607 -> 1 623 h), sens opposé sur le même axe."}
   },
   {
     "id": "recrutement-enseignants",
@@ -134,18 +145,8 @@
     "positions": [
       { "propositionId": "prop-dl-3", "sens": "pour" },
       { "propositionId": "prop-ob-6", "sens": "pour" }
-    ]
-  },
-  {
-    "id": "uniforme-ecole",
-    "thematiqueId": "education",
-    "sujetId": "uniforme-autorite",
-    "question": "Faire porter un uniforme, la même tenue pour tous, aux élèves de l'école publique",
-    "enjeu": "Faire porter la même tenue à tous les élèves de l'école publique, tout de suite ou après une expérimentation.",
-    "positions": [
-      { "propositionId": "prop-ez-2", "sens": "pour" },
-      { "propositionId": "prop-ga-1", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"8bda5dc6","note":"dl-3 (recruter ses équipes) et ob-6 (directeurs qui composent leurs équipes) : même idée."}
   },
   {
     "id": "peines-planchers",
@@ -156,7 +157,8 @@
     "positions": [
       { "propositionId": "prop-ep-7", "sens": "pour" },
       { "propositionId": "prop-br-1", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"3e93456a","note":"ep-7 et br-1 : peine minimale imposée au juge pour certaines infractions."}
   },
   {
     "id": "soins-rembourses",
@@ -167,18 +169,8 @@
     "positions": [
       { "propositionId": "prop-fro-3", "sens": "pour" },
       { "propositionId": "prop-jlm-8", "sens": "pour" }
-    ]
-  },
-  {
-    "id": "normes-agricoles",
-    "thematiqueId": "agriculture",
-    "sujetId": "normes-europeennes-importations",
-    "question": "Limiter les règles imposées aux agriculteurs à celles de l'Europe",
-    "enjeu": "Supprimer les normes françaises qui vont au-delà de ce que l'Union européenne exige, et ne plus en ajouter.",
-    "positions": [
-      { "propositionId": "prop-ga-6", "sens": "pour" },
-      { "propositionId": "prop-xb-7", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"693e43ac","note":"fro-3 et jlm-8 : remboursement à 100 % des soins prescrits par la Sécurité sociale."}
   },
   {
     "id": "economies-deficit",
@@ -189,6 +181,19 @@
     "positions": [
       { "propositionId": "prop-ga-13", "sens": "pour" },
       { "propositionId": "prop-mlp-15", "sens": "pour" }
-    ]
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"4e23423a","note":"2026-11-10 reformulée : Question et enjeu précisés : échéance 2032, déficit 2025 (152,5 milliards d'euros, 5,1 %, Insee « Comptes des administrations publiques 2025 ») et postes de dépense visés. // 2026-11-10 confirmée : Question commune E-18 créée (validée) : P-351 et P-827 « pour », même idée ; montants propres à chacun gardés dans le détail."}
+  },
+  {
+    "id": "securite-sociale-climatique",
+    "thematiqueId": "environnement",
+    "sujetId": "adaptation-chaleur",
+    "question": "Créer, sur le modèle de la Sécurité sociale, une protection publique contre les dommages des catastrophes climatiques",
+    "enjeu": "Mettre en place un système de solidarité nationale, sur le modèle de la Sécurité sociale, qui prendrait en charge les dommages causés aux personnes et aux biens par les catastrophes climatiques.",
+    "positions": [
+      { "propositionId": "prop-fr-7", "sens": "pour" },
+      { "propositionId": "prop-db-12", "sens": "pour" }
+    ],
+    "validation": {"le":"2026-11-11","par":"claude","empreinte":"4b4562af","note":"2026-11-11 confirmée : Nouvelle question commune (validée) : prop-fr-7 (Sécurité climatique, branche de la Sécurité sociale) et prop-db-12 (sécurité sociale climatique), même idée."}
   }
 ]

@@ -260,7 +260,10 @@
     "prop-rg-13": 425,
     "prop-rg-14": 418,
     "prop-br-11": 832,
-    "prop-am-17": 504
+    "prop-am-17": 504,
+    "prop-db-12": 919,
+    "prop-ga-15": 889,
+    "prop-ga-16": 346
   },
   "lois": {
     "loi-energies-renouvelables-2023": 1,
@@ -315,7 +318,13 @@
     "contribution-budget-europeen-2027": 50,
     "abattement-pensions-retraite-2027": 51,
     "surtaxe-grandes-entreprises-2027": 52,
-    "jeunes-majeurs-protection-enfance-2026": 53
+    "jeunes-majeurs-protection-enfance-2026": 53,
+    "impot-plancher-patrimoine-2025": 54,
+    "accords-franco-algeriens-2025": 55,
+    "mineurs-isoles-2025": 56,
+    "commande-publique-france-2026": 57,
+    "schengen-double-frontiere-2026": 58,
+    "accompagnants-eleves-handicap-2026": 59
   },
   "enjeux": {
     "nouveaux-reacteurs": 1,
@@ -335,6 +344,7 @@
     "soins-rembourses": 15,
     "prix-minimum-agricole": 16,
     "normes-agricoles": 17,
-    "economies-deficit": 18
+    "economies-deficit": 18,
+    "securite-sociale-climatique": 19
   }
 }

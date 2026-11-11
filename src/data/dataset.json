@@ -1,37 +1,36 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-11T00:28:56.081Z",
-    "partisCount": 26,
+    "generatedAt": "2026-11-11T14:08:13.066Z",
+    "partisCount": 24,
     "candidatsCount": 27,
     "thematiquesCount": 12,
     "propositionsCount": 195,
-    "loisCount": 47,
-    "enjeuxCount": 17
+    "loisCount": 53,
+    "enjeuxCount": 16
   },
   "partis": [
     {
       "id": "horizons",
       "nom": "Horizons",
-      "sigle": "HOR",
       "couleur": "#002B7F",
       "nuanceOfficielle": {
         "code": "LENS",
         "libelle": "Liste Ensemble",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://horizonsleparti.fr"
     },
     {
       "id": "renaissance",
       "nom": "Renaissance",
-      "sigle": "REN",
+      "sigle": "RE",
       "couleur": "#7B1FA2",
       "nuanceOfficielle": {
         "code": "LENS",
         "libelle": "Liste Ensemble",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://parti-renaissance.fr"
     },
@@ -44,7 +43,7 @@
         "code": "LFI",
         "libelle": "Liste de La France insoumise",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://lafranceinsoumise.fr"
     },
@@ -57,7 +56,7 @@
         "code": "LRN",
         "libelle": "Liste du Rassemblement National",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://rassemblementnational.fr"
     },
@@ -69,7 +68,7 @@
         "code": "LUG",
         "libelle": "Liste d'union à gauche",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://place-publique.eu"
     },
@@ -80,22 +79,21 @@
       "couleur": "#2E7D32",
       "nuanceOfficielle": {
         "code": "LVEC",
-        "libelle": "Liste Les Écologistes",
+        "libelle": "Liste Les Ecologistes",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://lesecologistes.fr"
     },
     {
       "id": "equinoxe",
       "nom": "Équinoxe",
-      "sigle": "EQX",
       "couleur": "#FFD412",
       "nuanceOfficielle": {
         "code": "LECO",
         "libelle": "Liste écologiste",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://parti-equinoxe.fr"
     },
@@ -108,22 +106,15 @@
         "code": "LLR",
         "libelle": "Liste des Républicains",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://republicains.fr"
     },
     {
       "id": "debout",
       "nom": "Debout !",
-      "sigle": "DEBOUT",
       "couleur": "#EF4444",
-      "nuanceOfficielle": {
-        "code": "LDVG",
-        "libelle": "Liste divers gauche",
-        "election": "municipales 2026",
-        "sourceUrl": "https://www.legifrance.gouv.fr/circulaire/id/45645"
-      },
-      "siteWeb": "https://francoisruffin.fr"
+      "siteWeb": "https://debout.fr"
     },
     {
       "id": "pcf",
@@ -134,20 +125,19 @@
         "code": "LCOM",
         "libelle": "Liste du Parti communiste français",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://pcf.fr"
     },
     {
       "id": "reconquete",
-      "nom": "Reconquête",
-      "sigle": "REC",
+      "nom": "Reconquête!",
       "couleur": "#1E1B4B",
       "nuanceOfficielle": {
         "code": "LREC",
         "libelle": "Liste Reconquête !",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://parti-reconquete.fr"
     },
@@ -160,7 +150,7 @@
         "code": "LEXG",
         "libelle": "Liste d'extrême-gauche",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://lutte-ouvriere.org"
     },
@@ -186,36 +176,27 @@
         "code": "LDIV",
         "libelle": "Liste Divers",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://upr.fr"
     },
     {
       "id": "nouvelle-energie",
       "nom": "Nouvelle Énergie",
-      "sigle": "NE",
       "couleur": "#2563EB",
       "siteWeb": "https://www.unenouvelleenergie.fr"
     },
     {
       "id": "parti-animaliste",
       "nom": "Parti animaliste",
-      "sigle": "PA",
       "couleur": "#912993",
       "nuanceOfficielle": {
         "code": "LDIV",
         "libelle": "Liste Divers",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://parti-animaliste.fr"
-    },
-    {
-      "id": "resistons",
-      "nom": "Résistons !",
-      "sigle": "RES",
-      "couleur": "#D97706",
-      "siteWeb": "https://resistons-france.fr"
     },
     {
       "id": "revolution-permanente",
@@ -233,13 +214,12 @@
     {
       "id": "les-patriotes",
       "nom": "Les Patriotes",
-      "sigle": "LP",
       "couleur": "#E88A28",
       "nuanceOfficielle": {
         "code": "LEXD",
         "libelle": "Liste d'extrême droite",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://les-patriotes.fr"
     },
@@ -252,21 +232,19 @@
         "code": "LEXG",
         "libelle": "Liste d'extrême-gauche",
         "election": "européennes 2024",
-        "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
       },
       "siteWeb": "https://npa-revolutionnaires.org"
     },
     {
       "id": "la-france-humaine-et-forte",
       "nom": "La France Humaine et Forte",
-      "sigle": "FHuF",
       "couleur": "#1B4F72",
       "siteWeb": "https://www.lafrancehumaineetforte.fr"
     },
     {
       "id": "generation-ecologie",
       "nom": "Génération écologie",
-      "sigle": "GE",
       "couleur": "#5ABB48",
       "nuanceOfficielle": {
         "code": "ECO",
@@ -278,27 +256,26 @@
     },
     {
       "id": "projet-france",
-      "nom": "Projet France",
+      "nom": "Le Projet France",
       "couleur": "#0546A5",
       "siteWeb": "https://becht2027.fr"
     },
     {
-      "id": "nous-sommes-la-france",
-      "nom": "Nous sommes la France",
-      "couleur": "#00A2B0",
-      "siteWeb": "https://www.npolony.fr"
-    },
-    {
       "id": "nous-france",
       "nom": "Nous France",
-      "sigle": "NF",
       "couleur": "#46B7FF",
       "siteWeb": "https://www.nousfrance.fr"
     },
     {
       "id": "france-libre",
       "nom": "France Libre",
-      "couleur": "#6B7280"
+      "couleur": "#6B7280",
+      "nuanceOfficielle": {
+        "code": "LDIV",
+        "libelle": "Liste Divers",
+        "election": "européennes 2024",
+        "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
+      }
     }
   ],
   "thematiques": [
@@ -405,8 +382,7 @@
         "date": "2026-11-06"
       },
       "parti": "Équinoxe",
-      "couleurParti": "#FFD412",
-      "sigleParti": "EQX"
+      "couleurParti": "#FFD412"
     },
     {
       "id": "raphael-glucksmann",
@@ -445,8 +421,7 @@
         "url": "https://www.edouardphilippe.fr/#priorites"
       },
       "parti": "Horizons",
-      "couleurParti": "#002B7F",
-      "sigleParti": "HOR"
+      "couleurParti": "#002B7F"
     },
     {
       "id": "gabriel-attal",
@@ -466,7 +441,7 @@
       },
       "parti": "Renaissance",
       "couleurParti": "#7B1FA2",
-      "sigleParti": "REN"
+      "sigleParti": "RE"
     },
     {
       "id": "jean-luc-melenchon",
@@ -502,9 +477,7 @@
         "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
       },
       "programme": {
-        "statut": "partiel",
-        "url": "https://www.europe1.fr/politique/budget-2027-marine-le-pen-promet-140-milliards-deuros-nets-deconomies-dici-2032-pour-eviter-a-la-france-le-defaut-de-paiement-1126400",
-        "date": "2026-10-06"
+        "statut": "aucun"
       },
       "parti": "Rassemblement National",
       "couleurParti": "#0D47A1",
@@ -518,9 +491,9 @@
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "biographie": "Secrétaire nationale des Écologistes.",
       "candidature": {
-        "statut": "investie",
-        "date": "2025-12-08",
-        "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
+        "statut": "annoncee",
+        "date": "2025-10-22",
+        "sourceUrl": "https://www.brut.media/fr/articles/marine-tondelier-la-patronne-des-ecologistes-officiellement-candidate-a-la-presidentielle-de-2027"
       },
       "programme": {
         "statut": "complet",
@@ -569,8 +542,7 @@
         "url": "https://nouspresident.fr/notre-programme/"
       },
       "parti": "Debout !",
-      "couleurParti": "#EF4444",
-      "sigleParti": "DEBOUT"
+      "couleurParti": "#EF4444"
     },
     {
       "id": "fabien-roussel",
@@ -607,9 +579,8 @@
         "statut": "partiel",
         "url": "https://www.ericzemmour.fr/priorites"
       },
-      "parti": "Reconquête",
-      "couleurParti": "#1E1B4B",
-      "sigleParti": "REC"
+      "parti": "Reconquête!",
+      "couleurParti": "#1E1B4B"
     },
     {
       "id": "nathalie-arthaud",
@@ -620,8 +591,8 @@
       "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion.",
       "candidature": {
         "statut": "investie",
-        "date": "2025-12-08",
-        "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
+        "date": "2025-12-07",
+        "sourceUrl": "https://journal.lutte-ouvriere.org/medias/mensuelnumero/fichiers/2025/12/ldc252.pdf"
       },
       "programme": {
         "statut": "partiel",
@@ -688,8 +659,7 @@
         "url": "https://www.unenouvelleenergie.fr/notre-programme/"
       },
       "parti": "Nouvelle Énergie",
-      "couleurParti": "#2563EB",
-      "sigleParti": "NE"
+      "couleurParti": "#2563EB"
     },
     {
       "id": "mira-markovic",
@@ -706,8 +676,7 @@
         "statut": "aucun"
       },
       "parti": "Parti animaliste",
-      "couleurParti": "#912993",
-      "sigleParti": "PA"
+      "couleurParti": "#912993"
     },
     {
       "id": "anasse-kazib",
@@ -740,12 +709,11 @@
         "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
       },
       "programme": {
-        "statut": "complet",
+        "statut": "partiel",
         "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf"
       },
       "parti": "Les Patriotes",
-      "couleurParti": "#E88A28",
-      "sigleParti": "LP"
+      "couleurParti": "#E88A28"
     },
     {
       "id": "selma-labib",
@@ -783,8 +751,7 @@
         "url": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf"
       },
       "parti": "La France Humaine et Forte",
-      "couleurParti": "#1B4F72",
-      "sigleParti": "FHuF"
+      "couleurParti": "#1B4F72"
     },
     {
       "id": "delphine-batho",
@@ -802,8 +769,7 @@
         "url": "https://delphinebatho.fr/priorites/"
       },
       "parti": "Génération écologie",
-      "couleurParti": "#5ABB48",
-      "sigleParti": "GE"
+      "couleurParti": "#5ABB48"
     },
     {
       "id": "olivier-becht",
@@ -820,13 +786,12 @@
         "statut": "complet",
         "url": "https://becht2027.fr/projet-france/le-livre/"
       },
-      "parti": "Projet France",
+      "parti": "Le Projet France",
       "couleurParti": "#0546A5"
     },
     {
       "id": "natacha-polony",
       "nom": "Natacha Polony",
-      "partiId": "nous-sommes-la-france",
       "avatar": "NP",
       "biographie": "Journaliste et essayiste agrégée de lettres modernes, ancienne directrice de la rédaction de Marianne et directrice de la revue L'Audace !.",
       "candidature": {
@@ -838,8 +803,8 @@
         "statut": "partiel",
         "url": "https://natachapolony2027.fr/natacha-polony/ma-vision"
       },
-      "parti": "Nous sommes la France",
-      "couleurParti": "#00A2B0"
+      "parti": "Indépendant",
+      "couleurParti": "#6B7280"
     },
     {
       "id": "xavier-bertrand",
@@ -856,8 +821,7 @@
         "statut": "aucun"
       },
       "parti": "Nous France",
-      "couleurParti": "#46B7FF",
-      "sigleParti": "NF"
+      "couleurParti": "#46B7FF"
     },
     {
       "id": "teddy-riner",
@@ -952,11 +916,11 @@
       "ref": "P-314",
       "candidatId": "anasse-kazib",
       "thematiqueId": "societe",
-      "titre": "Régulariser tous les sans-papiers et instaurer la liberté de circulation et d'installation",
-      "description": "« Régularisation de tous les sans-papiers, liberté de circulation et d'installation. »",
+      "titre": "Régulariser la situation de tous les étrangers sans papiers en France",
+      "description": "« Régularisation de tous les sans-papiers [...]. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures). Mesure de l'axe visant à unifier les travailleurs, avec la fin de la sous-traitance et le CDI pour tous.",
+      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures), axe « Unifier la nouvelle classe ouvrière ». Le même point réclame la liberté de circulation et d'installation ; l'axe prévoit aussi la fin de la sous-traitance et le CDI pour tous.",
       "enjeuId": "regulariser-sans-papiers",
       "sens": "pour"
     },
@@ -1314,25 +1278,12 @@
       "contexte": "Programme du site de campagne, volet « Réussir une nouvelle ambition française ». Remplacerait, peut-être pour un temps, l'objectif sur le nombre total de logements sociaux par un objectif plafonné sur les constructions neuves, fixé entre l'État et les collectivités ; « plus des deux tiers des Français » y seraient éligibles."
     },
     {
-      "id": "prop-db-1",
-      "ref": "P-335",
-      "candidatId": "delphine-batho",
-      "thematiqueId": "environnement",
-      "sujetId": "climat-emissions",
-      "titre": "Diviser par deux la consommation d'énergie pour atteindre la neutralité carbone",
-      "description": "« Il n'y a aucun scénario de neutralité carbone qui ne commence par diviser par deux la consommation d'énergie. »",
-      "sourceUrl": "https://delphinebatho.fr/quelle-politique-energetique-pour-la-france/",
-      "dateDeclaration": "2026-06-22",
-      "typeSource": "prise_de_position",
-      "contexte": "Intervention aux Entretiens de Terra Nova sur la politique énergétique, reprise sur le site de campagne. Autres priorités citées : réseaux plus résistants, énergie produite et partagée localement (autoconsommation collective), chaleur et froid renouvelables."
-    },
-    {
       "id": "prop-db-3",
       "ref": "P-873",
       "candidatId": "delphine-batho",
       "thematiqueId": "international",
       "titre": "Renforcer l'effort de défense pour bâtir une défense européenne autonome",
-      "description": "« nous estimons vital l'effort de défense pour construire une Europe de la défense autonome sur le plan stratégique »",
+      "description": "« nous estimons vital l'effort de défense pour construire une Europe de la défense autonome sur le plan stratégique » ; « [...] une augmentation du budget de la défense [...] nous répondrons oui, sans la moindre hésitation »",
       "sourceUrl": "https://www.generationecologie.fr/2025/12/10/oui-la-defense-contre-les-menaces-du-nouveau-yalta-des-predateurs/",
       "dateDeclaration": "2025-12-10",
       "typeSource": "prise_de_position",
@@ -1411,6 +1362,19 @@
       "sourceUrl": "https://delphinebatho.fr/priorites/la-beaute-pour-vivre-mieux/",
       "typeSource": "programme_2027",
       "contexte": "Site de campagne (novembre 2026), proposition 4 « Se libérer de la publicité et des frustrations qu'elle génère ». Chacun serait exposé à « plus de 2 000 messages publicitaires par jour ». Le texte ne fixe pas de calendrier."
+    },
+    {
+      "id": "prop-db-12",
+      "ref": "P-919",
+      "candidatId": "delphine-batho",
+      "thematiqueId": "environnement",
+      "titre": "Créer une sécurité sociale climatique face aux dommages des catastrophes",
+      "description": "« Face aux inégalités liées aux dommages des catastrophes, j'engagerai la création d'une sécurité sociale climatique. »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-securite-climatique-et-la-paix/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, priorité « La sécurité climatique et la paix », point 4 « Organiser une sécurité sociale climatique collective ». Le même point prévoit d'adapter les écoles et les hôpitaux au climat et de développer la géothermie et l'autoconsommation collective.",
+      "enjeuId": "securite-sociale-climatique",
+      "sens": "pour"
     },
     {
       "id": "prop-ep-1",
@@ -1528,13 +1492,12 @@
       "ref": "P-243",
       "candidatId": "eric-zemmour",
       "thematiqueId": "education",
+      "sujetId": "uniforme-autorite",
       "titre": "Rendre obligatoire le port de la blouse pour les élèves de l'école primaire",
       "description": "« Lutter contre le harcèlement scolaire, le communautarisme et les inégalités sociales en rendant le port de la blouse obligatoire à l'école primaire »",
       "sourceUrl": "https://assets.nationbuilder.com/themes/61c071ce4764e8b1483d1a8c/attachments/original/1648220408/programme_eric_zemmour_presidentielle_2022.pdf?1648220408",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, p. 22, faute de mesure plus récente sur la tenue des élèves. Le même programme (p. 10) veut « gommer les différences vestimentaires » à l'école.",
-      "enjeuId": "uniforme-ecole",
-      "sens": "pour"
+      "contexte": "Programme présidentiel 2022, p. 22, faute de mesure plus récente sur la tenue des élèves. Le même programme (p. 10) veut « gommer les différences vestimentaires » à l'école."
     },
     {
       "id": "prop-ez-4",
@@ -1960,13 +1923,14 @@
       "ref": "P-907",
       "candidatId": "francois-ruffin",
       "thematiqueId": "environnement",
-      "sujetId": "adaptation-chaleur",
       "titre": "Créer une branche de la Sécurité sociale pour couvrir les dommages climatiques, après concertation",
       "description": "« nous lancerons un grand cycle de concertation sur l'organisation de la solidarité nationale, pour avancer vers la création d'une Sécurité climatique, nouvelle branche permanente de la Sécurité sociale »",
       "sourceUrl": "https://nouspresident.fr/plan-urgence-climat/",
       "dateDeclaration": "2026-10-12",
       "typeSource": "programme_2027",
-      "contexte": "Plan d'urgence climat de la campagne. Cette « Sécurité climatique » regrouperait les aides face aux catastrophes naturelles (dont le fonds Barnier) et les indemnités agricoles ; dès 2027, le fonds Barnier passerait de 300 millions à 1 milliard d'euros."
+      "contexte": "Plan d'urgence climat de la campagne. Cette « Sécurité climatique » regrouperait les aides face aux catastrophes naturelles (dont le fonds Barnier) et les indemnités agricoles ; dès 2027, le fonds Barnier passerait de 300 millions à 1 milliard d'euros.",
+      "enjeuId": "securite-sociale-climatique",
+      "sens": "pour"
     },
     {
       "id": "prop-fr-8",
@@ -2020,34 +1984,6 @@
       "dateDeclaration": "2026-07-17",
       "typeSource": "programme_2027",
       "contexte": "Cahier de campagne « Pour renouer avec le temps des loisirs », volet sur les associations. Les salariés des grandes entreprises pourraient s'engager une demi-journée par mois dans l'association de leur choix, sur le modèle du mécénat de compétences. Prévoit aussi 60 000 contrats aidés pour les associations."
-    },
-    {
-      "id": "prop-ga-1",
-      "ref": "P-145",
-      "candidatId": "gabriel-attal",
-      "thematiqueId": "education",
-      "titre": "Expérimenter l'uniforme à l'école, puis le généraliser s'il fait ses preuves",
-      "description": "« le Gouvernement soutient l'expérimentation de l'uniforme à l'école [...] si cette expérimentation est concluante, nous généraliserons l'uniforme en France à la rentrée 2026. »",
-      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/seance/session-ordinaire-de-2023-2024/deuxieme-seance-du-mardi-30-janvier-2024",
-      "dateDeclaration": "2024-01-30",
-      "typeSource": "prise_de_position",
-      "contexte": "Déclaration de politique générale devant l'Assemblée nationale, compte rendu officiel de la séance. L'uniforme y est présenté comme un « symbole d'égalité républicaine » ; sa généralisation à la rentrée 2026 reprend une annonce du Président de la République.",
-      "enjeuId": "uniforme-ecole",
-      "sens": "pour"
-    },
-    {
-      "id": "prop-ga-6",
-      "ref": "P-864",
-      "candidatId": "gabriel-attal",
-      "thematiqueId": "agriculture",
-      "titre": "Lutter contre les règles agricoles françaises plus strictes que les normes européennes",
-      "description": "« Lutter contre la surtransposition » ; « reprogrammer le calendrier européen et le calendrier français concernant l'examen de ré-homologation des produits phytosanitaires »",
-      "sourceUrl": "https://www.info.gouv.fr/actualite/produire-et-proteger-des-nouvelles-mesures-pour-lagriculture-francaise",
-      "dateDeclaration": "2024-02-01",
-      "typeSource": "prise_de_position",
-      "contexte": "Mesures agricoles du gouvernement, publiées sur info.gouv.fr. La surtransposition consiste à ajouter des règles françaises plus strictes que les normes européennes. Ce volet prévoit de revoir le calendrier de réexamen des pesticides et met à l'arrêt le plan Ecophyto, qui visait 50 % de pesticides en moins d'ici 2025.",
-      "enjeuId": "normes-agricoles",
-      "sens": "pour"
     },
     {
       "id": "prop-ga-9",
@@ -2127,6 +2063,32 @@
       "dateDeclaration": "2026-06-10",
       "typeSource": "programme_2027",
       "contexte": "Site de campagne, mesure présentée à la télévision. Un adulte pris en flagrant délit peut être jugé dans la journée ; une partie de la loi déjà votée a été censurée par le Conseil constitutionnel, et il se dit prêt à modifier la Constitution si nécessaire."
+    },
+    {
+      "id": "prop-ga-15",
+      "ref": "P-889",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "education",
+      "sujetId": "uniforme-autorite",
+      "titre": "Créer un conseil de discipline dès l'école primaire pour les faits graves",
+      "description": "« créer un conseil de discipline dès l'école primaire, alors qu'il est aujourd'hui réservé au collège et au lycée »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/conseil-discipline-primaire",
+      "dateDeclaration": "2026-06-01",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée à la radio. Les comportements les plus graves seraient sanctionnés devant l'élève et sa famille ; la mesure va de pair avec un barème national des sanctions, pour protéger professeurs et chefs d'établissement face aux contestations."
+    },
+    {
+      "id": "prop-ga-16",
+      "ref": "P-346",
+      "candidatId": "gabriel-attal",
+      "thematiqueId": "agriculture",
+      "sujetId": "normes-europeennes-importations",
+      "titre": "Imposer dans chaque accord commercial que les importations respectent les normes françaises",
+      "description": "« intégrer systématiquement des clauses miroir dans les accords commerciaux que la France signe : les produits importés doivent respecter les mêmes normes que ceux de nos producteurs »",
+      "sourceUrl": "https://attalpresident.fr/programme/mesures/clauses-miroir-systematiques",
+      "dateDeclaration": "2026-06-04",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, mesure annoncée lors d'un déplacement agricole. Une clause miroir impose aux produits importés les normes sanitaires et environnementales exigées des producteurs français ; même exigence défendue au niveau européen, avec l'opposition à l'accord avec le Mercosur."
     },
     {
       "id": "prop-jlm-1",
@@ -2863,7 +2825,7 @@
       "id": "prop-nda-1",
       "ref": "P-382",
       "candidatId": "nicolas-dupont-aignan",
-      "thematiqueId": "securite",
+      "thematiqueId": "societe",
       "sujetId": "immigration-asile",
       "titre": "Rétablir les contrôles aux frontières nationales en sortant de l'espace Schengen",
       "description": "« Rétablir le contrôle aux frontières en sortant de Schengen, en recrutant 10 000 agents spécialisés »",
@@ -3203,12 +3165,12 @@
       "ref": "P-581",
       "candidatId": "selma-labib",
       "thematiqueId": "societe",
-      "titre": "Ouvrir les frontières et régulariser tous les sans-papiers",
-      "description": "« on dit qu'il faut l'ouverture des frontières, la régularisation de tous les sans-papiers, parce que les travailleurs étrangers et immigrés ne sont pas les ennemis des travailleurs français »",
+      "titre": "Régulariser tous les étrangers qui vivent en France sans papiers",
+      "description": "« [...] la régularisation de tous les sans-papiers, parce que les travailleurs étrangers et immigrés ne sont pas les ennemis des travailleurs français »",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/dans-le-lyon-bondy-blog-selma-labib-cest-nous-qui-produisons-tout-donc-cest-a-nous-de-decider-de-tout-dans-cette-societe",
       "dateDeclaration": "2026-07-13",
       "typeSource": "prise_de_position",
-      "contexte": "Interview au Lyon Bondy Blog, republiée sur le site de l'organisation. Mesure présentée en réponse à la montée de l'extrême droite : travailleurs étrangers et français auraient les mêmes intérêts.",
+      "contexte": "Interview au Lyon Bondy Blog (réalisée le 26 juin, publiée le 13 juillet 2026), republiée sur le site de l'organisation. Demandée avec l'ouverture des frontières, face à la montée de l'extrême droite : travailleurs étrangers et français auraient les mêmes intérêts.",
       "enjeuId": "regulariser-sans-papiers",
       "sens": "pour"
     },
@@ -3387,14 +3349,13 @@
       "ref": "P-730",
       "candidatId": "xavier-bertrand",
       "thematiqueId": "agriculture",
+      "sujetId": "normes-europeennes-importations",
       "titre": "Faire de l'agriculture une priorité et revenir sur les normes françaises plus strictes que l'Europe",
       "description": "« Je ferai de la stratégie agricole une priorité pour le pays, avec les agriculteurs et non contre eux. [...] Déjà, revenons sur les surtranspositions franco-françaises dès cette année. »",
       "sourceUrl": "https://www.nousfrance.fr/2026/01/xavier-bertrand-on-ne-dirige-pas-un-pays-par-la-peur-le-parisien/",
       "dateDeclaration": "2026-01-10",
       "typeSource": "prise_de_position",
-      "contexte": "Entretien au Parisien, sur l'accord de libre-échange avec les pays du Mercosur. Juge que l'alimentation relève du domaine régalien de l'État ; les surtranspositions sont des règles françaises allant au-delà des textes européens.",
-      "enjeuId": "normes-agricoles",
-      "sens": "pour"
+      "contexte": "Entretien au Parisien, sur l'accord de libre-échange avec les pays du Mercosur. Juge que l'alimentation relève du domaine régalien de l'État ; les surtranspositions sont des règles françaises allant au-delà des textes européens."
     },
     {
       "id": "prop-xb-8",
@@ -3411,6 +3372,93 @@
     }
   ],
   "lois": [
+    {
+      "id": "accompagnants-eleves-handicap-2026",
+      "thematiqueId": "education",
+      "sujetId": "eleves-handicap",
+      "nature": "proposition_loi",
+      "titre": "Proposition de loi créant un corps de fonctionnaires de catégorie B pour les accompagnants d'élèves en situation de handicap (première lecture)",
+      "question": "Faut-il que les accompagnants d'élèves handicapés deviennent des fonctionnaires de l'Éducation nationale, recrutés par concours ?",
+      "enjeu": "Les accompagnants, aujourd'hui contractuels, formeraient un corps de fonctionnaires de catégorie B ; ceux en poste au 1er septembre 2026 deviendraient stagiaires, avec un temps de travail dérogatoire fixé par décret.",
+      "resume": "Adoptée par 166 voix contre 16, avec 123 abstentions ; transmise au Sénat le 29 octobre 2026. Le texte renvoie à un décret le temps de travail et la rémunération ; ses auteurs veulent qu'un contrat de 24 heures par semaine, le plus courant, soit payé comme un temps plein.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2026-10-29",
+      "statut": "en_cours",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Position majoritaire du groupe : 68 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "marine-le-pen": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Position majoritaire du groupe : 0 pour, 1 contre, 79 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Position majoritaire du groupe : 12 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "gabriel-attal": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Position majoritaire du groupe : 0 pour, 6 contre, 23 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Position majoritaire du groupe : 7 pour, 0 contre, 3 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "edouard-philippe": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Position majoritaire du groupe : 0 pour, 2 contre, 8 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 34 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Position majoritaire du groupe : 41 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9203"
+        }
+      },
+      "ref": "L-59"
+    },
     {
       "id": "jeunes-majeurs-protection-enfance-2026",
       "thematiqueId": "societe",
@@ -3487,22 +3535,6 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 26 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 24 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334"
-        },
-        "olivier-becht": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe : 0 pour, 12 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9334"
         }
       },
@@ -3585,22 +3617,6 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 18 contre, 0 abstention, donc pour la surtaxe.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 16 contre, 0 abstention, donc pour la surtaxe.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123"
-        },
-        "olivier-becht": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe sur l'amendement de suppression : 14 pour, 2 contre, 2 abstentions, donc contre la surtaxe.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/9123"
         }
       },
       "ref": "L-52"
@@ -3681,22 +3697,6 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe sur l'amendement de suppression : 15 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738"
-        },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe sur l'amendement de suppression : 6 pour, 0 contre, 0 abstention, donc contre la baisse du plafond.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe sur l'amendement de suppression : 0 pour, 12 contre, 0 abstention, donc pour la baisse du plafond.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8738"
         }
       },
@@ -3779,25 +3779,167 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 25 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe : 30 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8725"
         }
       },
       "ref": "L-50"
+    },
+    {
+      "id": "commande-publique-france-2026",
+      "thematiqueId": "economie",
+      "sujetId": "commande-publique",
+      "nature": "resolution",
+      "titre": "Proposition de résolution visant à mobiliser la commande publique au service de l'emploi, de la production et de l'innovation en France (article 34-1 de la Constitution)",
+      "question": "Faut-il permettre aux acheteurs publics de donner la priorité aux offres produites ou réalisées en France ?",
+      "enjeu": "Résolution sans force obligatoire : permettre, sans l'imposer, de favoriser les offres dont l'emploi, la production ou l'innovation sont en France ; les règles de l'UE imposent l'égalité entre entreprises.",
+      "resume": "Rejetée par 187 voix contre 151. Le 9 septembre 2026, la Commission européenne a proposé de remplacer les directives sur les marchés publics par un règlement qui crée une préférence européenne, en cours de négociation.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2026-10-08",
+      "statut": "rejetee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Position majoritaire du groupe : 0 pour, 56 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Position majoritaire du groupe : 0 pour, 9 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Position majoritaire du groupe : 0 pour, 36 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 0 pour, 26 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Position majoritaire du groupe : 0 pour, 42 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8610"
+        }
+      },
+      "ref": "L-57"
+    },
+    {
+      "id": "schengen-double-frontiere-2026",
+      "thematiqueId": "societe",
+      "sujetId": "immigration-asile",
+      "nature": "resolution",
+      "titre": "Proposition de résolution visant à refonder l'espace Schengen en instaurant une double frontière nationale et européenne (article 34-1 de la Constitution)",
+      "question": "Faut-il contrôler les étrangers non européens à chaque passage d'une frontière entre deux pays de l'espace Schengen ?",
+      "enjeu": "Résolution sans force obligatoire : réviser le code frontières Schengen pour une frontière extérieure renforcée et des vérifications des ressortissants hors Union aux frontières intérieures, sans quitter Schengen.",
+      "resume": "Rejetée par 199 voix contre 144. La France contrôle déjà ses frontières intérieures par dérogations temporaires, notifiées depuis novembre 2015 et prolongées jusqu'au 30 avril 2027 ; le code Schengen révisé en 2024 limite en principe ces contrôles à deux ans pour une même menace.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2026-10-08",
+      "statut": "rejetee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Position majoritaire du groupe : 0 pour, 57 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Position majoritaire du groupe : 118 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Position majoritaire du groupe : 0 pour, 10 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Position majoritaire du groupe : 9 pour, 1 contre, 5 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 0 pour, 27 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Position majoritaire du groupe : 0 pour, 37 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8611"
+        }
+      },
+      "ref": "L-58"
     },
     {
       "id": "mineurs-reseaux-sociaux-2026",
@@ -4070,22 +4212,6 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 62 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987"
-        },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 0 pour, 29 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe : 55 pour, 12 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7987"
         }
       },
       "ref": "L-48"
@@ -4172,22 +4298,6 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 25 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380"
-        },
-        "olivier-becht": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7380"
         }
       },
@@ -4289,6 +4399,170 @@
       "ref": "L-42"
     },
     {
+      "id": "mineurs-isoles-2025",
+      "thematiqueId": "societe",
+      "sujetId": "mineurs-isoles",
+      "nature": "proposition_loi",
+      "titre": "Proposition de loi visant à protéger les mineurs isolés et à lutter contre le sans-abrisme (première lecture)",
+      "question": "Faut-il héberger un jeune étranger isolé qui se dit mineur jusqu'à ce que le juge ait définitivement tranché sur son âge ?",
+      "enjeu": "Le recours au juge d'un jeune non reconnu mineur suspendrait le refus de prise en charge : accueil d'urgence maintenu et scolarisation. Les examens osseux, dentaires et pubertaires pour estimer l'âge seraient interdits.",
+      "resume": "Adoptée par 144 voix contre 100 ; transmise au Sénat, qui ne l'a pas encore examinée. L'article qui créait un observatoire national du sans-abrisme a été supprimé en séance.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2025-12-11",
+      "statut": "en_cours",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Position majoritaire du groupe : 51 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "marine-le-pen": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Position majoritaire du groupe : 0 pour, 48 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Position majoritaire du groupe : 7 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Position majoritaire du groupe : 0 pour, 6 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Position majoritaire du groupe : 0 pour, 10 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 23 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Position majoritaire du groupe : 63 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4723"
+        }
+      },
+      "ref": "L-56"
+    },
+    {
+      "id": "accords-franco-algeriens-2025",
+      "thematiqueId": "societe",
+      "sujetId": "droits-des-etrangers",
+      "nature": "resolution",
+      "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens du 27 décembre 1968 (article 34-1 de la Constitution)",
+      "question": "Faut-il mettre fin à l'accord de 1968 qui facilite l'installation en France des ressortissants algériens ?",
+      "enjeu": "Résolution sans force obligatoire appelant à dénoncer l'accord de 1968 : titre de séjour de 10 ans après un an de mariage avec un Français (3 ans sinon), regroupement familial après 12 mois de présence (18 sinon).",
+      "resume": "Adoptée par 185 voix contre 184. Une résolution n'oblige pas le Gouvernement : selon sa réponse au Sénat du 3 septembre 2026, le ministère de l'Intérieur travaille à réviser l'accord, sans le dénoncer.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2025-10-30",
+      "statut": "adoptee",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Position majoritaire du groupe : 0 pour, 52 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "francois-ruffin": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "marine-le-pen": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "fabien-roussel": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Position majoritaire du groupe : 0 pour, 6 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "EPR",
+          "groupeNom": "Ensemble pour la République",
+          "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 3 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "bruno-retailleau": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Position majoritaire du groupe : 26 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "edouard-philippe": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Position majoritaire du groupe : 17 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "marine-tondelier": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 0 pour, 32 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        },
+        "raphael-glucksmann": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Position majoritaire du groupe : 0 pour, 53 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3260"
+        }
+      },
+      "ref": "L-55"
+    },
+    {
       "id": "etiquetage-origine-aliments-2025",
       "thematiqueId": "agriculture",
       "sujetId": "origine-des-aliments",
@@ -4360,22 +4634,6 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 47 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264"
-        },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 0 pour, 20 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264"
-        },
-        "olivier-becht": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe : 0 pour, 43 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3264"
         }
       },
@@ -4668,10 +4926,10 @@
       "titre": "Motion de rejet préalable de la proposition de loi relative à la réforme de l'audiovisuel public et à la souveraineté audiovisuelle (première lecture)",
       "question": "Faut-il réunir France Télévisions, Radio France et l'Institut national de l'audiovisuel sous une même direction ?",
       "enjeu": "Création au 1er janvier 2026 d'une société détenue à 100 % par l'État, France Médias, qui coiffe France Télévisions, Radio France et l'Institut national de l'audiovisuel, avec un président unique.",
-      "resume": "Rejetée d'emblée : motion de rejet préalable adoptée par 94 voix contre 38.",
+      "resume": "Rejetée d'emblée en première lecture : motion de rejet préalable adoptée par 94 voix contre 38. Le Sénat a de nouveau adopté le texte en deuxième lecture le 11 juillet 2025 ; l'Assemblée ne l'a pas réexaminé depuis.",
       "chambre": "assemblee_nationale",
       "dateVote": "2025-06-30",
-      "statut": "rejetee",
+      "statut": "en_cours",
       "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873",
       "votes": {
         "jean-luc-melenchon": {
@@ -4734,22 +4992,6 @@
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe sur la motion de rejet : 14 pour, 0 contre, donc contre la réforme.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873"
-        },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe sur la motion de rejet : 22 pour, 0 contre, donc contre la réforme.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe sur la motion de rejet : 0 pour, 22 contre, donc pour la réforme.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2873"
         }
       },
@@ -4930,14 +5172,6 @@
           "explication": "Position majoritaire du groupe : 63 pour, 0 contre, 1 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
         },
-        "delphine-batho": {
-          "position": "abstention",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 0 pour, 4 contre, 25 abstentions.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/1473"
-        },
         "olivier-becht": {
           "position": "pour",
           "typeVote": "individuel",
@@ -4946,6 +5180,97 @@
         }
       },
       "ref": "L-37"
+    },
+    {
+      "id": "impot-plancher-patrimoine-2025",
+      "thematiqueId": "economie",
+      "sujetId": "impots-patrimoine",
+      "nature": "proposition_loi",
+      "titre": "Proposition de loi instaurant un impôt plancher de 2 % sur le patrimoine des ultra riches (première lecture)",
+      "question": "Faut-il que les patrimoines de plus de 100 millions d'euros paient chaque année au moins 2 % de leur valeur en impôts ?",
+      "enjeu": "Impôt plancher : un foyer dont le patrimoine dépasse 100 millions d'euros, entreprises comprises, paierait chaque année au moins 2 % de sa valeur, moins ses impôts sur le revenu et sur la fortune immobilière.",
+      "resume": "Adoptée par 116 voix contre 39, puis rejetée au Sénat le 12 juin 2025 (188 voix contre 129) : le texte attend une deuxième lecture. Selon le rapport du Sénat, 1 600 à 1 800 foyers seraient concernés ; les estimations de rendement vont de 2 à 25 milliards d'euros. La même mesure, proposée en amendement aux budgets 2026 et 2027, a été rejetée.",
+      "chambre": "assemblee_nationale",
+      "dateVote": "2025-02-20",
+      "statut": "en_cours",
+      "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881",
+      "votes": {
+        "jean-luc-melenchon": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "LFI-NFP",
+          "groupeNom": "La France insoumise - Nouveau Front Populaire",
+          "explication": "Position majoritaire du groupe : 37 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "francois-ruffin": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "marine-le-pen": {
+          "position": "abstention",
+          "typeVote": "groupe_parti",
+          "groupe": "RN",
+          "groupeNom": "Rassemblement National",
+          "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 28 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "fabien-roussel": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "GDR",
+          "groupeNom": "Gauche Démocrate et Républicaine",
+          "explication": "Position majoritaire du groupe : 5 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "gabriel-attal": {
+          "position": "contre",
+          "typeVote": "individuel",
+          "explication": "A voté contre.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "bruno-retailleau": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "DR",
+          "groupeNom": "Droite Républicaine",
+          "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "edouard-philippe": {
+          "position": "contre",
+          "typeVote": "groupe_parti",
+          "groupe": "HOR",
+          "groupeNom": "Horizons & Indépendants",
+          "explication": "Position majoritaire du groupe : 0 pour, 7 contre, 3 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "marine-tondelier": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "ECOS",
+          "groupeNom": "Écologiste et Social",
+          "explication": "Position majoritaire du groupe : 38 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "raphael-glucksmann": {
+          "position": "pour",
+          "typeVote": "groupe_parti",
+          "groupe": "SOC",
+          "groupeNom": "Socialistes et apparentés",
+          "explication": "Position majoritaire du groupe : 36 pour, 0 contre, 0 abstention.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        },
+        "delphine-batho": {
+          "position": "pour",
+          "typeVote": "individuel",
+          "explication": "A voté pour.",
+          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/881"
+        }
+      },
+      "ref": "L-54"
     },
     {
       "id": "motion-censure-barnier-2024",
@@ -5033,14 +5358,6 @@
           "position": "pour",
           "typeVote": "individuel",
           "explication": "A voté pour.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
-        },
-        "olivier-becht": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Aucun député du groupe n'a voté la motion (seuls les votes pour une censure sont décomptés).",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/519"
         }
       },
@@ -5311,22 +5628,6 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 37 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOS",
-          "groupeNom": "Écologiste et Social",
-          "explication": "Position majoritaire du groupe : 16 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "EPR",
-          "groupeNom": "Ensemble pour la République",
-          "explication": "Position majoritaire du groupe : 38 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/289"
         }
       },
       "ref": "L-25"
@@ -5512,14 +5813,6 @@
           "explication": "Position majoritaire du groupe : 0 pour, 30 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
         },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
-          "explication": "Position majoritaire du groupe : 0 pour, 18 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3725"
-        },
         "olivier-becht": {
           "position": "pour",
           "typeVote": "individuel",
@@ -5611,22 +5904,6 @@
           "groupe": "SOC-A",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 0 pour, 7 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
-        },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
-          "explication": "Position majoritaire du groupe : 0 pour, 5 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "RE",
-          "groupeNom": "Renaissance",
-          "explication": "Position majoritaire du groupe : 72 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3668"
         }
       },
@@ -5780,22 +6057,6 @@
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 14 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
-          "explication": "Position majoritaire du groupe : 20 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "RE",
-          "groupeNom": "Renaissance",
-          "explication": "Position majoritaire du groupe : 56 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3643"
         }
       },
       "ref": "L-19"
@@ -5876,22 +6137,6 @@
           "groupe": "SOC-A",
           "groupeNom": "Socialistes et apparentés",
           "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
-          "explication": "Position majoritaire du groupe : 3 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
-        },
-        "olivier-becht": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "RE",
-          "groupeNom": "Renaissance",
-          "explication": "Position majoritaire du groupe : 34 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/3508"
         }
       },
@@ -6132,11 +6377,11 @@
     },
     {
       "id": "loi-immigration-2023",
-      "thematiqueId": "securite",
+      "thematiqueId": "societe",
       "sujetId": "immigration-asile",
       "nature": "projet_loi",
       "titre": "Loi pour contrôler l'immigration et améliorer l'intégration",
-      "question": "Faut-il durcir les règles de l'immigration et faciliter l'expulsion des étrangers condamnés ?",
+      "question": "Faut-il durcir les règles d'entrée et de séjour des étrangers en France ?",
       "enjeu": "Pour les étrangers hors Union européenne, allocations familiales après 5 ans de résidence ou 30 mois de travail (aides au logement : 3 mois), nombre d'admis fixé par le Parlement, expulsion facilitée des condamnés.",
       "resume": "Texte durcissant les conditions de régularisation et d'accès aux prestations sociales, facilitant les expulsions d'étrangers condamnés et réformant le droit d'asile. Le Conseil constitutionnel a ensuite censuré 35 articles ou parties d'articles sur 86, dont la condition de résidence pour les aides et le nombre d'admis fixé par le Parlement.",
       "chambre": "assemblee_nationale",
@@ -6231,7 +6476,7 @@
       "sujetId": "acces-aux-soins",
       "nature": "proposition_loi",
       "titre": "Loi visant à améliorer l'accès aux soins par l'engagement territorial des professionnels",
-      "question": "Pour lutter contre les déserts médicaux, faut-il limiter l'intérim et élargir les missions des soignants non médecins ?",
+      "question": "Pour lutter contre les déserts médicaux, faut-il limiter l'intérim des soignants en début de carrière ?",
       "enjeu": "L'intérim serait interdit aux soignants n'ayant pas exercé une durée minimale hors intérim, les non-médecins auraient des compétences élargies et les médecins seraient plus engagés dans l'offre de leur territoire.",
       "resume": "Encadrement de l'intérim des soignants n'ayant pas exercé une durée minimale hors intérim, élargissement des compétences des soignants non médecins et responsabilisation territoriale des praticiens.",
       "chambre": "assemblee_nationale",
@@ -6484,14 +6729,6 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
-        },
-        "delphine-batho": {
-          "position": "abstention",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
-          "explication": "Position majoritaire du groupe : 0 pour, 0 contre, 4 abstentions.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/2256"
         }
       },
       "ref": "L-09"
@@ -6597,7 +6834,7 @@
       "sujetId": "squat-impayes",
       "nature": "proposition_loi",
       "titre": "Loi visant à protéger les logements contre l'occupation illicite (Loi Kasbarian-Bergé)",
-      "question": "Faut-il tripler les peines contre le squat et accélérer l'expulsion des locataires qui ne paient pas ?",
+      "question": "Faut-il tripler les peines encourues pour le squat d'un logement ?",
       "enjeu": "Les peines pour occupation illégale d'un logement sont triplées ; les procédures d'expulsion en cas de loyers impayés sont accélérées.",
       "resume": "Triplement des peines pour les squatteurs de résidences principales ou secondaires, accélération des procédures d'expulsion des locataires en impayé de loyer.",
       "chambre": "assemblee_nationale",
@@ -6761,14 +6998,6 @@
           "typeVote": "groupe_parti",
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
-          "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
-        },
-        "delphine-batho": {
-          "position": "contre",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
           "explication": "Position majoritaire du groupe : 0 pour, 3 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/1274"
         }
@@ -6935,14 +7164,6 @@
           "groupeNom": "Socialistes et apparentés (membre de l’intergroupe NUPES)",
           "explication": "Position majoritaire du groupe : 28 pour, 0 contre, 0 abstention.",
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
-        },
-        "delphine-batho": {
-          "position": "pour",
-          "typeVote": "groupe_parti",
-          "groupe": "ECOLO",
-          "groupeNom": "Écologiste - NUPES",
-          "explication": "Position majoritaire du groupe : 10 pour, 0 contre, 0 abstention.",
-          "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/scrutins/931"
         }
       },
       "ref": "L-02"
@@ -7050,7 +7271,7 @@
       "sujetId": "climat-emissions",
       "nature": "projet_loi",
       "titre": "Projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
-      "question": "Faut-il interdire certains vols intérieurs et la location des logements les plus mal isolés ?",
+      "question": "Faut-il interdire les vols intérieurs quand le même trajet se fait en train en moins de 2 h 30 ?",
       "enjeu": "Suppression des vols intérieurs quand le train fait le trajet en moins de 2 h 30, interdiction progressive de louer les passoires thermiques, zones à faibles émissions dans les grandes villes.",
       "resume": "Adopté en première lecture par 332 voix contre 77 : fin des vols intérieurs quand le train relie les deux villes en moins de 2 h 30, logements classés G non décents dès 2025, F en 2028, E en 2034, zones à faibles émissions avant fin 2024 dans les agglomérations de plus de 150 000 habitants.",
       "chambre": "assemblee_nationale",
@@ -7125,8 +7346,8 @@
       "sujetId": "laicite",
       "nature": "projet_loi",
       "titre": "Projet de loi confortant le respect des principes de la République (première lecture)",
-      "question": "Faut-il encadrer l'instruction en famille et renforcer le contrôle des associations et des cultes ?",
-      "enjeu": "Instruction en famille soumise à autorisation, contrat d'engagement républicain des associations subventionnées, financement des cultes mieux contrôlé, délit de menaces contre un agent public pour obtenir une dérogation.",
+      "question": "Faut-il renforcer le contrôle de l'État sur les associations et le financement des cultes ?",
+      "enjeu": "Contrat d'engagement républicain des associations subventionnées, financement des cultes mieux contrôlé, instruction en famille soumise à autorisation, délit de menaces contre un agent public pour obtenir une dérogation.",
       "resume": "Adopté en première lecture par 347 voix contre 151.",
       "chambre": "assemblee_nationale",
       "dateVote": "2021-02-16",
@@ -7200,8 +7421,8 @@
       "sujetId": "surveillance",
       "nature": "proposition_loi",
       "titre": "Proposition de loi relative à la sécurité globale (première lecture)",
-      "question": "Faut-il pénaliser la diffusion malveillante d'images de policiers et autoriser les drones de surveillance ?",
-      "enjeu": "Délit de diffusion de l'image d'un policier ou d'un gendarme en opération dans le but manifeste de porter atteinte à son intégrité, usage des drones et caméras piétons, pouvoirs élargis des polices municipales.",
+      "question": "Faut-il autoriser policiers et gendarmes à filmer avec des drones et des caméras portées sur eux ?",
+      "enjeu": "Usage des drones et des caméras piétons par les forces de l'ordre, délit de diffusion de l'image d'un policier ou d'un gendarme en opération pour porter atteinte à son intégrité, polices municipales renforcées.",
       "resume": "Adoptée en première lecture par 388 voix contre 104.",
       "chambre": "assemblee_nationale",
       "dateVote": "2020-11-24",
@@ -7346,10 +7567,10 @@
       "titre": "Projet de loi autorisant la ratification de l'accord économique et commercial global UE-Canada (CETA) et de l'accord de partenariat stratégique (première lecture)",
       "question": "Faut-il ratifier l'accord commercial entre l'Union européenne et le Canada (CETA) ?",
       "enjeu": "Ratification de l'accord de libre-échange avec le Canada : baisse des droits de douane et ouverture des marchés publics, déjà appliqué en partie depuis 2017.",
-      "resume": "Ratification adoptée par l'Assemblée nationale par 266 voix contre 213.",
+      "resume": "Ratification adoptée par l'Assemblée nationale par 266 voix contre 213. Le 21 mars 2024, le Sénat a supprimé du texte la ratification de l'accord avec le Canada et n'a gardé que celle de l'accord de partenariat stratégique ; l'Assemblée ne l'a pas réexaminé depuis.",
       "chambre": "assemblee_nationale",
       "dateVote": "2019-07-23",
-      "statut": "adoptee",
+      "statut": "en_cours",
       "sourceOfficielleUrl": "https://www.assemblee-nationale.fr/dyn/15/scrutins/2059",
       "votes": {
         "jean-luc-melenchon": {
@@ -7478,11 +7699,11 @@
     },
     {
       "id": "loi-asile-immigration-2018",
-      "thematiqueId": "securite",
+      "thematiqueId": "societe",
       "sujetId": "immigration-asile",
       "nature": "projet_loi",
       "titre": "Projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie (première lecture)",
-      "question": "Faut-il accélérer le traitement des demandes d'asile et allonger la rétention des étrangers en situation irrégulière ?",
+      "question": "Faut-il raccourcir les délais pour demander l'asile et pour traiter les dossiers ?",
       "enjeu": "Les délais pour demander l'asile et pour traiter les dossiers seraient raccourcis, la durée maximale de rétention avant expulsion passerait à 90 jours, et des mesures d'intégration seraient prévues pour les réfugiés.",
       "resume": "Adopté en première lecture par 228 voix contre 139.",
       "chambre": "assemblee_nationale",
@@ -7557,7 +7778,7 @@
       "sujetId": "contrat-licenciement",
       "nature": "projet_loi",
       "titre": "Projet de loi ratifiant les ordonnances pour le renforcement du dialogue social (première lecture)",
-      "question": "Faut-il plafonner les indemnités pour licenciement abusif et donner la priorité aux accords d'entreprise ?",
+      "question": "Faut-il plafonner les indemnités versées en cas de licenciement abusif ?",
       "enjeu": "Réforme du Code du travail : barème plafonnant les indemnités en cas de licenciement abusif, priorité aux accords d'entreprise sur de nombreux sujets, fusion des instances représentatives du personnel.",
       "resume": "Ratification adoptée en première lecture par 463 voix contre 74.",
       "chambre": "assemblee_nationale",
@@ -7689,7 +7910,7 @@
       "thematiqueId": "international",
       "sujetId": "otan",
       "question": "Faire sortir la France de l'Alliance atlantique (OTAN), l'alliance militaire avec les États-Unis",
-      "enjeu": "Faire sortir la France de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
+      "enjeu": "Faire sortir la France, immédiatement ou par étapes, de l'alliance militaire qui la lie aux États-Unis, au Canada et à la plupart des pays européens.",
       "positions": [
         {
           "propositionId": "prop-fro-7",
@@ -7863,24 +8084,6 @@
       "ref": "E-12"
     },
     {
-      "id": "uniforme-ecole",
-      "thematiqueId": "education",
-      "sujetId": "uniforme-autorite",
-      "question": "Faire porter un uniforme, la même tenue pour tous, aux élèves de l'école publique",
-      "enjeu": "Faire porter la même tenue à tous les élèves de l'école publique, tout de suite ou après une expérimentation.",
-      "positions": [
-        {
-          "propositionId": "prop-ez-2",
-          "sens": "pour"
-        },
-        {
-          "propositionId": "prop-ga-1",
-          "sens": "pour"
-        }
-      ],
-      "ref": "E-13"
-    },
-    {
       "id": "peines-planchers",
       "thematiqueId": "securite",
       "sujetId": "peines-prisons",
@@ -7917,24 +8120,6 @@
       "ref": "E-15"
     },
     {
-      "id": "normes-agricoles",
-      "thematiqueId": "agriculture",
-      "sujetId": "normes-europeennes-importations",
-      "question": "Limiter les règles imposées aux agriculteurs à celles de l'Europe",
-      "enjeu": "Supprimer les normes françaises qui vont au-delà de ce que l'Union européenne exige, et ne plus en ajouter.",
-      "positions": [
-        {
-          "propositionId": "prop-ga-6",
-          "sens": "pour"
-        },
-        {
-          "propositionId": "prop-xb-7",
-          "sens": "pour"
-        }
-      ],
-      "ref": "E-17"
-    },
-    {
       "id": "economies-deficit",
       "thematiqueId": "economie",
       "sujetId": "depenses-dette",
@@ -7951,6 +8136,24 @@
         }
       ],
       "ref": "E-18"
+    },
+    {
+      "id": "securite-sociale-climatique",
+      "thematiqueId": "environnement",
+      "sujetId": "adaptation-chaleur",
+      "question": "Créer, sur le modèle de la Sécurité sociale, une protection publique contre les dommages des catastrophes climatiques",
+      "enjeu": "Mettre en place un système de solidarité nationale, sur le modèle de la Sécurité sociale, qui prendrait en charge les dommages causés aux personnes et aux biens par les catastrophes climatiques.",
+      "positions": [
+        {
+          "propositionId": "prop-fr-7",
+          "sens": "pour"
+        },
+        {
+          "propositionId": "prop-db-12",
+          "sens": "pour"
+        }
+      ],
+      "ref": "E-19"
     }
   ],
   "glossaire": [
@@ -8660,7 +8863,7 @@
       "titre": "L'accord avec le Mercosur",
       "aujourdhui": "Le Mercosur réunit le Brésil, l'Argentine, l'Uruguay et le Paraguay, rejoints par la Bolivie en 2024. Négocié depuis 1999 avec l'Union européenne, l'accord a été signé le 17 janvier 2026 et s'applique à titre provisoire depuis le 1er mai 2026.",
       "enDebat": "Les uns y voient des ventes en plus pour l'industrie, le vin et le fromage européens. Les autres craignent pour les agriculteurs une concurrence de produits faits avec des règles sanitaires et environnementales moins strictes.",
-      "aJour": "2026-10-28",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le Mercosur",
@@ -8682,9 +8885,9 @@
       "id": "retraites",
       "thematiqueId": "economie",
       "titre": "Les retraites",
-      "aujourdhui": "En France, la retraite fonctionne surtout par répartition : les cotisations des actifs paient les pensions du moment. La réforme de 2023 relève l'âge légal de 62 à 64 ans ; le budget de la Sécurité sociale pour 2026 suspend ce recul jusqu'en janvier 2028.",
+      "aujourdhui": "En France, la retraite fonctionne surtout par répartition, depuis 1946 : les cotisations des actifs paient les pensions du moment. En août 2026, l'âge minimum de départ va de 62 ans et 9 mois (nés de 1963 à mars 1965) à 64 ans (nés à partir de 1969).",
       "enDebat": "Le débat porte sur l'âge de départ, la durée de cotisation et une part de capitalisation, où chacun épargne pour sa propre retraite. Les uns y voient un complément utile, les autres un risque lié aux marchés financiers.",
-      "aJour": "2026-10-28",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Retraite par répartition",
@@ -8699,6 +8902,13 @@
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "Âge de départ à la retraite",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14043",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": false
         }
       ]
     },
@@ -8706,9 +8916,9 @@
       "id": "normes-europeennes-importations",
       "thematiqueId": "agriculture",
       "titre": "Les normes européennes et les importations",
-      "aujourdhui": "Une directive européenne fixe un objectif ; chaque pays l'écrit dans sa loi (la transposition), parfois en plus strict : depuis 2017, ce choix doit être validé par le Premier ministre. Les produits importés respectent les normes sanitaires européennes, pas toujours les règles de production.",
+      "aujourdhui": "Une directive européenne fixe un objectif ; chaque pays l'écrit dans sa loi (la transposition), parfois en plus strict. Depuis une circulaire de 2017, ce choix doit être confirmé par le cabinet du Premier ministre ; en 2018, une mission a relevé 137 directives surtransposées jugées néfastes.",
       "enDebat": "Les uns veulent s'en tenir au minimum européen et imposer les mêmes règles aux produits importés. Les autres rappellent que ces règles protègent la santé et l'environnement, et que leur respect hors d'Europe est difficile à contrôler.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Surtransposition",
@@ -8725,7 +8935,7 @@
       "titre": "Les accords de libre-échange",
       "aujourdhui": "Le commerce avec le reste du monde relève de l'Union européenne seule : la Commission négocie les accords pour les 27 pays. L'accord avec le Canada (CETA), signé en 2016, s'applique à titre provisoire depuis le 21 septembre 2017, pour plus de 90 % de ses règles.",
       "enDebat": "Les uns veulent sortir de ces accords, ou en retirer l'agriculture, et refuser les produits faits selon des pratiques interdites en France. Les autres y voient des ventes en plus pour les entreprises françaises et des prix plus bas, et misent sur des règles à négocier dans chaque accord.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La politique commerciale commune",
@@ -8749,7 +8959,7 @@
       "titre": "L'origine des aliments",
       "aujourdhui": "L'étiquette doit donner l'origine des viandes préemballées, fruits et légumes, poissons, miel, huile d'olive, œufs et vin. Depuis 2020, un produit qui affiche une origine doit dire si ses ingrédients principaux viennent d'ailleurs. Depuis février 2025, les restaurants affichent celle des viandes.",
       "enDebat": "Les uns veulent connaître l'origine de tous les aliments, même transformés, et réserver aux producteurs français une grande part des repas des cantines. Les autres craignent des coûts en plus pour les fabricants et les communes, et invoquent les règles européennes de libre concurrence.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Origine des produits alimentaires : comment éviter les pièges",
@@ -8773,7 +8983,7 @@
       "titre": "Le revenu des agriculteurs",
       "aujourdhui": "Depuis 2018, le prix payé aux agriculteurs part de leurs coûts de production et des prix du marché. Depuis 2021, la part des matières agricoles n'est plus négociable entre industriels et supermarchés. En 2020, 17,7 % des exploitants étaient sous le seuil de pauvreté, contre 14,4 % des Français.",
       "enDebat": "Les uns veulent des prix minimums fixés par l'État, des marges encadrées et moins d'importations, pour garantir un revenu. Les autres craignent des prix plus chers en magasin et des ventes perdues à l'étranger, et préfèrent renforcer les contrats entre agriculteurs et acheteurs.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La loi pour l'équilibre des relations commerciales agricoles (EGALIM)",
@@ -8804,7 +9014,7 @@
       "titre": "La politique agricole commune",
       "aujourdhui": "Créée en 1962, la politique agricole commune pèse un tiers du budget européen : 387 milliards d'euros jusqu'en 2027. La France en reçoit le plus. Les aides sont surtout versées à l'hectare ; depuis 2023, au moins 20 % des aides directes paient des pratiques bonnes pour l'environnement.",
       "enDebat": "Les uns veulent réserver ces aides au bio, à l'agroécologie et aux fermes qui emploient le plus, sous conditions écologiques et sociales. Les autres craignent de fragiliser les exploitations qui en dépendent, et veulent garder des aides simples, liées aux surfaces cultivées.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La politique agricole commune",
@@ -8828,7 +9038,7 @@
       "titre": "Les pesticides",
       "aujourdhui": "Une loi de 2016 a interdit les néonicotinoïdes, des insecticides, à partir de septembre 2018, avec des dérogations pour la betterave jusqu'en 2023. Le plan pour réduire de moitié l'usage des pesticides entre 2008 et 2018 a été reporté à 2025, puis 2030 ; en 2023, cet usage restait au niveau de 2009.",
       "enDebat": "Les uns veulent interdire tous les pesticides liés au cancer et ne plus accorder de dérogation, pour la santé et la nature. Les autres veulent permettre certains produits quand il n'existe pas d'autre solution, pour ne pas perdre des récoltes face aux concurrents étrangers.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le plan Écophyto",
@@ -8850,13 +9060,13 @@
       "id": "elevage-peche",
       "thematiqueId": "agriculture",
       "titre": "L'élevage et la pêche",
-      "aujourdhui": "En 2024, chaque habitant a consommé en moyenne 85 kilos de viande (en poids de carcasse), un peu plus qu'en 2023. En 2023, la France hexagonale comptait 4 240 navires de pêche, dont 3 411 de moins de 12 mètres. Les quantités à pêcher par espèce sont fixées au niveau européen.",
+      "aujourdhui": "En 2025, chaque habitant a consommé en moyenne 85,7 kilos de viande (en poids de carcasse), un peu plus qu'en 2024. En 2023, la France hexagonale comptait 4 240 navires de pêche, dont 3 411 de moins de 12 mètres. Les quantités à pêcher par espèce sont fixées au niveau européen.",
       "enDebat": "Les uns veulent sortir de l'élevage intensif, réduire de moitié la viande produite et mangée, et réserver la pêche aux petits bateaux, pour les animaux et la planète. Les autres craignent pour les emplois des éleveurs et des pêcheurs et pour les prix, et préfèrent changer les pratiques peu à peu.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
-          "titre": "La consommation de viande en France en 2024",
-          "url": "https://www.franceagrimer.fr/sites/default/files/2025-07/SYN-VIA-Conso%20viande%20Fce2024_0.pdf",
+          "titre": "La consommation de viande en France en 2025",
+          "url": "https://www.franceagrimer.fr/sites/default/files/2026-07/SYN-VIA-Conso%20viande%20Fce2025_0.pdf",
           "editeur": "Agreste",
           "media": "article",
           "aveugle": true
@@ -8883,7 +9093,7 @@
       "titre": "La place de l'agriculture dans la loi",
       "aujourdhui": "En 2020, 496 365 personnes dirigeaient une exploitation agricole en métropole, 18 % de moins qu'en 2010 ; la moitié des exploitations a un exploitant de 55 ans ou plus. Depuis 2005, la Charte de l'environnement, de valeur constitutionnelle, impose le principe de précaution face aux risques graves.",
       "enDebat": "Les uns veulent donner à l'agriculture une place plus haute dans le droit, pour que les juges en tiennent compte face aux règles environnementales et pour aider les jeunes à s'installer. Les autres craignent un recul de la protection de l'eau, des sols et de la santé, et un droit moins clair.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les exploitants agricoles",
@@ -8907,7 +9117,7 @@
       "titre": "Le SMIC et les salaires",
       "aujourdhui": "Le SMIC existe depuis 1970. Depuis le 1er juin 2026, il vaut 12,31 euros brut de l'heure, soit 1 867,02 euros brut par mois à temps plein (environ 1 478 euros net). Il est relevé chaque 1er janvier, et en cours d'année dès que les prix montent d'au moins 2 %.",
       "enDebat": "Les uns veulent une forte hausse du SMIC et des salaires, suivant les prix, et limiter les écarts de paie dans une entreprise, pour mieux vivre de son travail. Les autres craignent pour l'emploi et les petites entreprises, et préfèrent baisser les cotisations pour augmenter le salaire net.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Montant du SMIC",
@@ -8929,9 +9139,9 @@
       "id": "impots-patrimoine",
       "thematiqueId": "economie",
       "titre": "Les impôts sur le patrimoine",
-      "aujourdhui": "Depuis 2018, l'impôt sur la fortune immobilière a remplacé l'ISF : il ne porte que sur l'immobilier, au-delà de 1,3 million d'euros net par foyer. En 2022, près de 164 000 foyers l'ont payé, pour 2,1 milliards d'euros ; l'ISF avait rapporté environ 5 milliards en 2017.",
+      "aujourdhui": "Depuis 2018, l'impôt sur la fortune immobilière a remplacé l'ISF : il ne porte que sur l'immobilier, au-delà de 1,3 million d'euros net par foyer. En 2025, près de 193 600 foyers l'ont payé, pour 2,3 milliards d'euros ; l'ISF avait rapporté environ 5 milliards en 2017.",
       "enDebat": "Les uns veulent taxer à nouveau chaque année tout le patrimoine des plus riches, en France ou à l'échelle de l'Europe, au nom de la justice. Les autres craignent le départ des fortunes et des investissements, et estiment que ces fortunes sont surtout faites d'entreprises.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Impôt sur la fortune immobilière",
@@ -8946,6 +9156,13 @@
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "L'impôt sur la fortune immobilière en 2025",
+          "url": "https://www.impots.gouv.fr/dgfip-statistiques-limpot-sur-la-fortune-immobiliere-en-2025",
+          "editeur": "Direction générale des finances publiques",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -8955,7 +9172,7 @@
       "titre": "Les impôts des entreprises",
       "aujourdhui": "Depuis 2022, l'impôt sur les bénéfices des sociétés est de 25 % (15 % sur les premiers 42 500 euros des PME). Le budget 2025 y a ajouté une surtaxe pour les plus grandes, prolongée en 2026. Depuis avril 2025, acheter des actions de grandes sociétés françaises est taxé à 0,4 %.",
       "enDebat": "Les uns veulent baisser les impôts payés même sans bénéfice, comme ceux sur la production, pour garder des usines et des emplois en France. Les autres veulent faire payer plus les grandes entreprises et les échanges financiers, pour financer l'écologie et freiner la spéculation.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'impôt sur les sociétés en France",
@@ -8979,7 +9196,7 @@
       "titre": "Les aides publiques aux entreprises",
       "aujourdhui": "Selon une commission d'enquête du Sénat (juillet 2025), les aides publiques aux entreprises ont atteint au moins 211 milliards d'euros en 2023, dont 75 milliards de baisses de cotisations sociales. Depuis 2026, la baisse générale des cotisations patronales vaut pour les salaires jusqu'à 3 SMIC.",
       "enDebat": "Les uns veulent lier toutes les aides à des critères sociaux et revoir les baisses de cotisations centrées sur le SMIC, qu'ils accusent de freiner les salaires. Les autres y voient un soutien à l'emploi peu qualifié et à la compétitivité, et craignent qu'une réforme coûte des emplois.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Rapport de la commission d'enquête sur les aides publiques aux entreprises",
@@ -8994,6 +9211,13 @@
           "editeur": "Public Sénat",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "Réduction générale dégressive unique des cotisations patronales",
+          "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F24542",
+          "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -9001,9 +9225,9 @@
       "id": "depenses-dette",
       "thematiqueId": "economie",
       "titre": "La dépense publique et la dette",
-      "aujourdhui": "Fin juin 2026, la dette publique atteint 3 595,5 milliards d'euros, soit 119 % de la richesse produite en un an dans le pays. En 2025, les dépenses publiques ont représenté 57,2 % de cette richesse, et le déficit 152,5 milliards d'euros, soit 5,1 %.",
+      "aujourdhui": "Fin juin 2026, la dette publique atteint 3 595,5 milliards d'euros, soit 119 % de la richesse produite en un an dans le pays. En 2025, les dépenses publiques ont représenté 57,3 % de cette richesse, et le déficit 152,5 milliards d'euros, soit 5,1 %.",
       "enDebat": "Les uns veulent baisser fortement la dépense, supprimer des agences et des doublons, et freiner certaines prestations, pour réduire la dette. Les autres craignent pour les services publics et les plus modestes, et préfèrent de nouvelles recettes ou un effort plus lent.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La dette publique à la fin du deuxième trimestre 2026",
@@ -9014,7 +9238,7 @@
         },
         {
           "titre": "Les comptes des administrations publiques en 2025",
-          "url": "https://www.insee.fr/fr/statistiques/8956575",
+          "url": "https://www.insee.fr/fr/statistiques/8997691",
           "editeur": "Insee",
           "media": "article",
           "aveugle": true
@@ -9025,9 +9249,9 @@
       "id": "etat-actionnaire",
       "thematiqueId": "economie",
       "titre": "L'État dans les entreprises",
-      "aujourdhui": "Depuis 2004, une agence de l'État gère ses parts dans 83 entreprises, dont 12 cotées en Bourse, d'une valeur estimée à 179,5 milliards d'euros au 30 juin 2024. Les privatisations ont commencé en 1986. L'État détient de nouveau tout le capital d'EDF depuis juin 2023.",
+      "aujourdhui": "Depuis 2004, une agence de l'État gère ses parts dans 86 entreprises et organismes, d'une valeur estimée à 209,1 milliards d'euros au 30 juin 2025. Les privatisations ont commencé en 1986. L'État détient de nouveau tout le capital d'EDF depuis juin 2023.",
       "enDebat": "Les uns veulent que l'État possède davantage d'entreprises, pour garder en France des usines et des services essentiels. Les autres préfèrent qu'il agisse par les règles, les aides ou les achats publics, et jugent ces rachats trop coûteux pour les finances publiques.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'Agence des participations de l'État",
@@ -9042,6 +9266,13 @@
           "editeur": "La finance pour tous",
           "media": "article",
           "aveugle": false
+        },
+        {
+          "titre": "Rapport d'activité de l'Agence des participations de l'État",
+          "url": "https://www.economie.gouv.fr/actualites/rapport-dactivite-de-lape-une-agence-au-service-de-la-souverainete-economique",
+          "editeur": "Ministère de l'Économie",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -9051,7 +9282,7 @@
       "titre": "Le prix de l'énergie et des carburants",
       "aujourdhui": "Au 30 octobre 2026, les taxes font 42,3 % du prix du gazole et 48,7 % du sans-plomb 95 : l'accise, fixe par litre (60,8 centimes pour le gazole), et la TVA à 20 %. Lors de la flambée de 2022, l'État a gelé le prix réglementé du gaz et limité à 4 % la hausse de celui de l'électricité.",
       "enDebat": "Les uns veulent baisser les taxes ou bloquer les prix de l'énergie, et ne pas taxer les voitures électriques, pour protéger le pouvoir d'achat. Les autres mettent en avant le coût pour les finances publiques et préfèrent des aides ciblées et des taxes qui poussent à consommer moins de pétrole.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Comment se forment les prix de l'essence et du gazole en France",
@@ -9075,7 +9306,7 @@
       "titre": "Le temps de travail",
       "aujourdhui": "La durée légale du travail est de 35 heures par semaine dans toutes les entreprises depuis 2002, soit 1 607 heures par an ; au-delà, ce sont des heures supplémentaires. En 2025, les salariés à temps complet travaillaient en moyenne 38,9 heures par semaine.",
       "enDebat": "Les uns veulent réduire le temps de travail sans baisse de salaire, pour partager l'emploi et mieux vivre. D'autres proposent les mêmes heures sur quatre jours. D'autres encore veulent laisser chaque entreprise fixer ses horaires, et jugent qu'il faut travailler plus pour produire plus.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Durée du travail d'un salarié à temps plein",
@@ -9106,7 +9337,7 @@
       "titre": "Le contrat de travail et le licenciement",
       "aujourdhui": "En 2025, 72,8 % des personnes en emploi sont en CDI ou fonctionnaires, 7,6 % en contrat à durée déterminée et 1,8 % en intérim. Un licenciement doit reposer sur une cause réelle et sérieuse ; sinon, le salarié peut saisir le conseil de prud'hommes, qui peut sanctionner l'employeur.",
       "enDebat": "Les uns veulent mieux protéger les salariés, par un contrat qui suit la personne toute sa vie ou un salaire garanti après une perte d'emploi. Les autres veulent des règles plus souples et des coûts de licenciement prévisibles, pour que les employeurs osent embaucher.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Statuts d'emploi en 2025",
@@ -9128,9 +9359,9 @@
       "id": "conditions-de-travail",
       "thematiqueId": "travail",
       "titre": "Les conditions de travail",
-      "aujourdhui": "En 2025, 4,3 millions de salariés (17,6 %) sont à temps partiel ; 21,3 % d'entre eux n'ont pas trouvé de temps complet. Face à un danger grave et imminent, un salarié peut arrêter le travail : c'est le droit de retrait. Depuis 2025, en vigilance canicule, l'employeur doit adapter horaires et pauses.",
+      "aujourdhui": "En 2025, 4,3 millions de salariés (17,6 %) sont à temps partiel ; 21,3 % d'entre eux n'ont pas trouvé de temps complet. Face à un danger grave et imminent, un salarié peut arrêter le travail : c'est le droit de retrait. Depuis 2025, en vigilance canicule, l'employeur doit revoir sa prévention.",
       "enDebat": "Les uns veulent de nouveaux droits fixés par la loi : un statut pour les métiers essentiels, la fin du temps partiel subi, le droit d'arrêter le travail par forte chaleur. Les autres préfèrent des règles négociées secteur par secteur, et craignent des coûts trop lourds pour les employeurs.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le temps partiel en 2025",
@@ -9161,7 +9392,7 @@
       "titre": "Le RSA",
       "aujourdhui": "Le RSA existe depuis juin 2009 pour les personnes de 25 ans et plus aux faibles ressources ; il est surtout financé par les départements. En 2026, il est de 651,69 euros par mois pour une personne seule. Fin décembre 2025, 1,84 million de foyers le touchaient.",
       "enDebat": "Les uns veulent demander aux allocataires des heures d'activité chaque semaine, pour les rapprocher de l'emploi et lier l'aide à un effort. Les autres craignent du travail sans vrai salaire et des coupures d'aide, et préfèrent un meilleur accompagnement et une aide plus haute.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Suivi mensuel des prestations de solidarité, février 2026",
@@ -9192,7 +9423,7 @@
       "titre": "Le métier d'enseignant",
       "aujourdhui": "En 2024, un enseignant titulaire de l'Éducation nationale gagne en moyenne 3 090 euros nets par mois, primes comprises, 6,4 % de plus qu'en 2023. Les titulaires sont recrutés par concours ; les contractuels, embauchés sans concours, font 8 % des enseignants.",
       "enDebat": "Les uns veulent d'abord hausser les salaires et donner à l'école des moyens stables sur dix ans, pour attirer des candidats. Les autres veulent laisser chaque chef d'établissement choisir ses professeurs pour former des équipes, et lier les hausses de salaire à plus de missions.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le salaire des enseignants en 2024",
@@ -9216,7 +9447,7 @@
       "titre": "L'uniforme à l'école",
       "aujourdhui": "Depuis 1968, l'école publique en métropole ne peut plus imposer l'uniforme, sauf exceptions ; il est obligatoire en Martinique, en Guadeloupe et en Guyane. Une tenue unique a été testée de 2024 à 2026 dans 97 écoles, 14 collèges et 4 lycées volontaires ; l'État y a mis fin en 2026.",
       "enDebat": "Les uns veulent l'imposer, ou laisser chaque chef d'établissement le faire, pour effacer les écarts de marques et renforcer l'autorité de l'école. Les autres doutent de ses effets sur le climat et les résultats, pointent son coût, et préfèrent laisser les familles habiller leurs enfants.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'Éducation nationale range l'uniforme au placard",
@@ -9240,7 +9471,7 @@
       "titre": "Ce qu'on apprend à l'école",
       "aujourdhui": "À l'école élémentaire, les élèves ont 24 heures de cours par semaine, soit 864 heures par an. Depuis un arrêté de 2015, dans les trois premières années, 10 heures vont au français et 5 aux mathématiques ; dans les deux dernières, 8 heures au français et 5 aux mathématiques.",
       "enDebat": "Les uns veulent recentrer l'école sur le français et le calcul, avec plus d'heures et des examens. Les autres veulent d'abord des classes plus petites ou des horaires adaptés au rythme des enfants. Le débat porte aussi sur l'âge à partir duquel l'instruction est obligatoire.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Enseignement et apprentissage au niveau primaire en France",
@@ -9264,7 +9495,7 @@
       "titre": "Les études supérieures",
       "aujourdhui": "À la rentrée 2024, la France a dépassé pour la première fois 3 millions d'étudiants. Depuis 2018, l'entrée dans le supérieur passe par la plateforme Parcoursup : 1 046 000 candidats en 2026. En 2026-2027, la bourse sur critères sociaux va de 1 454 à 6 335 euros par an.",
       "enDebat": "Les uns veulent aider tous les étudiants sans condition, par un revenu ou des repas à bas prix, et ouvrir les études sans sélection. Les autres préfèrent cibler les plus modestes et garder une sélection selon les places. Le débat porte aussi sur l'antisémitisme et le racisme à l'université.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Prévisions des effectifs dans l'enseignement supérieur, 2025 et 2026",
@@ -9293,9 +9524,9 @@
       "id": "culture-audiovisuel",
       "thematiqueId": "societe",
       "titre": "La culture et l'audiovisuel public",
-      "aujourdhui": "Le projet de budget 2026 prévoyait 3,75 milliards d'euros pour la culture, 4,3 % de moins qu'en 2025. Depuis 2022, la redevance télé est supprimée : l'audiovisuel public est financé par une part de la TVA. Le pass Culture donne 150 euros aux jeunes de 18 ans.",
+      "aujourdhui": "La loi de finances 2026 ouvre 3,74 milliards d'euros pour la culture, contre 3,87 milliards dépensés en 2025. Depuis 2022, la redevance télé est supprimée : l'audiovisuel public est financé par une part de la TVA. Le pass Culture donne 150 euros aux jeunes de 18 ans.",
       "enDebat": "Les uns veulent hausser le budget de la culture pour l'ouvrir à tous, les autres le contenir face au déficit. Pour l'audiovisuel public, les uns veulent réunir télé et radio sous une même direction face aux plateformes, les autres craignent pour l'indépendance et la diversité des chaînes.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Rapport du Sénat sur les crédits de la culture pour 2026",
@@ -9310,6 +9541,13 @@
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": false
+        },
+        {
+          "titre": "Effort financier de l'État dans le domaine culturel (annexe au projet de budget 2027)",
+          "url": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1129727/file/3-Jaune%202027%20-%20Culture.pdf",
+          "editeur": "Gouvernement",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -9319,7 +9557,7 @@
       "titre": "Le service national et la réserve",
       "aujourdhui": "Le service militaire obligatoire est suspendu depuis 1996 ; le service national universel a été supprimé le 1er janvier 2026. Un service militaire volontaire de 10 mois débute à l'automne 2026 avec environ 3 000 jeunes, 10 000 visés en 2030. En 2025, les armées comptaient 44 400 réservistes.",
       "enDebat": "Les uns veulent un service pour tous les jeunes, militaire ou civil, ou beaucoup plus de réservistes, pour renforcer la défense et brasser la société. Les autres jugent cela coûteux et difficile à encadrer, et préfèrent un engagement volontaire limité aux besoins réels des armées.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Service national : un engagement militaire de dix mois pour les jeunes",
@@ -9343,7 +9581,7 @@
       "titre": "La condition animale",
       "aujourdhui": "Depuis 2015, le Code civil dit que les animaux sont des « êtres vivants doués de sensibilité », mais ils restent soumis au régime des biens. La corrida est permise là où une tradition locale ininterrompue existe. En 2023, la France comptait 963 571 permis de chasse validés.",
       "enDebat": "Les uns veulent mieux protéger les animaux : un ministère dédié, des cours à l'école, la fin de la chasse et de la corrida. Les autres y voient des traditions locales, mettent en avant le rôle de la chasse pour réguler la faune et jugent les règles actuelles suffisantes.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'animal domestique en droit français",
@@ -9372,9 +9610,9 @@
       "id": "nucleaire",
       "thematiqueId": "environnement",
       "titre": "Le nucléaire",
-      "aujourdhui": "La France compte 57 réacteurs nucléaires dans 18 centrales ; ils ont fourni 68,1 % de son électricité en 2025. Six réacteurs EPR2 sont prévus à Penly, Gravelines et Bugey, le premier pour 2035 à 2037. En 2025, la Cour des comptes estimait leur coût entre 67 et 80 milliards d'euros.",
+      "aujourdhui": "La France compte 57 réacteurs nucléaires dans 18 centrales ; ils ont fourni 68,1 % de son électricité en 2025. Six réacteurs EPR2 sont prévus à Penly, Gravelines et Bugey, le premier pour 2035 à 2037. Début 2026, un audit de l'État a estimé leur coût à 72,8 milliards d'euros de 2020.",
       "enDebat": "Les uns veulent de nouveaux réacteurs pour une électricité stable, qui émet peu de CO2 et ne dépend pas du gaz importé. Les autres pointent le coût, les retards des chantiers et les déchets, et préfèrent miser davantage sur l'éolien et le solaire.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Liste des réacteurs nucléaires en France",
@@ -9403,9 +9641,9 @@
       "id": "eolien-solaire",
       "thematiqueId": "environnement",
       "titre": "L'éolien et le solaire",
-      "aujourdhui": "En 2024, les éoliennes ont produit 8,7 % de l'électricité en France. En 2025, le solaire en a produit 6 %, en hausse de 33 % sur un an. Le premier parc éolien en mer tourne depuis 2022 au large de Saint-Nazaire.",
+      "aujourdhui": "En 2025, les éoliennes ont produit 43,9 TWh sur terre et 5,7 TWh en mer, et le solaire 32,9 TWh, en hausse d'un tiers, sur 547,5 TWh produits en France. Le premier parc éolien en mer tourne depuis 2022 au large de Saint-Nazaire.",
       "enDebat": "Les uns veulent accélérer l'éolien et le solaire, rapides à installer et sans émissions, et réduire les délais des projets. Les autres veulent les freiner ou les soumettre à l'accord des maires et des habitants, à cause des paysages, du bruit et d'une production qui dépend du vent et du soleil.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Bilan électrique 2025 : la production d'électricité",
@@ -9434,9 +9672,9 @@
       "id": "climat-emissions",
       "thematiqueId": "environnement",
       "titre": "Le climat et les émissions",
-      "aujourdhui": "En 2024, la France a émis 369 millions de tonnes de gaz à effet de serre, dont 34 % par les transports. Avec l'Union européenne, elle vise -55 % d'ici 2030 par rapport à 1990, puis la neutralité carbone en 2050. Depuis 2026, l'Union fait payer le carbone de certains produits importés, comme l'acier.",
+      "aujourdhui": "En 2025, la France a émis environ 359 millions de tonnes de gaz à effet de serre, dont 123 par les transports. Avec l'Union européenne, elle vise -55 % en 2030 par rapport à 1990, puis la neutralité carbone en 2050. Depuis 2026, l'Union taxe le carbone de certains produits importés, comme l'acier.",
       "enDebat": "Les uns veulent aller plus vite : consommer moins d'énergie, planifier, inscrire des limites dans la Constitution, taxer le carbone importé. Les autres misent sur l'innovation, comme les carburants de synthèse, et craignent que trop de contraintes pèsent sur le pouvoir d'achat et l'industrie.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les émissions de gaz à effet de serre en France",
@@ -9451,6 +9689,13 @@
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "Émissions de gaz à effet de serre de la France (Citepa, Secten 2026)",
+          "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/Fiche_SECTEN_2026_V4_mini-site_SNBC_clean.pdf",
+          "editeur": "Ministère de la Transition écologique",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -9460,7 +9705,7 @@
       "titre": "S'adapter aux canicules et aux catastrophes",
       "aujourdhui": "La canicule d'août 2003 a fait environ 15 000 morts en plus en France. Depuis mars 2025, un plan de 52 mesures prépare le pays à 4 degrés de plus en 2100. En 2025, le fonds de prévention des risques naturels a 300 millions d'euros. L'assurance couvre les catastrophes naturelles reconnues par l'État.",
       "enDebat": "Les uns veulent un grand plan public : protéger de la chaleur écoles, crèches et hôpitaux, et créer une branche de la Sécurité sociale pour les dégâts du climat. Les autres préfèrent renforcer l'assurance et les aides existantes, en mettant en avant le coût pour les finances publiques.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La canicule européenne de 2003",
@@ -9489,9 +9734,9 @@
       "id": "sols-grands-projets",
       "thematiqueId": "environnement",
       "titre": "Les sols et les grands chantiers",
-      "aujourdhui": "La France vise zéro artificialisation nette en 2050 ; d'ici 2031, consommer deux fois moins d'espaces naturels qu'entre 2011 et 2021. De 2006 à 2016, 165 hectares étaient artificialisés par jour. L'autoroute Castres-Toulouse, stoppée en justice en février 2025, a été autorisée en appel fin 2025.",
+      "aujourdhui": "La France vise zéro artificialisation nette en 2050 ; d'ici 2031, consommer deux fois moins d'espaces naturels qu'en 2011-2021. De 2006 à 2016, 165 hectares étaient artificialisés par jour. L'autoroute Castres-Toulouse, stoppée en justice en 2025 puis autorisée en appel, a ouvert le 6 novembre 2026.",
       "enDebat": "Les uns veulent assouplir ces règles, jugées trop complexes pour les communes, et mener à bien les grands chantiers utiles aux territoires. Les autres veulent protéger les sols, imposer plus de nature en ville et suspendre de grands projets routiers et ferroviaires, jugés coûteux pour la nature.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Zéro artificialisation nette",
@@ -9515,7 +9760,7 @@
       "titre": "Les polluants éternels (PFAS)",
       "aujourdhui": "Les PFAS sont des milliers de produits chimiques qui se dégradent très peu : on les appelle polluants éternels. Depuis janvier 2026, l'eau du robinet est contrôlée pour 20 PFAS dont la somme doit rester sous 0,1 microgramme par litre. En 2023, cinq pays ont proposé de les limiter dans toute l'Union.",
       "enDebat": "Les uns veulent les interdire vite et largement, d'abord dans la nourriture, les vêtements et les cosmétiques, au nom de la santé. Les autres préfèrent une interdiction progressive décidée au niveau européen, car ces produits servent dans l'industrie et n'ont pas toujours de remplaçant.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Substances perfluoroalkylées et polyfluoroalkylées",
@@ -9546,7 +9791,7 @@
       "titre": "La mode ultra-éphémère",
       "aujourdhui": "En 2025, 3,6 milliards de pièces textiles neuves ont été vendues en France, en hausse de 1,5 % sur un an. Certaines enseignes renouvellent leurs collections jusqu'à 36 fois par an. En Europe, 4 millions de tonnes de textile sont jetées chaque année.",
       "enDebat": "Les uns veulent taxer ces vêtements très bon marché et interdire leur publicité, pour réduire les déchets et protéger les marques françaises. Les autres craignent de priver les ménages modestes de vêtements à petit prix et doutent qu'une taxe nationale change les habitudes d'achat.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La mode éphémère",
@@ -9563,7 +9808,7 @@
       "titre": "Le référendum et la démocratie directe",
       "aujourdhui": "Le président peut soumettre une loi au référendum, sur proposition du gouvernement ou des deux assemblées ; le dernier référendum national date de 2005. Depuis 2015, 185 parlementaires soutenus par un dixième des électeurs (4,7 millions) peuvent en lancer un : ce seuil n'a jamais été atteint.",
       "enDebat": "Les uns veulent que les citoyens puissent lancer eux-mêmes un référendum par pétition, et réunir plus souvent des conventions citoyennes. Les autres craignent des votes sous le coup de l'émotion ou contre des droits fondamentaux, et préfèrent que les lois restent faites par les élus.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le référendum d'initiative partagée",
@@ -9587,7 +9832,7 @@
       "titre": "Le vote blanc et la proportionnelle",
       "aujourdhui": "Les 577 députés sont élus au scrutin majoritaire à deux tours, un par circonscription ; seule exception, la proportionnelle en 1986. Depuis 2014, les votes blancs sont comptés à part, mais pas dans les suffrages exprimés. Au second tour de la présidentielle 2022, ils ont fait 6,37 % des votants.",
       "enDebat": "Les uns veulent la proportionnelle, pour que les sièges reflètent les voix, et compter le vote blanc pour mesurer le refus des candidats. Les autres défendent le scrutin actuel, qui donne plus souvent une majorité claire, et craignent qu'un vote blanc compté rende l'élection difficile à conclure.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les élections législatives en France",
@@ -9611,7 +9856,7 @@
       "titre": "Le président et la Ve République",
       "aujourdhui": "Le président est élu au suffrage universel direct depuis 1962. Approuvé par référendum en 2000, son mandat dure cinq ans depuis 2002, et depuis 2008 il ne peut en faire que deux de suite. Il nomme le Premier ministre et peut dissoudre l'Assemblée nationale.",
       "enDebat": "Les uns veulent réduire le rôle du président, voire changer de Constitution, pour donner plus de poids au Parlement ou aux citoyens. Les autres jugent qu'un président fort, élu par tous, assure la stabilité du pays, quitte à le limiter à un seul mandat pour qu'il ne pense pas à sa réélection.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le président de la République française",
@@ -9634,8 +9879,8 @@
       "thematiqueId": "institutions",
       "titre": "Le Parlement face au gouvernement",
       "aujourdhui": "Il y a 577 députés et 348 sénateurs. Avec l'article 49.3, utilisé une centaine de fois depuis 1958, le gouvernement fait adopter un texte sans vote, sauf si une motion de censure obtient la majorité absolue des députés. Depuis 2009, il ne sert qu'aux budgets et à un autre texte par session.",
-      "enDebat": "Les uns veulent moins de parlementaires, mieux équipés, et voient dans le 49.3 un outil pour faire passer un budget sans majorité. Les autres craignent d'éloigner les élus des campagnes, et voient dans le 49.3 un moyen de se passer du vote des députés, que seule la censure peut arrêter.",
-      "aJour": "2026-11-06",
+      "enDebat": "Sur le nombre d'élus, les uns veulent moins de parlementaires, mieux équipés, les autres craignent d'éloigner les élus des campagnes. Sur le 49.3, les uns y voient un outil pour voter un budget sans majorité, les autres un moyen de se passer du vote des députés, que seule la censure arrête.",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le Parlement français",
@@ -9659,7 +9904,7 @@
       "titre": "Ce que décident l'État et les collectivités",
       "aujourdhui": "Depuis 1982, le préfet ne contrôle plus les décisions des élus locaux qu'après coup. Depuis 2003, la Constitution donne aux collectivités un pouvoir réglementaire pour leurs compétences, dans le cadre de la loi, et le droit d'expérimenter. Depuis 2015, seules les communes agissent partout.",
       "enDebat": "Les uns veulent garder à l'État la justice, la police, la défense et la diplomatie, et confier le reste aux élus locaux, plus proches des besoins. Les autres craignent des règles différentes d'un territoire à l'autre et des écarts entre territoires riches et pauvres.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Article 72 de la Constitution",
@@ -9688,9 +9933,9 @@
       "id": "transparence-vie-publique",
       "thematiqueId": "institutions",
       "titre": "Le lobbying et la transparence",
-      "aujourdhui": "Depuis 2013, une Haute Autorité vérifie le patrimoine des élus et, pendant trois ans, le passage des anciens ministres vers le privé. En 2025, elle a rendu 641 avis sur ces passages et compte 3 526 lobbies inscrits. Les lanceurs d'alerte sont protégés depuis 2016, le secret des affaires depuis 2018.",
+      "aujourdhui": "Depuis 2013, une Haute Autorité vérifie le patrimoine des élus et, pendant trois ans, le passage des anciens ministres vers le privé. En 2025, elle a rendu 641 avis sur des passages public-privé ; 3 526 lobbies sont inscrits. Lanceurs d'alerte protégés depuis 2016, secret des affaires depuis 2018.",
       "enDebat": "Les uns veulent interdire plus longtemps aux anciens ministres et hauts fonctionnaires de travailler pour des intérêts privés, et rendre publics les comptes des grandes entreprises. Les autres jugent les contrôles actuels suffisants et veulent protéger les secrets industriels face à la concurrence.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La Haute Autorité pour la transparence de la vie publique",
@@ -9700,9 +9945,9 @@
           "aveugle": true
         },
         {
-          "titre": "Les lanceurs d'alerte",
-          "url": "https://fr.wikipedia.org/wiki/Lanceur_d%27alerte",
-          "editeur": "Wikipédia",
+          "titre": "Nouveau record d'activité en 2025 pour l'autorité de transparence",
+          "url": "https://www.lagazettefrance.fr/article/nouveau-record-d-activite-en-2025-pour-l-autorite-de-transparence",
+          "editeur": "La Gazette France",
           "media": "article",
           "aveugle": true
         },
@@ -9721,7 +9966,7 @@
       "titre": "La France dans l'Union européenne",
       "aujourdhui": "Membre fondateur en 1957, la France est l'un des 27 pays de l'Union ; le Royaume-Uni en est sorti en 2020. La Constitution place les traités au-dessus des lois, même votées après (Conseil d'État, 1989). La France a versé 23 milliards d'euros à l'Union en 2025 ; 28,8 sont prévus en 2026.",
       "enDebat": "Les uns veulent sortir de l'Union, ou faire passer les lois françaises avant ses règles, pour décider seuls et garder l'argent versé. Les autres veulent rester, voire avancer avec quelques pays, pour peser face aux grandes puissances et garder le marché commun.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'Union européenne",
@@ -9731,8 +9976,8 @@
           "aveugle": true
         },
         {
-          "titre": "La sortie du Royaume-Uni de l'Union européenne",
-          "url": "https://fr.wikipedia.org/wiki/Retrait_du_Royaume-Uni_de_l%27Union_europ%C3%A9enne",
+          "titre": "L'arrêt Nicolo (1989)",
+          "url": "https://fr.wikipedia.org/wiki/Arr%C3%AAt_Nicolo",
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": true
@@ -9750,14 +9995,21 @@
       "id": "nouvelle-caledonie",
       "thematiqueId": "institutions",
       "titre": "La Nouvelle-Calédonie",
-      "aujourdhui": "Selon l'accord de Nouméa de 1998, les habitants arrivés après cette date ne votent pas aux élections provinciales ; la Constitution a figé cette liste en 2007. Trois référendums (2018, 2020, 2021) ont rejeté l'indépendance. Des émeutes ont éclaté en mai 2024. L'archipel compte 264 596 habitants.",
+      "aujourdhui": "Depuis l'accord de Nouméa (1998), les habitants arrivés après 1998 ne votent pas aux provinciales ; la Constitution a gelé cette liste en 2007. Trois référendums (2018, 2020, 2021) ont rejeté l'indépendance. Émeutes en mai 2024. Depuis mai 2026, environ 10 500 natifs exclus peuvent voter.",
       "enDebat": "Les uns veulent ouvrir ces élections aux habitants installés depuis longtemps, au nom de l'égalité devant le vote. Les autres veulent garder une liste restreinte, pour protéger la place du peuple kanak, premier peuple de l'archipel, et l'esprit des accords.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
-          "titre": "L'accord de Nouméa",
-          "url": "https://fr.wikipedia.org/wiki/Accord_de_Noum%C3%A9a",
-          "editeur": "Wikipédia",
+          "titre": "Pourquoi le corps électoral pour les provinciales est gelé",
+          "url": "https://www.lnc.nc/article/pourquoi-le-corps-electoral-pour-les-provinciales-est-gele",
+          "editeur": "Les Nouvelles calédoniennes",
+          "media": "article",
+          "aveugle": false
+        },
+        {
+          "titre": "La loi élargissant le corps électoral est publiée",
+          "url": "https://www.banquedesterritoires.fr/nouvelle-caledonie-la-loi-elargissant-le-corps-electoral-est-publiee",
+          "editeur": "Banque des Territoires",
           "media": "article",
           "aveugle": true
         },
@@ -9772,11 +10024,11 @@
     },
     {
       "id": "immigration-asile",
-      "thematiqueId": "securite",
+      "thematiqueId": "societe",
       "titre": "L'immigration et l'asile",
       "aujourdhui": "En 2025, la France a délivré 384 230 premiers titres de séjour, dont 118 000 pour études, et reçu 151 665 demandes d'asile. Les immigrés sont 8 millions, 11,6 % des habitants. L'espace Schengen supprime depuis 1995 les contrôles entre 29 pays ; la France en a rétabli fin 2015, renouvelés depuis.",
       "enDebat": "Les uns veulent réduire fortement les arrivées, limiter le regroupement familial et contrôler à nouveau toutes les frontières, pour mieux choisir qui entre. Les autres mettent en avant le droit d'asile, les besoins de main-d'œuvre et les échanges permis par la libre circulation en Europe.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'essentiel sur les immigrés et les étrangers",
@@ -9791,6 +10043,13 @@
           "editeur": "Wikipédia",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "Titres de séjour, asile et éloignements en 2025",
+          "url": "https://www.publicsenat.fr/actualites/societe/immigration-titres-de-sejour-en-nette-hausse-et-regularisations-en-baisse-sur-lannee-2025",
+          "editeur": "Public Sénat",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -9800,19 +10059,19 @@
       "titre": "Les expulsions d'étrangers",
       "aujourdhui": "En 2024, environ 130 000 obligations de quitter le territoire (OQTF) ont été prononcées et 15 000 exécutées, une sur dix. En 2023, 30 % seulement des laissez-passer demandés aux consulats des pays d'origine ont été délivrés à temps. En 2025, 24 985 étrangers ont été éloignés, dont 15 569 de force.",
       "enDebat": "Les uns veulent renvoyer tous les étrangers condamnés et réduire les visas des pays qui refusent de reprendre leurs ressortissants. Les autres mettent en avant les droits de la défense et la vie familiale protégés par les juges, et craignent des tensions avec des pays partenaires.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
-        {
-          "titre": "Obligation de quitter le territoire français (OQTF)",
-          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18362",
-          "editeur": "Service-Public.fr",
-          "media": "article",
-          "aveugle": true
-        },
         {
           "titre": "Les résultats de la politique d'éloignement des étrangers sous OQTF (juin 2025)",
           "url": "https://www.assemblee-nationale.fr/dyn/17/documents/cion_lois/l17n813203444_document",
           "editeur": "Assemblée nationale",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Titres de séjour, asile et éloignements en 2025",
+          "url": "https://www.publicsenat.fr/actualites/societe/immigration-titres-de-sejour-en-nette-hausse-et-regularisations-en-baisse-sur-lannee-2025",
+          "editeur": "Public Sénat",
           "media": "article",
           "aveugle": true
         }
@@ -9822,9 +10081,9 @@
       "id": "droits-des-etrangers",
       "thematiqueId": "societe",
       "titre": "Le séjour et les droits des étrangers",
-      "aujourdhui": "Depuis 1992, les citoyens de l'Union européenne qui vivent en France votent aux municipales et aux européennes ; les autres étrangers ne votent pas. En 2025, 28 610 étrangers sans titre de séjour ont été régularisés. Environ 500 000 personnes seraient sans titre, d'après l'aide médicale d'État.",
+      "aujourdhui": "Depuis 1992, les citoyens de l'Union européenne qui vivent en France votent aux municipales et aux européennes ; les autres étrangers ne votent pas. En 2025, 28 610 étrangers sans titre de séjour ont été régularisés. Au moins 500 000 personnes seraient sans titre, d'après l'aide médicale d'État.",
       "enDebat": "Les uns veulent régulariser les étrangers qui vivent et travaillent ici et leur donner le droit de vote, au nom de l'égalité. Les autres veulent réserver le vote aux citoyens et limiter les régularisations, pour ne pas encourager l'entrée sans autorisation.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le droit de vote des étrangers en France",
@@ -9834,9 +10093,16 @@
           "aveugle": true
         },
         {
-          "titre": "L'essentiel sur les immigrés et les étrangers",
-          "url": "https://www.insee.fr/fr/statistiques/3633212",
-          "editeur": "INSEE",
+          "titre": "Les résultats de la politique d'éloignement des étrangers sous OQTF (juin 2025)",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/documents/cion_lois/l17n813203444_document",
+          "editeur": "Assemblée nationale",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Titres de séjour, asile et éloignements en 2025",
+          "url": "https://www.publicsenat.fr/actualites/societe/immigration-titres-de-sejour-en-nette-hausse-et-regularisations-en-baisse-sur-lannee-2025",
+          "editeur": "Public Sénat",
           "media": "article",
           "aveugle": true
         }
@@ -9848,7 +10114,7 @@
       "titre": "La priorité nationale",
       "aujourdhui": "Les étrangers en séjour régulier touchent les allocations familiales et accèdent au logement social sans condition de nationalité. En 1990, le Conseil constitutionnel leur a reconnu l'égalité en matière sociale ; en 2024, il a refusé un référendum sur une priorité nationale pour les aides sociales.",
       "enDebat": "Les uns veulent réserver certaines aides et le logement social aux Français, en l'inscrivant dans la Constitution. Les autres y voient une rupture avec l'égalité de traitement et estiment que les étrangers en règle paient aussi impôts et cotisations.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Un étranger peut-il toucher les prestations familiales ?",
@@ -9877,14 +10143,21 @@
       "id": "defense",
       "thematiqueId": "international",
       "titre": "La défense et les armées",
-      "aujourdhui": "En 2025, la France consacre 2,25 % de sa richesse nationale à la défense. Le projet de budget 2026 prévoit 57,1 milliards d'euros pour les armées, 6,7 de plus qu'en 2025. De 2021 à 2025, elle est le deuxième vendeur d'armes au monde. Un fonds européen de la défense a 8 milliards pour 2021-2027.",
+      "aujourdhui": "En 2025, la France consacre 2,05 % de sa richesse à la défense, selon l'OTAN. La programmation militaire, actualisée en 2026, fixe 57,1 milliards d'euros aux armées pour 2026, 6,7 de plus qu'en 2025, et 63,3 pour 2027. De 2021 à 2025, la France est le deuxième vendeur d'armes au monde.",
       "enDebat": "Les uns veulent dépenser plus pour l'armée et pour une défense européenne commune, face au retour de la guerre en Europe. Les autres veulent réduire ces dépenses, rapatrier les soldats déployés à l'étranger et mettre l'argent dans les hôpitaux et les écoles.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
-          "titre": "Le Fonds européen de la défense",
-          "url": "https://fr.wikipedia.org/wiki/Fonds_europ%C3%A9en_de_la_d%C3%A9fense",
-          "editeur": "Wikipédia",
+          "titre": "Les dépenses de défense des pays de l'OTAN en 2025 (en anglais)",
+          "url": "https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2025-en.pdf",
+          "editeur": "OTAN",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Loi d'actualisation de la programmation militaire (texte adopté)",
+          "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17BTA0325.html",
+          "editeur": "Assemblée nationale",
           "media": "article",
           "aveugle": true
         },
@@ -9903,7 +10176,7 @@
       "titre": "L'Alliance atlantique (OTAN)",
       "aujourdhui": "Créée en 1949, l'Alliance atlantique réunit 32 pays, dont la Suède depuis 2024. La France a quitté son commandement militaire intégré en 1966 et l'a rejoint en 2009. En juin 2025, les membres ont visé 5 % de leur richesse pour la défense et la sécurité d'ici 2035, dont 3,5 % pour les armées.",
       "enDebat": "Les uns veulent quitter l'alliance ou s'en éloigner, pour décider seuls de la politique étrangère sans dépendre des États-Unis. Les autres y voient une protection mutuelle utile face aux menaces, et un moyen de peser sur les choix communs.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'Organisation du traité de l'Atlantique nord",
@@ -9927,7 +10200,7 @@
       "titre": "La guerre en Ukraine",
       "aujourdhui": "La Russie a envahi l'Ukraine le 24 février 2022 ; la guerre dure encore en octobre 2026. La France a aidé l'Ukraine pour 1,7 milliard d'euros en 2022 et 2,1 milliards en 2023. Le 16 février 2024, les deux pays ont signé un accord de sécurité de dix ans, avec jusqu'à 3 milliards d'aide en 2024.",
       "enDebat": "Les uns veulent continuer à livrer des armes et soutenir l'entrée de l'Ukraine dans l'Union, pour arrêter la Russie et protéger l'Europe. Les autres veulent réduire cette aide, qui coûte cher, et pousser plutôt à des négociations de paix, de peur d'une guerre plus large.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "L'invasion de l'Ukraine par la Russie",
@@ -9951,7 +10224,7 @@
       "titre": "Le logement social",
       "aujourdhui": "Au 1er janvier 2025, la France compte 5,4 millions de logements sociaux ; 71 300 ont été loués pour la première fois en 2024. Fin 2025, 4,1 millions de demandes attendent, pour 394 000 logements attribués dans l'année. Depuis 2000, la loi SRU impose 20 à 25 % de logements sociaux à des communes.",
       "enDebat": "Les uns veulent construire beaucoup plus de logements sociaux, avec l'argent de l'État ou d'un impôt sur les grandes fortunes, et encadrer les loyers. Les autres veulent laisser les communes décider, assouplir ou supprimer le quota de la loi SRU, ou y compter des logements pour la classe moyenne.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "5,4 millions de logements sociaux en France au 1er janvier 2025",
@@ -9982,7 +10255,7 @@
       "titre": "Les logements vides et les loyers",
       "aujourdhui": "En 2024, la France compte 3,1 millions de logements vides, soit 8 % des logements, dont plus d'un million depuis plus d'un an. Les loyers sont encadrés à Paris depuis 2019, à Lille depuis 2020, puis à Montpellier et Bordeaux depuis 2022 : un loyer ne peut pas dépasser un plafond fixé par arrêté.",
       "enDebat": "Les uns veulent remettre sur le marché les logements vides ou loués aux touristes, par la réquisition, l'impôt ou des règles locales, et bloquer les loyers. Les autres défendent le droit des propriétaires et craignent que ces contraintes les poussent à ne plus louer, ce qui réduirait l'offre.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le parc de logements en France au 1er janvier 2024",
@@ -10006,7 +10279,7 @@
       "titre": "La rénovation des logements",
       "aujourdhui": "Au 1er janvier 2025, 3,9 millions de résidences principales sont des passoires thermiques, classées F ou G par le DPE, soit 12,7 % du parc. Depuis 2025, un logement classé G ne peut plus être mis en location ; la loi de 2021 prévoit la même règle pour F en 2028 et pour E en 2034.",
       "enDebat": "Les uns veulent que l'État paie une plus grande part des travaux, surtout pour les ménages modestes, afin de rénover vite et en grand. Les autres mettent en avant le coût pour les finances publiques et préfèrent des aides ciblées, des prêts et plus de délais pour les propriétaires.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le parc de logements par classe de performance énergétique au 1er janvier 2025",
@@ -10030,7 +10303,7 @@
       "titre": "Le squat et les loyers impayés",
       "aujourdhui": "Un locataire qui ne paie plus ne peut être expulsé que sur décision de justice, et jamais pendant la trêve hivernale (1er novembre-31 mars), qui ne protège pas les squatteurs. Depuis 2020, le préfet peut faire évacuer un logement squatté, résidence principale ou secondaire, sans passer par un juge.",
       "enDebat": "Les uns veulent punir plus durement le squat et expulser plus vite les locataires qui ne paient pas, pour protéger les propriétaires et les inciter à louer. Les autres craignent que des familles en difficulté se retrouvent à la rue et veulent d'abord aider à payer le loyer et reloger.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Quand s'applique la trêve hivernale ?",
@@ -10061,7 +10334,7 @@
       "titre": "Les réseaux sociaux et les mineurs",
       "aujourdhui": "Depuis 2024, une règle européenne interdit de montrer aux mineurs des publicités choisies selon leur profil ; pour les adultes, elles restent permises, sauf sur des données sensibles. Une loi de 2023 fixe à 15 ans l'âge pour s'inscrire sans accord parental ; en 2025, aucun décret ne l'appliquait.",
       "enDebat": "Les uns veulent interdire les réseaux sociaux aux plus jeunes et la publicité ciblée, pour protéger la santé et la vie privée. Les autres préfèrent laisser ce choix aux parents, doutent qu'on puisse vérifier l'âge sans ficher tout le monde et estiment que la publicité paie des services gratuits.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les nouvelles règles européennes pour protéger vos droits en ligne",
@@ -10076,6 +10349,13 @@
           "editeur": "Sénat",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "Question écrite n° 5149 : décrets d'application de la majorité numérique à 15 ans",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE5149",
+          "editeur": "Assemblée nationale",
+          "media": "article",
+          "aveugle": false
         }
       ]
     },
@@ -10085,7 +10365,7 @@
       "titre": "L'intelligence artificielle et les data centers",
       "aujourdhui": "En 2025, la France compte 322 centres de données (data centers), ce qui la place au sixième rang mondial. En février 2025, lors d'un sommet à Paris, 109 milliards d'euros d'investissements privés dans l'intelligence artificielle ont été annoncés, et l'État a repéré 35 sites pour de nouveaux centres.",
       "enDebat": "Les uns veulent attirer ces centres et ces investissements, pour que la France reste dans la course et fixe elle-même les règles de l'intelligence artificielle. Les autres demandent d'abord un débat public, des règles sur l'eau et l'électricité consommées et un encadrement des risques de ces outils.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Centre de données",
@@ -10109,7 +10389,7 @@
       "titre": "La souveraineté numérique",
       "aujourdhui": "Depuis 2016, l'ANSSI, agence de cybersécurité, délivre le label SecNumCloud au stockage en ligne ; depuis 2022, il impose d'échapper aux lois hors d'Europe. Les données de santé pour la recherche sont chez Microsoft depuis 2019 ; en 2026, une entreprise française a été choisie pour les héberger.",
       "enDebat": "Les uns veulent confier les données publiques à des acteurs français ou européens et créer des outils nationaux, pour échapper aux lois étrangères. Les autres estiment que les géants américains offrent souvent des services plus avancés et moins chers, et qu'en changer prend du temps et coûte cher.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "SecNumCloud",
@@ -10133,7 +10413,7 @@
       "titre": "La surveillance et les libertés",
       "aujourdhui": "Depuis 1978, une loi encadre les fichiers de données personnelles, sous le contrôle de la Commission nationale de l'informatique et des libertés. Depuis 1995, les caméras sur la voie publique sont permises : le préfet les autorise pour 5 ans et les images sont gardées un mois au plus.",
       "enDebat": "Les uns veulent plus de caméras et de nouveaux outils, comme l'analyse automatique des images, pour prévenir les crimes et aider la police. Les autres craignent une surveillance de toute la population, des erreurs et des abus, et veulent inscrire des limites fortes, jusque dans la Constitution.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Loi informatique et libertés",
@@ -10162,13 +10442,13 @@
       "id": "acces-aux-soins",
       "thematiqueId": "sante",
       "titre": "L'accès aux soins",
-      "aujourdhui": "Une loi de 2019 a supprimé le nombre national fixe d'étudiants en médecine (le numerus clausus) : chaque faculté fixe désormais ses places en deuxième année. En 2024, la Sécurité sociale et l'État paient 79,4 % des soins et des médicaments, les mutuelles 12,8 % et les ménages 7,8 %.",
+      "aujourdhui": "Une loi de 2019 a supprimé le nombre national fixe d'étudiants en médecine (le numerus clausus) : chaque faculté fixe ses places en deuxième année. En 2025, la Sécurité sociale et l'État paient 77,4 % des dépenses de santé, les mutuelles 12,3 % et les ménages 9,7 %.",
       "enDebat": "Pour attirer des soignants là où ils manquent, les uns misent sur la formation et des aides, les autres sur des obligations pour les médecins et plus de tâches pour les autres soignants. Sur le coût, certains veulent que la Sécurité sociale paie tout, d'autres veulent responsabiliser les patients.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
-          "titre": "Les dépenses de santé en 2024",
-          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-infographie-documents-de-reference/250930-Panorama-depenses-de-sante",
+          "titre": "Les dépenses de santé en 2025",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-infographie-documents-de-reference/261001-les-d%C3%A9penses-de-sant%C3%A9-en-2025-edition-2026-panorama-de-la-drees",
           "editeur": "Drees",
           "media": "article",
           "aveugle": true
@@ -10188,7 +10468,7 @@
       "titre": "L'hôpital public",
       "aujourdhui": "Fin 2024, hôpitaux et cliniques comptent 367 100 lits où l'on peut passer la nuit, 2 300 de moins en un an, et 91 000 places pour des soins sans nuit sur place. Les lits baissent chaque année, ces places augmentent. On compte 1 330 hôpitaux publics.",
       "enDebat": "Les uns veulent rouvrir des lits, arrêter les fermetures et ajouter des milliards au budget de l'hôpital public. Les autres estiment que l'argent public est limité et que les soins sans nuit à l'hôpital progressent ; ils préfèrent une réforme planifiée sur plusieurs années avec les soignants.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les établissements de santé en 2024",
@@ -10212,7 +10492,7 @@
       "titre": "Les médicaments",
       "aujourdhui": "Un brevet protège un nouveau médicament pendant 20 ans à partir de son dépôt ; ensuite, d'autres peuvent le copier : ce sont les génériques. Fin 2024, environ 400 références de médicaments étaient en rupture de stock en France, deux fois moins qu'au pic de l'hiver 2022-2023 (environ 800).",
       "enDebat": "Les uns veulent limiter les brevets et créer un service public, en France ou en Europe, pour produire les médicaments et éviter les pénuries. Les autres jugent que les brevets financent la recherche de nouveaux traitements et préfèrent aider les laboratoires à produire en Europe.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les brevets pour les produits pharmaceutiques",
@@ -10241,9 +10521,9 @@
       "id": "vaccination",
       "thematiqueId": "sante",
       "titre": "L'obligation vaccinale",
-      "aujourdhui": "Depuis 2018, 11 vaccins sont obligatoires pour les enfants, contre 3 avant. Les soignants exposés doivent aussi être vaccinés, par exemple contre l'hépatite B. Le vaccin contre le Covid-19 a été obligatoire pour les soignants et les pompiers du 5 août 2021 au 15 mai 2023.",
+      "aujourdhui": "Depuis 2018, 11 vaccins sont obligatoires pour les enfants, contre 3 avant ; depuis 2025, de nouveaux vaccins contre les méningocoques le sont aussi. Les soignants exposés doivent être vaccinés, par exemple contre l'hépatite B, et l'ont été contre le Covid du 5 août 2021 au 15 mai 2023.",
       "enDebat": "Les uns veulent laisser chacun libre de refuser un vaccin, soignants compris, sans sanction, et réintégrer avec leurs droits ceux qui ont été écartés. Les autres jugent que l'obligation protège les malades et les plus fragiles, et qu'elle a fait reculer des maladies graves.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Politique vaccinale de la France",
@@ -10258,6 +10538,13 @@
           "editeur": "Haute Autorité de santé",
           "media": "article",
           "aveugle": true
+        },
+        {
+          "titre": "Nouvelles obligations vaccinales contre les méningocoques",
+          "url": "https://www.sante.fr/node/8999123",
+          "editeur": "Santé.fr",
+          "media": "article",
+          "aveugle": true
         }
       ]
     },
@@ -10267,7 +10554,7 @@
       "titre": "La fin de vie",
       "aujourdhui": "Depuis 2005, l'acharnement thérapeutique est interdit. Depuis 2016, un malade en fin de vie peut demander à être endormi jusqu'au décès, et ses directives anticipées s'imposent au médecin. En 2023, une convention de 184 citoyens tirés au sort s'est prononcée à 75,6 % pour une aide active à mourir.",
       "enDebat": "Les uns veulent permettre à un malade incurable qui souffre de demander une substance pour mourir, au nom de la liberté de choisir sa fin. Les autres craignent des pressions sur les personnes fragiles et veulent d'abord développer les soins palliatifs, qui soulagent sans hâter la mort.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Directives anticipées : dernières volontés sur les soins en fin de vie",
@@ -10296,9 +10583,9 @@
       "id": "alimentation-sante",
       "thematiqueId": "sante",
       "titre": "L'alimentation et la santé",
-      "aujourdhui": "Depuis 2017, le Nutri-Score, une note de A à E sur l'emballage, indique la qualité nutritionnelle d'un aliment. Il reste volontaire pour les fabricants et son calcul est plus sévère depuis 2024. Depuis 2018, la taxe sur les boissons sucrées dépend de leur taux de sucre.",
+      "aujourdhui": "Depuis 2017, le Nutri-Score, une note de A à E sur l'emballage, indique la qualité nutritionnelle d'un aliment. Il reste volontaire pour les fabricants et son calcul est plus sévère depuis 2025. Depuis 2018, la taxe sur les boissons sucrées dépend de leur taux de sucre.",
       "enDebat": "Les uns veulent taxer davantage les produits trop sucrés, trop salés ou très transformés et aider les aliments sains, pour la santé de tous. Les autres craignent une hausse des prix pour les ménages modestes et préfèrent informer et éduquer.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Nutri-Score",
@@ -10322,7 +10609,7 @@
       "titre": "La police et le maintien de l'ordre",
       "aujourdhui": "Depuis 2017, une même règle fixe les cas où policiers et gendarmes peuvent tirer, en cas d'absolue nécessité et de façon strictement proportionnée. En 2025, 56 % des policiers municipaux sont armés, sur demande du maire et avec l'accord du préfet. La nasse est encadrée depuis 2021.",
       "enDebat": "Les uns veulent plus de moyens pour les forces de l'ordre : armer les polices municipales, mieux protéger en justice les agents qui tirent. Les autres veulent mieux encadrer leur action : règles plus strictes en manifestation, contrôle indépendant, fin de certaines unités.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La police municipale en France",
@@ -10339,11 +10626,11 @@
           "aveugle": true
         },
         {
-          "titre": "La légitime défense en droit français",
-          "url": "https://fr.wikipedia.org/wiki/L%C3%A9gitime_d%C3%A9fense_en_droit_fran%C3%A7ais",
-          "editeur": "Wikipédia",
+          "titre": "Article L435-1 du code de la sécurité intérieure (usage des armes)",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034107970",
+          "editeur": "Légifrance",
           "media": "article",
-          "aveugle": false
+          "aveugle": true
         }
       ]
     },
@@ -10352,8 +10639,8 @@
       "thematiqueId": "securite",
       "titre": "La justice des mineurs",
       "aujourdhui": "Depuis 2021, un code à part juge les mineurs. Avant 13 ans, l'enfant est présumé sans discernement. Un mineur risque au plus la moitié de la peine d'un adulte (excuse de minorité) ; dès 16 ans, le juge peut l'écarter à titre exceptionnel. Les centres éducatifs fermés existent depuis 2002.",
-      "enDebat": "Les uns veulent être plus fermes : excuse de minorité plus rare, centres fermés ou encadrés par des militaires, sanctions pour les parents défaillants. Les autres misent sur l'éducation et le suivi, car un enfant n'est pas un adulte, et craignent que l'enfermement nourrisse la récidive.",
-      "aJour": "2026-11-06",
+      "enDebat": "Les uns veulent être plus fermes face aux mineurs auteurs de faits graves : excuse de minorité plus rare, centres fermés ou encadrés par des militaires, sanctions pour les parents défaillants. Les autres misent sur l'éducation et le suivi, et craignent que l'enfermement nourrisse la récidive.",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Justice pénale des mineurs : mesures et peines encourues",
@@ -10384,7 +10671,7 @@
       "titre": "Les peines et les prisons",
       "aujourdhui": "Au 1er octobre 2026, les prisons comptent 90 937 détenus pour 63 452 places, soit 143 détenus pour 100 places. Les peines planchers, des peines minimales pour les récidivistes, ont existé de 2007 à 2014 ; le juge pouvait y déroger en motivant sa décision.",
       "enDebat": "Les uns veulent des peines plus sûres et plus lourdes : peines minimales, moins de réductions de peine, plus de places de prison. Les autres veulent que le juge adapte la peine à chaque cas, avec des solutions hors de la prison pour limiter la surpopulation et la récidive.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Mesure de l'incarcération au 1er octobre 2026",
@@ -10408,7 +10695,7 @@
       "titre": "Le trafic de drogue",
       "aujourdhui": "Selon un rapport du Sénat de mai 2024, le trafic de drogue rapporte au moins 3,5 milliards d'euros par an en France, avec environ 3 000 points de deal. Les saisies de cocaïne ont été multipliées par cinq en dix ans.",
       "enDebat": "Les uns veulent des moyens spéciaux : procureurs dédiés, prisons plus sûres pour les trafiquants, expulsion de leur logement, fermeture des commerces liés au trafic. Les autres craignent pour les libertés et les familles, et veulent aussi agir sur la consommation, la prévention et la santé.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Rapport du Sénat : sortir du piège du narcotrafic (2024)",
@@ -10425,7 +10712,7 @@
       "titre": "La sécurité civile",
       "aujourdhui": "Les plans de secours ORSEC existent depuis 1952 ; une loi de 2004 les a refondus. En 2021, la France comptait 252 700 sapeurs-pompiers, dont 78 % de volontaires. Les communes peuvent aussi créer une réserve de bénévoles pour aider en cas de crise.",
       "enDebat": "Les uns veulent réorganiser la réponse aux crises, plus fréquentes avec le climat : un ministère dédié, plus de réserves communales, les animaux pris en compte dans les secours. Les autres préfèrent renforcer l'organisation actuelle, autour des préfets et des pompiers, sans nouvelle structure.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Le plan ORSEC",
@@ -10455,8 +10742,8 @@
       "thematiqueId": "societe",
       "titre": "La laïcité et les religions",
       "aujourdhui": "Depuis 1905, la République assure la liberté de conscience et le libre exercice des cultes, sans en reconnaître ni en subventionner aucun. Depuis 2004, les signes religieux ostensibles sont interdits aux élèves des écoles publiques. Depuis 2011, cacher son visage dans l'espace public est interdit.",
-      "enDebat": "Les uns veulent plus de règles et de contrôles : limiter les signes religieux dans l'espace public, surveiller associations et financements des cultes. Les autres estiment que la laïcité impose la neutralité à l'État, pas aux citoyens, et craignent une atteinte à la liberté de culte.",
-      "aJour": "2026-11-06",
+      "enDebat": "Les uns veulent plus de règles face aux pressions religieuses : limiter les signes religieux dans l'espace public, surveiller associations et financements des cultes. Les autres estiment que la laïcité impose la neutralité à l'État, pas aux citoyens, et craignent pour la liberté de culte.",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La loi de 2004 sur les signes religieux à l'école",
@@ -10487,7 +10774,7 @@
       "titre": "La liberté d'expression",
       "aujourdhui": "Depuis 1881, on peut publier sans autorisation, mais la loi punit la diffamation, l'injure et, depuis 1972, la provocation à la haine raciale ou religieuse. Depuis février 2024, un règlement européen oblige les plateformes à retirer les contenus illégaux signalés, sous peine d'amende.",
       "enDebat": "Les uns veulent supprimer des limites à la liberté d'expression et le contrôle des plateformes, qu'ils jugent proches de la censure. Les autres estiment ces règles nécessaires contre la haine, le harcèlement et la désinformation en ligne.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "La loi de 1881 sur la liberté de la presse",
@@ -10511,7 +10798,7 @@
       "titre": "L'enfance et la famille",
       "aujourdhui": "Les allocations familiales sont versées à partir de 2 enfants : en 2026, 152,25 euros par mois pour 2 enfants, sous un plafond de revenus. Depuis une loi de 2022, les jeunes sortis de l'aide sociale à l'enfance sans ressources ni soutien familial suffisants sont accompagnés jusqu'à 21 ans.",
       "enDebat": "Les uns veulent aider plus tôt et plus longtemps : allocations dès le premier enfant, plus de crèches, jeunes suivis jusqu'à 25 ans, protection de l'enfance en grande cause nationale. Les autres soulignent le coût pour l'État et les départements, et préfèrent cibler les familles les plus aidées.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Allocations familiales",
@@ -10533,14 +10820,14 @@
       "id": "bioethique",
       "thematiqueId": "societe",
       "titre": "L'IVG et la procréation",
-      "aujourdhui": "Le cadre légal de l'IVG date de 1975 ; depuis 2022, le délai est de 14 semaines de grossesse. En 2024, 251 270 IVG ont eu lieu en France. La procréation médicalement assistée (PMA) est encadrée par les lois de bioéthique depuis 1994 ; en 2022, elle a permis près de 27 000 naissances.",
+      "aujourdhui": "Le cadre légal de l'IVG date de 1975 ; depuis 2022, le délai est de 14 semaines de grossesse. En 2025, 259 400 IVG ont eu lieu en France, 2,9 % de plus qu'en 2024. En 2022, l'assistance médicale à la procréation (PMA) a permis la naissance de près de 27 000 enfants.",
       "enDebat": "Sur l'IVG, les uns veulent protéger ce droit au plus haut niveau, les autres jugent la loi suffisante et défendent la liberté de conscience. Sur la PMA pour les couples de femmes et les femmes seules, les uns invoquent l'égalité, les autres le droit de l'enfant à avoir un père.",
-      "aJour": "2026-11-06",
+      "aJour": "2026-11-11",
       "liens": [
         {
-          "titre": "En 2024, 251 270 IVG ont eu lieu en France",
-          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/250925-ER-ivg-en-france-en-2024",
-          "editeur": "Ministère de la Santé (statistiques)",
+          "titre": "Les interruptions volontaires de grossesse en 2025",
+          "url": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/260922-les-interruptions-volontaires-de-grossesse-IVG-en-2025",
+          "editeur": "Drees",
           "media": "article",
           "aveugle": true
         },
@@ -10552,9 +10839,9 @@
           "aveugle": false
         },
         {
-          "titre": "La PMA en France",
-          "url": "https://fr.wikipedia.org/wiki/Procr%C3%A9ation_m%C3%A9dicalement_assist%C3%A9e_en_France",
-          "editeur": "Wikipédia",
+          "titre": "L'assistance médicale à la procréation : chiffres clés",
+          "url": "https://www.sante.fr/node/15379907",
+          "editeur": "Santé.fr",
           "media": "article",
           "aveugle": false
         }
@@ -10565,8 +10852,8 @@
       "thematiqueId": "societe",
       "titre": "L'égalité salariale femmes-hommes",
       "aujourdhui": "En 2024, dans le privé, les femmes gagnent 14 % de moins que les hommes à temps de travail égal, 3,6 % à emploi comparable. Les entreprises d'au moins 50 salariés publient une note d'égalité sur 100. Un projet de loi doit transposer la directive européenne de 2023 sur la transparence des salaires.",
-      "enDebat": "Les uns veulent des sanctions financières plus fortes contre les entreprises où les écarts persistent. Les autres préfèrent accompagner les entreprises, et estiment qu'une part de l'écart vient des métiers et du temps partiel, pas seulement des salaires à poste égal.",
-      "aJour": "2026-11-06",
+      "enDebat": "Les uns veulent des sanctions financières plus fortes contre les entreprises où les écarts persistent, pour faire respecter l'égalité. Les autres préfèrent accompagner les entreprises, et estiment qu'une part de l'écart vient des métiers et du temps partiel, pas seulement des salaires à poste égal.",
+      "aJour": "2026-11-11",
       "liens": [
         {
           "titre": "Les écarts de salaire entre femmes et hommes en 2024",
@@ -10586,6 +10873,85 @@
           "titre": "Transparence salariale : le projet de loi présenté",
           "url": "https://entreprendre.service-public.gouv.fr/actualites/A19060",
           "editeur": "Service-public.fr",
+          "media": "article",
+          "aveugle": true
+        }
+      ]
+    },
+    {
+      "id": "eleves-handicap",
+      "thematiqueId": "education",
+      "titre": "Les élèves en situation de handicap",
+      "aujourdhui": "En 2024, 563 400 élèves en situation de handicap étaient scolarisés. À la rentrée 2025, 138 200 accompagnants les aidaient : des contractuels, dont 68 % en CDI, à 64 % d'un temps plein en moyenne, pour 1 090 euros net par mois en 2024.",
+      "enDebat": "Les uns veulent faire de ces accompagnants des fonctionnaires, payés à temps plein pour les heures passées auprès des élèves, afin de stabiliser le métier. Les autres mettent en avant le coût d'un tel statut et préfèrent améliorer les contrats actuels.",
+      "aJour": "2026-11-11",
+      "liens": [
+        {
+          "titre": "Les accompagnants d'élèves en situation de handicap (panorama 2025-2026)",
+          "url": "https://www.education.gouv.fr/sites/default/files/document/panoramachapitre-12-521104.pdf",
+          "editeur": "Ministère de l'Éducation nationale (DEPP)",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Les élèves en situation de handicap (note d'information 25.63)",
+          "url": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2025-63-230137-0-pdf-474739.pdf",
+          "editeur": "Ministère de l'Éducation nationale (DEPP)",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Accompagnant des élèves en situation de handicap",
+          "url": "https://fr.wikipedia.org/wiki/Accompagnant_des_%C3%A9l%C3%A8ves_en_situation_de_handicap",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ]
+    },
+    {
+      "id": "mineurs-isoles",
+      "thematiqueId": "societe",
+      "titre": "Les mineurs étrangers isolés",
+      "aujourdhui": "En 2024, la justice a confié aux départements 13 554 mineurs étrangers arrivés seuls, 30 % de moins qu'en 2023. Leur âge et leur isolement sont d'abord évalués lors d'un entretien avec un travailleur social, puis la justice décide de leur placement.",
+      "enDebat": "Les uns veulent héberger ces jeunes jusqu'à la décision définitive du juge et interdire les examens osseux, jugés peu fiables. Les autres craignent que des majeurs se déclarent mineurs et soulignent la charge pour les départements.",
+      "aJour": "2026-11-11",
+      "liens": [
+        {
+          "titre": "Rapport annuel d'activité 2024 de la mission mineurs non accompagnés",
+          "url": "https://www.justice.gouv.fr/sites/default/files/2026-06/DPJJ_Rapport_MMNA_2024.pdf",
+          "editeur": "Ministère de la Justice",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Mineur non accompagné en France",
+          "url": "https://fr.wikipedia.org/wiki/Mineur_non_accompagn%C3%A9_en_France",
+          "editeur": "Wikipédia",
+          "media": "article",
+          "aveugle": true
+        }
+      ]
+    },
+    {
+      "id": "commande-publique",
+      "thematiqueId": "economie",
+      "titre": "Les achats publics et la production en France",
+      "aujourdhui": "Dans l'Union européenne, les achats publics représentent environ 15 % de la richesse produite, soit 2 600 milliards d'euros par an. Les règles européennes imposent de traiter les entreprises à égalité, sans discrimination ; le 9 septembre 2026, la Commission a proposé une préférence européenne.",
+      "enDebat": "Les uns veulent permettre aux acheteurs publics de favoriser les entreprises qui produisent et emploient en France ou en Europe. Les autres craignent des prix plus élevés pour les contribuables et des mesures de rétorsion des pays partenaires contre les exportateurs.",
+      "aJour": "2026-11-11",
+      "liens": [
+        {
+          "titre": "Public procurement act (note du service de recherche du Parlement européen)",
+          "url": "https://eprs.europarl.europa.eu/EPRS_BRI(2026)796984",
+          "editeur": "Parlement européen",
+          "media": "article",
+          "aveugle": true
+        },
+        {
+          "titre": "Directive 2014/24/UE, article 18 : principes de la passation des marchés",
+          "url": "https://www.legislation.gov.uk/eudr/2014/24/article/18",
+          "editeur": "Legislation.gov.uk (texte de la directive)",
           "media": "article",
           "aveugle": true
         }

@@ -7,8 +7,9 @@
   { "ids": ["nouveaux-reacteurs", "relance-nucleaire-epr-2023"], "raison": "La question commune compare les programmes ; le scrutin compare les votes sur la loi de 2023 qui accélère les procédures." },
   { "ids": ["reculer-retraite", "loi-retraites-2023"], "raison": "La question commune compare les programmes ; le scrutin compare les votes sur la réforme de 2023 (62 à 64 ans)." },
   { "ids": ["prop-ga-10", "prop-sl-1"], "raison": "L'une ajoute 250 euros net au salaire médian en supprimant des cotisations, l'autre augmente tous les salaires et pensions de 400 euros." },
-  { "ids": ["prop-kb-7", "normes-agricoles"], "raison": "Compare aux règles exigées des producteurs étrangers, pas à celles de l'Union européenne." },
+  { "ids": ["prop-kb-7", "prop-xb-7"], "raison": "Compare aux règles exigées des producteurs étrangers, pas à celles de l'Union européenne." },
   { "ids": ["prop-fro-1", "prop-tr-1"], "raison": "L'une relève le SMIC et tous les salaires, l'autre augmente le net en baissant les charges." },
   { "ids": ["prop-fro-1", "prop-na-1"], "raison": "Montants différents : SMIC à 1 700 euros net ou à 2 200 euros." },
-  { "ids": ["prop-ak-1", "prop-na-1"], "raison": "Montants différents : SMIC à 2 000 euros net ou à 2 200 euros." }
+  { "ids": ["prop-ak-1", "prop-na-1"], "raison": "Montants différents : SMIC à 2 000 euros net ou à 2 200 euros." },
+  { "ids": ["prop-nda-1", "schengen-double-frontiere-2026"], "raison": "La proposition sort de l'espace Schengen pour contrôler tous les passages ; le scrutin y reste et ne vise que les étrangers hors Union." }
 ]

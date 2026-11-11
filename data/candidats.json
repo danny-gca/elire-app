@@ -14,6 +14,12 @@
       "statut": "partiel",
       "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
       "date": "2026-11-06"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "acedd1c3",
+      "note": "2026-11-11 confirmée : Investiture confirmée par le parti (« élection au jugement majoritaire par les adhérents [...] en avril 2026 », programme du 06/11/2026) ; jour exact non publié, la date reste celle de l'annonce publique (27/06/2026, Sud Radio)."
     }
   },
   {
@@ -32,6 +38,12 @@
       "statut": "partiel",
       "url": "https://glucks2027.fr/revolution-ecologique/",
       "date": "2026-11-09"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6a8c1872",
+      "note": "2026-11-10 corrigée : Programme : aucun -> partiel (livret écologie du 09/11/2026 sur glucks2027.fr)."
     }
   },
   {
@@ -49,6 +61,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://www.edouardphilippe.fr/#priorites"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "7660f283",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -66,6 +84,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://attalpresident.fr/programme"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "64f7e219",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -84,6 +108,12 @@
       "statut": "complet",
       "url": "https://melenchon2027.fr/programme/livre/",
       "date": "2026-11-06"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "8c603254",
+      "note": "2026-11-10 corrigée : Programme : édition 2026 de L'Avenir en commun, publiée le 06/11/2026 sur melenchon2027.fr."
     }
   },
   {
@@ -99,9 +129,13 @@
       "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
     },
     "programme": {
-      "statut": "partiel",
-      "url": "https://www.europe1.fr/politique/budget-2027-marine-le-pen-promet-140-milliards-deuros-nets-deconomies-dici-2032-pour-eviter-a-la-france-le-defaut-de-paiement-1126400",
-      "date": "2026-10-06"
+      "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "e160d6bc",
+      "note": "2026-11-11 corrigée : Partiel (article Europe 1) -> aucun : le site du RN ne publie aucun document 2027 (seuls le programme des législatives 2024, le contre-budget 2026 et les livrets de 2022, lus le 11/11/2026) ; le contre-budget du 06/10/2026 n'est connu que par la presse."
     }
   },
   {
@@ -112,14 +146,20 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Secrétaire nationale des Écologistes.",
     "candidature": {
-      "statut": "investie",
-      "date": "2025-12-08",
-      "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
+      "statut": "annoncee",
+      "date": "2025-10-22",
+      "sourceUrl": "https://www.brut.media/fr/articles/marine-tondelier-la-patronne-des-ecologistes-officiellement-candidate-a-la-presidentielle-de-2027"
     },
     "programme": {
       "statut": "complet",
       "url": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
       "date": "2026-07-13"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f974c35f",
+      "note": "2026-11-11 corrigée : Candidature investie (2025-12-08) -> annoncée le 22/10/2025 (« Cette interview est ma déclaration officielle de candidature », L'Obs, cité par Brut) : selon le parti, le vote de décembre 2025 la désignait pour la primaire de la gauche ; les adhérents trancheront du 10 au 13/12/2026. // 2026-11-11 corrigée : Biographie : absente des 35 élus municipaux 2026 d'Hénin-Beaumont (ministère de l'Intérieur)."
     }
   },
   {
@@ -138,6 +178,12 @@
       "statut": "partiel",
       "url": "https://republicains.fr/wp-content/uploads/2026/09/LR_Ecole_vF.pdf",
       "date": "2026-08-31"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "13830589",
+      "note": "2026-11-11 corrigée : Biographie : plus ministre ; de retour au Sénat (Public Sénat, 12/11/2025), président de LR (01/10/2026)."
     }
   },
   {
@@ -155,6 +201,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://nouspresident.fr/notre-programme/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "dfe5f631",
+      "note": "2026-11-11 corrigée : Candidature : officialisée le 25/04/2026 à Lyon (Lyon Capitale), non le 18/09/2026 (article récapitulatif)."
     }
   },
   {
@@ -171,6 +223,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "b5730dc6",
+      "note": "2026-11-11 corrigée : Biographie : élu maire de Saint-Amand-les-Eaux le 22/03/2026 (bulletin municipal)."
     }
   },
   {
@@ -188,6 +246,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://www.ericzemmour.fr/priorites"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "e83ac101",
+      "note": "2026-11-11 corrigée : Candidature : 2026-09-17 -> 2026-11-10, déclaration officielle sur TF1 (Sud Radio) ; l'article du 17/09 précisait que ce n'était pas une déclaration formelle. // 2026-11-10 corrigée : Programme : aucun -> partiel (priorités 2027 sur ericzemmour.fr)."
     }
   },
   {
@@ -199,13 +263,19 @@
     "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion.",
     "candidature": {
       "statut": "investie",
-      "date": "2025-12-08",
-      "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
+      "date": "2025-12-07",
+      "sourceUrl": "https://journal.lutte-ouvriere.org/medias/mensuelnumero/fichiers/2025/12/ldc252.pdf"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
       "date": "2026-06-26"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f6310ffd",
+      "note": "2026-11-11 confirmée : Brochure de campagne du 26/06/2026 gardée : document le plus complet, toujours proposé par le parti ; le dépliant du 03/11/2026, plus court, sert de source à prop-na-1. // 2026-11-11 corrigée : Investiture : décision du 55e congrès des 6 et 7/12/2025 (Lutte de classe n° 252) au lieu d'un article qui ne parle que d'une annonce."
     }
   },
   {
@@ -222,6 +292,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9294769b",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -239,6 +315,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://www.debout-la-france.fr/notre-projet/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6de45d1e",
+      "note": "2026-11-11 corrigée : Biographie : battu aux législatives de 2024 (Public Sénat), ancien député."
     }
   },
   {
@@ -256,6 +338,12 @@
     "programme": {
       "statut": "complet",
       "url": "https://www.unenouvelleenergie.fr/notre-programme/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6df806c7",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -271,6 +359,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "58cd2b12",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -287,6 +381,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d5d3ed8e",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -301,8 +401,14 @@
       "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
     },
     "programme": {
-      "statut": "complet",
+      "statut": "partiel",
       "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "a8de54b6",
+      "note": "2026-11-11 corrigée : Complet -> partiel : le document est intitulé « Grandes orientations pour un projet patriote, édition 2026-2027 » (19 pages, dont 10 questions sur le Frexit), pas un programme présidentiel entier."
     }
   },
   {
@@ -320,6 +426,12 @@
       "statut": "partiel",
       "url": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
       "date": "2026-09-28"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "739e8985",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -336,6 +448,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "07994ab0",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -352,6 +470,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://delphinebatho.fr/priorites/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d2034d61",
+      "note": "2026-11-11 corrigée : Date du programme retirée : absente de la page. // 2026-11-11 corrigée : Programme : aucun -> partiel (site de campagne lancé le 04/11/2026, 4 priorités et premières propositions)."
     }
   },
   {
@@ -368,12 +492,17 @@
     "programme": {
       "statut": "complet",
       "url": "https://becht2027.fr/projet-france/le-livre/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "3fb2e5f8",
+      "note": "2026-11-11 confirmée : Le Projet France : association déclarée et mouvement enregistré auprès de la CNCCFP (déclaration HATVP), gardé comme parti."
     }
   },
   {
     "id": "natacha-polony",
     "nom": "Natacha Polony",
-    "partiId": "nous-sommes-la-france",
     "avatar": "NP",
     "biographie": "Journaliste et essayiste agrégée de lettres modernes, ancienne directrice de la rédaction de Marianne et directrice de la revue L'Audace !.",
     "candidature": {
@@ -384,6 +513,12 @@
     "programme": {
       "statut": "partiel",
       "url": "https://natachapolony2027.fr/natacha-polony/ma-vision"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "5b2f7d39",
+      "note": "2026-11-11 corrigée : Règle validée : un mouvement de campagne ne sert de parti que s'il est déclaré. « Nous sommes la France » n'est qu'un slogan du site de campagne (édité par l'équipe de campagne et par délégation par « LFRS - la France Républicaine et Solidaire » ; npolony.fr par l'association de financement électorale de la candidate) ; aucune structure déclarée de ce nom trouvée : Indépendante, parti retiré."
     }
   },
   {
@@ -399,6 +534,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9fc1ae5d",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -413,6 +554,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "282ed682",
+      "note": "2026-11-10 confirmée : franceinfo, 09/11/2026 : date et biographie exactes."
     }
   },
   {
@@ -428,6 +575,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "598dfefb",
+      "note": "2026-11-10 confirmée : Communiqué du 19/08/2026 (franceinfo, CNEWS). Aucune mesure citée entre guillemets ni site de campagne accessible : 0 proposition possible."
     }
   },
   {
@@ -442,6 +595,12 @@
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "2eb24740",
+      "note": "2026-11-11 corrigée : Source RTL du 25/08/2026 (annonce du 23/08) au lieu de Wikipédia ; « chef d'entreprise » absent des sources, retiré. // 2026-11-10 corrigée : Source de candidature : Sud Radio ne donne que « fin août » ; Wikipédia donne le 23/08/2026 et la biographie (vidéaste web, dirige la société Elvita). Site durif2027.com cité par Sud Radio : redirige vers un site parodique, inutilisable."
     }
   }
 ]

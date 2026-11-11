@@ -60,6 +60,8 @@
     "simulate:scoring": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON ./scripts/simulate-scoring.ts 25000 2027",
     "simulate:neutralite": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON ./scripts/simulate-neutralite.ts 25000 2027",
     "build:data:strict": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON ./scripts/build-data.ts --strict",
+    "a-verifier": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON ./scripts/a-verifier.ts",
+    "valider": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON ./scripts/valider.ts",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "check:links": "node .claude/skills/verifier-donnees/scripts/check-links.mjs",
