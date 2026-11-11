@@ -15,7 +15,10 @@ Les règles de sourçage et de neutralité font foi dans `CONTRIBUTING.md`. Fich
 node .claude/skills/verifier-donnees/scripts/check-sources.mjs                 # toutes les propositions
 node .claude/skills/verifier-donnees/scripts/check-sources.mjs --candidat <id>  # un candidat
 node .claude/skills/verifier-donnees/scripts/check-sources.mjs --lois           # + scrutins
+node .claude/skills/verifier-donnees/scripts/check-votes.mjs [--loi <id>]       # votes recalculés depuis la page du scrutin (Assemblée)
 ```
+
+`check-votes` relit date, statut, voix du résumé, décompte de chaque groupe et votes nominatifs ; il retourne les positions des motions de rejet, amendements de suppression et motions de censure d'une réforme.
 
 - `ERREUR` : source introuvable (404…), page d'accueil, citation absente, scrutin différent entre la loi et un vote, vote de groupe sans sigle. À corriger.
 - `A LIRE` : extrait non retrouvé mot pour mot, PDF illisible, site anti-robot (Légifrance, Parlement européen), serveur saturé. À ouvrir à la main : ce n'est pas une erreur tant que ce n'est pas lu.

@@ -12,7 +12,8 @@
     },
     "programme": {
       "statut": "partiel",
-      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf"
+      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "date": "2026-11-06"
     }
   },
   {
@@ -349,7 +350,9 @@
       "sourceUrl": "https://generationecologie.fr/wp-content/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://delphinebatho.fr/priorites/",
+      "date": "2026-11-04"
     }
   },
   {

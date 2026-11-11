@@ -9,6 +9,10 @@ Les dates annoncées sont aussi dans `data/candidats.json` (`programme.annonce`)
 - Jean-Luc Mélenchon : 5e édition de L'Avenir en commun en librairie le 2026-11-06 (1 069 mesures, 238 nouvelles), sans PDF en ligne ([annonce](https://lafranceinsoumise.fr/2026/11/02/avenir-en-commun-nouvelle-france/)). Relire ses propositions dès qu'une version en ligne existe.
 - Nathalie Arthaud : dépliant de campagne du 2026-11-03 ([page](https://www.lutte-ouvriere.org/portail/documents/depliant-campagne-209499.html)), PDF non téléchargeable par robot : à lire à la main.
 - 2026-11-09 : partie 11 du livre-programme d'Olivier Becht, repasser en `complet`.
+- 2026-11-14 : meeting de lancement de Mira Markovic (pas encore de programme) : relire ses propositions.
+- 2026-11-17 : réforme des retraites annoncée par Marine Le Pen : relire prop-mlp-9.
+- 2026-11-21 : meeting d'Éric Zemmour : relire ses propositions.
+- Sans date : 2e volet du livret de Raphaël Glucksmann ; programme de l'UPR « en cours d'élaboration » (François Asselineau, 3 mesures sourcées en 2026, le reste en 2022).
 - 2026-12-13 : vote des adhérents écologistes (10 au 13 décembre) sur la candidature de Marine Tondelier ou le soutien à un autre candidat ([Public Sénat](https://www.publicsenat.fr/actualites/politique/presidentielle-2027-personne-ne-gagnera-seul-assure-marine-tondelier)).
 - Fin 2026 : déclaration formelle annoncée par Xavier Bertrand (« à la fin de l'année ») ; décision de Jean Lassalle annoncée « à l'automne ».
 - 2027-02-07 au plus tard : décret de convocation, puis ouverture des parrainages ; clôture le 2027-03-12 à 18 h ([Toute l'Europe](https://www.touteleurope.eu/vie-politique-des-etats-membres/presidentielle-2027-calendrier-dates-inscription-candidats-vote/)).

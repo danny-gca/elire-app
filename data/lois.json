@@ -28,7 +28,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
       },
       "marine-le-pen": {
-        "position": "contre",
+        "position": "abstention",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 0 pour, 2 contre, 14 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431",
@@ -66,7 +66,7 @@
         "groupeNom": "Horizons & Indépendants"
       },
       "marine-tondelier": {
-        "position": "contre",
+        "position": "pour",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 19 pour, 7 contre, 7 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431",
@@ -130,7 +130,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
       },
       "fabien-roussel": {
-        "position": "abstention",
+        "position": "pour",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 10 pour, 2 contre, 3 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
@@ -144,7 +144,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
       },
       "bruno-retailleau": {
-        "position": "pour",
+        "position": "contre",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 5 pour, 41 contre, 2 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
@@ -168,7 +168,7 @@
         "groupeNom": "Écologiste et Social"
       },
       "raphael-glucksmann": {
-        "position": "abstention",
+        "position": "pour",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 57 pour, 4 contre, 6 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280",
@@ -224,7 +224,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
       },
       "fabien-roussel": {
-        "position": "abstention",
+        "position": "contre",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 1 pour, 10 contre, 2 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
@@ -238,7 +238,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
       },
       "bruno-retailleau": {
-        "position": "contre",
+        "position": "abstention",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 18 pour, 3 contre, 28 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
@@ -246,7 +246,7 @@
         "groupeNom": "Droite Républicaine"
       },
       "edouard-philippe": {
-        "position": "pour",
+        "position": "abstention",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 9 pour, 0 contre, 25 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
@@ -254,7 +254,7 @@
         "groupeNom": "Horizons & Indépendants"
       },
       "marine-tondelier": {
-        "position": "contre",
+        "position": "abstention",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 2 pour, 9 contre, 27 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758",
@@ -332,7 +332,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
       },
       "bruno-retailleau": {
-        "position": "abstention",
+        "position": "pour",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 27 pour, 13 contre, 9 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054",
@@ -434,7 +434,7 @@
         "groupeNom": "Droite Républicaine"
       },
       "edouard-philippe": {
-        "position": "abstention",
+        "position": "pour",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 26 pour, 3 contre, 4 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957",
@@ -500,7 +500,7 @@
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
       },
       "fabien-roussel": {
-        "position": "pour",
+        "position": "contre",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 3 pour, 12 contre, 0 abstention.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880",
@@ -530,7 +530,7 @@
         "groupeNom": "Horizons & Indépendants"
       },
       "marine-tondelier": {
-        "position": "abstention",
+        "position": "contre",
         "typeVote": "groupe_parti",
         "explication": "Position majoritaire du groupe : 4 pour, 11 contre, 7 abstentions.",
         "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880",

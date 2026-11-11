@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-10T21:58:57.794Z",
+    "generatedAt": "2026-11-11T00:16:33.061Z",
     "partisCount": 26,
     "candidatsCount": 27,
     "thematiquesCount": 12,
@@ -402,7 +402,8 @@
       },
       "programme": {
         "statut": "partiel",
-        "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf"
+        "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+        "date": "2026-11-06"
       },
       "parti": "Équinoxe",
       "couleurParti": "#FFD412",
@@ -799,7 +800,9 @@
         "sourceUrl": "https://generationecologie.fr/wp-content/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
       },
       "programme": {
-        "statut": "aucun"
+        "statut": "partiel",
+        "url": "https://delphinebatho.fr/priorites/",
+        "date": "2026-11-04"
       },
       "parti": "Génération écologie",
       "couleurParti": "#5ABB48",
@@ -920,7 +923,7 @@
       "description": "« SMIC à 2000 € net, revalorisation de toutes les allocations, augmentation des salaires de 500 €, indexation sur l'inflation. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures, le programme complet est en cours d'élaboration). Le dépliant ne dit pas si les 500 euros sont nets ou bruts, ni par mois. Les salaires seraient aussi indexés sur l'inflation et toutes les allocations revalorisées."
+      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures, axe « Vivre, et plus survivre »). Le dépliant ne dit pas si les 500 euros sont nets ou bruts, ni par mois. Les salaires seraient aussi indexés sur l'inflation et toutes les allocations revalorisées."
     },
     {
       "id": "prop-ak-2",
@@ -979,7 +982,7 @@
       "candidatId": "anasse-kazib",
       "thematiqueId": "international",
       "sujetId": "defense",
-      "titre": "Retirer les troupes françaises déployées à l'étranger et les rapatrier en France",
+      "titre": "Retirer de l'étranger les troupes françaises qui y sont déployées",
       "description": "« Retrait des troupes françaises à l'étranger. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
@@ -995,7 +998,7 @@
       "description": "« Dissolution des corps spéciaux de police. »",
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures). Le même axe demande l'abrogation de toutes les lois sécuritaires, racistes et islamophobes, et l'amnistie des manifestants, jeunes de quartiers populaires et syndicalistes réprimés."
+      "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures). Le dépliant ne dit pas quels corps sont visés. Le même axe demande l'abrogation de toutes les lois sécuritaires, racistes et islamophobes, et l'amnistie des manifestants, jeunes de quartiers populaires et syndicalistes réprimés."
     },
     {
       "id": "prop-ak-8",
@@ -1008,70 +1011,6 @@
       "sourceUrl": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf",
       "typeSource": "programme_2027",
       "contexte": "Dépliant de campagne 2027, p. 3 (premières mesures). Les loyers seraient plafonnés et ne pourraient plus augmenter. Mesure de l'axe sur le niveau de vie, avec des investissements massifs dans les services publics placés sous le contrôle des travailleurs."
-    },
-    {
-      "id": "prop-am-1",
-      "ref": "P-531",
-      "candidatId": "antoine-mikolajczak",
-      "thematiqueId": "environnement",
-      "sujetId": "nucleaire",
-      "titre": "Financer de nouveaux réacteurs nucléaires (EPR) et de nouvelles éoliennes et centrales solaires",
-      "description": "« Financer le déploiement à court terme de nouveaux réacteurs nucléaires [...] ainsi que de nouveaux moyens de production d'électricité renouvelable (éolien et solaire). »",
-      "sourceUrl": "https://parti-equinoxe.fr/elections-legislatives-2024/programme-legislatives-2024-energie/",
-      "dateDeclaration": "2024-06-23",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des législatives 2024, volet énergie. Déploiement prévu à court terme. Prévoit aussi de prolonger les réacteurs existants et d'investir dans la recherche sur les petits réacteurs (SMR) et ceux de 4e génération."
-    },
-    {
-      "id": "prop-am-4",
-      "ref": "P-888",
-      "candidatId": "antoine-mikolajczak",
-      "thematiqueId": "agriculture",
-      "sujetId": "politique-agricole-commune",
-      "titre": "Réformer la politique agricole commune (PAC) pour soutenir l'agroécologie",
-      "description": "« Réformer la Politique agricole commune pour soutenir davantage les pratiques agroécologiques [...] »",
-      "sourceUrl": "https://parti-equinoxe.fr/programme-europeennes-2024-agriculture/",
-      "dateDeclaration": "2024-02-26",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, volet agriculture. Prévoit aussi de valoriser les innovations pour des systèmes agricoles résilients et de garantir des prix plancher aux agriculteurs."
-    },
-    {
-      "id": "prop-am-6",
-      "ref": "P-526",
-      "candidatId": "antoine-mikolajczak",
-      "thematiqueId": "logement",
-      "sujetId": "renovation-energetique",
-      "titre": "Lancer un plan national pour rénover les bâtiments anciens et supprimer les passoires thermiques",
-      "description": "« Lancer un plan national de rénovation des bâtiments anciens, visant à améliorer leur efficacité énergétique et à éliminer les passoires thermiques. »",
-      "sourceUrl": "https://parti-equinoxe.fr/elections-legislatives-2024/programme-legislatives-2024-energie/",
-      "dateDeclaration": "2024-06-23",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des législatives 2024, volet énergie. Objectif : des bâtiments qui consomment moins d'énergie, sans logements mal isolés (passoires thermiques). Travaux financés par des subventions, des crédits d'impôt et des prêts à taux réduit."
-    },
-    {
-      "id": "prop-am-7",
-      "ref": "P-345",
-      "candidatId": "antoine-mikolajczak",
-      "thematiqueId": "economie",
-      "sujetId": "impots-entreprises",
-      "titre": "Taxer à 0,3 % les transactions financières pour financer la transition écologique",
-      "description": "« Taxer l'ensemble des transactions financières à hauteur de 0.3% pour dégager au moins 50 Mds d'euros afin de financer la transition écologique et lutter contre la spéculation. »",
-      "sourceUrl": "https://parti-equinoxe.fr/programme-europeennes-2024-mesure-phare-9-finance/",
-      "dateDeclaration": "2024-06-03",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, mesure phare sur la politique financière, faute de programme 2027 publié. Taxe européenne sur les achats et ventes de produits financiers, visant au moins 50 milliards d'euros et un frein à la spéculation ; taux et champ revus régulièrement."
-    },
-    {
-      "id": "prop-am-8",
-      "ref": "P-360",
-      "candidatId": "antoine-mikolajczak",
-      "thematiqueId": "institutions",
-      "sujetId": "referendum",
-      "titre": "Développer la démocratie directe et les conventions citoyennes",
-      "description": "« [...] développer la démocratie directe et les conventions citoyennes. »",
-      "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/07/Parti-equinoxe-Tracts.pdf",
-      "typeSource": "programme_2027",
-      "contexte": "Tract de campagne 2027, p. 2, première des trois priorités de campagne. La même priorité prévoit plus de pouvoirs et de moyens pour les territoires, un droit simplifié et moins de normes."
     },
     {
       "id": "prop-am-9",
@@ -1100,29 +1039,94 @@
       "contexte": "Article du parti après les violences du mouvement lycéen d'octobre 2026. Prévoit aussi de réformer l'inspection générale de la police nationale et de mieux sanctionner la casse côté manifestants (amendes, travaux d'intérêt général de réparation)."
     },
     {
-      "id": "prop-am-11",
-      "ref": "P-866",
+      "id": "prop-am-12",
+      "ref": "P-147",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "environnement",
+      "sujetId": "climat-emissions",
+      "titre": "Taxer les énergies fossiles selon leurs émissions et reverser 80 % de la recette aux ménages",
+      "description": "« Les énergies fossiles sont taxées selon leurs émissions de gaz à effet de serre [...]. 80% des bénéfices de cette taxe sont redistribués aux ménages sous forme d’un revenu carbone mensuel, indépendant de leurs propres émissions. »",
+      "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "dateDeclaration": "2026-11-06",
+      "typeSource": "programme_2027",
+      "contexte": "Programme synthétique 2027 (novembre 2026), p. 32. Carburant, fioul et gaz, à la place des taxes carbone actuelles, pour au moins 100 euros la tonne d'émissions en 2030. Complément pour les ménages ruraux et modestes ; les 20 % restants financent des prêts à taux zéro (isolation, pompes à chaleur)."
+    },
+    {
+      "id": "prop-am-13",
+      "ref": "P-328",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "economie",
+      "sujetId": "aides-publiques-entreprises",
+      "titre": "Soumettre les aides publiques aux entreprises à des conditions, avant et après leur versement",
+      "description": "« L’octroi d’aides publiques aux entreprises est soumis à des conditions ex ante (absence de condamnations pour atteintes à l’environnement, fraude fiscale, activités en France, etc.) et ex post pour les aides ciblées (atteinte des objectifs de création d’emploi, maintien d’une activité, dépôt de brevet, etc.). »",
+      "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "dateDeclaration": "2026-11-06",
+      "typeSource": "programme_2027",
+      "contexte": "Programme synthétique 2027 (novembre 2026), p. 28, mesure sur les secteurs stratégiques. Avant le versement (ex ante) : aucune condamnation pour atteinte à l'environnement ou fraude fiscale, et une activité en France. Après (ex post), pour les aides ciblées : objectifs d'emploi, d'activité ou de brevet atteints."
+    },
+    {
+      "id": "prop-am-14",
+      "ref": "P-861",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "agriculture",
+      "sujetId": "normes-europeennes-importations",
+      "titre": "Protéger pour un temps des filières agricoles clés des importations qui ne respectent pas les normes",
+      "description": "« Certaines filières agricoles françaises clés pour la résilience alimentaire du territoire sont protégées temporairement face à la concurrence de produits ne respectant pas les normes (clause de sauvegarde sanitaire). »",
+      "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "dateDeclaration": "2026-11-06",
+      "typeSource": "programme_2027",
+      "contexte": "Programme synthétique 2027 (novembre 2026), p. 44, mesure sur l'alimentation saine. Le texte ne liste pas les filières visées. Ailleurs (p. 28), il prévoit des prix minimum à l'importation, par des droits de douane calés sur les coûts de production européens."
+    },
+    {
+      "id": "prop-am-15",
+      "ref": "P-142",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "institutions",
+      "sujetId": "pouvoirs-du-president",
+      "titre": "Élire le président au jugement majoritaire, pour un mandat unique de sept ans",
+      "description": "« Le président ou la présidente de la République se concentre sur son rôle de représentation et de garant du bon fonctionnement des institutions. Il ou elle est élu au jugement majoritaire, pour un mandat unique de sept ans. »",
+      "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "dateDeclaration": "2026-11-06",
+      "typeSource": "programme_2027",
+      "contexte": "Programme synthétique 2027 (novembre 2026), p. 14. Chaque électeur donne une mention à chaque candidat, de « à rejeter » à « excellent » ; la meilleure mention médiane l'emporte. Le gouvernement devient responsable devant l'Assemblée, élue en partie à la proportionnelle."
+    },
+    {
+      "id": "prop-am-16",
+      "ref": "P-323",
+      "candidatId": "antoine-mikolajczak",
+      "thematiqueId": "numerique",
+      "sujetId": "reseaux-sociaux",
+      "titre": "Obliger les plateformes à prouver qu'un nouveau service n'est pas conçu pour rendre dépendant",
+      "description": "« Obliger les plateformes à prouver qu’elles ne créent pas de mécanismes addictifs avant de mettre un nouveau service sur le marché. »",
+      "sourceUrl": "https://parti-equinoxe.fr/renouer-avec-le-lien-social/",
+      "dateDeclaration": "2026-09-14",
+      "typeSource": "prise_de_position",
+      "contexte": "Article du parti sur l'isolement et le lien social. La preuve serait due avant la mise sur le marché. Prévoit aussi d'interdire les compagnons d'intelligence artificielle aux mineurs le temps d'en connaître les effets, et d'obliger les IA à orienter vers des organisations de soutien en cas de risque psychique."
+    },
+    {
+      "id": "prop-am-17",
+      "ref": "P-504",
       "candidatId": "antoine-mikolajczak",
       "thematiqueId": "sante",
       "sujetId": "alimentation-sante",
-      "titre": "Renforcer le bonus-malus sur les produits alimentaires très transformés",
-      "description": "« Amplifier le système de bonus-malus sur les produits très transformés pour permettre à l'alimentation saine d'être plus accessible. »",
-      "sourceUrl": "https://parti-equinoxe.fr/proteger-les-animaux-lenvironnement-et-nos-eleveurs/",
-      "dateDeclaration": "2026-10-08",
-      "typeSource": "prise_de_position",
-      "contexte": "Article du parti sur l'élevage et l'alimentation. But : rendre l'alimentation saine plus abordable ; le texte ne précise ni les produits visés ni le fonctionnement du bonus-malus (taxe, aide). Prévoit aussi un repas végétarien de plus par semaine à la cantine."
+      "titre": "Taxer les produits gras, salés, sucrés, alcoolisés et ultratransformés repérés par le NutriScore",
+      "description": "« Mise en place d'une taxe « santé » sur les produits gras, salés, sucrés, alcoolisés et ultratransformés, identifiés comme tels par le NutriScore, rendu obligatoire »",
+      "sourceUrl": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "dateDeclaration": "2026-11-06",
+      "typeSource": "programme_2027",
+      "contexte": "Programme synthétique 2027 (novembre 2026), p. 44. Le NutriScore deviendrait obligatoire. Prévoit aussi au moins deux repas végétariens par semaine en restauration collective et la transparence sur les marges de la grande distribution."
     },
     {
       "id": "prop-br-1",
       "ref": "P-961",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "securite",
-      "titre": "Instaurer une peine minimale pour les agresseurs de policiers",
-      "description": "« la mise en place de peine plancher pour les agresseurs de policiers »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/violences-contre-les-policiers-le-president-de-la-republique-est-incapable-de",
-      "dateDeclaration": "2021-05-19",
+      "titre": "Instaurer une peine minimale pour les agresseurs de policiers, de gendarmes et de pompiers",
+      "description": "« Voilà pourquoi je veux des peines minimales pour que quand on tabasse un policier, un gendarme, un pompier, le juge n'ait pas le choix »",
+      "sourceUrl": "https://www.europe1.fr/politique/objectif-elysee-2027-sil-est-elu-bruno-retailleau-souhaite-instaurer-des-peines-minimales-1064336",
+      "dateDeclaration": "2026-09-08",
       "typeSource": "prise_de_position",
-      "contexte": "Réaction rapportée par Public Sénat après des violences contre des policiers. Cette peine plancher, que le juge devrait en principe prononcer au minimum, y est présentée comme une première étape vers une « révolution pénale ».",
+      "contexte": "Entretien dans l'émission « Objectif Élysée 2027 » d'Europe 1. Le juge devrait prononcer au moins cette peine pour des violences contre un policier, un gendarme ou un pompier ; il veut ainsi « augmenter la chaîne des peines ».",
       "enjeuId": "peines-planchers",
       "sens": "pour"
     },
@@ -1132,65 +1136,25 @@
       "candidatId": "bruno-retailleau",
       "thematiqueId": "securite",
       "sujetId": "justice-des-mineurs",
-      "titre": "Faire de l'excuse de minorité l'exception et non la règle",
-      "description": "« Aujourd'hui, l'excuse de minorité est la règle, demain elle doit devenir l'exception » ; « Il faut réformer profondément la justice des mineurs »",
-      "sourceUrl": "https://www.europe1.fr/node/669464",
-      "dateDeclaration": "2025-03-25",
+      "titre": "Abaisser la majorité pénale à 15 ans et emprisonner 15 jours les mineurs dès un premier délit grave",
+      "description": "« abaisser la majorité pénale à 15 ans » ; « Je veux que dès qu'un mineur qui commet un premier délit grave, il fasse des courtes peines de prison [...] il faut qu'ils soient enfermés pendant 15 jours dans des prisons un peu spéciales »",
+      "sourceUrl": "https://www.europe1.fr/politique/objectif-elysee-2027-sil-est-elu-bruno-retailleau-souhaite-instaurer-des-peines-minimales-1064336",
+      "dateDeclaration": "2026-09-08",
       "typeSource": "prise_de_position",
-      "contexte": "Interview sur Europe 1 après une rixe mortelle en Essonne. La justice des mineurs serait réformée en profondeur : les mineurs auteurs de crimes seraient jugés comme des adultes, avec de courtes peines de prison dans des établissements adaptés."
+      "contexte": "Entretien dans l'émission « Objectif Élysée 2027 » d'Europe 1, présenté comme une mesure de son programme présidentiel. Selon lui, ces mineurs « ne savent plus calculer la portée de leurs actes » ; ils ne seraient pas mêlés aux détenus pour terrorisme."
     },
     {
       "id": "prop-br-3",
       "ref": "P-423",
       "candidatId": "bruno-retailleau",
       "thematiqueId": "travail",
-      "titre": "Compter le temps de travail à l'année et le porter de 1 607 à 1 623 heures par an",
-      "description": "« Il propose d'annualiser le temps de travail, en passant de 1607 heures (les 35 heures hebdomadaires) à 1623 heures »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/la-fete-est-finie-bruno-retailleau-veut-supprimer-les-35-heures-inciter-a-la-reprise-dactivite-et-plafonner-les-aides-sociales-pour-relancer-lemploi",
-      "dateDeclaration": "2026-01-07",
-      "typeSource": "prise_de_position",
-      "contexte": "Plan pour l'emploi rapporté par Public Sénat. 1 607 heures par an correspondent aux 35 heures par semaine. Au-delà : ni cotisations ni impôt (hors CSG-CRDS) ; les heures supplémentaires seraient fixées par la négociation entre employeurs et syndicats.",
+      "titre": "Compter le temps de travail à l'année et relever de 1 607 à 1 623 heures le seuil des heures supplémentaires",
+      "description": "« Le seuil est fixé à 1 623 heures par an, au lieu de 1 607 heures aujourd'hui, soit deux jours de travail supplémentaires rémunérés » ; « La mesure s'accompagne d'une annualisation du temps de travail »",
+      "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/01/51705_LesRepublicains_Brochures_A5-40P_DEF.pdf",
+      "typeSource": "programme_2027",
+      "contexte": "Livret thématique sur le travail (décembre 2025), p. 20-21. 1 607 heures par an correspondent aux 35 heures par semaine. Au-delà du seuil, plus aucune cotisation salariale ni patronale, seules la CSG et la CRDS restant dues ; majoration des heures selon l'accord d'entreprise.",
       "enjeuId": "temps-de-travail",
       "sens": "contre"
-    },
-    {
-      "id": "prop-br-4",
-      "ref": "P-862",
-      "candidatId": "bruno-retailleau",
-      "thematiqueId": "logement",
-      "sujetId": "trafic-de-drogue",
-      "titre": "Obliger les bailleurs à demander au juge la fin du bail des locataires liés au trafic de drogue",
-      "description": "« enjoindre aux bailleurs sociaux et privés de saisir le juge judiciaire en résiliation du bail locatif »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/parlementaire/interdiction-de-paraitre-sur-des-points-de-deal-expulsion-locative-bruno-retailleau-transmet-une-nouvelle-circulaire-de-lutte-contre-le-narcotrafic-aux-prefets",
-      "dateDeclaration": "2025-07-24",
-      "typeSource": "prise_de_position",
-      "contexte": "Circulaire aux préfets contre le narcotrafic, rapportée par Public Sénat. Le préfet l'ordonnerait aux bailleurs sociaux comme privés. Prévoit aussi d'interdire aux personnes liées au trafic de paraître sur les points de deal."
-    },
-    {
-      "id": "prop-br-5",
-      "ref": "P-785",
-      "candidatId": "bruno-retailleau",
-      "thematiqueId": "international",
-      "sujetId": "expulsions",
-      "titre": "Conditionner les visas accordés à un pays à son accord pour reprendre ses ressortissants expulsés",
-      "description": "« politique de visas à la délivrance des laissez-passer »",
-      "sourceUrl": "https://telquel.ma/instant-t/2024/10/02/bruno-retailleau-en-2023-la-france-a-delivre-au-maroc-238-750-visas-mais-na-obtenu-que-725-laissez-passer_1896520/",
-      "dateDeclaration": "2024-10-02",
-      "typeSource": "prise_de_position",
-      "contexte": "Interview au Figaro Magazine, rapportée par TelQuel : il veut conditionner la politique de visas aux laissez-passer consulaires, document indispensable pour renvoyer un étranger dans son pays d'origine. Exemple cité : 238 750 visas donnés au Maroc en 2023 pour 725 laissez-passer."
-    },
-    {
-      "id": "prop-br-6",
-      "ref": "P-324",
-      "candidatId": "bruno-retailleau",
-      "thematiqueId": "institutions",
-      "sujetId": "parlement-gouvernement",
-      "titre": "Réduire de 20 à 25 % le nombre de parlementaires",
-      "description": "« le chiffre de « 20/25% » de parlementaires en moins »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/reforme-constitutionnelle-il-faut-ecouter-le-senat-dit-retailleau-83384",
-      "dateDeclaration": "2018-03-06",
-      "typeSource": "prise_de_position",
-      "contexte": "Réaction sur France 2 au projet de réforme constitutionnelle de 2018, rapportée par Public Sénat. Pas d'objection à la baisse si elle ne se fait pas « aux dépens de la France rurale » ; elle permettrait aussi de donner plus de moyens au Parlement."
     },
     {
       "id": "prop-br-7",
@@ -1202,7 +1166,7 @@
       "description": "« 135 euros nets de plus par mois en début de carrière, jusqu'à 300 euros en milieu, sur le traitement des professeurs, pas les primes. »",
       "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/09/LR_Ecole_vF.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Livret thématique sur l'éducation, p. 7 (première des dix mesures pour l'école). Hausse du salaire de base, pas des primes, « sans impôt nouveau » : début de carrière aligné sur la moyenne européenne, au moins la moitié de l'écart comblée en milieu de carrière (p. 10)."
+      "contexte": "Livret thématique sur l'éducation (septembre 2026), p. 7 (première des dix mesures pour l'école). Hausse du salaire de base, pas des primes, « sans impôt nouveau » : début de carrière aligné sur la moyenne européenne, au moins la moitié de l'écart comblée en milieu de carrière (p. 10)."
     },
     {
       "id": "prop-br-8",
@@ -1214,7 +1178,45 @@
       "description": "« Réviser la Constitution pour y inscrire l'agriculture comme intérêt fondamental de la Nation »",
       "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/03/LR_Agriculture.pdf",
       "typeSource": "programme_2027",
-      "contexte": "Livret thématique sur l'agriculture, p. 11 (proposition 1 sur 10). Une loi organique le préciserait et le juge devrait en tenir compte face aux exigences environnementales ; le livret propose aussi de supprimer le principe de précaution de la Charte de l'environnement."
+      "contexte": "Livret thématique sur l'agriculture (février 2026), p. 11 (proposition 1 sur 10). Une loi organique le préciserait et le juge devrait en tenir compte face aux exigences environnementales ; le livret propose aussi de supprimer le principe de précaution de la Charte de l'environnement."
+    },
+    {
+      "id": "prop-br-9",
+      "ref": "P-413",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "societe",
+      "sujetId": "droits-des-etrangers",
+      "titre": "Conditionner les aides sociales des étrangers à cinq ans de résidence légale et de travail",
+      "description": "« Je veux conditionner l’accès aux aides sociales, pour les étrangers, à cinq ans de résidence légale et de travail. Une aide n’est pas un dû, surtout lorsque l’on n’a pas cotisé. »",
+      "sourceUrl": "https://republicains.fr/actualites/2026/05/31/ma-candidature-ira-jusquau-bout/",
+      "dateDeclaration": "2026-05-31",
+      "typeSource": "prise_de_position",
+      "contexte": "Entretien au Journal du dimanche, repris sur le site du parti. Le texte ne dit pas quelles aides sont visées. Veut aussi réduire l'immigration légale motif par motif : asile, étudiants étrangers (fin de l'exonération automatique des frais d'inscription, quotas par filière), regroupement familial."
+    },
+    {
+      "id": "prop-br-10",
+      "ref": "P-651",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "institutions",
+      "sujetId": "referendum",
+      "titre": "Réviser la Constitution pour soumettre au référendum une loi complète sur l'immigration",
+      "description": "« Je ferai donc réviser la Constitution pour élargir le référendum et soumettre aux Français, dans les premiers mois de mon mandat, un projet de loi complet sur l’immigration. »",
+      "sourceUrl": "https://republicains.fr/actualites/2026/05/31/ma-candidature-ira-jusquau-bout/",
+      "dateDeclaration": "2026-05-31",
+      "typeSource": "prise_de_position",
+      "contexte": "Entretien au Journal du dimanche, repris sur le site du parti. Selon lui, ce sont aujourd'hui « les juges, les jurisprudences, les contraintes européennes » qui décident ; changer le droit supposerait de réviser la Constitution et de modifier les règles européennes, sans quoi « tout moratoire sera une passoire »."
+    },
+    {
+      "id": "prop-br-11",
+      "ref": "P-832",
+      "candidatId": "bruno-retailleau",
+      "thematiqueId": "logement",
+      "sujetId": "squat-impayes",
+      "titre": "Expulser les squatteurs par une procédure administrative, dans un délai de dix jours au plus",
+      "description": "« les situations de squat feront l'objet d'une procédure administrative d'expulsion accélérée [...] l'expulsion interviendra dans un délai maximal de dix jours »",
+      "sourceUrl": "https://republicains.fr/wp-content/uploads/2026/05/LR_Logement.pdf",
+      "typeSource": "programme_2027",
+      "contexte": "Livret thématique sur le logement (mai 2026), p. 36, proposition 9. Procédure lancée dès le constat par les forces de l'ordre ou un commissaire de justice ; le propriétaire pourrait faire couper l'eau et l'électricité. Les décisions d'expulsion seraient exécutées sous 30 jours."
     },
     {
       "id": "prop-dl-1",
@@ -1222,12 +1224,11 @@
       "candidatId": "david-lisnard",
       "thematiqueId": "institutions",
       "sujetId": "pouvoirs-locaux",
-      "titre": "Donner aux collectivités locales le pouvoir de fixer les règles, hors domaines régaliens",
-      "description": "« transférer le pouvoir règlementaire - sauf dans le champ régalien - aux collectivités territoriales »",
-      "sourceUrl": "https://www.maire-info.com/congr%C3%A8s-de-l'amf/david-lisnard--les-crises-ont-demontre-la-solidite-de-l'echelon-communal--article-30199",
-      "dateDeclaration": "2025-11-14",
-      "typeSource": "prise_de_position",
-      "contexte": "Interview avant le Congrès des maires. Les collectivités prendraient des règlements aujourd'hui fixés par l'État, sauf dans les domaines régaliens. Mesure présentée comme possible sans réviser la Constitution, avec une autonomie financière et fiscale."
+      "titre": "Transférer aux collectivités l'essentiel des compétences de l'État et un pouvoir réglementaire",
+      "description": "« Le principe de base de la nouvelle décentralisation serait de transférer aux collectivités territoriales, outre l'essentiel des compétences aujourd'hui exercées par l'Etat [...] en dehors de son périmètre régalien et de garant des libertés publiques, un pouvoir normatif (décrets et arrêtés d'application des lois votées par le Parlement). »",
+      "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/generer-un-renouveau-civique/",
+      "typeSource": "programme_2027",
+      "contexte": "Programme du site de campagne, volet « Générer un renouveau civique ». Trois niveaux, État, provinces et communes, à valider par référendum ; des provinces naîtraient de la fusion de départements et de régions. Autonomie financière par un partage de recettes fiscales nationales."
     },
     {
       "id": "prop-dl-2",
@@ -1268,19 +1269,6 @@
       "contexte": "Programme sécurité du site de campagne. Les polices municipales auraient aussi accès aux fichiers, plus de pouvoirs de verbalisation et des amendes forfaitaires délictuelles."
     },
     {
-      "id": "prop-dl-5",
-      "ref": "P-693",
-      "candidatId": "david-lisnard",
-      "thematiqueId": "logement",
-      "sujetId": "sols-grands-projets",
-      "titre": "Assouplir la règle « zéro artificialisation nette », jugée inapplicable localement",
-      "description": "« on a créé, avec le ZAN, un dispositif si complexe qu'il est inapplicable localement, inéquitable » ; « La proposition de loi Trace vise à assouplir le dispositif du ZAN »",
-      "sourceUrl": "https://www.ffbatiment.fr/revues-guides/bam/79-juin-2025/liberer-acte-construire-entretien-avec-david-lisnard-maire-cannes",
-      "dateDeclaration": "2025-06-02",
-      "typeSource": "prise_de_position",
-      "contexte": "Entretien dans la revue de la Fédération française du bâtiment. Le ZAN, qui limite la construction sur les espaces naturels et agricoles, y est jugé inapplicable localement et inéquitable. Propose aussi de simplifier l'urbanisme et d'accélérer la récupération de terrains."
-    },
-    {
       "id": "prop-dl-7",
       "ref": "P-155",
       "candidatId": "david-lisnard",
@@ -1317,6 +1305,18 @@
       "contexte": "Programme immigration du site de campagne. Prévoit aussi des quotas de main-d'œuvre qualifiée, un regroupement familial soumis à des ressources et à des tests d'intégration, et la fin de l'automaticité du droit du sol."
     },
     {
+      "id": "prop-dl-10",
+      "ref": "P-439",
+      "candidatId": "david-lisnard",
+      "thematiqueId": "logement",
+      "sujetId": "logement-social",
+      "titre": "Supprimer l'obligation pour les communes d'avoir 20 à 25 % de logements sociaux",
+      "description": "« Dans ce domaine une mesure essentielle sera la suppression de l'article 55 de la loi SRU du 13 décembre 2000 obligeant les communes à disposer de 20% et bientôt 25% de logements sociaux. »",
+      "sourceUrl": "https://www.unenouvelleenergie.fr/notre-programme/reussir-une-nouvelle-ambition-francaise/",
+      "typeSource": "programme_2027",
+      "contexte": "Programme du site de campagne, volet « Réussir une nouvelle ambition française ». Remplacerait, peut-être pour un temps, l'objectif sur le nombre total de logements sociaux par un objectif plafonné sur les constructions neuves, fixé entre l'État et les collectivités ; « plus des deux tiers des Français » y seraient éligibles."
+    },
+    {
       "id": "prop-db-1",
       "ref": "P-335",
       "candidatId": "delphine-batho",
@@ -1324,23 +1324,10 @@
       "sujetId": "climat-emissions",
       "titre": "Diviser par deux la consommation d'énergie pour atteindre la neutralité carbone",
       "description": "« Il n'y a aucun scénario de neutralité carbone qui ne commence par diviser par deux la consommation d'énergie. »",
-      "sourceUrl": "https://www.generationecologie.fr/2026/06/22/quelle-politique-energetique-pour-la-france/",
+      "sourceUrl": "https://delphinebatho.fr/quelle-politique-energetique-pour-la-france/",
       "dateDeclaration": "2026-06-22",
       "typeSource": "prise_de_position",
-      "contexte": "Intervention aux Entretiens de Terra Nova sur la politique énergétique, faute de programme 2027 publié. Autres priorités citées : réseaux plus résistants, énergie produite et partagée localement (autoconsommation collective), chaleur et froid renouvelables."
-    },
-    {
-      "id": "prop-db-2",
-      "ref": "P-154",
-      "candidatId": "delphine-batho",
-      "thematiqueId": "numerique",
-      "sujetId": "intelligence-artificielle",
-      "titre": "Soumettre au débat public la multiplication des data centers et le passage à la 6G",
-      "description": "« Est-ce bien raisonnable [...] de se lancer sans débat dans la multiplication des data centers, ou encore dans la 6G après la 5G ? Autant de choix collectifs qui doivent être débattus. »",
-      "sourceUrl": "https://www.generationecologie.fr/2026/06/22/quelle-politique-energetique-pour-la-france/",
-      "dateDeclaration": "2026-06-22",
-      "typeSource": "prise_de_position",
-      "contexte": "Intervention aux Entretiens de Terra Nova sur la politique énergétique. Critique le choix de faire de la France une plaque tournante des data centers pour l'intelligence artificielle, sans souveraineté numérique ni égard pour l'eau et l'énergie consommées."
+      "contexte": "Intervention aux Entretiens de Terra Nova sur la politique énergétique, reprise sur le site de campagne. Autres priorités citées : réseaux plus résistants, énergie produite et partagée localement (autoconsommation collective), chaleur et froid renouvelables."
     },
     {
       "id": "prop-db-3",
@@ -1362,12 +1349,11 @@
       "candidatId": "delphine-batho",
       "thematiqueId": "institutions",
       "sujetId": "pouvoirs-du-president",
-      "titre": "Abolir le présidentialisme, la prééminence du président sous la Ve République",
-      "description": "« plus que le simple changement de l'occupant actuel de l'Élysée, nous devons porter l'abolition du présidentialisme. »",
-      "sourceUrl": "https://www.generationecologie.fr/2025/10/14/preparer-lalternative-ecologiste-au-systeme-politique-en-place/",
-      "dateDeclaration": "2025-10-14",
-      "typeSource": "prise_de_position",
-      "contexte": "Communiqué du parti en réaction au discours de politique générale du Premier ministre. Ce régime centré sur le président y est jugé par nature contraire à la recherche de compromis ; changer d'occupant à l'Élysée ne suffirait pas."
+      "titre": "Abolir le présidentialisme, la concentration des pouvoirs entre les mains du président",
+      "description": "« Je veux abolir la concentration des pouvoirs par le présidentialisme, vestige hérité de la monarchie. »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-republique-terrestre/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne (novembre 2026), proposition 7 « En finir avec le présidentialisme ». Veut une démocratie qui fait place à la délibération citoyenne, respecte le Parlement et reconnaît les corps intermédiaires ; la vie associative aurait un cadre de soutien stable."
     },
     {
       "id": "prop-db-5",
@@ -1375,38 +1361,11 @@
       "candidatId": "delphine-batho",
       "thematiqueId": "securite",
       "sujetId": "securite-civile",
-      "titre": "Créer un ministère de la résilience, de la protection civile et des situations d'urgence",
-      "description": "« reconnaître la sécurité climatique comme une priorité nationale, dotée d'un ministère régalien de la résilience, de la protection civile et des situations d'urgence »",
-      "sourceUrl": "https://www.generationecologie.fr/2026/05/27/canicule-vingt-ans-de-lecons-non-apprises/",
-      "dateDeclaration": "2026-05-27",
-      "typeSource": "prise_de_position",
-      "contexte": "Communiqué du parti après la canicule de mai. Va avec la généralisation des réserves communales de sécurité civile (présentes dans 755 communes) et une loi de programmation pluriannuelle pour l'adaptation au changement climatique."
-    },
-    {
-      "id": "prop-db-6",
-      "ref": "P-878",
-      "candidatId": "delphine-batho",
-      "thematiqueId": "societe",
-      "sujetId": "laicite",
-      "titre": "Renforcer la protection des défenseurs de la laïcité",
-      "description": "« il est urgent de renforcer la protection des actrices et acteurs défenseurs de la laïcité, en adaptant les moyens républicains à la réalité des menaces qu'elle doit désormais affronter. »",
-      "sourceUrl": "https://www.generationecologie.fr/2025/12/09/120-ans-de-la-loi-du-9-decembre-1905-donnons-de-nouveaux-moyens-aux-defenseurs-de-la-laicite/",
-      "dateDeclaration": "2025-12-09",
-      "typeSource": "prise_de_position",
-      "contexte": "Communiqué du parti pour les 120 ans de la loi de 1905. Menaces citées : intimidations et cyberharcèlement visant notamment les enseignants, terrorisme islamiste. Demande aussi des sanctions exemplaires, après explication, contre les atteintes à la laïcité à l'école."
-    },
-    {
-      "id": "prop-db-7",
-      "ref": "P-697",
-      "candidatId": "delphine-batho",
-      "thematiqueId": "agriculture",
-      "sujetId": "politique-agricole-commune",
-      "titre": "Réserver les aides agricoles européennes au bio, à l'agroécologie et à la sortie de l'élevage industriel",
-      "description": "« [...] consacrer tous les moyens de la politique agricole commune à la transformation agroécologique, à la conversion à l'agriculture biologique, à la sortie des modes d'élevage industriels [...] »",
-      "sourceUrl": "https://www.generationecologie.fr/2024/12/27/pour-un-etat-resilience/",
-      "dateDeclaration": "2024-12-27",
-      "typeSource": "prise_de_position",
-      "contexte": "Contribution du parti au plan national d'adaptation au changement climatique, proposition 4 « Une agriculture régénérative ». La souveraineté alimentaire y est une « urgence de sécurité nationale » ; prévoit aussi l'installation de nouveaux éleveurs et maraîchers."
+      "titre": "Créer un ministère de la sécurité civile et voter une loi de programmation pour les pompiers",
+      "description": "« Je donnerai aux pompiers la loi de programmation budgétaire qu'ils réclament et un ministère régalien dédié à la sécurité civile. »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-securite-climatique-et-la-paix/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne (novembre 2026), proposition 2. Face aux événements extrêmes, la protection de la population est présentée comme un « impératif de sécurité nationale » ; prévoit aussi la pleine reconnaissance du volontariat, du bénévolat et de la participation citoyenne."
     },
     {
       "id": "prop-db-8",
@@ -1414,12 +1373,47 @@
       "candidatId": "delphine-batho",
       "thematiqueId": "sante",
       "sujetId": "pesticides",
-      "titre": "Interdire tous les pesticides et produits chimiques cancérigènes",
-      "description": "« Tous les pesticides et produits chimiques cancérigènes doivent être interdits. »",
-      "sourceUrl": "https://www.generationecologie.fr/2025/10/27/incidence-record-du-cancer-en-france-agir-enfin-sur-les-causes/",
-      "dateDeclaration": "2025-10-27",
-      "typeSource": "prise_de_position",
-      "contexte": "Tribune du parti pendant Octobre Rose, face à la hausse des cancers. L'abrogation d'une loi agricole récente sur les pesticides serait une première étape ; demande aussi un registre national des cancers et de vastes études épidémiologiques."
+      "titre": "Retirer tout de suite les autorisations des pesticides cancérigènes et perturbateurs endocriniens",
+      "description": "« Les autorisations des pesticides cancérigènes, mutagènes, reprotoxiques et perturbateurs endocriniens seront retirées immédiatement. »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-pleine-sante/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne (novembre 2026), proposition 1 « Sauver notre agriculture et sortir des pesticides en cinq ans ». Mesure présentée contre les causes environnementales des cancers ; 11 millions de personnes seraient en insécurité alimentaire."
+    },
+    {
+      "id": "prop-db-9",
+      "ref": "P-883",
+      "candidatId": "delphine-batho",
+      "thematiqueId": "agriculture",
+      "sujetId": "politique-agricole-commune",
+      "titre": "Conditionner toutes les aides agricoles au bio et à l'agroécologie d'ici la fin du quinquennat",
+      "description": "« Au terme du quinquennat, les aides publiques en agriculture seront conditionnées à l'agriculture biologique et à l'agroécologie régénérative, pour s'adapter au réchauffement climatique, créer des emplois agricoles dans les campagnes et protéger notre sécurité alimentaire. »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-pleine-sante/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne (novembre 2026), proposition 1 « Sauver notre agriculture et sortir des pesticides en cinq ans ». Le système alimentaire coûterait 48 milliards d'euros d'argent public par an, à redéployer vers l'agriculture et la sécurité alimentaire."
+    },
+    {
+      "id": "prop-db-10",
+      "ref": "P-559",
+      "candidatId": "delphine-batho",
+      "thematiqueId": "numerique",
+      "sujetId": "intelligence-artificielle",
+      "titre": "Appliquer sans attendre les règles européennes pour protéger les œuvres face à l'intelligence artificielle",
+      "description": "« [...] doit être à l'avant-garde de la bataille pour réguler l'intelligence artificielle. Sans attendre, elle doit mettre en œuvre tout ce que permet déjà la réglementation européenne pour stopper le pillage des œuvres d'art et des productions intellectuelles [...] »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-beaute-pour-vivre-mieux/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne (novembre 2026), proposition 5 « Défendre l'intelligence et la créativité humaine ». Le sujet de la phrase est la France ; la mesure vise aussi à « protéger notre intégrité psychique ». Le texte ne cite pas de règlement européen précis."
+    },
+    {
+      "id": "prop-db-11",
+      "ref": "P-738",
+      "candidatId": "delphine-batho",
+      "thematiqueId": "societe",
+      "sujetId": "culture-audiovisuel",
+      "titre": "Remplacer peu à peu les publicités de l'espace public par des œuvres d'art",
+      "description": "« Les publicités dans l'espace public seront remplacées progressivement par des œuvres d'art, en commençant par supprimer les écrans publicitaires numériques. »",
+      "sourceUrl": "https://delphinebatho.fr/priorites/la-beaute-pour-vivre-mieux/",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne (novembre 2026), proposition 4 « Se libérer de la publicité et des frustrations qu'elle génère ». Chacun serait exposé à « plus de 2 000 messages publicitaires par jour ». Le texte ne fixe pas de calendrier."
     },
     {
       "id": "prop-ep-1",
@@ -1427,11 +1421,10 @@
       "candidatId": "edouard-philippe",
       "thematiqueId": "economie",
       "titre": "Porter la retraite à 65 ans et 45 années de cotisation en moins de 10 ans",
-      "description": "« poursuivre pour atteindre 65 ans et 45 annuités « en moins de 10 ans » »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/retraites-edouard-philippe-sort-du-bois-et-propose-un-age-de-depart-a-65-ans",
-      "dateDeclaration": "2026-09-29",
-      "typeSource": "prise_de_position",
-      "contexte": "Annonce de campagne rapportée par Public Sénat. D'abord rétablir la réforme de 2023 (64 ans, 43 années de cotisation), puis passer à 65 ans, avec une part de retraite par capitalisation ; départ possible entre 60 et 64 ans pour les carrières longues.",
+      "description": "« porter progressivement l'âge de départ à 65 ans et la durée de cotisation à 45 ans en moins de dix ans, pour ceux qui le peuvent. »",
+      "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, priorité « Pour une France plus prospère », sans hausse des cotisations ni baisse générale des pensions. Un Français sur trois pourrait partir avant 65 ans ; âges maintenus pour les personnes en mauvaise santé et départs anticipés pour carrières longues ; capitalisation collective pour tous les salariés.",
       "enjeuId": "reculer-retraite",
       "sens": "pour"
     },
@@ -1457,20 +1450,7 @@
       "description": "« Faire des chefs d'établissements les véritables patrons de l'école : liberté [...] d'imposer l'uniforme, de fixer les règles de discipline, de participer au recrutement et à l'évaluation de leur équipe. »",
       "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
       "typeSource": "programme_2027",
-      "contexte": "Site de campagne, priorité « Pour une France plus attentive à ses enfants ». Les chefs d'établissement fixeraient aussi la discipline ; les rémunérations des professeurs seraient augmentées."
-    },
-    {
-      "id": "prop-ep-4",
-      "ref": "P-575",
-      "candidatId": "edouard-philippe",
-      "thematiqueId": "travail",
-      "sujetId": "temps-de-travail",
-      "titre": "Donner le maximum de liberté dans l'entreprise sur le temps de travail",
-      "description": "« Je pense que faire les 35 heures était une erreur. » ; « donner le maximum de libertés dans l'entreprise »",
-      "sourceUrl": "https://www.planet.fr/faut-il-mettre-fin-aux-35-heures-retailleau-pour-edouard-philippe-contre.2999403.817022.html",
-      "dateDeclaration": "2026-08-30",
-      "typeSource": "prise_de_position",
-      "contexte": "Propos sur BFMTV rapportés par Planet.fr. Ne propose pas de supprimer les 35 heures, car « beaucoup d'entreprises ont déjà trouvé une façon de s'organiser », mais estime qu'« il faudra que chacun travaille un peu plus »."
+      "contexte": "Site de campagne, priorité « Pour une France plus attentive à ses enfants ». Les chefs d'établissement fixeraient aussi la discipline ; la rémunération moyenne des enseignants augmenterait de 20 % sur le quinquennat."
     },
     {
       "id": "prop-ep-6",
@@ -1522,6 +1502,18 @@
       "contexte": "Site de campagne, priorité « Pour une France plus prospère », volet comptes publics. Le déficit passerait de plus de 5 % à 2 % du produit intérieur brut à la fin du quinquennat ; un tiers des fonctionnaires partant à la retraite ne serait pas remplacé."
     },
     {
+      "id": "prop-ep-10",
+      "ref": "P-732",
+      "candidatId": "edouard-philippe",
+      "thematiqueId": "travail",
+      "sujetId": "temps-de-travail",
+      "titre": "Exonérer d'impôt et de cotisations les heures en plus décidées dans l'entreprise",
+      "description": "« lorsqu'une entreprise décide, après discussion interne, de travailler plus longtemps, exonérer ces heures de cotisations sociales et d'impôt sur le revenu, soit environ 1 000 € de plus par an au SMIC pour deux heures de plus par semaine. »",
+      "sourceUrl": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+      "typeSource": "programme_2027",
+      "contexte": "Site de campagne, priorité « Pour une France plus prospère », pour « que le travail supplémentaire paie ». La décision se prendrait entreprise par entreprise, après discussion interne ; gain chiffré pour un salarié au SMIC qui travaille deux heures de plus par semaine."
+    },
+    {
       "id": "prop-ez-1",
       "ref": "P-962",
       "candidatId": "eric-zemmour",
@@ -1532,19 +1524,18 @@
       "sourceUrl": "https://www.parismatch.be/actualites/monde/2026/09/18/eric-zemmour-confirme-sa-candidature-a-lelection-presidentielle-francaise-5CKEL6PZ4BDONOUKVHMMCG65NU/",
       "dateDeclaration": "2026-09-17",
       "typeSource": "prise_de_position",
-      "contexte": "Propos sur BFMTV à l'annonce de la candidature, rapportés par Paris Match Belgique. Vise aussi tous les étrangers détenus et les condamnés sous bracelet électronique."
+      "contexte": "Propos sur BFMTV en confirmant qu'il serait candidat, rapportés par Paris Match Belgique. Vise aussi tous les étrangers détenus et les condamnés sous bracelet électronique."
     },
     {
       "id": "prop-ez-2",
       "ref": "P-243",
       "candidatId": "eric-zemmour",
       "thematiqueId": "education",
-      "titre": "Rétablir le port obligatoire de l'uniforme pour les élèves de l'école publique",
-      "description": "« the return of the uniforms in state schools »",
-      "sourceUrl": "https://connexionfrance.com/article/French-news/Far-right-French-election-candidate-calls-for-state-school-uniforms",
-      "dateDeclaration": "2022-01-10",
+      "titre": "Rendre obligatoire le port de la blouse pour les élèves de l'école primaire",
+      "description": "« Lutter contre le harcèlement scolaire, le communautarisme et les inégalités sociales en rendant le port de la blouse obligatoire à l'école primaire »",
+      "sourceUrl": "https://assets.nationbuilder.com/themes/61c071ce4764e8b1483d1a8c/attachments/original/1648220408/programme_eric_zemmour_presidentielle_2022.pdf?1648220408",
       "typeSource": "programme_anterieur",
-      "contexte": "Conférence de presse sur le programme éducation 2022, rapportée par Connexion France (en anglais). Prévoit aussi un examen en fin de primaire pour passer au collège et l'orientation vers l'apprentissage dès 14 ans.",
+      "contexte": "Programme présidentiel 2022, p. 22, faute de mesure plus récente sur la tenue des élèves. Le même programme (p. 10) veut « gommer les différences vestimentaires » à l'école.",
       "enjeuId": "uniforme-ecole",
       "sens": "pour"
     },
@@ -1554,12 +1545,11 @@
       "candidatId": "eric-zemmour",
       "thematiqueId": "institutions",
       "sujetId": "union-europeenne",
-      "titre": "Faire primer les nouvelles lois françaises sur les traités internationaux et européens",
-      "description": "« supériorité des nouvelles lois nationales sur tous les textes internationaux et européens »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme",
-      "dateDeclaration": "2022-03-23",
+      "titre": "Faire primer les nouvelles lois françaises sur les traités et textes internationaux antérieurs",
+      "description": "« Instaurer la supériorité des nouvelles lois nationales sur tout texte international antérieur et sur tout acte dérivé qui en résulte en modifiant l'article 55 de la Constitution »",
+      "sourceUrl": "https://assets.nationbuilder.com/themes/61c071ce4764e8b1483d1a8c/attachments/original/1648220408/programme_eric_zemmour_presidentielle_2022.pdf?1648220408",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, rapporté par Public Sénat. Une loi votée après un traité l'emporterait sur lui, ce qui permettrait d'appliquer d'autres mesures contraires au droit international, comme la fin du regroupement familial."
+      "contexte": "Programme présidentiel 2022, p. 6. Passe par une révision de l'article 55 de la Constitution et vaut aussi pour les actes dérivés des traités. Le Parlement réuni en Congrès, à la majorité des trois cinquièmes, aurait aussi le dernier mot sur une loi jugée contraire à la Constitution."
     },
     {
       "id": "prop-ez-6",
@@ -1567,12 +1557,12 @@
       "candidatId": "eric-zemmour",
       "thematiqueId": "societe",
       "sujetId": "laicite",
-      "titre": "Interdire le voile islamique et la kippa dans l'espace public",
+      "titre": "Interdire le port du voile et de la kippa dans l'espace public",
       "description": "« Dans l'espace public oui »",
       "sourceUrl": "https://www.bfmtv.com/politique/elections/presidentielle/video-interdiction-du-voile-et-de-la-kippa-dans-l-espace-public-oui-repond-eric-zemmour-president-de-reconquete_VN-202609170912.html",
       "dateDeclaration": "2026-09-17",
       "typeSource": "prise_de_position",
-      "contexte": "Entretien télévisé « Face à BFM » (BFMTV, extrait vidéo). Réponse à la question : l'interdiction du voile dans l'espace public vaudrait-elle aussi pour la kippa ?"
+      "contexte": "Entretien télévisé « Face à BFM » (extrait vidéo BFMTV). Réponse à la question « Interdiction du voile et de la kippa ? », posée en titre de l'extrait."
     },
     {
       "id": "prop-ez-7",
@@ -1630,12 +1620,12 @@
       "candidatId": "fabien-roussel",
       "thematiqueId": "travail",
       "sujetId": "smic-salaires",
-      "titre": "Augmenter le SMIC pour atteindre rapidement 1 500 euros net par mois",
-      "description": "« Le smic horaire sera augmenté pour atteindre rapidement 1 500 euros net par mois (soit 1 923 euros brut) »",
-      "sourceUrl": "https://web.archive.org/web/20221231143452id_/https://www.fabienroussel2022.fr/1_un_mouvement_d_augmentation_g_n_rale_des_salaires_des_minima_sociaux_et_des_pensions_sera_engag",
-      "dateDeclaration": "2022-01-24",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, site de campagne (copie d'archive). Prévoit aussi des pensions d'au moins 1 200 euros net, une hausse de 30 % des salaires de la fonction publique et une négociation pour relever toute la grille des salaires."
+      "titre": "Porter le SMIC à 1 700 euros net et augmenter tous les salaires de 5 %",
+      "description": "« C'est pourquoi nous demandons rapidement et sans attendre les élections, de porter le SMIC à 1 700 € net, avec une augmentation de tous les salaires de 5 % maintenant, dès cette rentrée. »",
+      "sourceUrl": "https://www.pcf.fr/ue_26_discours_fr",
+      "dateDeclaration": "2026-08-26",
+      "typeSource": "prise_de_position",
+      "contexte": "Discours à l'université d'été du parti à Toulouse. Demande aussi une hausse immédiate de 30 % du point d'indice de tous les fonctionnaires et le retour de l'échelle mobile des salaires, pour que les salaires augmentent avec les prix."
     },
     {
       "id": "prop-fro-2",
@@ -1656,12 +1646,12 @@
       "ref": "P-304",
       "candidatId": "fabien-roussel",
       "thematiqueId": "sante",
-      "titre": "Prendre intégralement en charge tous les soins prescrits par les professionnels de santé",
-      "description": "« Tout ce qui est prescrit par les professionnels de santé dans le cadre réglementaire sera intégralement pris en charge avec un mécanisme de tiers payant »",
-      "sourceUrl": "https://medecine-generale.lequotidiendumedecin.fr/actus-medicales/politique-de-sante/fabien-roussel-je-veux-creer-un-service-public-du-grand-age",
-      "dateDeclaration": "2022-04-08",
+      "titre": "Rembourser à 100 % tous les soins prescrits et supprimer les franchises médicales",
+      "description": "« Nous proposons exactement le chemin inverse : supprimer les franchises médicales et les participations forfaitaires et aller vers le remboursement à 100 % par la Sécurité sociale de tous les soins prescrits, sans reste à charge. »",
+      "sourceUrl": "https://www.pcf.fr/franchises_le_gouvernement_fait_payer_les_malades",
+      "dateDeclaration": "2026-07-23",
       "typeSource": "prise_de_position",
-      "contexte": "Interview dans Le Quotidien du Médecin. Un seul organisme, la Sécurité sociale via l'Assurance maladie, couvrirait tous les besoins ; mise en place par étapes, en commençant par les priorités médicales et sociales ; à terme, plus besoin de complémentaires.",
+      "contexte": "Déclaration du candidat publiée par son parti, en réponse au doublement (de 100 à 200 euros par an) du plafond des franchises médicales. Prévoit aussi la fin des dépassements d'honoraires et le développement des centres de santé et de l'hôpital public.",
       "enjeuId": "soins-rembourses",
       "sens": "pour"
     },
@@ -1671,12 +1661,12 @@
       "candidatId": "fabien-roussel",
       "thematiqueId": "agriculture",
       "sujetId": "revenu-agricole",
-      "titre": "Permettre à l'État de fixer des prix planchers agricoles en cas de prix trop bas",
-      "description": "« En cas de prix trop bas, l'État aurait le pouvoir d'intervenir pour définir des prix planchers, sur le modèle du coefficient multiplicateur existant pour le secteur des fruits et légumes »",
-      "sourceUrl": "https://www.terre-net.fr/actualite-agricole/politique-syndicalisme/article/fabien-roussel-parti-communiste-presente-son-programme-agricole-205-202534.html",
-      "dateDeclaration": "2021-10-06",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme agricole rapporté par Terre-net. Modèle cité : le coefficient multiplicateur des fruits et légumes. Prix négociés chaque année par filière, en public, entre producteurs et grande distribution."
+      "titre": "Fixer des prix planchers agricoles couvrant les coûts de production et encadrer les marges",
+      "description": "« La véritable urgence est le revenu. [...] des prix planchers couvrant les coûts de production, l'encadrement des marges, le rétablissement du coefficient multiplicateur et des outils publics de stockage. »",
+      "sourceUrl": "https://www.pcf.fr/reaction_loi_agricole2026",
+      "dateDeclaration": "2026-07-22",
+      "typeSource": "prise_de_position",
+      "contexte": "Déclaration du parti du candidat, après le vote de la loi d'urgence agricole de 2026. Le coefficient multiplicateur plafonne les marges sur les fruits et légumes en crise. Propose aussi un Grenelle de l'agriculture associant les agriculteurs aux nouveaux outils publics."
     },
     {
       "id": "prop-fro-5",
@@ -1684,37 +1674,26 @@
       "candidatId": "fabien-roussel",
       "thematiqueId": "logement",
       "sujetId": "logement-social",
-      "titre": "Construire 200 000 logements sociaux par an, dont 60 000 très sociaux",
-      "description": "« Atteindre 200 000 logements sociaux par an, dont 60 000 très sociaux. »",
-      "sourceUrl": "https://edito.seloger.com/actualites/france/presidentielle-2027-propositions-de-fabien-roussel-logement-article-23785_2.html",
-      "dateDeclaration": "2026-09-28",
+      "titre": "Construire 200 000 logements sociaux par an et porter à 30 % le taux imposé en zone urbaine",
+      "description": "« 200 000 nouveaux logements sociaux par an pendant 5 ans [...] et une loi SRU « à 30% » nous y aidera grandement. »",
+      "sourceUrl": "https://www.pcf.fr/une_loi_sru_2_avec_un_taux_de_logements_sociaux_porte_a_30",
+      "dateDeclaration": "2026-09-26",
       "typeSource": "prise_de_position",
-      "contexte": "Article de SeLoger sur les propositions logement pour 2027, reprenant le programme précédent. Prévoit aussi 30 % de logements sociaux en zone urbaine, l'encadrement des loyers et la TVA à 5,5 % sur l'énergie."
+      "contexte": "Texte du parti du candidat, en réponse à la proposition de supprimer la loi SRU. Ce taux de logements sociaux imposé aux communes, de 20 % en 2000 et 25 % depuis 2013, passerait à 30 % en zone urbaine, pour 1 million de logements sociaux sur le quinquennat."
     },
     {
       "id": "prop-fro-7",
       "ref": "P-480",
       "candidatId": "fabien-roussel",
       "thematiqueId": "international",
-      "titre": "Quitter l'Alliance atlantique (OTAN) et demander sa dissolution",
-      "description": "« La France quittera l'Organisation du Traité de l'Atlantique-Nord (Otan) et demandera sa dissolution »",
-      "sourceUrl": "https://d3n8a8pro7vhmx.cloudfront.net/fabienroussel2022/pages/217/attachments/original/1643038967/exe_la_france_des_jours_heureux_LIVRE_stc.pdf?1643038967",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, proposition 167, p. 124. Un cadre commun de coopération et de sécurité collective serait créé en Europe, avec les États voisins jusqu'à la Russie, par une conférence européenne puis un traité.",
+      "titre": "Sortir du commandement intégré de l'Alliance atlantique (OTAN), première étape vers sa sortie et sa dissolution",
+      "description": "« La France doit sortir du commandement intégré de l'OTAN, première étape vers la sortie et la dissolution de l'OTAN dans le cadre de la constitution d'un espace pan-européen de sécurité collective. »",
+      "sourceUrl": "https://www.pcf.fr/l_otan_c_est_la_guerre_et_la_corruption",
+      "dateDeclaration": "2025-10-22",
+      "typeSource": "prise_de_position",
+      "contexte": "Texte signé du candidat, publié par son parti le 24 octobre 2025, alors que le gouvernement veut doubler les dépenses d'armement. Il y défend un pôle public de défense indépendant de l'OTAN et des États-Unis.",
       "enjeuId": "quitter-otan",
       "sens": "pour"
-    },
-    {
-      "id": "prop-fro-8",
-      "ref": "P-113",
-      "candidatId": "fabien-roussel",
-      "thematiqueId": "institutions",
-      "sujetId": "pouvoirs-du-president",
-      "titre": "Supprimer l'élection du président au suffrage universel et le limiter à un rôle de représentation",
-      "description": "« Le président de la République n'aura plus qu'un rôle de représentation de la nation et, pour en finir avec sa prééminence, son élection au suffrage universel sera supprimée. »",
-      "sourceUrl": "https://d3n8a8pro7vhmx.cloudfront.net/fabienroussel2022/pages/217/attachments/original/1643038967/exe_la_france_des_jours_heureux_LIVRE_stc.pdf?1643038967",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022, proposition 132, p. 107. Le Parlement primerait : l'Assemblée nationale investirait le Premier ministre et le gouvernement, le 49-3 (adoption d'une loi sans vote) serait abrogé et le président perdrait son immunité judiciaire."
     },
     {
       "id": "prop-fro-9",
@@ -1728,6 +1707,19 @@
       "dateDeclaration": "2026-09-15",
       "typeSource": "prise_de_position",
       "contexte": "Discours de rentrée, texte publié par son parti. Mesure annoncée avec le rétablissement de l'impôt de solidarité sur la fortune et des cotisations sur les revenus financiers et les dividendes pour financer la Sécurité sociale et les retraites."
+    },
+    {
+      "id": "prop-fro-10",
+      "ref": "P-806",
+      "candidatId": "fabien-roussel",
+      "thematiqueId": "institutions",
+      "sujetId": "parlement-gouvernement",
+      "titre": "Obliger les partis à présenter 50 % d'ouvriers et d'employés aux élections législatives",
+      "description": "« la parité sociale que nous proposons, c'est de faire en sorte qu'à l'Assemblée et au Sénat, au Parlement, il y ait autant d'ouvriers, d'employés et moins d'avocats, de fiscalistes et de financiers. [...] Tous les partis seront tenus de présenter 50 % d'ouvriers, d'employés aux élections législatives et la démocratie s'en portera mieux. »",
+      "sourceUrl": "https://www.pcf.fr/fete_de_lhumanite_2026_discours_de_fabien_roussel",
+      "dateDeclaration": "2026-09-12",
+      "typeSource": "prise_de_position",
+      "contexte": "Discours à la Fête de l'Humanité, publié par son parti le 15 septembre 2026. Mesure dite « parité sociale », à débattre « dans les semaines et les mois qui viennent » ; il veut aussi plus de démocratie dans les entreprises et les grands groupes."
     },
     {
       "id": "prop-fp-1",
@@ -1826,19 +1818,18 @@
       "description": "« Assurer une liberté vaccinale pour tous les citoyens et les soignants. Aucune pression, discrimination ou menace ne doit peser sur ceux qui refusent un traitement médical, y compris un vaccin. »",
       "sourceUrl": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
       "typeSource": "programme_2027",
-      "contexte": "En France, 11 vaccins sont obligatoires pour les enfants et certaines obligations s'appliquent aux soignants. La mesure supprimerait toute obligation vaccinale et interdirait toute sanction, suspension d'emploi ou restriction d'accès liée au statut vaccinal."
+      "contexte": "Livret programme, édition 2026-2027, volet santé. Aucun soignant ne devrait perdre son emploi pour avoir refusé un vaccin. Le même volet prévoit de supprimer le Conseil de l'Ordre, de sortir de l'Organisation mondiale de la santé et de dénoncer le traité mondial sur les pandémies."
     },
     {
       "id": "prop-fa-1",
       "ref": "P-788",
       "candidatId": "francois-asselineau",
       "thematiqueId": "international",
-      "titre": "Faire sortir la France de l'Union européenne dès l'élection, par l'article 50",
-      "description": "« de sortir de l'UE par la mise en oeuvre de l'article 50 [...] dès mon installation à l'Elysée »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-asselineau-s-estime-seul-candidat-du-frexit-58556",
-      "dateDeclaration": "2017-04-10",
+      "titre": "Notifier la sortie de l'Union européenne (article 50) dès la première semaine du mandat",
+      "description": "« dès la première semaine de son mandat, il s'engage à notifier l'activation de l'article 50 du Traité sur l'Union européenne afin d'engager une procédure de sortie sous deux ans »",
+      "sourceUrl": "https://upr.fr/universites/discours-de-rentree-2026-de-francois-asselineau-la-liberation-nationale",
       "typeSource": "prise_de_position",
-      "contexte": "Meeting à Lille pendant la présidentielle 2017, rapporté par Public Sénat. L'article 50 du traité sur l'Union européenne permet à un pays d'en sortir.",
+      "contexte": "Compte rendu de son discours de rentrée de septembre 2026, publié par son parti (à la troisième personne). Il refuse un référendum préalable, son élection valant mandat ; la sortie se ferait sous deux ans.",
       "enjeuId": "quitter-union-europeenne",
       "sens": "pour"
     },
@@ -1847,12 +1838,11 @@
       "ref": "P-245",
       "candidatId": "francois-asselineau",
       "thematiqueId": "international",
-      "titre": "Faire sortir complètement la France de l'Alliance atlantique (OTAN)",
-      "description": "« et de l'Otan par l'article 13 dès mon installation à l'Elysée »",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-asselineau-s-estime-seul-candidat-du-frexit-58556",
-      "dateDeclaration": "2017-04-10",
+      "titre": "Notifier dès l'élection la sortie de la France de l'Alliance atlantique (OTAN), effective sous un an",
+      "description": "« notification immédiate au Département d'État américain via l'article 13 pour faire sortir la France de l'alliance sous un an »",
+      "sourceUrl": "https://upr.fr/universites/discours-de-rentree-2026-de-francois-asselineau-la-liberation-nationale",
       "typeSource": "prise_de_position",
-      "contexte": "Meeting à Lille pendant la présidentielle 2017, rapporté par Public Sénat. L'article 13 du traité de l'Atlantique Nord permet à un pays de quitter l'OTAN.",
+      "contexte": "Compte rendu de son discours de rentrée de septembre 2026, publié par son parti. L'article 13 du traité de l'Atlantique Nord permet à un pays de quitter l'alliance un an après l'avoir notifié aux États-Unis.",
       "enjeuId": "quitter-otan",
       "sens": "pour"
     },
@@ -1862,10 +1852,10 @@
       "candidatId": "francois-asselineau",
       "thematiqueId": "institutions",
       "titre": "Créer le référendum d'initiative citoyenne (RIC), déclenché par les électeurs eux-mêmes",
-      "description": "« Créer le Référendum d'initiative citoyenne (RIC) »",
-      "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme 2022, mesure 13. Les citoyens pourraient déclencher eux-mêmes un référendum, imposé pour toute révision de la Constitution. Prévoit aussi de retirer de la Constitution les références à la construction européenne.",
+      "description": "« instauration du Référendum d'Initiative Citoyenne (RIC) »",
+      "sourceUrl": "https://upr.fr/universites/discours-de-rentree-2026-de-francois-asselineau-la-liberation-nationale",
+      "typeSource": "prise_de_position",
+      "contexte": "Compte rendu de son discours de rentrée de septembre 2026, publié par son parti, volet « démocratie directe et liberté d'expression ». Prévoit aussi d'inscrire la liberté d'expression dans la Constitution et la primauté du peuple sur le Conseil constitutionnel.",
       "enjeuId": "referendum-initiative-citoyenne",
       "sens": "pour"
     },
@@ -1875,7 +1865,7 @@
       "candidatId": "francois-asselineau",
       "thematiqueId": "economie",
       "sujetId": "etat-actionnaire",
-      "titre": "Renationaliser EDF, le gaz, l'eau, La Poste, les autoroutes, la SNCF et la RATP",
+      "titre": "Renationaliser ou stopper la privatisation d'EDF, du gaz, de l'eau, de La Poste, des autoroutes, de la SNCF et de la RATP",
       "description": "« Nous renationaliserons ou cesserons le processus de privatisation rampante et de dégradation de la qualité de service »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
       "typeSource": "programme_anterieur",
@@ -1899,7 +1889,7 @@
       "candidatId": "francois-asselineau",
       "thematiqueId": "agriculture",
       "sujetId": "accords-libre-echange",
-      "titre": "Sortir des traités de libre-échange déjà adoptés, comme celui avec le Canada (CETA)",
+      "titre": "Dénoncer les traités de libre-échange avec d'autres continents déjà adoptés, comme celui avec le Canada (CETA)",
       "description": "« dénoncerons les traités transcontinentaux déjà adoptés tels que le CETA »",
       "sourceUrl": "https://upr.fr/notre-programme/programme-2022",
       "typeSource": "programme_anterieur",
@@ -1930,19 +1920,6 @@
       "contexte": "Programme 2022, mesure 11. Le budget de l'hôpital public augmenterait de 15 % dès le premier budget ; objectif de 265 000 lits en fin de quinquennat, dont 25 000 en réanimation, soins intensifs et surveillance continue."
     },
     {
-      "id": "prop-fr-1",
-      "ref": "P-369",
-      "candidatId": "francois-ruffin",
-      "thematiqueId": "travail",
-      "sujetId": "smic-salaires",
-      "titre": "Interdire qu'un salaire dépasse 20 fois un autre dans la même entreprise",
-      "description": "« l'écart de rémunération [...] entre deux salariés ou entre un salarié et le dirigeant de la société ne peut excéder un rapport de un à vingt. »",
-      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1237/AN/2670.pdf",
-      "dateDeclaration": "2018-09-21",
-      "typeSource": "prise_de_position",
-      "contexte": "Amendement déposé à l'Assemblée nationale sur la loi PACTE. L'écart maximal de 1 à 20 vaudrait entre deux salariés comme entre un salarié et le dirigeant, dans les entreprises privées et publiques."
-    },
-    {
       "id": "prop-fr-2",
       "ref": "P-912",
       "candidatId": "francois-ruffin",
@@ -1951,8 +1928,9 @@
       "titre": "Créer un statut des travailleurs essentiels et mettre fin à leurs temps partiels subis",
       "description": "« reconnaître un statut des travailleurs et travailleuses essentielles » ; « mettre fin aux temps partiels subis par les salariés essentiels »",
       "sourceUrl": "https://nouspresident.fr/statut-travailleurs-essentiels/",
+      "dateDeclaration": "2026-04-13",
       "typeSource": "programme_2027",
-      "contexte": "Cahier de campagne « Pour les travailleurs essentiels ». Concerne notamment les aides à domicile, les accompagnantes d'élèves en situation de handicap et les auxiliaires de vie ; prévoit aussi d'indexer leurs salaires sur l'inflation."
+      "contexte": "Cahier de campagne « Pour les travailleurs essentiels ». Concerne notamment les aides à domicile, les accompagnantes d'élèves en situation de handicap et les auxiliaires de vie. Les dérogations à la durée minimale de 24 heures par semaine seraient limitées et sanctionnées ; les salaires en général seraient indexés sur l'inflation."
     },
     {
       "id": "prop-fr-3",
@@ -1960,9 +1938,10 @@
       "candidatId": "francois-ruffin",
       "thematiqueId": "logement",
       "sujetId": "renovation-energetique",
-      "titre": "Atteindre 800 000 rénovations complètes de logements par an, avec un financement public",
+      "titre": "Porter progressivement à 800 000 par an les rénovations complètes de logements, avec un financement public des restes à charge",
       "description": "« atteindre progressivement 800 000 rénovations d'ampleur par an » ; « solutions de financement public pour les restes à charge »",
       "sourceUrl": "https://nouspresident.fr/travaillisme-ecologique/",
+      "dateDeclaration": "2026-09-09",
       "typeSource": "programme_2027",
       "contexte": "Cahier de campagne « Pour un travaillisme écologique ». Objectif atteint progressivement (600 000 par an en moyenne sur le quinquennat) ; budget de l'État pour la rénovation multiplié par 4, aides plus progressives et financement public du reste à payer des ménages."
     },
@@ -1975,35 +1954,9 @@
       "titre": "Protéger l'agriculture française par des quotas d'importation et des prix minimums",
       "description": "« Des protections à nos frontières, des quotas d'importation, des barrières douanières. » ; « que des prix minimums soient fixés pour les denrées agricoles les plus représentatives »",
       "sourceUrl": "https://nouspresident.fr/pour-une-exception-agriculturelle-francaise/",
+      "dateDeclaration": "2026-10-07",
       "typeSource": "programme_2027",
       "contexte": "Cahier de campagne « Pour une exception agriculturelle française ». Prévoit une rupture avec le libre-échange (dont les accords avec le Canada et le Mercosur) et des prix minimums garantis pour les produits agricoles."
-    },
-    {
-      "id": "prop-fr-5",
-      "ref": "P-545",
-      "candidatId": "francois-ruffin",
-      "thematiqueId": "economie",
-      "titre": "Rétablir l'impôt sur la fortune (ISF), payé chaque année par les plus riches",
-      "description": "« Rendez l'ISF d'abord, monsieur le Président ! »",
-      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QG1383.pdf",
-      "dateDeclaration": "2018-11-14",
-      "typeSource": "prise_de_position",
-      "contexte": "Question au Gouvernement posée à l'Assemblée nationale. Elle critique la suppression de l'ISF au début du quinquennat.",
-      "enjeuId": "impot-fortune",
-      "sens": "pour"
-    },
-    {
-      "id": "prop-fr-6",
-      "ref": "P-188",
-      "candidatId": "francois-ruffin",
-      "thematiqueId": "education",
-      "sujetId": "apprentissages-ecole",
-      "titre": "Plafonner les classes à 20 élèves, à l'essai pendant 3 ans dans certaines académies",
-      "description": "« À titre expérimental, pour une durée de trois ans, le Gouvernement peut, dans des académies qu'il identifie [...], décider que le nombre total des élèves scolarisés au sein d'une classe [...] ne peut être supérieur à vingt »",
-      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/15/amendements/1481/CION-CEDU/AC370.pdf",
-      "dateDeclaration": "2019-01-25",
-      "typeSource": "prise_de_position",
-      "contexte": "Amendement déposé à l'Assemblée nationale sur la loi « École de la confiance ». Plafond de 20 élèves en maternelle, en élémentaire et en lycée professionnel ou technologique, et de 25 en lycée général."
     },
     {
       "id": "prop-fr-7",
@@ -2014,8 +1967,9 @@
       "titre": "Créer une branche de la Sécurité sociale pour couvrir les dommages climatiques, après concertation",
       "description": "« nous lancerons un grand cycle de concertation sur l'organisation de la solidarité nationale, pour avancer vers la création d'une Sécurité climatique, nouvelle branche permanente de la Sécurité sociale »",
       "sourceUrl": "https://nouspresident.fr/plan-urgence-climat/",
+      "dateDeclaration": "2026-10-12",
       "typeSource": "programme_2027",
-      "contexte": "Plan d'urgence climat, publié après l'été 2026. Cette « Sécurité climatique » regrouperait les aides face aux catastrophes naturelles (dont le fonds Barnier) et les indemnités agricoles ; dès 2027, le fonds Barnier passerait de 300 millions à 1 milliard d'euros."
+      "contexte": "Plan d'urgence climat de la campagne. Cette « Sécurité climatique » regrouperait les aides face aux catastrophes naturelles (dont le fonds Barnier) et les indemnités agricoles ; dès 2027, le fonds Barnier passerait de 300 millions à 1 milliard d'euros."
     },
     {
       "id": "prop-fr-8",
@@ -2023,11 +1977,52 @@
       "candidatId": "francois-ruffin",
       "thematiqueId": "institutions",
       "sujetId": "transparence-vie-publique",
-      "titre": "Interdire pendant dix ans aux ex-ministres et hauts fonctionnaires de faire du lobbying",
-      "description": "« Dans les dix premières années suivant le départ du Gouvernement [...] Aucun ministre, conseiller ministériel ou haut fonctionnaire ne pourra aller faire des relations publiques, du conseil, du lobbying »",
+      "titre": "Interdire pendant dix ans aux ex-ministres et hauts fonctionnaires le lobbying auprès des entreprises liées à leurs anciennes fonctions",
+      "description": "« Dans les dix premières années suivant le départ du Gouvernement [...] Aucun ministre, conseiller ministériel ou haut fonctionnaire ne pourra aller faire des relations publiques, du conseil, du lobbying [...] auprès d'administrations ou d'entreprises qui auront eu un lien avec ses responsabilités précédentes »",
       "sourceUrl": "https://nouspresident.fr/separation-argent-etat/",
+      "dateDeclaration": "2026-07-02",
       "typeSource": "programme_2027",
       "contexte": "Cahier de campagne « Pour une séparation de l'argent et de l'État ». Vise aussi les conseillers ministériels, le conseil et les relations publiques liés aux anciennes fonctions ; toute reconversion dans le privé passerait par une Haute Autorité à la Probité, qui pourrait l'interdire."
+    },
+    {
+      "id": "prop-fr-9",
+      "ref": "P-721",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "economie",
+      "titre": "Taxer chaque année à 2 % les patrimoines de plus de 100 millions d'euros",
+      "description": "« Proposition 1 : Taxe Zucman (18,5 Md€) : Gabriel Zucman propose une taxe annuelle de 2 % sur les patrimoines supérieurs à 100 M€, après déduction des impôts déjà acquittés. »",
+      "sourceUrl": "https://nouspresident.fr/plan-de-redressement/",
+      "dateDeclaration": "2026-10-21",
+      "typeSource": "programme_2027",
+      "contexte": "Plan de redressement de la campagne, partie sur un impôt continu sur le patrimoine. Recette attendue : 18,5 milliards d'euros par an. Le plan relève un risque juridique (plafonnement imposé par le Conseil constitutionnel en 2012) et propose aussi de taxer davantage les grandes successions.",
+      "enjeuId": "impot-fortune",
+      "sens": "pour"
+    },
+    {
+      "id": "prop-fr-10",
+      "ref": "P-687",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "education",
+      "sujetId": "apprentissages-ecole",
+      "titre": "Allonger le certificat d'aptitude professionnelle (CAP) à 3 ans et le bac professionnel à 4 ans",
+      "description": "« Repasser la durée d’un CAP en formation initiale à 3 ans (2 aujourd’hui), et celle d’un Bac professionnel à 4 ans (3 aujourd’hui). »",
+      "sourceUrl": "https://nouspresident.fr/education-une-ecole-de-tous-les-savoirs/",
+      "dateDeclaration": "2026-10-28",
+      "typeSource": "programme_2027",
+      "contexte": "Cahier de campagne « Éducation : une école de tous les savoirs », proposition pour renforcer la voie professionnelle. Retour aux durées en vigueur avant la réforme de 2009, pour améliorer le niveau et l'expérience professionnelle des élèves. Prévoit aussi des savoirs pratiques au collège et le remplacement de Parcoursup."
+    },
+    {
+      "id": "prop-fr-11",
+      "ref": "P-870",
+      "candidatId": "francois-ruffin",
+      "thematiqueId": "travail",
+      "sujetId": "conditions-de-travail",
+      "titre": "Créer un congé bénévole sans perte de revenus, une demi-journée par mois",
+      "description": "« Nous créerons un véritable congé bénévole, ouvert à toutes et tous, y compris sans mandat statutaire, et sans perte de revenus [...] »",
+      "sourceUrl": "https://nouspresident.fr/temps-loisirs/",
+      "dateDeclaration": "2026-07-17",
+      "typeSource": "programme_2027",
+      "contexte": "Cahier de campagne « Pour renouer avec le temps des loisirs », volet sur les associations. Les salariés des grandes entreprises pourraient s'engager une demi-journée par mois dans l'association de leur choix, sur le modèle du mécénat de compétences. Prévoit aussi 60 000 contrats aidés pour les associations."
     },
     {
       "id": "prop-ga-1",
@@ -2035,11 +2030,11 @@
       "candidatId": "gabriel-attal",
       "thematiqueId": "education",
       "titre": "Expérimenter l'uniforme à l'école, puis le généraliser s'il fait ses preuves",
-      "description": "« nous déploierons l'expérimentation de l'uniforme à l'école, symbole d'égalité républicaine. »",
-      "sourceUrl": "https://www.info.gouv.fr/actualite/ce-quil-faut-retenir-de-la-declaration-de-politique-generale-de-gabriel-attal",
+      "description": "« le Gouvernement soutient l'expérimentation de l'uniforme à l'école [...] si cette expérimentation est concluante, nous généraliserons l'uniforme en France à la rentrée 2026. »",
+      "sourceUrl": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/seance/session-ordinaire-de-2023-2024/deuxieme-seance-du-mardi-30-janvier-2024",
       "dateDeclaration": "2024-01-30",
       "typeSource": "prise_de_position",
-      "contexte": "Déclaration de politique générale devant l'Assemblée nationale, transcription publiée sur info.gouv.fr. Reprend l'annonce du Président de la République : l'uniforme serait généralisé en France à la rentrée 2026 si l'expérimentation est concluante.",
+      "contexte": "Déclaration de politique générale devant l'Assemblée nationale, compte rendu officiel de la séance. L'uniforme y est présenté comme un « symbole d'égalité républicaine » ; sa généralisation à la rentrée 2026 reprend une annonce du Président de la République.",
       "enjeuId": "uniforme-ecole",
       "sens": "pour"
     },
@@ -2303,7 +2298,7 @@
       "sourceUrl": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/l-invite-politique-du-mercredi-24-juin-2026_8043938.html",
       "dateDeclaration": "2026-06-24",
       "typeSource": "prise_de_position",
-      "contexte": "Invité politique de franceinfo, pendant une canicule. Le droit de retrait permet à un salarié de quitter son poste face à un danger ; ses règles seraient fixées avec syndicats, patronat et salariés. Proposé à la place d'un congé climatique, notamment pour le bâtiment."
+      "contexte": "Invité politique de franceinfo, pendant une canicule. Le droit de retrait permet à un salarié de quitter son poste face à un danger ; ses règles seraient fixées avec syndicats, patronat et salariés. Vise notamment le bâtiment et les travaux publics ; interrogé sur un congé climatique, il juge que « toutes les formules » sont possibles."
     },
     {
       "id": "prop-kb-6",
@@ -2324,7 +2319,7 @@
       "candidatId": "karim-bouamrane",
       "thematiqueId": "agriculture",
       "sujetId": "normes-europeennes-importations",
-      "titre": "Imposer aux agriculteurs français les mêmes règles qu'aux producteurs étrangers",
+      "titre": "Aligner les règles imposées aux agriculteurs français sur celles exigées des producteurs étrangers",
       "description": "« Je veux une transition juste : [...] qui protège nos agriculteurs, sans leur imposer des règles que nous refusons d'exiger de ceux qui nous nourrissent depuis l'étranger. »",
       "sourceUrl": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf",
       "typeSource": "programme_2027",
@@ -2349,7 +2344,7 @@
       "thematiqueId": "securite",
       "sujetId": "peines-prisons",
       "titre": "Rétablir les peines planchers et supprimer les réductions de peine",
-      "description": "« Rétablir les peines planchers pour que tout criminel et délinquant aient une sanction. Supprimer toute possibilité de réduction et d'aménagements de peine [...] »",
+      "description": "« Rétablir les peines planchers pour que tout criminel et délinquant aient une sanction. [...] Supprimer toute possibilité de réduction et d'aménagements de peine [...] »",
       "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
       "dateDeclaration": "2022-02-04",
       "typeSource": "programme_anterieur",
@@ -2360,12 +2355,12 @@
       "ref": "P-952",
       "candidatId": "marine-le-pen",
       "thematiqueId": "economie",
-      "titre": "Baisser la TVA de 20 % à 5,5 % sur les carburants, l'électricité et le gaz",
-      "description": "« Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité. »",
-      "sourceUrl": "https://web.archive.org/web/20220206100037id_/https://mlafrance.fr/pdfs/programme-22-mesures-pour-2022.pdf",
-      "dateDeclaration": "2022-02-04",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme présidentiel 2022 en 22 mesures, mesure 4, p. 3. Concerne aussi le fioul ; l'énergie y est présentée comme un bien de première nécessité.",
+      "titre": "Baisser la TVA sur les carburants de 20 % à 5,5 %",
+      "description": "« Baisser de 20% à 5,5 % la TVA sur les carburants pour pouvoir redonner de l'air aux Français [...] »",
+      "sourceUrl": "https://actu.orange.fr/politique/il-n-y-a-que-ca-a-faire-face-a-la-flambee-des-prix-marine-le-pen-plaide-pour-une-baisse-des-taxes-sur-le-carburant-magic-CNT000002rXN3t.html",
+      "dateDeclaration": "2026-09-18",
+      "typeSource": "prise_de_position",
+      "contexte": "Interview sur une radio locale rapportée par Orange Actualités, le jour où le gazole a dépassé 2,39 euros le litre. « Il n'y a qu'une seule méthode » : baisser aussi l'autre taxe sur le litre, la taxe intérieure de consommation sur les produits énergétiques. Exemple cité : le milieu rural, où la voiture est indispensable.",
       "enjeuId": "taxes-carburants",
       "sens": "pour"
     },
@@ -2415,12 +2410,12 @@
       "candidatId": "marine-le-pen",
       "thematiqueId": "societe",
       "sujetId": "laicite",
-      "titre": "Interdire le voile par décret dans les universités, sorties scolaires, fédérations sportives et bâtiments publics",
-      "description": "« L'objectif sera d'interdire le voile [...] par décret, tout de suite, juste après le vote de ce référendum, dans les universités, les sorties scolaires, les fédérations sportives, les bâtiments publics »",
+      "titre": "Après un référendum, interdire le voile par décret dans les universités, sorties scolaires, fédérations sportives et bâtiments publics",
+      "description": "« L'objectif sera d'interdire le voile [...] » ; « par décret, tout de suite, juste après le vote de ce référendum, dans les universités, les sorties scolaires, les fédérations sportives, les bâtiments publics »",
       "sourceUrl": "https://www.lagazettefrance.fr/article/interdiction-du-voile-le-pen-veut-le-faire-de-maniere-progressive",
       "dateDeclaration": "2026-09-16",
       "typeSource": "prise_de_position",
-      "contexte": "Interview télévisée rapportée par l'AFP. Le référendum porterait sur la lutte contre les idéologies islamistes : financements, mosquées radicales, imams, interdiction des Frères musulmans. Il suivrait un premier référendum, constitutionnel, sur l'immigration."
+      "contexte": "Interview télévisée rapportée par l'AFP. Le référendum porterait sur la lutte contre les idéologies islamistes : financements, mosquées radicales, imams, interdiction des Frères musulmans. Il suivrait un premier référendum, constitutionnel, sur l'immigration. « Je veux le faire de manière progressive »."
     },
     {
       "id": "prop-mlp-14",
@@ -2433,7 +2428,7 @@
       "sourceUrl": "https://actu.orange.fr/videos/politique/nous-etablirons-un-mode-de-scrutin-proportionnel-avec-une-prime-majoritaire-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle-CNT000002tnSdf.html",
       "dateDeclaration": "2026-10-25",
       "typeSource": "prise_de_position",
-      "contexte": "Extrait vidéo d'un discours au congrès d'un parti, diffusé par Orange Actualités. À la proportionnelle, les sièges suivent les voix ; la prime majoritaire ajoute des sièges à la liste arrivée en tête. La page ne précise pas l'élection concernée."
+      "contexte": "Extrait vidéo de son discours au congrès de son parti à Orléans, diffusé par Orange Actualités. La page ne précise ni l'élection concernée ni l'ampleur de la prime majoritaire."
     },
     {
       "id": "prop-mlp-15",
@@ -2604,7 +2599,7 @@
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle",
       "dateDeclaration": "2026-10-02",
       "typeSource": "prise_de_position",
-      "contexte": "Communiqué de presse annonçant la candidature, le programme 2027 n'étant pas encore publié. Les plans ORSEC organisent les secours en cas de catastrophe ; les animaux y seraient pris en compte."
+      "contexte": "Communiqué de presse annonçant la candidature, le programme 2027 n'étant pas encore publié. Les animaux seraient pris en compte dans les plans ORSEC, qui organisent les secours."
     },
     {
       "id": "prop-mm-5",
@@ -2630,7 +2625,7 @@
       "sourceUrl": "https://parti-animaliste.fr/wp-content/uploads/2024/05/programme-europeennes-2024.pdf",
       "dateDeclaration": "2024-05-28",
       "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 7 (dernier programme publié, pas de programme 2027). Le programme rappelle que la pêche est pilotée au niveau de l'Union ; prévoit aussi d'aider les pêcheurs à se reconvertir grâce aux subventions européennes de la pêche."
+      "contexte": "Programme des européennes 2024, p. 7 (dernier programme publié, pas de programme 2027). Le programme renvoie à la politique commune de la pêche de l'Union ; prévoit aussi d'aider les pêcheurs à se reconvertir grâce aux subventions européennes de la pêche."
     },
     {
       "id": "prop-mm-7",
@@ -2768,12 +2763,12 @@
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "travail",
       "sujetId": "smic-salaires",
-      "titre": "Augmenter massivement les salaires, allocations et pensions et les indexer sur les prix",
-      "description": "« Nous devons imposer une augmentation massive des salaires, des allocations et des pensions et leur indexation sur la hausse des prix »",
-      "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
-      "dateDeclaration": "2026-06-26",
+      "titre": "Augmenter salaires et pensions, porter le SMIC à 2 200 euros et les indexer sur l'inflation",
+      "description": "« Exigeons l'augmentation des salaires, des retraites et des pensions, le SMIC à 2 200 € et leur indexation sur l'inflation. »",
+      "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/11/Depliant-NA-3nov.pdf",
+      "dateDeclaration": "2026-11-03",
       "typeSource": "programme_2027",
-      "contexte": "Brochure de campagne présidentielle 2027, p. 8. Évoque 300 à 500 euros d'augmentation et « au moins 2 200 euros net par mois pour s'en sortir ». L'indexation suivrait la hausse réelle des prix (supermarché, carburant), pas l'inflation officielle."
+      "contexte": "Dépliant de campagne présidentielle 2027, p. 2 (mots en majuscules dans la source). Le dépliant ne dit pas si le SMIC à 2 200 euros est net ou brut ; il vise ailleurs « un salaire au-dessus de 2 200 € net », à prendre sur les profits des grandes entreprises."
     },
     {
       "id": "prop-na-2",
@@ -2799,20 +2794,7 @@
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
       "dateDeclaration": "2026-06-26",
       "typeSource": "programme_2027",
-      "contexte": "Brochure de campagne présidentielle 2027, p. 11. Vise les comptes des grands groupes, de leurs filiales et maisons-mères, pour une « transparence complète de leurs circuits financiers ». Prévoit aussi de confisquer les bénéfices tirés des ventes d'armes, au profit des hôpitaux et des écoles."
-    },
-    {
-      "id": "prop-na-4",
-      "ref": "P-343",
-      "candidatId": "nathalie-arthaud",
-      "thematiqueId": "logement",
-      "sujetId": "logements-vacants-loyers",
-      "titre": "Réquisitionner les logements et bureaux vacants pour loger sans-abri et mal-logés",
-      "description": "« Réquisition des logements et des bureaux vacants »",
-      "sourceUrl": "https://www.boursedescredits.com/actualite-election-presidentielle-programme-logement-nathalie-arthaud-2668.php",
-      "dateDeclaration": "2017-04-19",
-      "typeSource": "prise_de_position",
-      "contexte": "Entretien sur le logement pendant la présidentielle 2017, rapporté par Boursedescredits. Sur les deux millions de logements vacants recensés, « un certain nombre doivent être habitables ». Prévoit aussi un service du logement où l'État construirait les logements sociaux, loués à prix coûtant."
+      "contexte": "Brochure de campagne présidentielle 2027, p. 11-12. Vise l'intégralité des comptes des grands groupes, de leurs filiales et maisons-mères, pour une « transparence complète de leurs circuits financiers », afin qu'ils ne puissent pas dire qu'ils ne font pas de profits en France."
     },
     {
       "id": "prop-na-5",
@@ -2832,12 +2814,12 @@
       "ref": "P-881",
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "societe",
-      "titre": "Régulariser tous les sans-papiers et laisser chacun circuler et s'installer librement",
-      "description": "« Régularisation de tous les sans-papiers, liberté de circulation et d'installation pour chaque être humain de cette planète ! »",
+      "titre": "Régulariser la situation de tous les étrangers sans papiers",
+      "description": "« Régularisation de tous les sans-papiers [...] ! »",
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
       "dateDeclaration": "2026-06-26",
       "typeSource": "programme_2027",
-      "contexte": "Brochure de campagne présidentielle 2027, p. 13. Les sans-papiers sont les étrangers sans titre de séjour ; la liberté de circuler et de s'installer vaudrait pour tout être humain, quel que soit son pays.",
+      "contexte": "Brochure de campagne présidentielle 2027, p. 14. Réclame aussi la liberté de circulation et d'installation « pour chaque être humain de cette planète » et la fin des expulsions.",
       "enjeuId": "regulariser-sans-papiers",
       "sens": "pour"
     },
@@ -2852,7 +2834,7 @@
       "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
       "dateDeclaration": "2026-06-26",
       "typeSource": "programme_2027",
-      "contexte": "Brochure de campagne présidentielle 2027, p. 12. Les « profiteurs de guerre » visés sont les majors du pétrole et les industriels de l'armement ; prévoit aussi leur expropriation sans indemnité ni rachat de leurs actionnaires."
+      "contexte": "Brochure de campagne présidentielle 2027, p. 12. Les « profiteurs de guerre » visés sont les majors du pétrole, qui ont relevé les prix à la pompe avec la guerre en Iran, et les industriels de l'armement, qui voient affluer les commandes (p. 11)."
     },
     {
       "id": "prop-na-8",
@@ -2860,12 +2842,25 @@
       "candidatId": "nathalie-arthaud",
       "thematiqueId": "environnement",
       "sujetId": "climat-emissions",
-      "titre": "Planifier entre pays la production d'énergie et l'usage de l'eau et de l'intelligence artificielle",
+      "titre": "Organiser et rationaliser l'énergie, l'eau et l'intelligence artificielle, en se coordonnant entre pays",
       "description": "« Urgence à organiser et rationaliser la production d'énergie, les usages de l'eau, de l'intelligence artificielle. Urgence à se coordonner entre pays [...] »",
       "sourceUrl": "https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html",
       "dateDeclaration": "2026-09-26",
       "typeSource": "prise_de_position",
       "contexte": "Discours de meeting à Paris. Pour la candidate, cette planification de la transition écologique suppose l'expropriation des grands groupes, c'est-à-dire la fin de la propriété capitaliste sur les grands moyens de production."
+    },
+    {
+      "id": "prop-na-9",
+      "ref": "P-700",
+      "candidatId": "nathalie-arthaud",
+      "thematiqueId": "economie",
+      "sujetId": "etat-actionnaire",
+      "titre": "Exproprier sans indemnité les grands groupes, à commencer par le pétrole et l'armement",
+      "description": "« Expropriation sans indemnité ni rachat de leurs actionnaires en commençant par ceux de l’industrie pétrolière et des industries de guerre ! »",
+      "sourceUrl": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
+      "dateDeclaration": "2026-06-26",
+      "typeSource": "programme_2027",
+      "contexte": "Brochure de campagne présidentielle 2027, p. 12. Les actionnaires ne seraient ni indemnisés ni rachetés. Mesure présentée avec la levée du secret des affaires et la confiscation des bénéfices des « profiteurs de guerre » ; seuls « les travailleurs unis » pourraient l'imposer."
     },
     {
       "id": "prop-nda-1",
@@ -2901,8 +2896,8 @@
       "titre": "Réintégrer les soignants exclus et rétablir leurs trimestres de retraite perdus",
       "description": "« réintégration des soignants exclus et rétablissement de leurs trimestres de retraite perdus »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/sante/",
-      "typeSource": "programme_2027",
-      "contexte": "Programme, volet santé, première mesure, dans la même phrase que la suppression « immédiate, intégrale et irréversible » du passe sanitaire et de tout passe vaccinal. La page ne dit ni combien de soignants sont concernés ni comment les trimestres seraient rétablis."
+      "typeSource": "programme_anterieur",
+      "contexte": "Programme, volet santé, page non mise à jour pour 2027 (version de 2022), première mesure, dans la même phrase que la suppression « immédiate, intégrale et irréversible » du passe sanitaire et de tout passe vaccinal. La page ne dit ni combien de soignants sont concernés ni comment les trimestres seraient rétablis."
     },
     {
       "id": "prop-nda-4",
@@ -2914,19 +2909,7 @@
       "description": "« Réserver aux producteurs français 50% puis progressivement 80% des commandes publiques, notamment des cantines scolaires et de la restauration collective »",
       "sourceUrl": "https://www.debout-la-france.fr/projet/agriculture/",
       "typeSource": "programme_2027",
-      "contexte": "Programme, volet agriculture, mesure 9. D'abord 50 %, puis progressivement 80 % des commandes publiques, notamment des cantines scolaires."
-    },
-    {
-      "id": "prop-nda-5",
-      "ref": "P-558",
-      "candidatId": "nicolas-dupont-aignan",
-      "thematiqueId": "numerique",
-      "sujetId": "souverainete-numerique",
-      "titre": "Créer un moteur de recherche et des réseaux sociaux français",
-      "description": "« Lancer notre propre moteur de recherche (un « google » francophone) et nos propres réseaux sociaux »",
-      "sourceUrl": "https://www.debout-la-france.fr/projet/sciences-souverainete-industrielle/",
-      "typeSource": "programme_2027",
-      "contexte": "Programme, volet sciences et numérique, mesures 8 et 12. Prévoit aussi un cloud français souverain, de sortir du projet européen GAIA-X et de sécuriser les systèmes de l'État et de l'armée par le logiciel libre."
+      "contexte": "Programme, volet agriculture, partie sur la consommation de produits français. D'abord 50 %, puis progressivement 80 % des commandes publiques (cantines scolaires, restauration collective). La même partie prévoit l'étiquetage obligatoire du pays d'origine, un label unique « Produit en France » et plus de circuits courts."
     },
     {
       "id": "prop-nda-7",
@@ -2963,6 +2946,19 @@
       "sourceUrl": "https://www.debout-la-france.fr/projet/economie-travail/",
       "typeSource": "programme_2027",
       "contexte": "Programme, volet économie. En sortant du marché européen de fixation du prix de l'électricité, en rendant à EDF le monopole de la production et de la distribution, et avec un tarif national garanti de 10 centimes le kilowattheure."
+    },
+    {
+      "id": "prop-nda-10",
+      "ref": "P-534",
+      "candidatId": "nicolas-dupont-aignan",
+      "thematiqueId": "numerique",
+      "sujetId": "souverainete-numerique",
+      "titre": "Réserver en priorité les marchés publics de numérique aux entreprises françaises labellisées",
+      "description": "« Assurer une préférence nationale dans les marchés publics : priorité aux entreprises labelisées françaises en IA, cloud, cybersécurité et robotique. »",
+      "sourceUrl": "https://www.debout-la-france.fr/projet/intelligence-artificielle/",
+      "dateDeclaration": "2025-06-13",
+      "typeSource": "programme_2027",
+      "contexte": "Programme, volet « Intelligence artificielle », mis à jour pour 2027. Le label viserait les entreprises sans dépendance critique aux géants étrangers du numérique. Prévoit aussi une agence nationale de l'éthique et de la sécurité des IA et la formation des enseignants à l'IA dès le collège."
     },
     {
       "id": "prop-ob-1",
@@ -3074,20 +3070,7 @@
       "sourceUrl": "https://ouragan.cd/2026/06/notre-ennemi-cest-elon-musk-sam-altman-zhang-yiming-affirme-glucksmann",
       "dateDeclaration": "2026-06-13",
       "typeSource": "prise_de_position",
-      "contexte": "Dépêche AFP sur un meeting à Aubervilliers. La publicité ciblée est présentée comme le cœur du modèle économique des grandes plateformes."
-    },
-    {
-      "id": "prop-rg-4",
-      "ref": "P-673",
-      "candidatId": "raphael-glucksmann",
-      "thematiqueId": "travail",
-      "sujetId": "aides-publiques-entreprises",
-      "titre": "Conditionner toutes les aides et dépenses publiques à des critères sociaux",
-      "description": "« Introduire une conditionnalité sociale forte dans toutes les dépenses et subventions publiques, y compris la révision des directives sur les marchés publics »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 22, mesure 184, chapitre « Pour une Europe sociale ». Inclut la révision des directives européennes sur les marchés publics, pour garantir le respect du droit du travail et des droits syndicaux."
+      "contexte": "Dépêche AFP sur le premier grand meeting de campagne, à Aubervilliers, consacré à la souveraineté numérique. La publicité ciblée y est présentée comme le cœur du modèle économique des grandes plateformes. Promet aussi des investissements massifs, publics et privés, pour une intelligence artificielle souveraine, encadrée par la puissance publique."
     },
     {
       "id": "prop-rg-6",
@@ -3095,38 +3078,11 @@
       "candidatId": "raphael-glucksmann",
       "thematiqueId": "societe",
       "sujetId": "egalite-salariale",
-      "titre": "Sanctionner les entreprises qui ne respectent pas l'égalité salariale entre femmes et hommes",
-      "description": "« Réaliser l'égalité salariale entre les femmes et les hommes en sanctionnant financièrement les entreprises qui ne respectent pas le principe : « à travail égal, salaire égal ». »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 22, mesures 174-175. Prévoit aussi d'interdire les écarts de salaire supérieurs à 1 à 20 dans une même entreprise."
-    },
-    {
-      "id": "prop-rg-7",
-      "ref": "P-316",
-      "candidatId": "raphael-glucksmann",
-      "thematiqueId": "agriculture",
-      "sujetId": "revenu-agricole",
-      "titre": "Garantir le revenu agricole par des prix planchers et sortir l'agriculture du libre-échange",
-      "description": "« En garantissant le revenu des agriculteurs via des prix planchers rémunérateurs et en sortant l'agriculture du libre-échange pour la protéger de la concurrence déloyale. »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 17, mesures 134, 135 et 138. Prévoit aussi de passer des aides à l'hectare aux aides à l'emploi agricole, et de plafonner en France les aides à l'hectare de la politique agricole commune à 100 000 euros."
-    },
-    {
-      "id": "prop-rg-8",
-      "ref": "P-301",
-      "candidatId": "raphael-glucksmann",
-      "thematiqueId": "sante",
-      "sujetId": "medicaments",
-      "titre": "Créer un service public européen du médicament pour garantir les approvisionnements",
-      "description": "« En créant un service public du médicament pour répondre aux besoins de santé des Européens, garantir les approvisionnements et des prix justes. »",
-      "sourceUrl": "https://patrickbayeux.com/wp-content/uploads/2024/05/Raphael-Glucksmann-PSPP.pdf",
-      "dateDeclaration": "2024-05-15",
-      "typeSource": "programme_anterieur",
-      "contexte": "Programme des européennes 2024, p. 8, mesures 47-48, volet souveraineté sanitaire. Prévoit aussi de soutenir la production de médicaments en Europe, qui importe 80 % des principes actifs des médicaments génériques."
+      "titre": "Rendre publics les écarts de salaire entre femmes et hommes et sanctionner plus les employeurs",
+      "description": "« Renforcer l'égalité salariale entre hommes et femmes en rendant les écarts de rémunération transparents et en renforçant les sanctions contre les employeurs discriminants et en revalorisant les métiers féminisés. »",
+      "sourceUrl": "https://drive.google.com/uc?export=download&id=1Ols_EJxRAxOJeR-fLEKp7IzEk8-TSI1Q",
+      "typeSource": "prise_de_position",
+      "contexte": "Document de vision de son parti (« Acte I », juin 2025), p. 78, chantier pour un pacte d'égalité des droits des femmes, faute de programme 2027 complet sur ce thème. Le même chantier prévoit un plan d'un milliard d'euros contre les violences sexistes et sexuelles et une réforme du congé parental."
     },
     {
       "id": "prop-rg-9",
@@ -3168,6 +3124,44 @@
       "contexte": "Lettre d'information publiée comme député européen, alors rapporteur du programme européen pour l'industrie de défense. Montant présenté comme les besoins estimés par la Commission européenne, pour que l'Europe assure elle-même sa sécurité."
     },
     {
+      "id": "prop-rg-12",
+      "ref": "P-605",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "travail",
+      "sujetId": "smic-salaires",
+      "titre": "Taxer davantage les plus gros héritages pour augmenter de 15 milliards le salaire net des travailleurs",
+      "description": "« En taxant davantage les méga-héritages, les 1% les plus gros, 99% des héritages ne seront pas affectés [...] Ça nous permettra de récupérer 15 milliards d'euros que nous transfèrerons directement sur la fiche de paie des travailleurs français. »",
+      "sourceUrl": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/augmenter-les-salaires-en-taxant-les-plus-gros-heritages-la-proposition-de-raphael-glucksmann-est-elle-realiste_8076284.html",
+      "dateDeclaration": "2026-08-25",
+      "typeSource": "prise_de_position",
+      "contexte": "Propos du candidat rapportés par franceinfo, après l'annonce de sa candidature. Les droits de succession et de donation rapportent environ 20 milliards d'euros par an. Selon son coordinateur de campagne, la mesure passerait aussi par le pacte Dutreil (transmission d'entreprises familiales) et la taxation des plus-values latentes."
+    },
+    {
+      "id": "prop-rg-13",
+      "ref": "P-425",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "agriculture",
+      "sujetId": "politique-agricole-commune",
+      "titre": "Consacrer 20 à 25 % de la politique agricole commune à payer les agriculteurs pour les haies et les friches",
+      "description": "« Quand un agriculteur s'occupe d'une friche ou plante une haie, il doit être rémunéré. J'estime que 20 à 25 % de la nouvelle PAC doivent concerner cette rémunération »",
+      "sourceUrl": "https://france3-regions.franceinfo.fr/grand-est/marne/chalons-en-champagne/ce-sont-des-patriotes-de-pacotille-a-la-foire-de-chalons-raphael-glucksmann-en-campagne-contre-le-rn-3412121.html",
+      "dateDeclaration": "2026-09-05",
+      "typeSource": "prise_de_position",
+      "contexte": "Propos tenus à la foire de Châlons-en-Champagne, rapportés par France 3. Annonce aussi « un grand plan d'adaptation pour l'agriculture » ; la France devrait être « à l'avant-garde d'une refonte de la PAC », alors en pleine négociation européenne."
+    },
+    {
+      "id": "prop-rg-14",
+      "ref": "P-418",
+      "candidatId": "raphael-glucksmann",
+      "thematiqueId": "sante",
+      "sujetId": "hopital-public",
+      "titre": "Mettre fin à la tarification à l'acte à l'hôpital pour un financement global et pluriannuel",
+      "description": "« Contrer la financiarisation du système de santé, en finir avec la tarification à l'acte à l'hôpital, proposer un financement global, territorial et pluri-annuel [...] »",
+      "sourceUrl": "https://drive.google.com/uc?export=download&id=1Ols_EJxRAxOJeR-fLEKp7IzEk8-TSI1Q",
+      "typeSource": "prise_de_position",
+      "contexte": "Document de vision de son parti (« Acte I », juin 2025), p. 50, chantier « Bien soigner, partout ! », faute de programme 2027 sur la santé. Prévoit aussi des centres de santé, des dispensaires et des permanences mobiles dans les zones rurales."
+    },
+    {
       "id": "prop-sl-1",
       "ref": "P-939",
       "candidatId": "selma-labib",
@@ -3191,7 +3185,7 @@
       "sourceUrl": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
       "dateDeclaration": "2026-09-28",
       "typeSource": "programme_2027",
-      "contexte": "Tract de campagne présidentielle de 4 pages, p. 2. Les salariés recenseraient eux-mêmes les besoins d'embauches dans chaque atelier, école et hôpital ; mesures financées sur les profits des multinationales."
+      "contexte": "Tract de campagne présidentielle, p. 2. Les salariés recenseraient eux-mêmes les besoins d'embauches dans chaque atelier, école et hôpital ; mesures financées sur les profits des multinationales."
     },
     {
       "id": "prop-sl-3",
@@ -3258,7 +3252,7 @@
       "sourceUrl": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
       "dateDeclaration": "2026-09-28",
       "typeSource": "programme_2027",
-      "contexte": "Tract de campagne présidentielle de 4 pages, p. 3, partie sur le climat. Mesure présentée face aux canicules, sécheresses et incendies ; elle viserait tous les secteurs : logement, alimentation, énergie, transport."
+      "contexte": "Tract de campagne présidentielle, p. 2, partie sur le climat. Mesure présentée face aux canicules, sécheresses et incendies ; elle viserait tous les secteurs : logement, alimentation, énergie, transport."
     },
     {
       "id": "prop-sl-8",
@@ -3271,7 +3265,7 @@
       "sourceUrl": "https://npa-revolutionnaires.org/articles/dans-le-matin-dalgerie-selma-labib-porte-parole-du-npa-revolutionnaires-cest-nous-qui-travaillons-cest-nous-qui-decidons",
       "dateDeclaration": "2026-03-01",
       "typeSource": "prise_de_position",
-      "contexte": "Interview au Matin d'Algérie, republiée sur le site de l'organisation, avant la désignation pour la présidentielle. Citée avec la régularisation des sans-papiers et la libre circulation ; le type d'élection concerné n'est pas précisé."
+      "contexte": "Interview au Matin d'Algérie, republiée sur le site de l'organisation, pendant la campagne des municipales de mars 2026. Citée avec la régularisation des sans-papiers et la libre circulation ; le type d'élection concerné n'est pas précisé."
     },
     {
       "id": "prop-tr-1",
@@ -3363,7 +3357,7 @@
       "sourceUrl": "https://www.nousfrance.fr/2026/08/presidentielle-2027-xavier-bertrand-un-non-candidat-en-campagne-lopinion/",
       "dateDeclaration": "2026-08-19",
       "typeSource": "prise_de_position",
-      "contexte": "Réunion publique en Corrèze rapportée par L'Opinion, en réponse à un habitant inquiet d'une taxe sur les voitures électriques instaurée au Royaume-Uni. L'engagement est comparé à la hausse passée des taxes sur le gazole ; il promet aussi des économies « sans créer de nouveaux impôts »."
+      "contexte": "Réunion publique en Corrèze rapportée par L'Opinion, en réponse à un habitant inquiet d'une taxe sur les voitures électriques instaurée au Royaume-Uni. L'engagement est comparé à la hausse passée des taxes sur le gazole ; son projet se veut « sans casser » ni « créer de nouveaux impôts »."
     },
     {
       "id": "prop-xb-5",
@@ -3837,7 +3831,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
         },
         "marine-le-pen": {
-          "position": "contre",
+          "position": "abstention",
           "typeVote": "groupe_parti",
           "groupe": "RN",
           "groupeNom": "Rassemblement National",
@@ -3875,7 +3869,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8431"
         },
         "marine-tondelier": {
-          "position": "contre",
+          "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "ECOS",
           "groupeNom": "Écologiste et Social",
@@ -3940,7 +3934,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
         },
         "fabien-roussel": {
-          "position": "abstention",
+          "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "GDR",
           "groupeNom": "Gauche Démocrate et Républicaine",
@@ -3954,7 +3948,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
         },
         "bruno-retailleau": {
-          "position": "pour",
+          "position": "contre",
           "typeVote": "groupe_parti",
           "groupe": "DR",
           "groupeNom": "Droite Républicaine",
@@ -3978,7 +3972,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8280"
         },
         "raphael-glucksmann": {
-          "position": "abstention",
+          "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "SOC",
           "groupeNom": "Socialistes et apparentés",
@@ -4237,7 +4231,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
         },
         "fabien-roussel": {
-          "position": "abstention",
+          "position": "contre",
           "typeVote": "groupe_parti",
           "groupe": "GDR",
           "groupeNom": "Gauche Démocrate et Républicaine",
@@ -4251,7 +4245,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
         },
         "bruno-retailleau": {
-          "position": "contre",
+          "position": "abstention",
           "typeVote": "groupe_parti",
           "groupe": "DR",
           "groupeNom": "Droite Républicaine",
@@ -4259,7 +4253,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
         },
         "edouard-philippe": {
-          "position": "pour",
+          "position": "abstention",
           "typeVote": "groupe_parti",
           "groupe": "HOR",
           "groupeNom": "Horizons & Indépendants",
@@ -4267,7 +4261,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/4758"
         },
         "marine-tondelier": {
-          "position": "contre",
+          "position": "abstention",
           "typeVote": "groupe_parti",
           "groupe": "ECOS",
           "groupeNom": "Écologiste et Social",
@@ -4439,7 +4433,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/3054"
         },
         "bruno-retailleau": {
-          "position": "abstention",
+          "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "DR",
           "groupeNom": "Droite Républicaine",
@@ -4542,7 +4536,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2957"
         },
         "edouard-philippe": {
-          "position": "abstention",
+          "position": "pour",
           "typeVote": "groupe_parti",
           "groupe": "HOR",
           "groupeNom": "Horizons & Indépendants",
@@ -4609,7 +4603,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
         },
         "fabien-roussel": {
-          "position": "pour",
+          "position": "contre",
           "typeVote": "groupe_parti",
           "groupe": "GDR",
           "groupeNom": "Gauche Démocrate et Républicaine",
@@ -4639,7 +4633,7 @@
           "sourceUrl": "https://www.assemblee-nationale.fr/dyn/17/scrutins/2880"
         },
         "marine-tondelier": {
-          "position": "abstention",
+          "position": "contre",
           "typeVote": "groupe_parti",
           "groupe": "ECOS",
           "groupeNom": "Écologiste et Social",
@@ -7767,7 +7761,7 @@
       "enjeu": "Taxer à nouveau chaque année le patrimoine des plus riches, comme l'impôt de solidarité sur la fortune remplacé en 2018.",
       "positions": [
         {
-          "propositionId": "prop-fr-5",
+          "propositionId": "prop-fr-9",
           "sens": "pour"
         },
         {
@@ -7983,6 +7977,11 @@
       "forme": "Chaîne de télévision d'information en continu"
     },
     {
+      "sigle": "CAP",
+      "forme": "Certificat d'aptitude professionnelle",
+      "definition": "Diplôme de la voie professionnelle qui prépare à un métier précis, en deux ans après la troisième."
+    },
+    {
       "sigle": "CDI",
       "forme": "Contrat à durée indéterminée",
       "definition": "Contrat de travail sans date de fin, forme normale de l'emploi salarié."
@@ -8048,11 +8047,6 @@
       "definition": "Désigne les cinq géants américains du numérique."
     },
     {
-      "sigle": "GAIA",
-      "forme": "Projet européen GAIA-X",
-      "definition": "Infrastructure européenne de données et de cloud."
-    },
-    {
       "sigle": "IA",
       "forme": "Intelligence artificielle",
       "definition": "Programmes informatiques capables de produire du texte, des images ou des décisions à partir de données."
@@ -8096,11 +8090,6 @@
       "sigle": "PAC",
       "forme": "Politique agricole commune",
       "definition": "Politique européenne d'aides aux agriculteurs."
-    },
-    {
-      "sigle": "PACTE",
-      "forme": "Plan d'action pour la croissance et la transformation des entreprises",
-      "definition": "Nom d'une loi de 2019 sur les entreprises."
     },
     {
       "sigle": "PFAS",
@@ -8148,11 +8137,6 @@
       "definition": "Salaire minimum légal."
     },
     {
-      "sigle": "SMR",
-      "forme": "Petit réacteur modulaire (en anglais Small Modular Reactor)",
-      "definition": "Petit réacteur nucléaire conçu pour être fabriqué en série."
-    },
-    {
       "sigle": "SNCF",
       "forme": "Société nationale des chemins de fer français",
       "definition": "Entreprise publique du train."
@@ -8186,11 +8170,6 @@
       "sigle": "UE",
       "forme": "Union européenne",
       "definition": "Union politique et économique de 27 pays européens."
-    },
-    {
-      "sigle": "ZAN",
-      "forme": "Zéro artificialisation nette",
-      "definition": "Objectif de ne plus réduire les espaces naturels et agricoles d'ici 2050."
     }
   ],
   "mots": [
@@ -8413,6 +8392,35 @@
       "definition": "Mandat de cinq ans du président de la République, en vigueur depuis 2002 (avant : le septennat, sept ans)."
     },
     {
+      "mot": "prime majoritaire",
+      "definition": "Sièges supplémentaires donnés à la liste arrivée en tête d'une élection, pour l'aider à obtenir une majorité."
+    },
+    {
+      "mot": "perturbateur endocrinien",
+      "variantes": [
+        "perturbateurs endocriniens"
+      ],
+      "definition": "Substance qui dérègle le fonctionnement des hormones d'un être vivant, même à faible dose."
+    },
+    {
+      "mot": "reprotoxique",
+      "variantes": [
+        "reprotoxiques"
+      ],
+      "definition": "Se dit d'une substance qui nuit à la fertilité ou au développement de l'enfant avant sa naissance."
+    },
+    {
+      "mot": "jugement majoritaire",
+      "definition": "Mode de vote où chaque électeur donne une mention à chaque candidat (de « à rejeter » à « excellent ») ; gagne celui qui a la meilleure mention médiane."
+    },
+    {
+      "mot": "clause de sauvegarde",
+      "variantes": [
+        "clauses de sauvegarde"
+      ],
+      "definition": "Règle d'un accord commercial qui permet à un pays de limiter pour un temps des importations qui menacent ses producteurs ou sa santé publique."
+    },
+    {
       "mot": "monopole",
       "definition": "Situation où une seule entreprise vend un produit ou un service, sans concurrent."
     },
@@ -8474,16 +8482,8 @@
       "definition": "Principe de la République : l'État est neutre envers les religions, garantit la liberté de culte et n'en reconnaît ni n'en finance aucune."
     },
     {
-      "mot": "tiers payant",
-      "definition": "Le patient n'avance pas les frais : l'Assurance maladie et la mutuelle paient directement le médecin ou le pharmacien."
-    },
-    {
       "mot": "démocratie directe",
       "definition": "Les citoyens décident eux-mêmes, par exemple par référendum, au lieu de passer par leurs élus."
-    },
-    {
-      "mot": "bonus-malus",
-      "definition": "Système qui baisse le prix ou la taxe des produits jugés vertueux et augmente ceux des autres."
     },
     {
       "mot": "haut-fourneau",
