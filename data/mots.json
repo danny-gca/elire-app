@@ -81,6 +81,7 @@
   { "mot": "taux plein", "definition": "Retraite versée sans réduction, quand on a l'âge ou le nombre de trimestres requis." },
   { "mot": "emprunt commun", "definition": "Argent emprunté ensemble par les pays de l'Union européenne et remboursé en commun, comme pour le plan de relance de 2020." },
   { "mot": "moratoire", "definition": "Suspension, pour une durée donnée, d'un projet ou d'une décision." },
+  { "mot": "carcan", "variantes": ["carcans"], "definition": "Au sens figuré, ce qui enferme et empêche d'agir librement, par exemple une règle jugée trop stricte. Au sens propre, collier de fer qui attachait un condamné." },
   { "mot": "système à points", "definition": "Sélection des étrangers admis à séjourner selon des critères qui rapportent des points (emploi, langue, diplômes), comme au Canada." },
   { "mot": "assurances maladie complémentaires", "variantes": ["complémentaires santé", "mutuelles"], "definition": "Contrats (mutuelles, assurances) qui remboursent ce que la Sécurité sociale ne prend pas en charge." }
 ]

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-11T14:08:13.066Z",
+    "generatedAt": "2026-11-12T00:11:10.961Z",
     "partisCount": 24,
     "candidatsCount": 27,
     "thematiquesCount": 12,
@@ -8842,6 +8842,13 @@
     {
       "mot": "moratoire",
       "definition": "Suspension, pour une durée donnée, d'un projet ou d'une décision."
+    },
+    {
+      "mot": "carcan",
+      "variantes": [
+        "carcans"
+      ],
+      "definition": "Au sens figuré, ce qui enferme et empêche d'agir librement, par exemple une règle jugée trop stricte. Au sens propre, collier de fer qui attachait un condamné."
     },
     {
       "mot": "système à points",

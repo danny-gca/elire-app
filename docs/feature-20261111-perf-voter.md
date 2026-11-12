@@ -12,8 +12,8 @@ Légende : **[Danny]** = demandé tel quel, **[Proposition]** = ma proposition, 
 | 4 | Tiroirs de contexte : ouverture et fermeture | Mesuré : tâches longues 931 → 563 ms, rien de plus à corriger pour l'instant |
 | 5 | Tests de perf rejouables | [Fait] `scripts/perf-web.mjs`, 6 scénarios dont `visites` (Cahier, fiche candidat, Lois, fiche scrutin, Explorer, thème) |
 | 6 | « A voté ! » parfois resté trop haut au-dessus des boutons | [Fait] cause trouvée, voir § 6 |
-| 7 | Texte trop vite sélectionné au toucher sur mobile | [À trancher] |
-| 8 | Installer l'Android SDK (émulateur bas de gamme) | À faire |
+| 7 | Texte trop vite sélectionné au toucher sur mobile | [Fait], à tester sur téléphone |
+| 8 | Installer l'Android SDK (émulateur bas de gamme) | En cours ; iPhone : tests aux déploiements |
 
 ---
 
@@ -86,13 +86,52 @@ Sur une proposition, l'onglet ouvert (`info`) est un état de tout l'écran Vote
 
 Les textes des feuilles de Voter sont `selectable` (titre, citation, tiroirs) depuis avant le swipe, mais le swipe pose un geste (`GestureDetector`) sur toute la feuille. React Native n'a aucun réglage de délai pour la sélection native : on ne peut pas la rendre « moins sensible ».
 
-**[À trancher]**
+**[Décidé]** le 2026-11-11 : sur téléphone, pas de sélection sur les feuilles de Voter, où l'on glisse ; on la garde dans la gomme, les fiches, Explorer et sur le web.
 
-- **[Proposition]** Sur téléphone, pas de sélection sur les feuilles de Voter, où l'on glisse ; on la garde dans la gomme, les fiches, Explorer et sur le web.
-- Ou la garder partout telle quelle.
+**[Fait]** `SHEET_SELECTABLE` (`src/components/proposition-sheet.tsx`, vrai seulement sur le web) pour le titre et la citation ; `MoreInfo` prend une option `selectable` (vraie par défaut, la gomme ne change pas), que Voter met à `SHEET_SELECTABLE`. À tester sur téléphone.
 
 ## 8. Android SDK
 
 **[Danny]** On va installer le SDK Android.
 
-À faire : JDK 17, Android SDK en ligne de commande, un émulateur bas de gamme (2 cœurs, 2 Go), puis une build release et le même parcours.
+**[Danny]** Pour l'iPhone, tant pis : tests lors des déploiements.
+
+**[Fait]** dans `~/Android` (hors dépôt, sans sudo) : JDK 17 (Temurin 17.0.21), outils en ligne de commande du SDK, `env.sh` (JAVA_HOME, ANDROID_HOME, PATH), `install.sh` (licences, Android 36, build-tools 36.0.0, NDK 27.1, image système API 34 x86_64, émulateur `elire-lent` à 2 cœurs et 2 Go).
+
+**[Fait] par Danny le 2026-11-12** : `~/Android/install.sh` (licence acceptée). `source ~/Android/env.sh` ajouté à `~/.zshrc`. KVM utilisable sans le groupe `kvm` (droits de la session ouverte).
+
+**Build** : `npx expo run:android --variant release` en local, sans compte Expo ni EAS : APK signé avec la clé de debug générée sur ce PC, pour l'émulateur seulement, non publiable. Génère `android/`, ignoré par git.
+
+**Tests rejouables** : `scripts/perf-android.mjs` (adb, uiautomator, `dumpsys gfxinfo`, sans dépendance). Mêmes scénarios que le web plus `selection` (appui long sur le titre dans Voter : aucune barre « Copier » attendue), vrais swipes (`input swipe`). Chaque passage repart d'une app vide (`pm clear`), présentation et astuces passées à l'écran ; l'ordre des questions est aléatoire, d'où `--runs` pour lisser. Les temps incluent la lecture de l'écran par uiautomator (0,5 à 1,5 s) : les chiffres utiles sont ceux de gfxinfo (saccades, 90e et 99e centiles) et les vérifications.
+
+## 9. Titres rognés sur Android
+
+**[Danny]** Le g et le p sont coupés dans les titres de la présentation (« surligneur », « personne », « gomme »).
+
+**Cause** : Literata a besoin de 1,49 em de hauteur de ligne ; sous cette valeur, les jambages de la dernière ligne sont rognés. Corrigé pour iOS en 1.8.0 (`470be48`), pas pour Android.
+
+**[Fait]** `src/constants/theme.ts` : `screenTitle` 51 et `display` 36 sur iOS et Android, 40 et 32 sur le web (qui ne rogne pas). Vérifié sur l'émulateur (présentation et Voter). Les titres d'Android sont un peu plus aérés, comme sur iOS.
+
+## 10. Citation réduite et tiroir qui ne remonte pas
+
+**[Danny]** La citation réduite à 2 lignes est bizarre : ouvrir « Contexte » déplie tout et l'écran ne défile pas jusqu'au tiroir. La citation devrait peut-être être écrite entièrement.
+
+**[Fait]**
+
+- `PropositionSheet` : la citation est toujours entière (`quoteOpen` et `numberOfLines` retirés). La coupe servait à garder les boutons visibles, mais le bandeau de vote est fixe en bas depuis.
+- `showInfo` (`src/app/(tabs)/index.tsx`) : la position du tiroir se mesure par rapport à `getInnerViewRef()`. Avec la nouvelle architecture de React Native, `measureLayout` refuse le numéro de vue que donnait `getInnerViewNode()` et on retombait sur `scrollToEnd`.
+- Vérifié sur l'émulateur : « Contexte » touché, la rangée remonte en haut de l'écran, son contenu juste dessous.
+
+## 11. Script Android : la présentation
+
+**[Danny]** La présentation avance lentement à chaque fois, il faut la passer dans le test.
+
+**[Fait]** La présentation s'anime sans arrêt, et uiautomator attend un écran immobile avant de le lire. Le script la passe une seule fois par installation, par 12 touchers à l'aveugle sur la zone « Page suivante », puis lit l'écran une fois pour « Commencer à voter ». Les passages suivants effacent les votes dans les Réglages (lien `elire://reglages`, puis « Réinitialiser mes votes » et « Confirmer ») : présentation et astuces restent vues.
+
+**Limite** : l'émulateur dessine sans carte graphique (« Switching to software rendering » : pilote de la carte graphique jugé défaillant), donc saccades et centiles sont très au-dessus d'un vrai téléphone. Ils servent à comparer deux APK, pas à juger l'app.
+
+## 12. Refermer un tiroir remonte sur la question
+
+**[Danny]** Quand on ferme un tiroir (Contexte, Liens et sources…), il faut remonter tout en haut pour relire la proposition.
+
+**[Fait]** `MoreInfo` prend un rappel `onClose`, appelé quand on referme le tiroir ouvert, pas quand on passe d'un tiroir à un autre. Voter le relie à `scrollTop`, et les feuilles de scrutin et de question commune à `onInfoClose`. La gomme ne change pas. À vérifier sur l'émulateur après la série de mesures (APK à reconstruire).

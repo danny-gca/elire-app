@@ -21,7 +21,7 @@ import { announce, LiveRegion } from '@/components/live-region';
 import { MoreInfo, type InfoTab } from '@/components/more-info';
 import { PageVeil } from '@/components/page-veil';
 import { PropositionRow } from '@/components/proposition-row';
-import { PropositionSheet } from '@/components/proposition-sheet';
+import { PropositionSheet, SHEET_SELECTABLE } from '@/components/proposition-sheet';
 import { ScrutinStamp } from '@/components/scrutin-stamp';
 import { SWEEP_MS } from '@/components/sweep-text';
 import { Screen } from '@/components/screen';
@@ -359,7 +359,9 @@ export default function VoterScreen() {
       scroll?.scrollToEnd({ animated: !reducedMotion });
       return;
     }
-    const relativeTo = (scroll as unknown as { getScrollResponder?: () => { getInnerViewNode?: () => unknown } }).getScrollResponder?.()?.getInnerViewNode?.() ?? scroll;
+    // Nouvelle architecture : measureLayout veut la vue du contenu (getInnerViewRef), plus son numéro.
+    const inner = scroll as unknown as { getInnerViewRef?: () => unknown; getScrollResponder?: () => { getInnerViewNode?: () => unknown } };
+    const relativeTo = inner.getInnerViewRef?.() ?? inner.getScrollResponder?.()?.getInnerViewNode?.() ?? scroll;
     try {
       target.measureLayout(
         relativeTo as View,
@@ -370,6 +372,9 @@ export default function VoterScreen() {
       scroll.scrollToEnd({ animated: !reducedMotion });
     }
   };
+
+  // Tiroir refermé : on remonte relire la question.
+  const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: !reducedMotion });
 
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
 
@@ -586,6 +591,7 @@ export default function VoterScreen() {
           step={active && revealId === id ? loiFlow.step : 'hemicycle'}
           holdProps={active ? loiFlow.holdProps : {}}
           onInfoOpen={showInfo}
+          onInfoClose={scrollTop}
           onRevealLayout={revealLayout}
           titleActions={titleActions(role)}
           titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
@@ -605,6 +611,7 @@ export default function VoterScreen() {
           step={active && revealId === id ? loiFlow.step : 'hemicycle'}
           holdProps={active ? loiFlow.holdProps : {}}
           onInfoOpen={showInfo}
+          onInfoClose={scrollTop}
           onRevealLayout={revealLayout}
           titleActions={titleActions(role)}
           titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
@@ -621,7 +628,6 @@ export default function VoterScreen() {
       <Leaving leaving={!PAGE_TURN && hold?.id === id && hold.phase === 'leaving'} style={styles.sheetWrap}>
         <PropositionSheet
           proposition={p}
-          quoteOpen={info?.id === p.id}
           sweep={sweepOf(p.id)}
           thematique={getThematique(p.thematiqueId)}
           onWord={() => setInfo({ id: p.id, tab: 'mots' })}
@@ -632,6 +638,7 @@ export default function VoterScreen() {
           footer={
             <View {...(role === 'flow' ? infoTarget : null)}>
               <MoreInfo
+                selectable={SHEET_SELECTABLE}
                 itemId={p.id}
                 text={p.contexte}
                 source={TYPE_SOURCE_LABELS[p.typeSource]}
@@ -639,6 +646,7 @@ export default function VoterScreen() {
                 tab={info?.id === p.id ? info.tab : null}
                 onTab={(tab) => setInfo(tab ? { id: p.id, tab } : null)}
                 onOpen={showInfo}
+                onClose={scrollTop}
               />
             </View>
           }
@@ -874,6 +882,7 @@ function LoiBallot({
   step,
   holdProps,
   onInfoOpen,
+  onInfoClose,
   onRevealLayout,
   titleActions,
   titleRef,
@@ -887,6 +896,8 @@ function LoiBallot({
   step: LoiStep;
   holdProps: object;
   onInfoOpen: (target: View | null) => void;
+  /** Tiroir refermé : retour en haut, sur la question. */
+  onInfoClose: () => void;
   /** L'hémicycle s'ouvre sous la question : l'écran défile jusqu'à lui une fois posé. */
   onRevealLayout: () => void;
   titleActions?: TitleActions;
@@ -925,6 +936,7 @@ function LoiBallot({
             bound={bound}
             footer={
               <MoreInfo
+                selectable={SHEET_SELECTABLE}
                 itemId={loi.id}
                 nature={loi.nature}
                 text={loi.enjeu}
@@ -932,6 +944,7 @@ function LoiBallot({
                 tab={tab}
                 onTab={setTab}
                 onOpen={onInfoOpen}
+                onClose={onInfoClose}
               />
             }
           />
@@ -978,6 +991,7 @@ function EnjeuBallot({
   step,
   holdProps,
   onInfoOpen,
+  onInfoClose,
   onRevealLayout,
   titleActions,
   titleRef,
@@ -991,6 +1005,8 @@ function EnjeuBallot({
   step: LoiStep;
   holdProps: object;
   onInfoOpen: (target: View | null) => void;
+  /** Tiroir refermé : retour en haut, sur la question. */
+  onInfoClose: () => void;
   onRevealLayout: () => void;
   titleActions?: TitleActions;
   titleRef?: React.Ref<Text>;
@@ -1022,12 +1038,14 @@ function EnjeuBallot({
               footer={
                 <View {...infoTarget}>
                   <MoreInfo
+                    selectable={SHEET_SELECTABLE}
                     itemId={enjeu.id}
                     text={enjeu.enjeu}
                     terms={[enjeu.question]}
                     tab={tab}
                     onTab={setTab}
                     onOpen={onInfoOpen}
+                    onClose={onInfoClose}
                   />
                 </View>
               }

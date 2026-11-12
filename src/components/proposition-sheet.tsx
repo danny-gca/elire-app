@@ -17,8 +17,6 @@ interface PropositionSheetProps {
   /** Une proposition (titre, citation), ou un scrutin ou une question commune présentés de la même façon (question seule). */
   proposition: Pick<Proposition, 'ref' | 'thematiqueId' | 'titre'> & { description?: string };
   kind?: 'Proposition' | 'Scrutin' | 'Question commune';
-  /** Citation en entier (« En savoir plus » ouvert) ; sinon coupée à 2 lignes pour garder les boutons visibles. */
-  quoteOpen?: boolean;
   /** Scrutin : chambre et année, à droite de « Scrutin réel ». */
   banner?: string;
   /** Pendant le geste du vote : le surligneur balaie le titre. */
@@ -48,6 +46,8 @@ const VERTICAL_TOP = Spacing.three + 18 + Spacing.one + 32 + Spacing.two;
 // Largeur moyenne d'une capitale à 13 pt espacée : sert à réserver la hauteur du thème vertical.
 const CAPS_CHAR_WIDTH = 9;
 const CONTOUR_MS = 700;
+// Voter : sur téléphone, la sélection native partait dès qu'on glissait la page ; on la garde sur le web, la gomme et les fiches.
+export const SHEET_SELECTABLE = Platform.OS === 'web';
 
 const AnimatedRect = Animated.createAnimatedComponent(Rect);
 
@@ -145,7 +145,7 @@ function Contour({ delay = 0 }: { delay?: number }) {
 }
 
 // La feuille du cahier : marge graphite (numéro, thème) et corps de la proposition.
-export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen = false, banner, sweep, stamp = false, thematique, children, footer, onWord, titleActions, titleRef, veil, bound = false }: PropositionSheetProps) {
+export function PropositionSheet({ proposition, kind = 'Proposition', banner, sweep, stamp = false, thematique, children, footer, onWord, titleActions, titleRef, veil, bound = false }: PropositionSheetProps) {
   // Web : le titre reçoit le focus après un retour (tabIndex -1, hors de l'ordre de tabulation).
   const titleProps = { ...titleActions, ...(Platform.OS === 'web' ? { tabIndex: -1, dataSet: { focusTitle: '' } } : null) } as TitleProps;
   const scrutin = kind === 'Scrutin';
@@ -179,16 +179,16 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
       <View style={styles.body}>
         {/* Pendant le geste du vote, le surligneur balaie le titre : plus de mots soulignés. */}
         {sweep ? (
-          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable actions={titleProps} textRef={titleRef}>
+          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable={SHEET_SELECTABLE} actions={titleProps} textRef={titleRef}>
             {proposition.titre}
           </SweepText>
         ) : (
-          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable actions={titleProps} textRef={titleRef}>
+          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable={SHEET_SELECTABLE} actions={titleProps} textRef={titleRef}>
             {proposition.titre}
           </GlossaryText>
         )}
         {proposition.description ? (
-          <GlossaryText style={[Type.body, styles.description]} onWord={onWord} numberOfLines={quoteOpen ? undefined : 2} selectable>
+          <GlossaryText style={[Type.body, styles.description]} onWord={onWord} selectable={SHEET_SELECTABLE}>
             {proposition.description}
           </GlossaryText>
         ) : null}
