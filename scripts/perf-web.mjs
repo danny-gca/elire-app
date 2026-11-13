@@ -7,10 +7,10 @@
 // --scenarios (votes, rapide, retour, tiroirs, bilan, visites, fin), --json <fichier>, --chrome <binaire>.
 // Le web n'est pas Android (ni Hermes, ni rendu natif, ni swipe au doigt) : seule la comparaison entre deux exports compte.
 import { spawn } from 'node:child_process';
-import { mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
-import { extname, join, resolve, sep } from 'node:path';
+import { extname, join, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const args = Object.fromEntries(
@@ -272,19 +272,15 @@ async function scenario(name) {
 }
 
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.mp3': 'audio/mpeg', '.wav': 'audio/wav', '.ico': 'image/x-icon' };
-const isFile = (p) => {
-  try {
-    return statSync(p).isFile();
-  } catch {
-    return false;
-  }
-};
+const listFiles = (dir, prefix = '') =>
+  readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? listFiles(join(dir, e.name), `${prefix}/${e.name}`) : [`${prefix}/${e.name}`]));
 function serve(dir) {
+  // L'URL n'est qu'une clé dans les fichiers de l'export, jamais un chemin : rien hors de l'export.
+  const files = new Map(listFiles(dir).map((rel) => [rel, join(dir, rel)]));
   const server = createServer((req, res) => {
     const path = decodeURIComponent(req.url.split('?')[0]).replace(new RegExp(`^${baseUrl}`), '');
-    // Jamais hors de l'export (« .. » dans l'URL).
-    const inside = [join(dir, path), join(dir, `${path}.html`), join(dir, path, 'index.html')].filter((p) => p.startsWith(dir + sep));
-    const file = [...inside, join(dir, 'index.html')].find(isFile);
+    const key = [path, `${path}.html`, `${path.replace(/\/$/, '')}/index.html`].find((k) => files.has(k)) ?? '/index.html';
+    const file = files.get(key);
     res.writeHead(200, { 'content-type': types[extname(file)] ?? 'application/octet-stream' });
     res.end(readFileSync(file));
   });
