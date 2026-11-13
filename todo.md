@@ -9,9 +9,10 @@ Les dates annoncées sont aussi dans `data/candidats.json` (`programme.annonce`)
 - 2026-11-17 : réforme des retraites annoncée par Marine Le Pen : relire prop-mlp-9.
 - 2026-11-18 : contre-budget 2027 annoncé par le parti d'Antoine Mikolajczak ([page](https://parti-equinoxe.fr/programme-2027/)).
 - 2026-11-21 : meeting d'Éric Zemmour : relire ses propositions.
-- Sans date : 2e volet du livret de Raphaël Glucksmann ; programme de l'UPR « en cours d'élaboration » (François Asselineau, 3 mesures sourcées en 2026, le reste en 2022) ; passation de la présidence du groupe RN de Marine Le Pen à Sébastien Chenu, « pour la fin de la session parlementaire » selon LCP (biographie à mettre à jour).
+- 2026-12-06 : meeting de lancement de Raphaël Glucksmann : chercher la suite de son livret (seule la « Première partie », écologie, est en ligne au 14/11).
+- Sans date : programme de l'UPR « en cours d'élaboration » (François Asselineau, 3 mesures sourcées en 2026, le reste en 2022 ; toujours rien sur upr.fr/notre-programme au 14/11).
 - 2026-12-13 : vote des adhérents écologistes (10 au 13 décembre) sur la candidature de Marine Tondelier ou le soutien à un autre candidat ([Public Sénat](https://www.publicsenat.fr/actualites/politique/presidentielle-2027-personne-ne-gagnera-seul-assure-marine-tondelier)).
-- Fin 2026 : déclaration formelle annoncée par Xavier Bertrand (« à la fin de l'année ») ; décision de Jean Lassalle annoncée « à l'automne ».
+- Fin 2026 : déclaration formelle annoncée par Xavier Bertrand (« à la fin de l'année ») ; décision de Jean Lassalle annoncée « à l'automne » (pas candidat déclaré au 14/11, il cherche ses 500 parrainages). Rien de neuf pour les deux au 14/11.
 - 2027-02-07 au plus tard : décret de convocation, puis ouverture des parrainages ; clôture le 2027-03-12 à 18 h ([Toute l'Europe](https://www.touteleurope.eu/vie-politique-des-etats-membres/presidentielle-2027-calendrier-dates-inscription-candidats-vote/)).
 - Avant le premier tour : arrêt de la Cour de cassation sur le pourvoi de Marine Le Pen (éligible depuis l'arrêt d'appel du 2026-07-07).
 - 2027-05-10 : relire les 74 sujets (`data/sujets.json`), 180 jours après leur relecture du 2026-11-11 ; le build le rappelle.

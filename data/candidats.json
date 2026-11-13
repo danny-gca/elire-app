@@ -122,7 +122,7 @@
     "partiId": "rn",
     "avatar": "MLP",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/330px-Marine_Le_Pen_2025_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale.",
+    "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale de 2022 à octobre 2026.",
     "candidature": {
       "statut": "annoncee",
       "date": "2026-07-07",
@@ -132,10 +132,10 @@
       "statut": "aucun"
     },
     "validation": {
-      "le": "2026-11-11",
+      "le": "2026-11-14",
       "par": "claude",
-      "empreinte": "e160d6bc",
-      "note": "2026-11-11 corrigée : Partiel (article Europe 1) -> aucun : le site du RN ne publie aucun document 2027 (seuls le programme des législatives 2024, le contre-budget 2026 et les livrets de 2022, lus le 11/11/2026) ; le contre-budget du 06/10/2026 n'est connu que par la presse."
+      "empreinte": "530476db",
+      "note": "2026-11-14 corrigée : biographie : présidente du groupe RN jusqu'en octobre 2026, Sébastien Chenu lui succède le 28/10/2026 (datan.fr, LCP du 24/10/2026). // 2026-11-11 corrigée : Partiel (article Europe 1) -> aucun : le site du RN ne publie aucun document 2027 (seuls le programme des législatives 2024, le contre-budget 2026 et les livrets de 2022, lus le 11/11/2026) ; le contre-budget du 06/10/2026 n'est connu que par la presse."
     }
   },
   {
