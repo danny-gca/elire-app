@@ -371,7 +371,7 @@ Une palette d'encre sur papier froid, sans couleur institutionnelle ni partisane
 
 **The Two Sizes Rule.** On lit en 17 et en 13. Le 34 est réservé au titre d'écran et le 24 au titre de la proposition.
 
-**The Written Value Rule.** Une note s'écrit en toutes lettres avec son signe : Impossible −2, Contre −1, Pour +1, Parfait +2, avec le vrai signe moins (U+2212) ; « Je ne sais pas » s'écrit sans signe, en graphite. Chiffres, numéros et compteurs en chiffres tabulaires.
+**The Written Value Rule.** Une note s'écrit en toutes lettres avec son signe : Jamais −2, Contre −1, Pour +1, Parfait +2, avec le vrai signe moins (U+2212) ; « Je ne sais pas » s'écrit sans signe, en graphite. Chiffres, numéros et compteurs en chiffres tabulaires.
 
 **The Affirmative Question Rule.** Une question de scrutin ou d'enjeu est toujours directe et affirmative sur le fond. Interdiction des doubles négations et des tournures de rejet procédural (ex. pas de « Rejet de... » où Contre voudrait dire soutenir la mesure) : voter Pour doit signifier sans ambiguïté vouloir la mesure.
 
@@ -465,7 +465,7 @@ Dans la barre fixe de Voter, le prochain palier, jamais le total, en 13 graphite
 
 ### Rangée de vote (signature)
 
-Quatre niveaux égaux en ligne, 4px d'écart, 60pt de haut, feuille blanche à bordure filet : le signe en 17 semi-gras dans sa couleur d'échelle, le libellé en 13 encre dessous (12 sous 380pt de large pour que « Impossible » tienne). Le niveau choisi prend une bordure de 2px dans sa couleur d'échelle. Dessous, à 8px, pleine largeur et 44pt de haut, « Je ne sais pas » en 13 semi-gras encre, sans signe ; choisi, il prend une bordure encre de 2px. Ce n'est pas un niveau : il ne compte pas, n'est pas surligné et le titre n'est pas balayé.
+Quatre niveaux égaux en ligne, 4px d'écart, 60pt de haut, feuille blanche à bordure filet : le signe en 17 semi-gras dans sa couleur d'échelle, le libellé en 13 encre dessous. Le niveau choisi prend une bordure de 2px dans sa couleur d'échelle. Dessous, à 8px, pleine largeur et 44pt de haut, « Je ne sais pas » en 13 semi-gras encre, sans signe ; choisi, il prend une bordure encre de 2px. Ce n'est pas un niveau : il ne compte pas, n'est pas surligné et le titre n'est pas balayé.
 
 ### Feuille de scrutin
 
@@ -530,7 +530,7 @@ Le même mobilier pour chaque candidat, seul le score change ; une seule touche 
 ### Do
 
 - **Do** réserver le surligneur aux propositions et scrutins que l'utilisateur a votés, dans la couleur de chaque marque, sur toutes les surfaces qui les citent.
-- **Do** écrire chaque note en toutes lettres avec son signe (Impossible −2 à Parfait +2), dans sa couleur d'échelle.
+- **Do** écrire chaque note en toutes lettres avec son signe (Jamais −2 à Parfait +2), dans sa couleur d'échelle.
 - **Do** écrire les positions des candidats et les issues parlementaires en encre neutre, sur filet léger pour les badges.
 - **Do** mettre le numéro stable (P-xxx, L-xx), le statut et la thématique dans une ligne meta graphite sous le titre des cartes de liste.
 - **Do** garder la lecture en 17 et 13, et réserver 34 au titre d'écran et 24 au titre de la proposition.

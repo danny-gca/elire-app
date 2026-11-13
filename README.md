@@ -11,7 +11,7 @@ Une application gratuite et neutre pour savoir de quels candidats à la préside
 
 ## Ce que vous pouvez faire
 
-- **Voter** : notez chaque proposition de « Impossible » à « Parfait », ou passez avec « Je ne sais pas ».
+- **Voter** : notez chaque proposition de « Jamais » à « Parfait », ou passez avec « Je ne sais pas ».
 - **Questions communes** : quand plusieurs candidats proposent la même chose, ou l'inverse, une seule question compte pour tous.
 - **Scrutins réels** : votez aussi sur des textes passés au Parlement et comparez-vous aux élus.
 - **Classement** : après 10 votes, voyez les candidats les plus proches de vos avis.
@@ -32,7 +32,7 @@ Une application gratuite et neutre pour savoir de quels candidats à la préside
 
 ## Comment le score est calculé
 
-- Votre note va de -2 (Impossible) à +2 (Parfait) et compte pour l'auteur de la proposition.
+- Votre note va de -2 (Jamais) à +2 (Parfait) et compte pour l'auteur de la proposition.
 - Sur une question commune, elle compte pour chaque candidat qui la propose, et à l'inverse pour celui qui propose le contraire.
 - Sur un scrutin, un candidat gagne des points s'il a voté comme vous et en perd s'il a voté l'inverse.
 - Un vote de groupe compte moitié moins qu'un vote personnel.

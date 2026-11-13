@@ -119,7 +119,7 @@ export function scoreCandidat(
 }
 
 export interface ScoreDetail {
-  /** Vos notes sur ses propositions, de Parfait à Impossible ; max = 2 points par proposition. */
+  /** Vos notes sur ses propositions, de Parfait à Jamais ; max = 2 points par proposition. */
   programme: { rows: { value: VoteValue; count: number }[]; sum: number; max: number };
   /** Ses scrutins, par points (+2, 0, -2) et poids (1 personnel, ½ groupe). */
   parlement: { rows: { points: -2 | 0 | 2; weight: number; count: number }[]; sum: number; max: number };
