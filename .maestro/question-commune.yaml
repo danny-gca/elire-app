@@ -1,0 +1,33 @@
+# F-COMMUNE : une question commune se vote sur l'échelle, compte, puis la suite part seule après les mesures sans nom.
+appId: fr.elire.app
+name: Question commune
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- tapOn: "Voter"
+- repeat:
+    while:
+      notVisible: "Question commune .*"
+    times: 20
+    commands:
+      - runFlow: communs/vote.yaml
+- runFlow: communs/astuce.yaml
+- assertVisible: "Question commune .*"
+- copyTextFrom: "Question commune .*"
+- evalScript: ${output.enjeu = maestro.copiedText.match(/E-\d+/)[0]}
+- copyTextFrom: "(Bilan|Classement) dans .*"
+- evalScript: ${output.avant = maestro.copiedText}
+- tapOn: { text: "Pour, \\+1", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+# Les mesures sans nom ne restent que 5 s et l'écran animé ralentit trop Maestro ; leur astuce, si elle s'ouvre, met la suite en pause.
+- runFlow:
+    when:
+      visible: "Compris"
+    commands:
+      - assertVisible: "Question suivante"
+      - tapOn: { text: "Compris", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+# La suite part seule et le vote compte.
+- extendedWaitUntil:
+    notVisible: "Question commune ${output.enjeu}.*"
+    timeout: 15000
+- copyTextFrom: "(Bilan|Classement) dans .*"
+- assertTrue: ${maestro.copiedText != output.avant}

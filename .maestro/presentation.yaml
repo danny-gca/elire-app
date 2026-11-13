@@ -1,0 +1,18 @@
+# F-PRES : la présentation s'ouvre au premier lancement, ses pages défilent, « Commencer à voter » mène à Voter.
+appId: fr.elire.app
+name: Présentation
+tags: [presentation]
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Page 1 sur 8"
+- assertVisible: "élire"
+- tapOn:
+    text: "Page suivante"
+    waitToSettleTimeoutMs: 500
+    retryTapIfNoChange: false
+- assertVisible: "Votre surligneur :"
+- runFlow: communs/presentation.yaml
+- assertVisible: "Classement dans 10 votes.*"
+- assertVisible: "Jamais, −2"
+- assertVisible: "Je ne sais pas"

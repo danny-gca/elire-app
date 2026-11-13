@@ -1,0 +1,22 @@
+# F-CAHIER : après 10 avis, le Classement range les candidats ; une fiche s'ouvre (accord, onglets programme et votes au Parlement) et se referme.
+appId: fr.elire.app
+name: Cahier et fiche candidat
+tags: [cahier]
+---
+- runFlow: communs/ouvrir.yaml
+- runFlow: communs/classement.yaml
+- tapOn: "Cahier"
+- runFlow: communs/astuce.yaml
+- assertVisible: "Rang 1.*"
+- scrollUntilVisible: { element: "Partager mon classement", direction: DOWN }
+- scrollUntilVisible: { element: "Rang 1.*", direction: UP }
+- tapOn: "Rang 1.*"
+- runFlow: communs/astuce.yaml
+- assertVisible: "Accord avec vos votes : .*"
+# Deux onglets sous l'accord : le programme, puis les votes au Parlement.
+- scrollUntilVisible: { element: "Programme 2027, \\d+", direction: DOWN }
+- tapOn: "Votes au Parlement, \\d+"
+- tapOn: "Programme 2027, \\d+"
+- scrollUntilVisible: { element: "Retour", direction: UP }
+- tapOn: "Retour"
+- assertVisible: "Rang 1.*"

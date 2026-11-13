@@ -5,7 +5,7 @@
 //   node scripts/perf-android.mjs --apk avant.apk,apres.apk --scenarios votes,retour --runs 2
 //
 // Options : --apk (APK à installer puis mesurer, séparés par des virgules ; sinon l'app installée), --serial, --runs,
-// --scenarios (votes, rapide, retour, tiroirs, bilan, visites, selection), --reduced-motion, --json <fichier>.
+// --scenarios (demarrage, votes, rapide, retour, tiroirs, gomme, bilan, visites, defilement, selection), --reduced-motion, --json <fichier>.
 //
 // Rapide : uiautomator attend un écran immobile (jusqu'à ~3 s tant que « A voté ! » décompte) et sa lecture charge le
 // fil d'interface. On ne lit donc l'écran qu'aux points de contrôle ; entre deux, des touchers aux positions relevées une
@@ -23,7 +23,7 @@ const args = Object.fromEntries(
 const pkg = JSON.parse(readFileSync(join(root, 'app.json'), 'utf8')).expo.android.package;
 const apks = args.apk ? args.apk.split(',').map((a) => resolve(a)) : [null];
 const runs = Number(args.runs ?? 1);
-const scenarios = (args.scenarios ?? 'votes,rapide,retour,tiroirs,bilan,visites,selection').split(',');
+const scenarios = (args.scenarios ?? 'demarrage,votes,rapide,retour,tiroirs,gomme,bilan,visites,defilement,selection').split(',');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const adb = async (...a) => (await run('adb', [...(args.serial ? ['-s', args.serial] : []), ...a], { maxBuffer: 64 * 1024 * 1024, encoding: 'buffer' })).stdout;
@@ -102,7 +102,7 @@ async function calibrate() {
     throw new Error('Échelle de vote introuvable pour le calibrage');
   }
   const pick = (re) => (({ x, y, left, right, top, bottom }) => ({ x, y, left, right, top, bottom }))(find(r.nodes, re));
-  Object.assign(L, { pour: pick(/^Pour, \+1$/), impossible: pick(/^Impossible, −2$/), contre: pick(/^Contre, −1$/), jnsp: pick(/^Je ne sais pas$/) });
+  Object.assign(L, { pour: pick(/^Pour, \+1$/), jamais: pick(/^Jamais, −2$/), contre: pick(/^Contre, −1$/), jnsp: pick(/^Je ne sais pas$/) });
   for (const tab of ['Voter', 'Cahier', 'Lois', 'Explorer']) {
     L[tab] = pick(new RegExp(`^${tab}$`));
   }
@@ -116,8 +116,8 @@ async function dockState() {
   if (isDark(f.at(L.jnsp.left + 30, y)) && isDark(f.at(L.jnsp.right - 30, y))) {
     return 'suivante';
   }
-  // Scrutin : deux grands boutons ; l'interstice entre « Impossible » et « Contre » tombe dans un bouton blanc.
-  const gap = (L.impossible.right + L.contre.left) >> 1;
+  // Scrutin : deux grands boutons ; l'interstice entre « Jamais » et « Contre » tombe dans un bouton blanc.
+  const gap = (L.jamais.right + L.contre.left) >> 1;
   if (isSheet(f.at(gap, L.pour.y))) {
     return 'scrutin';
   }
@@ -205,7 +205,7 @@ async function measure(label, action, settle = 1200) {
 }
 
 // Avis posés modulo 10 (le bilan tombe à 0), lus sur le palier : « Classement dans 3 votes » ou « Bilan dans 7 votes ».
-const state = { mod: 0, fallbacks: 0, stopAtBilan: false };
+const state = { mod: 0, fallbacks: 0, scrutins: 0, resultats: 0, stopAtBilan: false };
 async function checkpoint({ continuer = true } = {}) {
   const r = await until((n) => find(n, /^(Classement|Bilan) dans \d+ votes?/) || find(n, /^10 questions de plus$/), 20000);
   const pause = r && find(r.nodes, /^10 questions de plus$/);
@@ -233,7 +233,13 @@ async function voteFast() {
   if (s !== 'vote') {
     // Scrutin (échelle à trois choix) ou écran inattendu : une lecture complète.
     state.fallbacks++;
-    const r = await until((n) => find(n, VOTE) || find(n, /^10 questions de plus$/) || find(n, /^Question suivante$/));
+    const r = await until((n) => find(n, VOTE) || find(n, /^10 questions de plus$/) || find(n, /^Question suivante$/) || find(n, /^Fermer$/));
+    // Un toucher tombé sur le résultat quand l'écran changeait (processeur lent) : la fiche du scrutin s'est ouverte.
+    if (r && find(r.nodes, /^Fermer$/)) {
+      await shell('input keyevent KEYCODE_BACK');
+      await sleep(800);
+      return voteFast();
+    }
     const target = r && (find(r.nodes, /^Question suivante$/) ?? find(r.nodes, /^10 questions de plus$/) ?? find(r.nodes, VOTE));
     if (!target) {
       throw new Error('Voter bloqué : ni vote, ni suite, ni bilan');
@@ -243,6 +249,14 @@ async function voteFast() {
     await measure(label, () => tapXY(target), 1100);
     if (isVote) {
       state.mod = (state.mod + 1) % 10;
+      // Le résultat s'affiche : l'hémicycle et « Question suivante » à la place des boutons de vote.
+      state.scrutins++;
+      for (let t0 = Date.now(); Date.now() - t0 < 3000; await sleep(200)) {
+        if ((await dockState()) === 'suivante') {
+          state.resultats++;
+          break;
+        }
+      }
     } else {
       return voteFast();
     }
@@ -463,6 +477,67 @@ const scenarioFns = {
     await back('retourExplorer', (n) => find(n, /votées sur/));
     await step('voter', /^Voter$/, (n) => find(n, VOTE));
   },
+  // Démarrage à froid : app arrêtée, puis le temps qu'Android met à l'afficher (TotalTime de `am start -W`), 5 fois.
+  async demarrage(out) {
+    const times = [];
+    for (let i = 0; i < 5; i++) {
+      await shell(`am force-stop ${pkg}`);
+      await sleep(1000);
+      const m = /TotalTime: (\d+)/.exec(await shell(`am start -W -n ${pkg}/.MainActivity`));
+      if (m) {
+        times.push(Number(m[1]));
+      }
+      await sleep(2500);
+    }
+    pid = (await shell(`pidof ${pkg}`)).trim().split(/\s+/)[0] || null;
+    out.demarrageMedianMs = median(times);
+    out.demarrageMaxMs = times.length ? Math.max(...times) : null;
+  },
+  // Défilements rapides dans les longues listes : Explorer, Lois, Cahier (12 votes avant, pour un Classement rempli).
+  async defilement(out, size) {
+    await votes(12);
+    const x = Math.round(size.w / 2);
+    const fling = (down) => shell(`input swipe ${x} ${Math.round(size.h * (down ? 0.75 : 0.3))} ${x} ${Math.round(size.h * (down ? 0.3 : 0.75))} 120`);
+    for (const tab of ['Explorer', 'Lois', 'Cahier']) {
+      await tapXY(L[tab]);
+      await sleep(1500);
+      await measure(`défilement : ${tab}`, async () => {
+        for (const down of [true, true, true, true, false, false, false, false]) {
+          await fling(down);
+          await sleep(250);
+        }
+      }, 800);
+    }
+    await tapXY(L.Voter);
+    await sleep(1000);
+    out.listes = 3;
+  },
+  // La gomme : « A voté ! » touché ouvre la question entière ; « Contre » y remplace « Pour » et referme la feuille.
+  async gomme(out) {
+    let ouvertes = 0;
+    let changees = 0;
+    for (let i = 0; i < 3; i++) {
+      await voteFast();
+      // Son compte à rebours anime l'écran et bloque la lecture : « A voté ! » se touche à sa place, au-dessus de l'échelle.
+      const bar = { x: L.contre.x, y: L.jamais.top - Math.round(0.6 * (L.jamais.bottom - L.jamais.top)) };
+      await measure('gomme : ouvrir', () => tapXY(bar), 1200);
+      const sheet = await until((n) => find(n, /^(Votre vote|Modifier votre vote)$/) && find(n, /^Contre, −1$/), 5000);
+      if (!sheet) {
+        await shell('input keyevent KEYCODE_BACK');
+        continue;
+      }
+      ouvertes++;
+      // Un autre choix enregistre le vote et referme la feuille.
+      await measure('gomme : changer le vote', () => tapXY(find(sheet.nodes, /^Contre, −1$/)), 1200);
+      if (await until((n) => !find(n, /^(Votre vote|Modifier votre vote)$/), 4000)) {
+        changees++;
+      } else {
+        await shell('input keyevent KEYCODE_BACK');
+      }
+    }
+    out.gommesOuvertes = ouvertes;
+    out.gommesChangees = changees;
+  },
   // Appui long sur le titre de la question : aucune barre de sélection (Copier) ne doit s'ouvrir dans Voter.
   async selection(out) {
     const nodes = (await until((n) => find(n, /^(Proposition|Scrutin|Question commune) \S+, thème/))).nodes;
@@ -502,8 +577,11 @@ try {
         const out = {};
         const t0 = Date.now();
         dumps = 0;
-        state.fallbacks = 0;
+        Object.assign(state, { fallbacks: 0, scrutins: 0, resultats: 0 });
         await scenarioFns[name](out, size);
+        if (state.scrutins) {
+          out.scrutinsAvecResultat = `${state.resultats}/${state.scrutins}`;
+        }
         // Les images et le processeur sont relevés geste par geste (measure) : ici, seulement les vérifications.
         all.push({ ...out, dureeS: Math.round((Date.now() - t0) / 1000), lectures: dumps, replis: state.fallbacks });
         process.stderr.write(`${name} `);

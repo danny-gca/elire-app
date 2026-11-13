@@ -63,3 +63,6 @@ dist-test/
 
 # Liste générée (npm run a-verifier)
 docs/a-verifier.md
+
+# Résultats des scripts de perf (scripts/perf-web.mjs, scripts/perf-android.mjs)
+/perf-results/

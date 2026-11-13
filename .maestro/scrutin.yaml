@@ -1,0 +1,38 @@
+# F-SCRUTIN : un scrutin réel arrive au tampon, se vote (Contre, Abstention, Pour), compte, et la suite part seule.
+appId: fr.elire.app
+name: Scrutin réel
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- tapOn: "Voter"
+- evalScript: ${output.garderScrutin = true}
+- repeat:
+    while:
+      notVisible: "Scrutin L-.*"
+    times: 12
+    commands:
+      - runFlow: communs/vote.yaml
+- runFlow: communs/astuce.yaml
+- assertVisible: "(?i)scrutin réel"
+- assertVisible: "Contre"
+- assertVisible: "Abstention"
+- copyTextFrom: "Scrutin L-.*"
+- evalScript: ${output.loi = maestro.copiedText.match(/L-\d+/)[0]}
+- copyTextFrom: "(Bilan|Classement) dans .*"
+- evalScript: ${output.avant = maestro.copiedText}
+- tapOn: { text: "Pour", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+# Pendant l'hémicycle et ses 5 s, l'écran animé ralentit trop Maestro pour le lire (perf-android vérifie qu'il s'affiche) ;
+# son astuce, si elle s'ouvre, met la suite en pause : on y lit le résultat.
+- runFlow:
+    when:
+      visible: "Compris"
+    commands:
+      - assertVisible: ".*(Adoptée|Rejetée|En cours).*"
+      - assertVisible: "Question suivante"
+      - tapOn: { text: "Compris", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+# Personne ne touche : la suite part seule (compte à rebours sur le bouton), et le vote compte.
+- extendedWaitUntil:
+    notVisible: "Scrutin ${output.loi}.*"
+    timeout: 15000
+- copyTextFrom: "(Bilan|Classement) dans .*"
+- assertTrue: ${maestro.copiedText != output.avant}

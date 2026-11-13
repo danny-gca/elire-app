@@ -4,7 +4,7 @@
 //   node scripts/perf-web.mjs --dist dist-avant,dist --runs 3 --cpu 6 --scenarios votes,tiroirs
 //
 // Options : --dist (un ou plusieurs exports, séparés par des virgules), --runs, --cpu (bridage), --reduced-motion,
-// --scenarios (votes, rapide, retour, tiroirs, bilan, visites), --json <fichier>, --chrome <binaire>.
+// --scenarios (votes, rapide, retour, tiroirs, bilan, visites, fin), --json <fichier>, --chrome <binaire>.
 // Le web n'est pas Android (ni Hermes, ni rendu natif, ni swipe au doigt) : seule la comparaison entre deux exports compte.
 import { spawn } from 'node:child_process';
 import { mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
@@ -20,7 +20,7 @@ const dists = (args.dist ?? 'dist').split(',').map((d) => resolve(d));
 const runs = Number(args.runs ?? 1);
 const cpu = Number(args.cpu ?? 6);
 const reducedMotion = args['reduced-motion'] === 'true';
-const scenarios = (args.scenarios ?? 'votes,rapide,retour,tiroirs,bilan,visites').split(',');
+const scenarios = (args.scenarios ?? 'votes,rapide,retour,tiroirs,bilan,visites,fin').split(',');
 const chromeBin = args.chrome ?? process.env.CHROME ?? 'google-chrome';
 const baseUrl = JSON.parse(readFileSync(join(root, 'app.json'), 'utf8')).expo.experiments?.baseUrl ?? '';
 const onboardingVersion = Number(/ONBOARDING_VERSION = (\d+)/.exec(readFileSync(join(root, 'src/store/votes-store.ts'), 'utf8'))[1]);
@@ -35,6 +35,22 @@ const seed = `(() => {
     localStorage.setItem('elire-tutos', JSON.stringify({ state: { seen: ${JSON.stringify(tutos)} }, version: 1 }));
   }
 })();`;
+
+// Scénario fin : tout voté sauf une proposition, pour atteindre l'écran de fin sans 227 votes.
+const data = JSON.parse(readFileSync(join(root, 'src/data/dataset.json'), 'utf8'));
+const notes = [2, 1, -1, -2, 1];
+const finState = {
+  state: {
+    onboardingVersion,
+    votes: Object.fromEntries([
+      ...data.propositions.filter((p) => !p.enjeuId).slice(1).map((p, i) => [p.id, notes[i % notes.length]]),
+      ...data.enjeux.map((e) => [e.id, 1]),
+    ]),
+    loiVotes: Object.fromEntries(data.lois.map((l) => [l.id, 'pour'])),
+  },
+  version: 4,
+};
+const finSeed = `localStorage.setItem('elire-votes', ${JSON.stringify(JSON.stringify(finState))}); window.__candidats = ${JSON.stringify(data.candidats.map((c) => c.nom))}; window.__questions = ${data.propositions.filter((p) => !p.enjeuId).length + data.enjeux.length + data.lois.length};`;
 
 // Exécuté dans la page : un scénario, ses mesures (tâches longues, images lentes) et ses vérifications.
 async function scenario(name) {
@@ -62,7 +78,7 @@ async function scenario(name) {
   const checkGap = (step) => {
     const last = [...document.querySelectorAll('[aria-label^="A voté"]')].find((e) => getComputedStyle(e.parentElement).opacity !== '0');
     const dock = [...document.querySelectorAll('[role="button"], button')]
-      .filter((b) => visible(b) && /^Impossible|^Pour|^Contre|Question suivante/.test(b.getAttribute('aria-label') || b.textContent || ''))
+      .filter((b) => visible(b) && /^Jamais|^Pour|^Contre|Question suivante/.test(b.getAttribute('aria-label') || b.textContent || ''))
       .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)[0];
     if (last && dock) {
       const px = Math.round(dock.getBoundingClientRect().top - last.getBoundingClientRect().bottom);
@@ -217,6 +233,27 @@ async function scenario(name) {
     await step('voter', () => tab('Voter').click(), () => button(VOTE));
   }
 
+  if (name === 'fin') {
+    // La dernière question votée : écran de fin, partage, récapitulatif de toutes les questions, gomme avec les noms.
+    const text = () => document.body.innerText;
+    const dialog = () => document.querySelector('[aria-modal="true"]');
+    const t0 = performance.now();
+    button(VOTE)?.click();
+    const fin = await until(() => /Vous avez (rempli tous les votes|donné votre avis sur toutes)/.test(text()), 10000);
+    out.finMs = fin === null ? 'échec' : Math.round(performance.now() - t0);
+    out.partager = !!button(/^Partager mon classement$/);
+    out.voirClassement = !!button(/^Voir le classement$/);
+    const rows = () => [...document.querySelectorAll('[role="button"]')].filter((b) => visible(b) && /\b[PLE]-\d+\b/.test(b.innerText));
+    out.lignes = `${rows().length}/${window.__questions}`;
+    rows()[0]?.click();
+    const opened = await until(() => dialog() && /Votre vote|Modifier votre vote/.test(dialog().innerText), 5000);
+    out.gommeOuverte = opened !== null;
+    out.gommeAvecNoms = opened !== null && window.__candidats.some((n) => dialog().innerText.includes(n));
+    const contre = dialog() && [...dialog().querySelectorAll('[role="button"], button')].find((b) => /^Contre(, −1)?$/.test(b.getAttribute('aria-label') || ''));
+    contre?.click();
+    out.gommeVoteChange = !!contre && (await until(() => !dialog(), 5000)) !== null && /Vous avez (rempli|donné)/.test(text());
+  }
+
   running = false;
   po.disconnect();
   const sorted = [...timings].sort((a, b) => a - b);
@@ -305,6 +342,9 @@ async function measure(cdp, url, name) {
   await s('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 3, mobile: true });
   await s('Emulation.setTouchEmulationEnabled', { enabled: true });
   await s('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: reducedMotion ? 'reduce' : 'no-preference' }] });
+  if (name === 'fin') {
+    await s('Page.addScriptToEvaluateOnNewDocument', { source: finSeed });
+  }
   await s('Page.addScriptToEvaluateOnNewDocument', { source: seed });
   await s('Page.navigate', { url });
   const ready = `new Promise((ok, ko) => { const t0 = Date.now(); const tick = () => document.querySelector('[aria-label^="Pour, +1"]') ? ok(true) : Date.now() - t0 > 30000 ? ko(new Error('Voter ne s’affiche pas')) : setTimeout(tick, 100); tick(); })`;

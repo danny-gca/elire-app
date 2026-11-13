@@ -65,7 +65,11 @@
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "check:links": "node .claude/skills/verifier-donnees/scripts/check-links.mjs",
-    "check": "npm run build:data && git diff --exit-code src/data/dataset.json && npm run typecheck && npm run lint && npm test"
+    "check": "npm run build:data && git diff --exit-code src/data/dataset.json && npm run typecheck && npm run lint && npm test",
+    "test:e2e": "mkdir -p perf-results/maestro && maestro test .maestro --format junit --output perf-results/maestro/rapport.xml --test-output-dir perf-results/maestro",
+    "perf:android": "mkdir -p perf-results && node scripts/perf-android.mjs --json perf-results/android.json",
+    "perf:web": "mkdir -p perf-results && expo export -p web --output-dir dist && node scripts/perf-web.mjs --json perf-results/web.json",
+    "simulations": "npm run simulate:scoring && npm run simulate:neutralite"
   },
   "private": true,
   "jest": {

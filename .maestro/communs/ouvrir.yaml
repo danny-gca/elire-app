@@ -1,0 +1,8 @@
+# Ouvre l'app sans rien effacer ; présentation passée si elle s'affiche (parcours lancé seul).
+appId: fr.elire.app
+---
+- launchApp
+- runFlow:
+    when:
+      visible: "Page suivante"
+    file: presentation.yaml

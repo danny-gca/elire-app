@@ -1,0 +1,24 @@
+# F-EXPLORER : recherche d'une mesure ou d'un candidat ; un thème ouvre ses propositions avec leur auteur, puis le thème suivant.
+appId: fr.elire.app
+name: Explorer
+tags: [explorer]
+---
+- runFlow: communs/ouvrir.yaml
+- tapOn: "Explorer"
+- runFlow: communs/astuce.yaml
+- assertVisible: "Toutes les propositions par thème.*"
+- tapOn: "Rechercher une mesure, un candidat"
+- inputText: "SMIC"
+- hideKeyboard
+- assertVisible: ".*SMIC.*"
+- tapOn: "Effacer la recherche"
+- tapOn: ".*, \\d+ votées sur \\d+"
+- assertVisible: "Retour au sommaire"
+- assertVisible: "Filtrer les propositions"
+- scrollUntilVisible:
+    element: "Thème suivant : .*"
+    direction: DOWN
+- tapOn: "Thème suivant : .*"
+- assertVisible: "Retour au sommaire"
+- tapOn: "Retour au sommaire"
+- assertVisible: "Toutes les propositions par thème.*"

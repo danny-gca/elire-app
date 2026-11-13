@@ -1,0 +1,33 @@
+# Un pas dans Voter : ferme une astuce, passe un résultat ou le bilan (sauf output.garderBilan), sinon vote « Pour » (un scrutin sauf output.garderScrutin).
+appId: fr.elire.app
+---
+# Le compte à rebours de « A voté ! » anime l'écran 10 s : Maestro n'attend pas qu'il soit immobile (500 ms au plus).
+- runFlow:
+    when:
+      visible: "Compris"
+    commands:
+      - tapOn: { text: "Compris", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+- runFlow:
+    when:
+      visible: "Question suivante"
+    commands:
+      - tapOn: { text: "Question suivante", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+- runFlow:
+    when:
+      visible: "10 questions de plus"
+      true: ${!output.garderBilan}
+    commands:
+      - tapOn: { text: "10 questions de plus", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+# Proposition ou question commune : l'échelle à cinq choix ; scrutin : « Pour » seul.
+- runFlow:
+    when:
+      visible: "Pour, \\+1"
+    commands:
+      - tapOn: { text: "Pour, \\+1", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+- runFlow:
+    when:
+      visible: "Pour"
+      notVisible: "Pour, \\+1"
+      true: ${!output.garderScrutin}
+    commands:
+      - tapOn: { text: "Pour", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
