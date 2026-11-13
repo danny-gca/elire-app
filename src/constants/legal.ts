@@ -4,7 +4,7 @@ import { REPORT_FORM } from '@/constants/app';
 export type LegalSection = { titre: string; paragraphes: string[] };
 
 /** Éditeur à titre personnel, et l'adresse qui reçoit corrections et droits de réponse. */
-export const EDITEUR = { nom: 'Danny Garcia', contact: 'contact@danny-garcia.fr' };
+export const EDITEUR = { nom: 'Danny Garcia', contact: 'contact@danny-garcia.fr', site: 'https://danny-garcia.fr' };
 export const HEBERGEUR = 'GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (GitHub Pages)';
 export const CORRECTION_DELAY = '10 jours ouvrés';
 export const CONTACT_URL = `mailto:${EDITEUR.contact}?subject=${encodeURIComponent('élire : correction ou droit de réponse')}`;

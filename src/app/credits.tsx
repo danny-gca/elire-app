@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
+import { useState } from "react";
 import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { CandidateAvatar } from "@/components/candidate-avatar";
@@ -21,6 +22,7 @@ import {
   Spacing,
   Type,
 } from "@/constants/theme";
+import { fisherYates } from "@/lib/shuffle";
 import { getCandidat } from "@/services/dataset";
 
 const host = (url: string) => url.replace(/^https:\/\//, "").replace(/\/$/, "");
@@ -37,6 +39,8 @@ const APP_LINKS = [
 
 export default function CreditsScreen() {
   const router = useRouter();
+  // Neutralité : les portraits dans un ordre tiré à chaque ouverture, comme les égalités du Classement.
+  const [photos] = useState(() => fisherYates(PHOTO_CREDITS));
 
   return (
     <Screen>
@@ -55,46 +59,6 @@ export default function CreditsScreen() {
         title="Crédits"
         note="Qui a fait élire, et ce qu'elle réutilise selon leur licence : portraits de Wikimedia Commons, polices et icônes libres. Les sons sont faits maison, par un script ouvert."
       />
-      <View style={styles.list}>
-        <View
-          style={styles.row}
-          accessible
-          accessibilityLabel={`élire ${APP_VERSION}, conçue et développée par ${EDITEUR.nom}, à titre personnel`}
-        >
-          <View style={styles.text}>
-            <Text style={[Type.bodyStrong, styles.ink]}>
-              Développée par {EDITEUR.nom}
-            </Text>
-            <Text style={[Type.label, styles.muted]}>
-              Sans lien avec un parti, ni un candidat
-            </Text>
-            {APP_VERSION !== "" && (
-              <Text style={[Type.label, Numeric, styles.muted]}>
-                Version {APP_VERSION}
-              </Text>
-            )}
-          </View>
-        </View>
-        {APP_LINKS.map((link) => (
-          <Pressable
-            key={link.url}
-            onPress={() => Linking.openURL(link.url)}
-            accessibilityRole="link"
-            accessibilityLabel={`${link.titre}, ${link.detail}`}
-            style={({ pressed }) => [
-              styles.row,
-              styles.separator,
-              pressed && { backgroundColor: Colors.pressed },
-            ]}
-          >
-            <View style={styles.text}>
-              <Text style={[Type.bodyStrong, styles.ink]}>{link.titre}</Text>
-              <Text style={[Type.label, styles.muted]}>{link.detail}</Text>
-            </View>
-            <Ionicons name="open-outline" size={16} color={Colors.graphite} />
-          </Pressable>
-        ))}
-      </View>
       <Text
         style={[Type.bodyStrong, styles.ink, styles.heading]}
         accessibilityRole="header"
@@ -102,7 +66,7 @@ export default function CreditsScreen() {
         Portraits
       </Text>
       <View style={styles.list}>
-        {PHOTO_CREDITS.map((credit, i) => {
+        {photos.map((credit, i) => {
           const candidat = getCandidat(credit.candidatId);
           if (!candidat) {
             return null;
@@ -210,6 +174,54 @@ export default function CreditsScreen() {
           </View>
           <Ionicons name="open-outline" size={16} color={Colors.graphite} />
         </Pressable>
+      </View>
+      <Text
+        style={[Type.bodyStrong, styles.ink, styles.heading]}
+        accessibilityRole="header"
+      >
+        À propos
+      </Text>
+      <View style={styles.list}>
+        <Pressable
+          onPress={() => Linking.openURL(EDITEUR.site)}
+          accessibilityRole="link"
+          accessibilityLabel={`élire ${APP_VERSION}, conçue et développée par ${EDITEUR.nom}, à titre personnel. Son site, ${host(EDITEUR.site)}`}
+          style={({ pressed }) => [styles.row, pressed && { backgroundColor: Colors.pressed }]}
+        >
+          <View style={styles.text}>
+            <Text style={[Type.bodyStrong, styles.ink]}>
+              Développée par {EDITEUR.nom}
+            </Text>
+            <Text style={[Type.label, styles.muted]}>
+              Sans lien avec un parti, ni un candidat
+            </Text>
+            {APP_VERSION !== "" && (
+              <Text style={[Type.label, Numeric, styles.muted]}>
+                Version {APP_VERSION}
+              </Text>
+            )}
+          </View>
+          <Ionicons name="open-outline" size={16} color={Colors.graphite} />
+        </Pressable>
+        {APP_LINKS.map((link) => (
+          <Pressable
+            key={link.url}
+            onPress={() => Linking.openURL(link.url)}
+            accessibilityRole="link"
+            accessibilityLabel={`${link.titre}, ${link.detail}`}
+            style={({ pressed }) => [
+              styles.row,
+              styles.separator,
+              pressed && { backgroundColor: Colors.pressed },
+            ]}
+          >
+            <View style={styles.text}>
+              <Text style={[Type.bodyStrong, styles.ink]}>{link.titre}</Text>
+              <Text style={[Type.label, styles.muted]}>{link.detail}</Text>
+            </View>
+            <Ionicons name="open-outline" size={16} color={Colors.graphite} />
+          </Pressable>
+        ))}
       </View>
     </Screen>
   );
