@@ -10,7 +10,7 @@ import { spawn } from 'node:child_process';
 import { mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
-import { extname, join, resolve } from 'node:path';
+import { extname, join, resolve, sep } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const args = Object.fromEntries(
@@ -282,11 +282,13 @@ const isFile = (p) => {
 function serve(dir) {
   const server = createServer((req, res) => {
     const path = decodeURIComponent(req.url.split('?')[0]).replace(new RegExp(`^${baseUrl}`), '');
-    const file = [join(dir, path), join(dir, `${path}.html`), join(dir, path, 'index.html'), join(dir, 'index.html')].find(isFile);
+    // Jamais hors de l'export (« .. » dans l'URL).
+    const inside = [join(dir, path), join(dir, `${path}.html`), join(dir, path, 'index.html')].filter((p) => p.startsWith(dir + sep));
+    const file = [...inside, join(dir, 'index.html')].find(isFile);
     res.writeHead(200, { 'content-type': types[extname(file)] ?? 'application/octet-stream' });
     res.end(readFileSync(file));
   });
-  return new Promise((ok) => server.listen(0, () => ok(server)));
+  return new Promise((ok) => server.listen(0, '127.0.0.1', () => ok(server)));
 }
 
 // Client du protocole DevTools : une commande, une réponse ; sessions à plat.
@@ -369,7 +371,7 @@ const results = {};
 try {
   for (const dist of dists) {
     const server = await serve(dist);
-    const url = `http://localhost:${server.address().port}${baseUrl}/`;
+    const url = `http://127.0.0.1:${server.address().port}${baseUrl}/`;
     for (const name of scenarios) {
       const all = [];
       for (let r = 0; r < runs; r++) {

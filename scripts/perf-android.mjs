@@ -37,7 +37,7 @@ async function dump() {
     if (/dumped to/.test(out)) {
       const xml = String(await adb('exec-out', 'cat', '/sdcard/elire-ui.xml'));
       return [...xml.matchAll(/<node ([^>]*?)\/?>/g)].map(([, attrs]) => {
-        const get = (k) => (new RegExp(`${k}="([^"]*)"`).exec(attrs)?.[1] ?? '').replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&#10;/g, ' ');
+        const get = (k) => (new RegExp(`${k}="([^"]*)"`).exec(attrs)?.[1] ?? '').replace(/&(quot|amp|#10);/g, (_, e) => ({ quot: '"', amp: '&', '#10': ' ' })[e]);
         const [x1, y1, x2, y2] = (get('bounds').match(/\d+/g) ?? [0, 0, 0, 0]).map(Number);
         return { text: get('text'), desc: get('content-desc'), x: (x1 + x2) >> 1, y: (y1 + y2) >> 1, left: x1, right: x2, top: y1, bottom: y2 };
       });
