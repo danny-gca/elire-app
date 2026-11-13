@@ -115,32 +115,39 @@ function Contour({ delay = 0 }: { delay?: number }) {
   const reducedMotion = useReducedMotion();
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
   const progress = useSharedValue(reducedMotion ? 1 : 0);
-  const perimeter = size ? 2 * (size.width + size.height) : 0;
   useEffect(() => {
     if (size && !reducedMotion) {
       progress.value = withDelay(delay, withTiming(1, { duration: CONTOUR_MS, easing: Easing.out(Easing.cubic) }));
     }
   }, [size, reducedMotion, progress, delay]);
-  const animatedProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - progress.value) }));
   return (
     <View pointerEvents="none" style={StyleSheet.absoluteFill} onLayout={(e) => setSize(e.nativeEvent.layout)}>
       {size && (
         <Svg width={size.width} height={size.height}>
-          <AnimatedRect
-            x={0.5}
-            y={0.5}
-            width={size.width - 1}
-            height={size.height - 1}
-            rx={Radius.large}
-            fill="none"
-            stroke={Colors.graphite}
-            strokeWidth={1}
-            strokeDasharray={[perimeter, perimeter]}
-            animatedProps={animatedProps}
-          />
+          <ContourRect width={size.width} height={size.height} progress={progress} />
         </Svg>
       )}
     </View>
+  );
+}
+
+// Monté une fois la taille connue : Reanimated fige la valeur initiale au premier rendu.
+function ContourRect({ width, height, progress }: { width: number; height: number; progress: SharedValue<number> }) {
+  const perimeter = 2 * (width + height);
+  const animatedProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - progress.value) }));
+  return (
+    <AnimatedRect
+      x={0.5}
+      y={0.5}
+      width={width - 1}
+      height={height - 1}
+      rx={Radius.large}
+      fill="none"
+      stroke={Colors.graphite}
+      strokeWidth={1}
+      strokeDasharray={[perimeter, perimeter]}
+      animatedProps={animatedProps}
+    />
   );
 }
 
