@@ -14,9 +14,10 @@ const PAD = 16;
 
 // Question commune : la feuille encadrée à la main aux quatre surligneurs, toujours 4 traits (ils ne comptent pas les candidats).
 // Exception assumée à la règle du surligneur, comme le logo : un dessin fixe, pas une marque.
-export function EnjeuFrame({ animate, children }: { animate: boolean; children: React.ReactNode }) {
+// `pen` : un seul trait de stylo fin à la place des quatre surligneurs (étiquette de la présentation).
+export function EnjeuFrame({ animate, pen, children }: { animate: boolean; pen?: string; children: React.ReactNode }) {
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
-  const [colors] = useState(() => fisherYates(MARKER_IDS).map((id) => Markers[id].solid));
+  const [colors] = useState(() => (pen ? MARKER_IDS.map(() => pen) : fisherYates(MARKER_IDS).map((id) => Markers[id].solid)));
   // Tirage figé : la feuille qui grandit (un onglet ouvert) garde le même cadre.
   const [draws] = useState(() => Array.from({ length: 12 }, Math.random));
   const progress = useSharedValue(animate ? 0 : 1);
@@ -35,7 +36,7 @@ export function EnjeuFrame({ animate, children }: { animate: boolean; children: 
         <View pointerEvents="none" style={styles.svg} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
           <Svg width={size.width + 8 + PAD * 2} height={size.height + 8 + PAD * 2}>
             {sides.map((side, i) => (
-              <Side key={i} points={side} color={colors[i]} index={i} progress={progress} />
+              <Side key={i} points={side} color={colors[i]} width={pen ? 2 : 4} index={i} progress={progress} />
             ))}
           </Svg>
         </View>
@@ -44,7 +45,7 @@ export function EnjeuFrame({ animate, children }: { animate: boolean; children: 
   );
 }
 
-function Side({ points, color, index, progress }: { points: [number, number][]; color: string; index: number; progress: SharedValue<number> }) {
+function Side({ points, color, width, index, progress }: { points: [number, number][]; color: string; width: number; index: number; progress: SharedValue<number> }) {
   const { d, length } = polyline(points.map(([x, y]) => [x + PAD, y + PAD]));
   const animatedProps = useAnimatedProps(() => {
     const drawn = Math.min(1, Math.max(0, progress.value * 4 - index));
@@ -54,7 +55,7 @@ function Side({ points, color, index, progress }: { points: [number, number][]; 
     <AnimatedPath
       d={d}
       stroke={color}
-      strokeWidth={4}
+      strokeWidth={width}
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"

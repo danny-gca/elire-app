@@ -27,11 +27,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { CandidateAvatar } from "@/components/candidate-avatar";
 import { EditChip } from "@/components/edit-chip";
+import { EnjeuFrame, FRAME_DRAW_MS } from "@/components/enjeu-frame";
 import { EditVoteSheet } from "@/components/edit-vote-sheet";
 import { Marked } from "@/components/marked";
 import { MarkerPicker } from "@/components/marker-picker";
 import { PropositionRow } from "@/components/proposition-row";
 import { SweepText } from "@/components/sweep-text";
+import { ButtonStroke } from "@/components/button-stroke";
 import { Button } from "@/components/ui/button";
 import { VoteScale } from "@/components/vote-scale";
 import { VoteTag } from "@/components/vote-tag";
@@ -60,6 +62,8 @@ const TRY_NEXT_MS = 1200;
 const SOURCE_NEXT_MS = 1800;
 // Après la fermeture de la feuille de la gomme (qui se ferme seule après le vote).
 const SHEET_NEXT_MS = 600;
+// Le trait sur « Commencer à voter » attend que l'étiquette soit tracée.
+const START_STROKE_DELAY = 260 + FRAME_DRAW_MS;
 
 type Demo = "picker" | "vote" | "eraser" | "source" | "groupe" | "start";
 
@@ -273,23 +277,26 @@ export default function OnboardingScreen() {
                   entering={FadeIn.duration(260)}
                   style={styles.start}
                 >
-                  <Image
-                    source={require("@/assets/images/splash-icon.png")}
-                    style={styles.startLogo}
-                    accessibilityIgnoresInvertColors
-                  />
-                  <Text
-                    style={[Type.display, styles.ink]}
-                    accessibilityRole="header"
-                  >
-                    élire
-                  </Text>
-                  <Button
-                    label="Commencer à voter"
-                    variant="primary"
-                    onPress={finish}
-                    style={styles.cta}
-                  />
+                  {/* La couverture du cahier : une étiquette tracée au stylo. */}
+                  <EnjeuFrame animate={!reducedMotion} pen={Colors.ink}>
+                    <View style={styles.label}>
+                      <Image
+                        source={require("@/assets/images/splash-icon.png")}
+                        style={styles.startLogo}
+                        accessibilityIgnoresInvertColors
+                      />
+                      <Text
+                        style={[Type.screenTitle, styles.ink]}
+                        accessibilityRole="header"
+                      >
+                        élire
+                      </Text>
+                      <View style={styles.labelRule} />
+                      <Text style={[Type.caps, styles.muted]}>
+                        Présidentielle 2027
+                      </Text>
+                    </View>
+                  </EnjeuFrame>
                 </Animated.View>
               ) : (
                 <Animated.View
@@ -337,6 +344,11 @@ export default function OnboardingScreen() {
         </GestureHandlerRootView>
 
         <View style={styles.bottom}>
+          {story.demo === "start" && (
+            <View style={styles.start}>
+              <StartCta onPress={finish} />
+            </View>
+          )}
           {interactive && (
             <View
               onTouchStart={() => setHeld(true)}
@@ -406,6 +418,29 @@ const EXAMPLE: Proposition = {
 };
 
 // La proposition fictive et les vrais boutons de Voter : le choix prend le trait du surligneur choisi juste avant.
+// Le dernier trait de la présentation : le surligneur choisi passe sur « Commencer à voter ».
+function StartCta({ onPress }: { onPress: () => void }) {
+  const marker = useVotesStore((s) => s.marker);
+  useEffect(() => {
+    const timer = setTimeout(() => playSound("trait"), START_STROKE_DELAY);
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel="Commencer à voter"
+      style={({ pressed }) => [styles.startCta, pressed && styles.startCtaPressed]}
+    >
+      <View style={styles.startCtaInk}>
+        <ButtonStroke color={Markers[marker].soft} delay={START_STROKE_DELAY} />
+        <Text style={[Type.display, styles.ink]}>Commencer à voter</Text>
+        <Ionicons name="arrow-forward" size={24} color={Colors.ink} />
+      </View>
+    </Pressable>
+  );
+}
+
 function VoteDemo({
   vote,
   onVote,
@@ -719,13 +754,45 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 4,
   },
+  // Centré sur l'écran, pas sur la colonne que la marge décale de 40 pt.
   start: {
     alignItems: "center",
-    gap: Spacing.three,
+    gap: Spacing.four,
+    marginLeft: -40,
+  },
+  label: {
+    alignItems: "center",
+    gap: Spacing.one,
+    paddingVertical: Spacing.three,
+    paddingHorizontal: Spacing.five,
+    backgroundColor: Colors.sheet,
+  },
+  labelRule: {
+    alignSelf: "stretch",
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: Colors.rule,
+  },
+  startCta: {
+    minHeight: 56,
+    justifyContent: "center",
+    paddingHorizontal: Spacing.two,
+    borderRadius: Radius.medium,
+  },
+  // Le trait suit les mots, pas le bouton : il ne touche pas la marge.
+  startCtaInk: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.one,
+    paddingVertical: Spacing.one,
+    overflow: "visible",
+    zIndex: 1,
+  },
+  startCtaPressed: {
+    backgroundColor: Colors.pressed,
   },
   startLogo: {
-    width: 128,
-    height: 128,
+    width: 96,
+    height: 96,
   },
   separator: {
     borderTopWidth: StyleSheet.hairlineWidth,
@@ -739,9 +806,6 @@ const styles = StyleSheet.create({
   bottom: {
     gap: Spacing.two,
     paddingBottom: Spacing.two,
-  },
-  cta: {
-    alignSelf: "stretch",
   },
   ink: {
     color: Colors.ink,
