@@ -4,47 +4,25 @@
 
 Les dates annoncées sont aussi dans `data/candidats.json` (`programme.annonce`) : le build les rappelle une fois passées.
 
-- 2026-11-01 : revue mensuelle des 25 candidats (programmes publiés, liens morts avec `check-links.mjs`), puis le 1er de chaque mois.
-- Antoine Mikolajczak : programme synthétique « L'essentiel » paru en novembre 2026 (52 p., 3 chapitres), lu le 2026-11-06 ; statut `partiel`. Remplacer ses 3 prises de position (prop-am-9 à 11) et ses 4 mesures de 2024 par des mesures de ce document.
-- Jean-Luc Mélenchon : 5e édition de L'Avenir en commun en librairie le 2026-11-06 (1 069 mesures, 238 nouvelles), sans PDF en ligne ([annonce](https://lafranceinsoumise.fr/2026/11/02/avenir-en-commun-nouvelle-france/)). Relire ses propositions dès qu'une version en ligne existe.
-- Nathalie Arthaud : dépliant de campagne du 2026-11-03 ([page](https://www.lutte-ouvriere.org/portail/documents/depliant-campagne-209499.html)), PDF non téléchargeable par robot : à lire à la main.
-- 2026-11-09 : partie 11 du livre-programme d'Olivier Becht, repasser en `complet`.
+- Le 1er de chaque mois (prochaine : 2026-12-01) : revue des 27 candidats : `npm run a-verifier` (candidats périmés après 30 jours), programmes publiés, liens morts avec `check-links.mjs`, votes avec `check-votes.mjs`.
+- 2026-11-14 : meeting de lancement de Mira Markovic (pas encore de programme) : relire ses propositions.
+- 2026-11-17 : réforme des retraites annoncée par Marine Le Pen : relire prop-mlp-9.
+- 2026-11-18 : contre-budget 2027 annoncé par le parti d'Antoine Mikolajczak ([page](https://parti-equinoxe.fr/programme-2027/)).
+- 2026-11-21 : meeting d'Éric Zemmour : relire ses propositions.
+- 2026-12-06 : meeting de lancement de Raphaël Glucksmann : chercher la suite de son livret (seule la « Première partie », écologie, est en ligne au 14/11).
+- Sans date : programme de l'UPR « en cours d'élaboration » (François Asselineau, 3 mesures sourcées en 2026, le reste en 2022 ; toujours rien sur upr.fr/notre-programme au 14/11).
 - 2026-12-13 : vote des adhérents écologistes (10 au 13 décembre) sur la candidature de Marine Tondelier ou le soutien à un autre candidat ([Public Sénat](https://www.publicsenat.fr/actualites/politique/presidentielle-2027-personne-ne-gagnera-seul-assure-marine-tondelier)).
-- Fin 2026 : déclaration formelle annoncée par Xavier Bertrand (« à la fin de l'année ») ; décision de Jean Lassalle annoncée « à l'automne ».
+- Fin 2026 : déclaration formelle annoncée par Xavier Bertrand (« à la fin de l'année ») ; décision de Jean Lassalle annoncée « à l'automne » (pas candidat déclaré au 14/11, il cherche ses 500 parrainages). Rien de neuf pour les deux au 14/11.
 - 2027-02-07 au plus tard : décret de convocation, puis ouverture des parrainages ; clôture le 2027-03-12 à 18 h ([Toute l'Europe](https://www.touteleurope.eu/vie-politique-des-etats-membres/presidentielle-2027-calendrier-dates-inscription-candidats-vote/)).
 - Avant le premier tour : arrêt de la Cour de cassation sur le pourvoi de Marine Le Pen (éligible depuis l'arrêt d'appel du 2026-07-07).
-- 2027-05-05 : relire les 75 sujets (`data/sujets.json`), 180 jours après leur écriture ; le build le rappelle.
+- 2027-05-10 : relire les 74 sujets (`data/sujets.json`), 180 jours après leur relecture du 2026-11-11 ; le build le rappelle.
 - 2027-03-16 (au plus tard le 26) : liste officielle du Conseil constitutionnel. Passer chaque candidat retenu en statut officiel, retirer les autres. Premier tour le 2027-04-18, second le 2027-05-02.
 - Les autres : dès la publication de leur programme 2027, mettre à jour de la même façon (propositions ajoutées ou remplacées, sources revérifiées, `contexte` daté).
 
-## Neutralité
-
-Détail : `docs/simulations/README.md`, section « Neutralité des questions ».
-
-- Équilibrer les scrutins : 35 des 47 textes ont été adoptés (8 rejetés, 4 en cours), donc votés « pour » par la majorité. Ajouter des textes de l'opposition rejetés par la majorité.
-- Ajouter des « contre » dans d'autres questions communes : seuls Selma Labib et Bruno Retailleau en ont.
-- Compléter à 8 propositions David Lisnard, Édouard Philippe et Fabien Roussel (7 chacun). Passer à 10 par candidat seulement quand la plupart auront un programme 2027.
-
-## Données à valider
-
-- Les 16 questions communes (`data/enjeux.json`), surtout : budget-defense (db-3, et sl-3 en contre), temps-de-travail (br-3 en contre), peines-planchers (br-1).
-- Types de source discutables : jlm et nda en programme 2027 ; br-7, br-8 et np-6 en programme 2027 ; ez-2 en programme précédent ; fa-1, fa-2 et ga-\* en prise de position.
-- prop-ez-8 : citation lue sur une page en image (couche texte du PDF illisible).
-- prop-na-3 : page imprimée 11 ou 12 ?
-- prop-fro-4 : la citation est une phrase du journaliste de Terre-net, pas une parole du candidat. Chercher la source du candidat.
-- prop-nda-3 : préciser « faute de vaccin Covid » dans le titre ? Seule sa proposition de loi n° 26 de 2022 le dit, pas la page du programme.
-- Thème de l'immigration à harmoniser : prop-ep-8 et prop-sl-4 en société, prop-nda-1 en sécurité.
-- Questions proches et contexte maigre signalés par le build : arbitrages dans `docs/feature-20261106-doublons-contexte.md`.
-- Sujets sensibles à relire (immigration, priorité nationale, laïcité, IVG et PMA, justice des mineurs, défense, Ukraine) et chiffres de projets de budget à confirmer : section 5 du même document.
-
-## Choix à trancher
-
-- Étiquette de Natacha Polony et Olivier Becht, avec une règle commune à tous : leur mouvement de campagne (que Wikipédia présente comme un slogan) ou leur étiquette d'origine ?
-
 ## Portraits
 
-- Portraits libres manquants (l'app affiche les initiales en attendant) : Antoine Mikolajczak, Mira Markovic (nom d'usage « Douchka Markovic »), Selma Labib. Rien de libre sur Commons, Wikidata ni Flickr (recherche du 2026-10-15).
-- Écrire à chaque équipe de campagne (contact sur son site) pour un portrait sous CC BY 4.0, idéalement déposé sur Wikimedia Commons, puis l'ajouter dans `assets/images/candidates/` et `src/constants/credits.ts`. Message type :
+- Portraits libres manquants (l'app affiche les initiales en attendant) : Antoine Mikolajczak, Mira Markovic (nom d'usage « Douchka Markovic »), Selma Labib, Sylvain Durif. Recherche du 2026-11-11 sur Commons et Wikidata : rien pour Mikolajczak et Markovic ; pour Labib, une bannière de 395 × 141 px d'auteur inconnu prise sur le site du parti (licence non prouvée) ; pour Durif, une capture YouTube de 2013 sous CC BY mais visée par une demande de suppression où il la dit diffamatoire, et deux photos à la flûte à la licence douteuse.
+- Écrire à chaque équipe pour un portrait sous CC BY 4.0, idéalement déposé sur Wikimedia Commons, puis l'ajouter dans `assets/images/candidates/` et `src/constants/credits.ts`. Contacts : Équinoxe contact@parti-equinoxe.fr (photos du site créditées « Photographe : Jody Priour ») ; Parti animaliste contact@parti-animaliste.fr ; NPA-Révolutionnaires, formulaire npa-revolutionnaires.org/contact ; Sylvain Durif, formulaire durif2027.com/contact. Message type :
   > Bonjour, je développe élire, une application gratuite et neutre de comparaison des candidats à la présidentielle 2027. Chaque candidat y figure avec un portrait sous licence libre, crédité. Pourriez-vous nous fournir un portrait de [Prénom Nom] sous licence CC BY 4.0, avec le nom du photographe à créditer (le plus simple : le publier sur Wikimedia Commons) ? Sans photo libre, la candidate apparaît avec ses initiales, comme tout candidat dans ce cas. Merci.
 
 ## Aspects légaux

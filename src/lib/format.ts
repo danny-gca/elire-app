@@ -14,14 +14,16 @@ export function formatDate(isoDate: string): string {
 export function candidatureText({ statut, date }: Candidature): string {
   const jour = formatDate(date);
   switch (statut) {
-    case 'designee':
-      return `Candidature désignée par son parti le ${jour}`;
+    case 'officielle':
+      return `Candidature officielle, liste du Conseil constitutionnel du ${jour}`;
+    case 'investie':
+      return `Investiture de son parti le ${jour}`;
     case 'sous_condition':
       return `Candidature annoncée sous condition le ${jour}`;
     case 'pressentie':
-      return `Candidature pressentie, pas encore déclarée (source du ${jour})`;
+      return `Candidature pressentie, pas encore annoncée (source du ${jour})`;
     default:
-      return `Candidature déclarée le ${jour}`;
+      return `Candidature annoncée le ${jour}`;
   }
 }
 

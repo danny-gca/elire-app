@@ -9,7 +9,9 @@ import { contexteStats, thinContexte } from '../src/lib/contexte.ts';
 import { closeQuestions } from '../src/lib/doublons.ts';
 import { checkEnjeux } from '../src/lib/enjeux-check.ts';
 import { sujetGaps } from '../src/lib/sujets-check.ts';
+import { elements } from './validation-data.ts';
 import { programmeReminders } from '../src/lib/programme-check.ts';
+import { NB_PROPOSITIONS_PAR_CANDIDAT } from '../src/lib/propositions-count.ts';
 import { acronymsIn, unexplainedInTitle, wordsIn } from '../src/lib/glossary.ts';
 import { MIN_WORDS, negativeWording, wordCount } from '../src/lib/wording.ts';
 import {
@@ -218,8 +220,8 @@ function main() {
   thematiques.forEach((t) => checkText(t.titre + ' ' + t.description, `thematiques.json ${t.id}`));
 
   const candidats: Candidat[] = rawCandidats.map((c) => {
-    const parti = partisById.get(c.partiId);
-    if (!parti) {
+    const parti = c.partiId ? partisById.get(c.partiId) : undefined;
+    if (c.partiId && !parti) {
       errors.push(`candidats.json ${c.id} : parti inconnu "${c.partiId}"`);
     }
     checkText(c.biographie, `candidats.json ${c.id}`);
@@ -413,6 +415,14 @@ function main() {
   });
   warnings.push(...programmeReminders(rawCandidats, today));
 
+  // Sous le nombre visé : signalé sans bloquer, le candidat reste avec ce qui est publié.
+  for (const c of rawCandidats) {
+    const count = propositions.filter((p) => p.candidatId === c.id).length;
+    if (count < NB_PROPOSITIONS_PAR_CANDIDAT) {
+      console.log(`ℹ️  ${c.id} : ${count} proposition(s) sur ${NB_PROPOSITIONS_PAR_CANDIDAT}`);
+    }
+  }
+
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
   if (warnings.length > 0) {
     console.warn(`⚠️  ${warnings.length} avertissement(s)${STRICT ? ' (bloquants en --strict)' : ''}`);
@@ -453,6 +463,10 @@ function main() {
     `✅ ${partis.length} partis, ${candidats.length} candidats, ${thematiques.length} thématiques, ` +
       `${propositions.length} propositions, ${lois.length} lois, ${enjeux.length} enjeux, ${glossaire.length} sigles, ${mots.length} mots, ${sujets.length} sujets -> ${path.relative(ROOT_DIR, OUTPUT_FILE)}`
   );
+  // Validation interne (data/, jamais dans le dataset) : un décompte, sans bloquer.
+  const etat = elements(today);
+  const n = (s: string) => etat.filter((e) => e.statut === s).length;
+  console.log(`🔎 Validation : ${n('valide')} validés, ${n('modifie')} modifiés, ${n('perime')} périmés, ${n('jamais')} jamais validés (npm run a-verifier)`);
 }
 
 main();

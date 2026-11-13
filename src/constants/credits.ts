@@ -24,7 +24,6 @@ export const PHOTO_CREDITS: PhotoCredit[] = [
   { candidatId: 'francois-asselineau', auteur: 'Union Populaire Républicaine', licence: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_ASSELINEAU.jpg' },
   { candidatId: 'nicolas-dupont-aignan', auteur: 'Debout la France', licence: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Nicolas_Dupont-Aignan,_homme_politique_fran%C3%A7ais.jpg' },
   { candidatId: 'david-lisnard', auteur: 'Frantogian', licence: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:David_Lisnard_-_2013.jpg' },
-  { candidatId: 'jean-lassalle', auteur: 'Antoine Lamielle', licence: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Jean_Lassalle.jpg' },
   { candidatId: 'anasse-kazib', auteur: 'PabloMorao27', licence: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Anasse_Kazib,_d%C3%A9cembre_2021.jpg' },
   { candidatId: 'florian-philippot', auteur: 'Films et documetnaires', licence: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Florian_Philippot.jpg' },
   { candidatId: 'karim-bouamrane', auteur: 'Oumma', licence: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Karim_Bouamrane_en_2026.jpg' },
@@ -32,6 +31,8 @@ export const PHOTO_CREDITS: PhotoCredit[] = [
   { candidatId: 'olivier-becht', auteur: 'Ricardo Stuckert / Palácio do Planalto', licence: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:Olivier_Becht_2023_(cropped).jpg' },
   { candidatId: 'natacha-polony', auteur: 'Georges Biard', licence: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Natacha_Polony_Cannes_2015.jpg' },
   { candidatId: 'xavier-bertrand', auteur: 'Claudio Centonze / European Union, 2025 / EC - Audiovisual Service', licence: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Xavier_Bertrand_(2025)_(cropped).jpg' },
+  { candidatId: 'teddy-riner', auteur: 'Georges Biard', licence: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Teddy_Riner_Cannes_2016.jpg' },
+  { candidatId: 'francis-lalanne', auteur: 'Nicolas Richoffer', licence: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Francis_Lalanne_2017.jpg' },
 ];
 
 export interface FontCredit {

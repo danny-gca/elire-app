@@ -6,13 +6,20 @@
     "avatar": "AM",
     "biographie": "Ingénieur dans les énergies renouvelables, candidat officiel désigné par le parti Équinoxe.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-06-27",
       "sourceUrl": "https://www.sudradio.fr/sud-radio/presidentielle-2027-qui-sont-les-candidats-declares"
     },
     "programme": {
       "statut": "partiel",
-      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle.pdf"
+      "url": "https://parti-equinoxe.fr/wp-content/uploads/2026/11/Equinoxe-Lessentiel-Programme-synthetique-pour-lelection-presidentielle-1.pdf",
+      "date": "2026-11-06"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "acedd1c3",
+      "note": "2026-11-11 confirmée : Investiture confirmée par le parti (« élection au jugement majoritaire par les adhérents [...] en avril 2026 », programme du 06/11/2026) ; jour exact non publié, la date reste celle de l'annonce publique (27/06/2026, Sud Radio)."
     }
   },
   {
@@ -23,12 +30,20 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg/330px-1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Député européen, essayiste et cofondateur de Place Publique.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-10-11",
       "sourceUrl": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-remporte-des-le-premier-tour-la-primaire-a-gauche_8232967.html"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://glucks2027.fr/revolution-ecologique/",
+      "date": "2026-11-09"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6a8c1872",
+      "note": "2026-11-10 corrigée : Programme : aucun -> partiel (livret écologie du 09/11/2026 sur glucks2027.fr)."
     }
   },
   {
@@ -39,13 +54,19 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Edouard_Philippe_3x4_crop.jpg/330px-Edouard_Philippe_3x4_crop.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Maire du Havre, ancien Premier ministre et fondateur d'Horizons.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2024-09-03",
       "sourceUrl": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/havre/je-serai-candidat-a-la-prochaine-election-presidentielle-edouard-philippe-l-ancien-premier-ministre-et-maire-du-havre-officialise-sa-candidature-3026366.html"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://www.edouardphilippe.fr/#priorites"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "7660f283",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -56,12 +77,19 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gabriel_Attal_2025_%28close_crop%29.jpg/330px-Gabriel_Attal_2025_%28close_crop%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Ancien Premier ministre et secrétaire général de Renaissance.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-05-22",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-officialise-sa-candidature-436721"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://attalpresident.fr/programme"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "64f7e219",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -72,14 +100,20 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg/330px-Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Fondateur de La France Insoumise, ancien sénateur et ministre.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-05-03",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-jean-luc-melenchon-officialise-sa-candidature-pour-2027-435851"
     },
     "programme": {
       "statut": "complet",
-      "url": "https://web.archive.org/web/20260107164913id_/https://programme.lafranceinsoumise.fr/wp-content/uploads/2025/02/A5-PROGRAMME-SITE.pdf",
-      "date": "2025-02-18"
+      "url": "https://melenchon2027.fr/programme/livre/",
+      "date": "2026-11-06"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "8c603254",
+      "note": "2026-11-10 corrigée : Programme : édition 2026 de L'Avenir en commun, publiée le 06/11/2026 sur melenchon2027.fr."
     }
   },
   {
@@ -88,14 +122,20 @@
     "partiId": "rn",
     "avatar": "MLP",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/330px-Marine_Le_Pen_2025_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale.",
+    "biographie": "Présidente du groupe Rassemblement National à l'Assemblée nationale de 2022 à octobre 2026.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-07-07",
       "sourceUrl": "https://lcp.fr/actualites/ce-soir-je-suis-candidate-a-l-election-presidentielle-annonce-marine-le-pen-438886"
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-14",
+      "par": "claude",
+      "empreinte": "530476db",
+      "note": "2026-11-14 corrigée : biographie : présidente du groupe RN jusqu'en octobre 2026, Sébastien Chenu lui succède le 28/10/2026 (datan.fr, LCP du 24/10/2026). // 2026-11-11 corrigée : Partiel (article Europe 1) -> aucun : le site du RN ne publie aucun document 2027 (seuls le programme des législatives 2024, le contre-budget 2026 et les livrets de 2022, lus le 11/11/2026) ; le contre-budget du 06/10/2026 n'est connu que par la presse."
     }
   },
   {
@@ -104,16 +144,22 @@
     "partiId": "les-ecologistes",
     "avatar": "MT",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/20210819_tondelier.m-cr3.jpg/330px-20210819_tondelier.m-cr3.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Secrétaire nationale des Écologistes et élue municipale d'Hénin-Beaumont.",
+    "biographie": "Secrétaire nationale des Écologistes.",
     "candidature": {
-      "statut": "designee",
-      "date": "2025-12-08",
-      "sourceUrl": "https://lesecologistes.fr/posts/4DGpyusxBAU4xQPexfncsx/marine-tondelier-designee-pour-representer-les-ecologistes-a-l-election-presidentielle"
+      "statut": "annoncee",
+      "date": "2025-10-22",
+      "sourceUrl": "https://www.brut.media/fr/articles/marine-tondelier-la-patronne-des-ecologistes-officiellement-candidate-a-la-presidentielle-de-2027"
     },
     "programme": {
       "statut": "complet",
       "url": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
       "date": "2026-07-13"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f974c35f",
+      "note": "2026-11-11 corrigée : Candidature investie (2025-12-08) -> annoncée le 22/10/2025 (« Cette interview est ma déclaration officielle de candidature », L'Obs, cité par Brut) : selon le parti, le vote de décembre 2025 la désignait pour la primaire de la gauche ; les adhérents trancheront du 10 au 13/12/2026. // 2026-11-11 corrigée : Biographie : absente des 35 élus municipaux 2026 d'Hénin-Beaumont (ministère de l'Intérieur)."
     }
   },
   {
@@ -122,9 +168,9 @@
     "partiId": "lr",
     "avatar": "BR",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg/330px-Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Ministre de l'Intérieur, ancien président du groupe LR au Sénat.",
+    "biographie": "Sénateur de la Vendée, président des Républicains et ancien ministre de l'Intérieur.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-04-19",
       "sourceUrl": "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-bruno-retailleau-largement-designe-candidat-par-les-adherents-du-parti-les-republicains_7949957.html"
     },
@@ -132,6 +178,12 @@
       "statut": "partiel",
       "url": "https://republicains.fr/wp-content/uploads/2026/09/LR_Ecole_vF.pdf",
       "date": "2026-08-31"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "13830589",
+      "note": "2026-11-11 corrigée : Biographie : plus ministre ; de retour au Sénat (Public Sénat, 12/11/2025), président de LR (01/10/2026)."
     }
   },
   {
@@ -142,13 +194,19 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Fran%C3%A7ois_Ruffin_%28cropped%29.jpg/330px-Fran%C3%A7ois_Ruffin_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Député de la Somme, réalisateur et fondateur du mouvement Debout !",
     "candidature": {
-      "statut": "declaree",
-      "date": "2026-09-18",
-      "sourceUrl": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart"
+      "statut": "annoncee",
+      "date": "2026-04-25",
+      "sourceUrl": "https://www.lyoncapitale.fr/actualite/a-lyon-francois-ruffin-lance-sa-campagne-presidentielle"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://nouspresident.fr/notre-programme/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "dfe5f631",
+      "note": "2026-11-11 corrigée : Candidature : officialisée le 25/04/2026 à Lyon (Lyon Capitale), non le 18/09/2026 (article récapitulatif)."
     }
   },
   {
@@ -157,14 +215,20 @@
     "partiId": "pcf",
     "avatar": "FRO",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Roussel_Fabien_1.jpg/330px-Roussel_Fabien_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Secrétaire national du Parti Communiste Français et ancien député du Nord.",
+    "biographie": "Secrétaire national du Parti Communiste Français, maire de Saint-Amand-les-Eaux et ancien député du Nord.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-09-06",
       "sourceUrl": "https://lcp.fr/actualites/fabien-roussel-officiellement-candidat-du-pcf-a-l-election-presidentielle-de-2027-441389"
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "b5730dc6",
+      "note": "2026-11-11 corrigée : Biographie : élu maire de Saint-Amand-les-Eaux le 22/03/2026 (bulletin municipal)."
     }
   },
   {
@@ -175,12 +239,19 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg/330px-Portrait_d%27%C3%89ric_Zemmour%2C_avril_2022.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Président de Reconquête, ancien journaliste et essayiste.",
     "candidature": {
-      "statut": "declaree",
-      "date": "2026-09-17",
-      "sourceUrl": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
+      "statut": "annoncee",
+      "date": "2026-11-10",
+      "sourceUrl": "https://www.sudradio.fr/societe/eric-zemmour-annonce-sa-candidature-a-la-presidentielle-pour-conserver-une-france-francaise"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://www.ericzemmour.fr/priorites"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "e83ac101",
+      "note": "2026-11-11 corrigée : Candidature : 2026-09-17 -> 2026-11-10, déclaration officielle sur TF1 (Sud Radio) ; l'article du 17/09 précisait que ce n'était pas une déclaration formelle. // 2026-11-10 corrigée : Programme : aucun -> partiel (priorités 2027 sur ericzemmour.fr)."
     }
   },
   {
@@ -191,14 +262,20 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Nathalie_Arthaud_%28LO%29_19-05-2024.jpg/330px-Nathalie_Arthaud_%28LO%29_19-05-2024.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Porte-parole de Lutte Ouvrière et professeure d'économie-gestion.",
     "candidature": {
-      "statut": "designee",
-      "date": "2025-12-08",
-      "sourceUrl": "https://www.franceinfo.fr/politique/nathalie-arthaud/presidentielle-2027-nathalie-arthaud-porte-parole-de-lutte-ouvriere-annonce-sa-candidature_7665874.html"
+      "statut": "investie",
+      "date": "2025-12-07",
+      "sourceUrl": "https://journal.lutte-ouvriere.org/medias/mensuelnumero/fichiers/2025/12/ldc252.pdf"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
       "date": "2026-06-26"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f6310ffd",
+      "note": "2026-11-11 confirmée : Brochure de campagne du 26/06/2026 gardée : document le plus complet, toujours proposé par le parti ; le dépliant du 03/11/2026, plus court, sert de source à prop-na-1. // 2026-11-11 corrigée : Investiture : décision du 55e congrès des 6 et 7/12/2025 (Lutte de classe n° 252) au lieu d'un article qui ne parle que d'une annonce."
     }
   },
   {
@@ -209,12 +286,18 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Fran%C3%A7ois_ASSELINEAU.jpg/330px-Fran%C3%A7ois_ASSELINEAU.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Président fondateur de l'Union Populaire Républicaine (UPR), haut fonctionnaire.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-03-21",
       "sourceUrl": "https://upr.fr/militantisme/19-ans-de-lupr-francois-asselineau-lance-sa-campagne-presidentielle-2027-et-nomme-marc-parigot-directeur-de-campagne/"
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9294769b",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -223,15 +306,21 @@
     "partiId": "debout-la-france",
     "avatar": "NDA",
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg/330px-Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Président de Debout La France et député de l'Essonne.",
+    "biographie": "Président de Debout La France et ancien député de l'Essonne.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2025-03-08",
       "sourceUrl": "https://www.lejdd.fr/politique/cette-presidentielle-sera-peut-etre-la-derniere-dun-peuple-libre-dupont-aignan-annonce-sa-candidature-pour-2027-155797"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://www.debout-la-france.fr/notre-projet/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6de45d1e",
+      "note": "2026-11-11 corrigée : Biographie : battu aux législatives de 2024 (Public Sénat), ancien député."
     }
   },
   {
@@ -242,29 +331,19 @@
     "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/330px-David_Lisnard_-_2013.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "biographie": "Maire de Cannes, président de l'Association des maires de France.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-03-31",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/le-maire-de-cannes-david-lisnard-annonce-sa-candidature-a-l-election-presidentielle-et-officialise-son-depart-des-republicains_7907063.html"
     },
     "programme": {
       "statut": "complet",
       "url": "https://www.unenouvelleenergie.fr/notre-programme/"
-    }
-  },
-  {
-    "id": "jean-lassalle",
-    "nom": "Jean Lassalle",
-    "partiId": "resistons",
-    "avatar": "JL",
-    "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jean_Lassalle.jpg/330px-Jean_Lassalle.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-    "biographie": "Président de Résistons !, ancien député des Pyrénées-Atlantiques.",
-    "candidature": {
-      "statut": "pressentie",
-      "date": "2026-07-10",
-      "sourceUrl": "https://www.europe1.fr/politique/presidentielle-jean-lassalle-lance-une-cagnotte-pour-financer-sa-candidature-970134"
     },
-    "programme": {
-      "statut": "aucun"
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6df806c7",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -274,12 +353,18 @@
     "avatar": "MM",
     "biographie": "Psychologue de formation, cofondatrice du Parti animaliste et ancienne conseillère de Paris (2014-2020).",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-10-02",
       "sourceUrl": "https://parti-animaliste.fr/news/communique-de-presse/mira-markovic-representera-le-parti-animaliste-a-la-presidentielle"
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "58cd2b12",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -289,13 +374,19 @@
     "avatar": "AK",
     "biographie": "Cheminot et syndicaliste à SUD Rail, candidat de Révolution permanente.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-06-01",
       "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-cheminot-anasse-kazib-annonce-sa-candidature_8040020.html"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://anasse2027.fr/programme/depliant-anasse-2027.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d5d3ed8e",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -305,13 +396,19 @@
     "avatar": "FP",
     "biographie": "Ancien député européen et ancien vice-président du Front national, fondateur et président des Patriotes depuis 2017.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-05-09",
       "sourceUrl": "https://www.sudradio.fr/politique/je-suis-candidat-florian-philippot-se-lance-pour-la-presidentielle-de-2027"
     },
     "programme": {
-      "statut": "complet",
+      "statut": "partiel",
       "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "a8de54b6",
+      "note": "2026-11-11 corrigée : Complet -> partiel : le document est intitulé « Grandes orientations pour un projet patriote, édition 2026-2027 » (19 pages, dont 10 questions sur le Frexit), pas un programme présidentiel entier."
     }
   },
   {
@@ -321,7 +418,7 @@
     "avatar": "SL",
     "biographie": "Conductrice de bus en région parisienne et syndicaliste, tête de liste de son organisation aux élections européennes de 2024.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-06-17",
       "sourceUrl": "https://npa-revolutionnaires.org/articles/communique-presidentielle-2027-selma-labib-une-candidature-ouvriere-et-revolutionnaire-soutenue-par-gael-quirante"
     },
@@ -329,6 +426,12 @@
       "statut": "partiel",
       "url": "https://npa-revolutionnaires.org/wp-content/uploads/2026/09/260919_4p-campagne-A4.pdf",
       "date": "2026-09-28"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "739e8985",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -338,13 +441,19 @@
     "avatar": "KB",
     "biographie": "Maire de Saint-Ouen-sur-Seine depuis 2020, membre du Parti socialiste et fondateur du mouvement La France Humaine et Forte.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-06-09",
       "sourceUrl": "https://lcp.fr/actualites/presidentielle-2027-qui-est-karim-bouamrane-le-maire-socialiste-de-saint-ouen-et-nouveau"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://www.karimbouamrane2027.org/output/pdf/manifeste-karim-bouamrane-2027-v2.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "07994ab0",
+      "note": "Audit des 10 et 11/11/2026"
     }
   },
   {
@@ -354,12 +463,19 @@
     "avatar": "DB",
     "biographie": "Députée des Deux-Sèvres, ancienne ministre de l'Écologie (2012-2013) et présidente de Génération écologie.",
     "candidature": {
-      "statut": "designee",
+      "statut": "investie",
       "date": "2026-06-06",
       "sourceUrl": "https://generationecologie.fr/wp-content/uploads/2026/06/Resolution-investiture-Delphine-Batho.pdf"
     },
     "programme": {
-      "statut": "aucun"
+      "statut": "partiel",
+      "url": "https://delphinebatho.fr/priorites/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d2034d61",
+      "note": "2026-11-11 corrigée : Date du programme retirée : absente de la page. // 2026-11-11 corrigée : Programme : aucun -> partiel (site de campagne lancé le 04/11/2026, 4 priorités et premières propositions)."
     }
   },
   {
@@ -369,33 +485,40 @@
     "avatar": "OB",
     "biographie": "Député du Haut-Rhin, ancien maire de Rixheim (2008-2017) et ancien ministre délégué au Commerce extérieur (2022-2024).",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-09-24",
       "sourceUrl": "https://www.ici.fr/grand-est/alsace-cea/rixheim/il-faut-refonder-notre-modele-le-depute-alsacien-olivier-becht-est-candidat-a-la-presidentielle-1401407"
     },
     "programme": {
-      "statut": "partiel",
-      "url": "https://becht2027.fr/projet-france/",
-      "annonce": {
-        "date": "2026-11-09",
-        "sourceUrl": "https://becht2027.fr/projet-france/le-livre/"
-      }
+      "statut": "complet",
+      "url": "https://becht2027.fr/projet-france/le-livre/"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "3fb2e5f8",
+      "note": "2026-11-11 confirmée : Le Projet France : association déclarée et mouvement enregistré auprès de la CNCCFP (déclaration HATVP), gardé comme parti."
     }
   },
   {
     "id": "natacha-polony",
     "nom": "Natacha Polony",
-    "partiId": "nous-sommes-la-france",
     "avatar": "NP",
     "biographie": "Journaliste et essayiste agrégée de lettres modernes, ancienne directrice de la rédaction de Marianne et directrice de la revue L'Audace !.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-10-14",
       "sourceUrl": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-mercredi-14-octobre-2026-3340206"
     },
     "programme": {
       "statut": "partiel",
       "url": "https://natachapolony2027.fr/natacha-polony/ma-vision"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "5b2f7d39",
+      "note": "2026-11-11 corrigée : Règle validée : un mouvement de campagne ne sert de parti que s'il est déclaré. « Nous sommes la France » n'est qu'un slogan du site de campagne (édité par l'équipe de campagne et par délégation par « LFRS - la France Républicaine et Solidaire » ; npolony.fr par l'association de financement électorale de la candidate) ; aucune structure déclarée de ce nom trouvée : Indépendante, parti retiré."
     }
   },
   {
@@ -405,12 +528,79 @@
     "avatar": "XB",
     "biographie": "Président de la région Hauts-de-France depuis 2016, ancien ministre de la Santé et du Travail, fondateur du mouvement Nous France.",
     "candidature": {
-      "statut": "declaree",
+      "statut": "annoncee",
       "date": "2026-08-27",
       "sourceUrl": "https://lcp.fr/actualites/2027-figure-de-la-droite-xavier-bertrand-confirme-qu-il-sera-candidat-a-l-election"
     },
     "programme": {
       "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "9fc1ae5d",
+      "note": "Audit des 10 et 11/11/2026"
+    }
+  },
+  {
+    "id": "teddy-riner",
+    "nom": "Teddy Riner",
+    "avatar": "TR",
+    "biographie": "Judoka, quintuple champion olympique et onze fois champion du monde, candidat sans parti ni mouvement.",
+    "candidature": {
+      "statut": "annoncee",
+      "date": "2026-11-09",
+      "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html"
+    },
+    "programme": {
+      "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "282ed682",
+      "note": "2026-11-10 confirmée : franceinfo, 09/11/2026 : date et biographie exactes."
+    }
+  },
+  {
+    "id": "francis-lalanne",
+    "nom": "Francis Lalanne",
+    "partiId": "france-libre",
+    "avatar": "FL",
+    "biographie": "Auteur-compositeur-interprète, tête de liste aux élections européennes de 2024.",
+    "candidature": {
+      "statut": "annoncee",
+      "date": "2026-08-19",
+      "sourceUrl": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-chanteur-francis-lalanne-officiellement-candidat-premier-meeting-vendredi-a-paris_8153588.html"
+    },
+    "programme": {
+      "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "598dfefb",
+      "note": "2026-11-10 confirmée : Communiqué du 19/08/2026 (franceinfo, CNEWS). Aucune mesure citée entre guillemets ni site de campagne accessible : 0 proposition possible."
+    }
+  },
+  {
+    "id": "sylvain-durif",
+    "nom": "Sylvain Durif",
+    "avatar": "SD",
+    "biographie": "Vidéaste web, candidat sans parti ni mouvement.",
+    "candidature": {
+      "statut": "annoncee",
+      "date": "2026-08-23",
+      "sourceUrl": "https://www.rtl.fr/actu/politique/christ-cosmique-grand-monarque-et-bientot-president-de-la-republique-le-videaste-complotiste-sylvain-durif-se-declare-candidat-a-l-election-de-2027-7900664715"
+    },
+    "programme": {
+      "statut": "aucun"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "2eb24740",
+      "note": "2026-11-11 corrigée : Source RTL du 25/08/2026 (annonce du 23/08) au lieu de Wikipédia ; « chef d'entreprise » absent des sources, retiré. // 2026-11-10 corrigée : Source de candidature : Sud Radio ne donne que « fin août » ; Wikipédia donne le 23/08/2026 et la biographie (vidéaste web, dirige la société Elvita). Site durif2027.com cité par Sud Radio : redirige vers un site parodique, inutilisable."
     }
   }
 ]

@@ -1,0 +1,22 @@
+# F-PARTAGE : « Partager mon classement » ouvre le choix des images (classement, ou sans nom) ; on passe de l'une à l'autre.
+appId: fr.elire.app
+name: Partage
+tags: [cahier]
+---
+- runFlow: communs/ouvrir.yaml
+- runFlow: communs/classement.yaml
+- tapOn: "Cahier"
+- runFlow: communs/astuce.yaml
+# Plus il y a de classés, plus le bouton descend.
+- scrollUntilVisible: { element: "Partager mon classement", direction: DOWN }
+- tapOn: "Partager mon classement"
+- assertVisible: "Image 1 sur .*"
+- assertVisible: "Partager l’image"
+- tapOn: "Image suivante"
+- assertVisible: "Image 2 sur .*"
+- tapOn: "Image précédente"
+- assertVisible: "Image 1 sur .*"
+- takeScreenshot: partage
+# Pas de « Partager l'image » : la feuille de partage du système sort de l'app.
+- back
+- assertNotVisible: "Partager l’image"

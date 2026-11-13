@@ -2,8 +2,12 @@ import { candidatureText, programmeText, TYPE_SOURCE_LABELS } from '@/lib/format
 
 describe('candidatureText', () => {
   it('dit le statut et la date', () => {
-    expect(candidatureText({ statut: 'declaree', date: '2026-05-22', sourceUrl: 'https://a.fr' })).toBe('Candidature déclarée le 22 mai 2026');
-    expect(candidatureText({ statut: 'pressentie', date: '2026-07-10', sourceUrl: 'https://a.fr' })).toContain('pas encore déclarée');
+    expect(candidatureText({ statut: 'annoncee', date: '2026-05-22', sourceUrl: 'https://a.fr' })).toBe('Candidature annoncée le 22 mai 2026');
+    expect(candidatureText({ statut: 'investie', date: '2026-05-22', sourceUrl: 'https://a.fr' })).toBe('Investiture de son parti le 22\u00a0mai\u00a02026');
+    expect(candidatureText({ statut: 'pressentie', date: '2026-07-10', sourceUrl: 'https://a.fr' })).toContain('pas encore annoncée');
+    expect(candidatureText({ statut: 'officielle', date: '2027-03-15', sourceUrl: 'https://a.fr' })).toBe(
+      'Candidature officielle, liste du Conseil constitutionnel du 15\u00a0mars\u00a02027',
+    );
   });
 });
 

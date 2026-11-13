@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import { AccessibilityInfo, BackHandler, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, { Easing, FadeIn, useAnimatedProps, useReducedMotion, useSharedValue, withDelay, withTiming } from 'react-native-reanimated';
+import Animated, { Easing, FadeIn, useReducedMotion, useSharedValue, withDelay, withTiming } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path } from 'react-native-svg';
 
+import { DrawnPath } from '@/components/drawn-path';
 import { Button } from '@/components/ui/button';
 import { Tip } from '@/components/ui/tip';
 import { Colors, Markers, Radius, Spacing } from '@/constants/theme';
@@ -22,8 +23,6 @@ const HOLE_PAD = 8;
 const HOLE_RADIUS = 14;
 const VEIL = 'rgba(28, 30, 33, 0.32)';
 const CARD_MAX = 560;
-
-const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 // Le tuto, au-dessus de toute l'app : un message, et le surligneur qui en sort pour entourer ce dont il parle.
 export function TutoLayer() {
@@ -109,8 +108,6 @@ function TutoStepView({ id, box, width, height }: { id: string; box: Box; width:
     const timer = setTimeout(() => playSound('trait'), reducedMotion ? 0 : LOOP_DELAY);
     return () => clearTimeout(timer);
   }, [loop, reducedMotion, progress]);
-  const length = loop?.length ?? 0;
-  const loopProps = useAnimatedProps(() => ({ strokeDashoffset: length * (1 - progress.value) }));
 
   const hole = {
     x: box.x - HOLE_PAD,
@@ -131,15 +128,14 @@ function TutoStepView({ id, box, width, height }: { id: string; box: Box; width:
       <Svg width={width} height={height} style={StyleSheet.absoluteFill} pointerEvents="none">
         <Path d={veil} fill={VEIL} fillRule="evenodd" />
         {loop && (
-          <AnimatedPath
+          <DrawnPath
             d={loop.d}
+            length={loop.length}
+            progress={progress}
             stroke={Markers[marker].solid}
             strokeWidth={LOOP_WIDTH}
             strokeLinecap="round"
             strokeLinejoin="round"
-            fill="none"
-            strokeDasharray={[length, length]}
-            animatedProps={loopProps}
           />
         )}
       </Svg>

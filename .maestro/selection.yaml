@@ -1,0 +1,10 @@
+# F-SELECTION : sur téléphone, un appui long sur une question de Voter ne sélectionne pas le texte (on y glisse la page).
+appId: fr.elire.app
+name: Pas de sélection dans Voter
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- runFlow: communs/proposition.yaml
+# Le titre : le premier long texte de la feuille.
+- longPressOn: { text: ".{30,}", index: 0 }
+- assertNotVisible: "Copier|Copy|Tout sélectionner|Select all"

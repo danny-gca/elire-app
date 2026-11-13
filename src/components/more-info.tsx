@@ -68,8 +68,12 @@ interface MoreInfoProps {
   onTab: (tab: InfoTab | null) => void;
   /** Le contenu vient de s'afficher : l'écran peut défiler jusqu'au tiroir ouvert. */
   onOpen?: (target: View | null) => void;
+  /** Tiroir refermé : l'écran peut remonter sur la question. */
+  onClose?: () => void;
   /** Tiroirs que la feuille montre déjà ailleurs (feuille de la gomme). */
   omit?: InfoTab[];
+  /** Faux sur les feuilles de Voter au téléphone, où l'on glisse la page. */
+  selectable?: boolean;
 }
 
 // Les tiroirs du bas de la feuille, un par ligne : un seul ouvert à la fois, rien sur l'auteur ni le résultat.
@@ -82,7 +86,9 @@ export function MoreInfo({
   tab,
   onTab,
   onOpen,
+  onClose,
   omit = [],
+  selectable = true,
 }: MoreInfoProps) {
   const reader = useVotesStore((s) => s.marker);
   const openRef = useRef<View>(null);
@@ -146,7 +152,12 @@ export function MoreInfo({
               label={t.label}
               expanded={expanded}
               marker={reader}
-              onPress={() => onTab(expanded ? null : t.id)}
+              onPress={() => {
+                onTab(expanded ? null : t.id);
+                if (expanded) {
+                  onClose?.();
+                }
+              }}
             />
             {expanded && (
               <Animated.View
@@ -163,7 +174,7 @@ export function MoreInfo({
                       <GlossaryText
                         style={[Type.body, styles.soft]}
                         onWord={onWord}
-                        selectable
+                        selectable={selectable}
                       >
                         {sujet.aujourdhui}
                       </GlossaryText>
@@ -175,7 +186,7 @@ export function MoreInfo({
                       <GlossaryText
                         style={[Type.body, styles.soft]}
                         onWord={onWord}
-                        selectable
+                        selectable={selectable}
                       >
                         {sujet.enDebat}
                       </GlossaryText>
@@ -197,7 +208,7 @@ export function MoreInfo({
                       <GlossaryText
                         style={[Type.bodyStrong, styles.ink]}
                         onWord={onWord}
-                        selectable
+                        selectable={selectable}
                       >
                         {explained}
                       </GlossaryText>
@@ -205,7 +216,7 @@ export function MoreInfo({
                     <GlossaryText
                       style={[Type.body, styles.soft]}
                       onWord={onWord}
-                      selectable
+                      selectable={selectable}
                     >
                       {text}
                     </GlossaryText>
@@ -224,14 +235,14 @@ export function MoreInfo({
                         <GlossaryText
                           style={[Type.bodyStrong, styles.ink]}
                           onWord={onWord}
-                          selectable
+                          selectable={selectable}
                         >
                           {p.titre}
                         </GlossaryText>
                         <GlossaryText
                           style={[Type.body, styles.soft]}
                           onWord={onWord}
-                          selectable
+                          selectable={selectable}
                         >
                           {p.contexte}
                         </GlossaryText>
@@ -246,7 +257,7 @@ export function MoreInfo({
                       <Text
                         key={m.mot}
                         style={[Type.body, styles.soft]}
-                        selectable
+                        selectable={selectable}
                       >
                         <Text style={[Type.bodyStrong, styles.ink]}>
                           {m.mot.charAt(0).toUpperCase() + m.mot.slice(1)}
@@ -258,7 +269,7 @@ export function MoreInfo({
                       <Text
                         key={g.sigle}
                         style={[Type.body, styles.soft]}
-                        selectable
+                        selectable={selectable}
                       >
                         <Text style={[Type.bodyStrong, styles.ink]}>
                           {g.sigle}

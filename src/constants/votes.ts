@@ -9,9 +9,9 @@ export interface VoteChoice {
   color: string;
 }
 
-// Les quatre niveaux d'avis, d'Impossible à Parfait.
+// Les quatre niveaux d'avis, de Jamais à Parfait.
 export const VOTE_CHOICES: VoteChoice[] = [
-  { value: -2, label: 'Impossible', sign: '−2', color: VoteColors['-2'] },
+  { value: -2, label: 'Jamais', sign: '−2', color: VoteColors['-2'] },
   { value: -1, label: 'Contre', sign: '−1', color: VoteColors['-1'] },
   { value: 1, label: 'Pour', sign: '+1', color: VoteColors['1'] },
   { value: 2, label: 'Parfait', sign: '+2', color: VoteColors['2'] },

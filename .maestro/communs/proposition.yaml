@@ -1,0 +1,12 @@
+# Avance jusqu'à une proposition à voter (marge « Proposition P-… »), sans passer par un scrutin ou une question commune.
+appId: fr.elire.app
+---
+- tapOn: "Voter"
+- runFlow: astuce.yaml
+- repeat:
+    while:
+      notVisible: "Proposition P-.*"
+    times: 6
+    commands:
+      - runFlow: vote.yaml
+- runFlow: astuce.yaml

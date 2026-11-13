@@ -1,0 +1,54 @@
+# F-MODIFIER : un vote posé dans Voter se corrige ailleurs, à la ligne « Moi » de sa fiche : une mesure dans Explorer, un scrutin dans Lois.
+appId: fr.elire.app
+name: Modifier un vote depuis Explorer et Lois
+tags: [explorer, lois]
+---
+- runFlow: communs/ouvrir.yaml
+# Une mesure votée « Pour » dans Voter, dont on garde le numéro.
+- runFlow: communs/proposition.yaml
+- copyTextFrom: "Proposition P-.*"
+- evalScript: ${output.mesure = maestro.copiedText.match(/P-\d+/)[0]}
+- tapOn: { text: "Pour, \\+1", waitToSettleTimeoutMs: 500 }
+- runFlow: communs/astuce.yaml
+# Puis un scrutin voté « Pour », dont on garde aussi le numéro.
+- evalScript: ${output.garderScrutin = true}
+- repeat:
+    while:
+      notVisible: "Scrutin L-.*"
+    times: 12
+    commands:
+      - runFlow: communs/vote.yaml
+- runFlow: communs/astuce.yaml
+- copyTextFrom: "Scrutin L-.*"
+- evalScript: ${output.loi = maestro.copiedText.match(/L-\d+/)[0]}
+- tapOn: { text: "Pour", waitToSettleTimeoutMs: 500 }
+- runFlow: communs/astuce.yaml
+
+# Explorer : la mesure retrouvée par son numéro, la ligne « Moi » ouvre l'échelle, « Contre » remplace « Pour ».
+- tapOn: "Explorer"
+- runFlow: communs/astuce.yaml
+- tapOn: "Rechercher une mesure, un candidat"
+- inputText: ${output.mesure}
+- hideKeyboard
+- tapOn: "${output.mesure} · .*"
+- assertVisible: "Votre vote : Pour\\. Modifier mon vote"
+- tapOn: "Votre vote : Pour\\. Modifier mon vote"
+- tapOn: { text: "Contre, −1", below: "Votre vote : .*", waitToSettleTimeoutMs: 500 }
+- assertVisible: "Votre vote : Contre\\. Modifier mon vote"
+- back
+- tapOn: "Effacer la recherche"
+
+# Lois : même chose pour le scrutin.
+- tapOn: "Lois"
+- runFlow: communs/astuce.yaml
+- tapOn: "Rechercher une loi, un numéro"
+- inputText: ${output.loi}
+- hideKeyboard
+- tapOn: "${output.loi} · .*"
+- assertVisible: "Votre vote : Pour\\. Modifier mon vote"
+- tapOn: "Votre vote : Pour\\. Modifier mon vote"
+# L'échelle s'ouvre juste sous la ligne « Moi » ; plus bas, les candidats ont aussi des « Contre ».
+- tapOn: { text: "Contre", below: "Votre vote : .*", waitToSettleTimeoutMs: 500 }
+- assertVisible: "Votre vote : Contre\\. Modifier mon vote"
+- back
+- tapOn: "Effacer la recherche"

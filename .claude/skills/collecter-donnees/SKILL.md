@@ -18,9 +18,9 @@ Un programme 2022 reste utilisable tant qu'aucun programme 2027 n'est publié ; 
 
 ## Ajouter un candidat
 
-1. Vérifier la candidature (déclaration ou désignation datée, avec source). Une simple rumeur ne suffit pas.
-2. `data/partis.json` si le parti manque : `id`, `nom` (graphie du parti), `sigle` (seulement s'il l'utilise lui-même ou si la presse le fait ; sinon, aucun), `couleur` (celle de son logo), `nuanceOfficielle` (la nuance attribuée par le ministère de l'Intérieur à la dernière élection nationale du parti : `code`, `libelle`, `election`, `sourceUrl` ; absente s'il n'a jamais été classé, sans rien inventer), `siteWeb`.
-3. `data/candidats.json` : `id` kebab-case (`prenom-nom`), `nom`, `partiId`, `avatar` (initiales), `biographie` d'une phrase, factuelle, `programme` (statut, `url`, `date` de publication si la source la donne, `annonce` si une date de sortie est annoncée).
+1. Vérifier la candidature (`annoncee` ou `investie`, datée, avec source). Une simple rumeur ne suffit pas.
+2. `data/partis.json` si le parti manque : `id`, `nom` (graphie du parti), `sigle` (seulement s'il l'utilise lui-même ou si la presse le fait ; sinon, aucun), `couleur` (celle de son logo), `nuanceOfficielle` (la nuance attribuée par le ministère de l'Intérieur à la dernière élection nationale du parti : `code`, `libelle`, `election`, `sourceUrl` ; absente s'il n'a jamais été classé, sans rien inventer), `siteWeb` (absent s'il est introuvable). Un candidat sans parti ni mouvement n'a pas de `partiId` : l'app affiche « Indépendant ».
+3. `data/candidats.json` : `id` kebab-case (`prenom-nom`), `nom`, `partiId` (son parti ; un mouvement de campagne seulement s'il est une structure politique déclarée, association de financement ou mouvement enregistré auprès de la CNCCFP, sinon son étiquette d'origine ou aucun : « Indépendant »), `avatar` (initiales), `biographie` d'une phrase, factuelle, `programme` (statut, `url`, `date` de publication si la source la donne, `annonce` si une date de sortie est annoncée).
 4. Photo : chercher sur Wikimedia Commons (licence CC0, CC BY ou CC BY-SA), garder le fichier exact, recadrer avec `scripts/crop-portrait.py` (carré 512 px centré sur le visage) vers `assets/images/candidates/<id>.jpg`, puis vérifier le résultat à l'œil ; l'ajouter à `src/constants/candidate-images.ts` et créditer dans `src/constants/credits.ts`. Pas de photo libre : initiales.
 5. Créer `data/candidats/<id>.csv` (section suivante).
 
@@ -50,7 +50,7 @@ id,thematique_id,sujet_id,titre,description,source_url,date_declaration,type_sou
 `data/lois.json`, un objet :
 
 - `id` : `<sujet>-<annee>` ; `thematiqueId` ; `nature` (`projet_loi`, `proposition_loi`, `motion_censure`, `declaration_gouvernement`, `resolution`, `texte_europeen`) ; `chambre` (`assemblee_nationale`, `senat`, `parlement_europeen`) ; `dateVote` ; `statut` (`adoptee`, `rejetee`, `en_cours`) ; `titre` ; `question` (posée à l'aveugle, sans nom de candidat, de parti ni de loi éponyme, sans résultat ; formulée de façon directe et affirmative, sans double négation ni tournure de rejet procédural comme « Rejet de... » : répondre « Pour » doit signifier sans ambiguïté être favorable à la mesure sur le fond, quitte à normaliser si le scrutin officiel était une motion de rejet) ; `enjeu` (ce que fait le texte, sans nom ni résultat) ; `resume` factuel ; `sourceOfficielleUrl` = la page du scrutin.
-- `votes` : une entrée par candidat concerné, `position` (`pour`, `contre`, `abstention`), `typeVote` (`individuel` si le candidat a voté lui-même, sinon `groupe_parti` avec `groupe` et `groupeNom` à la date), `explication` factuelle, `sourceUrl` du même scrutin.
+- `votes` : une entrée par candidat concerné, `position` (`pour`, `contre`, `abstention`), `typeVote` (`individuel` si le candidat a voté lui-même, sinon `groupe_parti` : majorité du groupe où siègent les élus de son parti (aucun si c'est le groupe du parti d'un autre candidat), sa délégation française au Parlement européen, avec `groupe` et `groupeNom` à la date ; égalité : vote retiré), `explication` factuelle, `sourceUrl` du même scrutin.
 - Choisir des scrutins publics à résultats nominatifs, sur des sujets des thèmes de l'app, qui concernent plusieurs candidats.
 
 ## Ajouter un enjeu commun
@@ -74,5 +74,5 @@ Toute question posée porte l'id de son sujet (`data/sujets.json`, onglet « Con
 ## Terminer
 
 1. `npm run build:data:strict`, puis `npm run check`.
-2. Lancer `verifier-donnees` sur ce qui a été ajouté.
+2. Lancer `verifier-donnees` sur ce qui a été ajouté, qui se termine par `npm run valider -- <id>... --par claude --note "confirmée : source, page, ce qui a été vérifié"` (la note datée rejoint l'historique de l'élément).
 3. Mettre à jour les chiffres de `PRODUCT.md` (propositions, candidats, scrutins) si besoin.

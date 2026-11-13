@@ -49,15 +49,29 @@ function formsOf(words: readonly WordEntry[]) {
     .map(({ form, mot }) => ({ mot, re: new RegExp(`(?<![\\p{L}\\p{N}-])${escape(form)}(?![\\p{L}\\p{N}-])`, 'giu') }));
 }
 
+// RegExp compilées une fois par liste et résultats gardés par texte : Voter les redemande à chaque rendu.
+const compiled = new WeakMap<readonly WordEntry[], { forms: ReturnType<typeof formsOf>; spans: Map<string, WordSpan[]> }>();
+
 /** Mots du glossaire dans un texte, première occurrence de chacun, sans chevauchement, dans l'ordre du texte. */
 export function wordSpans(text: string, words: readonly WordEntry[]): WordSpan[] {
+  let entry = compiled.get(words);
+  if (!entry) {
+    entry = { forms: formsOf(words), spans: new Map() };
+    compiled.set(words, entry);
+  }
+  const known = entry.spans.get(text);
+  if (known) {
+    return [...known];
+  }
   const spans: WordSpan[] = [];
-  for (const { mot, re } of formsOf(words)) {
+  for (const { mot, re } of entry.forms) {
     if (spans.some((s) => s.mot === mot)) {
       continue;
     }
-    for (const m of text.matchAll(re)) {
-      const start = m.index ?? 0;
+    // exec sur la RegExp compilée : matchAll la clone (et Hermes la recompile) à chaque appel.
+    re.lastIndex = 0;
+    for (let m = re.exec(text); m; m = re.exec(text)) {
+      const start = m.index;
       const end = start + m[0].length;
       if (!spans.some((s) => start < s.end && end > s.start)) {
         spans.push({ start, end, mot });
@@ -65,7 +79,9 @@ export function wordSpans(text: string, words: readonly WordEntry[]): WordSpan[]
       }
     }
   }
-  return spans.sort((a, b) => a.start - b.start);
+  spans.sort((a, b) => a.start - b.start);
+  entry.spans.set(text, spans);
+  return [...spans];
 }
 
 /** Mots de vocabulaire (sans casse) et sigles du glossaire (en capitales) repérés dans un texte. */

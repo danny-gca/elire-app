@@ -1,0 +1,26 @@
+# F-RETOUR : glisser vers la droite ramène la question précédente, avec son vote ; « Revenir à la question en cours » repart.
+appId: fr.elire.app
+name: Retour à la question précédente
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- runFlow: communs/proposition.yaml
+- tapOn: { text: "Pour, \\+1", waitToSettleTimeoutMs: 500 }
+- runFlow: communs/astuce.yaml
+# Loin du bord gauche : le retour système d'Android y vit.
+- swipe: { start: "15%, 40%", end: "85%, 40%", duration: 350 }
+- assertVisible: "Question précédente"
+- assertVisible: "Revenir à la question en cours"
+- takeScreenshot: retour-question-precedente
+- tapOn: { text: "Revenir à la question en cours", waitToSettleTimeoutMs: 500 }
+- assertNotVisible: "Revenir à la question en cours"
+# Même geste puis glisser vers la gauche : la page repart aussi.
+- swipe: { start: "15%, 40%", end: "85%, 40%", duration: 350 }
+- assertVisible: "Revenir à la question en cours"
+- swipe: { start: "85%, 40%", end: "15%, 40%", duration: 350 }
+- assertNotVisible: "Revenir à la question en cours"
+# Retour Android : un cran en arrière, puis repartir.
+- back
+- assertVisible: "Revenir à la question en cours"
+- back
+- assertNotVisible: "Revenir à la question en cours"

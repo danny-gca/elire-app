@@ -17,8 +17,6 @@ interface PropositionSheetProps {
   /** Une proposition (titre, citation), ou un scrutin ou une question commune présentés de la même façon (question seule). */
   proposition: Pick<Proposition, 'ref' | 'thematiqueId' | 'titre'> & { description?: string };
   kind?: 'Proposition' | 'Scrutin' | 'Question commune';
-  /** Citation en entier (« En savoir plus » ouvert) ; sinon coupée à 2 lignes pour garder les boutons visibles. */
-  quoteOpen?: boolean;
   /** Scrutin : chambre et année, à droite de « Scrutin réel ». */
   banner?: string;
   /** Pendant le geste du vote : le surligneur balaie le titre. */
@@ -48,6 +46,8 @@ const VERTICAL_TOP = Spacing.three + 18 + Spacing.one + 32 + Spacing.two;
 // Largeur moyenne d'une capitale à 13 pt espacée : sert à réserver la hauteur du thème vertical.
 const CAPS_CHAR_WIDTH = 9;
 const CONTOUR_MS = 700;
+// Voter : sur téléphone, la sélection native partait dès qu'on glissait la page ; on la garde sur le web, la gomme et les fiches.
+export const SHEET_SELECTABLE = Platform.OS === 'web';
 
 const AnimatedRect = Animated.createAnimatedComponent(Rect);
 
@@ -115,37 +115,44 @@ function Contour({ delay = 0 }: { delay?: number }) {
   const reducedMotion = useReducedMotion();
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
   const progress = useSharedValue(reducedMotion ? 1 : 0);
-  const perimeter = size ? 2 * (size.width + size.height) : 0;
   useEffect(() => {
     if (size && !reducedMotion) {
       progress.value = withDelay(delay, withTiming(1, { duration: CONTOUR_MS, easing: Easing.out(Easing.cubic) }));
     }
   }, [size, reducedMotion, progress, delay]);
-  const animatedProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - progress.value) }));
   return (
     <View pointerEvents="none" style={StyleSheet.absoluteFill} onLayout={(e) => setSize(e.nativeEvent.layout)}>
       {size && (
         <Svg width={size.width} height={size.height}>
-          <AnimatedRect
-            x={0.5}
-            y={0.5}
-            width={size.width - 1}
-            height={size.height - 1}
-            rx={Radius.large}
-            fill="none"
-            stroke={Colors.graphite}
-            strokeWidth={1}
-            strokeDasharray={[perimeter, perimeter]}
-            animatedProps={animatedProps}
-          />
+          <ContourRect width={size.width} height={size.height} progress={progress} />
         </Svg>
       )}
     </View>
   );
 }
 
+// Monté une fois la taille connue : Reanimated fige la valeur initiale au premier rendu.
+function ContourRect({ width, height, progress }: { width: number; height: number; progress: SharedValue<number> }) {
+  const perimeter = 2 * (width + height);
+  const animatedProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - progress.value) }));
+  return (
+    <AnimatedRect
+      x={0.5}
+      y={0.5}
+      width={width - 1}
+      height={height - 1}
+      rx={Radius.large}
+      fill="none"
+      stroke={Colors.graphite}
+      strokeWidth={1}
+      strokeDasharray={[perimeter, perimeter]}
+      animatedProps={animatedProps}
+    />
+  );
+}
+
 // La feuille du cahier : marge graphite (numéro, thème) et corps de la proposition.
-export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen = false, banner, sweep, stamp = false, thematique, children, footer, onWord, titleActions, titleRef, veil, bound = false }: PropositionSheetProps) {
+export function PropositionSheet({ proposition, kind = 'Proposition', banner, sweep, stamp = false, thematique, children, footer, onWord, titleActions, titleRef, veil, bound = false }: PropositionSheetProps) {
   // Web : le titre reçoit le focus après un retour (tabIndex -1, hors de l'ordre de tabulation).
   const titleProps = { ...titleActions, ...(Platform.OS === 'web' ? { tabIndex: -1, dataSet: { focusTitle: '' } } : null) } as TitleProps;
   const scrutin = kind === 'Scrutin';
@@ -179,16 +186,16 @@ export function PropositionSheet({ proposition, kind = 'Proposition', quoteOpen 
       <View style={styles.body}>
         {/* Pendant le geste du vote, le surligneur balaie le titre : plus de mots soulignés. */}
         {sweep ? (
-          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable actions={titleProps} textRef={titleRef}>
+          <SweepText marker={sweep} style={[Type.display, styles.title]} selectable={SHEET_SELECTABLE} actions={titleProps} textRef={titleRef}>
             {proposition.titre}
           </SweepText>
         ) : (
-          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable actions={titleProps} textRef={titleRef}>
+          <GlossaryText style={[Type.display, styles.title]} onWord={onWord} accessibilityRole="header" selectable={SHEET_SELECTABLE} actions={titleProps} textRef={titleRef}>
             {proposition.titre}
           </GlossaryText>
         )}
         {proposition.description ? (
-          <GlossaryText style={[Type.body, styles.description]} onWord={onWord} numberOfLines={quoteOpen ? undefined : 2} selectable>
+          <GlossaryText style={[Type.body, styles.description]} onWord={onWord} selectable={SHEET_SELECTABLE}>
             {proposition.description}
           </GlossaryText>
         ) : null}

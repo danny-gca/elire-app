@@ -37,7 +37,7 @@ export function ScoreCalcul({ detail }: { detail: ScoreDetail }) {
           subtitle={programme.max === 2 ? 'Votre note sur 1 de ses propositions.' : `Vos notes sur ${programme.max / 2} de ses propositions.`}
           sum={programme.sum}
           max={programme.max}
-          low="tout Impossible"
+          low="tout Jamais"
           high="tout Parfait">
           {programme.rows.map((r) => {
             const choice = VOTE_CHOICES.find((c) => c.value === r.value)!;

@@ -1,0 +1,23 @@
+# F-LOIS : la liste des scrutins se cherche et se filtre ; une fiche montre la position des candidats et se referme.
+appId: fr.elire.app
+name: Lois
+tags: [lois]
+---
+- runFlow: communs/ouvrir.yaml
+- tapOn: "Lois"
+- runFlow: communs/astuce.yaml
+- assertVisible: "Votes réels au Parlement.*"
+- tapOn: "Rechercher une loi, un numéro"
+- inputText: "L-1"
+- hideKeyboard
+- assertVisible: ".*L-1.*"
+- tapOn: "Effacer la recherche"
+- assertVisible: "Filtrer par résultat"
+- tapOn:
+    text: ".{40,}"
+    below: "Votes réels au Parlement.*"
+- assertVisible: "Fermer"
+- takeScreenshot: fiche-scrutin
+# La feuille a deux « Fermer » (bouton et fond) : le retour Android la referme sans ambiguïté.
+- back
+- assertVisible: "Votes réels au Parlement.*"

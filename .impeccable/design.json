@@ -246,7 +246,7 @@
       },
       "vote-impossible": {
         "role": "tertiary",
-        "displayName": "Impossible −2",
+        "displayName": "Jamais −2",
         "canonical": "oklch(45.9% 0.121 38.0)",
         "tonalRamp": [
           "#1D0100",
@@ -893,7 +893,7 @@
       "kind": "custom",
       "refersTo": "vote-option",
       "description": "Quatre niveaux égaux, signe en couleur d'échelle, choix en bordure 2px ; « Je ne sais pas » à part, pleine largeur.",
-      "html": "<div class=\"ds-vote\" role=\"radiogroup\"><div class=\"ds-vote-row\"><button class=\"ds-vote-opt\" style=\"--c:#8E3A1F\"><b>−2</b>Impossible</button><button class=\"ds-vote-opt\" style=\"--c:#9C5530\"><b>−1</b>Contre</button><button class=\"ds-vote-opt is-on\" style=\"--c:#3A7D60\"><b>+1</b>Pour</button><button class=\"ds-vote-opt\" style=\"--c:#22654A\"><b>+2</b>Parfait</button></div><button class=\"ds-vote-opt ds-vote-unsure\" style=\"--c:#1C1E21\">Je ne sais pas</button></div>",
+      "html": "<div class=\"ds-vote\" role=\"radiogroup\"><div class=\"ds-vote-row\"><button class=\"ds-vote-opt\" style=\"--c:#8E3A1F\"><b>−2</b>Jamais</button><button class=\"ds-vote-opt\" style=\"--c:#9C5530\"><b>−1</b>Contre</button><button class=\"ds-vote-opt is-on\" style=\"--c:#3A7D60\"><b>+1</b>Pour</button><button class=\"ds-vote-opt\" style=\"--c:#22654A\"><b>+2</b>Parfait</button></div><button class=\"ds-vote-opt ds-vote-unsure\" style=\"--c:#1C1E21\">Je ne sais pas</button></div>",
       "css": ".ds-vote{display:flex;flex-direction:column;gap:8px;font-family:\"Atkinson Hyperlegible Next\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;max-width:480px}.ds-vote-row{display:flex;gap:4px}.ds-vote-opt{flex:1;min-width:0;min-height:60px;padding:8px 0;border:1px solid #D5D9DD;border-radius:12px;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:13px;line-height:18px;font-weight:500;color:#1C1E21;cursor:pointer}.ds-vote-opt b{font-size:17px;line-height:24px;font-weight:600;color:var(--c);font-variant-numeric:tabular-nums}.ds-vote-opt:active{background:#EEF0F1}.ds-vote-opt.is-on{border:2px solid var(--c)}.ds-vote-unsure{flex:none;min-height:44px;font-weight:600}.ds-vote-opt:focus-visible{outline:2px solid #1C1E21;outline-offset:2px}"
     },
     {
@@ -955,7 +955,7 @@
       },
       {
         "name": "The Written Value Rule",
-        "body": "Une note s'écrit en toutes lettres avec son signe : Impossible −2, Contre −1, Pour +1, Parfait +2, avec le vrai signe moins (U+2212) ; « Je ne sais pas » s'écrit sans signe, en graphite. Chiffres, numéros et compteurs en chiffres tabulaires.",
+        "body": "Une note s'écrit en toutes lettres avec son signe : Jamais −2, Contre −1, Pour +1, Parfait +2, avec le vrai signe moins (U+2212) ; « Je ne sais pas » s'écrit sans signe, en graphite. Chiffres, numéros et compteurs en chiffres tabulaires.",
         "section": "typography"
       },
       {
@@ -976,7 +976,7 @@
     ],
     "dos": [
       "Do réserver le surligneur aux propositions et scrutins que l'utilisateur a votés, dans la couleur de chaque marque, sur toutes les surfaces qui les citent.",
-      "Do écrire chaque note en toutes lettres avec son signe (Impossible −2 à Parfait +2), dans sa couleur d'échelle.",
+      "Do écrire chaque note en toutes lettres avec son signe (Jamais −2 à Parfait +2), dans sa couleur d'échelle.",
       "Do écrire les positions des candidats et les issues parlementaires en encre neutre, sur filet léger pour les badges.",
       "Do mettre le numéro stable (P-xxx, L-xx), le statut et la thématique dans une ligne meta graphite sous le titre des cartes de liste.",
       "Do garder la lecture en 17 et 13, et réserver 34 au titre d'écran et 24 au titre de la proposition.",

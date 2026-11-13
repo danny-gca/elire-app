@@ -4,7 +4,7 @@ import { REPORT_FORM } from '@/constants/app';
 export type LegalSection = { titre: string; paragraphes: string[] };
 
 /** Éditeur à titre personnel, et l'adresse qui reçoit corrections et droits de réponse. */
-export const EDITEUR = { nom: 'Danny Garcia', contact: 'contact@danny-garcia.fr' };
+export const EDITEUR = { nom: 'Danny Garcia', contact: 'contact@danny-garcia.fr', site: 'https://danny-garcia.fr' };
 export const HEBERGEUR = 'GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (GitHub Pages)';
 export const CORRECTION_DELAY = '10 jours ouvrés';
 export const CONTACT_URL = `mailto:${EDITEUR.contact}?subject=${encodeURIComponent('élire : correction ou droit de réponse')}`;
@@ -43,8 +43,8 @@ export const CORRECTIONS: LegalSection[] = [
   {
     titre: 'Ce qui est publié',
     paragraphes: [
-      "Un candidat est ajouté quand sa candidature est déclarée ou désignée, avec une source datée. Chacun a le même nombre de propositions, choisies parmi les mesures centrales de son programme.",
-      "Chaque proposition est une citation exacte, avec son lien. Chaque scrutin est un vote public dont le résultat par député vient des données ouvertes de l'Assemblée, du Sénat ou du Parlement européen.",
+      "Un candidat est ajouté dès que sa candidature est annoncée, par lui-même ou par son parti, avec une source datée. Seule la liste du Conseil constitutionnel, publiée après la validation des 500 parrainages, rend une candidature officielle. Chaque candidat a au plus 8 propositions, choisies parmi les mesures centrales de son programme ou, sans programme publié, parmi ses prises de position publiques : certains en ont donc moins, ou aucune.",
+      "Chaque proposition est une citation exacte, avec son lien. Chaque scrutin est un vote public dont le résultat par élu vient des données ouvertes de l'Assemblée, du Sénat ou du Parlement européen.",
       "Les titres résument la citation sans la déformer. élire ne donne aucune consigne de vote.",
     ],
   },

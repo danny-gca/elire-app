@@ -1,0 +1,30 @@
+# Vote jusqu'à ouvrir le Classement (10 avis) et y classer au moins un candidat ; finit sur le Cahier.
+appId: fr.elire.app
+---
+- tapOn: "Voter"
+- repeat:
+    while:
+      visible: "Classement dans .*"
+    times: 20
+    commands:
+      - runFlow: vote.yaml
+- runFlow:
+    when:
+      visible: "10 questions de plus"
+    commands:
+      - tapOn: "10 questions de plus"
+# 10 avis ne suffisent pas toujours : un candidat se classe avec 2 propositions notées. On revote tant qu'il n'y a personne.
+- tapOn: "Cahier"
+- runFlow: astuce.yaml
+- repeat:
+    while:
+      visible: "Aucun candidat n’a encore assez de votes.*"
+    times: 4
+    commands:
+      - tapOn: "Continuer à voter"
+      - repeat:
+          times: 5
+          commands:
+            - runFlow: vote.yaml
+      - tapOn: "Cahier"
+      - runFlow: astuce.yaml

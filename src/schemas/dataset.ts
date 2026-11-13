@@ -23,7 +23,8 @@ export const PartiSchema = z.object({
   couleur: hexColor,
   /** Absente quand le ministère n'a jamais classé le parti : on n'en invente pas. */
   nuanceOfficielle: NuanceOfficielleSchema.optional(),
-  siteWeb: url,
+  /** Absent quand le parti n'a pas de site trouvable. */
+  siteWeb: url.optional(),
 });
 
 export const ThematiqueSchema = z.object({
@@ -34,9 +35,9 @@ export const ThematiqueSchema = z.object({
   description: z.string().min(1),
 });
 
-// Critère d'entrée (CONTRIBUTING.md) : candidature déclarée ou désignée, avec une source datée.
+// Critère d'entrée (CONTRIBUTING.md) : candidature annoncée ou investie par son parti, avec une source datée ; `officielle` une fois sur la liste du Conseil constitutionnel.
 export const CandidatureSchema = z.object({
-  statut: z.enum(['declaree', 'designee', 'sous_condition', 'pressentie']),
+  statut: z.enum(['annoncee', 'investie', 'sous_condition', 'pressentie', 'officielle']),
   date: isoDate,
   sourceUrl: url,
 });
@@ -55,7 +56,8 @@ export const ProgrammeSchema = z
 export const CandidatSourceSchema = z.object({
   id,
   nom: z.string().min(1),
-  partiId: id,
+  /** Absent pour un candidat sans parti ni mouvement : l'app affiche « Indépendant ». */
+  partiId: id.optional(),
   avatar: z.string().min(1).max(3),
   photoUrl: url.optional(),
   biographie: z.string().min(1),

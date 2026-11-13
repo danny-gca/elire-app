@@ -1,0 +1,37 @@
+# F-REGLAGES : réglages (sons, astuces), pages Méthode, Mentions légales et Crédits, puis effacer ses votes en deux appuis.
+appId: fr.elire.app
+name: Réglages et effacement
+tags: [reglages]
+---
+- runFlow: communs/ouvrir.yaml
+- tapOn: "Cahier"
+- runFlow: communs/astuce.yaml
+- tapOn: "Réglages"
+- assertVisible: "Tout reste sur votre appareil."
+- assertVisible: "Sons et vibrations"
+- tapOn: "Sons et vibrations"
+- tapOn: "Sons et vibrations"
+- tapOn: "Revoir les astuces"
+- assertVisible: "Elles reviendront au fil de l’app.*"
+- scrollUntilVisible: { element: "Méthode et corrections", direction: DOWN }
+- tapOn: "Méthode et corrections"
+- assertVisible: "Méthode et corrections"
+- back
+- scrollUntilVisible: { element: "Mentions légales", direction: DOWN }
+- tapOn: "Mentions légales"
+- assertVisible: "Mentions légales"
+- back
+- scrollUntilVisible: { element: "Crédits", direction: DOWN }
+- tapOn: "Crédits"
+- assertVisible: "Crédits"
+- back
+# Effacer : deux appuis, puis Voter repart de zéro (la présentation et les astuces vues restent).
+- scrollUntilVisible: { element: "Réinitialiser mes votes", direction: UP }
+- tapOn: "Réinitialiser mes votes"
+- tapOn: "Confirmer : effacer .*"
+# Réglages est hors des onglets : on revient au Cahier.
+- back
+# « Revoir les astuces » plus haut : celle du Cahier revient.
+- runFlow: communs/astuce.yaml
+- tapOn: "Voter"
+- assertVisible: "Classement dans 10 votes.*"

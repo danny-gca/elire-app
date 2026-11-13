@@ -11,7 +11,7 @@ App élire complète (4 onglets, fiche candidat, onboarding). Mode : Operate. Pl
 
 ## Audience et tâche
 
-Citoyen qui se fait son avis seul, au calme : lire une proposition anonyme, la noter sur 4 niveaux (Impossible, Contre, Pour, Parfait) ou « Je ne sais pas » (non compté), voter de vrais scrutins (Contre, Abstention, Pour), puis confronter ses avis aux candidats et à leurs votes réels, avec la fiabilité de chaque score. À éviter : air de site gouv, gadget/gamifié, fade, ressemblance avec les applis à cartes à swiper (dégradé violet).
+Citoyen qui se fait son avis seul, au calme : lire une proposition anonyme, la noter sur 4 niveaux (Jamais, Contre, Pour, Parfait) ou « Je ne sais pas » (non compté), voter de vrais scrutins (Contre, Abstention, Pour), puis confronter ses avis aux candidats et à leurs votes réels, avec la fiabilité de chaque score. À éviter : air de site gouv, gadget/gamifié, fade, ressemblance avec les applis à cartes à swiper (dégradé violet).
 
 ## Direction contract
 

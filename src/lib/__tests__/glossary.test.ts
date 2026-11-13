@@ -54,6 +54,13 @@ describe('wordSpans', () => {
       { start: 22, end: 28, mot: 'clause' },
     ]);
   });
+
+  it('garde le résultat en cache sans que l\'appelant puisse le modifier', () => {
+    const first = wordSpans('une clause miroir', WORDS);
+    first.push({ start: 0, end: 3, mot: 'intrus' });
+    expect(wordSpans('une clause miroir', WORDS)).toEqual([{ start: 4, end: 17, mot: 'clause miroir' }]);
+    expect(glossarySpans('une clause miroir', WORDS, [{ sigle: 'CETA' }])).toHaveLength(1);
+  });
 });
 
 describe('glossarySpans', () => {

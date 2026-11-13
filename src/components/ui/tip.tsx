@@ -1,8 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Animated, { Easing, useAnimatedProps, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
-import Svg, { Path } from 'react-native-svg';
+import { Easing, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
+import Svg from 'react-native-svg';
+
+import { DrawnPath } from '@/components/drawn-path';
 
 import { Colors, DEFAULT_MARKER, Markers, Spacing, Type, type MarkerId } from '@/constants/theme';
 import { SCRIBBLE_WIDTH, scribblePath } from '@/lib/stroke';
@@ -16,7 +18,6 @@ interface TipProps {
 }
 
 const SCRIBBLE_MS = 1100;
-const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 // Encart d'aide des premières questions : un gribouillis de surligneur derrière le texte, tracé à son arrivée.
 export function Tip({ lines, icon = 'bulb-outline', marker = DEFAULT_MARKER }: TipProps) {
@@ -43,15 +44,12 @@ function Scribble({ color }: { color: string }) {
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
   const reducedMotion = useReducedMotion();
   const progress = useSharedValue(reducedMotion ? 1 : 0);
-  const length = path?.length ?? 0;
 
   useEffect(() => {
     if (path && !reducedMotion) {
       progress.value = withTiming(1, { duration: SCRIBBLE_MS, easing: Easing.inOut(Easing.quad) });
     }
   }, [path, reducedMotion, progress]);
-
-  const animatedProps = useAnimatedProps(() => ({ strokeDashoffset: length * (1 - progress.value) }));
 
   return (
     <View
@@ -66,15 +64,14 @@ function Scribble({ color }: { color: string }) {
       }}>
       {size && path && (
         <Svg width={size.width} height={size.height}>
-          <AnimatedPath
+          <DrawnPath
             d={path.d}
+            length={path.length}
+            progress={progress}
             stroke={color}
             strokeWidth={SCRIBBLE_WIDTH}
             strokeLinecap="round"
             strokeLinejoin="round"
-            fill="none"
-            strokeDasharray={[length, length]}
-            animatedProps={animatedProps}
           />
         </Svg>
       )}

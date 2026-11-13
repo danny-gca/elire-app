@@ -1,4 +1,4 @@
-import { hardwareBack, pageTurnSettles, previousQuestion } from '@/lib/page-turn';
+import { hardwareBack, pageTurnSettles, previousQuestion, voteBlocked } from '../page-turn';
 
 describe('page tournée', () => {
   const base = { lastId: 'p-1', shownId: 'p-2', revisiting: false, busy: false };
@@ -36,5 +36,12 @@ describe('page tournée', () => {
     expect(pageTurnSettles(100, 360, 0)).toBe(false);
     expect(pageTurnSettles(40, 360, 1200)).toBe(true);
     expect(pageTurnSettles(-40, 360, 1200)).toBe(false);
+  });
+
+  it('laisse voter pendant que la page votée finit de tourner, pas pendant un retour en plein geste', () => {
+    expect(voteBlocked('turn')).toBe(false);
+    expect(voteBlocked('back')).toBe(false);
+    expect(voteBlocked(undefined)).toBe(false);
+    expect(voteBlocked('peek')).toBe(true);
   });
 });

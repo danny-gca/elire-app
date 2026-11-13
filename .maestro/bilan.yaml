@@ -1,0 +1,25 @@
+# F-BILAN : tous les 10 avis, le bilan s'ouvre ; on peut ramener la question précédente par-dessus, puis revenir au bilan.
+appId: fr.elire.app
+name: Bilan
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- tapOn: "Voter"
+- evalScript: ${output.garderBilan = true}
+- repeat:
+    while:
+      notVisible: "10 questions de plus"
+    times: 20
+    commands:
+      - runFlow: communs/vote.yaml
+- evalScript: ${output.garderBilan = false}
+- assertVisible: "10 questions de plus"
+- assertVisible: "Voir le Classement"
+- takeScreenshot: bilan
+- swipe: { start: "15%, 40%", end: "85%, 40%", duration: 350 }
+- assertVisible: "Revenir à la question en cours"
+- takeScreenshot: bilan-question-precedente
+- swipe: { start: "85%, 40%", end: "15%, 40%", duration: 350 }
+- assertVisible: "10 questions de plus"
+- tapOn: "10 questions de plus"
+- assertNotVisible: "10 questions de plus"

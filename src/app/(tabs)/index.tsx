@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AccessibilityInfo, BackHandler, findNodeHandle, Platform, Pressable, ScrollView, StyleSheet, Text, View, type AccessibilityProps, type LayoutChangeEvent } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { cancelAnimation, Easing, FadeIn, FadeOut, Keyframe, ReduceMotion, useAnimatedStyle, useDerivedValue, useReducedMotion, useSharedValue, withTiming, type SharedValue } from 'react-native-reanimated';
@@ -21,7 +21,7 @@ import { announce, LiveRegion } from '@/components/live-region';
 import { MoreInfo, type InfoTab } from '@/components/more-info';
 import { PageVeil } from '@/components/page-veil';
 import { PropositionRow } from '@/components/proposition-row';
-import { PropositionSheet } from '@/components/proposition-sheet';
+import { PropositionSheet, SHEET_SELECTABLE } from '@/components/proposition-sheet';
 import { ScrutinStamp } from '@/components/scrutin-stamp';
 import { SWEEP_MS } from '@/components/sweep-text';
 import { Screen } from '@/components/screen';
@@ -34,7 +34,7 @@ import { LoiVoteTag, VoteTag } from '@/components/vote-tag';
 import { Colors, Markers, Numeric, Radius, Spacing, Type } from '@/constants/theme';
 import { loiChoice, voteChoice } from '@/constants/votes';
 import { CHAMBRE_LABELS, STATUT_LABELS, TYPE_SOURCE_LABELS, formatDate } from '@/lib/format';
-import { hardwareBack, pageTurnSettles, previousQuestion } from '@/lib/page-turn';
+import { hardwareBack, pageTurnSettles, previousQuestion, voteBlocked } from '@/lib/page-turn';
 import { CLASSEMENT_THRESHOLD, isPause, nextMilestone, opinionCount, rankedCount, type Milestone } from '@/lib/progress';
 import { MIN_VOTES_PER_CANDIDAT, RELIABILITY_FROM, scoreCandidat, UNSURE, type LoiVoteValue, type VoteValue } from '@/lib/scoring';
 import { buzz, playSound } from '@/lib/sound';
@@ -51,6 +51,7 @@ const TOTAL = questions.length + lois.length;
 const LEAVE_MS = 320;
 // « A voté ! » reste le temps de corriger d'un geste, puis s'efface (la gomme reste partout ailleurs).
 const LAST_VOTE_MS = 10000;
+const LAST_VOTE_FADE_MS = 220;
 // Un compte à rebours n'est pas un mouvement : sans ça, « Réduire les animations » le vide d'un coup (« A voté ! » sans surligneur).
 const COUNTDOWN = ReduceMotion.Never;
 // Après un scrutin, le temps de lire l'hémicycle et le résultat, puis la suite part seule comme pour une proposition.
@@ -212,7 +213,7 @@ export default function VoterScreen() {
   }, [pause, finished, reducedMotion]);
 
   const handleVote = (value: VoteValue) => {
-    if (!current || (over && over.mode !== 'back')) {
+    if (!current || voteBlocked(over?.mode)) {
       return;
     }
     // Question ramenée, même réponse : la page repart sans rien changer.
@@ -233,7 +234,7 @@ export default function VoterScreen() {
   };
 
   const handleLoiVote = (value: LoiVoteValue) => {
-    if (!currentLoi || (over && over.mode !== 'back')) {
+    if (!currentLoi || voteBlocked(over?.mode)) {
       return;
     }
     if (back === currentLoi.id && loiVotes[currentLoi.id] === value) {
@@ -248,7 +249,7 @@ export default function VoterScreen() {
 
   // Question commune : même échelle qu'une proposition, puis l'écran sans nom, comme après un scrutin.
   const handleEnjeuVote = (value: VoteValue) => {
-    if (!currentEnjeu || (over && over.mode !== 'back')) {
+    if (!currentEnjeu || voteBlocked(over?.mode)) {
       return;
     }
     if (back === currentEnjeu.id && votes[currentEnjeu.id] === value) {
@@ -300,7 +301,9 @@ export default function VoterScreen() {
 
   // Les boutons restent au bas de l'écran, au-dessus des onglets : on vote sans faire défiler.
   const nextStep = (loiRevealed || enjeuRevealed) && loiFlow.step === 'hemicycle';
-  const dock = pause ? null : currentEnjeu ? (
+  // Bilan à l'écran, sauf si la question précédente est ramenée par-dessus : on peut alors la revoter.
+  const pauseShown = pause && !back;
+  const dock = pauseShown ? null : currentEnjeu ? (
     nextStep ? (
       <Button
         label="Question suivante"
@@ -356,7 +359,9 @@ export default function VoterScreen() {
       scroll?.scrollToEnd({ animated: !reducedMotion });
       return;
     }
-    const relativeTo = (scroll as unknown as { getScrollResponder?: () => { getInnerViewNode?: () => unknown } }).getScrollResponder?.()?.getInnerViewNode?.() ?? scroll;
+    // Nouvelle architecture : measureLayout veut la vue du contenu (getInnerViewRef), plus son numéro.
+    const inner = scroll as unknown as { getInnerViewRef?: () => unknown; getScrollResponder?: () => { getInnerViewNode?: () => unknown } };
+    const relativeTo = inner.getInnerViewRef?.() ?? inner.getScrollResponder?.()?.getInnerViewNode?.() ?? scroll;
     try {
       target.measureLayout(
         relativeTo as View,
@@ -367,6 +372,9 @@ export default function VoterScreen() {
       scroll.scrollToEnd({ animated: !reducedMotion });
     }
   };
+
+  // Tiroir refermé : on remonte relire la question.
+  const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: !reducedMotion });
 
   const counter = <ProgressCounter value={votedCount} total={TOTAL} unit="votes" />;
 
@@ -387,7 +395,7 @@ export default function VoterScreen() {
     lastId,
     shownId: currentId,
     revisiting: !!over,
-    busy: pause || finished || !!hold || !!revealId || loiLeaving || tutoActive || !!editing,
+    busy: finished || !!hold || !!revealId || loiLeaving || tutoActive || !!editing,
   });
   // Question ramenée posée, par l'animation, le minuteur de secours ou d'un coup : une fois, page à plat, son de page.
   useEffect(() => {
@@ -498,7 +506,13 @@ export default function VoterScreen() {
   const dragId = (over?.mode === 'peek' ? over.id : forward ? back : backTarget) ?? '';
   const width = Math.max(stageWidth, 1);
   const reduced = reducedMotion;
-  const pan = Gesture.Pan()
+  const panActions = useRef({ peek, goBack, goForward, settleBack, dropPeek, dropOver });
+  useEffect(() => {
+    panActions.current = { peek, goBack, goForward, settleBack, dropPeek, dropOver };
+  });
+  // Rappel stable : le geste et ses worklets ne sont recréés que si sa page, son sens ou la largeur changent.
+  const [panRun] = useState(() => (name: keyof typeof panActions.current, id: string) => panActions.current[name](id));
+  const pan = useMemo(() => Gesture.Pan()
     .enabled(Platform.OS !== 'web' && !!dragId)
     .activeOffsetX(forward ? -24 : 24)
     .failOffsetY([-16, 16])
@@ -506,7 +520,7 @@ export default function VoterScreen() {
     .onStart(() => {
       if (!forward && !reduced) {
         turn.set(1);
-        scheduleOnRN(peek, dragId);
+        scheduleOnRN(panRun, 'peek', dragId);
       }
     })
     .onUpdate((e) => {
@@ -523,7 +537,7 @@ export default function VoterScreen() {
       // Réduire les animations : la page change d'un coup, sans suivre le doigt.
       if (reduced) {
         if (settled) {
-          scheduleOnRN(forward ? goForward : goBack);
+          scheduleOnRN(panRun, forward ? 'goForward' : 'goBack', dragId);
         }
         return;
       }
@@ -533,18 +547,18 @@ export default function VoterScreen() {
           return;
         }
         if (!forward) {
-          scheduleOnRN(settled ? settleBack : dropPeek, dragId);
+          scheduleOnRN(panRun, settled ? 'settleBack' : 'dropPeek', dragId);
         } else if (settled) {
-          scheduleOnRN(dropOver, dragId);
+          scheduleOnRN(panRun, 'dropOver', dragId);
           scheduleOnRN(playSound, 'feuille');
         }
       }));
     })
     .onFinalize((_, success) => {
       if (!success && !forward) {
-        scheduleOnRN(dropPeek, dragId);
+        scheduleOnRN(panRun, 'dropPeek', dragId);
       }
-    });
+    }), [dragId, forward, width, reduced, turn, panRun]);
   const titleActions = (role: Role): TitleActions | undefined =>
     role === 'flow' && backTarget
       ? { accessibilityActions: [{ name: 'back', label: 'Revenir à la question précédente' }], onAccessibilityAction: goBack }
@@ -577,6 +591,7 @@ export default function VoterScreen() {
           step={active && revealId === id ? loiFlow.step : 'hemicycle'}
           holdProps={active ? loiFlow.holdProps : {}}
           onInfoOpen={showInfo}
+          onInfoClose={scrollTop}
           onRevealLayout={revealLayout}
           titleActions={titleActions(role)}
           titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
@@ -596,6 +611,7 @@ export default function VoterScreen() {
           step={active && revealId === id ? loiFlow.step : 'hemicycle'}
           holdProps={active ? loiFlow.holdProps : {}}
           onInfoOpen={showInfo}
+          onInfoClose={scrollTop}
           onRevealLayout={revealLayout}
           titleActions={titleActions(role)}
           titleRef={role === 'flow' ? setFlowTitle : setOverTitle}
@@ -612,7 +628,6 @@ export default function VoterScreen() {
       <Leaving leaving={!PAGE_TURN && hold?.id === id && hold.phase === 'leaving'} style={styles.sheetWrap}>
         <PropositionSheet
           proposition={p}
-          quoteOpen={info?.id === p.id}
           sweep={sweepOf(p.id)}
           thematique={getThematique(p.thematiqueId)}
           onWord={() => setInfo({ id: p.id, tab: 'mots' })}
@@ -623,6 +638,7 @@ export default function VoterScreen() {
           footer={
             <View {...(role === 'flow' ? infoTarget : null)}>
               <MoreInfo
+                selectable={SHEET_SELECTABLE}
                 itemId={p.id}
                 text={p.contexte}
                 source={TYPE_SOURCE_LABELS[p.typeSource]}
@@ -630,6 +646,7 @@ export default function VoterScreen() {
                 tab={info?.id === p.id ? info.tab : null}
                 onTab={(tab) => setInfo(tab ? { id: p.id, tab } : null)}
                 onOpen={showInfo}
+                onClose={scrollTop}
               />
             </View>
           }
@@ -657,7 +674,7 @@ export default function VoterScreen() {
   return (
     <Screen
       scrollRef={scrollRef}
-      backdrop={currentLoi && !pause ? <CrowdBackdrop quiet={revealId === currentLoi.id || back === currentLoi.id} /> : null}
+      backdrop={currentLoi && !pauseShown ?<CrowdBackdrop quiet={revealId === currentLoi.id || back === currentLoi.id} /> : null}
       header={
         // Barre fixe : le palier à gauche, les candidats classés à droite, sur une seule piste de progression.
         <View style={styles.bar}>
@@ -691,20 +708,21 @@ export default function VoterScreen() {
             // Page posée plus haute que la question dessous : la zone garde sa hauteur, rien ne saute pendant le tour.
             style={[styles.stage, over && overSize.id === over.id && { minHeight: over.top + overSize.height }]}
             onLayout={(e) => setStageWidth(e.nativeEvent.layout.width)}>
-            {pause ? (
-              <PauseCard key="pause" opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/cahier')} onContinue={() => setPausedAt(opinions)} />
-            ) : (
-              flowId && (
-                <Page
-                  key={flowId}
-                  turn={turn}
-                  fade={reducedMotion}
-                  covered={!!over && (!reducedMotion || coverReady === over)}
-                  interactive={!back}
-                  onLayout={(e: LayoutChangeEvent) => setFlowTop(e.nativeEvent.layout.y)}>
-                  {pageFor(flowId, 'flow')}
-                </Page>
-              )
+            {/* Le bilan est une page du cahier comme une autre : la question précédente peut revenir par-dessus. */}
+            {(pause || flowId) && (
+              <Page
+                key={pause ? 'pause' : flowId}
+                turn={turn}
+                fade={reducedMotion}
+                covered={!!over && (!reducedMotion || coverReady === over)}
+                interactive={!back}
+                onLayout={(e: LayoutChangeEvent) => setFlowTop(e.nativeEvent.layout.y)}>
+                {pause ? (
+                  <PauseCard opinions={opinions} ranked={ranked} onSeeRanking={() => router.navigate('/cahier')} onContinue={() => setPausedAt(opinions)} />
+                ) : (
+                  flowId && pageFor(flowId, 'flow')
+                )}
+              </Page>
             )}
             {over && (
               <Page
@@ -714,7 +732,10 @@ export default function VoterScreen() {
                 over
                 top={over.top}
                 interactive={over.mode === 'back'}
-                onLayout={(e: LayoutChangeEvent) => setOverSize({ id: over.id, height: e.nativeEvent.layout.height })}>
+                onLayout={(e: LayoutChangeEvent) => {
+                  const { height } = e.nativeEvent.layout;
+                  setOverSize((s) => (s.id === over.id && s.height === height ? s : { id: over.id, height }));
+                }}>
                 {pageFor(over.id, 'over')}
               </Page>
             )}
@@ -861,6 +882,7 @@ function LoiBallot({
   step,
   holdProps,
   onInfoOpen,
+  onInfoClose,
   onRevealLayout,
   titleActions,
   titleRef,
@@ -874,6 +896,8 @@ function LoiBallot({
   step: LoiStep;
   holdProps: object;
   onInfoOpen: (target: View | null) => void;
+  /** Tiroir refermé : retour en haut, sur la question. */
+  onInfoClose: () => void;
   /** L'hémicycle s'ouvre sous la question : l'écran défile jusqu'à lui une fois posé. */
   onRevealLayout: () => void;
   titleActions?: TitleActions;
@@ -912,6 +936,7 @@ function LoiBallot({
             bound={bound}
             footer={
               <MoreInfo
+                selectable={SHEET_SELECTABLE}
                 itemId={loi.id}
                 nature={loi.nature}
                 text={loi.enjeu}
@@ -919,6 +944,7 @@ function LoiBallot({
                 tab={tab}
                 onTab={setTab}
                 onOpen={onInfoOpen}
+                onClose={onInfoClose}
               />
             }
           />
@@ -965,6 +991,7 @@ function EnjeuBallot({
   step,
   holdProps,
   onInfoOpen,
+  onInfoClose,
   onRevealLayout,
   titleActions,
   titleRef,
@@ -978,6 +1005,8 @@ function EnjeuBallot({
   step: LoiStep;
   holdProps: object;
   onInfoOpen: (target: View | null) => void;
+  /** Tiroir refermé : retour en haut, sur la question. */
+  onInfoClose: () => void;
   onRevealLayout: () => void;
   titleActions?: TitleActions;
   titleRef?: React.Ref<Text>;
@@ -1009,12 +1038,14 @@ function EnjeuBallot({
               footer={
                 <View {...infoTarget}>
                   <MoreInfo
+                    selectable={SHEET_SELECTABLE}
                     itemId={enjeu.id}
                     text={enjeu.enjeu}
                     terms={[enjeu.question]}
                     tab={tab}
                     onTab={setTab}
                     onOpen={onInfoOpen}
+                    onClose={onInfoClose}
                   />
                 </View>
               }
@@ -1183,16 +1214,27 @@ function LastVote({ id, paused, hidden = false, onPress }: { id: string; paused:
     }
   }, [progress, reducedMotion]);
   // Pendant la modification, le filet reste plein ; feuille fermée, 10 s de plus avec le vote corrigé.
+  // Fondu de fin par une valeur animée, pas `exiting` : sur le web, son clone restait mal placé quand le vote suivant le remplace.
+  const fade = useSharedValue(1);
   useEffect(() => {
     cancelAnimation(remaining);
     remaining.value = 1;
+    cancelAnimation(fade);
+    fade.value = 1;
     if (paused) {
       return;
     }
     remaining.value = withTiming(0, { duration: LAST_VOTE_MS, easing: Easing.linear, reduceMotion: COUNTDOWN });
-    const timer = setTimeout(() => setShown(false), LAST_VOTE_MS);
-    return () => clearTimeout(timer);
-  }, [paused, remaining]);
+    const timer = setTimeout(() => {
+      fade.value = withTiming(0, { duration: LAST_VOTE_FADE_MS });
+    }, LAST_VOTE_MS);
+    const end = setTimeout(() => setShown(false), LAST_VOTE_MS + LAST_VOTE_FADE_MS);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(end);
+    };
+  }, [paused, remaining, fade]);
+  const fadeStyle = useAnimatedStyle(() => ({ opacity: hidden ? 0 : fade.value }));
   const marker = useMarkOf(id);
   const target = useTutoTarget('a-vote');
 
@@ -1210,13 +1252,12 @@ function LastVote({ id, paused, hidden = false, onPress }: { id: string; paused:
   return (
     <Animated.View
       entering={reducedMotion ? undefined : LAST_VOTE_ENTER}
-      exiting={reducedMotion ? undefined : FadeOut.duration(220)}
       // Question ramenée : « A voté ! » s'efface sans se démonter, il ne rejoue pas son entrée au retour.
       pointerEvents={hidden ? 'none' : 'auto'}
       accessibilityElementsHidden={hidden}
       importantForAccessibility={hidden ? 'no-hide-descendants' : 'auto'}
       aria-hidden={hidden}
-      style={[styles.last, hidden && styles.hidden]}>
+      style={[styles.last, hidden && styles.hidden, fadeStyle]}>
       <Pressable
         {...target}
         onPress={onPress}

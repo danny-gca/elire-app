@@ -1,0 +1,16 @@
+# F-VOTE : voter une proposition, puis des votes enchaînés sans blocage jusqu'au Classement ou au Bilan.
+appId: fr.elire.app
+name: Votes enchaînés
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- runFlow: communs/proposition.yaml
+- tapOn: { text: "Pour, \\+1", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+# La gomme (toucher « A voté ! », changer le vote) est dans `npm run perf:android` (scénario gomme) : pendant ses 10 s
+# de compte à rebours, l'écran ne se pose jamais et Maestro ne peut pas le lire.
+# Puis des votes à la suite : ni écran figé, ni vote perdu.
+- repeat:
+    times: 8
+    commands:
+      - runFlow: communs/vote.yaml
+- assertVisible: "(Classement|Bilan) dans .*"

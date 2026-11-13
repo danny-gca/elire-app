@@ -7,7 +7,7 @@ const candidat = (id: string, nom = id): Candidat => ({
   nom,
   partiId: 'p',
   avatar: 'XX',
-  candidature: { statut: 'declaree', date: '2026-01-01', sourceUrl: 'https://exemple.fr' },
+  candidature: { statut: 'annoncee', date: '2026-01-01', sourceUrl: 'https://exemple.fr' },
   programme: { statut: 'aucun' },
   biographie: 'bio',
   parti: 'Parti',

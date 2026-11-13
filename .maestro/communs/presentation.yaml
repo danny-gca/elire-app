@@ -1,0 +1,16 @@
+# Passe la présentation, seulement si elle s'affiche : saut direct à la dernière page par sa barre.
+# Page après page, chaque vérification attendait que l'écran se pose (barre de progression animée) : ~14 s par page.
+appId: fr.elire.app
+---
+- runFlow:
+    when:
+      visible: "Page 8 sur 8"
+    commands:
+      - tapOn:
+          text: "Page 8 sur 8"
+          waitToSettleTimeoutMs: 500
+          retryTapIfNoChange: false
+      - tapOn:
+          text: "Commencer à voter"
+          waitToSettleTimeoutMs: 500
+          retryTapIfNoChange: false

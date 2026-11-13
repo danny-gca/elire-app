@@ -1,0 +1,27 @@
+# F-TIROIRS : chaque tiroir d'une proposition s'ouvre (l'écran descend jusqu'à lui) et se referme (retour en haut, question lisible).
+appId: fr.elire.app
+name: Tiroirs
+tags: [voter]
+---
+- runFlow: communs/ouvrir.yaml
+- runFlow: communs/proposition.yaml
+- tapOn: { text: "Contexte", waitToSettleTimeoutMs: 500 }
+- assertVisible: "Aujourd’hui"
+- assertVisible: "En débat"
+- tapOn: { text: "Contexte", waitToSettleTimeoutMs: 500 }
+- assertNotVisible: "Aujourd’hui"
+- assertVisible: "Proposition P-.*"
+- tapOn: { text: "Précisions", waitToSettleTimeoutMs: 500 }
+- assertVisible: "Programme 2027|Programme précédent|Prise de position"
+- tapOn: { text: "Précisions", waitToSettleTimeoutMs: 500 }
+- runFlow:
+    when:
+      visible: "Glossaire"
+    commands:
+      - tapOn: { text: "Glossaire", waitToSettleTimeoutMs: 500 }
+      - assertVisible: ".* : .*"
+      - tapOn: { text: "Glossaire", waitToSettleTimeoutMs: 500 }
+- tapOn: { text: "Liens et sources", waitToSettleTimeoutMs: 500 }
+- assertVisible: "Ouvre le navigateur|.*·.*"
+- tapOn: { text: "Liens et sources", waitToSettleTimeoutMs: 500 }
+- assertVisible: "Proposition P-.*"

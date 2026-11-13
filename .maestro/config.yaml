@@ -1,0 +1,20 @@
+# Suite Maestro d'élire : maestro test .maestro (émulateur ou téléphone, app release installée). Ordre fixé, état gardé d'un parcours à l'autre.
+flows:
+  - "*.yaml"
+executionOrder:
+  continueOnFailure: true
+  flowsOrder:
+    - Présentation
+    - Votes enchaînés
+    - Tiroirs
+    - Retour à la question précédente
+    - Pas de sélection dans Voter
+    - Scrutin réel
+    - Question commune
+    - Bilan
+    - Cahier et fiche candidat
+    - Partage
+    - Lois
+    - Explorer
+    - Modifier un vote depuis Explorer et Lois
+    - Réglages et effacement

@@ -195,7 +195,7 @@ function HowItWorks({ showLois }: { showLois: boolean }) {
             </View>
             <Text style={[Type.label, styles.soft]}>
               Le score est la moyenne de vos notes sur ses propositions, de 0 à 100 % : que des « Parfait », 100 % ; que des
-              « Impossible », 0 %. « Je ne sais pas » ne compte pas.
+              « Jamais », 0 %. « Je ne sais pas » ne compte pas.
             </Text>
           </HowStep>
           {showLois && (

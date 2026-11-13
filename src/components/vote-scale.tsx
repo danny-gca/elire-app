@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { ButtonStroke } from '@/components/button-stroke';
 import { Colors, Numeric, Radius, Spacing, Type } from '@/constants/theme';
@@ -15,10 +15,8 @@ interface VoteScaleProps {
   stroke?: { value: VoteValue; color: string };
 }
 
-// Quatre niveaux égaux, d'Impossible à Parfait, puis « Je ne sais pas » à part : ce n'est pas un niveau.
+// Quatre niveaux égaux, de Jamais à Parfait, puis « Je ne sais pas » à part : ce n'est pas un niveau.
 export function VoteScale({ value, onVote, disabled, stroke }: VoteScaleProps) {
-  // Sous 380 pt, « Impossible » ne tient plus à 13 pt dans un quart de largeur.
-  const narrow = useWindowDimensions().width < 380;
   const option = (choice: VoteChoice, wide?: boolean) => {
     const selected = value === choice.value;
     return (
@@ -42,7 +40,7 @@ export function VoteScale({ value, onVote, disabled, stroke }: VoteScaleProps) {
         ]}>
         {stroke?.value === choice.value && <ButtonStroke color={stroke.color} />}
         {choice.sign ? <Text style={[Type.bodyStrong, Numeric, { color: choice.color }]}>{choice.sign}</Text> : null}
-        <Text style={[wide ? Type.labelStrong : Type.label, styles.label, narrow && !wide && styles.labelNarrow]} numberOfLines={1}>
+        <Text style={[wide ? Type.labelStrong : Type.label, styles.label]} numberOfLines={1}>
           {choice.label}
         </Text>
       </Pressable>
@@ -95,9 +93,5 @@ const styles = StyleSheet.create({
   },
   label: {
     color: Colors.ink,
-  },
-  labelNarrow: {
-    fontSize: 12,
-    letterSpacing: -0.1,
   },
 });

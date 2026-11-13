@@ -2,28 +2,39 @@
   {
     "id": "horizons",
     "nom": "Horizons",
-    "sigle": "HOR",
     "couleur": "#002B7F",
     "nuanceOfficielle": {
       "code": "LENS",
       "libelle": "Liste Ensemble",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://horizonsleparti.fr"
+    "siteWeb": "https://horizonsleparti.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d7866e05",
+      "note": "2026-11-11 corrigée : Sigles HOR, REC, PA, LP, GE retirés : codes du ministère, employés ni par le parti ni par la presse (choix validé)."
+    }
   },
   {
     "id": "renaissance",
     "nom": "Renaissance",
-    "sigle": "REN",
+    "sigle": "RE",
     "couleur": "#7B1FA2",
     "nuanceOfficielle": {
       "code": "LENS",
       "libelle": "Liste Ensemble",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://parti-renaissance.fr"
+    "siteWeb": "https://parti-renaissance.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "cc3965be",
+      "note": "2026-11-11 corrigée : Sigle REN (code du ministère) -> RE, déclaré par le parti sur son site."
+    }
   },
   {
     "id": "lfi",
@@ -34,9 +45,15 @@
       "code": "LFI",
       "libelle": "Liste de La France insoumise",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://lafranceinsoumise.fr"
+    "siteWeb": "https://lafranceinsoumise.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "356b0abd",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "rn",
@@ -47,22 +64,33 @@
       "code": "LRN",
       "libelle": "Liste du Rassemblement National",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://rassemblementnational.fr"
+    "siteWeb": "https://rassemblementnational.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "efc78ed8",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "place-publique",
-    "nom": "Place Publique / PS",
-    "sigle": "PP-PS",
+    "nom": "Place publique",
     "couleur": "#D81B60",
     "nuanceOfficielle": {
       "code": "LUG",
       "libelle": "Liste d'union à gauche",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://place-publique.eu"
+    "siteWeb": "https://place-publique.eu",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f1eb1d0e",
+      "note": "2026-11-11 corrigée : Nom « Place publique » comme sur son site ; sigle PP-PS employé nulle part, retiré."
+    }
   },
   {
     "id": "les-ecologistes",
@@ -71,24 +99,35 @@
     "couleur": "#2E7D32",
     "nuanceOfficielle": {
       "code": "LVEC",
-      "libelle": "Liste Les Écologistes",
+      "libelle": "Liste Les Ecologistes",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://lesecologistes.fr"
+    "siteWeb": "https://lesecologistes.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "1b01ca44",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "equinoxe",
     "nom": "Équinoxe",
-    "sigle": "EQX",
     "couleur": "#FFD412",
     "nuanceOfficielle": {
       "code": "LECO",
       "libelle": "Liste écologiste",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://parti-equinoxe.fr"
+    "siteWeb": "https://parti-equinoxe.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "35fa1a55",
+      "note": "2026-11-11 corrigée : Sigles retirés : ni le parti ni la presse ne les emploient."
+    }
   },
   {
     "id": "lr",
@@ -99,22 +138,27 @@
       "code": "LLR",
       "libelle": "Liste des Républicains",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://republicains.fr"
+    "siteWeb": "https://republicains.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "5b94edf3",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "debout",
     "nom": "Debout !",
-    "sigle": "DEBOUT",
     "couleur": "#EF4444",
-    "nuanceOfficielle": {
-      "code": "LDVG",
-      "libelle": "Liste divers gauche",
-      "election": "municipales 2026",
-      "sourceUrl": "https://www.legifrance.gouv.fr/circulaire/id/45645"
-    },
-    "siteWeb": "https://francoisruffin.fr"
+    "siteWeb": "https://debout.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "35471349",
+      "note": "2026-11-11 corrigée : Nuance LDVG retirée : municipales 2026, pas une élection nationale (choix validé). // 2026-11-11 corrigée : Sigles retirés : ni le parti ni la presse ne les emploient. // 2026-11-11 corrigée : Site : debout.fr (« notre mouvement national »), francoisruffin.fr est le site du député."
+    }
   },
   {
     "id": "pcf",
@@ -125,22 +169,33 @@
       "code": "LCOM",
       "libelle": "Liste du Parti communiste français",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://pcf.fr"
+    "siteWeb": "https://pcf.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d61e44e0",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "reconquete",
-    "nom": "Reconquête",
-    "sigle": "REC",
+    "nom": "Reconquête!",
     "couleur": "#1E1B4B",
     "nuanceOfficielle": {
       "code": "LREC",
       "libelle": "Liste Reconquête !",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://parti-reconquete.fr"
+    "siteWeb": "https://parti-reconquete.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "cc51aa0c",
+      "note": "2026-11-11 corrigée : Nom « Reconquête! », graphie du parti sur son site (choix validé). // 2026-11-11 corrigée : Sigles HOR, REC, PA, LP, GE retirés : codes du ministère, employés ni par le parti ni par la presse (choix validé)."
+    }
   },
   {
     "id": "lutte-ouvriere",
@@ -151,9 +206,15 @@
       "code": "LEXG",
       "libelle": "Liste d'extrême-gauche",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://lutte-ouvriere.org"
+    "siteWeb": "https://lutte-ouvriere.org",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "b6a57308",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "debout-la-france",
@@ -166,7 +227,13 @@
       "election": "législatives 2024",
       "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/11/91/9108/index.php"
     },
-    "siteWeb": "https://debout-la-france.fr"
+    "siteWeb": "https://debout-la-france.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "f6cc3d23",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "upr",
@@ -177,36 +244,45 @@
       "code": "LDIV",
       "libelle": "Liste Divers",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://upr.fr"
+    "siteWeb": "https://upr.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6b2c04ba",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "nouvelle-energie",
     "nom": "Nouvelle Énergie",
-    "sigle": "NE",
     "couleur": "#2563EB",
-    "siteWeb": "https://nouvelleenergie.fr"
+    "siteWeb": "https://www.unenouvelleenergie.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "6c72816c",
+      "note": "2026-11-11 corrigée : Sigles retirés : ni le parti ni la presse ne les emploient. // 2026-11-11 corrigée : Site : nouvelleenergie.fr est un domaine parqué ; site du parti unenouvelleenergie.fr."
+    }
   },
   {
     "id": "parti-animaliste",
     "nom": "Parti animaliste",
-    "sigle": "PA",
     "couleur": "#912993",
     "nuanceOfficielle": {
       "code": "LDIV",
       "libelle": "Liste Divers",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://parti-animaliste.fr"
-  },
-  {
-    "id": "resistons",
-    "nom": "Résistons !",
-    "sigle": "RES",
-    "couleur": "#D97706",
-    "siteWeb": "https://resistons-france.fr"
+    "siteWeb": "https://parti-animaliste.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "ef9f9568",
+      "note": "2026-11-11 corrigée : Sigles HOR, REC, PA, LP, GE retirés : codes du ministère, employés ni par le parti ni par la presse (choix validé)."
+    }
   },
   {
     "id": "revolution-permanente",
@@ -219,20 +295,31 @@
       "election": "législatives 2024",
       "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/11/93/9302/index.php"
     },
-    "siteWeb": "https://www.revolutionpermanente.fr"
+    "siteWeb": "https://www.revolutionpermanente.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "0bad284c",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "les-patriotes",
     "nom": "Les Patriotes",
-    "sigle": "LP",
     "couleur": "#E88A28",
     "nuanceOfficielle": {
       "code": "LEXD",
       "libelle": "Liste d'extrême droite",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://les-patriotes.fr"
+    "siteWeb": "https://les-patriotes.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "1ef552cd",
+      "note": "2026-11-11 corrigée : Sigles HOR, REC, PA, LP, GE retirés : codes du ministère, employés ni par le parti ni par la presse (choix validé)."
+    }
   },
   {
     "id": "npa-revolutionnaires",
@@ -243,21 +330,31 @@
       "code": "LEXG",
       "libelle": "Liste d'extrême-gauche",
       "election": "européennes 2024",
-      "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/europeennes2024/ensemble_geographique/index.php"
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
     },
-    "siteWeb": "https://npa-revolutionnaires.org"
+    "siteWeb": "https://npa-revolutionnaires.org",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "bd158403",
+      "note": "Audit des 10 et 11/11/2026"
+    }
   },
   {
     "id": "la-france-humaine-et-forte",
     "nom": "La France Humaine et Forte",
-    "sigle": "FHuF",
     "couleur": "#1B4F72",
-    "siteWeb": "https://www.lafrancehumaineetforte.fr"
+    "siteWeb": "https://www.lafrancehumaineetforte.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "8a502823",
+      "note": "2026-11-11 corrigée : Sigles retirés : ni le parti ni la presse ne les emploient."
+    }
   },
   {
     "id": "generation-ecologie",
     "nom": "Génération écologie",
-    "sigle": "GE",
     "couleur": "#5ABB48",
     "nuanceOfficielle": {
       "code": "ECO",
@@ -265,25 +362,53 @@
       "election": "législatives 2024",
       "sourceUrl": "https://www.archives-resultats-elections.interieur.gouv.fr/resultats/legislatives2024/ensemble_geographique/75/79/7902/index.php"
     },
-    "siteWeb": "https://www.generationecologie.fr"
+    "siteWeb": "https://www.generationecologie.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "2420efd3",
+      "note": "2026-11-11 corrigée : Sigles HOR, REC, PA, LP, GE retirés : codes du ministère, employés ni par le parti ni par la presse (choix validé)."
+    }
   },
   {
     "id": "projet-france",
-    "nom": "Projet France",
+    "nom": "Le Projet France",
     "couleur": "#0546A5",
-    "siteWeb": "https://becht2027.fr"
-  },
-  {
-    "id": "nous-sommes-la-france",
-    "nom": "Nous sommes la France",
-    "couleur": "#00A2B0",
-    "siteWeb": "https://www.npolony.fr"
+    "siteWeb": "https://becht2027.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "422ae076",
+      "note": "2026-11-11 corrigée : Nom « Le Projet France » : mouvement politique enregistré auprès de la CNCCFP (déclaration HATVP de son président)."
+    }
   },
   {
     "id": "nous-france",
     "nom": "Nous France",
-    "sigle": "NF",
     "couleur": "#46B7FF",
-    "siteWeb": "https://www.nousfrance.fr"
+    "siteWeb": "https://www.nousfrance.fr",
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "d74390fb",
+      "note": "2026-11-11 corrigée : Sigles retirés : ni le parti ni la presse ne les emploient."
+    }
+  },
+  {
+    "id": "france-libre",
+    "nom": "France Libre",
+    "couleur": "#6B7280",
+    "nuanceOfficielle": {
+      "code": "LDIV",
+      "libelle": "Liste Divers",
+      "election": "européennes 2024",
+      "sourceUrl": "https://www.val-de-marne.gouv.fr/contenu/telechargement/24497/189390/file/Europ%C3%A9ennes%202024%20-%20R%C3%A9sultats%20-%20Communes_2024-06-11_11h32.pdf"
+    },
+    "validation": {
+      "le": "2026-11-11",
+      "par": "claude",
+      "empreinte": "b354804e",
+      "note": "2026-11-11 corrigée : Nuance LDIV, européennes 2024 (liste n° 30)."
+    }
   }
 ]

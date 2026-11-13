@@ -1,0 +1,17 @@
+# Ferme les astuces « Compris » (parfois deux de suite) : chacune s'ouvre ~0,7 s après que l'écran s'est posé et avale le toucher suivant.
+appId: fr.elire.app
+---
+- extendedWaitUntil:
+    visible: "Compris"
+    timeout: 1500
+    optional: true
+- repeat:
+    while:
+      visible: "Compris"
+    times: 3
+    commands:
+      - tapOn: { text: "Compris", waitToSettleTimeoutMs: 500, retryTapIfNoChange: false }
+      - extendedWaitUntil:
+          visible: "Compris"
+          timeout: 1500
+          optional: true
