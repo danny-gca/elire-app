@@ -1,4 +1,4 @@
-# Lancé par le tag vX.Y.Z que crée la fusion de la PR de release : build Android et iOS puis envoi aux testeurs (piste alpha de Google Play, groupe externe « beta » de TestFlight).
+# Lancé par le tag vX.Y.Z que crée la fusion de la PR de release : build Android et iOS puis envoi aux testeurs (piste alpha de Google Play, TestFlight).
 name: Create Production Builds
 
 on:
@@ -23,11 +23,10 @@ jobs:
     params:
       platform: ios
       profile: production
-  # Envoi sur TestFlight et ajout au groupe externe « beta » (Beta App Review lancée d'office).
-  testflight_ios:
+  # Dépôt sur TestFlight ; ajout au groupe externe « beta » à la main (type testflight avec build_id : plan payant).
+  submit_ios:
     needs: [build_ios]
-    type: testflight
+    type: submit
     params:
       build_id: ${{ needs.build_ios.outputs.build_id }}
       profile: production
-      external_groups: ['beta']
