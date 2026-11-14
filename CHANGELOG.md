@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/danny-gca/elire-app/compare/v1.9.1...v1.9.2) (2026-11-14)
+
+
+### Corrections
+
+* **eas:** retour à submit pour iOS, le job testflight demande un plan payant ([#52](https://github.com/danny-gca/elire-app/issues/52)) ([dec048f](https://github.com/danny-gca/elire-app/commit/dec048f12352bf18f33ffda3af14163bbabdf2df))
+
 ## [1.9.1](https://github.com/danny-gca/elire-app/compare/v1.9.0...v1.9.1) (2026-11-14)
 
 
