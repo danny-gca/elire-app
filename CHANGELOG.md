@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/danny-gca/elire-app/compare/v1.9.0...v1.9.1) (2026-11-14)
+
+
+### Corrections
+
+* **eas:** builds iOS envoyés au groupe TestFlight externe « beta » ([#50](https://github.com/danny-gca/elire-app/issues/50)) ([39789d2](https://github.com/danny-gca/elire-app/commit/39789d2c9a6383f6906b740e9e3705f615b1c65f))
+
 ## [1.9.0](https://github.com/danny-gca/elire-app/compare/v1.8.0...v1.9.0) (2026-11-13)
 
 
