@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/danny-gca/elire-app/compare/v1.8.0...v1.9.0) (2026-11-13)
+
+
+### Nouveautés
+
+* **data:** audit des sources, votes de groupe par délégation et propositions 2027 ([#47](https://github.com/danny-gca/elire-app/issues/47)) ([1abab90](https://github.com/danny-gca/elire-app/commit/1abab903a6d88b7001baf4818af5a87da45fa892))
+
 ## [1.8.0](https://github.com/danny-gca/elire-app/compare/v1.7.0...v1.8.0) (2026-11-06)
 
 
